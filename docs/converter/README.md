@@ -8,6 +8,8 @@
 
 | Converter                                            |          User Guide           | Console Tool | Reporting |
 |:-----------------------------------------------------|:-----------------------------:|:------------:|:---------:|
+| PHP_CodeSniffer [official website][phpcs]            |       [phpcs](phpcs.md)       |   optional   |     ✅     |
 | PHPStan [official website][phpstan]                  |     [phpstan](phpstan.md)     |   optional   |     ✅     |
 
+[phpcs]: https://github.com/PHPCSStandards/PHP_CodeSniffer
 [phpstan]: https://github.com/phpstan/phpstan

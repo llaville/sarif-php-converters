@@ -26,11 +26,23 @@ final class SourceFactory implements SourceFactoryInterface
     public function create(string $name, iterable $normalizers): SourceInterface
     {
         switch (strtolower($name)) {
+            case SourceFactoryInterface::BUILTIN_SOURCE_PHPCS:
+                return $this->createCodeSniffer($normalizers);
             case SourceFactoryInterface::BUILTIN_SOURCE_PHPSTAN:
                 return $this->createStan($normalizers);
         }
 
         throw new OutOfBoundsException(sprintf('Source "%s" not found.', $name));
+    }
+
+    /**
+     * @param iterable<NormalizerInterface> $normalizers
+     */
+    public function createCodeSniffer(iterable $normalizers): SourceInterface
+    {
+        $normalizers = (array) $normalizers;
+        $normalizers[] = new Normalizer\PhpCsNormalizer();
+        return new Source\PhpCsSource($normalizers);
     }
 
     /**

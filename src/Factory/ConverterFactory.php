@@ -27,11 +27,18 @@ final class ConverterFactory implements ConverterFactoryInterface
         bool $prettyPrint = false
     ): ConverterInterface {
         switch (strtolower($name)) {
+            case ConverterFactoryInterface::BUILTIN_CONVERTER_PHPCS:
+                return $this->createCodeSniffer($serializerFactory, $prettyPrint);
             case ConverterFactoryInterface::BUILTIN_CONVERTER_PHPSTAN:
                 return $this->createStan($serializerFactory, $prettyPrint);
         }
 
         throw new OutOfBoundsException(sprintf('Converter "%s" not found.', $name));
+    }
+
+    public function createCodeSniffer(?SerializerFactory $serializerFactory = null, bool $prettyPrint = false): ConverterInterface
+    {
+        return new Converter\PhpCsConverter($serializerFactory, $prettyPrint);
     }
 
     public function createStan(?SerializerFactory $serializerFactory = null, bool $prettyPrint = false): ConverterInterface

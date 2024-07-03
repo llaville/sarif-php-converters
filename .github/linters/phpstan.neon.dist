@@ -3,4 +3,5 @@ parameters:
     paths:
         - ../../src/
     scanDirectories:
+        - ../../vendor-bin/phpcs/
         - ../../vendor-bin/phpstan/
