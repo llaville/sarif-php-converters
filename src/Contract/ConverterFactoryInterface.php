@@ -15,6 +15,8 @@ use Bartlett\Sarif\Factory\SerializerFactory;
  */
 interface ConverterFactoryInterface
 {
+    public const BUILTIN_CONVERTER_PHPSTAN = 'phpstan';
+
     public function create(
         string $name,
         ?SerializerFactory $serializerFactory = null,

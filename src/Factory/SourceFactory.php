@@ -25,6 +25,21 @@ final class SourceFactory implements SourceFactoryInterface
 {
     public function create(string $name, iterable $normalizers): SourceInterface
     {
+        switch (strtolower($name)) {
+            case SourceFactoryInterface::BUILTIN_SOURCE_PHPSTAN:
+                return $this->createStan($normalizers);
+        }
+
         throw new OutOfBoundsException(sprintf('Source "%s" not found.', $name));
+    }
+
+    /**
+     * @param iterable<NormalizerInterface> $normalizers
+     */
+    public function createStan(iterable $normalizers): SourceInterface
+    {
+        $normalizers = (array) $normalizers;
+        $normalizers[] = new Normalizer\PhpStanNormalizer();
+        return new Source\PhpStanSource($normalizers);
     }
 }

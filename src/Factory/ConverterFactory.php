@@ -26,6 +26,16 @@ final class ConverterFactory implements ConverterFactoryInterface
         ?SerializerFactory $serializerFactory = null,
         bool $prettyPrint = false
     ): ConverterInterface {
+        switch (strtolower($name)) {
+            case ConverterFactoryInterface::BUILTIN_CONVERTER_PHPSTAN:
+                return $this->createStan($serializerFactory, $prettyPrint);
+        }
+
         throw new OutOfBoundsException(sprintf('Converter "%s" not found.', $name));
+    }
+
+    public function createStan(?SerializerFactory $serializerFactory = null, bool $prettyPrint = false): ConverterInterface
+    {
+        return new Converter\PhpStanConverter($serializerFactory, $prettyPrint);
     }
 }
