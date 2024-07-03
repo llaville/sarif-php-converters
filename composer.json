@@ -1,0 +1,69 @@
+{
+    "name": "bartlett/sarif-php-converters",
+    "description": "Allows PHP projects to print a static code analysis report in SARIF format",
+    "keywords": ["sarif", "converter"],
+    "type": "library",
+    "license": "MIT",
+    "support": {
+        "source": "https://github.com/llaville/sarif-php-converters",
+        "issues": "https://github.com/llaville/sarif-php-converters/issues"
+    },
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "ext-json": "*",
+        "ext-pcre": "*",
+        "ext-spl": "*",
+        "bartlett/sarif-php-sdk": "^2.0"
+    },
+    "require-dev": {
+        "bamarni/composer-bin-plugin": "^1.8",
+        "php-parallel-lint/php-console-highlighter": "^1.0",
+        "symfony/console": "^6.4 || ^7.0"
+    },
+    "suggest": {
+        "ext-simplexml": "If you use the Console Tool and checkstyle input format",
+        "ext-libxml": "If you use the Console Tool and checkstyle input format"
+    },
+    "authors": [
+        {
+            "name": "Laurent Laville",
+            "homepage": "https://github.com/llaville",
+            "role": "Lead"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Bartlett\\Sarif\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bartlett\\Sarif\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "bamarni/composer-bin-plugin": true
+        }
+    },
+    "extra": {
+        "bamarni-bin": {
+            "bin-links": true,
+            "target-directory": "vendor-bin",
+            "forward-command": true
+        }
+    },
+    "scripts": {
+        "bin": "echo 'bin not installed'",
+        "post-update-cmd": [
+            "@composer bin all update --ansi"
+        ],
+        "post-install-cmd": [
+            "@composer bin all install --ansi"
+        ]
+    }
+}
