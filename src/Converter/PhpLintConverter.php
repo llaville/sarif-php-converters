@@ -41,11 +41,13 @@ class PhpLintConverter extends AbstractConverter
         $invocations = parent::invocations($properties);
 
         $arguments = $GLOBALS['argv'];
-        $responseFileOption = '--log-sarif=';
+        $responseFileOption = '--output=';
         foreach ($arguments as $argument) {
             if (strpos($argument, $responseFileOption) === 0) {
+                $desc = new Definition\Message();
+                $desc->setText('Writing a Report to a File');
                 $responseFile = new Definition\ArtifactLocation();
-                $responseFile->setDescription(new Definition\Message('Log scan results to a file'));
+                $responseFile->setDescription($desc);
                 $responseFile->setUri($this->pathToUri(str_replace($responseFileOption, '', $argument)));
                 $invocations[0]->addResponseFiles([$responseFile]);
             }
