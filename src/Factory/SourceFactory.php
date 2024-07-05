@@ -28,6 +28,8 @@ final class SourceFactory implements SourceFactoryInterface
         switch (strtolower($name)) {
             case SourceFactoryInterface::BUILTIN_SOURCE_PHPCS:
                 return $this->createCodeSniffer($normalizers);
+            case SourceFactoryInterface::BUILTIN_SOURCE_PHPLINT:
+                return $this->createLinter($normalizers);
             case SourceFactoryInterface::BUILTIN_SOURCE_PHPSTAN:
                 return $this->createStan($normalizers);
         }
@@ -43,6 +45,16 @@ final class SourceFactory implements SourceFactoryInterface
         $normalizers = (array) $normalizers;
         $normalizers[] = new Normalizer\PhpCsNormalizer();
         return new Source\PhpCsSource($normalizers);
+    }
+
+    /**
+     * @param iterable<NormalizerInterface> $normalizers
+     */
+    public function createLinter(iterable $normalizers): SourceInterface
+    {
+        $normalizers = (array) $normalizers;
+        $normalizers[] = new Normalizer\PhpLintNormalizer();
+        return new Source\PhpLintSource($normalizers);
     }
 
     /**

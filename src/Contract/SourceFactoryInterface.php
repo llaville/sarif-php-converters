@@ -14,6 +14,7 @@ namespace Bartlett\Sarif\Contract;
 interface SourceFactoryInterface
 {
     public const BUILTIN_SOURCE_PHPCS = 'phpcs';
+    public const BUILTIN_SOURCE_PHPLINT = 'phplint';
     public const BUILTIN_SOURCE_PHPSTAN = 'phpstan';
 
     /**

@@ -16,6 +16,7 @@ use Bartlett\Sarif\Factory\SerializerFactory;
 interface ConverterFactoryInterface
 {
     public const BUILTIN_CONVERTER_PHPCS = 'phpcs';
+    public const BUILTIN_CONVERTER_PHPLINT = 'phplint';
     public const BUILTIN_CONVERTER_PHPSTAN = 'phpstan';
 
     public function create(

@@ -9,7 +9,9 @@
 | Converter                                            |          User Guide           | Console Tool | Reporting |
 |:-----------------------------------------------------|:-----------------------------:|:------------:|:---------:|
 | PHP_CodeSniffer [official website][phpcs]            |       [phpcs](phpcs.md)       |   optional   |     ✅     |
+| PHPLint [official website][phplint]                  |     [phplint](phplint.md)     |   optional   |     ✅     |
 | PHPStan [official website][phpstan]                  |     [phpstan](phpstan.md)     |   optional   |     ✅     |
 
 [phpcs]: https://github.com/PHPCSStandards/PHP_CodeSniffer
+[phplint]: https://github.com/overtrue/phplint
 [phpstan]: https://github.com/phpstan/phpstan

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle>
+  <file name="/shared/backups/bartlett/sarif-php-converters/examples/fixtures/php_bad_1.php">
+    <error line="3" severity="error" message="unexpected identifier &quot;pe98y&quot; in line 3"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/examples/fixtures/php_bad_2.php">
+    <error line="15" severity="error" message="unexpected token &quot;}&quot; in line 15"/>
+  </file>
+</checkstyle>

@@ -29,6 +29,8 @@ final class ConverterFactory implements ConverterFactoryInterface
         switch (strtolower($name)) {
             case ConverterFactoryInterface::BUILTIN_CONVERTER_PHPCS:
                 return $this->createCodeSniffer($serializerFactory, $prettyPrint);
+            case ConverterFactoryInterface::BUILTIN_CONVERTER_PHPLINT:
+                return $this->createLinter($serializerFactory, $prettyPrint);
             case ConverterFactoryInterface::BUILTIN_CONVERTER_PHPSTAN:
                 return $this->createStan($serializerFactory, $prettyPrint);
         }
@@ -39,6 +41,11 @@ final class ConverterFactory implements ConverterFactoryInterface
     public function createCodeSniffer(?SerializerFactory $serializerFactory = null, bool $prettyPrint = false): ConverterInterface
     {
         return new Converter\PhpCsConverter($serializerFactory, $prettyPrint);
+    }
+
+    public function createLinter(?SerializerFactory $serializerFactory = null, bool $prettyPrint = false): ConverterInterface
+    {
+        return new Converter\PhpLintConverter($serializerFactory, $prettyPrint);
     }
 
     public function createStan(?SerializerFactory $serializerFactory = null, bool $prettyPrint = false): ConverterInterface

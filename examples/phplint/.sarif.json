@@ -1,0 +1,145 @@
+{
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "PHPLint",
+                    "shortDescription": {
+                        "text": "Syntax check only (lint) of PHP files"
+                    },
+                    "fullDescription": {
+                        "text": "PHPLint is a tool that can speed up linting of php files by running several lint processes at once."
+                    },
+                    "fullName": "PHPLint version 9.4.9999999.9999999-dev by overtrue and contributors",
+                    "semanticVersion": "9.4.9999999.9999999-dev",
+                    "informationUri": "https://github.com/overtrue/phplint",
+                    "rules": [
+                        {
+                            "id": "PHPLINT101",
+                            "shortDescription": {
+                                "text": "Syntax error"
+                            },
+                            "fullDescription": {
+                                "text": "Syntax error detected when lint a file"
+                            },
+                            "helpUri": "https://www.php.net/manual/en/langref.php",
+                            "help": {
+                                "text": "https://www.php.net/manual/en/features.commandline.options.php"
+                            }
+                        }
+                    ]
+                },
+                "extensions": [
+                    {
+                        "name": "bartlett/sarif-php-converters",
+                        "shortDescription": {
+                            "text": "PHPLint SARIF Converter"
+                        },
+                        "version": "1.0.9999999.9999999-dev"
+                    }
+                ]
+            },
+            "invocations": [
+                {
+                    "executionSuccessful": true,
+                    "commandLine": "vendor/bin/phplint",
+                    "arguments": [
+                        "--format=\\Overtrue\\PHPLint\\Output\\SarifOutput",
+                        "--bootstrap",
+                        "vendor/autoload.php",
+                        "-v",
+                        "examples/fixtures/",
+                        "--output=examples/phplint/.sarif.json"
+                    ],
+                    "workingDirectory": {
+                        "uri": "file:///shared/backups/bartlett/sarif-php-converters/"
+                    }
+                }
+            ],
+            "originalUriBaseIds": {
+                "WORKINGDIR": {
+                    "uri": "file:///shared/backups/bartlett/sarif-php-converters/"
+                }
+            },
+            "results": [
+                {
+                    "message": {
+                        "text": "unexpected token \"}\" in line 15"
+                    },
+                    "ruleId": "PHPLINT101",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_2.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 15,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m15| \u001b[0m\u001b[32m} elseif (\u001b[0m\u001b[39m$condition\u001b[0m\u001b[32m) {}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 13,
+                                    "endLine": 17,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m13| \u001b[0m\u001b[39m$condition \u001b[0m\u001b[32m= \u001b[0m\u001b[39mrand\u001b[0m\u001b[32m(\u001b[0m\u001b[39m0\u001b[0m\u001b[32m, \u001b[0m\u001b[39m5\u001b[0m\u001b[32m);\u001b[0m\n    \u001b[90m14| \u001b[0m\u001b[39miff \u001b[0m\u001b[32m(\u001b[0m\u001b[39m$condition\u001b[0m\u001b[32m) {\u001b[0m\n    \u001b[90m15| \u001b[0m\u001b[32m} elseif (\u001b[0m\u001b[39m$condition\u001b[0m\u001b[32m) {}\u001b[0m\n    \u001b[90m16| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHPLINT101": "2e508d59ec5ba941128ccdf751869d555c2c618018b0979124ee4530b68fbc28"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "unexpected identifier \"pe98y\" in line 3"
+                    },
+                    "ruleId": "PHPLINT101",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_1.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 5,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[39m<?php\u001b[0m\n    \u001b[90m2| \u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m\n    \u001b[90m4| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHPLINT101": "b72968e694d9f576c2adc3cdc3f479a0834ab688b7dc8a6fe2657d59e034ae1f"
+                    }
+                }
+            ],
+            "automationDetails": {
+                "id": "Daily run 2024-07-05T03:08:38+00:00"
+            }
+        }
+    ]
+}
