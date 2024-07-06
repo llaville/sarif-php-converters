@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Console/Command/ConvertCommand.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\ControlStructure\TrailingCommaInMultilineFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\ControlStructure\TrailingCommaInMultilineFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Import\OrderedImportsFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Import\OrderedImportsFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Operator\BinaryOperatorSpacesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Operator\BinaryOperatorSpacesFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Operator\TernaryOperatorSpacesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Operator\TernaryOperatorSpacesFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\ArrayIndentationFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\ArrayIndentationFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+    <error severity="warning" source="EasyCodingStandard.Symplify\CodingStandard\Fixer\ArrayNotation\ArrayOpenerAndCloserNewlineFixer" message="Found violation(s) of type: Symplify\CodingStandard\Fixer\ArrayNotation\ArrayOpenerAndCloserNewlineFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Contract/ConverterFactoryInterface.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Contract/ConverterInterface.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Phpdoc\NoSuperfluousPhpdocTagsFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Phpdoc\NoSuperfluousPhpdocTagsFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Contract/NormalizerInterface.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Contract/SourceFactoryInterface.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Contract/SourceInterface.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\ControlStructure\TrailingCommaInMultilineFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\ControlStructure\TrailingCommaInMultilineFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Import\OrderedImportsFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Import\OrderedImportsFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Phpdoc\NoEmptyPhpdocFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Phpdoc\NoEmptyPhpdocFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Phpdoc\NoSuperfluousPhpdocTagsFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Phpdoc\NoSuperfluousPhpdocTagsFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Phpdoc\PhpdocVarWithoutNameFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Phpdoc\PhpdocVarWithoutNameFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\ArrayIndentationFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\ArrayIndentationFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+    <error severity="warning" source="EasyCodingStandard.Symplify\CodingStandard\Fixer\ArrayNotation\ArrayOpenerAndCloserNewlineFixer" message="Found violation(s) of type: Symplify\CodingStandard\Fixer\ArrayNotation\ArrayOpenerAndCloserNewlineFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/EcsConverter.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/CheckstyleNormalizer.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Import\OrderedImportsFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Import\OrderedImportsFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/EcsNormalizer.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Import\OrderedImportsFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Import\OrderedImportsFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhanNormalizer.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Import\OrderedImportsFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Import\OrderedImportsFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpCsFixerNormalizer.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Import\OrderedImportsFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Import\OrderedImportsFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpCsNormalizer.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\ControlStructure\TrailingCommaInMultilineFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\ControlStructure\TrailingCommaInMultilineFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Import\OrderedImportsFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Import\OrderedImportsFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\ArrayIndentationFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\ArrayIndentationFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+    <error severity="warning" source="EasyCodingStandard.Symplify\CodingStandard\Fixer\ArrayNotation\ArrayOpenerAndCloserNewlineFixer" message="Found violation(s) of type: Symplify\CodingStandard\Fixer\ArrayNotation\ArrayOpenerAndCloserNewlineFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpInsightsNormalizer.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Import\OrderedImportsFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Import\OrderedImportsFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpLintNormalizer.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Import\OrderedImportsFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Import\OrderedImportsFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpMdNormalizer.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\ControlStructure\TrailingCommaInMultilineFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\ControlStructure\TrailingCommaInMultilineFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Import\OrderedImportsFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Import\OrderedImportsFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\ArrayIndentationFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\ArrayIndentationFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+    <error severity="warning" source="EasyCodingStandard.Symplify\CodingStandard\Fixer\ArrayNotation\ArrayOpenerAndCloserNewlineFixer" message="Found violation(s) of type: Symplify\CodingStandard\Fixer\ArrayNotation\ArrayOpenerAndCloserNewlineFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpMndNormalizer.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Import\OrderedImportsFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Import\OrderedImportsFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpStanNormalizer.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Import\OrderedImportsFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Import\OrderedImportsFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PsalmNormalizer.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Import\OrderedImportsFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Import\OrderedImportsFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PyLintNormalizer.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Import\OrderedImportsFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Import\OrderedImportsFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/SimpleXmlNormalizer.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Import\OrderedImportsFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Import\OrderedImportsFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/PhanConverter.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/PhpCsConverter.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/PhpCsFixerConverter.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/PhpInsightsConverter.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/PhpLintConverter.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/PhpMdConverter.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/PhpMndConverter.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/PhpStanConverter.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/PsalmConverter.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Reporter/AbstractReporter.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Reporter/PhpCsReport.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Import\OrderedImportsFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Import\OrderedImportsFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Phpdoc\PhpdocVarWithoutNameFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Phpdoc\PhpdocVarWithoutNameFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Reporter/PhpInsightsFormatter.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\ControlStructure\TrailingCommaInMultilineFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\ControlStructure\TrailingCommaInMultilineFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\ArrayIndentationFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\ArrayIndentationFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+    <error severity="warning" source="EasyCodingStandard.Symplify\CodingStandard\Fixer\ArrayNotation\ArrayOpenerAndCloserNewlineFixer" message="Found violation(s) of type: Symplify\CodingStandard\Fixer\ArrayNotation\ArrayOpenerAndCloserNewlineFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Reporter/PhpLintReport.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\ControlStructure\TrailingCommaInMultilineFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\ControlStructure\TrailingCommaInMultilineFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\ArrayIndentationFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\ArrayIndentationFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+    <error severity="warning" source="EasyCodingStandard.Symplify\CodingStandard\Fixer\ArrayNotation\ArrayOpenerAndCloserNewlineFixer" message="Found violation(s) of type: Symplify\CodingStandard\Fixer\ArrayNotation\ArrayOpenerAndCloserNewlineFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Reporter/PhpMdRenderer.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Phpdoc\NoEmptyPhpdocFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Phpdoc\NoEmptyPhpdocFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Phpdoc\NoSuperfluousPhpdocTagsFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Phpdoc\NoSuperfluousPhpdocTagsFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Reporter/PhpStanFormatter.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\ControlStructure\TrailingCommaInMultilineFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\ControlStructure\TrailingCommaInMultilineFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\ArrayIndentationFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\ArrayIndentationFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+    <error severity="warning" source="EasyCodingStandard.Symplify\CodingStandard\Fixer\ArrayNotation\ArrayOpenerAndCloserNewlineFixer" message="Found violation(s) of type: Symplify\CodingStandard\Fixer\ArrayNotation\ArrayOpenerAndCloserNewlineFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/AbstractSource.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Import\OrderedImportsFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Import\OrderedImportsFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Phpdoc\NoEmptyPhpdocFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Phpdoc\NoEmptyPhpdocFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Phpdoc\NoSuperfluousPhpdocTagsFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Phpdoc\NoSuperfluousPhpdocTagsFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Phpdoc\PhpdocVarWithoutNameFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Phpdoc\PhpdocVarWithoutNameFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/EcsSource.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/PhanSource.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/PhpCsFixerSource.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/PhpCsSource.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Import\OrderedImportsFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Import\OrderedImportsFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/PhpInsightsSource.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/PhpLintSource.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/PhpMdSource.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/PhpMndSource.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Import\OrderedImportsFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Import\OrderedImportsFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/PhpStanSource.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/PsalmSource.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Factory/ConverterFactory.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Factory/SourceFactory.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/examples/phpcs/MyPhpCsReport.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/examples/phpcs/MyReportConverter.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/examples/phpinsights/MyInsightsFormatter.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/examples/phpmnd/MyPhpMndPrinter.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Import\OrderedImportsFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Import\OrderedImportsFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/examples/phpmnd/MyReportConverter.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/examples/phpstan/MySarifFormatter.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/examples/phpstan/bootstrap.php">
+    <error severity="warning" source="EasyCodingStandard.PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer" message="Found violation(s) of type: PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer"/>
+  </file>
+</checkstyle>
+

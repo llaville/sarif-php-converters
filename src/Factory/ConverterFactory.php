@@ -27,6 +27,8 @@ final class ConverterFactory implements ConverterFactoryInterface
         bool $prettyPrint = false
     ): ConverterInterface {
         switch (strtolower($name)) {
+            case ConverterFactoryInterface::BUILTIN_CONVERTER_ECS:
+                return $this->createEasyCodingStandard($serializerFactory, $prettyPrint);
             case ConverterFactoryInterface::BUILTIN_CONVERTER_PHPCS:
                 return $this->createCodeSniffer($serializerFactory, $prettyPrint);
             case ConverterFactoryInterface::BUILTIN_CONVERTER_PHPLINT:
@@ -36,6 +38,11 @@ final class ConverterFactory implements ConverterFactoryInterface
         }
 
         throw new OutOfBoundsException(sprintf('Converter "%s" not found.', $name));
+    }
+
+    public function createEasyCodingStandard(?SerializerFactory $serializerFactory = null, ?bool $prettyPrint = false): ConverterInterface
+    {
+        return new Converter\EcsConverter($serializerFactory, $prettyPrint);
     }
 
     public function createCodeSniffer(?SerializerFactory $serializerFactory = null, bool $prettyPrint = false): ConverterInterface

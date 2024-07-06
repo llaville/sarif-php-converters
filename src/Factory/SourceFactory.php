@@ -26,6 +26,8 @@ final class SourceFactory implements SourceFactoryInterface
     public function create(string $name, iterable $normalizers): SourceInterface
     {
         switch (strtolower($name)) {
+            case SourceFactoryInterface::BUILTIN_SOURCE_ECS:
+                return $this->createEasyCodingStandard($normalizers);
             case SourceFactoryInterface::BUILTIN_SOURCE_PHPCS:
                 return $this->createCodeSniffer($normalizers);
             case SourceFactoryInterface::BUILTIN_SOURCE_PHPLINT:
@@ -35,6 +37,16 @@ final class SourceFactory implements SourceFactoryInterface
         }
 
         throw new OutOfBoundsException(sprintf('Source "%s" not found.', $name));
+    }
+
+    /**
+     * @param iterable<NormalizerInterface> $normalizers
+     */
+    public function createEasyCodingStandard(iterable $normalizers): SourceInterface
+    {
+        $normalizers = (array) $normalizers;
+        $normalizers[] = new Normalizer\EcsNormalizer();
+        return new Source\EcsSource($normalizers);
     }
 
     /**
