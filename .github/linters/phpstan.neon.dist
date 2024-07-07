@@ -6,3 +6,6 @@ parameters:
         - ../../vendor-bin/phpcs/
         - ../../vendor-bin/phplint/
         - ../../vendor-bin/phpstan/
+services:
+    errorFormatter.sarif:
+        class: Bartlett\Sarif\Converter\Reporter\PhpStanFormatter
