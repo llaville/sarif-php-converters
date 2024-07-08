@@ -30,6 +30,11 @@ You can consider to be lucky when they provide at least the `checkstyle` or `jun
 
 This library may be considered as a producer on `sarif` report format, for these projects that did not support yet natively.
 
+## Features
+
+* A Console Tool to allow conversion from `checkstyle` format to `sarif`, if your application does not support custom reporting class.
+* Add `sarif` output format support to your application, if you accept to load on fly, any custom reporting class.
+
 ## Documentation
 
 All the documentation is available on [website](https://llaville.github.io/sarif-php-converters/1.0),
