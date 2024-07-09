@@ -15,8 +15,9 @@
 4. [How to customize your converter](#how-to-customize-your-converter)
 5. [Learn more](#learn-more)
 6. [IDE Integration](#ide-integration)
+7. [Web SARIF viewer](#web-sarif-viewer)
 
-7. ![phpcs converter](../assets/images/converter-phpcs.graphviz.svg)
+![phpcs converter](../assets/images/converter-phpcs.graphviz.svg)
 
 ## Requirements
 
@@ -118,6 +119,15 @@ The SARIF report file `[*].sarif.json` is automagically recognized and interpret
 
 ![PHPStorm integration](../assets/images/phpstorm-phpcs.png)
 
+## Web SARIF viewer
+
+With the [React based component][sarif-web-component], you are able to explore a sarif report file previously generated.
+
+For example:
+
+![sarif-web-phpcs](../assets/images/sarif-web-phpcs.png)
+
+
 [example-folder]: https://github.com/llaville/sarif-php-converters/blob/1.0/examples/phpcs/
 [json-encode]: https://www.php.net/manual/en/function.json-encode
 [phpcs]: https://github.com/PHPCSStandards/PHP_CodeSniffer
@@ -125,3 +135,4 @@ The SARIF report file `[*].sarif.json` is automagically recognized and interpret
 [phpcs-checkstyle-output]: https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Reporting#printing-a-checkstyle-report
 [phpcs-wiki-ruleset]: https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Annotated-Ruleset
 [phpcs-report-fqn]: https://github.com/squizlabs/PHP_CodeSniffer/issues/1942
+[sarif-web-component]: https://github.com/Microsoft/sarif-web-component

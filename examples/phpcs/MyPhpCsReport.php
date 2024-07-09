@@ -28,7 +28,8 @@ class MyPhpCsReport extends PhpCsReport
             /**
              * Here we want list of PHP CS rules but not the frequency calls (provided on default behavior)
              */
-            $newRuleDef = $ruleDef['properties']['frequency'];
+            $newRuleDef = $ruleDef;
+            unset($newRuleDef['properties']['frequency']);
             yield $ruleId => $newRuleDef;
         }
     }
