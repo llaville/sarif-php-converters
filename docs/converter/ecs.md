@@ -14,6 +14,7 @@
 3. [Usage](#usage)
 4. [Learn more](#learn-more)
 5. [IDE Integration](#ide-integration)
+6. [Web SARIF viewer](#web-sarif-viewer)
 
 ![ecs converter](../assets/images/converter-ecs.graphviz.svg)
 
@@ -50,9 +51,9 @@ use Symplify\EasyCodingStandard\Config\ECSConfig;
 
 return ECSConfig::configure()
     ->withPaths([
-        realpath(__DIR__ . '/examples'),
-        realpath(__DIR__ . '/src'),
-        realpath(__DIR__ . '/tests'),
+        __DIR__ . '/examples',
+        __DIR__ . '/src',
+        __DIR__ . '/tests',
     ])
 
     // Report absolute path on filenames
@@ -113,5 +114,14 @@ The SARIF report file `[*].sarif.json` is automagically recognized and interpret
 
 ![PHPStorm integration](../assets/images/phpstorm-ecs.png)
 
+## Web SARIF viewer
+
+With the [React based component][sarif-web-component], you are able to explore a sarif report file previously generated.
+
+For example:
+
+![sarif-web-ecs](../assets/images/sarif-web-ecs.png)
+
 [example-folder]: https://github.com/llaville/sarif-php-sdk/blob/1.0/examples/ecs/
 [ecs]: https://github.com/easy-coding-standard/easy-coding-standard
+[sarif-web-component]: https://github.com/Microsoft/sarif-web-component

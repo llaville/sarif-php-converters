@@ -16,46 +16,60 @@
                     "informationUri": "https://github.com/easy-coding-standard/easy-coding-standard",
                     "rules": [
                         {
-                            "id": "EasyCodingStandard.PhpCsFixer\\Fixer\\ControlStructure\\TrailingCommaInMultilineFixer"
+                            "id": "EasyCodingStandard.PhpCsFixer\\Fixer\\ControlStructure\\TrailingCommaInMultilineFixer",
+                            "helpUri": "https://cs.symfony.com/doc/rules/control_structure/trailing_comma_in_multiline.html"
                         },
                         {
-                            "id": "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer"
+                            "id": "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer",
+                            "helpUri": "https://cs.symfony.com/doc/rules/import/ordered_imports.html"
                         },
                         {
-                            "id": "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer"
+                            "id": "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer",
+                            "helpUri": "https://cs.symfony.com/doc/rules/namespace_notation/single_blank_line_before_namespace.html"
                         },
                         {
-                            "id": "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\BinaryOperatorSpacesFixer"
+                            "id": "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\BinaryOperatorSpacesFixer",
+                            "helpUri": "https://cs.symfony.com/doc/rules/operator/binary_operator_spaces.html"
                         },
                         {
-                            "id": "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer"
+                            "id": "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer",
+                            "helpUri": "https://cs.symfony.com/doc/rules/operator/not_operator_with_successor_space.html"
                         },
                         {
-                            "id": "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\TernaryOperatorSpacesFixer"
+                            "id": "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\TernaryOperatorSpacesFixer",
+                            "helpUri": "https://cs.symfony.com/doc/rules/operator/ternary_operator_spaces.html"
                         },
                         {
-                            "id": "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer"
+                            "id": "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer",
+                            "helpUri": "https://cs.symfony.com/doc/rules/php_tag/blank_line_after_opening_tag.html"
                         },
                         {
-                            "id": "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\ArrayIndentationFixer"
+                            "id": "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\ArrayIndentationFixer",
+                            "helpUri": "https://cs.symfony.com/doc/rules/whitespace/array_indentation.html"
                         },
                         {
-                            "id": "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer"
+                            "id": "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer",
+                            "helpUri": "https://cs.symfony.com/doc/rules/whitespace/no_extra_blank_lines.html"
                         },
                         {
-                            "id": "EasyCodingStandard.Symplify\\CodingStandard\\Fixer\\ArrayNotation\\ArrayOpenerAndCloserNewlineFixer"
+                            "id": "EasyCodingStandard.Symplify\\CodingStandard\\Fixer\\ArrayNotation\\ArrayOpenerAndCloserNewlineFixer",
+                            "helpUri": "https://github.com/symplify/coding-standard/blob/main/docs/rules_overview.md#arrayopenerandclosernewlinefixer"
                         },
                         {
-                            "id": "EasyCodingStandard.PhpCsFixer\\Fixer\\ClassNotation\\ClassAttributesSeparationFixer"
+                            "id": "EasyCodingStandard.PhpCsFixer\\Fixer\\ClassNotation\\ClassAttributesSeparationFixer",
+                            "helpUri": "https://cs.symfony.com/doc/rules/class_notation/class_attributes_separation.html"
                         },
                         {
-                            "id": "EasyCodingStandard.PhpCsFixer\\Fixer\\Phpdoc\\NoSuperfluousPhpdocTagsFixer"
+                            "id": "EasyCodingStandard.PhpCsFixer\\Fixer\\Phpdoc\\NoSuperfluousPhpdocTagsFixer",
+                            "helpUri": "https://cs.symfony.com/doc/rules/phpdoc/no_superfluous_phpdoc_tags.html"
                         },
                         {
-                            "id": "EasyCodingStandard.PhpCsFixer\\Fixer\\Phpdoc\\NoEmptyPhpdocFixer"
+                            "id": "EasyCodingStandard.PhpCsFixer\\Fixer\\Phpdoc\\NoEmptyPhpdocFixer",
+                            "helpUri": "https://cs.symfony.com/doc/rules/phpdoc/no_empty_phpdoc.html"
                         },
                         {
-                            "id": "EasyCodingStandard.PhpCsFixer\\Fixer\\Phpdoc\\PhpdocVarWithoutNameFixer"
+                            "id": "EasyCodingStandard.PhpCsFixer\\Fixer\\Phpdoc\\PhpdocVarWithoutNameFixer",
+                            "helpUri": "https://cs.symfony.com/doc/rules/phpdoc/phpdoc_var_without_name.html"
                         }
                     ]
                 },
@@ -78,7 +92,9 @@
                         "ecs",
                         "--input-format=checkstyle",
                         "--input-file=examples/ecs/checkstyle.xml",
-                        "-v"
+                        "-v",
+                        "--output-file",
+                        "examples/ecs/.sarif.json"
                     ],
                     "workingDirectory": {
                         "uri": "file:///shared/backups/bartlett/sarif-php-converters/"
@@ -3568,7 +3584,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "1f66bfe4a7bb43bb78880c8b5ece289b3f6ad30227b494c7a22e046412593c0e"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "f7aa6485e9bf6253f9ecae0947e7cb919126ed59e37064374741a43a79ac9469"
                     }
                 },
                 {
@@ -3588,7 +3604,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "1f66bfe4a7bb43bb78880c8b5ece289b3f6ad30227b494c7a22e046412593c0e"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "f7aa6485e9bf6253f9ecae0947e7cb919126ed59e37064374741a43a79ac9469"
                     }
                 },
                 {
@@ -3688,7 +3704,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "6d308ec8ec61998cb32dd7cea94785ad46fbe04598a2ecff4ac954d6576f9849"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "6883be87eb8cb616cea43e80044297b93d4e6f200a34e8c5dc8b8f5939803ab4"
                     }
                 },
                 {
@@ -3708,7 +3724,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "6d308ec8ec61998cb32dd7cea94785ad46fbe04598a2ecff4ac954d6576f9849"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "6883be87eb8cb616cea43e80044297b93d4e6f200a34e8c5dc8b8f5939803ab4"
                     }
                 },
                 {
@@ -3728,7 +3744,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "6d308ec8ec61998cb32dd7cea94785ad46fbe04598a2ecff4ac954d6576f9849"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "6883be87eb8cb616cea43e80044297b93d4e6f200a34e8c5dc8b8f5939803ab4"
                     }
                 },
                 {
@@ -3748,7 +3764,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "6d308ec8ec61998cb32dd7cea94785ad46fbe04598a2ecff4ac954d6576f9849"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "6883be87eb8cb616cea43e80044297b93d4e6f200a34e8c5dc8b8f5939803ab4"
                     }
                 },
                 {
@@ -3768,7 +3784,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "6d308ec8ec61998cb32dd7cea94785ad46fbe04598a2ecff4ac954d6576f9849"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "6883be87eb8cb616cea43e80044297b93d4e6f200a34e8c5dc8b8f5939803ab4"
                     }
                 },
                 {
@@ -4208,7 +4224,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "3f092928ac2117400dfc1155e50443aa801810330f016745cb967c8a6cb00af5"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "85aab34de49103be62e1cac434abdfc79d2e34d4a4ac238654346ab9482df6c5"
                     }
                 },
                 {
@@ -4228,7 +4244,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "3f092928ac2117400dfc1155e50443aa801810330f016745cb967c8a6cb00af5"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "85aab34de49103be62e1cac434abdfc79d2e34d4a4ac238654346ab9482df6c5"
                     }
                 },
                 {
@@ -4473,7 +4489,7 @@
                 }
             ],
             "automationDetails": {
-                "id": "Daily run 2024-07-06T14:06:57+00:00"
+                "id": "Daily run 2024-07-09T15:12:14+00:00"
             }
         }
     ]
