@@ -1,1 +1,623 @@
-{"$schema":"https://json.schemastore.org/sarif-2.1.0.json","version":"2.1.0","runs":[{"tool":{"driver":{"name":"PHP_CodeSniffer","shortDescription":{"text":"Detects violations of a defined set of coding standards."},"fullDescription":{"text":"PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards."},"fullName":"PHP_CodeSniffer version 3.10.1.0 by Squiz and PHPCSStandards","semanticVersion":"3.10.1.0","informationUri":"https://github.com/squizlabs/PHP_CodeSniffer","rules":[{"id":"PSR12.Operators.OperatorSpacing.NoSpaceBefore","helpUri":"https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Customisable-Sniff-Properties#psr12operatorsoperatorspacing","properties":{"frequency":4}},{"id":"PSR12.Operators.OperatorSpacing.NoSpaceAfter","helpUri":"https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Customisable-Sniff-Properties#psr12operatorsoperatorspacing","properties":{"frequency":3}},{"id":"PSR1.Files.SideEffects.FoundWithSymbols","helpUri":"https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Customisable-Sniff-Properties#psr1filessideeffects","properties":{"frequency":1}},{"id":"Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine","helpUri":"https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Customisable-Sniff-Properties#squizfunctionsmultilinefunctiondeclaration","properties":{"frequency":1}},{"id":"PSR2.Methods.FunctionCallSignature.SpaceBeforeOpenBracket","helpUri":"https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Customisable-Sniff-Properties#psr2methodsfunctioncallsignature","properties":{"frequency":1}},{"id":"Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace","helpUri":"https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Customisable-Sniff-Properties#squizcontrolstructurescontrolsignature","properties":{"frequency":1}},{"id":"Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore","helpUri":"https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Customisable-Sniff-Properties#squizwhitespacescopeclosingbrace","properties":{"frequency":1}}]},"extensions":[{"name":"bartlett/sarif-php-converters","shortDescription":{"text":"PHP_CodeSniffer SARIF Converter"},"version":"1.0.9999999.9999999-dev"}]},"invocations":[{"executionSuccessful":true,"commandLine":"vendor/bin/phpcs","arguments":["--report=\\Bartlett\\Sarif\\Converter\\Reporter\\PhpCsReport","--standard=examples/phpcs/.phpcs.xml.dist","--report-file=examples/phpcs/.sarif.json"],"responseFiles":[{"uri":"file:///examples/phpcs/.sarif.json","description":{"text":"Writing a Report to a File"}}],"workingDirectory":{"uri":"file:///shared/backups/bartlett/sarif-php-converters/"},"properties":{"totals.files":2,"totals.errors":11,"totals.warnings":1,"totals.fixable":11}}],"originalUriBaseIds":{"WORKINGDIR":{"uri":"file:///shared/backups/bartlett/sarif-php-converters/"}},"results":[{"message":{"text":"Expected at least 1 space before \"-\"; 0 found"},"ruleId":"PSR12.Operators.OperatorSpacing.NoSpaceBefore","level":"error","locations":[{"physicalLocation":{"artifactLocation":{"uri":"examples/fixtures/php_bad_1.php","uriBaseId":"WORKINGDIR"},"region":{"startLine":3,"startColumn":9,"snippet":{"rendered":{"text":"\u001b[31m  > \u001b[0m\u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m"}}},"contextRegion":{"startLine":1,"endLine":5,"snippet":{"rendered":{"text":"\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[39m<?php\u001b[0m\n    \u001b[90m2| \u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m\n    \u001b[90m4| \u001b[0m"}}}}}],"partialFingerprints":{"PSR12.Operators.OperatorSpacing.NoSpaceBefore":"b72968e694d9f576c2adc3cdc3f479a0834ab688b7dc8a6fe2657d59e034ae1f"},"properties":{"severity":5,"fixable":true}},{"message":{"text":"Expected at least 1 space after \"-\"; 0 found"},"ruleId":"PSR12.Operators.OperatorSpacing.NoSpaceAfter","level":"error","locations":[{"physicalLocation":{"artifactLocation":{"uri":"examples/fixtures/php_bad_1.php","uriBaseId":"WORKINGDIR"},"region":{"startLine":3,"startColumn":9,"snippet":{"rendered":{"text":"\u001b[31m  > \u001b[0m\u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m"}}},"contextRegion":{"startLine":1,"endLine":5,"snippet":{"rendered":{"text":"\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[39m<?php\u001b[0m\n    \u001b[90m2| \u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m\n    \u001b[90m4| \u001b[0m"}}}}}],"partialFingerprints":{"PSR12.Operators.OperatorSpacing.NoSpaceAfter":"b72968e694d9f576c2adc3cdc3f479a0834ab688b7dc8a6fe2657d59e034ae1f"},"properties":{"severity":5,"fixable":true}},{"message":{"text":"Expected at least 1 space before \"=\"; 0 found"},"ruleId":"PSR12.Operators.OperatorSpacing.NoSpaceBefore","level":"error","locations":[{"physicalLocation":{"artifactLocation":{"uri":"examples/fixtures/php_bad_1.php","uriBaseId":"WORKINGDIR"},"region":{"startLine":3,"startColumn":17,"snippet":{"rendered":{"text":"\u001b[31m  > \u001b[0m\u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m"}}},"contextRegion":{"startLine":1,"endLine":5,"snippet":{"rendered":{"text":"\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[39m<?php\u001b[0m\n    \u001b[90m2| \u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m\n    \u001b[90m4| \u001b[0m"}}}}}],"partialFingerprints":{"PSR12.Operators.OperatorSpacing.NoSpaceBefore":"b72968e694d9f576c2adc3cdc3f479a0834ab688b7dc8a6fe2657d59e034ae1f"},"properties":{"severity":5,"fixable":true}},{"message":{"text":"Expected at least 1 space after \"=\"; 0 found"},"ruleId":"PSR12.Operators.OperatorSpacing.NoSpaceAfter","level":"error","locations":[{"physicalLocation":{"artifactLocation":{"uri":"examples/fixtures/php_bad_1.php","uriBaseId":"WORKINGDIR"},"region":{"startLine":3,"startColumn":17,"snippet":{"rendered":{"text":"\u001b[31m  > \u001b[0m\u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m"}}},"contextRegion":{"startLine":1,"endLine":5,"snippet":{"rendered":{"text":"\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[39m<?php\u001b[0m\n    \u001b[90m2| \u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m\n    \u001b[90m4| \u001b[0m"}}}}}],"partialFingerprints":{"PSR12.Operators.OperatorSpacing.NoSpaceAfter":"b72968e694d9f576c2adc3cdc3f479a0834ab688b7dc8a6fe2657d59e034ae1f"},"properties":{"severity":5,"fixable":true}},{"message":{"text":"Expected at least 1 space before \"-\"; 0 found"},"ruleId":"PSR12.Operators.OperatorSpacing.NoSpaceBefore","level":"error","locations":[{"physicalLocation":{"artifactLocation":{"uri":"examples/fixtures/php_bad_1.php","uriBaseId":"WORKINGDIR"},"region":{"startLine":3,"startColumn":26,"snippet":{"rendered":{"text":"\u001b[31m  > \u001b[0m\u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m"}}},"contextRegion":{"startLine":1,"endLine":5,"snippet":{"rendered":{"text":"\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[39m<?php\u001b[0m\n    \u001b[90m2| \u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m\n    \u001b[90m4| \u001b[0m"}}}}}],"partialFingerprints":{"PSR12.Operators.OperatorSpacing.NoSpaceBefore":"b72968e694d9f576c2adc3cdc3f479a0834ab688b7dc8a6fe2657d59e034ae1f"},"properties":{"severity":5,"fixable":true}},{"message":{"text":"Expected at least 1 space before \"-\"; 0 found"},"ruleId":"PSR12.Operators.OperatorSpacing.NoSpaceBefore","level":"error","locations":[{"physicalLocation":{"artifactLocation":{"uri":"examples/fixtures/php_bad_1.php","uriBaseId":"WORKINGDIR"},"region":{"startLine":3,"startColumn":58,"snippet":{"rendered":{"text":"\u001b[31m  > \u001b[0m\u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m"}}},"contextRegion":{"startLine":1,"endLine":5,"snippet":{"rendered":{"text":"\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[39m<?php\u001b[0m\n    \u001b[90m2| \u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m\n    \u001b[90m4| \u001b[0m"}}}}}],"partialFingerprints":{"PSR12.Operators.OperatorSpacing.NoSpaceBefore":"b72968e694d9f576c2adc3cdc3f479a0834ab688b7dc8a6fe2657d59e034ae1f"},"properties":{"severity":5,"fixable":true}},{"message":{"text":"Expected at least 1 space after \"-\"; 0 found"},"ruleId":"PSR12.Operators.OperatorSpacing.NoSpaceAfter","level":"error","locations":[{"physicalLocation":{"artifactLocation":{"uri":"examples/fixtures/php_bad_1.php","uriBaseId":"WORKINGDIR"},"region":{"startLine":3,"startColumn":58,"snippet":{"rendered":{"text":"\u001b[31m  > \u001b[0m\u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m"}}},"contextRegion":{"startLine":1,"endLine":5,"snippet":{"rendered":{"text":"\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[39m<?php\u001b[0m\n    \u001b[90m2| \u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m\n    \u001b[90m4| \u001b[0m"}}}}}],"partialFingerprints":{"PSR12.Operators.OperatorSpacing.NoSpaceAfter":"b72968e694d9f576c2adc3cdc3f479a0834ab688b7dc8a6fe2657d59e034ae1f"},"properties":{"severity":5,"fixable":true}},{"message":{"text":"A file should declare new symbols (classes, functions, constants, etc.) and cause no other side effects, or it should execute logic with side effects, but should not do both. The first symbol is defined on line 6 and the first side effect is on line 10."},"ruleId":"PSR1.Files.SideEffects.FoundWithSymbols","level":"warning","locations":[{"physicalLocation":{"artifactLocation":{"uri":"examples/fixtures/php_bad_2.php","uriBaseId":"WORKINGDIR"},"region":{"startLine":1,"startColumn":1,"snippet":{"rendered":{"text":"\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[39m<?php\u001b[0m"}}},"contextRegion":{"startLine":1,"endLine":3,"snippet":{"rendered":{"text":"\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[39m<?php\u001b[0m\n    \u001b[90m2| \u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[33m/**\u001b[0m\n    \u001b[90m4| \u001b[0m\u001b[33m * @return array<string>\u001b[0m\n    \u001b[90m5| \u001b[0m\u001b[33m */\u001b[0m"}}}}}],"partialFingerprints":{"PSR1.Files.SideEffects.FoundWithSymbols":"2e508d59ec5ba941128ccdf751869d555c2c618018b0979124ee4530b68fbc28"},"properties":{"severity":5,"fixable":false}},{"message":{"text":"Opening brace should be on a new line"},"ruleId":"Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine","level":"error","locations":[{"physicalLocation":{"artifactLocation":{"uri":"examples/fixtures/php_bad_2.php","uriBaseId":"WORKINGDIR"},"region":{"startLine":6,"startColumn":29,"snippet":{"rendered":{"text":"\u001b[31m  > \u001b[0m\u001b[90m6| \u001b[0m\u001b[32mfunction \u001b[0m\u001b[39mtakesAnInt\u001b[0m\u001b[32m(\u001b[0m\u001b[39mint $i\u001b[0m\u001b[32m) {\u001b[0m"}}},"contextRegion":{"startLine":4,"endLine":8,"snippet":{"rendered":{"text":"\u001b[31m  > \u001b[0m\u001b[90m4| \u001b[0m\u001b[33m * @return array<string>\u001b[0m\n    \u001b[90m5| \u001b[0m\u001b[33m */\u001b[0m\n    \u001b[90m6| \u001b[0m\u001b[32mfunction \u001b[0m\u001b[39mtakesAnInt\u001b[0m\u001b[32m(\u001b[0m\u001b[39mint $i\u001b[0m\u001b[32m) {\u001b[0m\n    \u001b[90m7| \u001b[0m\u001b[32m    return [\u001b[0m\u001b[39m$i\u001b[0m\u001b[32m, \u001b[0m\u001b[31m\"hello\"\u001b[0m\u001b[32m];\u001b[0m\n    \u001b[90m8| \u001b[0m\u001b[32m}\u001b[0m"}}}}}],"partialFingerprints":{"Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine":"2e508d59ec5ba941128ccdf751869d555c2c618018b0979124ee4530b68fbc28"},"properties":{"severity":5,"fixable":true}},{"message":{"text":"Space before opening parenthesis of function call prohibited"},"ruleId":"PSR2.Methods.FunctionCallSignature.SpaceBeforeOpenBracket","level":"error","locations":[{"physicalLocation":{"artifactLocation":{"uri":"examples/fixtures/php_bad_2.php","uriBaseId":"WORKINGDIR"},"region":{"startLine":14,"startColumn":1,"snippet":{"rendered":{"text":"\u001b[31m  > \u001b[0m\u001b[90m14| \u001b[0m\u001b[39miff \u001b[0m\u001b[32m(\u001b[0m\u001b[39m$condition\u001b[0m\u001b[32m) {\u001b[0m"}}},"contextRegion":{"startLine":12,"endLine":16,"snippet":{"rendered":{"text":"\u001b[31m  > \u001b[0m\u001b[90m12| \u001b[0m\n    \u001b[90m13| \u001b[0m\u001b[39m$condition \u001b[0m\u001b[32m= \u001b[0m\u001b[39mrand\u001b[0m\u001b[32m(\u001b[0m\u001b[39m0\u001b[0m\u001b[32m, \u001b[0m\u001b[39m5\u001b[0m\u001b[32m);\u001b[0m\n    \u001b[90m14| \u001b[0m\u001b[39miff \u001b[0m\u001b[32m(\u001b[0m\u001b[39m$condition\u001b[0m\u001b[32m) {\u001b[0m\n    \u001b[90m15| \u001b[0m\u001b[32m} elseif (\u001b[0m\u001b[39m$condition\u001b[0m\u001b[32m) {}\u001b[0m\n    \u001b[90m16| \u001b[0m"}}}}}],"partialFingerprints":{"PSR2.Methods.FunctionCallSignature.SpaceBeforeOpenBracket":"2e508d59ec5ba941128ccdf751869d555c2c618018b0979124ee4530b68fbc28"},"properties":{"severity":5,"fixable":true}},{"message":{"text":"Newline required after opening brace"},"ruleId":"Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace","level":"error","locations":[{"physicalLocation":{"artifactLocation":{"uri":"examples/fixtures/php_bad_2.php","uriBaseId":"WORKINGDIR"},"region":{"startLine":15,"startColumn":23,"snippet":{"rendered":{"text":"\u001b[31m  > \u001b[0m\u001b[90m15| \u001b[0m\u001b[32m} elseif (\u001b[0m\u001b[39m$condition\u001b[0m\u001b[32m) {}\u001b[0m"}}},"contextRegion":{"startLine":13,"endLine":17,"snippet":{"rendered":{"text":"\u001b[31m  > \u001b[0m\u001b[90m13| \u001b[0m\u001b[39m$condition \u001b[0m\u001b[32m= \u001b[0m\u001b[39mrand\u001b[0m\u001b[32m(\u001b[0m\u001b[39m0\u001b[0m\u001b[32m, \u001b[0m\u001b[39m5\u001b[0m\u001b[32m);\u001b[0m\n    \u001b[90m14| \u001b[0m\u001b[39miff \u001b[0m\u001b[32m(\u001b[0m\u001b[39m$condition\u001b[0m\u001b[32m) {\u001b[0m\n    \u001b[90m15| \u001b[0m\u001b[32m} elseif (\u001b[0m\u001b[39m$condition\u001b[0m\u001b[32m) {}\u001b[0m\n    \u001b[90m16| \u001b[0m"}}}}}],"partialFingerprints":{"Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace":"2e508d59ec5ba941128ccdf751869d555c2c618018b0979124ee4530b68fbc28"},"properties":{"severity":5,"fixable":true}},{"message":{"text":"Closing brace must be on a line by itself"},"ruleId":"Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore","level":"error","locations":[{"physicalLocation":{"artifactLocation":{"uri":"examples/fixtures/php_bad_2.php","uriBaseId":"WORKINGDIR"},"region":{"startLine":15,"startColumn":24,"snippet":{"rendered":{"text":"\u001b[31m  > \u001b[0m\u001b[90m15| \u001b[0m\u001b[32m} elseif (\u001b[0m\u001b[39m$condition\u001b[0m\u001b[32m) {}\u001b[0m"}}},"contextRegion":{"startLine":13,"endLine":17,"snippet":{"rendered":{"text":"\u001b[31m  > \u001b[0m\u001b[90m13| \u001b[0m\u001b[39m$condition \u001b[0m\u001b[32m= \u001b[0m\u001b[39mrand\u001b[0m\u001b[32m(\u001b[0m\u001b[39m0\u001b[0m\u001b[32m, \u001b[0m\u001b[39m5\u001b[0m\u001b[32m);\u001b[0m\n    \u001b[90m14| \u001b[0m\u001b[39miff \u001b[0m\u001b[32m(\u001b[0m\u001b[39m$condition\u001b[0m\u001b[32m) {\u001b[0m\n    \u001b[90m15| \u001b[0m\u001b[32m} elseif (\u001b[0m\u001b[39m$condition\u001b[0m\u001b[32m) {}\u001b[0m\n    \u001b[90m16| \u001b[0m"}}}}}],"partialFingerprints":{"Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore":"2e508d59ec5ba941128ccdf751869d555c2c618018b0979124ee4530b68fbc28"},"properties":{"severity":5,"fixable":true}}],"automationDetails":{"id":"Daily run 2024-07-09T10:02:23+00:00"}}]}
+{
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "PHP_CodeSniffer",
+                    "shortDescription": {
+                        "text": "Detects violations of a defined set of coding standards."
+                    },
+                    "fullDescription": {
+                        "text": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards."
+                    },
+                    "fullName": "PHP_CodeSniffer version 3.10.1.0 by Squiz and PHPCSStandards",
+                    "semanticVersion": "3.10.1.0",
+                    "informationUri": "https://github.com/squizlabs/PHP_CodeSniffer",
+                    "rules": [
+                        {
+                            "id": "PEAR.Commenting.FileComment.Missing",
+                            "helpUri": "https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Customisable-Sniff-Properties#pearcommentingfilecomment"
+                        },
+                        {
+                            "id": "Generic.Commenting.DocComment.MissingShort",
+                            "helpUri": "https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Customisable-Sniff-Properties#genericcommentingdoccomment"
+                        },
+                        {
+                            "id": "PEAR.Commenting.FunctionComment.MissingParamTag",
+                            "helpUri": "https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Customisable-Sniff-Properties#pearcommentingfunctioncomment"
+                        },
+                        {
+                            "id": "PEAR.Commenting.FunctionComment.Missing",
+                            "helpUri": "https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Customisable-Sniff-Properties#pearcommentingfunctioncomment"
+                        },
+                        {
+                            "id": "PEAR.Functions.FunctionDeclaration.BraceOnSameLine",
+                            "helpUri": "https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Customisable-Sniff-Properties#pearfunctionsfunctiondeclaration"
+                        },
+                        {
+                            "id": "PEAR.Functions.FunctionCallSignature.SpaceBeforeOpenBracket",
+                            "helpUri": "https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Customisable-Sniff-Properties#pearfunctionsfunctioncallsignature"
+                        },
+                        {
+                            "id": "PEAR.ControlStructures.ControlSignature.Found",
+                            "helpUri": "https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Customisable-Sniff-Properties#pearcontrolstructurescontrolsignature"
+                        },
+                        {
+                            "id": "PEAR.WhiteSpace.ScopeClosingBrace.Line",
+                            "helpUri": "https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Customisable-Sniff-Properties#pearwhitespacescopeclosingbrace"
+                        }
+                    ]
+                },
+                "extensions": [
+                    {
+                        "name": "bartlett/sarif-php-converters",
+                        "shortDescription": {
+                            "text": "PHP_CodeSniffer SARIF Converter"
+                        },
+                        "version": "1.0.9999999.9999999-dev"
+                    }
+                ]
+            },
+            "invocations": [
+                {
+                    "executionSuccessful": true,
+                    "commandLine": "report-converter",
+                    "arguments": [
+                        "convert",
+                        "phpcs",
+                        "--input-format=checkstyle",
+                        "--input-file=examples/phpcs/checkstyle.xml",
+                        "-v"
+                    ],
+                    "workingDirectory": {
+                        "uri": "file:///shared/backups/bartlett/sarif-php-converters/"
+                    }
+                }
+            ],
+            "originalUriBaseIds": {
+                "WORKINGDIR": {
+                    "uri": "file:///shared/backups/bartlett/sarif-php-converters/"
+                }
+            },
+            "results": [
+                {
+                    "message": {
+                        "text": "Missing file doc comment"
+                    },
+                    "ruleId": "PEAR.Commenting.FileComment.Missing",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_good_1.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 2,
+                                    "startColumn": 1,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "  > 2| "
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 4,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "  > 1| <?php\n    2| \n    3| echo \"Hello World!\", PHP_EOL;\n    4| "
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PEAR.Commenting.FileComment.Missing": "4aa6df8bfa75b13cba8905dfb7704432837432bc0d0d59bab012eeaab554946e"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Missing file doc comment"
+                    },
+                    "ruleId": "PEAR.Commenting.FileComment.Missing",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_1.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 2,
+                                    "startColumn": 1,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "  > 2| "
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 4,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "  > 1| <?php\n    2| \n    3| 2pe98y r-n0u823n=r  092u3- r08u2q098ry 09nq2yr09n2yr9 y2n-93yr  298yr3  29\n    4| "
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PEAR.Commenting.FileComment.Missing": "b72968e694d9f576c2adc3cdc3f479a0834ab688b7dc8a6fe2657d59e034ae1f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Missing file doc comment"
+                    },
+                    "ruleId": "PEAR.Commenting.FileComment.Missing",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_good_2.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 1,
+                                    "startColumn": 1,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "  > 1| <?php"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "  > 1| <?php\n    2| \n    3| /**\n    4|  * @return array<string>\n    5|  */"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PEAR.Commenting.FileComment.Missing": "002cced26ceb284c6ab8ec87f92c4758d72a319380578753515e2436fb487f78"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Missing short description in doc comment"
+                    },
+                    "ruleId": "Generic.Commenting.DocComment.MissingShort",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_good_2.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 3,
+                                    "startColumn": 1,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "  > 3| /**"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 5,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "  > 1| <?php\n    2| \n    3| /**\n    4|  * @return array<string>\n    5|  */"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "Generic.Commenting.DocComment.MissingShort": "002cced26ceb284c6ab8ec87f92c4758d72a319380578753515e2436fb487f78"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Doc comment for parameter \"$name\" missing"
+                    },
+                    "ruleId": "PEAR.Commenting.FunctionComment.MissingParamTag",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_good_2.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 3,
+                                    "startColumn": 1,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "  > 3| /**"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 5,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "  > 1| <?php\n    2| \n    3| /**\n    4|  * @return array<string>\n    5|  */"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PEAR.Commenting.FunctionComment.MissingParamTag": "002cced26ceb284c6ab8ec87f92c4758d72a319380578753515e2436fb487f78"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Missing doc comment for function helloMegalinter()"
+                    },
+                    "ruleId": "PEAR.Commenting.FunctionComment.Missing",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_good_2.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 11,
+                                    "startColumn": 1,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "  > 11| function helloMegalinter(): void"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 9,
+                                    "endLine": 13,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "  >  9| }\n    10| \n    11| function helloMegalinter(): void\n    12| {\n    13|     $hello = helloName(\"MegaLinter\");"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PEAR.Commenting.FunctionComment.Missing": "002cced26ceb284c6ab8ec87f92c4758d72a319380578753515e2436fb487f78"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Missing doc comment for function helloOrWorld()"
+                    },
+                    "ruleId": "PEAR.Commenting.FunctionComment.Missing",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_good_2.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 17,
+                                    "startColumn": 1,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "  > 17| function helloOrWorld(): void"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 15,
+                                    "endLine": 19,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "  > 15| }\n    16| \n    17| function helloOrWorld(): void\n    18| {\n    19|     $random = rand(0, 10);"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PEAR.Commenting.FunctionComment.Missing": "002cced26ceb284c6ab8ec87f92c4758d72a319380578753515e2436fb487f78"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Missing file doc comment"
+                    },
+                    "ruleId": "PEAR.Commenting.FileComment.Missing",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_2.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 1,
+                                    "startColumn": 1,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "  > 1| <?php"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "  > 1| <?php\n    2| \n    3| /**\n    4|  * @return array<string>\n    5|  */"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PEAR.Commenting.FileComment.Missing": "2e508d59ec5ba941128ccdf751869d555c2c618018b0979124ee4530b68fbc28"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Missing short description in doc comment"
+                    },
+                    "ruleId": "Generic.Commenting.DocComment.MissingShort",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_2.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 3,
+                                    "startColumn": 1,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "  > 3| /**"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 5,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "  > 1| <?php\n    2| \n    3| /**\n    4|  * @return array<string>\n    5|  */"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "Generic.Commenting.DocComment.MissingShort": "2e508d59ec5ba941128ccdf751869d555c2c618018b0979124ee4530b68fbc28"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Doc comment for parameter \"$i\" missing"
+                    },
+                    "ruleId": "PEAR.Commenting.FunctionComment.MissingParamTag",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_2.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 3,
+                                    "startColumn": 1,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "  > 3| /**"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 5,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "  > 1| <?php\n    2| \n    3| /**\n    4|  * @return array<string>\n    5|  */"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PEAR.Commenting.FunctionComment.MissingParamTag": "2e508d59ec5ba941128ccdf751869d555c2c618018b0979124ee4530b68fbc28"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Opening brace should be on a new line"
+                    },
+                    "ruleId": "PEAR.Functions.FunctionDeclaration.BraceOnSameLine",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_2.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 6,
+                                    "startColumn": 29,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "  > 6| function takesAnInt(int $i) {"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 4,
+                                    "endLine": 8,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "  > 4|  * @return array<string>\n    5|  */\n    6| function takesAnInt(int $i) {\n    7|     return [$i, \"hello\"];\n    8| }"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PEAR.Functions.FunctionDeclaration.BraceOnSameLine": "2e508d59ec5ba941128ccdf751869d555c2c618018b0979124ee4530b68fbc28"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Space before opening parenthesis of function call prohibited"
+                    },
+                    "ruleId": "PEAR.Functions.FunctionCallSignature.SpaceBeforeOpenBracket",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_2.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 14,
+                                    "startColumn": 1,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "  > 14| iff ($condition) {"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 12,
+                                    "endLine": 16,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "  > 12| \n    13| $condition = rand(0, 5);\n    14| iff ($condition) {\n    15| } elseif ($condition) {}\n    16| "
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PEAR.Functions.FunctionCallSignature.SpaceBeforeOpenBracket": "2e508d59ec5ba941128ccdf751869d555c2c618018b0979124ee4530b68fbc28"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Expected \"} elseif (...) {\\n\"; found \"} elseif (...) {\""
+                    },
+                    "ruleId": "PEAR.ControlStructures.ControlSignature.Found",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_2.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 15,
+                                    "startColumn": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "  > 15| } elseif ($condition) {}"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 13,
+                                    "endLine": 17,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "  > 13| $condition = rand(0, 5);\n    14| iff ($condition) {\n    15| } elseif ($condition) {}\n    16| "
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PEAR.ControlStructures.ControlSignature.Found": "2e508d59ec5ba941128ccdf751869d555c2c618018b0979124ee4530b68fbc28"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Closing brace must be on a line by itself"
+                    },
+                    "ruleId": "PEAR.WhiteSpace.ScopeClosingBrace.Line",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_2.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 15,
+                                    "startColumn": 24,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "  > 15| } elseif ($condition) {}"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 13,
+                                    "endLine": 17,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "  > 13| $condition = rand(0, 5);\n    14| iff ($condition) {\n    15| } elseif ($condition) {}\n    16| "
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PEAR.WhiteSpace.ScopeClosingBrace.Line": "2e508d59ec5ba941128ccdf751869d555c2c618018b0979124ee4530b68fbc28"
+                    }
+                }
+            ],
+            "automationDetails": {
+                "id": "Daily run 2024-07-09T10:33:18+00:00"
+            }
+        }
+    ]
+}

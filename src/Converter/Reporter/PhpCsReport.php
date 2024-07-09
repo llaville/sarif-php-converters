@@ -16,9 +16,7 @@ use Bartlett\Sarif\Definition\PropertyBag;
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Reports\Report;
 
-use function explode;
 use function json_encode;
-use function sprintf;
 use function strtolower;
 
 /**
@@ -27,8 +25,6 @@ use function strtolower;
  */
 class PhpCsReport extends AbstractReporter implements Report
 {
-    public const URI_PATTERN = 'https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Customisable-Sniff-Properties#%s';
-
     /**
      * @var array<string, array<string, int>|array<string>> $cacheData
      */
@@ -46,31 +42,6 @@ class PhpCsReport extends AbstractReporter implements Report
             ],
             'files' => [],
         ];
-    }
-
-    protected function getRules(): iterable
-    {
-        foreach (parent::getRules() as $ruleId => $ruleDef) {
-            /**
-             * Dynamically add helpUri on each rule (Sniff), if not already defined
-             */
-            if (isset($ruleDef['helpUri'])) {
-                continue;
-            }
-
-            // Rule ID format :(standard).(group).(name).(code)
-            // e.g: PSR12.Operators.OperatorSpacing.NoSpaceBefore
-            $nameParts = explode('.', $ruleId);
-
-            $standard = $nameParts[0];
-            $group = $nameParts[1];
-            $name = $nameParts[2];
-
-            $helpUri = sprintf(self::URI_PATTERN, strtolower($standard . $group . $name));
-
-            $ruleDef['helpUri'] = $helpUri;
-            yield $ruleId => $ruleDef;
-        }
     }
 
     /**
