@@ -30,10 +30,40 @@ You can consider to be lucky when they provide at least the `checkstyle` or `jun
 
 This library may be considered as a producer on `sarif` report format, for these projects that did not support yet natively.
 
-## Features
+## Features at a glance
 
 * A Console Tool to allow conversion from `checkstyle` format to `sarif`, if your application does not support custom reporting class.
 * Add `sarif` output format support to your application, if you accept to load on fly, any custom reporting class.
+
+## Comparison by project on output formats
+
+[cda]: https://github.com/shipmonk-rnd/composer-dependency-analyser
+[ecs]: https://github.com/easy-coding-standard/easy-coding-standard
+[phan]: https://github.com/phan/phan
+[phpcs]: https://github.com/PHPCSStandards/PHP_CodeSniffer
+[phpcs-fixer]: https://github.com/PHP-CS-Fixer/PHP-CS-Fixer
+[phpinsights]: https://github.com/nunomaduro/phpinsights
+[phplint]: https://github.com/overtrue/phplint
+[phpmd]: https://github.com/phpmd/phpmd
+[phpstan]: https://github.com/phpstan/phpstan
+
+| Project                             | Version |                 Output Format Support                  | SARIF | Checkstyle | JUnit | CodeClimate<br/>GitLab | GitHub |
+|:------------------------------------|:-------:|:------------------------------------------------------:|:-----:|:----------:|:-----:|:----------------------:|:------:|
+| [Composer Dependency Analyser][cda] |  1.6.x  |                         junit                          |   ❌   |     ❌      |   ✅   |           ❌            |   ❌    |
+| [Easy-Coding-Standard][ecs]         | 12.3.x  |          console,json,junit,checkstyle,gitlab          |   ❌   |     ✅      |   ✅   |           ✅            |   ❌    |
+| [Phan][phan]                        |  5.4.x  |    text,csv,json,checkstyle,codeclimate,pylint,html    |   ❌   |     ✅      |   ❌   |           ✅            |   ❌    |
+| [PHP CodeSniffer][phpcs]            | 3.10.x  |                 json,checkstyle,junit                  |   ❌   |     ✅      |   ✅   |           ❌            |   ❌    |
+| [PHP-CS-Fixer][phpcs-fixer]         | 3.59.x  |              checkstyle,gitlab,json,junit              |   ❌   |     ✅      |   ✅   |           ✅            |   ❌    |
+| [PHPInsights][phpinsights]          | 2.11.x  |   console,json,checkstyle,codeclimate,github-action    |   ❌   |     ✅      |   ❌   |           ✅            |   ✅    |
+| [PHPLint][phplint]                  |  9.4.x  |         console,json,junit,checkstyle,(sarif)          |  (✅)  |     ✅      |   ✅   |           ❌            |   ❌    |
+| [PHP Mess Detector][phpmd]          | 2.15.x  |   xml,text,html,json,github,gitlab,sarif,checkstyle    |   ✅   |     ✅      |   ❌   |           ✅            |   ✅    |
+| [PHPStan][phpstan]                  | 1.11.x  | table,raw,checkstyle,json,junit,github,gitlab,teamcity |  (✅)  |     ✅      |   ✅   |           ✅            |   ✅    |
+
+**Legend**
+
+*  ✅  indicate that support to the format is available
+* (✅) indicate that support to the format is optional
+* ❌   indicate that support to the format is not yet available
 
 ## Documentation
 
