@@ -1,0 +1,853 @@
+{
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "PHPMD",
+                    "shortDescription": {
+                        "text": "Tool with aims to be a PHP equivalent of the well known Java tool PMD"
+                    },
+                    "fullDescription": {
+                        "text": "PHPMD is a spin-off project of PHP Depend and aims to be a PHP equivalent of the well known Java tool PMD."
+                    },
+                    "semanticVersion": "2.15.0.0",
+                    "informationUri": "https://github.com/phpmd/phpmd",
+                    "rules": [
+                        {
+                            "id": "CleanCodeRules/ElseExpression",
+                            "name": "ElseExpression",
+                            "shortDescription": {
+                                "text": "CleanCodeRules: ElseExpression"
+                            },
+                            "helpUri": "https://phpmd.org/rules/cleancode.html#elseexpression",
+                            "properties": {
+                                "ruleSet": "Clean Code Rules"
+                            }
+                        },
+                        {
+                            "id": "CleanCodeRules/BooleanArgumentFlag",
+                            "name": "BooleanArgumentFlag",
+                            "shortDescription": {
+                                "text": "CleanCodeRules: BooleanArgumentFlag"
+                            },
+                            "helpUri": "https://phpmd.org/rules/cleancode.html#booleanargumentflag",
+                            "properties": {
+                                "ruleSet": "Clean Code Rules"
+                            }
+                        },
+                        {
+                            "id": "CleanCodeRules/StaticAccess",
+                            "name": "StaticAccess",
+                            "shortDescription": {
+                                "text": "CleanCodeRules: StaticAccess"
+                            },
+                            "helpUri": "https://phpmd.org/rules/cleancode.html#staticaccess",
+                            "properties": {
+                                "ruleSet": "Clean Code Rules"
+                            }
+                        }
+                    ]
+                },
+                "extensions": [
+                    {
+                        "name": "bartlett/sarif-php-converters",
+                        "shortDescription": {
+                            "text": "PHPMD SARIF Converter"
+                        },
+                        "version": "1.0.9999999.9999999-dev"
+                    }
+                ]
+            },
+            "invocations": [
+                {
+                    "executionSuccessful": true,
+                    "commandLine": "report-converter",
+                    "arguments": [
+                        "convert",
+                        "phpmd",
+                        "--input-format=checkstyle",
+                        "--input-file=examples/phpmd/cleancode.checkstyle.xml",
+                        "-v",
+                        "--output-file",
+                        "examples/phpmd/cleancode.sarif.json"
+                    ],
+                    "workingDirectory": {
+                        "uri": "file:///shared/backups/bartlett/sarif-php-converters/"
+                    }
+                }
+            ],
+            "originalUriBaseIds": {
+                "WORKINGDIR": {
+                    "uri": "file:///shared/backups/bartlett/sarif-php-converters/"
+                }
+            },
+            "results": [
+                {
+                    "message": {
+                        "text": "The method execute uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them. (ElseExpression, Clean Code Rules) "
+                    },
+                    "ruleId": "CleanCodeRules/ElseExpression",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Console/Command/ConvertCommand.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 125,
+                                    "endLine": 129,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m125| \u001b[0m\u001b[33m                \u001b[0m\u001b[39m$converter \u001b[0m\u001b[32m= new \u001b[0m\u001b[39m$converterAlias\u001b[0m\u001b[32m(\u001b[0m\u001b[39mnull\u001b[0m\u001b[32m, \u001b[0m\u001b[39m$prettyPrint\u001b[0m\u001b[32m);\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 123,
+                                    "endLine": 127,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m123| \u001b[0m\u001b[32m            if (\u001b[0m\u001b[39mclass_exists\u001b[0m\u001b[32m(\u001b[0m\u001b[39m$converterAlias\u001b[0m\u001b[32m)) {\u001b[0m\n    \u001b[90m124| \u001b[0m\u001b[32m                \u001b[0m\u001b[33m// give a chance to use custom converter\u001b[0m\n    \u001b[90m125| \u001b[0m\u001b[33m                \u001b[0m\u001b[39m$converter \u001b[0m\u001b[32m= new \u001b[0m\u001b[39m$converterAlias\u001b[0m\u001b[32m(\u001b[0m\u001b[39mnull\u001b[0m\u001b[32m, \u001b[0m\u001b[39m$prettyPrint\u001b[0m\u001b[32m);\u001b[0m\n    \u001b[90m126| \u001b[0m\u001b[32m            } else {\u001b[0m\n    \u001b[90m127| \u001b[0m\u001b[32m                \u001b[0m\u001b[33m// use default built-in converters\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "CleanCodeRules/ElseExpression": "f178f437a7c2c061b2d4acb6c9b9347f6764506321476b52c4f3a8475f23b96c"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "The method execute uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them. (ElseExpression, Clean Code Rules) "
+                    },
+                    "ruleId": "CleanCodeRules/ElseExpression",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Console/Command/ConvertCommand.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 146,
+                                    "endLine": 154,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m146| \u001b[0m\u001b[32m                    \u001b[0m\u001b[39m$output\u001b[0m\u001b[32m->\u001b[0m\u001b[39mwrite\u001b[0m\u001b[32m(\u001b[0m\u001b[39m$jsonString\u001b[0m\u001b[32m);\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 144,
+                                    "endLine": 148,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m144| \u001b[0m\u001b[32m            if (!empty(\u001b[0m\u001b[39m$jsonString\u001b[0m\u001b[32m)) {\u001b[0m\n    \u001b[90m145| \u001b[0m\u001b[32m                if (empty(\u001b[0m\u001b[39m$options\u001b[0m\u001b[32m[\u001b[0m\u001b[31m'output-file'\u001b[0m\u001b[32m])) {\u001b[0m\n    \u001b[90m146| \u001b[0m\u001b[32m                    \u001b[0m\u001b[39m$output\u001b[0m\u001b[32m->\u001b[0m\u001b[39mwrite\u001b[0m\u001b[32m(\u001b[0m\u001b[39m$jsonString\u001b[0m\u001b[32m);\u001b[0m\n    \u001b[90m147| \u001b[0m\u001b[32m                } else {\u001b[0m\n    \u001b[90m148| \u001b[0m\u001b[32m                    \u001b[0m\u001b[39m$outputFile \u001b[0m\u001b[32m= \u001b[0m\u001b[39m$options\u001b[0m\u001b[32m[\u001b[0m\u001b[31m'output-file'\u001b[0m\u001b[32m];\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "CleanCodeRules/ElseExpression": "f178f437a7c2c061b2d4acb6c9b9347f6764506321476b52c4f3a8475f23b96c"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "The method create has a boolean flag argument $prettyPrint, which is a certain sign of a Single Responsibility Principle violation. (BooleanArgumentFlag, Clean Code Rules) "
+                    },
+                    "ruleId": "CleanCodeRules/BooleanArgumentFlag",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Contract/ConverterFactoryInterface.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 26,
+                                    "endLine": 26,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m26| \u001b[0m\u001b[32m        ?\u001b[0m\u001b[39mSerializerFactory $serializerFactory \u001b[0m\u001b[32m= \u001b[0m\u001b[39mnull\u001b[0m\u001b[32m,\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 24,
+                                    "endLine": 28,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m24| \u001b[0m\u001b[32m    public function \u001b[0m\u001b[39mcreate\u001b[0m\u001b[32m(\u001b[0m\n    \u001b[90m25| \u001b[0m\u001b[32m        \u001b[0m\u001b[39mstring $name\u001b[0m\u001b[32m,\u001b[0m\n    \u001b[90m26| \u001b[0m\u001b[32m        ?\u001b[0m\u001b[39mSerializerFactory $serializerFactory \u001b[0m\u001b[32m= \u001b[0m\u001b[39mnull\u001b[0m\u001b[32m,\u001b[0m\n    \u001b[90m27| \u001b[0m\u001b[32m        \u001b[0m\u001b[39mbool $prettyPrint \u001b[0m\u001b[32m= \u001b[0m\u001b[39mfalse\u001b[0m\n    \u001b[90m28| \u001b[0m\u001b[39m    \u001b[0m\u001b[32m): \u001b[0m\u001b[39mConverterInterface\u001b[0m\u001b[32m;\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "CleanCodeRules/BooleanArgumentFlag": "3f3c49db7b2fe0a7da062ebd29e934687a94b1fd1cd1a1c34ddfb753fe9f66a5"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "The method __construct has a boolean flag argument $prettify, which is a certain sign of a Single Responsibility Principle violation. (BooleanArgumentFlag, Clean Code Rules) "
+                    },
+                    "ruleId": "CleanCodeRules/BooleanArgumentFlag",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 90,
+                                    "endLine": 90,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m90| \u001b[0m\u001b[32m    public function \u001b[0m\u001b[39m__construct\u001b[0m\u001b[32m(?\u001b[0m\u001b[39mFactory\\SerializerFactory $factory \u001b[0m\u001b[32m= \u001b[0m\u001b[39mnull\u001b[0m\u001b[32m, \u001b[0m\u001b[39mbool $prettify \u001b[0m\u001b[32m= \u001b[0m\u001b[39mfalse\u001b[0m\u001b[32m)\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 88,
+                                    "endLine": 92,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m88| \u001b[0m\u001b[33m    \u001b[0m\u001b[32mprotected ?\u001b[0m\u001b[39mint $endTime \u001b[0m\u001b[32m= \u001b[0m\u001b[39mnull\u001b[0m\u001b[32m;\u001b[0m\n    \u001b[90m89| \u001b[0m\n    \u001b[90m90| \u001b[0m\u001b[32m    public function \u001b[0m\u001b[39m__construct\u001b[0m\u001b[32m(?\u001b[0m\u001b[39mFactory\\SerializerFactory $factory \u001b[0m\u001b[32m= \u001b[0m\u001b[39mnull\u001b[0m\u001b[32m, \u001b[0m\u001b[39mbool $prettify \u001b[0m\u001b[32m= \u001b[0m\u001b[39mfalse\u001b[0m\u001b[32m)\u001b[0m\n    \u001b[90m91| \u001b[0m\u001b[32m    {\u001b[0m\n    \u001b[90m92| \u001b[0m\u001b[32m        \u001b[0m\u001b[39m$serializerFactory \u001b[0m\u001b[32m= new \u001b[0m\u001b[39mFactory\\PhpSerializerFactory\u001b[0m\u001b[32m();\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "CleanCodeRules/BooleanArgumentFlag": "0f20821741c508a05eddd62d83eb0f4bdd209c49685157c3568f2c0bd7fc898d"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "The method __construct uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them. (ElseExpression, Clean Code Rules) "
+                    },
+                    "ruleId": "CleanCodeRules/ElseExpression",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 97,
+                                    "endLine": 100,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m97| \u001b[0m\u001b[32m        } else {\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 95,
+                                    "endLine": 99,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m95| \u001b[0m\u001b[32m            \u001b[0m\u001b[39m$realEncoder \u001b[0m\u001b[32m= new \u001b[0m\u001b[39mSerializer\\Encoder\\PhpJsonEncoder\u001b[0m\u001b[32m(\u001b[0m\u001b[39mJSON_PRETTY_PRINT \u001b[0m\u001b[32m| \u001b[0m\u001b[39mJSON_UNESCAPED_SLASHES\u001b[0m\u001b[32m);\u001b[0m\n    \u001b[90m96| \u001b[0m\u001b[32m            \u001b[0m\u001b[39m$this\u001b[0m\u001b[32m->\u001b[0m\u001b[39mserializer \u001b[0m\u001b[32m= \u001b[0m\u001b[39m$serializerFactory\u001b[0m\u001b[32m->\u001b[0m\u001b[39mcreateSerializer\u001b[0m\u001b[32m(\u001b[0m\u001b[39m$realEncoder\u001b[0m\u001b[32m);\u001b[0m\n    \u001b[90m97| \u001b[0m\u001b[32m        } else {\u001b[0m\n    \u001b[90m98| \u001b[0m\u001b[32m            \u001b[0m\u001b[39m$factory \u001b[0m\u001b[32m??= \u001b[0m\u001b[39m$serializerFactory\u001b[0m\u001b[32m;\u001b[0m\n    \u001b[90m99| \u001b[0m\u001b[32m            \u001b[0m\u001b[39m$this\u001b[0m\u001b[32m->\u001b[0m\u001b[39mserializer \u001b[0m\u001b[32m= \u001b[0m\u001b[39m$factory\u001b[0m\u001b[32m->\u001b[0m\u001b[39mcreateSerializer\u001b[0m\u001b[32m();\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "CleanCodeRules/ElseExpression": "0f20821741c508a05eddd62d83eb0f4bdd209c49685157c3568f2c0bd7fc898d"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Avoid using static access to class '\\Composer\\InstalledVersions' in method 'toolExtensions'. (StaticAccess, Clean Code Rules) "
+                    },
+                    "ruleId": "CleanCodeRules/StaticAccess",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 152,
+                                    "endLine": 152,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m152| \u001b[0m\u001b[32m        \u001b[0m\u001b[39m$converterVersion \u001b[0m\u001b[32m= \u001b[0m\u001b[39mInstalledVersions\u001b[0m\u001b[32m::\u001b[0m\u001b[39mgetVersion\u001b[0m\u001b[32m(\u001b[0m\u001b[39m$this\u001b[0m\u001b[32m->\u001b[0m\u001b[39mconverterComposerPackage\u001b[0m\u001b[32m);\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 150,
+                                    "endLine": 154,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m150| \u001b[0m\u001b[33m    \u001b[0m\u001b[32mpublic function \u001b[0m\u001b[39mtoolExtensions\u001b[0m\u001b[32m(): array\u001b[0m\n    \u001b[90m151| \u001b[0m\u001b[32m    {\u001b[0m\n    \u001b[90m152| \u001b[0m\u001b[32m        \u001b[0m\u001b[39m$converterVersion \u001b[0m\u001b[32m= \u001b[0m\u001b[39mInstalledVersions\u001b[0m\u001b[32m::\u001b[0m\u001b[39mgetVersion\u001b[0m\u001b[32m(\u001b[0m\u001b[39m$this\u001b[0m\u001b[32m->\u001b[0m\u001b[39mconverterComposerPackage\u001b[0m\u001b[32m);\u001b[0m\n    \u001b[90m153| \u001b[0m\n    \u001b[90m154| \u001b[0m\u001b[32m        \u001b[0m\u001b[39m$description \u001b[0m\u001b[32m= new \u001b[0m\u001b[39mDefinition\\MultiformatMessageString\u001b[0m\u001b[32m();\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "CleanCodeRules/StaticAccess": "0f20821741c508a05eddd62d83eb0f4bdd209c49685157c3568f2c0bd7fc898d"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "The method rules uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them. (ElseExpression, Clean Code Rules) "
+                    },
+                    "ruleId": "CleanCodeRules/ElseExpression",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 200,
+                                    "endLine": 202,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m200| \u001b[0m\u001b[32m                } else {\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 198,
+                                    "endLine": 202,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m198| \u001b[0m\u001b[32m                    \u001b[0m\u001b[39m$text \u001b[0m\u001b[32m= \u001b[0m\u001b[39m$ruleDef\u001b[0m\u001b[32m[\u001b[0m\u001b[31m'help'\u001b[0m\u001b[32m][\u001b[0m\u001b[31m'text'\u001b[0m\u001b[32m];\u001b[0m\n    \u001b[90m199| \u001b[0m\u001b[32m                    \u001b[0m\u001b[39m$markdown \u001b[0m\u001b[32m= \u001b[0m\u001b[39m$ruleDef\u001b[0m\u001b[32m[\u001b[0m\u001b[31m'help'\u001b[0m\u001b[32m][\u001b[0m\u001b[31m'markdown'\u001b[0m\u001b[32m] ?? \u001b[0m\u001b[39m$markdown\u001b[0m\u001b[32m;\u001b[0m\n    \u001b[90m200| \u001b[0m\u001b[32m                } else {\u001b[0m\n    \u001b[90m201| \u001b[0m\u001b[32m                    \u001b[0m\u001b[39m$text \u001b[0m\u001b[32m= \u001b[0m\u001b[39m$ruleDef\u001b[0m\u001b[32m[\u001b[0m\u001b[31m'help'\u001b[0m\u001b[32m];\u001b[0m\n    \u001b[90m202| \u001b[0m\u001b[32m                }\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "CleanCodeRules/ElseExpression": "0f20821741c508a05eddd62d83eb0f4bdd209c49685157c3568f2c0bd7fc898d"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Avoid using static access to class '\\Composer\\InstalledVersions' in method 'getToolVersion'. (StaticAccess, Clean Code Rules) "
+                    },
+                    "ruleId": "CleanCodeRules/StaticAccess",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 389,
+                                    "endLine": 389,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m389| \u001b[0m\u001b[32m        \u001b[0m\u001b[39m$toolVersion \u001b[0m\u001b[32m= \u001b[0m\u001b[39mInstalledVersions\u001b[0m\u001b[32m::\u001b[0m\u001b[39mgetVersion\u001b[0m\u001b[32m(\u001b[0m\u001b[39m$package\u001b[0m\u001b[32m);\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 387,
+                                    "endLine": 391,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m387| \u001b[0m\u001b[32m    protected function \u001b[0m\u001b[39mgetToolVersion\u001b[0m\u001b[32m(\u001b[0m\u001b[39mstring $package\u001b[0m\u001b[32m): \u001b[0m\u001b[39mstring\u001b[0m\n    \u001b[90m388| \u001b[0m\u001b[39m    \u001b[0m\u001b[32m{\u001b[0m\n    \u001b[90m389| \u001b[0m\u001b[32m        \u001b[0m\u001b[39m$toolVersion \u001b[0m\u001b[32m= \u001b[0m\u001b[39mInstalledVersions\u001b[0m\u001b[32m::\u001b[0m\u001b[39mgetVersion\u001b[0m\u001b[32m(\u001b[0m\u001b[39m$package\u001b[0m\u001b[32m);\u001b[0m\n    \u001b[90m390| \u001b[0m\n    \u001b[90m391| \u001b[0m\u001b[32m        if (\u001b[0m\u001b[39mnull \u001b[0m\u001b[32m=== \u001b[0m\u001b[39m$toolVersion\u001b[0m\u001b[32m) {\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "CleanCodeRules/StaticAccess": "0f20821741c508a05eddd62d83eb0f4bdd209c49685157c3568f2c0bd7fc898d"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Avoid using static access to class '\\Composer\\InstalledVersions' in method 'getCodeSnippet'. (StaticAccess, Clean Code Rules) "
+                    },
+                    "ruleId": "CleanCodeRules/StaticAccess",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 456,
+                                    "endLine": 456,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m456| \u001b[0m\u001b[32m        if (\u001b[0m\u001b[39mInstalledVersions\u001b[0m\u001b[32m::\u001b[0m\u001b[39misInstalled\u001b[0m\u001b[32m(\u001b[0m\u001b[31m'php-parallel-lint/php-console-highlighter'\u001b[0m\u001b[32m) === \u001b[0m\u001b[39mfalse\u001b[0m\u001b[32m) {\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 454,
+                                    "endLine": 458,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m454| \u001b[0m\u001b[33m    \u001b[0m\u001b[32mprotected function \u001b[0m\u001b[39mgetCodeSnippet\u001b[0m\u001b[32m(\u001b[0m\u001b[39mstring $filePath\u001b[0m\u001b[32m, \u001b[0m\u001b[39mint $lineNumber\u001b[0m\u001b[32m, \u001b[0m\u001b[39mint $linesBefore\u001b[0m\u001b[32m, \u001b[0m\u001b[39mint $linesAfter\u001b[0m\u001b[32m): ?\u001b[0m\u001b[39mstring\u001b[0m\n    \u001b[90m455| \u001b[0m\u001b[39m    \u001b[0m\u001b[32m{\u001b[0m\n    \u001b[90m456| \u001b[0m\u001b[32m        if (\u001b[0m\u001b[39mInstalledVersions\u001b[0m\u001b[32m::\u001b[0m\u001b[39misInstalled\u001b[0m\u001b[32m(\u001b[0m\u001b[31m'php-parallel-lint/php-console-highlighter'\u001b[0m\u001b[32m) === \u001b[0m\u001b[39mfalse\u001b[0m\u001b[32m) {\u001b[0m\n    \u001b[90m457| \u001b[0m\u001b[32m            return \u001b[0m\u001b[39mnull\u001b[0m\u001b[32m;\u001b[0m\n    \u001b[90m458| \u001b[0m\u001b[32m        }\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "CleanCodeRules/StaticAccess": "0f20821741c508a05eddd62d83eb0f4bdd209c49685157c3568f2c0bd7fc898d"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "The method fromSimpleXml uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them. (ElseExpression, Clean Code Rules) "
+                    },
+                    "ruleId": "CleanCodeRules/ElseExpression",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/CheckstyleNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 77,
+                                    "endLine": 79,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m77| \u001b[0m\u001b[32m                    } else {\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 75,
+                                    "endLine": 79,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m75| \u001b[0m\u001b[33m                            \u001b[0m\u001b[39m$attributes\u001b[0m\u001b[32m[\u001b[0m\u001b[39m$key\u001b[0m\u001b[32m] = \u001b[0m\u001b[31m'note'\u001b[0m\u001b[32m;\u001b[0m\n    \u001b[90m76| \u001b[0m\u001b[32m                        }\u001b[0m\n    \u001b[90m77| \u001b[0m\u001b[32m                    } else {\u001b[0m\n    \u001b[90m78| \u001b[0m\u001b[32m                        \u001b[0m\u001b[39m$attributes\u001b[0m\u001b[32m[\u001b[0m\u001b[39m$key\u001b[0m\u001b[32m] = \u001b[0m\u001b[39m$value\u001b[0m\u001b[32m;\u001b[0m\n    \u001b[90m79| \u001b[0m\u001b[32m                    }\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "CleanCodeRules/ElseExpression": "70e6529411279b7f65c3b327d721fb4e12d56c5f1b31f8507efcd9e8bb233a26"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "The method generateFileReport has a boolean flag argument $showSources, which is a certain sign of a Single Responsibility Principle violation. (BooleanArgumentFlag, Clean Code Rules) "
+                    },
+                    "ruleId": "CleanCodeRules/BooleanArgumentFlag",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Reporter/PhpCsReport.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 50,
+                                    "endLine": 50,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m50| \u001b[0m\u001b[33m    \u001b[0m\u001b[32mpublic function \u001b[0m\u001b[39mgenerateFileReport\u001b[0m\u001b[32m(\u001b[0m\u001b[39m$report\u001b[0m\u001b[32m, \u001b[0m\u001b[39mFile $phpcsFile\u001b[0m\u001b[32m, \u001b[0m\u001b[39m$showSources \u001b[0m\u001b[32m= \u001b[0m\u001b[39mfalse\u001b[0m\u001b[32m, \u001b[0m\u001b[39m$width \u001b[0m\u001b[32m= \u001b[0m\u001b[39m80\u001b[0m\u001b[32m): \u001b[0m\u001b[39mbool\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 48,
+                                    "endLine": 52,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m48| \u001b[0m\u001b[33m     * @param array<string, mixed> $report\u001b[0m\n    \u001b[90m49| \u001b[0m\u001b[33m     */\u001b[0m\n    \u001b[90m50| \u001b[0m\u001b[33m    \u001b[0m\u001b[32mpublic function \u001b[0m\u001b[39mgenerateFileReport\u001b[0m\u001b[32m(\u001b[0m\u001b[39m$report\u001b[0m\u001b[32m, \u001b[0m\u001b[39mFile $phpcsFile\u001b[0m\u001b[32m, \u001b[0m\u001b[39m$showSources \u001b[0m\u001b[32m= \u001b[0m\u001b[39mfalse\u001b[0m\u001b[32m, \u001b[0m\u001b[39m$width \u001b[0m\u001b[32m= \u001b[0m\u001b[39m80\u001b[0m\u001b[32m): \u001b[0m\u001b[39mbool\u001b[0m\n    \u001b[90m51| \u001b[0m\u001b[39m    \u001b[0m\u001b[32m{\u001b[0m\n    \u001b[90m52| \u001b[0m\u001b[32m        if (\u001b[0m\u001b[39m$report\u001b[0m\u001b[32m[\u001b[0m\u001b[31m'errors'\u001b[0m\u001b[32m] === \u001b[0m\u001b[39m0 \u001b[0m\u001b[32m&& \u001b[0m\u001b[39m$report\u001b[0m\u001b[32m[\u001b[0m\u001b[31m'warnings'\u001b[0m\u001b[32m] === \u001b[0m\u001b[39m0\u001b[0m\u001b[32m) {\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "CleanCodeRules/BooleanArgumentFlag": "f1208000b0c7a7b4fe82cba5a6886762266dce4c9552db0f05d4b8a38b4627ef"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "The method generate has a boolean flag argument $showSources, which is a certain sign of a Single Responsibility Principle violation. (BooleanArgumentFlag, Clean Code Rules) "
+                    },
+                    "ruleId": "CleanCodeRules/BooleanArgumentFlag",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Reporter/PhpCsReport.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 90,
+                                    "endLine": 90,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m90| \u001b[0m\u001b[32m        \u001b[0m\u001b[39m$showSources \u001b[0m\u001b[32m= \u001b[0m\u001b[39mfalse\u001b[0m\u001b[32m,\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 88,
+                                    "endLine": 92,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m88| \u001b[0m\u001b[32m        \u001b[0m\u001b[39m$totalWarnings\u001b[0m\u001b[32m,\u001b[0m\n    \u001b[90m89| \u001b[0m\u001b[32m        \u001b[0m\u001b[39m$totalFixable\u001b[0m\u001b[32m,\u001b[0m\n    \u001b[90m90| \u001b[0m\u001b[32m        \u001b[0m\u001b[39m$showSources \u001b[0m\u001b[32m= \u001b[0m\u001b[39mfalse\u001b[0m\u001b[32m,\u001b[0m\n    \u001b[90m91| \u001b[0m\u001b[32m        \u001b[0m\u001b[39m$width \u001b[0m\u001b[32m= \u001b[0m\u001b[39m80\u001b[0m\u001b[32m,\u001b[0m\n    \u001b[90m92| \u001b[0m\u001b[32m        \u001b[0m\u001b[39m$interactive \u001b[0m\u001b[32m= \u001b[0m\u001b[39mfalse\u001b[0m\u001b[32m,\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "CleanCodeRules/BooleanArgumentFlag": "f1208000b0c7a7b4fe82cba5a6886762266dce4c9552db0f05d4b8a38b4627ef"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "The method generate has a boolean flag argument $interactive, which is a certain sign of a Single Responsibility Principle violation. (BooleanArgumentFlag, Clean Code Rules) "
+                    },
+                    "ruleId": "CleanCodeRules/BooleanArgumentFlag",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Reporter/PhpCsReport.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 92,
+                                    "endLine": 92,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m92| \u001b[0m\u001b[32m        \u001b[0m\u001b[39m$interactive \u001b[0m\u001b[32m= \u001b[0m\u001b[39mfalse\u001b[0m\u001b[32m,\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 90,
+                                    "endLine": 94,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m90| \u001b[0m\u001b[32m        \u001b[0m\u001b[39m$showSources \u001b[0m\u001b[32m= \u001b[0m\u001b[39mfalse\u001b[0m\u001b[32m,\u001b[0m\n    \u001b[90m91| \u001b[0m\u001b[32m        \u001b[0m\u001b[39m$width \u001b[0m\u001b[32m= \u001b[0m\u001b[39m80\u001b[0m\u001b[32m,\u001b[0m\n    \u001b[90m92| \u001b[0m\u001b[32m        \u001b[0m\u001b[39m$interactive \u001b[0m\u001b[32m= \u001b[0m\u001b[39mfalse\u001b[0m\u001b[32m,\u001b[0m\n    \u001b[90m93| \u001b[0m\u001b[32m        \u001b[0m\u001b[39m$toScreen \u001b[0m\u001b[32m= \u001b[0m\u001b[39mtrue\u001b[0m\n    \u001b[90m94| \u001b[0m\u001b[39m    \u001b[0m\u001b[32m) {\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "CleanCodeRules/BooleanArgumentFlag": "f1208000b0c7a7b4fe82cba5a6886762266dce4c9552db0f05d4b8a38b4627ef"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "The method generate has a boolean flag argument $toScreen, which is a certain sign of a Single Responsibility Principle violation. (BooleanArgumentFlag, Clean Code Rules) "
+                    },
+                    "ruleId": "CleanCodeRules/BooleanArgumentFlag",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Reporter/PhpCsReport.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 93,
+                                    "endLine": 93,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m93| \u001b[0m\u001b[32m        \u001b[0m\u001b[39m$toScreen \u001b[0m\u001b[32m= \u001b[0m\u001b[39mtrue\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 91,
+                                    "endLine": 95,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m91| \u001b[0m\u001b[32m        \u001b[0m\u001b[39m$width \u001b[0m\u001b[32m= \u001b[0m\u001b[39m80\u001b[0m\u001b[32m,\u001b[0m\n    \u001b[90m92| \u001b[0m\u001b[32m        \u001b[0m\u001b[39m$interactive \u001b[0m\u001b[32m= \u001b[0m\u001b[39mfalse\u001b[0m\u001b[32m,\u001b[0m\n    \u001b[90m93| \u001b[0m\u001b[32m        \u001b[0m\u001b[39m$toScreen \u001b[0m\u001b[32m= \u001b[0m\u001b[39mtrue\u001b[0m\n    \u001b[90m94| \u001b[0m\u001b[39m    \u001b[0m\u001b[32m) {\u001b[0m\n    \u001b[90m95| \u001b[0m\u001b[32m        \u001b[0m\u001b[39m$this\u001b[0m\u001b[32m->\u001b[0m\u001b[39msource\u001b[0m\u001b[32m->\u001b[0m\u001b[39mnormalize\u001b[0m\u001b[32m(\u001b[0m\u001b[39mjson_encode\u001b[0m\u001b[32m(\u001b[0m\u001b[39m$this\u001b[0m\u001b[32m->\u001b[0m\u001b[39mcacheData\u001b[0m\u001b[32m), \u001b[0m\u001b[31m'json'\u001b[0m\u001b[32m, []);\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "CleanCodeRules/BooleanArgumentFlag": "f1208000b0c7a7b4fe82cba5a6886762266dce4c9552db0f05d4b8a38b4627ef"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Avoid using static access to class '\\PhpCsFixer\\Preg' in method 'camelCaseToUnderscore'. (StaticAccess, Clean Code Rules) "
+                    },
+                    "ruleId": "CleanCodeRules/StaticAccess",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Source/EcsSource.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 132,
+                                    "endLine": 132,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m132| \u001b[0m\u001b[32m        return \u001b[0m\u001b[39mmb_strtolower\u001b[0m\u001b[32m(\u001b[0m\u001b[39mPreg\u001b[0m\u001b[32m::\u001b[0m\u001b[39mreplace\u001b[0m\u001b[32m(\u001b[0m\u001b[31m'/(?<!^)(?<!_)((?=[\\p{Lu}][^\\p{Lu}])|(?<![\\p{Lu}])(?=[\\p{Lu}]))/'\u001b[0m\u001b[32m, \u001b[0m\u001b[31m'_'\u001b[0m\u001b[32m, \u001b[0m\u001b[39m$string\u001b[0m\u001b[32m));\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 130,
+                                    "endLine": 134,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m130| \u001b[0m\u001b[33m    \u001b[0m\u001b[32mprivate static function \u001b[0m\u001b[39mcamelCaseToUnderscore\u001b[0m\u001b[32m(\u001b[0m\u001b[39mstring $string\u001b[0m\u001b[32m): \u001b[0m\u001b[39mstring\u001b[0m\n    \u001b[90m131| \u001b[0m\u001b[39m    \u001b[0m\u001b[32m{\u001b[0m\n    \u001b[90m132| \u001b[0m\u001b[32m        return \u001b[0m\u001b[39mmb_strtolower\u001b[0m\u001b[32m(\u001b[0m\u001b[39mPreg\u001b[0m\u001b[32m::\u001b[0m\u001b[39mreplace\u001b[0m\u001b[32m(\u001b[0m\u001b[31m'/(?<!^)(?<!_)((?=[\\p{Lu}][^\\p{Lu}])|(?<![\\p{Lu}])(?=[\\p{Lu}]))/'\u001b[0m\u001b[32m, \u001b[0m\u001b[31m'_'\u001b[0m\u001b[32m, \u001b[0m\u001b[39m$string\u001b[0m\u001b[32m));\u001b[0m\n    \u001b[90m133| \u001b[0m\u001b[32m    }\u001b[0m\n    \u001b[90m134| \u001b[0m\u001b[32m}\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "CleanCodeRules/StaticAccess": "bc01d6e43f322bc89e2b72da4df003e1048375cc48a9573107060e2d486802c6"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "The method create has a boolean flag argument $prettyPrint, which is a certain sign of a Single Responsibility Principle violation. (BooleanArgumentFlag, Clean Code Rules) "
+                    },
+                    "ruleId": "CleanCodeRules/BooleanArgumentFlag",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Factory/ConverterFactory.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 27,
+                                    "endLine": 27,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m27| \u001b[0m\u001b[32m        \u001b[0m\u001b[39mbool $prettyPrint \u001b[0m\u001b[32m= \u001b[0m\u001b[39mfalse\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 25,
+                                    "endLine": 29,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m25| \u001b[0m\u001b[32m        \u001b[0m\u001b[39mstring $name\u001b[0m\u001b[32m,\u001b[0m\n    \u001b[90m26| \u001b[0m\u001b[32m        ?\u001b[0m\u001b[39mSerializerFactory $serializerFactory \u001b[0m\u001b[32m= \u001b[0m\u001b[39mnull\u001b[0m\u001b[32m,\u001b[0m\n    \u001b[90m27| \u001b[0m\u001b[32m        \u001b[0m\u001b[39mbool $prettyPrint \u001b[0m\u001b[32m= \u001b[0m\u001b[39mfalse\u001b[0m\n    \u001b[90m28| \u001b[0m\u001b[39m    \u001b[0m\u001b[32m): \u001b[0m\u001b[39mConverterInterface \u001b[0m\u001b[32m{\u001b[0m\n    \u001b[90m29| \u001b[0m\u001b[32m        switch (\u001b[0m\u001b[39mstrtolower\u001b[0m\u001b[32m(\u001b[0m\u001b[39m$name\u001b[0m\u001b[32m)) {\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "CleanCodeRules/BooleanArgumentFlag": "1da7ad49d3be6e8cfa426693f71d1f5358899e277430e7c1b56196862303e92e"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "The method createEasyCodingStandard has a boolean flag argument $prettyPrint, which is a certain sign of a Single Responsibility Principle violation. (BooleanArgumentFlag, Clean Code Rules) "
+                    },
+                    "ruleId": "CleanCodeRules/BooleanArgumentFlag",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Factory/ConverterFactory.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 43,
+                                    "endLine": 43,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m43| \u001b[0m\u001b[32m    }\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 41,
+                                    "endLine": 45,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m41| \u001b[0m\n    \u001b[90m42| \u001b[0m\u001b[32m        throw new \u001b[0m\u001b[39mOutOfBoundsException\u001b[0m\u001b[32m(\u001b[0m\u001b[39msprintf\u001b[0m\u001b[32m(\u001b[0m\u001b[31m'Converter \"%s\" not found.'\u001b[0m\u001b[32m, \u001b[0m\u001b[39m$name\u001b[0m\u001b[32m));\u001b[0m\n    \u001b[90m43| \u001b[0m\u001b[32m    }\u001b[0m\n    \u001b[90m44| \u001b[0m\n    \u001b[90m45| \u001b[0m\u001b[32m    public function \u001b[0m\u001b[39mcreateEasyCodingStandard\u001b[0m\u001b[32m(?\u001b[0m\u001b[39mSerializerFactory $serializerFactory \u001b[0m\u001b[32m= \u001b[0m\u001b[39mnull\u001b[0m\u001b[32m, ?\u001b[0m\u001b[39mbool $prettyPrint \u001b[0m\u001b[32m= \u001b[0m\u001b[39mfalse\u001b[0m\u001b[32m): \u001b[0m\u001b[39mConverterInterface\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "CleanCodeRules/BooleanArgumentFlag": "1da7ad49d3be6e8cfa426693f71d1f5358899e277430e7c1b56196862303e92e"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "The method createCodeSniffer has a boolean flag argument $prettyPrint, which is a certain sign of a Single Responsibility Principle violation. (BooleanArgumentFlag, Clean Code Rules) "
+                    },
+                    "ruleId": "CleanCodeRules/BooleanArgumentFlag",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Factory/ConverterFactory.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 48,
+                                    "endLine": 48,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m48| \u001b[0m\u001b[32m    }\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 46,
+                                    "endLine": 50,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m46| \u001b[0m\u001b[39m    \u001b[0m\u001b[32m{\u001b[0m\n    \u001b[90m47| \u001b[0m\u001b[32m        return new \u001b[0m\u001b[39mConverter\\EcsConverter\u001b[0m\u001b[32m(\u001b[0m\u001b[39m$serializerFactory\u001b[0m\u001b[32m, \u001b[0m\u001b[39m$prettyPrint\u001b[0m\u001b[32m);\u001b[0m\n    \u001b[90m48| \u001b[0m\u001b[32m    }\u001b[0m\n    \u001b[90m49| \u001b[0m\n    \u001b[90m50| \u001b[0m\u001b[32m    public function \u001b[0m\u001b[39mcreateCodeSniffer\u001b[0m\u001b[32m(?\u001b[0m\u001b[39mSerializerFactory $serializerFactory \u001b[0m\u001b[32m= \u001b[0m\u001b[39mnull\u001b[0m\u001b[32m, \u001b[0m\u001b[39mbool $prettyPrint \u001b[0m\u001b[32m= \u001b[0m\u001b[39mfalse\u001b[0m\u001b[32m): \u001b[0m\u001b[39mConverterInterface\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "CleanCodeRules/BooleanArgumentFlag": "1da7ad49d3be6e8cfa426693f71d1f5358899e277430e7c1b56196862303e92e"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "The method createLinter has a boolean flag argument $prettyPrint, which is a certain sign of a Single Responsibility Principle violation. (BooleanArgumentFlag, Clean Code Rules) "
+                    },
+                    "ruleId": "CleanCodeRules/BooleanArgumentFlag",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Factory/ConverterFactory.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 53,
+                                    "endLine": 53,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m53| \u001b[0m\u001b[32m    }\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 51,
+                                    "endLine": 55,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m51| \u001b[0m\u001b[39m    \u001b[0m\u001b[32m{\u001b[0m\n    \u001b[90m52| \u001b[0m\u001b[32m        return new \u001b[0m\u001b[39mConverter\\PhpCsConverter\u001b[0m\u001b[32m(\u001b[0m\u001b[39m$serializerFactory\u001b[0m\u001b[32m, \u001b[0m\u001b[39m$prettyPrint\u001b[0m\u001b[32m);\u001b[0m\n    \u001b[90m53| \u001b[0m\u001b[32m    }\u001b[0m\n    \u001b[90m54| \u001b[0m\n    \u001b[90m55| \u001b[0m\u001b[32m    public function \u001b[0m\u001b[39mcreateLinter\u001b[0m\u001b[32m(?\u001b[0m\u001b[39mSerializerFactory $serializerFactory \u001b[0m\u001b[32m= \u001b[0m\u001b[39mnull\u001b[0m\u001b[32m, \u001b[0m\u001b[39mbool $prettyPrint \u001b[0m\u001b[32m= \u001b[0m\u001b[39mfalse\u001b[0m\u001b[32m): \u001b[0m\u001b[39mConverterInterface\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "CleanCodeRules/BooleanArgumentFlag": "1da7ad49d3be6e8cfa426693f71d1f5358899e277430e7c1b56196862303e92e"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "The method createStan has a boolean flag argument $prettyPrint, which is a certain sign of a Single Responsibility Principle violation. (BooleanArgumentFlag, Clean Code Rules) "
+                    },
+                    "ruleId": "CleanCodeRules/BooleanArgumentFlag",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Factory/ConverterFactory.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 58,
+                                    "endLine": 58,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m58| \u001b[0m\u001b[32m    }\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 56,
+                                    "endLine": 60,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m56| \u001b[0m\u001b[39m    \u001b[0m\u001b[32m{\u001b[0m\n    \u001b[90m57| \u001b[0m\u001b[32m        return new \u001b[0m\u001b[39mConverter\\PhpLintConverter\u001b[0m\u001b[32m(\u001b[0m\u001b[39m$serializerFactory\u001b[0m\u001b[32m, \u001b[0m\u001b[39m$prettyPrint\u001b[0m\u001b[32m);\u001b[0m\n    \u001b[90m58| \u001b[0m\u001b[32m    }\u001b[0m\n    \u001b[90m59| \u001b[0m\n    \u001b[90m60| \u001b[0m\u001b[32m    public function \u001b[0m\u001b[39mcreateMessDetector\u001b[0m\u001b[32m(?\u001b[0m\u001b[39mSerializerFactory $serializerFactory \u001b[0m\u001b[32m= \u001b[0m\u001b[39mnull\u001b[0m\u001b[32m, \u001b[0m\u001b[39mbool $prettyPrint \u001b[0m\u001b[32m= \u001b[0m\u001b[39mfalse\u001b[0m\u001b[32m): \u001b[0m\u001b[39mConverterInterface\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "CleanCodeRules/BooleanArgumentFlag": "1da7ad49d3be6e8cfa426693f71d1f5358899e277430e7c1b56196862303e92e"
+                    }
+                }
+            ],
+            "automationDetails": {
+                "id": "Daily run 2024-07-10T09:48:37+00:00"
+            }
+        }
+    ]
+}

@@ -32,6 +32,8 @@ final class SourceFactory implements SourceFactoryInterface
                 return $this->createCodeSniffer($normalizers);
             case SourceFactoryInterface::BUILTIN_SOURCE_PHPLINT:
                 return $this->createLinter($normalizers);
+            case SourceFactoryInterface::BUILTIN_SOURCE_PHPMD:
+                return $this->createMessDetector($normalizers);
             case SourceFactoryInterface::BUILTIN_SOURCE_PHPSTAN:
                 return $this->createStan($normalizers);
         }
@@ -67,6 +69,24 @@ final class SourceFactory implements SourceFactoryInterface
         $normalizers = (array) $normalizers;
         $normalizers[] = new Normalizer\PhpLintNormalizer();
         return new Source\PhpLintSource($normalizers);
+    }
+
+    /**
+     * @param iterable<NormalizerInterface> $normalizers
+     */
+    public function createMessDetector(iterable $normalizers): SourceInterface
+    {
+        $finalNormalizers = [];
+        foreach ($normalizers as $normalizer) {
+            if ($normalizer instanceof Normalizer\CheckstyleNormalizer) {
+                // PHPMD uses non-standard attributes from Checkstyle format,
+                // so we cannot use the default CheckstyleNormalizer
+                continue;
+            }
+            $finalNormalizers[] = $normalizer;
+        }
+        $finalNormalizers[] = new Normalizer\PhpMdNormalizer();
+        return new Source\PhpMdSource($finalNormalizers);
     }
 
     /**

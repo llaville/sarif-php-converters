@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<checkstyle>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Console/Command/ConvertCommand.php">
+    <error line="125" endline="129" severity="error" message="The method execute uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them. (ElseExpression, Clean Code Rules) " externalInfoUrl="https://phpmd.org/rules/cleancode.html#elseexpression" />
+    <error line="146" endline="154" severity="error" message="The method execute uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them. (ElseExpression, Clean Code Rules) " externalInfoUrl="https://phpmd.org/rules/cleancode.html#elseexpression" />
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Contract/ConverterFactoryInterface.php">
+    <error line="26" endline="26" severity="error" message="The method create has a boolean flag argument $prettyPrint, which is a certain sign of a Single Responsibility Principle violation. (BooleanArgumentFlag, Clean Code Rules) " externalInfoUrl="https://phpmd.org/rules/cleancode.html#booleanargumentflag" />
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php">
+    <error line="90" endline="90" severity="error" message="The method __construct has a boolean flag argument $prettify, which is a certain sign of a Single Responsibility Principle violation. (BooleanArgumentFlag, Clean Code Rules) " externalInfoUrl="https://phpmd.org/rules/cleancode.html#booleanargumentflag" />
+    <error line="97" endline="100" severity="error" message="The method __construct uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them. (ElseExpression, Clean Code Rules) " externalInfoUrl="https://phpmd.org/rules/cleancode.html#elseexpression" />
+    <error line="152" endline="152" severity="error" message="Avoid using static access to class &#039;\Composer\InstalledVersions&#039; in method &#039;toolExtensions&#039;. (StaticAccess, Clean Code Rules) " externalInfoUrl="https://phpmd.org/rules/cleancode.html#staticaccess" />
+    <error line="200" endline="202" severity="error" message="The method rules uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them. (ElseExpression, Clean Code Rules) " externalInfoUrl="https://phpmd.org/rules/cleancode.html#elseexpression" />
+    <error line="389" endline="389" severity="error" message="Avoid using static access to class &#039;\Composer\InstalledVersions&#039; in method &#039;getToolVersion&#039;. (StaticAccess, Clean Code Rules) " externalInfoUrl="https://phpmd.org/rules/cleancode.html#staticaccess" />
+    <error line="456" endline="456" severity="error" message="Avoid using static access to class &#039;\Composer\InstalledVersions&#039; in method &#039;getCodeSnippet&#039;. (StaticAccess, Clean Code Rules) " externalInfoUrl="https://phpmd.org/rules/cleancode.html#staticaccess" />
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/CheckstyleNormalizer.php">
+    <error line="77" endline="79" severity="error" message="The method fromSimpleXml uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them. (ElseExpression, Clean Code Rules) " externalInfoUrl="https://phpmd.org/rules/cleancode.html#elseexpression" />
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Reporter/PhpCsReport.php">
+    <error line="50" endline="50" severity="error" message="The method generateFileReport has a boolean flag argument $showSources, which is a certain sign of a Single Responsibility Principle violation. (BooleanArgumentFlag, Clean Code Rules) " externalInfoUrl="https://phpmd.org/rules/cleancode.html#booleanargumentflag" />
+    <error line="90" endline="90" severity="error" message="The method generate has a boolean flag argument $showSources, which is a certain sign of a Single Responsibility Principle violation. (BooleanArgumentFlag, Clean Code Rules) " externalInfoUrl="https://phpmd.org/rules/cleancode.html#booleanargumentflag" />
+    <error line="92" endline="92" severity="error" message="The method generate has a boolean flag argument $interactive, which is a certain sign of a Single Responsibility Principle violation. (BooleanArgumentFlag, Clean Code Rules) " externalInfoUrl="https://phpmd.org/rules/cleancode.html#booleanargumentflag" />
+    <error line="93" endline="93" severity="error" message="The method generate has a boolean flag argument $toScreen, which is a certain sign of a Single Responsibility Principle violation. (BooleanArgumentFlag, Clean Code Rules) " externalInfoUrl="https://phpmd.org/rules/cleancode.html#booleanargumentflag" />
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/EcsSource.php">
+    <error line="132" endline="132" severity="error" message="Avoid using static access to class &#039;\PhpCsFixer\Preg&#039; in method &#039;camelCaseToUnderscore&#039;. (StaticAccess, Clean Code Rules) " externalInfoUrl="https://phpmd.org/rules/cleancode.html#staticaccess" />
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Factory/ConverterFactory.php">
+    <error line="27" endline="27" severity="error" message="The method create has a boolean flag argument $prettyPrint, which is a certain sign of a Single Responsibility Principle violation. (BooleanArgumentFlag, Clean Code Rules) " externalInfoUrl="https://phpmd.org/rules/cleancode.html#booleanargumentflag" />
+    <error line="43" endline="43" severity="error" message="The method createEasyCodingStandard has a boolean flag argument $prettyPrint, which is a certain sign of a Single Responsibility Principle violation. (BooleanArgumentFlag, Clean Code Rules) " externalInfoUrl="https://phpmd.org/rules/cleancode.html#booleanargumentflag" />
+    <error line="48" endline="48" severity="error" message="The method createCodeSniffer has a boolean flag argument $prettyPrint, which is a certain sign of a Single Responsibility Principle violation. (BooleanArgumentFlag, Clean Code Rules) " externalInfoUrl="https://phpmd.org/rules/cleancode.html#booleanargumentflag" />
+    <error line="53" endline="53" severity="error" message="The method createLinter has a boolean flag argument $prettyPrint, which is a certain sign of a Single Responsibility Principle violation. (BooleanArgumentFlag, Clean Code Rules) " externalInfoUrl="https://phpmd.org/rules/cleancode.html#booleanargumentflag" />
+    <error line="58" endline="58" severity="error" message="The method createStan has a boolean flag argument $prettyPrint, which is a certain sign of a Single Responsibility Principle violation. (BooleanArgumentFlag, Clean Code Rules) " externalInfoUrl="https://phpmd.org/rules/cleancode.html#booleanargumentflag" />
+  </file>
+</checkstyle>

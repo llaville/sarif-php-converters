@@ -7,6 +7,7 @@
  */
 namespace Bartlett\Sarif\Console\Command;
 
+use Bartlett\Sarif\Contract\NormalizerInterface;
 use Bartlett\Sarif\Converter\Normalizer;
 use Bartlett\Sarif\Factory\ConverterFactory;
 use Bartlett\Sarif\Factory\SourceFactory;
@@ -103,7 +104,7 @@ class ConvertCommand extends Command
             $normalizers = [];
 
             switch ($format) {
-                case 'checkstyle':
+                case NormalizerInterface::FORMAT_CHECKSTYLE:
                     $normalizers[] = new Normalizer\CheckstyleNormalizer();
                     break;
                 default:

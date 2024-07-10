@@ -229,10 +229,6 @@ abstract class AbstractConverter implements ConverterInterface
             $artifactLocation->setUri($this->pathToArtifactLocation($filename));
             $artifactLocation->setUriBaseId('WORKINGDIR');
 
-            if (\strpos($filename, '/') !== 0) {
-                \var_dump($filename, \realpath($filename));
-            }
-
             $fingerprint = hash_file('sha256', $filename);
             $surroundingLines = 2;
 
@@ -266,12 +262,16 @@ abstract class AbstractConverter implements ConverterInterface
 
                 if (!empty($error['Region.startLine'])) {
                     $line = (int) $error['Region.startLine'];
+                    $endLine = $error['Region.endLine'] ?? null;
                     $column = $error['Region.startColumn'] ?? null;
                     if (!empty($column)) {
                         $column = (int) $column;
                     }
 
                     $region = $this->getSnippetRegion($filename, $line, $column, 0, 0);
+                    if (!empty($endLine)) {
+                        $region->setEndLine((int) $endLine);
+                    }
                     $physicalLocation->setRegion($region);
 
                     $startLine = max($line - $surroundingLines, 1);

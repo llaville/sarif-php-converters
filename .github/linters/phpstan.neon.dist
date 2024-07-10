@@ -5,6 +5,7 @@ parameters:
     scanDirectories:
         - ../../vendor-bin/phpcs/
         - ../../vendor-bin/phplint/
+        - ../../vendor-bin/phpmd/
         - ../../vendor-bin/phpstan/
 services:
     errorFormatter.sarif:

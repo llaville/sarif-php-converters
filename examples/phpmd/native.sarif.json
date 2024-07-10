@@ -1,0 +1,610 @@
+{
+    "version": "2.1.0",
+    "$schema": "https:\/\/raw.githubusercontent.com\/oasis-tcs\/sarif-spec\/master\/Schemata\/sarif-schema-2.1.0.json",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "PHPMD",
+                    "informationUri": "https:\/\/phpmd.org",
+                    "version": "@package_version@",
+                    "rules": [
+                        {
+                            "id": "CleanCodeRules\/ElseExpression",
+                            "name": "ElseExpression",
+                            "shortDescription": {
+                                "text": "Clean Code Rules: ElseExpression"
+                            },
+                            "messageStrings": {
+                                "default": {
+                                    "text": "The method {0} uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them."
+                                }
+                            },
+                            "help": {
+                                "text": "An if expression with an else branch is basically not necessary. You can rewrite the conditions in a way that the else clause is not necessary and the code becomes simpler to read.  To achieve this, use early return statements, though you may need to split the code it several smaller methods. For very simple assignments you could also use the ternary operations.",
+                                "markdown": "An if expression with an else branch is basically not necessary. You can rewrite the conditions in a way that the else clause is not necessary and the code becomes simpler to read.  To achieve this, use early return statements, though you may need to split the code it several smaller methods. For very simple assignments you could also use the ternary operations.\n\n### Example\n\n```php\nclass Foo\n{\n    public function bar($flag)\n    {\n        if ($flag) {\n            \/\/ one branch\n        } else {\n            \/\/ another branch\n        }\n    }\n}\n```"
+                            },
+                            "helpUri": "https:\/\/phpmd.org\/rules\/cleancode.html#elseexpression",
+                            "properties": {
+                                "ruleSet": "Clean Code Rules",
+                                "priority": 1,
+                                "since": "PHPMD 1.4.0"
+                            }
+                        },
+                        {
+                            "id": "CleanCodeRules\/BooleanArgumentFlag",
+                            "name": "BooleanArgumentFlag",
+                            "shortDescription": {
+                                "text": "Clean Code Rules: BooleanArgumentFlag"
+                            },
+                            "messageStrings": {
+                                "default": {
+                                    "text": "The method {0} has a boolean flag argument {1}, which is a certain sign of a Single Responsibility Principle violation."
+                                }
+                            },
+                            "help": {
+                                "text": "A boolean flag argument is a reliable indicator for a violation of the Single Responsibility Principle (SRP). You can fix this problem by extracting the logic in the boolean flag into its own class or method.",
+                                "markdown": "A boolean flag argument is a reliable indicator for a violation of the Single Responsibility Principle (SRP). You can fix this problem by extracting the logic in the boolean flag into its own class or method.\n\n### Example\n\n```php\nclass Foo {\n    public function bar($flag = true) {\n    }\n}\n```"
+                            },
+                            "helpUri": "https:\/\/phpmd.org\/rules\/cleancode.html#booleanargumentflag",
+                            "properties": {
+                                "ruleSet": "Clean Code Rules",
+                                "priority": 1,
+                                "since": "PHPMD 1.4.0"
+                            }
+                        },
+                        {
+                            "id": "CleanCodeRules\/StaticAccess",
+                            "name": "StaticAccess",
+                            "shortDescription": {
+                                "text": "Clean Code Rules: StaticAccess"
+                            },
+                            "messageStrings": {
+                                "default": {
+                                    "text": "Avoid using static access to class \u0027{0}\u0027 in method \u0027{1}\u0027."
+                                }
+                            },
+                            "help": {
+                                "text": "Static access causes unexchangeable dependencies to other classes and leads to hard to test code. Avoid using static access at all costs and instead inject dependencies through the constructor. The only case when static access is acceptable is when used for factory methods.",
+                                "markdown": "Static access causes unexchangeable dependencies to other classes and leads to hard to test code. Avoid using static access at all costs and instead inject dependencies through the constructor. The only case when static access is acceptable is when used for factory methods.\n\n### Example\n\n```php\nclass Foo\n{\n    public function bar()\n    {\n        Bar::baz();\n    }\n}\n```"
+                            },
+                            "helpUri": "https:\/\/phpmd.org\/rules\/cleancode.html#staticaccess",
+                            "properties": {
+                                "ruleSet": "Clean Code Rules",
+                                "priority": 1,
+                                "since": "PHPMD 1.4.0"
+                            }
+                        }
+                    ]
+                }
+            },
+            "originalUriBaseIds": {
+                "WORKINGDIR": {
+                    "uri": "file:\/\/\/shared\/backups\/forks\/phpmd\/"
+                }
+            },
+            "results": [
+                {
+                    "ruleId": "CleanCodeRules\/ElseExpression",
+                    "ruleIndex": 0,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "execute"
+                        ],
+                        "text": "The method execute uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:\/\/\/shared\/backups\/bartlett\/sarif-php-converters\/src\/Console\/Command\/ConvertCommand.php"
+                                },
+                                "region": {
+                                    "startLine": 125,
+                                    "endLine": 129
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/ElseExpression",
+                    "ruleIndex": 0,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "execute"
+                        ],
+                        "text": "The method execute uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:\/\/\/shared\/backups\/bartlett\/sarif-php-converters\/src\/Console\/Command\/ConvertCommand.php"
+                                },
+                                "region": {
+                                    "startLine": 146,
+                                    "endLine": 154
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/BooleanArgumentFlag",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "create",
+                            "$prettyPrint"
+                        ],
+                        "text": "The method create has a boolean flag argument $prettyPrint, which is a certain sign of a Single Responsibility Principle violation."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:\/\/\/shared\/backups\/bartlett\/sarif-php-converters\/src\/Contract\/ConverterFactoryInterface.php"
+                                },
+                                "region": {
+                                    "startLine": 27,
+                                    "endLine": 27
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/BooleanArgumentFlag",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "__construct",
+                            "$prettify"
+                        ],
+                        "text": "The method __construct has a boolean flag argument $prettify, which is a certain sign of a Single Responsibility Principle violation."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:\/\/\/shared\/backups\/bartlett\/sarif-php-converters\/src\/Converter\/AbstractConverter.php"
+                                },
+                                "region": {
+                                    "startLine": 90,
+                                    "endLine": 90
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/ElseExpression",
+                    "ruleIndex": 0,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "__construct"
+                        ],
+                        "text": "The method __construct uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:\/\/\/shared\/backups\/bartlett\/sarif-php-converters\/src\/Converter\/AbstractConverter.php"
+                                },
+                                "region": {
+                                    "startLine": 97,
+                                    "endLine": 100
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\Composer\\InstalledVersions",
+                            "toolExtensions"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\Composer\\InstalledVersions\u0027 in method \u0027toolExtensions\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:\/\/\/shared\/backups\/bartlett\/sarif-php-converters\/src\/Converter\/AbstractConverter.php"
+                                },
+                                "region": {
+                                    "startLine": 152,
+                                    "endLine": 152
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/ElseExpression",
+                    "ruleIndex": 0,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "rules"
+                        ],
+                        "text": "The method rules uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:\/\/\/shared\/backups\/bartlett\/sarif-php-converters\/src\/Converter\/AbstractConverter.php"
+                                },
+                                "region": {
+                                    "startLine": 200,
+                                    "endLine": 202
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\Composer\\InstalledVersions",
+                            "getToolVersion"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\Composer\\InstalledVersions\u0027 in method \u0027getToolVersion\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:\/\/\/shared\/backups\/bartlett\/sarif-php-converters\/src\/Converter\/AbstractConverter.php"
+                                },
+                                "region": {
+                                    "startLine": 389,
+                                    "endLine": 389
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\Composer\\InstalledVersions",
+                            "getCodeSnippet"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\Composer\\InstalledVersions\u0027 in method \u0027getCodeSnippet\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:\/\/\/shared\/backups\/bartlett\/sarif-php-converters\/src\/Converter\/AbstractConverter.php"
+                                },
+                                "region": {
+                                    "startLine": 456,
+                                    "endLine": 456
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/ElseExpression",
+                    "ruleIndex": 0,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "fromSimpleXml"
+                        ],
+                        "text": "The method fromSimpleXml uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:\/\/\/shared\/backups\/bartlett\/sarif-php-converters\/src\/Converter\/Normalizer\/CheckstyleNormalizer.php"
+                                },
+                                "region": {
+                                    "startLine": 77,
+                                    "endLine": 79
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/BooleanArgumentFlag",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "generateFileReport",
+                            "$showSources"
+                        ],
+                        "text": "The method generateFileReport has a boolean flag argument $showSources, which is a certain sign of a Single Responsibility Principle violation."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:\/\/\/shared\/backups\/bartlett\/sarif-php-converters\/src\/Converter\/Reporter\/PhpCsReport.php"
+                                },
+                                "region": {
+                                    "startLine": 50,
+                                    "endLine": 50
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/BooleanArgumentFlag",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "generate",
+                            "$showSources"
+                        ],
+                        "text": "The method generate has a boolean flag argument $showSources, which is a certain sign of a Single Responsibility Principle violation."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:\/\/\/shared\/backups\/bartlett\/sarif-php-converters\/src\/Converter\/Reporter\/PhpCsReport.php"
+                                },
+                                "region": {
+                                    "startLine": 90,
+                                    "endLine": 90
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/BooleanArgumentFlag",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "generate",
+                            "$interactive"
+                        ],
+                        "text": "The method generate has a boolean flag argument $interactive, which is a certain sign of a Single Responsibility Principle violation."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:\/\/\/shared\/backups\/bartlett\/sarif-php-converters\/src\/Converter\/Reporter\/PhpCsReport.php"
+                                },
+                                "region": {
+                                    "startLine": 92,
+                                    "endLine": 92
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/BooleanArgumentFlag",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "generate",
+                            "$toScreen"
+                        ],
+                        "text": "The method generate has a boolean flag argument $toScreen, which is a certain sign of a Single Responsibility Principle violation."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:\/\/\/shared\/backups\/bartlett\/sarif-php-converters\/src\/Converter\/Reporter\/PhpCsReport.php"
+                                },
+                                "region": {
+                                    "startLine": 93,
+                                    "endLine": 93
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\PhpCsFixer\\Preg",
+                            "camelCaseToUnderscore"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\PhpCsFixer\\Preg\u0027 in method \u0027camelCaseToUnderscore\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:\/\/\/shared\/backups\/bartlett\/sarif-php-converters\/src\/Converter\/Source\/EcsSource.php"
+                                },
+                                "region": {
+                                    "startLine": 132,
+                                    "endLine": 132
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/BooleanArgumentFlag",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "create",
+                            "$prettyPrint"
+                        ],
+                        "text": "The method create has a boolean flag argument $prettyPrint, which is a certain sign of a Single Responsibility Principle violation."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:\/\/\/shared\/backups\/bartlett\/sarif-php-converters\/src\/Factory\/ConverterFactory.php"
+                                },
+                                "region": {
+                                    "startLine": 27,
+                                    "endLine": 27
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/BooleanArgumentFlag",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "createEasyCodingStandard",
+                            "$prettyPrint"
+                        ],
+                        "text": "The method createEasyCodingStandard has a boolean flag argument $prettyPrint, which is a certain sign of a Single Responsibility Principle violation."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:\/\/\/shared\/backups\/bartlett\/sarif-php-converters\/src\/Factory\/ConverterFactory.php"
+                                },
+                                "region": {
+                                    "startLine": 45,
+                                    "endLine": 45
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/BooleanArgumentFlag",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "createCodeSniffer",
+                            "$prettyPrint"
+                        ],
+                        "text": "The method createCodeSniffer has a boolean flag argument $prettyPrint, which is a certain sign of a Single Responsibility Principle violation."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:\/\/\/shared\/backups\/bartlett\/sarif-php-converters\/src\/Factory\/ConverterFactory.php"
+                                },
+                                "region": {
+                                    "startLine": 50,
+                                    "endLine": 50
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/BooleanArgumentFlag",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "createLinter",
+                            "$prettyPrint"
+                        ],
+                        "text": "The method createLinter has a boolean flag argument $prettyPrint, which is a certain sign of a Single Responsibility Principle violation."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:\/\/\/shared\/backups\/bartlett\/sarif-php-converters\/src\/Factory\/ConverterFactory.php"
+                                },
+                                "region": {
+                                    "startLine": 55,
+                                    "endLine": 55
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/BooleanArgumentFlag",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "createMessDetector",
+                            "$prettyPrint"
+                        ],
+                        "text": "The method createMessDetector has a boolean flag argument $prettyPrint, which is a certain sign of a Single Responsibility Principle violation."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:\/\/\/shared\/backups\/bartlett\/sarif-php-converters\/src\/Factory\/ConverterFactory.php"
+                                },
+                                "region": {
+                                    "startLine": 60,
+                                    "endLine": 60
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/BooleanArgumentFlag",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "createStan",
+                            "$prettyPrint"
+                        ],
+                        "text": "The method createStan has a boolean flag argument $prettyPrint, which is a certain sign of a Single Responsibility Principle violation."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:\/\/\/shared\/backups\/bartlett\/sarif-php-converters\/src\/Factory\/ConverterFactory.php"
+                                },
+                                "region": {
+                                    "startLine": 65,
+                                    "endLine": 65
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

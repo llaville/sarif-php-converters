@@ -33,6 +33,8 @@ final class ConverterFactory implements ConverterFactoryInterface
                 return $this->createCodeSniffer($serializerFactory, $prettyPrint);
             case ConverterFactoryInterface::BUILTIN_CONVERTER_PHPLINT:
                 return $this->createLinter($serializerFactory, $prettyPrint);
+            case ConverterFactoryInterface::BUILTIN_CONVERTER_PHPMD:
+                return $this->createMessDetector($serializerFactory, $prettyPrint);
             case ConverterFactoryInterface::BUILTIN_CONVERTER_PHPSTAN:
                 return $this->createStan($serializerFactory, $prettyPrint);
         }
@@ -53,6 +55,11 @@ final class ConverterFactory implements ConverterFactoryInterface
     public function createLinter(?SerializerFactory $serializerFactory = null, bool $prettyPrint = false): ConverterInterface
     {
         return new Converter\PhpLintConverter($serializerFactory, $prettyPrint);
+    }
+
+    public function createMessDetector(?SerializerFactory $serializerFactory = null, bool $prettyPrint = false): ConverterInterface
+    {
+        return new Converter\PhpMdConverter($serializerFactory, $prettyPrint);
     }
 
     public function createStan(?SerializerFactory $serializerFactory = null, bool $prettyPrint = false): ConverterInterface
