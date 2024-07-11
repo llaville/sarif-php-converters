@@ -116,6 +116,20 @@ class ConvertCommand extends Command
             $sourceFactory = new SourceFactory();
             $source = $sourceFactory->create($sourceAlias, $normalizers);
 
+            $properties = null;
+            $rulePrefix = strtoupper($source->getName());
+            $context = ['rulePrefix' => $rulePrefix];
+
+            $inputFile = $options['input-file'];
+            $inputData = $this->getSourceData($inputFile);
+
+            $isNormalized = $source->normalize($inputData, $format, $context);
+            if (!$isNormalized) {
+                throw new RuntimeException(
+                    sprintf('Unable to convert source "%s" with format "%s"', $inputFile, $format)
+                );
+            }
+
             $prettyPrint = $output->isVerbose();
 
             $converterAlias = $input->getArgument('converter') ? : $sourceAlias;
@@ -129,14 +143,6 @@ class ConvertCommand extends Command
                 $converter = $converterFactory->create($converterAlias, null, $prettyPrint);
             }
 
-            $properties = null;
-            $rulePrefix = strtoupper($source->getName());
-            $context = ['rulePrefix' => $rulePrefix];
-
-            $inputFile = $options['input-file'];
-            $inputData = $this->getSourceData($inputFile);
-
-            $source->normalize($inputData, $format, $context);
             $converter->results($source->getErrors());
             $run = $converter->run($converter->invocations($properties), $source->getRules());
             $jsonString = $converter->sarifLog([$run]);
