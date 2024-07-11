@@ -15,6 +15,7 @@ use ArrayObject;
  */
 interface NormalizerInterface
 {
+    public const FORMAT_SARIF = 'sarif';
     public const FORMAT_JSON = 'json';
     public const FORMAT_XML = 'xml';
     public const FORMAT_CHECKSTYLE = 'checkstyle';

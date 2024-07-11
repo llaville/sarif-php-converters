@@ -86,6 +86,7 @@ final class SourceFactory implements SourceFactoryInterface
             $finalNormalizers[] = $normalizer;
         }
         $finalNormalizers[] = new Normalizer\PhpMdNormalizer();
+        $finalNormalizers[] = new Normalizer\SarifNormalizer();
         return new Source\PhpMdSource($finalNormalizers);
     }
 
