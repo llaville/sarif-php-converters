@@ -99,14 +99,16 @@ abstract class AbstractSource implements SourceInterface
     /**
      * @inheritDoc
      */
-    public function normalize($data, string $format, array $context): void
+    public function normalize($data, string $format, array $context): bool
     {
         // If a normalizer supports the given format, use it
         $normalizer = $this->getNormalizer($format);
         if ($normalizer instanceof NormalizerInterface) {
             $normalized = $normalizer->normalize($data, $format, $context);
             $this->normalized->append($normalized->getIterator());
+            return true;
         }
+        return false;
     }
 
     /**
