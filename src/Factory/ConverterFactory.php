@@ -23,47 +23,82 @@ final class ConverterFactory implements ConverterFactoryInterface
 {
     public function create(
         string $name,
-        ?SerializerFactory $serializerFactory = null,
-        bool $prettyPrint = false
+        array $options,
+        ?SerializerFactory $serializerFactory = null
     ): ConverterInterface {
         switch (strtolower($name)) {
             case ConverterFactoryInterface::BUILTIN_CONVERTER_ECS:
-                return $this->createEasyCodingStandard($serializerFactory, $prettyPrint);
+                return $this->createEasyCodingStandard($options, $serializerFactory);
             case ConverterFactoryInterface::BUILTIN_CONVERTER_PHPCS:
-                return $this->createCodeSniffer($serializerFactory, $prettyPrint);
+                return $this->createCodeSniffer($options, $serializerFactory);
             case ConverterFactoryInterface::BUILTIN_CONVERTER_PHPLINT:
-                return $this->createLinter($serializerFactory, $prettyPrint);
+                return $this->createLinter($options, $serializerFactory);
             case ConverterFactoryInterface::BUILTIN_CONVERTER_PHPMD:
-                return $this->createMessDetector($serializerFactory, $prettyPrint);
+                return $this->createMessDetector($options, $serializerFactory);
             case ConverterFactoryInterface::BUILTIN_CONVERTER_PHPSTAN:
-                return $this->createStan($serializerFactory, $prettyPrint);
+                return $this->createStan($options, $serializerFactory);
         }
 
         throw new OutOfBoundsException(sprintf('Converter "%s" not found.', $name));
     }
 
-    public function createEasyCodingStandard(?SerializerFactory $serializerFactory = null, ?bool $prettyPrint = false): ConverterInterface
+    /**
+     * @param array{
+     *     format_output: bool,
+     *     include_code_snippets: bool,
+     *     include_context_region: bool
+     * } $options
+     */
+    public function createEasyCodingStandard(array $options, ?SerializerFactory $serializerFactory = null): ConverterInterface
     {
-        return new Converter\EcsConverter($serializerFactory, $prettyPrint);
+        return new Converter\EcsConverter($options, $serializerFactory);
     }
 
-    public function createCodeSniffer(?SerializerFactory $serializerFactory = null, bool $prettyPrint = false): ConverterInterface
+    /**
+     * @param array{
+     *     format_output: bool,
+     *     include_code_snippets: bool,
+     *     include_context_region: bool
+     * } $options
+     */
+    public function createCodeSniffer(array $options, ?SerializerFactory $serializerFactory = null): ConverterInterface
     {
-        return new Converter\PhpCsConverter($serializerFactory, $prettyPrint);
+        return new Converter\PhpCsConverter($options, $serializerFactory);
     }
 
-    public function createLinter(?SerializerFactory $serializerFactory = null, bool $prettyPrint = false): ConverterInterface
+    /**
+     * @param array{
+     *     format_output: bool,
+     *     include_code_snippets: bool,
+     *     include_context_region: bool
+     * } $options
+     */
+    public function createLinter(array $options, ?SerializerFactory $serializerFactory = null): ConverterInterface
     {
-        return new Converter\PhpLintConverter($serializerFactory, $prettyPrint);
+        return new Converter\PhpLintConverter($options, $serializerFactory);
     }
 
-    public function createMessDetector(?SerializerFactory $serializerFactory = null, bool $prettyPrint = false): ConverterInterface
+    /**
+     * @param array{
+     *     format_output: bool,
+     *     include_code_snippets: bool,
+     *     include_context_region: bool
+     * } $options
+     */
+    public function createMessDetector(array $options, ?SerializerFactory $serializerFactory = null): ConverterInterface
     {
-        return new Converter\PhpMdConverter($serializerFactory, $prettyPrint);
+        return new Converter\PhpMdConverter($options, $serializerFactory);
     }
 
-    public function createStan(?SerializerFactory $serializerFactory = null, bool $prettyPrint = false): ConverterInterface
+    /**
+     * @param array{
+     *     format_output: bool,
+     *     include_code_snippets: bool,
+     *     include_context_region: bool
+     * } $options
+     */
+    public function createStan(array $options, ?SerializerFactory $serializerFactory = null): ConverterInterface
     {
-        return new Converter\PhpStanConverter($serializerFactory, $prettyPrint);
+        return new Converter\PhpStanConverter($options, $serializerFactory);
     }
 }

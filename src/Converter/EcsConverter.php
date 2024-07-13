@@ -13,7 +13,7 @@ namespace Bartlett\Sarif\Converter;
  */
 class EcsConverter extends AbstractConverter
 {
-    public function configure(): void
+    public function configure(array $options = []): void
     {
         $this->toolName ??= 'Easy-Coding-Standard';
         $this->toolShortDescription ??= 'The Easiest way to use Coding Standard.';
@@ -21,6 +21,6 @@ class EcsConverter extends AbstractConverter
         $this->toolInformationUri ??= 'https://github.com/easy-coding-standard/easy-coding-standard';
         $this->toolComposerPackage ??= 'symplify/easy-coding-standard';
 
-        parent::configure();
+        parent::configure($options);
     }
 }

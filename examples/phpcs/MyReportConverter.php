@@ -20,7 +20,7 @@ class MyReportConverter extends PhpCsReport
     public function __construct()
     {
         parent::__construct(
-            new PhpCsConverter(null, true),
+            new PhpCsConverter(['format_output' => true]),
             PhpCsSource::fromFile(__DIR__ . '/checkstyle.xml', 'checkstyle')
         );
     }

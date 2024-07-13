@@ -21,9 +21,16 @@ interface ConverterFactoryInterface
     public const BUILTIN_CONVERTER_PHPMD = 'phpmd';
     public const BUILTIN_CONVERTER_PHPSTAN = 'phpstan';
 
+    /**
+     * @param array{
+     *     format_output: bool,
+     *     include_code_snippets: bool,
+     *     include_context_region: bool
+     * } $options
+     */
     public function create(
         string $name,
-        ?SerializerFactory $serializerFactory = null,
-        bool $prettyPrint = false
+        array $options,
+        ?SerializerFactory $serializerFactory = null
     ): ConverterInterface;
 }

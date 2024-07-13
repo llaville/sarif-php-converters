@@ -17,6 +17,6 @@ class MySarifFormatter extends PhpStanFormatter
 {
     public function __construct(bool $prettyPrint)
     {
-        parent::__construct(new PhpStanConverter(null, $prettyPrint));
+        parent::__construct(new PhpStanConverter(['format_output' => $prettyPrint]));
     }
 }

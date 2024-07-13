@@ -19,7 +19,7 @@ use function strpos;
  */
 class PhpLintConverter extends AbstractConverter
 {
-    public function configure(): void
+    public function configure(array $options = []): void
     {
         $this->toolName ??= 'PHPLint';
         $this->toolShortDescription ??= 'Syntax check only (lint) of PHP files';
@@ -27,7 +27,7 @@ class PhpLintConverter extends AbstractConverter
         $this->toolInformationUri ??= 'https://github.com/overtrue/phplint';
         $this->toolComposerPackage ??= 'overtrue/phplint';
 
-        parent::configure();
+        parent::configure($options);
 
         $this->toolFullName ??= sprintf(
             '%s version %s by overtrue and contributors',

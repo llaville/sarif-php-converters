@@ -19,7 +19,7 @@ use function strpos;
  */
 class PhpCsConverter extends AbstractConverter
 {
-    public function configure(): void
+    public function configure(array $options = []): void
     {
         $this->toolName ??= 'PHP_CodeSniffer';
         $this->toolShortDescription ??= 'Detects violations of a defined set of coding standards.';
@@ -27,7 +27,7 @@ class PhpCsConverter extends AbstractConverter
         $this->toolInformationUri ??= 'https://github.com/squizlabs/PHP_CodeSniffer';
         $this->toolComposerPackage ??= 'squizlabs/php_codesniffer';
 
-        parent::configure();
+        parent::configure($options);
 
         $this->toolFullName ??= sprintf(
             '%s version %s by Squiz and PHPCSStandards',

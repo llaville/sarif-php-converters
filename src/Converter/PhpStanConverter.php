@@ -17,7 +17,7 @@ use function sprintf;
  */
 class PhpStanConverter extends AbstractConverter
 {
-    public function configure(): void
+    public function configure(array $options = []): void
     {
         $this->toolName ??= 'PHPStan';
         $this->toolShortDescription ??= 'PHP Static Analysis Tool';
@@ -25,7 +25,7 @@ class PhpStanConverter extends AbstractConverter
         $this->toolInformationUri ??= 'https://phpstan.org';
         $this->toolComposerPackage ??= 'phpstan/phpstan-src';
 
-        parent::configure();
+        parent::configure($options);
     }
 
     public function toolDriver(): Definition\ToolComponent

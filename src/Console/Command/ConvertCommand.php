@@ -130,17 +130,24 @@ class ConvertCommand extends Command
                 );
             }
 
-            $prettyPrint = $output->isVerbose();
-
             $converterAlias = $input->getArgument('converter') ? : $sourceAlias;
+
+            $converterOptions = [
+                // Nicely formats output with indentation and extra space
+                'format_output' => $output->isVerbose(),
+                //
+                'include_code_snippets' => true,
+                //
+                'include_context_region' => true,
+            ];
 
             if (class_exists($converterAlias)) {
                 // give a chance to use custom converter
-                $converter = new $converterAlias(null, $prettyPrint);
+                $converter = new $converterAlias($converterOptions);
             } else {
                 // use default built-in converters
                 $converterFactory = new ConverterFactory();
-                $converter = $converterFactory->create($converterAlias, null, $prettyPrint);
+                $converter = $converterFactory->create($converterAlias, $converterOptions);
             }
 
             $converter->results($source->getErrors());

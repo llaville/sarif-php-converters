@@ -13,7 +13,7 @@ namespace Bartlett\Sarif\Converter;
  */
 class PhpMdConverter extends AbstractConverter
 {
-    public function configure(): void
+    public function configure(array $options = []): void
     {
         $this->toolName ??= 'PHPMD';
         $this->toolShortDescription ??= 'Tool with aims to be a PHP equivalent of the well known Java tool PMD';
@@ -21,6 +21,6 @@ class PhpMdConverter extends AbstractConverter
         $this->toolInformationUri ??= 'https://github.com/phpmd/phpmd';
         $this->toolComposerPackage ??= 'phpmd/phpmd';
 
-        parent::configure();
+        parent::configure($options);
     }
 }

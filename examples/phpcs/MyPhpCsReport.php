@@ -18,8 +18,8 @@ class MyPhpCsReport extends PhpCsReport
 {
     public function __construct()
     {
-        // enable pretty print flag
-        parent::__construct(new PhpCsConverter(null, true));
+        // enable pretty print feature
+        parent::__construct(new PhpCsConverter(['format_output' => true]));
     }
 
     protected function getRules(): iterable

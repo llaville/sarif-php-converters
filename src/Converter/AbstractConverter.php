@@ -87,18 +87,31 @@ abstract class AbstractConverter implements ConverterInterface
      */
     protected ?int $endTime = null;
 
-    public function __construct(?Factory\SerializerFactory $factory = null, bool $prettify = false)
+    protected bool $includeCodeSnippets;
+    protected bool $includeContextRegion;
+
+    /**
+     * @param array{
+     *     format_output?: bool,
+     *     include_code_snippets?: bool,
+     *     include_context_region?: bool
+     * } $options
+     */
+    public function __construct(array $options = [], ?Factory\SerializerFactory $factory = null)
     {
+        $prettyPrint = $options['format_output'] ?? false;  // default machine-readable format (compact)
         $serializerFactory = new Factory\PhpSerializerFactory();
 
-        if ($prettify) {
+        if ($prettyPrint) {
             $realEncoder = new Serializer\Encoder\PhpJsonEncoder(JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
             $this->serializer = $serializerFactory->createSerializer($realEncoder);
         } else {
             $factory ??= $serializerFactory;
             $this->serializer = $factory->createSerializer();
         }
-        $this->configure();
+
+        $options['format_output'] = $prettyPrint;
+        $this->configure($options);
     }
 
     /**
@@ -110,12 +123,25 @@ abstract class AbstractConverter implements ConverterInterface
         return rtrim(end($names), 'Converter');
     }
 
-    public function configure(): void
+    /**
+     * @param array{
+     *     format_output?: bool,
+     *     include_code_snippets?: bool,
+     *     include_context_region?: bool
+     * } $options
+     */
+    public function configure(array $options): void
     {
         $this->converterComposerPackage = 'bartlett/sarif-php-converters';
         if (!empty($this->toolComposerPackage)) {
             $this->toolSemanticVersion = $this->getToolVersion($this->toolComposerPackage);
         }
+
+        // set option to avoid additional suggestion SARIF2010
+        $this->includeCodeSnippets = $options['include_code_snippets'] ?? false;
+
+        // set option to avoid additional suggestion SARIF2011
+        $this->includeContextRegion = $options['include_context_region'] ?? false;
     }
 
     public function toolDriver(): Definition\ToolComponent
@@ -267,23 +293,24 @@ abstract class AbstractConverter implements ConverterInterface
                     if (!empty($column)) {
                         $column = (int) $column;
                     }
-
                     $region = $this->getSnippetRegion($filename, $line, $column, 0, 0);
                     if (!empty($endLine)) {
                         $region->setEndLine((int) $endLine);
                     }
                     $physicalLocation->setRegion($region);
 
-                    $startLine = max($line - $surroundingLines, 1);
-                    $contextRegion = $this->getSnippetRegion(
-                        $filename,
-                        $startLine,
-                        null,
-                        0,
-                        $surroundingLines * 2
-                    );
-                    $contextRegion->setEndLine($line + $surroundingLines);
-                    $physicalLocation->setContextRegion($contextRegion);
+                    if ($this->includeContextRegion) {
+                        $startLine = max($line - $surroundingLines, 1);
+                        $contextRegion = $this->getSnippetRegion(
+                            $filename,
+                            $startLine,
+                            null,
+                            0,
+                            $surroundingLines * 2
+                        );
+                        $contextRegion->setEndLine($line + $surroundingLines);
+                        $physicalLocation->setContextRegion($contextRegion);
+                    }
                 }
 
                 $location = new Definition\Location();
@@ -480,14 +507,15 @@ abstract class AbstractConverter implements ConverterInterface
             $region->setStartColumn($column);
         }
 
-        $snippet = $this->getCodeSnippet($filePath, $lineNumber, $linesBefore, $linesAfter);
-
-        if ($snippet !== null) {
-            $rendered = new Definition\MultiformatMessageString();
-            $rendered->setText($snippet);
-            $artifactContent = new Definition\ArtifactContent();
-            $artifactContent->setRendered($rendered);
-            $region->setSnippet($artifactContent);
+        if ($this->includeCodeSnippets) {
+            $snippet = $this->getCodeSnippet($filePath, $lineNumber, $linesBefore, $linesAfter);
+            if ($snippet !== null) {
+                $rendered = new Definition\MultiformatMessageString();
+                $rendered->setText($snippet);
+                $artifactContent = new Definition\ArtifactContent();
+                $artifactContent->setRendered($rendered);
+                $region->setSnippet($artifactContent);
+            }
         }
 
         return $region;
