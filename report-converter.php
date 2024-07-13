@@ -6,9 +6,8 @@
  * file that was distributed with this source code.
  */
 
+use Bartlett\Sarif\Console\Application;
 use Bartlett\Sarif\Console\Command\ConvertCommand;
-
-use Symfony\Component\Console\Application;
 
 /**
  * A console application tool to convert different error reporting standards.

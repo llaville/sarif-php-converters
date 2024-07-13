@@ -13,6 +13,7 @@
         "ext-json": "*",
         "ext-pcre": "*",
         "ext-spl": "*",
+        "composer-runtime-api": "^2.0",
         "bartlett/sarif-php-sdk": "^2.0"
     },
     "require-dev": {
