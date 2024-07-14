@@ -86,7 +86,13 @@ final class EcsSource extends AbstractSource
         }
     }
 
-    // e.g: PHP_CodeSniffer\Standards\Generic\Sniffs\Arrays\ArrayIndentSniff
+    /**
+     * Help URI detection for PHP_CodeSniffer, based on sniff class name.
+     *
+     * e.g: PHP_CodeSniffer\Standards\Generic\Sniffs\Arrays\ArrayIndentSniff
+     *
+     * @param string[] $nameParts
+     */
     private function phpCodeSnifferChecker(array $nameParts): string
     {
         $standard = $nameParts[count($nameParts) - 4];  // e.g: Generic
@@ -95,7 +101,13 @@ final class EcsSource extends AbstractSource
         return sprintf(self::URI_PATTERN_PHPCS, strtolower($standard . $group . $name));
     }
 
-    // e.g: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer
+    /**
+     * Help URI detection for PHP-CS-Fixer, based on fixer class name.
+     *
+     * e.g: PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer
+     *
+     * @param string[] $nameParts
+     */
     private function phpCsFixerChecker(array $nameParts): string
     {
         $group = $nameParts[count($nameParts) - 2];  // e.g: Whitespace
@@ -107,14 +119,26 @@ final class EcsSource extends AbstractSource
         );
     }
 
-    // e.g: Symplify\CodingStandard\Fixer\ArrayNotation\ArrayOpenerAndCloserNewlineFixer
+    /**
+     * Help URI detection for PHP-CS-Fixer Symplify Coding Standard, based on fixer class name.
+     *
+     * e.g: Symplify\CodingStandard\Fixer\ArrayNotation\ArrayOpenerAndCloserNewlineFixer
+     *
+     * @param string[] $nameParts
+     */
     private function symplifyChecker(array $nameParts): string
     {
         $name = end($nameParts);  // e.g: ArrayOpenerAndCloserNewlineFixer
         return sprintf(self::URI_PATTERN_SYMPLIFY, strtolower($name));
     }
 
-    // e.g: SlevomatCodingStandard\Sniffs\Arrays\TrailingArrayCommaSniff
+    /**
+     * Help URI detection for PHP-CS-Fixer Slevomat Coding Standard, based on fixer class name.
+     *
+     * e.g: SlevomatCodingStandard\Sniffs\Arrays\TrailingArrayCommaSniff
+     *
+     * @param string[] $nameParts
+     */
     private function slevomatCodingStandardChecker(array $nameParts): string
     {
         $namespace = $nameParts[count($nameParts) - 4];  // e.g: SlevomatCodingStandard
