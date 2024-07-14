@@ -16,11 +16,20 @@ require_once __DIR__ . '/autoload.php';
 
 if ($argc > 2 && 'convert' === $argv[1] && strpos($argv[2], '-') === false) {
     $source = strtolower($argv[2]);
-    require_once implode(DIRECTORY_SEPARATOR, [__DIR__, 'vendor-bin', $source, 'vendor', 'autoload.php']);
+
+    $loaders = [
+        implode(DIRECTORY_SEPARATOR, [__DIR__, 'vendor-bin', $source, 'vendor', 'autoload.php'])
+    ];
 
     if ('ecs' === $source) {
-        require_once implode(DIRECTORY_SEPARATOR, [__DIR__, 'vendor-bin', 'phpcs', 'vendor', 'autoload.php']);
-        require_once implode(DIRECTORY_SEPARATOR, [__DIR__, 'vendor-bin', 'phpcs-fixer', 'vendor', 'autoload.php']);
+        $loaders[] = implode(DIRECTORY_SEPARATOR, [__DIR__, 'vendor-bin', 'phpcs', 'vendor', 'autoload.php']);
+        $loaders[] = implode(DIRECTORY_SEPARATOR, [__DIR__, 'vendor-bin', 'phpcs-fixer', 'vendor', 'autoload.php']);
+    }
+
+    foreach ($loaders as $loader) {
+        if (file_exists($loader)) {
+            require_once $loader;
+        }
     }
 }
 
