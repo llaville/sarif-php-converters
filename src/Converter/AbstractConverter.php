@@ -417,7 +417,7 @@ abstract class AbstractConverter implements ConverterInterface
 
         if (null === $toolVersion) {
             throw new RuntimeException(
-                sprintf('%s requires to have %s installed.', __CLASS__, $this->toolName)
+                sprintf('%s requires to have %s installed (package "%s").', static::class, $this->toolName, $package)
             );
         }
 
