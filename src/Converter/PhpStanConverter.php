@@ -23,8 +23,15 @@ class PhpStanConverter extends AbstractConverter
         $this->toolShortDescription ??= 'PHP Static Analysis Tool';
         $this->toolFullDescription ??= 'PHPStan - PHP Static Analysis Tool';
         $this->toolInformationUri ??= 'https://phpstan.org';
-        $this->toolComposerPackage ??= 'phpstan/phpstan-src';
 
+        try {
+            // try with mapped package
+            // @see https://getcomposer.org/doc/04-schema.md#replace
+            $this->toolComposerPackage = 'phpstan/phpstan';
+            $this->toolSemanticVersion = $this->getToolVersion($this->toolComposerPackage);
+        } catch (\Throwable $exception) {
+            $this->toolComposerPackage = 'phpstan/phpstan-src';
+        }
         parent::configure($options);
     }
 
