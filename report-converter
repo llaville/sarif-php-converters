@@ -14,7 +14,7 @@ gc_disable(); // performance boost
 
 require_once __DIR__ . '/autoload.php';
 
-if ($argc > 2 && 'convert' === $argv[1] && strpos($argv[2], '-') === false) {
+if ($argc > 2 && 'convert' === $argv[1] && strpos($argv[2], '-h') === false) {
     $source = strtolower($argv[2]);
 
     $loaders = [
