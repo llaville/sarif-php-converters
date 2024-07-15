@@ -74,6 +74,10 @@ final class CheckstyleNormalizer implements NormalizerInterface
                             // @link src/Property/Level.php
                             $attributes[$key] = 'note';
                         }
+                        if ('fatal' === $attributes[$key]) {
+                            // @link src/Property/Level.php
+                            $attributes[$key] = 'error';
+                        }
                     } else {
                         $attributes[$key] = $value;
                     }
