@@ -43,7 +43,11 @@ final class EcsNormalizer implements NormalizerInterface
     /**
      * @param mixed $data
      * @param array<string, string> $mapping
-     * @return array<string, mixed>
+     * @return array{
+     *     files: string[],
+     *     errors: array<string, array<int, array<string, string>>>,
+     *     rules: array<string, mixed>
+     * }
      */
     private function fromInternal($data, array $mapping): array
     {

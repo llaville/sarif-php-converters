@@ -12,6 +12,7 @@ use Bartlett\Sarif\Contract\NormalizerInterface;
 use PHPStan\Command\AnalysisResult;
 
 use ArrayObject;
+use function array_unique;
 use function in_array;
 
 /**
@@ -43,7 +44,11 @@ final class PhpStanNormalizer implements NormalizerInterface
 
     /**
      * @param array<string, mixed> $context Options available to the normalizer
-     * @return array<string, mixed>
+     * @return array{
+     *     files: string[],
+     *     errors: array<string, array<int, array<string, bool|int|string|null>>>,
+     *     rules: array<string, mixed>
+     * }
      */
     private function fromInternal(AnalysisResult $analysisResult, array $context): array
     {
@@ -55,7 +60,6 @@ final class PhpStanNormalizer implements NormalizerInterface
         foreach ($analysisResult->getFileSpecificErrors() as $fileSpecificError) {
             $file = $fileSpecificError->getFile();
             $files[] = $file;
-
 
             $attributes = [
                 'ReportingDescriptor.id' => $ruleId,
@@ -69,7 +73,7 @@ final class PhpStanNormalizer implements NormalizerInterface
         }
 
         return [
-            'files' => $files,
+            'files' => array_unique($files),
             'errors' => $errors,
             'rules' => [
                 $ruleId => [

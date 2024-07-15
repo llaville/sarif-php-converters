@@ -46,7 +46,11 @@ final class PhpLintNormalizer implements NormalizerInterface
      * @param array<string, mixed> $data
      * @param array<string, string> $mapping
      * @param array<string, mixed> $context Options available to the normalizer
-     * @return array<string, mixed>
+     * @return array{
+     *     files: string[],
+     *     errors: array<string, array<int, array<string, string>>>,
+     *     rules: array<string, mixed>
+     * }
      */
     private function fromInternal(array $data, array $mapping, array $context): array
     {

@@ -56,7 +56,12 @@ final class PhpCsNormalizer implements NormalizerInterface
     /**
      * @param array<string, array<int, mixed>|string> $data
      * @param array<string, string> $mapping
-     * @return array<string, mixed>
+     * @return array{
+     *     totals: array<string, int>,
+     *     files: string[],
+     *     errors: array<string, array<int, array<string, string>>>,
+     *     rules: array<string, mixed>
+     * }
      */
     private function fromInternal(array $data, array $mapping): array
     {
@@ -107,7 +112,12 @@ final class PhpCsNormalizer implements NormalizerInterface
 
     /**
      * @param array<string, string> $mapping
-     * @return array<string, mixed>
+     * @return array{
+     *     totals: array<string, int>,
+     *     files: string[],
+     *     errors: array<string, array<int, array<string, string>>>,
+     *     rules: array<string, mixed>
+     * }
      */
     private function fromJson(string $data, array $mapping): array
     {
