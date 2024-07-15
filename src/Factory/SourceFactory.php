@@ -36,6 +36,8 @@ final class SourceFactory implements SourceFactoryInterface
                 return $this->createMessDetector($normalizers);
             case SourceFactoryInterface::BUILTIN_SOURCE_PHPSTAN:
                 return $this->createStan($normalizers);
+            case SourceFactoryInterface::BUILTIN_SOURCE_TWIG_CS_FIXER:
+                return $this->createTwigCsFixer($normalizers);
         }
 
         throw new OutOfBoundsException(sprintf('Source "%s" not found.', $name));
@@ -98,5 +100,15 @@ final class SourceFactory implements SourceFactoryInterface
         $normalizers = (array) $normalizers;
         $normalizers[] = new Normalizer\PhpStanNormalizer();
         return new Source\PhpStanSource($normalizers);
+    }
+
+    /**
+     * @param iterable<NormalizerInterface> $normalizers
+     */
+    public function createTwigCsFixer(iterable $normalizers): SourceInterface
+    {
+        $normalizers = (array) $normalizers;
+        $normalizers[] = new Normalizer\TwigCsFixerNormalizer();
+        return new Source\TwigCsFixerSource($normalizers);
     }
 }

@@ -1,0 +1,5 @@
+{
+    "require-dev": {
+        "vincentlanglet/twig-cs-fixer": "dev-main"
+    }
+}

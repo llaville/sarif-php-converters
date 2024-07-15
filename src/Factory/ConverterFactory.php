@@ -37,6 +37,8 @@ final class ConverterFactory implements ConverterFactoryInterface
                 return $this->createMessDetector($options, $serializerFactory);
             case ConverterFactoryInterface::BUILTIN_CONVERTER_PHPSTAN:
                 return $this->createStan($options, $serializerFactory);
+            case ConverterFactoryInterface::BUILTIN_CONVERTER_TWIG_CS_FIXER:
+                return $this->createTwigCsFixer($options, $serializerFactory);
         }
 
         throw new OutOfBoundsException(sprintf('Converter "%s" not found.', $name));
@@ -100,5 +102,17 @@ final class ConverterFactory implements ConverterFactoryInterface
     public function createStan(array $options, ?SerializerFactory $serializerFactory = null): ConverterInterface
     {
         return new Converter\PhpStanConverter($options, $serializerFactory);
+    }
+
+    /**
+     * @param array{
+     *     format_output: bool,
+     *     include_code_snippets: bool,
+     *     include_context_region: bool
+     * } $options
+     */
+    public function createTwigCsFixer(array $options, ?SerializerFactory $serializerFactory = null): ConverterInterface
+    {
+        return new Converter\TwigCsFixerConverter($options, $serializerFactory);
     }
 }

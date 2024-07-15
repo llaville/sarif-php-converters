@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle>
+  <file name="/shared/backups/bartlett/sarif-php-converters/examples/twigcs-fixer/Fixtures/invalid3.twig">
+    <error line="1" severity="fatal" message="File is invalid: Unclosed &quot;(&quot;."/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/examples/twigcs-fixer/Fixtures/invalid2.twig">
+    <error line="4" severity="fatal" message="File is invalid: Unexpected character &quot;&amp;&quot;."/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/examples/twigcs-fixer/Fixtures/invalid6.twig">
+    <error line="1" severity="fatal" message="File is invalid: Unclosed comment."/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/examples/twigcs-fixer/Fixtures/custom_operators.twig">
+    <error line="1" severity="fatal" message="File is invalid: Unexpected token &quot;name&quot; of value &quot;foo&quot; (&quot;end of print statement&quot; expected)."/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/examples/twigcs-fixer/Fixtures/invalid4.twig">
+    <error line="1" severity="fatal" message="File is invalid: Unexpected &quot;)&quot;."/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/examples/twigcs-fixer/Fixtures/invalid7.twig">
+    <error line="1" severity="fatal" message="File is invalid: Unexpected token &quot;punctuation&quot; of value &quot;:&quot; (&quot;end of print statement&quot; expected)."/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/examples/twigcs-fixer/Fixtures/invalid1.twig">
+    <error line="1" severity="fatal" message="File is invalid: Unclosed &quot;variable&quot;."/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/examples/twigcs-fixer/Fixtures/test8.twig">
+    <error line="1" column="3" severity="error" message="Expecting 1 whitespace after &quot;{#&quot;; found 0." source="TwigCsFixer\Rules\Delimiter\DelimiterSpacingRule"/>
+    <error line="4" column="6" severity="error" message="Expecting 1 whitespace after &quot;+&quot;; found 0." source="TwigCsFixer\Rules\Operator\OperatorSpacingRule"/>
+    <error line="4" column="6" severity="error" message="Expecting 1 whitespace before &quot;+&quot;; found 0." source="TwigCsFixer\Rules\Operator\OperatorSpacingRule"/>
+    <error line="1" column="1" severity="error" message="A file must not be indented with tabs." source="TwigCsFixer\Rules\Whitespace\IndentRule"/>
+    <error line="1" column="5" severity="error" message="A file must not be indented with tabs." source="TwigCsFixer\Rules\Whitespace\IndentRule"/>
+    <error line="2" column="1" severity="error" message="A file must not be indented with tabs." source="TwigCsFixer\Rules\Whitespace\IndentRule"/>
+    <error line="4" column="5" severity="error" message="A file must not be indented with tabs." source="TwigCsFixer\Rules\Whitespace\IndentRule"/>
+    <error line="4" column="7" severity="error" message="A file must not be indented with tabs." source="TwigCsFixer\Rules\Whitespace\IndentRule"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/examples/twigcs-fixer/Fixtures/test3.twig">
+    <error line="1" column="5" severity="error" message="Expecting 1 whitespace after &quot;+&quot;; found 0." source="TwigCsFixer\Rules\Operator\OperatorSpacingRule"/>
+    <error line="1" column="5" severity="error" message="Expecting 1 whitespace before &quot;+&quot;; found 0." source="TwigCsFixer\Rules\Operator\OperatorSpacingRule"/>
+    <error line="1" column="7" severity="error" message="Expecting 1 whitespace after &quot;-&quot;; found 0." source="TwigCsFixer\Rules\Operator\OperatorSpacingRule"/>
+    <error line="1" column="7" severity="error" message="Expecting 1 whitespace before &quot;-&quot;; found 0." source="TwigCsFixer\Rules\Operator\OperatorSpacingRule"/>
+    <error line="1" column="9" severity="error" message="Expecting 1 whitespace after &quot;*&quot;; found 0." source="TwigCsFixer\Rules\Operator\OperatorSpacingRule"/>
+    <error line="1" column="9" severity="error" message="Expecting 1 whitespace before &quot;*&quot;; found 0." source="TwigCsFixer\Rules\Operator\OperatorSpacingRule"/>
+    <error line="1" column="11" severity="error" message="Expecting 1 whitespace after &quot;%&quot;; found 0." source="TwigCsFixer\Rules\Operator\OperatorSpacingRule"/>
+    <error line="1" column="11" severity="error" message="Expecting 1 whitespace before &quot;%&quot;; found 0." source="TwigCsFixer\Rules\Operator\OperatorSpacingRule"/>
+    <error line="4" column="9" severity="error" message="Expecting 1 whitespace after &quot;=&quot;; found 0." source="TwigCsFixer\Rules\Operator\OperatorSpacingRule"/>
+    <error line="4" column="9" severity="error" message="Expecting 1 whitespace before &quot;=&quot;; found 0." source="TwigCsFixer\Rules\Operator\OperatorSpacingRule"/>
+    <error line="3" column="12" severity="error" message="Expecting 0 whitespace after &quot;{&quot;; found 1." source="TwigCsFixer\Rules\Punctuation\PunctuationSpacingRule"/>
+    <error line="3" column="15" severity="error" message="Expecting 1 whitespace after &quot;:&quot;; found 0." source="TwigCsFixer\Rules\Punctuation\PunctuationSpacingRule"/>
+    <error line="3" column="80" severity="error" message="Expecting 0 whitespace before &quot;}&quot;; found 1." source="TwigCsFixer\Rules\Punctuation\PunctuationSpacingRule"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/examples/twigcs-fixer/Fixtures/test7.twig">
+    <error line="2" column="33" severity="error" message="A line should not end with blank space(s)." source="TwigCsFixer\Rules\Whitespace\TrailingSpaceRule"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/examples/twigcs-fixer/Fixtures/test11.twig">
+    <error line="1" severity="fatal" message="File is invalid: Unexpected token &quot;name&quot; of value &quot;andb&quot; (&quot;end of print statement&quot; expected)."/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/examples/twigcs-fixer/Fixtures/test13.twig">
+    <error line="1" column="4" severity="error" message="Expecting 0 whitespace after &quot;{&quot;; found 1." source="TwigCsFixer\Rules\Punctuation\PunctuationSpacingRule"/>
+    <error line="1" column="17" severity="error" message="Expecting 0 whitespace after &quot;{&quot;; found 1." source="TwigCsFixer\Rules\Punctuation\PunctuationSpacingRule"/>
+    <error line="1" column="26" severity="error" message="Expecting 0 whitespace before &quot;}&quot;; found 1." source="TwigCsFixer\Rules\Punctuation\PunctuationSpacingRule"/>
+    <error line="1" column="28" severity="error" message="Expecting 0 whitespace before &quot;}&quot;; found 1." source="TwigCsFixer\Rules\Punctuation\PunctuationSpacingRule"/>
+    <error line="1" column="9" severity="error" message="String should be declared with single quotes." source="TwigCsFixer\Rules\String\SingleQuoteRule"/>
+    <error line="1" column="22" severity="error" message="String should be declared with single quotes." source="TwigCsFixer\Rules\String\SingleQuoteRule"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/examples/twigcs-fixer/Fixtures/invalid5.twig">
+    <error line="1" severity="fatal" message="File is invalid: Unexpected character &quot;#&quot;."/>
+  </file>
+</checkstyle>

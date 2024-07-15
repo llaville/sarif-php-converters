@@ -10,3 +10,4 @@ php $SCRIPT_DIR/build.php converter-phpcs $ASSETS_IMAGE_DIR
 php $SCRIPT_DIR/build.php converter-phplint $ASSETS_IMAGE_DIR
 php $SCRIPT_DIR/build.php converter-phpmd $ASSETS_IMAGE_DIR
 php $SCRIPT_DIR/build.php converter-phpstan $ASSETS_IMAGE_DIR
+php $SCRIPT_DIR/build.php converter-twigcs-fixer $ASSETS_IMAGE_DIR

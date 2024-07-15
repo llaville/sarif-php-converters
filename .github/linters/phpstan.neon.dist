@@ -8,6 +8,7 @@ parameters:
         - ../../vendor-bin/phplint/
         - ../../vendor-bin/phpmd/
         - ../../vendor-bin/phpstan/
+        - ../../vendor-bin/twigcs-fixer/
 services:
     errorFormatter.sarif:
         class: Bartlett\Sarif\Converter\Reporter\PhpStanFormatter
