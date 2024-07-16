@@ -135,10 +135,6 @@ class ConvertCommand extends Command
             $converterOptions = [
                 // Nicely formats output with indentation and extra space
                 'format_output' => $output->isVerbose(),
-                //
-                'include_code_snippets' => true,
-                //
-                'include_context_region' => true,
             ];
 
             if (class_exists($converterAlias)) {
