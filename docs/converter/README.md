@@ -13,7 +13,7 @@
 | PHPLint [official website][phplint]            |      [phplint](phplint.md)      |   optional   |     ✅     |
 | PHP Mess Detector [official website][phpmd]    |        [phpmd](phpmd.md)        |   required   |     ❌     |
 | PHPStan [official website][phpstan]            |      [phpstan](phpstan.md)      |   optional   |     ✅     |
-| Twig-CS-Fixer [official website][twigcs-fixer] | [twigcs-fixer](twigcs-fixer.md) |   required   |     ❌     |
+| Twig-CS-Fixer [official website][twigcs-fixer] | [twigcs-fixer](twigcs-fixer.md) |   optional   |     ✅     |
 
 
 [ecs]: https://github.com/easy-coding-standard/easy-coding-standard
