@@ -31,10 +31,70 @@ composer require --dev vincentlanglet/twig-cs-fixer bartlett/sarif-php-converter
 
 ## Usage
 
-> [!WARNING]
+```shell
+vendor/bin/twigcs-fixer lint /path/to/source --report sarif --config .twig-cs-fixer.dist.php
+```
+
+> [!TIP]
 >
-> As Twig-CS-Fixer is not able to specify custom report format,
-> we have no other alternative that using the **Console Tool** convert command.
+> The `.twig-cs-fixer.dist.php` config file should at least identify the default Custom Reporter class `TwigCsFixerReporter`
+>
+> ```php
+> $config = new TwigCsFixer\Config\Config();
+> $config->addCustomReporter(new Bartlett\Sarif\Converter\Reporter\TwigCsFixerReporter());
+> ```
+>
+## How to customize your converter
+
+There are many ways to customize render of your converter.
+
+### Make the SARIF report output human-readable
+
+By default, all converters use the default `\Bartlett\Sarif\Factory\PhpSerializerFactory`
+to return the SARIF JSON representation of your report.
+
+But this serializer factory component, as native PHP [`json_encode`][json-encode] function,
+does not use whitespace in returned data to format it.
+
+To make your report human-readable, you have to specify the `\JSON_PRETTY_PRINT` constant, as encoder option.
+
+Here is the way to do it !
+
+**Step 1:** Create your report specialized class :
+
+```php
+<?php
+
+use Bartlett\Sarif\Converter\Reporter\TwigCsFixerReporter;
+use Bartlett\Sarif\Converter\TwigCsFixerConverter;
+
+class MyTwigCsFixerReporter extends TwigCsFixerReporter
+{
+    public function __construct()
+    {
+        // enable pretty print feature
+        parent::__construct(
+            new TwigCsFixerConverter([
+                'format_output' => true,
+            ])
+        );
+    }
+}
+```
+
+**Step 2:** And finally, print the SARIF report
+
+```shell
+vendor/bin/twigcs-fixer lint /path/to/source --report sarif --config .twig-cs-fixer.php
+```
+
+> [!TIP]
+>
+> The `MyTwigCsFixerReporter` class is identified by the `.twig-cs-fixer.php` config file.
+
+### (optional) Use the Console Tool as alternative
+
+If you prefer to convert from a [format supported natively][[twigcs-fixer-custom-reporters]] by Twig-CS-Fixer, then :
 
 **Step 1:** Build the checkstyle output report
 
@@ -74,3 +134,4 @@ For example:
 [example-folder]: https://github.com/llaville/sarif-php-sdk/blob/1.0/examples/twigcs-fixer/
 [twigcs-fixer]: https://github.com/VincentLanglet/Twig-CS-Fixer
 [sarif-web-component]: https://github.com/Microsoft/sarif-web-component
+[twigcs-fixer-custom-reporters]: https://github.com/VincentLanglet/Twig-CS-Fixer/blob/main/docs/configuration.md#custom-reporters

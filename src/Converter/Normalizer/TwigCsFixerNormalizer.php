@@ -9,6 +9,8 @@ namespace Bartlett\Sarif\Converter\Normalizer;
 
 use Bartlett\Sarif\Contract\NormalizerInterface;
 
+use TwigCsFixer\Report\Violation;
+
 use ArrayObject;
 use function in_array;
 
@@ -37,7 +39,7 @@ final class TwigCsFixerNormalizer implements NormalizerInterface
     }
 
     /**
-     * @param mixed $data
+     * @param array<string, Violation> $data
      * @param array<string, mixed> $context Options available to the normalizer
      * @return array{
      *     files: string[],
@@ -45,11 +47,42 @@ final class TwigCsFixerNormalizer implements NormalizerInterface
      *     rules: array<string, mixed>
      * }
      */
-    private function fromInternal($data, array $context): array
+    private function fromInternal(array $data, array $context): array
     {
         $files = [];
         $errors = [];
         $rules = [];
+
+        foreach ($data as $filename => $fileViolations) {
+            $files[] = $filename;
+
+            foreach ($fileViolations as $violation) {
+                $ruleName = $violation->getRuleName();
+                $rules[$ruleName] = [];
+
+                $level = strtolower(Violation::getLevelAsString($violation->getLevel()));
+                if ('notice' == $level) {
+                    // @link (sarif-php-sdk) src/Property/Level.php
+                    $level = 'note';
+                }
+                if ('fatal' == $level) {
+                    // @link (sarif-php-sdk) src/Property/Level.php
+                    $level = 'error';
+                }
+
+                $fingerprint = $violation->getIdentifier() ? $violation->getIdentifier()->toString() : $ruleName;
+
+                $attributes = [
+                    'ReportingDescriptor.id' => $ruleName,
+                    'Result.fingerprint' => $fingerprint,
+                    'Result.message' => $violation->getMessage(),
+                    'Result.level' => $level,
+                    'Region.startLine' => $violation->getLine(),
+                    'Region.startColumn' => $violation->getLinePosition(),
+                ];
+                $errors[$filename][] = $attributes;
+            }
+        }
 
         return [
             'files' => $files,

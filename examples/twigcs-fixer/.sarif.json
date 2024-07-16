@@ -1,0 +1,1466 @@
+{
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "Twig-CS-Fixer",
+                    "shortDescription": {
+                        "text": "A tool to automatically fix Twig code style"
+                    },
+                    "fullDescription": {
+                        "text": "A tool to automatically fix Twig Coding Standards issues."
+                    },
+                    "semanticVersion": "dev-main",
+                    "informationUri": "https://github.com/VincentLanglet/Twig-CS-Fixer",
+                    "rules": [
+                        {
+                            "id": "TwigCsFixer\\Rules\\Delimiter\\DelimiterSpacingRule"
+                        },
+                        {
+                            "id": "TwigCsFixer\\Rules\\Operator\\OperatorSpacingRule"
+                        },
+                        {
+                            "id": "TwigCsFixer\\Rules\\Whitespace\\IndentRule"
+                        },
+                        {
+                            "id": "TwigCsFixer\\Rules\\Punctuation\\PunctuationSpacingRule"
+                        },
+                        {
+                            "id": "TwigCsFixer\\Rules\\Whitespace\\TrailingSpaceRule"
+                        },
+                        {
+                            "id": "TwigCsFixer\\Rules\\String\\SingleQuoteRule"
+                        }
+                    ]
+                },
+                "extensions": [
+                    {
+                        "name": "bartlett/sarif-php-converters",
+                        "shortDescription": {
+                            "text": "Twig-CS-Fixer SARIF Converter"
+                        },
+                        "version": "1.0.9999999.9999999-dev"
+                    }
+                ]
+            },
+            "invocations": [
+                {
+                    "executionSuccessful": true,
+                    "commandLine": "report-converter",
+                    "arguments": [
+                        "convert",
+                        "twigcs-fixer",
+                        "--input-format=checkstyle",
+                        "--input-file=examples/twigcs-fixer/checkstyle.xml",
+                        "-vv",
+                        "--output-file",
+                        "examples/twigcs-fixer/.sarif.json"
+                    ],
+                    "workingDirectory": {
+                        "uri": "file:///shared/backups/bartlett/sarif-php-converters/"
+                    }
+                }
+            ],
+            "originalUriBaseIds": {
+                "WORKINGDIR": {
+                    "uri": "file:///shared/backups/bartlett/sarif-php-converters/"
+                }
+            },
+            "results": [
+                {
+                    "message": {
+                        "text": "File is invalid: Unclosed \"(\"."
+                    },
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/invalid3.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 1,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ (foo() }}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ (foo() }}\u001b[0m\n    \u001b[90m2| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "": "26888b84e4105c0e3b267d00ef41ff3b3438f195c8e66b65df34142438042b7a"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "File is invalid: Unexpected character \"&\"."
+                    },
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/invalid2.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 4,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m4| \u001b[0m\u001b[36m    This character & will be reported because the with is not closed\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 2,
+                                    "endLine": 6,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m2| \u001b[0m\u001b[36m    '%year': year\u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[36m%}\u001b[0m\n    \u001b[90m4| \u001b[0m\u001b[36m    This character & will be reported because the with is not closed\u001b[0m\n    \u001b[90m5| \u001b[0m\u001b[36m{% endtrans %}\u001b[0m\n    \u001b[90m6| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "": "ff0ec184ddd41b7d302d8af0f3088f08101266267f350dd41ff8919d09db3e47"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "File is invalid: Unclosed comment."
+                    },
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/invalid6.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 1,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{# foo\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{# foo\u001b[0m\n    \u001b[90m2| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "": "bc88a57749df11c485687e5a4ab43e14f7df0c21e21a37575582f021ebf33ae3"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "File is invalid: Unexpected token \"name\" of value \"foo\" (\"end of print statement\" expected)."
+                    },
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/custom_operators.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 1,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ n0t foo.n0t +sum +sumVariable }}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ n0t foo.n0t +sum +sumVariable }}\u001b[0m\n    \u001b[90m2| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "": "c6670be7b9cd35369be378202986827020ea3f6e67d59b34833387243799fe86"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "File is invalid: Unexpected \")\"."
+                    },
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/invalid4.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 1,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ )foo() }}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ )foo() }}\u001b[0m\n    \u001b[90m2| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "": "877519fe3ee9068584eb7a1a439f5a1203958bf3ceb8aba2aae78bfe6224437f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "File is invalid: Unexpected token \"punctuation\" of value \":\" (\"end of print statement\" expected)."
+                    },
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/invalid7.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 1,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ foo : bar }}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ foo : bar }}\u001b[0m\n    \u001b[90m2| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "": "2190b66bf868d42204a0ed8e8b8f06cf68c36fbb73523ca4122df687dac2b46b"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "File is invalid: Unclosed \"variable\"."
+                    },
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/invalid1.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 1,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ foo ? bar,\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ foo ? bar,\u001b[0m\n    \u001b[90m2| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "": "1ca0956a043e5d47c46c15817622fa5280ae9d7af4457ee1be9a548287fb0f6e"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Expecting 1 whitespace after \"{#\"; found 0."
+                    },
+                    "ruleId": "TwigCsFixer\\Rules\\Delimiter\\DelimiterSpacingRule",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/test8.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 1,
+                                    "startColumn": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m\t\t{#\t\tfoo\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m\t\t{#\t\tfoo\u001b[0m\n    \u001b[90m2| \u001b[0m\u001b[36m\t\t#}\u001b[0m\n    \u001b[90m3| \u001b[0m\n    \u001b[90m4| \u001b[0m\u001b[36m{{ 1\t+\t1 }}\u001b[0m\n    \u001b[90m5| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "TwigCsFixer\\Rules\\Delimiter\\DelimiterSpacingRule": "9ec30db08ac0c602cb37ffdc77ad3be352f1e72e8f9c635bdef7b8651d3301bf"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Expecting 1 whitespace after \"+\"; found 0."
+                    },
+                    "ruleId": "TwigCsFixer\\Rules\\Operator\\OperatorSpacingRule",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/test8.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 4,
+                                    "startColumn": 6,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m4| \u001b[0m\u001b[36m{{ 1\t+\t1 }}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 2,
+                                    "endLine": 6,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m2| \u001b[0m\u001b[36m\t\t#}\u001b[0m\n    \u001b[90m3| \u001b[0m\n    \u001b[90m4| \u001b[0m\u001b[36m{{ 1\t+\t1 }}\u001b[0m\n    \u001b[90m5| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "TwigCsFixer\\Rules\\Operator\\OperatorSpacingRule": "9ec30db08ac0c602cb37ffdc77ad3be352f1e72e8f9c635bdef7b8651d3301bf"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Expecting 1 whitespace before \"+\"; found 0."
+                    },
+                    "ruleId": "TwigCsFixer\\Rules\\Operator\\OperatorSpacingRule",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/test8.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 4,
+                                    "startColumn": 6,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m4| \u001b[0m\u001b[36m{{ 1\t+\t1 }}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 2,
+                                    "endLine": 6,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m2| \u001b[0m\u001b[36m\t\t#}\u001b[0m\n    \u001b[90m3| \u001b[0m\n    \u001b[90m4| \u001b[0m\u001b[36m{{ 1\t+\t1 }}\u001b[0m\n    \u001b[90m5| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "TwigCsFixer\\Rules\\Operator\\OperatorSpacingRule": "9ec30db08ac0c602cb37ffdc77ad3be352f1e72e8f9c635bdef7b8651d3301bf"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "A file must not be indented with tabs."
+                    },
+                    "ruleId": "TwigCsFixer\\Rules\\Whitespace\\IndentRule",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/test8.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 1,
+                                    "startColumn": 1,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m\t\t{#\t\tfoo\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m\t\t{#\t\tfoo\u001b[0m\n    \u001b[90m2| \u001b[0m\u001b[36m\t\t#}\u001b[0m\n    \u001b[90m3| \u001b[0m\n    \u001b[90m4| \u001b[0m\u001b[36m{{ 1\t+\t1 }}\u001b[0m\n    \u001b[90m5| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "TwigCsFixer\\Rules\\Whitespace\\IndentRule": "9ec30db08ac0c602cb37ffdc77ad3be352f1e72e8f9c635bdef7b8651d3301bf"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "A file must not be indented with tabs."
+                    },
+                    "ruleId": "TwigCsFixer\\Rules\\Whitespace\\IndentRule",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/test8.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 1,
+                                    "startColumn": 5,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m\t\t{#\t\tfoo\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m\t\t{#\t\tfoo\u001b[0m\n    \u001b[90m2| \u001b[0m\u001b[36m\t\t#}\u001b[0m\n    \u001b[90m3| \u001b[0m\n    \u001b[90m4| \u001b[0m\u001b[36m{{ 1\t+\t1 }}\u001b[0m\n    \u001b[90m5| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "TwigCsFixer\\Rules\\Whitespace\\IndentRule": "9ec30db08ac0c602cb37ffdc77ad3be352f1e72e8f9c635bdef7b8651d3301bf"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "A file must not be indented with tabs."
+                    },
+                    "ruleId": "TwigCsFixer\\Rules\\Whitespace\\IndentRule",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/test8.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 2,
+                                    "startColumn": 1,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m2| \u001b[0m\u001b[36m\t\t#}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 4,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m\t\t{#\t\tfoo\u001b[0m\n    \u001b[90m2| \u001b[0m\u001b[36m\t\t#}\u001b[0m\n    \u001b[90m3| \u001b[0m\n    \u001b[90m4| \u001b[0m\u001b[36m{{ 1\t+\t1 }}\u001b[0m\n    \u001b[90m5| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "TwigCsFixer\\Rules\\Whitespace\\IndentRule": "9ec30db08ac0c602cb37ffdc77ad3be352f1e72e8f9c635bdef7b8651d3301bf"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "A file must not be indented with tabs."
+                    },
+                    "ruleId": "TwigCsFixer\\Rules\\Whitespace\\IndentRule",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/test8.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 4,
+                                    "startColumn": 5,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m4| \u001b[0m\u001b[36m{{ 1\t+\t1 }}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 2,
+                                    "endLine": 6,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m2| \u001b[0m\u001b[36m\t\t#}\u001b[0m\n    \u001b[90m3| \u001b[0m\n    \u001b[90m4| \u001b[0m\u001b[36m{{ 1\t+\t1 }}\u001b[0m\n    \u001b[90m5| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "TwigCsFixer\\Rules\\Whitespace\\IndentRule": "9ec30db08ac0c602cb37ffdc77ad3be352f1e72e8f9c635bdef7b8651d3301bf"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "A file must not be indented with tabs."
+                    },
+                    "ruleId": "TwigCsFixer\\Rules\\Whitespace\\IndentRule",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/test8.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 4,
+                                    "startColumn": 7,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m4| \u001b[0m\u001b[36m{{ 1\t+\t1 }}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 2,
+                                    "endLine": 6,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m2| \u001b[0m\u001b[36m\t\t#}\u001b[0m\n    \u001b[90m3| \u001b[0m\n    \u001b[90m4| \u001b[0m\u001b[36m{{ 1\t+\t1 }}\u001b[0m\n    \u001b[90m5| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "TwigCsFixer\\Rules\\Whitespace\\IndentRule": "9ec30db08ac0c602cb37ffdc77ad3be352f1e72e8f9c635bdef7b8651d3301bf"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Expecting 1 whitespace after \"+\"; found 0."
+                    },
+                    "ruleId": "TwigCsFixer\\Rules\\Operator\\OperatorSpacingRule",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/test3.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 1,
+                                    "startColumn": 5,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ 1+2-3*4%5 }}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ 1+2-3*4%5 }}\u001b[0m\n    \u001b[90m2| \u001b[0m\u001b[36m{{ (bar ? 'string' : \"string#\\'\") }}\u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[36m{{ (baz ?: { a:[1, 1000000000000000000000000000000000000000000000000000000000] }) }}\u001b[0m\n    \u001b[90m4| \u001b[0m\u001b[36m{% set a={foo: bar ? baz ? 1, test: -1} %}\u001b[0m\n    \u001b[90m5| \u001b[0m\u001b[36m{{ a ? ',' }}\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "TwigCsFixer\\Rules\\Operator\\OperatorSpacingRule": "79b37b1d22d06ba684abf4beb76faf428daf3a81dec618297394cb061fc997e5"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Expecting 1 whitespace before \"+\"; found 0."
+                    },
+                    "ruleId": "TwigCsFixer\\Rules\\Operator\\OperatorSpacingRule",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/test3.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 1,
+                                    "startColumn": 5,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ 1+2-3*4%5 }}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ 1+2-3*4%5 }}\u001b[0m\n    \u001b[90m2| \u001b[0m\u001b[36m{{ (bar ? 'string' : \"string#\\'\") }}\u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[36m{{ (baz ?: { a:[1, 1000000000000000000000000000000000000000000000000000000000] }) }}\u001b[0m\n    \u001b[90m4| \u001b[0m\u001b[36m{% set a={foo: bar ? baz ? 1, test: -1} %}\u001b[0m\n    \u001b[90m5| \u001b[0m\u001b[36m{{ a ? ',' }}\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "TwigCsFixer\\Rules\\Operator\\OperatorSpacingRule": "79b37b1d22d06ba684abf4beb76faf428daf3a81dec618297394cb061fc997e5"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Expecting 1 whitespace after \"-\"; found 0."
+                    },
+                    "ruleId": "TwigCsFixer\\Rules\\Operator\\OperatorSpacingRule",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/test3.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 1,
+                                    "startColumn": 7,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ 1+2-3*4%5 }}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ 1+2-3*4%5 }}\u001b[0m\n    \u001b[90m2| \u001b[0m\u001b[36m{{ (bar ? 'string' : \"string#\\'\") }}\u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[36m{{ (baz ?: { a:[1, 1000000000000000000000000000000000000000000000000000000000] }) }}\u001b[0m\n    \u001b[90m4| \u001b[0m\u001b[36m{% set a={foo: bar ? baz ? 1, test: -1} %}\u001b[0m\n    \u001b[90m5| \u001b[0m\u001b[36m{{ a ? ',' }}\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "TwigCsFixer\\Rules\\Operator\\OperatorSpacingRule": "79b37b1d22d06ba684abf4beb76faf428daf3a81dec618297394cb061fc997e5"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Expecting 1 whitespace before \"-\"; found 0."
+                    },
+                    "ruleId": "TwigCsFixer\\Rules\\Operator\\OperatorSpacingRule",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/test3.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 1,
+                                    "startColumn": 7,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ 1+2-3*4%5 }}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ 1+2-3*4%5 }}\u001b[0m\n    \u001b[90m2| \u001b[0m\u001b[36m{{ (bar ? 'string' : \"string#\\'\") }}\u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[36m{{ (baz ?: { a:[1, 1000000000000000000000000000000000000000000000000000000000] }) }}\u001b[0m\n    \u001b[90m4| \u001b[0m\u001b[36m{% set a={foo: bar ? baz ? 1, test: -1} %}\u001b[0m\n    \u001b[90m5| \u001b[0m\u001b[36m{{ a ? ',' }}\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "TwigCsFixer\\Rules\\Operator\\OperatorSpacingRule": "79b37b1d22d06ba684abf4beb76faf428daf3a81dec618297394cb061fc997e5"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Expecting 1 whitespace after \"*\"; found 0."
+                    },
+                    "ruleId": "TwigCsFixer\\Rules\\Operator\\OperatorSpacingRule",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/test3.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 1,
+                                    "startColumn": 9,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ 1+2-3*4%5 }}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ 1+2-3*4%5 }}\u001b[0m\n    \u001b[90m2| \u001b[0m\u001b[36m{{ (bar ? 'string' : \"string#\\'\") }}\u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[36m{{ (baz ?: { a:[1, 1000000000000000000000000000000000000000000000000000000000] }) }}\u001b[0m\n    \u001b[90m4| \u001b[0m\u001b[36m{% set a={foo: bar ? baz ? 1, test: -1} %}\u001b[0m\n    \u001b[90m5| \u001b[0m\u001b[36m{{ a ? ',' }}\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "TwigCsFixer\\Rules\\Operator\\OperatorSpacingRule": "79b37b1d22d06ba684abf4beb76faf428daf3a81dec618297394cb061fc997e5"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Expecting 1 whitespace before \"*\"; found 0."
+                    },
+                    "ruleId": "TwigCsFixer\\Rules\\Operator\\OperatorSpacingRule",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/test3.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 1,
+                                    "startColumn": 9,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ 1+2-3*4%5 }}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ 1+2-3*4%5 }}\u001b[0m\n    \u001b[90m2| \u001b[0m\u001b[36m{{ (bar ? 'string' : \"string#\\'\") }}\u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[36m{{ (baz ?: { a:[1, 1000000000000000000000000000000000000000000000000000000000] }) }}\u001b[0m\n    \u001b[90m4| \u001b[0m\u001b[36m{% set a={foo: bar ? baz ? 1, test: -1} %}\u001b[0m\n    \u001b[90m5| \u001b[0m\u001b[36m{{ a ? ',' }}\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "TwigCsFixer\\Rules\\Operator\\OperatorSpacingRule": "79b37b1d22d06ba684abf4beb76faf428daf3a81dec618297394cb061fc997e5"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Expecting 1 whitespace after \"%\"; found 0."
+                    },
+                    "ruleId": "TwigCsFixer\\Rules\\Operator\\OperatorSpacingRule",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/test3.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 1,
+                                    "startColumn": 11,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ 1+2-3*4%5 }}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ 1+2-3*4%5 }}\u001b[0m\n    \u001b[90m2| \u001b[0m\u001b[36m{{ (bar ? 'string' : \"string#\\'\") }}\u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[36m{{ (baz ?: { a:[1, 1000000000000000000000000000000000000000000000000000000000] }) }}\u001b[0m\n    \u001b[90m4| \u001b[0m\u001b[36m{% set a={foo: bar ? baz ? 1, test: -1} %}\u001b[0m\n    \u001b[90m5| \u001b[0m\u001b[36m{{ a ? ',' }}\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "TwigCsFixer\\Rules\\Operator\\OperatorSpacingRule": "79b37b1d22d06ba684abf4beb76faf428daf3a81dec618297394cb061fc997e5"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Expecting 1 whitespace before \"%\"; found 0."
+                    },
+                    "ruleId": "TwigCsFixer\\Rules\\Operator\\OperatorSpacingRule",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/test3.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 1,
+                                    "startColumn": 11,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ 1+2-3*4%5 }}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ 1+2-3*4%5 }}\u001b[0m\n    \u001b[90m2| \u001b[0m\u001b[36m{{ (bar ? 'string' : \"string#\\'\") }}\u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[36m{{ (baz ?: { a:[1, 1000000000000000000000000000000000000000000000000000000000] }) }}\u001b[0m\n    \u001b[90m4| \u001b[0m\u001b[36m{% set a={foo: bar ? baz ? 1, test: -1} %}\u001b[0m\n    \u001b[90m5| \u001b[0m\u001b[36m{{ a ? ',' }}\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "TwigCsFixer\\Rules\\Operator\\OperatorSpacingRule": "79b37b1d22d06ba684abf4beb76faf428daf3a81dec618297394cb061fc997e5"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Expecting 1 whitespace after \"=\"; found 0."
+                    },
+                    "ruleId": "TwigCsFixer\\Rules\\Operator\\OperatorSpacingRule",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/test3.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 4,
+                                    "startColumn": 9,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m4| \u001b[0m\u001b[36m{% set a={foo: bar ? baz ? 1, test: -1} %}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 2,
+                                    "endLine": 6,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m2| \u001b[0m\u001b[36m{{ (bar ? 'string' : \"string#\\'\") }}\u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[36m{{ (baz ?: { a:[1, 1000000000000000000000000000000000000000000000000000000000] }) }}\u001b[0m\n    \u001b[90m4| \u001b[0m\u001b[36m{% set a={foo: bar ? baz ? 1, test: -1} %}\u001b[0m\n    \u001b[90m5| \u001b[0m\u001b[36m{{ a ? ',' }}\u001b[0m\n    \u001b[90m6| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "TwigCsFixer\\Rules\\Operator\\OperatorSpacingRule": "79b37b1d22d06ba684abf4beb76faf428daf3a81dec618297394cb061fc997e5"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Expecting 1 whitespace before \"=\"; found 0."
+                    },
+                    "ruleId": "TwigCsFixer\\Rules\\Operator\\OperatorSpacingRule",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/test3.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 4,
+                                    "startColumn": 9,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m4| \u001b[0m\u001b[36m{% set a={foo: bar ? baz ? 1, test: -1} %}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 2,
+                                    "endLine": 6,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m2| \u001b[0m\u001b[36m{{ (bar ? 'string' : \"string#\\'\") }}\u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[36m{{ (baz ?: { a:[1, 1000000000000000000000000000000000000000000000000000000000] }) }}\u001b[0m\n    \u001b[90m4| \u001b[0m\u001b[36m{% set a={foo: bar ? baz ? 1, test: -1} %}\u001b[0m\n    \u001b[90m5| \u001b[0m\u001b[36m{{ a ? ',' }}\u001b[0m\n    \u001b[90m6| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "TwigCsFixer\\Rules\\Operator\\OperatorSpacingRule": "79b37b1d22d06ba684abf4beb76faf428daf3a81dec618297394cb061fc997e5"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Expecting 0 whitespace after \"{\"; found 1."
+                    },
+                    "ruleId": "TwigCsFixer\\Rules\\Punctuation\\PunctuationSpacingRule",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/test3.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 3,
+                                    "startColumn": 12,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m3| \u001b[0m\u001b[36m{{ (baz ?: { a:[1, 1000000000000000000000000000000000000000000000000000000000] }) }}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 5,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ 1+2-3*4%5 }}\u001b[0m\n    \u001b[90m2| \u001b[0m\u001b[36m{{ (bar ? 'string' : \"string#\\'\") }}\u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[36m{{ (baz ?: { a:[1, 1000000000000000000000000000000000000000000000000000000000] }) }}\u001b[0m\n    \u001b[90m4| \u001b[0m\u001b[36m{% set a={foo: bar ? baz ? 1, test: -1} %}\u001b[0m\n    \u001b[90m5| \u001b[0m\u001b[36m{{ a ? ',' }}\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "TwigCsFixer\\Rules\\Punctuation\\PunctuationSpacingRule": "79b37b1d22d06ba684abf4beb76faf428daf3a81dec618297394cb061fc997e5"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Expecting 1 whitespace after \":\"; found 0."
+                    },
+                    "ruleId": "TwigCsFixer\\Rules\\Punctuation\\PunctuationSpacingRule",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/test3.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 3,
+                                    "startColumn": 15,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m3| \u001b[0m\u001b[36m{{ (baz ?: { a:[1, 1000000000000000000000000000000000000000000000000000000000] }) }}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 5,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ 1+2-3*4%5 }}\u001b[0m\n    \u001b[90m2| \u001b[0m\u001b[36m{{ (bar ? 'string' : \"string#\\'\") }}\u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[36m{{ (baz ?: { a:[1, 1000000000000000000000000000000000000000000000000000000000] }) }}\u001b[0m\n    \u001b[90m4| \u001b[0m\u001b[36m{% set a={foo: bar ? baz ? 1, test: -1} %}\u001b[0m\n    \u001b[90m5| \u001b[0m\u001b[36m{{ a ? ',' }}\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "TwigCsFixer\\Rules\\Punctuation\\PunctuationSpacingRule": "79b37b1d22d06ba684abf4beb76faf428daf3a81dec618297394cb061fc997e5"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Expecting 0 whitespace before \"}\"; found 1."
+                    },
+                    "ruleId": "TwigCsFixer\\Rules\\Punctuation\\PunctuationSpacingRule",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/test3.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 3,
+                                    "startColumn": 80,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m3| \u001b[0m\u001b[36m{{ (baz ?: { a:[1, 1000000000000000000000000000000000000000000000000000000000] }) }}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 5,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ 1+2-3*4%5 }}\u001b[0m\n    \u001b[90m2| \u001b[0m\u001b[36m{{ (bar ? 'string' : \"string#\\'\") }}\u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[36m{{ (baz ?: { a:[1, 1000000000000000000000000000000000000000000000000000000000] }) }}\u001b[0m\n    \u001b[90m4| \u001b[0m\u001b[36m{% set a={foo: bar ? baz ? 1, test: -1} %}\u001b[0m\n    \u001b[90m5| \u001b[0m\u001b[36m{{ a ? ',' }}\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "TwigCsFixer\\Rules\\Punctuation\\PunctuationSpacingRule": "79b37b1d22d06ba684abf4beb76faf428daf3a81dec618297394cb061fc997e5"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "A line should not end with blank space(s)."
+                    },
+                    "ruleId": "TwigCsFixer\\Rules\\Whitespace\\TrailingSpaceRule",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/test7.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 2,
+                                    "startColumn": 33,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m2| \u001b[0m\u001b[36m    Trailing space in a comment \u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 4,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{#\u001b[0m\n    \u001b[90m2| \u001b[0m\u001b[36m    Trailing space in a comment \u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[36m#}\u001b[0m\n    \u001b[90m4| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "TwigCsFixer\\Rules\\Whitespace\\TrailingSpaceRule": "7526cf4ab72171647d4e4b4c25c31994812b4ed42ca7bbe2441d53ad0f5af499"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "File is invalid: Unexpected token \"name\" of value \"andb\" (\"end of print statement\" expected)."
+                    },
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/test11.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 1,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ a andb }}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ a andb }}\u001b[0m\n    \u001b[90m2| \u001b[0m\u001b[36m{{ a|and }}\u001b[0m\n    \u001b[90m3| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "": "200aca687517f739d0fdf54adf9bdff4f6fdb1cc47caafc5eb6797d75c17d89d"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Expecting 0 whitespace after \"{\"; found 1."
+                    },
+                    "ruleId": "TwigCsFixer\\Rules\\Punctuation\\PunctuationSpacingRule",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/test13.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 1,
+                                    "startColumn": 4,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ { a: \"a\", ...{ b: \"b\" } } }}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ { a: \"a\", ...{ b: \"b\" } } }}\u001b[0m\n    \u001b[90m2| \u001b[0m\u001b[36m{{ [1, 2, ...[3, 4]] }}\u001b[0m\n    \u001b[90m3| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "TwigCsFixer\\Rules\\Punctuation\\PunctuationSpacingRule": "8218eba78058bcf5c7d3bcdee67e9f688180e2320bcea93ff3b3128cd5516424"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Expecting 0 whitespace after \"{\"; found 1."
+                    },
+                    "ruleId": "TwigCsFixer\\Rules\\Punctuation\\PunctuationSpacingRule",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/test13.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 1,
+                                    "startColumn": 17,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ { a: \"a\", ...{ b: \"b\" } } }}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ { a: \"a\", ...{ b: \"b\" } } }}\u001b[0m\n    \u001b[90m2| \u001b[0m\u001b[36m{{ [1, 2, ...[3, 4]] }}\u001b[0m\n    \u001b[90m3| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "TwigCsFixer\\Rules\\Punctuation\\PunctuationSpacingRule": "8218eba78058bcf5c7d3bcdee67e9f688180e2320bcea93ff3b3128cd5516424"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Expecting 0 whitespace before \"}\"; found 1."
+                    },
+                    "ruleId": "TwigCsFixer\\Rules\\Punctuation\\PunctuationSpacingRule",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/test13.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 1,
+                                    "startColumn": 26,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ { a: \"a\", ...{ b: \"b\" } } }}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ { a: \"a\", ...{ b: \"b\" } } }}\u001b[0m\n    \u001b[90m2| \u001b[0m\u001b[36m{{ [1, 2, ...[3, 4]] }}\u001b[0m\n    \u001b[90m3| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "TwigCsFixer\\Rules\\Punctuation\\PunctuationSpacingRule": "8218eba78058bcf5c7d3bcdee67e9f688180e2320bcea93ff3b3128cd5516424"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Expecting 0 whitespace before \"}\"; found 1."
+                    },
+                    "ruleId": "TwigCsFixer\\Rules\\Punctuation\\PunctuationSpacingRule",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/test13.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 1,
+                                    "startColumn": 28,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ { a: \"a\", ...{ b: \"b\" } } }}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ { a: \"a\", ...{ b: \"b\" } } }}\u001b[0m\n    \u001b[90m2| \u001b[0m\u001b[36m{{ [1, 2, ...[3, 4]] }}\u001b[0m\n    \u001b[90m3| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "TwigCsFixer\\Rules\\Punctuation\\PunctuationSpacingRule": "8218eba78058bcf5c7d3bcdee67e9f688180e2320bcea93ff3b3128cd5516424"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "String should be declared with single quotes."
+                    },
+                    "ruleId": "TwigCsFixer\\Rules\\String\\SingleQuoteRule",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/test13.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 1,
+                                    "startColumn": 9,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ { a: \"a\", ...{ b: \"b\" } } }}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ { a: \"a\", ...{ b: \"b\" } } }}\u001b[0m\n    \u001b[90m2| \u001b[0m\u001b[36m{{ [1, 2, ...[3, 4]] }}\u001b[0m\n    \u001b[90m3| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "TwigCsFixer\\Rules\\String\\SingleQuoteRule": "8218eba78058bcf5c7d3bcdee67e9f688180e2320bcea93ff3b3128cd5516424"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "String should be declared with single quotes."
+                    },
+                    "ruleId": "TwigCsFixer\\Rules\\String\\SingleQuoteRule",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/test13.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 1,
+                                    "startColumn": 22,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ { a: \"a\", ...{ b: \"b\" } } }}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ { a: \"a\", ...{ b: \"b\" } } }}\u001b[0m\n    \u001b[90m2| \u001b[0m\u001b[36m{{ [1, 2, ...[3, 4]] }}\u001b[0m\n    \u001b[90m3| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "TwigCsFixer\\Rules\\String\\SingleQuoteRule": "8218eba78058bcf5c7d3bcdee67e9f688180e2320bcea93ff3b3128cd5516424"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "File is invalid: Unexpected character \"#\"."
+                    },
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/twigcs-fixer/Fixtures/invalid5.twig",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 1,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ \"#{p.first #{}}\" }}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 3,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[36m{{ \"#{p.first #{}}\" }}\u001b[0m\n    \u001b[90m2| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "": "908e3c61b75ce5ab4f73d6e21c092d348c21dd8e0aa1a8836eea3d0e85fd9604"
+                    }
+                }
+            ],
+            "automationDetails": {
+                "id": "Daily run 2024-07-15T15:50:24+00:00"
+            }
+        }
+    ]
+}
