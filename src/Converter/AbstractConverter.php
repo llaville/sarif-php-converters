@@ -138,10 +138,10 @@ abstract class AbstractConverter implements ConverterInterface
         }
 
         // set option to avoid additional suggestion SARIF2010
-        $this->includeCodeSnippets = $options['include_code_snippets'] ?? false;
+        $this->includeCodeSnippets = $options['include_code_snippets'] ?? true;
 
         // set option to avoid additional suggestion SARIF2011
-        $this->includeContextRegion = $options['include_context_region'] ?? false;
+        $this->includeContextRegion = $options['include_context_region'] ?? true;
     }
 
     public function toolDriver(): Definition\ToolComponent
