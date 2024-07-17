@@ -29,6 +29,8 @@ final class ConverterFactory implements ConverterFactoryInterface
         switch (strtolower($name)) {
             case ConverterFactoryInterface::BUILTIN_CONVERTER_ECS:
                 return $this->createEasyCodingStandard($options, $serializerFactory);
+            case ConverterFactoryInterface::BUILTIN_CONVERTER_PHAN:
+                return $this->createPhan($options, $serializerFactory);
             case ConverterFactoryInterface::BUILTIN_CONVERTER_PHPCS:
                 return $this->createCodeSniffer($options, $serializerFactory);
             case ConverterFactoryInterface::BUILTIN_CONVERTER_PHPLINT:
@@ -54,6 +56,18 @@ final class ConverterFactory implements ConverterFactoryInterface
     public function createEasyCodingStandard(array $options, ?SerializerFactory $serializerFactory = null): ConverterInterface
     {
         return new Converter\EcsConverter($options, $serializerFactory);
+    }
+
+    /**
+     * @param array{
+     *     format_output: bool,
+     *     include_code_snippets: bool,
+     *     include_context_region: bool
+     * } $options
+     */
+    public function createPhan(array $options, ?SerializerFactory $serializerFactory = null): ConverterInterface
+    {
+        return new Converter\PhanConverter($options, $serializerFactory);
     }
 
     /**

@@ -3,6 +3,7 @@ parameters:
     paths:
         - ../../src/
     scanDirectories:
+        - ../../vendor-bin/phan/
         - ../../vendor-bin/phpcs/
         - ../../vendor-bin/phpcs-fixer/
         - ../../vendor-bin/phplint/

@@ -9,6 +9,7 @@
 | Converter                                      |           User Guide            | Console Tool | Reporting |
 |:-----------------------------------------------|:-------------------------------:|:------------:|:---------:|
 | Easy-Coding-Standard [official website][ecs]   |          [ecs](ecs.md)          |   required   |     ❌     |
+| Phan [official website][phan]                  |         [phan](phan.md)         |   required   |     ❌     |
 | PHP_CodeSniffer [official website][phpcs]      |        [phpcs](phpcs.md)        |   optional   |     ✅     |
 | PHPLint [official website][phplint]            |      [phplint](phplint.md)      |   optional   |     ✅     |
 | PHP Mess Detector [official website][phpmd]    |        [phpmd](phpmd.md)        |   required   |     ❌     |
@@ -17,6 +18,7 @@
 
 
 [ecs]: https://github.com/easy-coding-standard/easy-coding-standard
+[phan]: https://github.com/phan/phan
 [phpcs]: https://github.com/PHPCSStandards/PHP_CodeSniffer
 [phplint]: https://github.com/overtrue/phplint
 [phpmd]: https://github.com/phpmd/phpmd

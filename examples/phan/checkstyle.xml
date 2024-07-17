@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<checkstyle version="6.5">
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Console/Application.php">
+    <error line="24" severity="error" message="Class extends undeclared class \Symfony\Component\Console\Application (Did you mean class \Bartlett\Sarif\Console\Application)" source="PhanUndeclaredExtendedClass"/>
+    <error line="37" severity="error" message="Reference to undeclared class \Symfony\Component\Console\Application (Did you mean class \Bartlett\Sarif\Console\Application)" source="PhanUndeclaredClass"/>
+    <error line="42" severity="error" message="Call to method getAllRawData from undeclared class \Composer\InstalledVersions" source="PhanUndeclaredClassMethod"/>
+    <error line="57" severity="error" message="Call to method getReference from undeclared class \Composer\InstalledVersions" source="PhanUndeclaredClassMethod"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Console/Command/ConvertCommand.php">
+    <error line="45" severity="error" message="Class extends undeclared class \Symfony\Component\Console\Command\Command (Did you mean class \MongoDB\Driver\Command)" source="PhanUndeclaredExtendedClass"/>
+    <error line="49" severity="error" message="Call to undeclared method \Bartlett\Sarif\Console\Command\ConvertCommand::setName" source="PhanUndeclaredMethod"/>
+    <error line="54" severity="error" message="Reference to constant REQUIRED from undeclared class \Symfony\Component\Console\Input\InputArgument" source="PhanUndeclaredClassConstant"/>
+    <error line="59" severity="error" message="Reference to constant OPTIONAL from undeclared class \Symfony\Component\Console\Input\InputArgument" source="PhanUndeclaredClassConstant"/>
+    <error line="65" severity="error" message="Reference to constant VALUE_REQUIRED from undeclared class \Symfony\Component\Console\Input\InputOption" source="PhanUndeclaredClassConstant"/>
+    <error line="66" severity="error" message="Call to undeclared method \Bartlett\Sarif\Console\Command\ConvertCommand::getName" source="PhanUndeclaredMethod"/>
+    <error line="71" severity="error" message="Reference to constant VALUE_REQUIRED from undeclared class \Symfony\Component\Console\Input\InputOption" source="PhanUndeclaredClassConstant"/>
+    <error line="77" severity="error" message="Reference to constant VALUE_OPTIONAL from undeclared class \Symfony\Component\Console\Input\InputOption" source="PhanUndeclaredClassConstant"/>
+    <error line="83" severity="error" message="Reference to constant VALUE_OPTIONAL from undeclared class \Symfony\Component\Console\Input\InputOption" source="PhanUndeclaredClassConstant"/>
+    <error line="89" severity="warning" message="Parameter $input has undeclared type \Symfony\Component\Console\Input\InputInterface" source="PhanUndeclaredTypeParameter"/>
+    <error line="89" severity="warning" message="Parameter $output has undeclared type \Symfony\Component\Console\Output\OutputInterface" source="PhanUndeclaredTypeParameter"/>
+    <error line="91" severity="error" message="Call to method getOptions from undeclared class \Symfony\Component\Console\Input\InputInterface" source="PhanUndeclaredClassMethod"/>
+    <error line="114" severity="error" message="Call to method getArgument from undeclared class \Symfony\Component\Console\Input\InputInterface" source="PhanUndeclaredClassMethod"/>
+    <error line="133" severity="error" message="Call to method getArgument from undeclared class \Symfony\Component\Console\Input\InputInterface" source="PhanUndeclaredClassMethod"/>
+    <error line="137" severity="error" message="Call to method isVerbose from undeclared class \Symfony\Component\Console\Output\OutputInterface" source="PhanUndeclaredClassMethod"/>
+    <error line="155" severity="error" message="Call to method write from undeclared class \Symfony\Component\Console\Output\OutputInterface" source="PhanUndeclaredClassMethod"/>
+    <error line="159" severity="error" message="Call to method __construct from undeclared class \Symfony\Component\Console\Output\StreamOutput" source="PhanUndeclaredClassMethod"/>
+    <error line="160" severity="error" message="Call to method write from undeclared class \Symfony\Component\Console\Output\StreamOutput" source="PhanUndeclaredClassMethod"/>
+    <error line="161" severity="error" message="Call to method getStream from undeclared class \Symfony\Component\Console\Output\StreamOutput" source="PhanUndeclaredClassMethod"/>
+    <error line="163" severity="error" message="Call to method writeln from undeclared class \Symfony\Component\Console\Output\OutputInterface" source="PhanUndeclaredClassMethod"/>
+    <error line="167" severity="error" message="Call to method writeln from undeclared class \Symfony\Component\Console\Output\OutputInterface" source="PhanUndeclaredClassMethod"/>
+    <error line="168" severity="error" message="Call to method isDebug from undeclared class \Symfony\Component\Console\Output\OutputInterface" source="PhanUndeclaredClassMethod"/>
+    <error line="169" severity="error" message="Call to method writeln from undeclared class \Symfony\Component\Console\Output\OutputInterface" source="PhanUndeclaredClassMethod"/>
+    <error line="174" severity="error" message="Reference to constant SUCCESS from undeclared class \Symfony\Component\Console\Command\Command (Did you mean class \MongoDB\Driver\Command)" source="PhanUndeclaredClassConstant"/>
+    <error line="191" severity="info" message="Argument 1 ($string) is $contents of type ?string but \trim() takes string (expected type to be non-nullable)" source="PhanTypeMismatchArgumentNullableInternal"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Contract/ConverterFactoryInterface.php">
+    <error line="27" severity="info" message="Saw possibly unextractable annotation for a fragment of comment '* @param array{': after array, did not see an element name (will guess based on comment order)" source="PhanUnextractableAnnotationElementName"/>
+    <error line="27" severity="info" message="Saw a token Phan may have failed to parse after '* @param array{': after array, saw '{'" source="PhanUnextractableAnnotationSuffix"/>
+    <error line="36" severity="warning" message="Parameter $serializerFactory has undeclared type ?\Bartlett\Sarif\Factory\SerializerFactory" source="PhanUndeclaredTypeParameter"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Contract/ConverterInterface.php">
+    <error line="23" severity="warning" message="Return type of toolDriver() is undeclared type \Bartlett\Sarif\Definition\ToolComponent" source="PhanUndeclaredTypeReturnType"/>
+    <error line="28" severity="warning" message="Return type of toolExtensions() is undeclared type \Bartlett\Sarif\Definition\ToolComponent[]" source="PhanUndeclaredTypeReturnType"/>
+    <error line="34" severity="warning" message="Return type of rules() is undeclared type \Bartlett\Sarif\Definition\ReportingDescriptor[]" source="PhanUndeclaredTypeReturnType"/>
+    <error line="45" severity="warning" message="Parameter $properties has undeclared type ?\Bartlett\Sarif\Definition\PropertyBag" source="PhanUndeclaredTypeParameter"/>
+    <error line="45" severity="warning" message="Return type of invocations() is undeclared type \Bartlett\Sarif\Definition\Invocation[]" source="PhanUndeclaredTypeReturnType"/>
+    <error line="47" severity="warning" message="Return type of automationDetails() is undeclared type \Bartlett\Sarif\Definition\RunAutomationDetails" source="PhanUndeclaredTypeReturnType"/>
+    <error line="54" severity="warning" message="Parameter $invocations has undeclared type iterable&amp;lt;\Bartlett\Sarif\Definition\Invocation&amp;gt;" source="PhanUndeclaredTypeParameter"/>
+    <error line="54" severity="warning" message="Return type of run() is undeclared type \Bartlett\Sarif\Definition\Run" source="PhanUndeclaredTypeReturnType"/>
+    <error line="59" severity="warning" message="Parameter $runs has undeclared type \Bartlett\Sarif\Definition\Run[]" source="PhanUndeclaredTypeParameter"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php">
+    <error line="71" severity="warning" message="Property \Bartlett\Sarif\Converter\AbstractConverter-&amp;gt;results has undeclared type \Bartlett\Sarif\Definition\Result[] (Did you mean class \LDAP\Result or class \PgSql\Result)" source="PhanUndeclaredTypeProperty"/>
+    <error line="78" severity="warning" message="Property \Bartlett\Sarif\Converter\AbstractConverter-&amp;gt;serializer has undeclared type \Bartlett\Sarif\Serializer\SerializerInterface" source="PhanUndeclaredTypeProperty"/>
+    <error line="94" severity="info" message="Saw possibly unextractable annotation for a fragment of comment '* @param array{': after array, did not see an element name (will guess based on comment order)" source="PhanUnextractableAnnotationElementName"/>
+    <error line="94" severity="info" message="Saw a token Phan may have failed to parse after '* @param array{': after array, saw '{'" source="PhanUnextractableAnnotationSuffix"/>
+    <error line="100" severity="warning" message="Parameter $factory has undeclared type ?\Bartlett\Sarif\Factory\SerializerFactory" source="PhanUndeclaredTypeParameter"/>
+    <error line="103" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Factory\PhpSerializerFactory" source="PhanUndeclaredClassMethod"/>
+    <error line="106" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Serializer\Encoder\PhpJsonEncoder" source="PhanUndeclaredClassMethod"/>
+    <error line="107" severity="error" message="Call to method createSerializer from undeclared class \Bartlett\Sarif\Factory\PhpSerializerFactory" source="PhanUndeclaredClassMethod"/>
+    <error line="110" severity="error" message="Call to method createSerializer from undeclared class \Bartlett\Sarif\Factory\SerializerFactory" source="PhanUndeclaredClassMethod"/>
+    <error line="127" severity="info" message="Saw possibly unextractable annotation for a fragment of comment '* @param array{': after array, did not see an element name (will guess based on comment order)" source="PhanUnextractableAnnotationElementName"/>
+    <error line="127" severity="info" message="Saw a token Phan may have failed to parse after '* @param array{': after array, saw '{'" source="PhanUnextractableAnnotationSuffix"/>
+    <error line="147" severity="warning" message="Return type of toolDriver() is undeclared type \Bartlett\Sarif\Definition\ToolComponent" source="PhanUndeclaredTypeReturnType"/>
+    <error line="149" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\ToolComponent" source="PhanUndeclaredClassMethod"/>
+    <error line="150" severity="error" message="Call to method setName from undeclared class \Bartlett\Sarif\Definition\ToolComponent" source="PhanUndeclaredClassMethod"/>
+    <error line="151" severity="error" message="Call to method setInformationUri from undeclared class \Bartlett\Sarif\Definition\ToolComponent" source="PhanUndeclaredClassMethod"/>
+    <error line="153" severity="error" message="Call to method setSemanticVersion from undeclared class \Bartlett\Sarif\Definition\ToolComponent" source="PhanUndeclaredClassMethod"/>
+    <error line="157" severity="error" message="Call to method setFullName from undeclared class \Bartlett\Sarif\Definition\ToolComponent" source="PhanUndeclaredClassMethod"/>
+    <error line="160" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\MultiformatMessageString" source="PhanUndeclaredClassMethod"/>
+    <error line="161" severity="error" message="Call to method setText from undeclared class \Bartlett\Sarif\Definition\MultiformatMessageString" source="PhanUndeclaredClassMethod"/>
+    <error line="162" severity="error" message="Call to method setShortDescription from undeclared class \Bartlett\Sarif\Definition\ToolComponent" source="PhanUndeclaredClassMethod"/>
+    <error line="165" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\MultiformatMessageString" source="PhanUndeclaredClassMethod"/>
+    <error line="166" severity="error" message="Call to method setText from undeclared class \Bartlett\Sarif\Definition\MultiformatMessageString" source="PhanUndeclaredClassMethod"/>
+    <error line="167" severity="error" message="Call to method setFullDescription from undeclared class \Bartlett\Sarif\Definition\ToolComponent" source="PhanUndeclaredClassMethod"/>
+    <error line="176" severity="warning" message="Return type of toolExtensions() is undeclared type \Bartlett\Sarif\Definition\ToolComponent[]" source="PhanUndeclaredTypeReturnType"/>
+    <error line="178" severity="error" message="Call to method getVersion from undeclared class \Composer\InstalledVersions" source="PhanUndeclaredClassMethod"/>
+    <error line="180" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\MultiformatMessageString" source="PhanUndeclaredClassMethod"/>
+    <error line="181" severity="error" message="Call to method setText from undeclared class \Bartlett\Sarif\Definition\MultiformatMessageString" source="PhanUndeclaredClassMethod"/>
+    <error line="183" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\ToolComponent" source="PhanUndeclaredClassMethod"/>
+    <error line="184" severity="error" message="Call to method setName from undeclared class \Bartlett\Sarif\Definition\ToolComponent" source="PhanUndeclaredClassMethod"/>
+    <error line="185" severity="error" message="Call to method setShortDescription from undeclared class \Bartlett\Sarif\Definition\ToolComponent" source="PhanUndeclaredClassMethod"/>
+    <error line="186" severity="error" message="Call to method setVersion from undeclared class \Bartlett\Sarif\Definition\ToolComponent" source="PhanUndeclaredClassMethod"/>
+    <error line="194" severity="warning" message="Return type of rules() is undeclared type \Bartlett\Sarif\Definition\ReportingDescriptor[]" source="PhanUndeclaredTypeReturnType"/>
+    <error line="199" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\ReportingDescriptor" source="PhanUndeclaredClassMethod"/>
+    <error line="200" severity="error" message="Call to method setId from undeclared class \Bartlett\Sarif\Definition\ReportingDescriptor" source="PhanUndeclaredClassMethod"/>
+    <error line="202" severity="error" message="Call to method setName from undeclared class \Bartlett\Sarif\Definition\ReportingDescriptor" source="PhanUndeclaredClassMethod"/>
+    <error line="205" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\MultiformatMessageString" source="PhanUndeclaredClassMethod"/>
+    <error line="206" severity="error" message="Call to method setText from undeclared class \Bartlett\Sarif\Definition\MultiformatMessageString" source="PhanUndeclaredClassMethod"/>
+    <error line="207" severity="error" message="Call to method setShortDescription from undeclared class \Bartlett\Sarif\Definition\ReportingDescriptor" source="PhanUndeclaredClassMethod"/>
+    <error line="210" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\MultiformatMessageString" source="PhanUndeclaredClassMethod"/>
+    <error line="211" severity="error" message="Call to method setText from undeclared class \Bartlett\Sarif\Definition\MultiformatMessageString" source="PhanUndeclaredClassMethod"/>
+    <error line="212" severity="error" message="Call to method setFullDescription from undeclared class \Bartlett\Sarif\Definition\ReportingDescriptor" source="PhanUndeclaredClassMethod"/>
+    <error line="216" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\MultiformatMessageString" source="PhanUndeclaredClassMethod"/>
+    <error line="217" severity="error" message="Call to method setText from undeclared class \Bartlett\Sarif\Definition\MultiformatMessageString" source="PhanUndeclaredClassMethod"/>
+    <error line="218" severity="error" message="Call to method addMessageStrings from undeclared class \Bartlett\Sarif\Definition\ReportingDescriptor" source="PhanUndeclaredClassMethod"/>
+    <error line="229" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\MultiformatMessageString" source="PhanUndeclaredClassMethod"/>
+    <error line="230" severity="error" message="Call to method setText from undeclared class \Bartlett\Sarif\Definition\MultiformatMessageString" source="PhanUndeclaredClassMethod"/>
+    <error line="232" severity="error" message="Call to method setMarkdown from undeclared class \Bartlett\Sarif\Definition\MultiformatMessageString" source="PhanUndeclaredClassMethod"/>
+    <error line="234" severity="error" message="Call to method setHelp from undeclared class \Bartlett\Sarif\Definition\ReportingDescriptor" source="PhanUndeclaredClassMethod"/>
+    <error line="237" severity="error" message="Call to method setHelpUri from undeclared class \Bartlett\Sarif\Definition\ReportingDescriptor" source="PhanUndeclaredClassMethod"/>
+    <error line="240" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\PropertyBag" source="PhanUndeclaredClassMethod"/>
+    <error line="241" severity="error" message="Call to method addProperties from undeclared class \Bartlett\Sarif\Definition\PropertyBag" source="PhanUndeclaredClassMethod"/>
+    <error line="242" severity="error" message="Call to method setProperties from undeclared class \Bartlett\Sarif\Definition\ReportingDescriptor" source="PhanUndeclaredClassMethod"/>
+    <error line="254" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\ArtifactLocation" source="PhanUndeclaredClassMethod"/>
+    <error line="255" severity="error" message="Call to method setUri from undeclared class \Bartlett\Sarif\Definition\ArtifactLocation" source="PhanUndeclaredClassMethod"/>
+    <error line="256" severity="error" message="Call to method setUriBaseId from undeclared class \Bartlett\Sarif\Definition\ArtifactLocation" source="PhanUndeclaredClassMethod"/>
+    <error line="267" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\Message (Did you mean class \http\Message)" source="PhanUndeclaredClassMethod"/>
+    <error line="268" severity="error" message="Call to method setText from undeclared class \Bartlett\Sarif\Definition\Message (Did you mean class \http\Message)" source="PhanUndeclaredClassMethod"/>
+    <error line="270" severity="error" message="Call to method setId from undeclared class \Bartlett\Sarif\Definition\Message (Did you mean class \http\Message)" source="PhanUndeclaredClassMethod"/>
+    <error line="274" severity="error" message="Call to method addArguments from undeclared class \Bartlett\Sarif\Definition\Message (Did you mean class \http\Message)" source="PhanUndeclaredClassMethod"/>
+    <error line="277" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\Result (Did you mean class \LDAP\Result or class \PgSql\Result)" source="PhanUndeclaredClassMethod"/>
+    <error line="278" severity="error" message="Call to method setMessage from undeclared class \Bartlett\Sarif\Definition\Result (Did you mean class \LDAP\Result or class \PgSql\Result)" source="PhanUndeclaredClassMethod"/>
+    <error line="279" severity="error" message="Call to method addPartialFingerprints from undeclared class \Bartlett\Sarif\Definition\Result (Did you mean class \LDAP\Result or class \PgSql\Result)" source="PhanUndeclaredClassMethod"/>
+    <error line="280" severity="error" message="Call to method setRuleId from undeclared class \Bartlett\Sarif\Definition\Result (Did you mean class \LDAP\Result or class \PgSql\Result)" source="PhanUndeclaredClassMethod"/>
+    <error line="283" severity="error" message="Call to method setLevel from undeclared class \Bartlett\Sarif\Definition\Result (Did you mean class \LDAP\Result or class \PgSql\Result)" source="PhanUndeclaredClassMethod"/>
+    <error line="286" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\PhysicalLocation" source="PhanUndeclaredClassMethod"/>
+    <error line="287" severity="error" message="Call to method setArtifactLocation from undeclared class \Bartlett\Sarif\Definition\PhysicalLocation" source="PhanUndeclaredClassMethod"/>
+    <error line="298" severity="error" message="Call to method setEndLine from undeclared class \Bartlett\Sarif\Definition\Region" source="PhanUndeclaredClassMethod"/>
+    <error line="300" severity="error" message="Call to method setRegion from undeclared class \Bartlett\Sarif\Definition\PhysicalLocation" source="PhanUndeclaredClassMethod"/>
+    <error line="311" severity="error" message="Call to method setEndLine from undeclared class \Bartlett\Sarif\Definition\Region" source="PhanUndeclaredClassMethod"/>
+    <error line="312" severity="error" message="Call to method setContextRegion from undeclared class \Bartlett\Sarif\Definition\PhysicalLocation" source="PhanUndeclaredClassMethod"/>
+    <error line="316" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\Location" source="PhanUndeclaredClassMethod"/>
+    <error line="317" severity="error" message="Call to method setPhysicalLocation from undeclared class \Bartlett\Sarif\Definition\Location" source="PhanUndeclaredClassMethod"/>
+    <error line="319" severity="error" message="Call to method addLocations from undeclared class \Bartlett\Sarif\Definition\Result (Did you mean class \LDAP\Result or class \PgSql\Result)" source="PhanUndeclaredClassMethod"/>
+    <error line="328" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\PropertyBag" source="PhanUndeclaredClassMethod"/>
+    <error line="329" severity="error" message="Call to method addProperties from undeclared class \Bartlett\Sarif\Definition\PropertyBag" source="PhanUndeclaredClassMethod"/>
+    <error line="330" severity="error" message="Call to method setProperties from undeclared class \Bartlett\Sarif\Definition\Result (Did you mean class \LDAP\Result or class \PgSql\Result)" source="PhanUndeclaredClassMethod"/>
+    <error line="343" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\SarifLog" source="PhanUndeclaredClassMethod"/>
+    <error line="345" severity="error" message="Call to method serialize from undeclared class \Bartlett\Sarif\Serializer\SerializerInterface" source="PhanUndeclaredClassMethod"/>
+    <error line="351" severity="warning" message="Parameter $properties has undeclared type ?\Bartlett\Sarif\Definition\PropertyBag" source="PhanUndeclaredTypeParameter"/>
+    <error line="351" severity="warning" message="Return type of invocations() is undeclared type \Bartlett\Sarif\Definition\Invocation[]" source="PhanUndeclaredTypeReturnType"/>
+    <error line="353" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\ArtifactLocation" source="PhanUndeclaredClassMethod"/>
+    <error line="354" severity="error" message="Call to method setUri from undeclared class \Bartlett\Sarif\Definition\ArtifactLocation" source="PhanUndeclaredClassMethod"/>
+    <error line="356" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\Invocation" source="PhanUndeclaredClassMethod"/>
+    <error line="357" severity="error" message="Call to method setExecutionSuccessful from undeclared class \Bartlett\Sarif\Definition\Invocation" source="PhanUndeclaredClassMethod"/>
+    <error line="358" severity="error" message="Call to method setWorkingDirectory from undeclared class \Bartlett\Sarif\Definition\Invocation" source="PhanUndeclaredClassMethod"/>
+    <error line="362" severity="error" message="Call to method setCommandLine from undeclared class \Bartlett\Sarif\Definition\Invocation" source="PhanUndeclaredClassMethod"/>
+    <error line="363" severity="error" message="Call to method addArguments from undeclared class \Bartlett\Sarif\Definition\Invocation" source="PhanUndeclaredClassMethod"/>
+    <error line="367" severity="error" message="Call to method setStartTimeUtc from undeclared class \Bartlett\Sarif\Definition\Invocation" source="PhanUndeclaredClassMethod"/>
+    <error line="370" severity="error" message="Call to method setEndTimeUtc from undeclared class \Bartlett\Sarif\Definition\Invocation" source="PhanUndeclaredClassMethod"/>
+    <error line="374" severity="error" message="Call to method setProperties from undeclared class \Bartlett\Sarif\Definition\Invocation" source="PhanUndeclaredClassMethod"/>
+    <error line="380" severity="warning" message="Return type of automationDetails() is undeclared type \Bartlett\Sarif\Definition\RunAutomationDetails" source="PhanUndeclaredTypeReturnType"/>
+    <error line="382" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\RunAutomationDetails" source="PhanUndeclaredClassMethod"/>
+    <error line="383" severity="error" message="Call to method setId from undeclared class \Bartlett\Sarif\Definition\RunAutomationDetails" source="PhanUndeclaredClassMethod"/>
+    <error line="388" severity="warning" message="Return type of run() is undeclared type \Bartlett\Sarif\Definition\Run" source="PhanUndeclaredTypeReturnType"/>
+    <error line="391" severity="error" message="Call to method addRules from undeclared class \Bartlett\Sarif\Definition\ToolComponent" source="PhanUndeclaredClassMethod"/>
+    <error line="393" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\Tool" source="PhanUndeclaredClassMethod"/>
+    <error line="394" severity="error" message="Call to method setDriver from undeclared class \Bartlett\Sarif\Definition\Tool" source="PhanUndeclaredClassMethod"/>
+    <error line="395" severity="error" message="Call to method addExtensions from undeclared class \Bartlett\Sarif\Definition\Tool" source="PhanUndeclaredClassMethod"/>
+    <error line="397" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\Run" source="PhanUndeclaredClassMethod"/>
+    <error line="398" severity="error" message="Call to method setTool from undeclared class \Bartlett\Sarif\Definition\Run" source="PhanUndeclaredClassMethod"/>
+    <error line="400" severity="error" message="Call to method addInvocations from undeclared class \Bartlett\Sarif\Definition\Run" source="PhanUndeclaredClassMethod"/>
+    <error line="401" severity="error" message="Call to method addResults from undeclared class \Bartlett\Sarif\Definition\Run" source="PhanUndeclaredClassMethod"/>
+    <error line="402" severity="error" message="Call to method setAutomationDetails from undeclared class \Bartlett\Sarif\Definition\Run" source="PhanUndeclaredClassMethod"/>
+    <error line="404" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\ArtifactLocation" source="PhanUndeclaredClassMethod"/>
+    <error line="405" severity="error" message="Call to method setUri from undeclared class \Bartlett\Sarif\Definition\ArtifactLocation" source="PhanUndeclaredClassMethod"/>
+    <error line="409" severity="error" message="Call to method addAdditionalProperties from undeclared class \Bartlett\Sarif\Definition\Run" source="PhanUndeclaredClassMethod"/>
+    <error line="416" severity="error" message="Call to method getVersion from undeclared class \Composer\InstalledVersions" source="PhanUndeclaredClassMethod"/>
+    <error line="483" severity="error" message="Call to method isInstalled from undeclared class \Composer\InstalledVersions" source="PhanUndeclaredClassMethod"/>
+    <error line="488" severity="error" message="Call to method __construct from undeclared class \PHP_Parallel_Lint\PhpConsoleColor\ConsoleColor" source="PhanUndeclaredClassMethod"/>
+    <error line="488" severity="error" message="Call to method __construct from undeclared class \PHP_Parallel_Lint\PhpConsoleHighlighter\Highlighter" source="PhanUndeclaredClassMethod"/>
+    <error line="490" severity="error" message="Call to method getCodeSnippet from undeclared class \PHP_Parallel_Lint\PhpConsoleHighlighter\Highlighter" source="PhanUndeclaredClassMethod"/>
+    <error line="497" severity="warning" message="Return type of getSnippetRegion() is undeclared type \Bartlett\Sarif\Definition\Region" source="PhanUndeclaredTypeReturnType"/>
+    <error line="504" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\Region" source="PhanUndeclaredClassMethod"/>
+    <error line="505" severity="error" message="Call to method setStartLine from undeclared class \Bartlett\Sarif\Definition\Region" source="PhanUndeclaredClassMethod"/>
+    <error line="507" severity="error" message="Call to method setStartColumn from undeclared class \Bartlett\Sarif\Definition\Region" source="PhanUndeclaredClassMethod"/>
+    <error line="513" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\MultiformatMessageString" source="PhanUndeclaredClassMethod"/>
+    <error line="514" severity="error" message="Call to method setText from undeclared class \Bartlett\Sarif\Definition\MultiformatMessageString" source="PhanUndeclaredClassMethod"/>
+    <error line="515" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\ArtifactContent" source="PhanUndeclaredClassMethod"/>
+    <error line="516" severity="error" message="Call to method setRendered from undeclared class \Bartlett\Sarif\Definition\ArtifactContent" source="PhanUndeclaredClassMethod"/>
+    <error line="517" severity="error" message="Call to method setSnippet from undeclared class \Bartlett\Sarif\Definition\Region" source="PhanUndeclaredClassMethod"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/EcsNormalizer.php">
+    <error line="46" severity="info" message="Saw a token Phan may have failed to parse after '* @return array{': after array, saw '{'" source="PhanUnextractableAnnotationSuffix"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhanNormalizer.php">
+    <error line="46" severity="info" message="Saw a token Phan may have failed to parse after '* @return array{': after array, saw '{'" source="PhanUnextractableAnnotationSuffix"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpCsFixerNormalizer.php">
+    <error line="45" severity="info" message="Saw a token Phan may have failed to parse after '* @return array{': after array, saw '{'" source="PhanUnextractableAnnotationSuffix"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpCsNormalizer.php">
+    <error line="59" severity="info" message="Saw a token Phan may have failed to parse after '* @return array{': after array, saw '{'" source="PhanUnextractableAnnotationSuffix"/>
+    <error line="90" severity="warning" message="Argument 1 ($string) is $value of type int but \strtolower() takes string" source="PhanTypeMismatchArgumentInternal"/>
+    <error line="115" severity="info" message="Saw a token Phan may have failed to parse after '* @return array{': after array, saw '{'" source="PhanUnextractableAnnotationSuffix"/>
+    <error line="130" severity="warning" message="Suspicious array access to $collected of nullable type array|bool|float|int|null|string" source="PhanTypeArraySuspiciousNullable"/>
+    <error line="148" severity="warning" message="Suspicious array access to $collected of nullable type array|bool|float|int|null|string" source="PhanTypeArraySuspiciousNullable"/>
+    <error line="149" severity="warning" message="Suspicious array access to $collected of nullable type array|bool|float|int|null|string" source="PhanTypeArraySuspiciousNullable"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpInsightsNormalizer.php">
+    <error line="13" severity="warning" message="Possibly zero references to use statement for classlike/namespace Details (\NunoMaduro\PhpInsights\Domain\Details)" source="PhanUnreferencedUseNormal"/>
+    <error line="14" severity="warning" message="Possibly zero references to use statement for classlike/namespace Insight (\NunoMaduro\PhpInsights\Domain\Insights\Insight)" source="PhanUnreferencedUseNormal"/>
+    <error line="42" severity="error" message="Checking instanceof against undeclared class \NunoMaduro\PhpInsights\Domain\Insights\InsightCollection" source="PhanUndeclaredClassInstanceof"/>
+    <error line="52" severity="info" message="Saw a token Phan may have failed to parse after '* @return array{': after array, saw '{'" source="PhanUnextractableAnnotationSuffix"/>
+    <error line="58" severity="warning" message="Parameter $insightCollection has undeclared type \NunoMaduro\PhpInsights\Domain\Insights\InsightCollection" source="PhanUndeclaredTypeParameter"/>
+    <error line="66" severity="error" message="Call to method allFrom from undeclared class \NunoMaduro\PhpInsights\Domain\Insights\InsightCollection" source="PhanUndeclaredClassMethod"/>
+    <error line="67" severity="error" message="Checking instanceof against undeclared class \NunoMaduro\PhpInsights\Domain\Contracts\HasDetails" source="PhanUndeclaredClassInstanceof"/>
+    <error line="70" severity="error" message="Call to method hasIssue from undeclared class \NunoMaduro\PhpInsights\Domain\Contracts\HasDetails" source="PhanUndeclaredClassMethod"/>
+    <error line="75" severity="error" message="Call to method getDetails from undeclared class \NunoMaduro\PhpInsights\Domain\Contracts\HasDetails" source="PhanUndeclaredClassMethod"/>
+    <error line="76" severity="error" message="Call to method getInsightClass from undeclared class \NunoMaduro\PhpInsights\Domain\Contracts\HasDetails" source="PhanUndeclaredClassMethod"/>
+    <error line="79" severity="error" message="Call to method getTitle from undeclared class \NunoMaduro\PhpInsights\Domain\Contracts\HasDetails" source="PhanUndeclaredClassMethod"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpLintNormalizer.php">
+    <error line="49" severity="info" message="Saw a token Phan may have failed to parse after '* @return array{': after array, saw '{'" source="PhanUnextractableAnnotationSuffix"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpMdNormalizer.php">
+    <error line="12" severity="warning" message="Possibly zero references to use statement for classlike/namespace ProcessingError (\PHPMD\ProcessingError)" source="PhanUnreferencedUseNormal"/>
+    <error line="14" severity="warning" message="Possibly zero references to use statement for classlike/namespace RuleViolation (\PHPMD\RuleViolation)" source="PhanUnreferencedUseNormal"/>
+    <error line="55" severity="error" message="Checking instanceof against undeclared class \PHPMD\Report" source="PhanUndeclaredClassInstanceof"/>
+    <error line="65" severity="info" message="Saw a token Phan may have failed to parse after '* @return array{': after array, saw '{'" source="PhanUnextractableAnnotationSuffix"/>
+    <error line="143" severity="warning" message="Parameter $report has undeclared type \PHPMD\Report" source="PhanUndeclaredTypeParameter"/>
+    <error line="150" severity="error" message="Call to method getRuleViolations from undeclared class \PHPMD\Report" source="PhanUndeclaredClassMethod"/>
+    <error line="199" severity="error" message="Call to method getErrors from undeclared class \PHPMD\Report" source="PhanUndeclaredClassMethod"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpMndNormalizer.php">
+    <error line="45" severity="info" message="Saw a token Phan may have failed to parse after '* @return array{': after array, saw '{'" source="PhanUnextractableAnnotationSuffix"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpStanNormalizer.php">
+    <error line="37" severity="error" message="Checking instanceof against undeclared class \PHPStan\Command\AnalysisResult" source="PhanUndeclaredClassInstanceof"/>
+    <error line="47" severity="info" message="Saw a token Phan may have failed to parse after '* @return array{': after array, saw '{'" source="PhanUnextractableAnnotationSuffix"/>
+    <error line="53" severity="warning" message="Parameter $analysisResult has undeclared type \PHPStan\Command\AnalysisResult" source="PhanUndeclaredTypeParameter"/>
+    <error line="60" severity="error" message="Call to method getFileSpecificErrors from undeclared class \PHPStan\Command\AnalysisResult" source="PhanUndeclaredClassMethod"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PsalmNormalizer.php">
+    <error line="38" severity="error" message="Checking instanceof against undeclared class \Psalm\Plugin\EventHandler\Event\AfterAnalysisEvent" source="PhanUndeclaredClassInstanceof"/>
+    <error line="48" severity="info" message="Saw a token Phan may have failed to parse after '* @return array{': after array, saw '{'" source="PhanUnextractableAnnotationSuffix"/>
+    <error line="54" severity="warning" message="Parameter $event has undeclared type \Psalm\Plugin\EventHandler\Event\AfterAnalysisEvent" source="PhanUndeclaredTypeParameter"/>
+    <error line="60" severity="error" message="Call to method getIssues from undeclared class \Psalm\Plugin\EventHandler\Event\AfterAnalysisEvent" source="PhanUndeclaredClassMethod"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PyLintNormalizer.php">
+    <error line="43" severity="info" message="Saw a token Phan may have failed to parse after '* @return array{': after array, saw '{'" source="PhanUnextractableAnnotationSuffix"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/SarifNormalizer.php">
+    <error line="45" severity="info" message="Saw a token Phan may have failed to parse after '* @return array{': after array, saw '{'" source="PhanUnextractableAnnotationSuffix"/>
+    <error line="60" severity="warning" message="Suspicious array access to $collected of nullable type array|bool|float|int|null|string" source="PhanTypeArraySuspiciousNullable"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/TwigCsFixerNormalizer.php">
+    <error line="44" severity="info" message="Saw a token Phan may have failed to parse after '* @return array{': after array, saw '{'" source="PhanUnextractableAnnotationSuffix"/>
+    <error line="50" severity="warning" message="Parameter $data has undeclared type array&amp;lt;string,\TwigCsFixer\Report\Violation&amp;gt;" source="PhanUndeclaredTypeParameter"/>
+    <error line="63" severity="error" message="Call to method getLevelAsString from undeclared class \TwigCsFixer\Report\Violation" source="PhanUndeclaredClassMethod"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/PhpCsConverter.php">
+    <error line="39" severity="warning" message="Parameter $properties has undeclared type ?\Bartlett\Sarif\Definition\PropertyBag" source="PhanUndeclaredTypeParameter"/>
+    <error line="39" severity="warning" message="Return type of invocations() is undeclared type \Bartlett\Sarif\Definition\Invocation[]" source="PhanUndeclaredTypeReturnType"/>
+    <error line="47" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\Message (Did you mean class \http\Message)" source="PhanUndeclaredClassMethod"/>
+    <error line="48" severity="error" message="Call to method setText from undeclared class \Bartlett\Sarif\Definition\Message (Did you mean class \http\Message)" source="PhanUndeclaredClassMethod"/>
+    <error line="50" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\ArtifactLocation" source="PhanUndeclaredClassMethod"/>
+    <error line="51" severity="error" message="Call to method setDescription from undeclared class \Bartlett\Sarif\Definition\ArtifactLocation" source="PhanUndeclaredClassMethod"/>
+    <error line="52" severity="error" message="Call to method setUri from undeclared class \Bartlett\Sarif\Definition\ArtifactLocation" source="PhanUndeclaredClassMethod"/>
+    <error line="53" severity="error" message="Call to method addResponseFiles from undeclared class \Bartlett\Sarif\Definition\Invocation" source="PhanUndeclaredClassMethod"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/PhpLintConverter.php">
+    <error line="39" severity="warning" message="Parameter $properties has undeclared type ?\Bartlett\Sarif\Definition\PropertyBag" source="PhanUndeclaredTypeParameter"/>
+    <error line="39" severity="warning" message="Return type of invocations() is undeclared type \Bartlett\Sarif\Definition\Invocation[]" source="PhanUndeclaredTypeReturnType"/>
+    <error line="47" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\Message (Did you mean class \http\Message)" source="PhanUndeclaredClassMethod"/>
+    <error line="48" severity="error" message="Call to method setText from undeclared class \Bartlett\Sarif\Definition\Message (Did you mean class \http\Message)" source="PhanUndeclaredClassMethod"/>
+    <error line="49" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\ArtifactLocation" source="PhanUndeclaredClassMethod"/>
+    <error line="50" severity="error" message="Call to method setDescription from undeclared class \Bartlett\Sarif\Definition\ArtifactLocation" source="PhanUndeclaredClassMethod"/>
+    <error line="51" severity="error" message="Call to method setUri from undeclared class \Bartlett\Sarif\Definition\ArtifactLocation" source="PhanUndeclaredClassMethod"/>
+    <error line="52" severity="error" message="Call to method addResponseFiles from undeclared class \Bartlett\Sarif\Definition\Invocation" source="PhanUndeclaredClassMethod"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/PhpStanConverter.php">
+    <error line="38" severity="warning" message="Return type of toolDriver() is undeclared type \Bartlett\Sarif\Definition\ToolComponent" source="PhanUndeclaredTypeReturnType"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/PsalmConverter.php">
+    <error line="11" severity="warning" message="Possibly zero references to use statement for classlike/namespace AfterAnalysisEvent (\Psalm\Plugin\EventHandler\Event\AfterAnalysisEvent)" source="PhanUnreferencedUseNormal"/>
+    <error line="19" severity="warning" message="Property \Bartlett\Sarif\Converter\PsalmConverter-&amp;gt;issueData has undeclared type \Psalm\Internal\Analyzer\IssueData" source="PhanUndeclaredTypeProperty"/>
+    <error line="44" severity="warning" message="Reference to instance property snippet from undeclared class \Psalm\Internal\Analyzer\IssueData" source="PhanUndeclaredClassProperty"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Reporter/PhpCsReport.php">
+    <error line="26" severity="error" message="Class implements undeclared interface \PHP_CodeSniffer\Reports\Report" source="PhanUndeclaredInterface"/>
+    <error line="50" severity="warning" message="Parameter $phpcsFile has undeclared type \PHP_CodeSniffer\Files\File (Did you mean class \XMLDiff\File)" source="PhanUndeclaredTypeParameter"/>
+    <error line="99" severity="error" message="Call to method __construct from undeclared class \Bartlett\Sarif\Definition\PropertyBag" source="PhanUndeclaredClassMethod"/>
+    <error line="100" severity="error" message="Call to method addProperties from undeclared class \Bartlett\Sarif\Definition\PropertyBag" source="PhanUndeclaredClassMethod"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Reporter/PhpInsightsFormatter.php">
+    <error line="25" severity="error" message="Class implements undeclared interface \NunoMaduro\PhpInsights\Application\Console\Contracts\Formatter" source="PhanUndeclaredInterface"/>
+    <error line="27" severity="warning" message="Property \Bartlett\Sarif\Converter\Reporter\PhpInsightsFormatter-&amp;gt;input has undeclared type \Symfony\Component\Console\Input\InputInterface" source="PhanUndeclaredTypeProperty"/>
+    <error line="28" severity="warning" message="Property \Bartlett\Sarif\Converter\Reporter\PhpInsightsFormatter-&amp;gt;output has undeclared type \Symfony\Component\Console\Output\OutputInterface" source="PhanUndeclaredTypeProperty"/>
+    <error line="36" severity="warning" message="Parameter $input has undeclared type \Symfony\Component\Console\Input\InputInterface" source="PhanUndeclaredTypeParameter"/>
+    <error line="36" severity="warning" message="Parameter $output has undeclared type \Symfony\Component\Console\Output\OutputInterface" source="PhanUndeclaredTypeParameter"/>
+    <error line="45" severity="warning" message="Parameter $insightCollection has undeclared type \NunoMaduro\PhpInsights\Domain\Insights\InsightCollection" source="PhanUndeclaredTypeParameter"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Reporter/PhpLintReport.php">
+    <error line="33" severity="warning" message="Parameter $results has undeclared type \Overtrue\PHPLint\Output\LinterOutput" source="PhanUndeclaredTypeParameter"/>
+    <error line="35" severity="error" message="Call to method getFailures from undeclared class \Overtrue\PHPLint\Output\LinterOutput" source="PhanUndeclaredClassMethod"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Reporter/PhpMdRenderer.php">
+    <error line="25" severity="error" message="Class extends undeclared class \PHPMD\AbstractRenderer" source="PhanUndeclaredExtendedClass"/>
+    <error line="39" severity="warning" message="Parameter $report has undeclared type \PHPMD\Report" source="PhanUndeclaredTypeParameter"/>
+    <error line="49" severity="error" message="Call to undeclared method \Bartlett\Sarif\Converter\Reporter\PhpMdRenderer::getWriter" source="PhanUndeclaredMethod"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Reporter/PhpStanFormatter.php">
+    <error line="21" severity="error" message="Class implements undeclared interface \PHPStan\Command\ErrorFormatter\ErrorFormatter" source="PhanUndeclaredInterface"/>
+    <error line="32" severity="warning" message="Parameter $analysisResult has undeclared type \PHPStan\Command\AnalysisResult" source="PhanUndeclaredTypeParameter"/>
+    <error line="32" severity="warning" message="Parameter $output has undeclared type \PHPStan\Command\Output" source="PhanUndeclaredTypeParameter"/>
+    <error line="42" severity="error" message="Call to method writeLineFormatted from undeclared class \PHPStan\Command\Output" source="PhanUndeclaredClassMethod"/>
+    <error line="44" severity="error" message="Call to method hasErrors from undeclared class \PHPStan\Command\AnalysisResult" source="PhanUndeclaredClassMethod"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Reporter/TwigCsFixerReporter.php">
+    <error line="26" severity="error" message="Class implements undeclared interface \TwigCsFixer\Report\Reporter\ReporterInterface" source="PhanUndeclaredInterface"/>
+    <error line="39" severity="warning" message="Parameter $output has undeclared type \Symfony\Component\Console\Output\OutputInterface" source="PhanUndeclaredTypeParameter"/>
+    <error line="40" severity="warning" message="Parameter $report has undeclared type \TwigCsFixer\Report\Report" source="PhanUndeclaredTypeParameter"/>
+    <error line="46" severity="error" message="Call to method getFiles from undeclared class \TwigCsFixer\Report\Report" source="PhanUndeclaredClassMethod"/>
+    <error line="47" severity="error" message="Call to method getFileViolations from undeclared class \TwigCsFixer\Report\Report" source="PhanUndeclaredClassMethod"/>
+    <error line="51" severity="error" message="Call to method getRealPath from undeclared class \TwigCsFixer\Report\Report" source="PhanUndeclaredClassMethod"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/AbstractSource.php">
+    <error line="38" severity="error" message="Assigning $normalizers of type iterable&amp;lt;\Bartlett\Sarif\Contract\NormalizerInterface&amp;gt; (real type iterable) to property but \Bartlett\Sarif\Converter\Source\AbstractSource-&amp;gt;normalizers is \Bartlett\Sarif\Contract\NormalizerInterface[] (no real type)" source="PhanTypeMismatchPropertyReal"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/EcsSource.php">
+    <error line="156" severity="error" message="Call to method replace from undeclared class \PhpCsFixer\Preg" source="PhanUndeclaredClassMethod"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Factory/ConverterFactory.php">
+    <error line="27" severity="warning" message="Parameter $serializerFactory has undeclared type ?\Bartlett\Sarif\Factory\SerializerFactory" source="PhanUndeclaredTypeParameter"/>
+    <error line="50" severity="info" message="Saw possibly unextractable annotation for a fragment of comment '* @param array{': after array, did not see an element name (will guess based on comment order)" source="PhanUnextractableAnnotationElementName"/>
+    <error line="50" severity="info" message="Saw a token Phan may have failed to parse after '* @param array{': after array, saw '{'" source="PhanUnextractableAnnotationSuffix"/>
+    <error line="56" severity="warning" message="Parameter $serializerFactory has undeclared type ?\Bartlett\Sarif\Factory\SerializerFactory" source="PhanUndeclaredTypeParameter"/>
+    <error line="62" severity="info" message="Saw possibly unextractable annotation for a fragment of comment '* @param array{': after array, did not see an element name (will guess based on comment order)" source="PhanUnextractableAnnotationElementName"/>
+    <error line="62" severity="info" message="Saw a token Phan may have failed to parse after '* @param array{': after array, saw '{'" source="PhanUnextractableAnnotationSuffix"/>
+    <error line="68" severity="warning" message="Parameter $serializerFactory has undeclared type ?\Bartlett\Sarif\Factory\SerializerFactory" source="PhanUndeclaredTypeParameter"/>
+    <error line="74" severity="info" message="Saw possibly unextractable annotation for a fragment of comment '* @param array{': after array, did not see an element name (will guess based on comment order)" source="PhanUnextractableAnnotationElementName"/>
+    <error line="74" severity="info" message="Saw a token Phan may have failed to parse after '* @param array{': after array, saw '{'" source="PhanUnextractableAnnotationSuffix"/>
+    <error line="80" severity="warning" message="Parameter $serializerFactory has undeclared type ?\Bartlett\Sarif\Factory\SerializerFactory" source="PhanUndeclaredTypeParameter"/>
+    <error line="86" severity="info" message="Saw possibly unextractable annotation for a fragment of comment '* @param array{': after array, did not see an element name (will guess based on comment order)" source="PhanUnextractableAnnotationElementName"/>
+    <error line="86" severity="info" message="Saw a token Phan may have failed to parse after '* @param array{': after array, saw '{'" source="PhanUnextractableAnnotationSuffix"/>
+    <error line="92" severity="warning" message="Parameter $serializerFactory has undeclared type ?\Bartlett\Sarif\Factory\SerializerFactory" source="PhanUndeclaredTypeParameter"/>
+    <error line="98" severity="info" message="Saw possibly unextractable annotation for a fragment of comment '* @param array{': after array, did not see an element name (will guess based on comment order)" source="PhanUnextractableAnnotationElementName"/>
+    <error line="98" severity="info" message="Saw a token Phan may have failed to parse after '* @param array{': after array, saw '{'" source="PhanUnextractableAnnotationSuffix"/>
+    <error line="104" severity="warning" message="Parameter $serializerFactory has undeclared type ?\Bartlett\Sarif\Factory\SerializerFactory" source="PhanUndeclaredTypeParameter"/>
+    <error line="110" severity="info" message="Saw possibly unextractable annotation for a fragment of comment '* @param array{': after array, did not see an element name (will guess based on comment order)" source="PhanUnextractableAnnotationElementName"/>
+    <error line="110" severity="info" message="Saw a token Phan may have failed to parse after '* @param array{': after array, saw '{'" source="PhanUnextractableAnnotationSuffix"/>
+    <error line="116" severity="warning" message="Parameter $serializerFactory has undeclared type ?\Bartlett\Sarif\Factory\SerializerFactory" source="PhanUndeclaredTypeParameter"/>
+    <error line="122" severity="info" message="Saw possibly unextractable annotation for a fragment of comment '* @param array{': after array, did not see an element name (will guess based on comment order)" source="PhanUnextractableAnnotationElementName"/>
+    <error line="122" severity="info" message="Saw a token Phan may have failed to parse after '* @param array{': after array, saw '{'" source="PhanUnextractableAnnotationSuffix"/>
+    <error line="128" severity="warning" message="Parameter $serializerFactory has undeclared type ?\Bartlett\Sarif\Factory\SerializerFactory" source="PhanUndeclaredTypeParameter"/>
+  </file>
+</checkstyle>

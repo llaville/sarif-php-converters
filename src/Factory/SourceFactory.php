@@ -28,6 +28,8 @@ final class SourceFactory implements SourceFactoryInterface
         switch (strtolower($name)) {
             case SourceFactoryInterface::BUILTIN_SOURCE_ECS:
                 return $this->createEasyCodingStandard($normalizers);
+            case SourceFactoryInterface::BUILTIN_SOURCE_PHAN:
+                return $this->createPhan($normalizers);
             case SourceFactoryInterface::BUILTIN_SOURCE_PHPCS:
                 return $this->createCodeSniffer($normalizers);
             case SourceFactoryInterface::BUILTIN_SOURCE_PHPLINT:
@@ -51,6 +53,16 @@ final class SourceFactory implements SourceFactoryInterface
         $normalizers = (array) $normalizers;
         $normalizers[] = new Normalizer\EcsNormalizer();
         return new Source\EcsSource($normalizers);
+    }
+
+    /**
+     * @param iterable<NormalizerInterface> $normalizers
+     */
+    public function createPhan(iterable $normalizers): SourceInterface
+    {
+        $normalizers = (array) $normalizers;
+        $normalizers[] = new Normalizer\PhanNormalizer();
+        return new Source\PhanSource($normalizers);
     }
 
     /**
