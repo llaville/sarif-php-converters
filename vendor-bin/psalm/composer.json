@@ -1,0 +1,12 @@
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/llaville/psalm"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require-dev": {
+        "vimeo/psalm": "dev-reporting-with-absolute-path as 5.x-dev"
+    }
+}

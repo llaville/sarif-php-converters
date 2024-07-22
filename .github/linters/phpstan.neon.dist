@@ -9,6 +9,7 @@ parameters:
         - ../../vendor-bin/phplint/
         - ../../vendor-bin/phpmd/
         - ../../vendor-bin/phpstan/
+        - ../../vendor-bin/psalm/
         - ../../vendor-bin/twigcs-fixer/
 services:
     errorFormatter.sarif:

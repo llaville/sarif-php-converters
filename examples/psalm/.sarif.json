@@ -1,0 +1,856 @@
+{
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "Psalm",
+                    "shortDescription": {
+                        "text": "Find errors in codebase"
+                    },
+                    "fullDescription": {
+                        "text": "A static analysis tool for finding errors in PHP applications"
+                    },
+                    "semanticVersion": "dev-reporting-with-absolute-path",
+                    "informationUri": "https://github.com/vimeo/psalm"
+                },
+                "extensions": [
+                    {
+                        "name": "bartlett/sarif-php-converters",
+                        "shortDescription": {
+                            "text": "Psalm SARIF Converter"
+                        },
+                        "version": "1.0.9999999.9999999-dev"
+                    }
+                ]
+            },
+            "invocations": [
+                {
+                    "executionSuccessful": true,
+                    "commandLine": "report-converter",
+                    "arguments": [
+                        "convert",
+                        "psalm",
+                        "--input-format=checkstyle",
+                        "--input-file=examples/psalm/psalm.checkstyle.xml",
+                        "-v",
+                        "--output-file",
+                        "examples/psalm/.sarif.json"
+                    ],
+                    "workingDirectory": {
+                        "uri": "file:///shared/backups/bartlett/sarif-php-converters/"
+                    }
+                }
+            ],
+            "originalUriBaseIds": {
+                "WORKINGDIR": {
+                    "uri": "file:///shared/backups/bartlett/sarif-php-converters/"
+                }
+            },
+            "results": [
+                {
+                    "message": {
+                        "text": "ParseError: Syntax error, unexpected T_STRING on line 3"
+                    },
+                    "ruleId": "unidentified",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_1.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 3,
+                                    "startColumn": 2,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 5,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[39m<?php\u001b[0m\n    \u001b[90m2| \u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m\n    \u001b[90m4| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "unidentified": "b72968e694d9f576c2adc3cdc3f479a0834ab688b7dc8a6fe2657d59e034ae1f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "UndefinedConstant: Const pe98y is not defined"
+                    },
+                    "ruleId": "unidentified",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_1.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 3,
+                                    "startColumn": 2,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 5,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[39m<?php\u001b[0m\n    \u001b[90m2| \u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m\n    \u001b[90m4| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "unidentified": "b72968e694d9f576c2adc3cdc3f479a0834ab688b7dc8a6fe2657d59e034ae1f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "UndefinedConstant: Const r is not defined"
+                    },
+                    "ruleId": "unidentified",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_1.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 3,
+                                    "startColumn": 8,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 5,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[39m<?php\u001b[0m\n    \u001b[90m2| \u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m\n    \u001b[90m4| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "unidentified": "b72968e694d9f576c2adc3cdc3f479a0834ab688b7dc8a6fe2657d59e034ae1f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "UndefinedConstant: Const n0u823n is not defined"
+                    },
+                    "ruleId": "unidentified",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_1.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 3,
+                                    "startColumn": 10,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 5,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[39m<?php\u001b[0m\n    \u001b[90m2| \u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m\n    \u001b[90m4| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "unidentified": "b72968e694d9f576c2adc3cdc3f479a0834ab688b7dc8a6fe2657d59e034ae1f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "ParseError: Syntax error, unexpected '=' on line 3"
+                    },
+                    "ruleId": "unidentified",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_1.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 3,
+                                    "startColumn": 17,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 5,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[39m<?php\u001b[0m\n    \u001b[90m2| \u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m\n    \u001b[90m4| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "unidentified": "b72968e694d9f576c2adc3cdc3f479a0834ab688b7dc8a6fe2657d59e034ae1f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "UndefinedConstant: Const r is not defined"
+                    },
+                    "ruleId": "unidentified",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_1.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 3,
+                                    "startColumn": 18,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 5,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[39m<?php\u001b[0m\n    \u001b[90m2| \u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m\n    \u001b[90m4| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "unidentified": "b72968e694d9f576c2adc3cdc3f479a0834ab688b7dc8a6fe2657d59e034ae1f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "ParseError: Invalid numeric literal on line 3"
+                    },
+                    "ruleId": "unidentified",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_1.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 3,
+                                    "startColumn": 21,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 5,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[39m<?php\u001b[0m\n    \u001b[90m2| \u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m\n    \u001b[90m4| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "unidentified": "b72968e694d9f576c2adc3cdc3f479a0834ab688b7dc8a6fe2657d59e034ae1f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "UndefinedConstant: Const u3 is not defined"
+                    },
+                    "ruleId": "unidentified",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_1.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 3,
+                                    "startColumn": 24,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 5,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[39m<?php\u001b[0m\n    \u001b[90m2| \u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m\n    \u001b[90m4| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "unidentified": "b72968e694d9f576c2adc3cdc3f479a0834ab688b7dc8a6fe2657d59e034ae1f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "UndefinedConstant: Const r08u2q098ry is not defined"
+                    },
+                    "ruleId": "unidentified",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_1.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 3,
+                                    "startColumn": 28,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 5,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[39m<?php\u001b[0m\n    \u001b[90m2| \u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m\n    \u001b[90m4| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "unidentified": "b72968e694d9f576c2adc3cdc3f479a0834ab688b7dc8a6fe2657d59e034ae1f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "ParseError: Syntax error, unexpected T_LNUMBER on line 3"
+                    },
+                    "ruleId": "unidentified",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_1.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 3,
+                                    "startColumn": 40,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 5,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[39m<?php\u001b[0m\n    \u001b[90m2| \u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m\n    \u001b[90m4| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "unidentified": "b72968e694d9f576c2adc3cdc3f479a0834ab688b7dc8a6fe2657d59e034ae1f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "ParseError: Invalid numeric literal on line 3"
+                    },
+                    "ruleId": "unidentified",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_1.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 3,
+                                    "startColumn": 40,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 5,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[39m<?php\u001b[0m\n    \u001b[90m2| \u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m\n    \u001b[90m4| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "unidentified": "b72968e694d9f576c2adc3cdc3f479a0834ab688b7dc8a6fe2657d59e034ae1f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "UndefinedConstant: Const nq2yr09n2yr9 is not defined"
+                    },
+                    "ruleId": "unidentified",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_1.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 3,
+                                    "startColumn": 42,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 5,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[39m<?php\u001b[0m\n    \u001b[90m2| \u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m\n    \u001b[90m4| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "unidentified": "b72968e694d9f576c2adc3cdc3f479a0834ab688b7dc8a6fe2657d59e034ae1f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "UndefinedConstant: Const y2n is not defined"
+                    },
+                    "ruleId": "unidentified",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_1.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 3,
+                                    "startColumn": 55,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 5,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[39m<?php\u001b[0m\n    \u001b[90m2| \u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m\n    \u001b[90m4| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "unidentified": "b72968e694d9f576c2adc3cdc3f479a0834ab688b7dc8a6fe2657d59e034ae1f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "ParseError: Syntax error, unexpected T_STRING on line 3"
+                    },
+                    "ruleId": "unidentified",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_1.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 3,
+                                    "startColumn": 61,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 5,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[39m<?php\u001b[0m\n    \u001b[90m2| \u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m\n    \u001b[90m4| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "unidentified": "b72968e694d9f576c2adc3cdc3f479a0834ab688b7dc8a6fe2657d59e034ae1f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "UndefinedConstant: Const yr is not defined"
+                    },
+                    "ruleId": "unidentified",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_1.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 3,
+                                    "startColumn": 61,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 5,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[39m<?php\u001b[0m\n    \u001b[90m2| \u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m\n    \u001b[90m4| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "unidentified": "b72968e694d9f576c2adc3cdc3f479a0834ab688b7dc8a6fe2657d59e034ae1f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "UndefinedConstant: Const yr3 is not defined"
+                    },
+                    "ruleId": "unidentified",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_1.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 3,
+                                    "startColumn": 68,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 5,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m1| \u001b[0m\u001b[39m<?php\u001b[0m\n    \u001b[90m2| \u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[39m2pe98y r\u001b[0m\u001b[32m-\u001b[0m\u001b[39mn0u823n\u001b[0m\u001b[32m=\u001b[0m\u001b[39mr  092u3\u001b[0m\u001b[32m- \u001b[0m\u001b[39mr08u2q098ry 09nq2yr09n2yr9 y2n\u001b[0m\u001b[32m-\u001b[0m\u001b[39m93yr  298yr3  29\u001b[0m\n    \u001b[90m4| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "unidentified": "b72968e694d9f576c2adc3cdc3f479a0834ab688b7dc8a6fe2657d59e034ae1f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "InvalidReturnType: The declared return type 'array<array-key, string>' for takesAnInt is incorrect, got 'list{int, 'hello'}'"
+                    },
+                    "ruleId": "unidentified",
+                    "level": "note",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_2.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 4,
+                                    "startColumn": 12,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m4| \u001b[0m\u001b[33m * @return array<string>\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 2,
+                                    "endLine": 6,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m2| \u001b[0m\n    \u001b[90m3| \u001b[0m\u001b[33m/**\u001b[0m\n    \u001b[90m4| \u001b[0m\u001b[33m * @return array<string>\u001b[0m\n    \u001b[90m5| \u001b[0m\u001b[33m */\u001b[0m\n    \u001b[90m6| \u001b[0m\u001b[32mfunction \u001b[0m\u001b[39mtakesAnInt\u001b[0m\u001b[32m(\u001b[0m\u001b[39mint $i\u001b[0m\u001b[32m) {\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "unidentified": "2e508d59ec5ba941128ccdf751869d555c2c618018b0979124ee4530b68fbc28"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "InvalidReturnStatement: The inferred type 'list{int, 'hello'}' does not match the declared return type 'array<array-key, string>' for takesAnInt"
+                    },
+                    "ruleId": "unidentified",
+                    "level": "note",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_2.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 7,
+                                    "startColumn": 12,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m7| \u001b[0m\u001b[32m    return [\u001b[0m\u001b[39m$i\u001b[0m\u001b[32m, \u001b[0m\u001b[31m\"hello\"\u001b[0m\u001b[32m];\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 5,
+                                    "endLine": 9,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m5| \u001b[0m\u001b[33m */\u001b[0m\n    \u001b[90m6| \u001b[0m\u001b[32mfunction \u001b[0m\u001b[39mtakesAnInt\u001b[0m\u001b[32m(\u001b[0m\u001b[39mint $i\u001b[0m\u001b[32m) {\u001b[0m\n    \u001b[90m7| \u001b[0m\u001b[32m    return [\u001b[0m\u001b[39m$i\u001b[0m\u001b[32m, \u001b[0m\u001b[31m\"hello\"\u001b[0m\u001b[32m];\u001b[0m\n    \u001b[90m8| \u001b[0m\u001b[32m}\u001b[0m\n    \u001b[90m9| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "unidentified": "2e508d59ec5ba941128ccdf751869d555c2c618018b0979124ee4530b68fbc28"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "InvalidScalarArgument: Argument 1 of takesAnInt expects int, but 'some text' provided"
+                    },
+                    "ruleId": "unidentified",
+                    "level": "note",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_2.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 11,
+                                    "startColumn": 12,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m11| \u001b[0m\u001b[39mtakesAnInt\u001b[0m\u001b[32m(\u001b[0m\u001b[39m$data\u001b[0m\u001b[32m[\u001b[0m\u001b[39m0\u001b[0m\u001b[32m]);\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 9,
+                                    "endLine": 13,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m 9| \u001b[0m\n    \u001b[90m10| \u001b[0m\u001b[39m$data \u001b[0m\u001b[32m= [\u001b[0m\u001b[31m\"some text\"\u001b[0m\u001b[32m, \u001b[0m\u001b[39m5\u001b[0m\u001b[32m];\u001b[0m\n    \u001b[90m11| \u001b[0m\u001b[39mtakesAnInt\u001b[0m\u001b[32m(\u001b[0m\u001b[39m$data\u001b[0m\u001b[32m[\u001b[0m\u001b[39m0\u001b[0m\u001b[32m]);\u001b[0m\n    \u001b[90m12| \u001b[0m\n    \u001b[90m13| \u001b[0m\u001b[39m$condition \u001b[0m\u001b[32m= \u001b[0m\u001b[39mrand\u001b[0m\u001b[32m(\u001b[0m\u001b[39m0\u001b[0m\u001b[32m, \u001b[0m\u001b[39m5\u001b[0m\u001b[32m);\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "unidentified": "2e508d59ec5ba941128ccdf751869d555c2c618018b0979124ee4530b68fbc28"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "UnusedVariable: $condition is never referenced or the value is not used"
+                    },
+                    "ruleId": "unidentified",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_2.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 13,
+                                    "startColumn": 1,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m13| \u001b[0m\u001b[39m$condition \u001b[0m\u001b[32m= \u001b[0m\u001b[39mrand\u001b[0m\u001b[32m(\u001b[0m\u001b[39m0\u001b[0m\u001b[32m, \u001b[0m\u001b[39m5\u001b[0m\u001b[32m);\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 11,
+                                    "endLine": 15,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m11| \u001b[0m\u001b[39mtakesAnInt\u001b[0m\u001b[32m(\u001b[0m\u001b[39m$data\u001b[0m\u001b[32m[\u001b[0m\u001b[39m0\u001b[0m\u001b[32m]);\u001b[0m\n    \u001b[90m12| \u001b[0m\n    \u001b[90m13| \u001b[0m\u001b[39m$condition \u001b[0m\u001b[32m= \u001b[0m\u001b[39mrand\u001b[0m\u001b[32m(\u001b[0m\u001b[39m0\u001b[0m\u001b[32m, \u001b[0m\u001b[39m5\u001b[0m\u001b[32m);\u001b[0m\n    \u001b[90m14| \u001b[0m\u001b[39miff \u001b[0m\u001b[32m(\u001b[0m\u001b[39m$condition\u001b[0m\u001b[32m) {\u001b[0m\n    \u001b[90m15| \u001b[0m\u001b[32m} elseif (\u001b[0m\u001b[39m$condition\u001b[0m\u001b[32m) {}\u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "unidentified": "2e508d59ec5ba941128ccdf751869d555c2c618018b0979124ee4530b68fbc28"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "ParseError: Syntax error, unexpected '}' on line 15"
+                    },
+                    "ruleId": "unidentified",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "examples/fixtures/php_bad_2.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 15,
+                                    "startColumn": 1,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m15| \u001b[0m\u001b[32m} elseif (\u001b[0m\u001b[39m$condition\u001b[0m\u001b[32m) {}\u001b[0m"
+                                        }
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 13,
+                                    "endLine": 17,
+                                    "snippet": {
+                                        "rendered": {
+                                            "text": "\u001b[31m  > \u001b[0m\u001b[90m13| \u001b[0m\u001b[39m$condition \u001b[0m\u001b[32m= \u001b[0m\u001b[39mrand\u001b[0m\u001b[32m(\u001b[0m\u001b[39m0\u001b[0m\u001b[32m, \u001b[0m\u001b[39m5\u001b[0m\u001b[32m);\u001b[0m\n    \u001b[90m14| \u001b[0m\u001b[39miff \u001b[0m\u001b[32m(\u001b[0m\u001b[39m$condition\u001b[0m\u001b[32m) {\u001b[0m\n    \u001b[90m15| \u001b[0m\u001b[32m} elseif (\u001b[0m\u001b[39m$condition\u001b[0m\u001b[32m) {}\u001b[0m\n    \u001b[90m16| \u001b[0m"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "unidentified": "2e508d59ec5ba941128ccdf751869d555c2c618018b0979124ee4530b68fbc28"
+                    }
+                }
+            ],
+            "automationDetails": {
+                "id": "Daily run 2024-07-22T07:56:52+00:00"
+            }
+        }
+    ]
+}

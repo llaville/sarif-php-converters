@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle>
+<file name="/shared/backups/bartlett/sarif-php-converters/examples/fixtures/php_bad_1.php">
+ <error line="3" column="2" severity="error" message="ParseError: Syntax error, unexpected T_STRING on line 3"/>
+</file>
+<file name="/shared/backups/bartlett/sarif-php-converters/examples/fixtures/php_bad_1.php">
+ <error line="3" column="2" severity="error" message="UndefinedConstant: Const pe98y is not defined"/>
+</file>
+<file name="/shared/backups/bartlett/sarif-php-converters/examples/fixtures/php_bad_1.php">
+ <error line="3" column="8" severity="error" message="UndefinedConstant: Const r is not defined"/>
+</file>
+<file name="/shared/backups/bartlett/sarif-php-converters/examples/fixtures/php_bad_1.php">
+ <error line="3" column="10" severity="error" message="UndefinedConstant: Const n0u823n is not defined"/>
+</file>
+<file name="/shared/backups/bartlett/sarif-php-converters/examples/fixtures/php_bad_1.php">
+ <error line="3" column="17" severity="error" message="ParseError: Syntax error, unexpected &apos;=&apos; on line 3"/>
+</file>
+<file name="/shared/backups/bartlett/sarif-php-converters/examples/fixtures/php_bad_1.php">
+ <error line="3" column="18" severity="error" message="UndefinedConstant: Const r is not defined"/>
+</file>
+<file name="/shared/backups/bartlett/sarif-php-converters/examples/fixtures/php_bad_1.php">
+ <error line="3" column="21" severity="error" message="ParseError: Invalid numeric literal on line 3"/>
+</file>
+<file name="/shared/backups/bartlett/sarif-php-converters/examples/fixtures/php_bad_1.php">
+ <error line="3" column="24" severity="error" message="UndefinedConstant: Const u3 is not defined"/>
+</file>
+<file name="/shared/backups/bartlett/sarif-php-converters/examples/fixtures/php_bad_1.php">
+ <error line="3" column="28" severity="error" message="UndefinedConstant: Const r08u2q098ry is not defined"/>
+</file>
+<file name="/shared/backups/bartlett/sarif-php-converters/examples/fixtures/php_bad_1.php">
+ <error line="3" column="40" severity="error" message="ParseError: Syntax error, unexpected T_LNUMBER on line 3"/>
+</file>
+<file name="/shared/backups/bartlett/sarif-php-converters/examples/fixtures/php_bad_1.php">
+ <error line="3" column="40" severity="error" message="ParseError: Invalid numeric literal on line 3"/>
+</file>
+<file name="/shared/backups/bartlett/sarif-php-converters/examples/fixtures/php_bad_1.php">
+ <error line="3" column="42" severity="error" message="UndefinedConstant: Const nq2yr09n2yr9 is not defined"/>
+</file>
+<file name="/shared/backups/bartlett/sarif-php-converters/examples/fixtures/php_bad_1.php">
+ <error line="3" column="55" severity="error" message="UndefinedConstant: Const y2n is not defined"/>
+</file>
+<file name="/shared/backups/bartlett/sarif-php-converters/examples/fixtures/php_bad_1.php">
+ <error line="3" column="61" severity="error" message="ParseError: Syntax error, unexpected T_STRING on line 3"/>
+</file>
+<file name="/shared/backups/bartlett/sarif-php-converters/examples/fixtures/php_bad_1.php">
+ <error line="3" column="61" severity="error" message="UndefinedConstant: Const yr is not defined"/>
+</file>
+<file name="/shared/backups/bartlett/sarif-php-converters/examples/fixtures/php_bad_1.php">
+ <error line="3" column="68" severity="error" message="UndefinedConstant: Const yr3 is not defined"/>
+</file>
+<file name="/shared/backups/bartlett/sarif-php-converters/examples/fixtures/php_bad_2.php">
+ <error line="4" column="12" severity="info" message="InvalidReturnType: The declared return type &apos;array&lt;array-key, string&gt;&apos; for takesAnInt is incorrect, got &apos;list{int, &apos;hello&apos;}&apos;"/>
+</file>
+<file name="/shared/backups/bartlett/sarif-php-converters/examples/fixtures/php_bad_2.php">
+ <error line="7" column="12" severity="info" message="InvalidReturnStatement: The inferred type &apos;list{int, &apos;hello&apos;}&apos; does not match the declared return type &apos;array&lt;array-key, string&gt;&apos; for takesAnInt"/>
+</file>
+<file name="/shared/backups/bartlett/sarif-php-converters/examples/fixtures/php_bad_2.php">
+ <error line="11" column="12" severity="info" message="InvalidScalarArgument: Argument 1 of takesAnInt expects int, but &apos;some text&apos; provided"/>
+</file>
+<file name="/shared/backups/bartlett/sarif-php-converters/examples/fixtures/php_bad_2.php">
+ <error line="13" column="1" severity="error" message="UnusedVariable: $condition is never referenced or the value is not used"/>
+</file>
+<file name="/shared/backups/bartlett/sarif-php-converters/examples/fixtures/php_bad_2.php">
+ <error line="15" column="1" severity="error" message="ParseError: Syntax error, unexpected &apos;}&apos; on line 15"/>
+</file>
+</checkstyle>

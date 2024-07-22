@@ -46,20 +46,22 @@ This library may be considered as a producer on `sarif` report format, for these
 [phplint]: https://github.com/overtrue/phplint
 [phpmd]: https://github.com/phpmd/phpmd
 [phpstan]: https://github.com/phpstan/phpstan
+[psalm]: https://github.com/vimeo/psalm
 [twigcs-fixer]: https://github.com/VincentLanglet/Twig-CS-Fixer
 
-| Project                             | Version | SARIF | Checkstyle | JUnit | CodeClimate<br/>GitLab | GitHub |                 Output Format Support                  |
-|:------------------------------------|:-------:|:-----:|:----------:|:-----:|:----------------------:|:------:|:------------------------------------------------------:|
-| [Composer Dependency Analyser][cda] |  1.6.x  |   ❌   |     ❌      |   ✅   |           ❌            |   ❌    |                         junit                          |
-| [Easy-Coding-Standard][ecs]         | 12.3.x  |   ❌   |     ✅      |   ✅   |           ✅            |   ❌    |          console,json,junit,checkstyle,gitlab          |
-| [Phan][phan]                        |  5.4.x  |   ❌   |     ✅      |   ❌   |           ✅            |   ❌    |    text,csv,json,checkstyle,codeclimate,pylint,html    |
-| [PHP CodeSniffer][phpcs]            | 3.10.x  |   ❌   |     ✅      |   ✅   |           ❌            |   ❌    |                 json,checkstyle,junit                  |
-| [PHP-CS-Fixer][phpcs-fixer]         | 3.59.x  |   ❌   |     ✅      |   ✅   |           ✅            |   ❌    |              checkstyle,gitlab,json,junit              |
-| [PHPInsights][phpinsights]          | 2.11.x  |   ❌   |     ✅      |   ❌   |           ✅            |   ✅    |   console,json,checkstyle,codeclimate,github-action    |
-| [PHPLint][phplint]                  |  9.4.x  |  (✅)  |     ✅      |   ✅   |           ❌            |   ❌    |         console,json,junit,checkstyle,(sarif)          |
-| [PHP Mess Detector][phpmd]          | 2.15.x  |   ✅   |     ✅      |   ❌   |           ✅            |   ✅    |   xml,text,html,json,github,gitlab,sarif,checkstyle    |
-| [PHPStan][phpstan]                  | 1.11.x  |  (✅)  |     ✅      |   ✅   |           ✅            |   ✅    | table,raw,checkstyle,json,junit,github,gitlab,teamcity |
-| [Twig-CS-Fixer][twigcs-fixer]       |  3.0.x  |   ❌   |     ✅      |   ✅   |           ❌            |   ✅    |           null,text,checkstyle,junit,github            |
+| Project                             | Version | SARIF | Checkstyle | JUnit | CodeClimate<br/>GitLab | GitHub |                          Output Format Support                          |
+|:------------------------------------|:-------:|:-----:|:----------:|:-----:|:----------------------:|:------:|:-----------------------------------------------------------------------:|
+| [Composer Dependency Analyser][cda] |  1.6.x  |   ❌   |     ❌      |   ✅   |           ❌            |   ❌    |                                  junit                                  |
+| [Easy-Coding-Standard][ecs]         | 12.3.x  |   ❌   |     ✅      |   ✅   |           ✅            |   ❌    |                  console,json,junit,checkstyle,gitlab                   |
+| [Phan][phan]                        |  5.4.x  |   ❌   |     ✅      |   ❌   |           ✅            |   ❌    |            text,csv,json,checkstyle,codeclimate,pylint,html             |
+| [PHP CodeSniffer][phpcs]            | 3.10.x  |   ❌   |     ✅      |   ✅   |           ❌            |   ❌    |                          json,checkstyle,junit                          |
+| [PHP-CS-Fixer][phpcs-fixer]         | 3.59.x  |   ❌   |     ✅      |   ✅   |           ✅            |   ❌    |                      checkstyle,gitlab,json,junit                       |
+| [PHPInsights][phpinsights]          | 2.11.x  |   ❌   |     ✅      |   ❌   |           ✅            |   ✅    |            console,json,checkstyle,codeclimate,github-action            |
+| [PHPLint][phplint]                  |  9.4.x  |  (✅)  |     ✅      |   ✅   |           ❌            |   ❌    |                  console,json,junit,checkstyle,(sarif)                  |
+| [PHP Mess Detector][phpmd]          | 2.15.x  |   ✅   |     ✅      |   ❌   |           ✅            |   ✅    |            xml,text,html,json,github,gitlab,sarif,checkstyle            |
+| [PHPStan][phpstan]                  | 1.11.x  |  (✅)  |     ✅      |   ✅   |           ✅            |   ✅    |     table,raw,checkstyle,json,junit,github,gitlab,teamcity,(sarif)      |
+| [Psalm][psalm]                      |   5.x   |   ✅   |     ✅      |   ✅   |           ✅            |   ✅    | console,checkstyle,json,junit,github,codeclimate,pylint,sonarqube,sarif |
+| [Twig-CS-Fixer][twigcs-fixer]       |  3.0.x  |   ❌   |     ✅      |   ✅   |           ❌            |   ✅    |                    null,text,checkstyle,junit,github                    |
 
 **Legend**
 

@@ -259,7 +259,7 @@ abstract class AbstractConverter implements ConverterInterface
             $surroundingLines = 2;
 
             foreach ($errors as $error) {
-                $ruleId = $error['ReportingDescriptor.id'] ?? '';
+                $ruleId = $error['ReportingDescriptor.id'] ?? 'unidentified';
 
                 $fingerprintId = $error['Result.fingerprint'] ?? $ruleId;
 
