@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="PHP CS Fixer 3.59.3 7th Gear by Fabien Potencier, Dariusz Ruminski and contributors.">
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Contract/NormalizerInterface.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Contract/ConverterFactoryInterface.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Contract/ConverterInterface.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Contract/SourceFactoryInterface.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Contract/SourceInterface.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Factory/SourceFactory.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_between_import_groups" message="Found violation(s) of type: blank_line_between_import_groups"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Factory/ConverterFactory.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_between_import_groups" message="Found violation(s) of type: blank_line_between_import_groups"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Console/Application.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_between_import_groups" message="Found violation(s) of type: blank_line_between_import_groups"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Console/Command/ConvertCommand.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.ternary_operator_spaces" message="Found violation(s) of type: ternary_operator_spaces"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_between_import_groups" message="Found violation(s) of type: blank_line_between_import_groups"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/PsalmConverter.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpLintNormalizer.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_between_import_groups" message="Found violation(s) of type: blank_line_between_import_groups"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpMndNormalizer.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_between_import_groups" message="Found violation(s) of type: blank_line_between_import_groups"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/SarifNormalizer.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_between_import_groups" message="Found violation(s) of type: blank_line_between_import_groups"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpMdNormalizer.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_between_import_groups" message="Found violation(s) of type: blank_line_between_import_groups"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpStanNormalizer.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_between_import_groups" message="Found violation(s) of type: blank_line_between_import_groups"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PsalmNormalizer.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_between_import_groups" message="Found violation(s) of type: blank_line_between_import_groups"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpInsightsNormalizer.php">
+    <error severity="warning" source="PHP-CS-Fixer.no_spaces_after_function_name" message="Found violation(s) of type: no_spaces_after_function_name"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_between_import_groups" message="Found violation(s) of type: blank_line_between_import_groups"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/TwigCsFixerNormalizer.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.no_blank_lines_after_class_opening" message="Found violation(s) of type: no_blank_lines_after_class_opening"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_between_import_groups" message="Found violation(s) of type: blank_line_between_import_groups"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpCsNormalizer.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_between_import_groups" message="Found violation(s) of type: blank_line_between_import_groups"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpCsFixerNormalizer.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_between_import_groups" message="Found violation(s) of type: blank_line_between_import_groups"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/EcsNormalizer.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_between_import_groups" message="Found violation(s) of type: blank_line_between_import_groups"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/CheckstyleNormalizer.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_between_import_groups" message="Found violation(s) of type: blank_line_between_import_groups"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/SimpleXmlNormalizer.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_between_import_groups" message="Found violation(s) of type: blank_line_between_import_groups"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhanNormalizer.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_between_import_groups" message="Found violation(s) of type: blank_line_between_import_groups"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PyLintNormalizer.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_between_import_groups" message="Found violation(s) of type: blank_line_between_import_groups"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Reporter/AbstractReporter.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Reporter/PhpMdRenderer.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Reporter/PhpCsReport.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Reporter/PhpInsightsFormatter.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Reporter/PhpStanFormatter.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Reporter/TwigCsFixerReporter.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Reporter/PsalmRenderer.php">
+    <error severity="warning" source="PHP-CS-Fixer.no_blank_lines_after_class_opening" message="Found violation(s) of type: no_blank_lines_after_class_opening"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_namespace" message="Found violation(s) of type: blank_line_after_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Reporter/PhpLintReport.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/PhpInsightsSource.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/TwigCsFixerSource.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/PhpCsFixerSource.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/AbstractSource.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_between_import_groups" message="Found violation(s) of type: blank_line_between_import_groups"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/PhpLintSource.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/EcsSource.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_between_import_groups" message="Found violation(s) of type: blank_line_between_import_groups"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/PhpCsSource.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_between_import_groups" message="Found violation(s) of type: blank_line_between_import_groups"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/PsalmSource.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/PhpStanSource.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/PhpMdSource.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/PhpMndSource.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_between_import_groups" message="Found violation(s) of type: blank_line_between_import_groups"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/PhanSource.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/PhpMndConverter.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_between_import_groups" message="Found violation(s) of type: blank_line_between_import_groups"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/PhpLintConverter.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/EcsConverter.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/PhpStanConverter.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/PhpCsFixerConverter.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/TwigCsFixerConverter.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/PhpMdConverter.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/PhpCsConverter.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/PhpInsightsConverter.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+  <file name="/shared/backups/bartlett/sarif-php-converters/src/Converter/PhanConverter.php">
+    <error severity="warning" source="PHP-CS-Fixer.blank_line_after_opening_tag" message="Found violation(s) of type: blank_line_after_opening_tag"/>
+    <error severity="warning" source="PHP-CS-Fixer.blank_lines_before_namespace" message="Found violation(s) of type: blank_lines_before_namespace"/>
+  </file>
+</checkstyle>

@@ -1,0 +1,2858 @@
+{
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "PHP-CS-Fixer",
+                    "fullDescription": {
+                        "text": "A tool to automatically fix PHP Coding Standards issues."
+                    },
+                    "semanticVersion": "3.59.3.0",
+                    "informationUri": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer",
+                    "rules": [
+                        {
+                            "id": "PHP-CS-Fixer.blank_line_after_opening_tag"
+                        },
+                        {
+                            "id": "PHP-CS-Fixer.blank_lines_before_namespace"
+                        },
+                        {
+                            "id": "PHP-CS-Fixer.blank_line_between_import_groups"
+                        },
+                        {
+                            "id": "PHP-CS-Fixer.ternary_operator_spaces"
+                        },
+                        {
+                            "id": "PHP-CS-Fixer.no_spaces_after_function_name"
+                        },
+                        {
+                            "id": "PHP-CS-Fixer.no_blank_lines_after_class_opening"
+                        },
+                        {
+                            "id": "PHP-CS-Fixer.blank_line_after_namespace"
+                        }
+                    ]
+                },
+                "extensions": [
+                    {
+                        "name": "bartlett/sarif-php-converters",
+                        "shortDescription": {
+                            "text": "PHP-CS-Fixer SARIF Converter"
+                        },
+                        "version": "1.0.9999999.9999999-dev"
+                    }
+                ]
+            },
+            "invocations": [
+                {
+                    "executionSuccessful": true,
+                    "commandLine": "report-converter",
+                    "arguments": [
+                        "convert",
+                        "phpcs-fixer",
+                        "--input-format=checkstyle",
+                        "--input-file=examples/phpcs-fixer/checkstyle.xml",
+                        "-v",
+                        "--output-file",
+                        "examples/phpcs-fixer/.sarif.json"
+                    ],
+                    "workingDirectory": {
+                        "uri": "file:///shared/backups/bartlett/sarif-php-converters/"
+                    }
+                }
+            ],
+            "originalUriBaseIds": {
+                "WORKINGDIR": {
+                    "uri": "file:///shared/backups/bartlett/sarif-php-converters/"
+                }
+            },
+            "results": [
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Contract/NormalizerInterface.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "f4e296057758a4670d972d87a03f58cd7bdc61d030eb5f23f19c1c63ac0d2ca0"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Contract/NormalizerInterface.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "f4e296057758a4670d972d87a03f58cd7bdc61d030eb5f23f19c1c63ac0d2ca0"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Contract/ConverterFactoryInterface.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "a8b2e8242bbd889f7c56e8d764d2f5a50718cd4e621076ce6a16cf6efa78d882"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Contract/ConverterFactoryInterface.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "a8b2e8242bbd889f7c56e8d764d2f5a50718cd4e621076ce6a16cf6efa78d882"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Contract/ConverterInterface.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "3326e444522cdd8facde887fa1960a74bd5dc7503a5fc3a1317116774ef6af3c"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Contract/ConverterInterface.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "3326e444522cdd8facde887fa1960a74bd5dc7503a5fc3a1317116774ef6af3c"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Contract/SourceFactoryInterface.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "fb56e7abde4023600100d36510c208512208a9a402438f7ca8ed911e498b5d7e"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Contract/SourceFactoryInterface.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "fb56e7abde4023600100d36510c208512208a9a402438f7ca8ed911e498b5d7e"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Contract/SourceInterface.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "660ba332f29a45cba4a8dc25de248222026c616fd71fdc7a10d72c67b05f972a"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Contract/SourceInterface.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "660ba332f29a45cba4a8dc25de248222026c616fd71fdc7a10d72c67b05f972a"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Factory/SourceFactory.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "c530673bd8babc8d3d61991480ba70c6cdc471edd2b72c0301c88d20210e4d95"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Factory/SourceFactory.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "c530673bd8babc8d3d61991480ba70c6cdc471edd2b72c0301c88d20210e4d95"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_between_import_groups"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_between_import_groups",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Factory/SourceFactory.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_between_import_groups": "c530673bd8babc8d3d61991480ba70c6cdc471edd2b72c0301c88d20210e4d95"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Factory/ConverterFactory.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "e9a76d96e254498874a02788fe4c7328d191a5433d761e964566a493d16184ce"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Factory/ConverterFactory.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "e9a76d96e254498874a02788fe4c7328d191a5433d761e964566a493d16184ce"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_between_import_groups"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_between_import_groups",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Factory/ConverterFactory.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_between_import_groups": "e9a76d96e254498874a02788fe4c7328d191a5433d761e964566a493d16184ce"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Console/Application.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "7d0f979c6000263cd68a503f922d2dc091ccda4f69e13df2ad98c4b604ebe78f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Console/Application.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "7d0f979c6000263cd68a503f922d2dc091ccda4f69e13df2ad98c4b604ebe78f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_between_import_groups"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_between_import_groups",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Console/Application.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_between_import_groups": "7d0f979c6000263cd68a503f922d2dc091ccda4f69e13df2ad98c4b604ebe78f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Console/Command/ConvertCommand.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "77fc73e67663e96987fe10dbbdc3e383fe774c5924170d4b1a76b46f17782e8e"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: ternary_operator_spaces"
+                    },
+                    "ruleId": "PHP-CS-Fixer.ternary_operator_spaces",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Console/Command/ConvertCommand.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.ternary_operator_spaces": "77fc73e67663e96987fe10dbbdc3e383fe774c5924170d4b1a76b46f17782e8e"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Console/Command/ConvertCommand.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "77fc73e67663e96987fe10dbbdc3e383fe774c5924170d4b1a76b46f17782e8e"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_between_import_groups"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_between_import_groups",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Console/Command/ConvertCommand.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_between_import_groups": "77fc73e67663e96987fe10dbbdc3e383fe774c5924170d4b1a76b46f17782e8e"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/PsalmConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "f7d2b01af8dae67ed6ec1aa85372dc3123707f3dcb4ce140078be2c7ff866f1d"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/PsalmConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "f7d2b01af8dae67ed6ec1aa85372dc3123707f3dcb4ce140078be2c7ff866f1d"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PhpLintNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "3189c939ef8f9236f9ab3c8fa6b574f1ecca5921cb9dc66a4f46f44d7ddb3fea"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PhpLintNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "3189c939ef8f9236f9ab3c8fa6b574f1ecca5921cb9dc66a4f46f44d7ddb3fea"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_between_import_groups"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_between_import_groups",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PhpLintNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_between_import_groups": "3189c939ef8f9236f9ab3c8fa6b574f1ecca5921cb9dc66a4f46f44d7ddb3fea"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PhpMndNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "e0d60197667b99df31668c7d0e8ff2b0ddcfd455f41aa46e86889a385a94d14f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PhpMndNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "e0d60197667b99df31668c7d0e8ff2b0ddcfd455f41aa46e86889a385a94d14f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_between_import_groups"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_between_import_groups",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PhpMndNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_between_import_groups": "e0d60197667b99df31668c7d0e8ff2b0ddcfd455f41aa46e86889a385a94d14f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/SarifNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "94b087b45075299d26c747e047af13eeac095c2a39f2c8bd2115211ac05cec16"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/SarifNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "94b087b45075299d26c747e047af13eeac095c2a39f2c8bd2115211ac05cec16"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_between_import_groups"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_between_import_groups",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/SarifNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_between_import_groups": "94b087b45075299d26c747e047af13eeac095c2a39f2c8bd2115211ac05cec16"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PhpMdNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "dc193671706a77cc0ce12eddf1012db447d1d1ea6d46c97f23ed26251f64363b"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PhpMdNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "dc193671706a77cc0ce12eddf1012db447d1d1ea6d46c97f23ed26251f64363b"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_between_import_groups"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_between_import_groups",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PhpMdNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_between_import_groups": "dc193671706a77cc0ce12eddf1012db447d1d1ea6d46c97f23ed26251f64363b"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PhpStanNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "e61f876a69810fa650f4263620bd082e3ce47b98fd97b892dd0077ab121ae42c"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PhpStanNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "e61f876a69810fa650f4263620bd082e3ce47b98fd97b892dd0077ab121ae42c"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_between_import_groups"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_between_import_groups",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PhpStanNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_between_import_groups": "e61f876a69810fa650f4263620bd082e3ce47b98fd97b892dd0077ab121ae42c"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PsalmNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "b4ea330aa37b6ea24e13ee522c06d3b514b96b4ed8106bd3c4a2fa6c54a70dc6"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PsalmNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "b4ea330aa37b6ea24e13ee522c06d3b514b96b4ed8106bd3c4a2fa6c54a70dc6"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_between_import_groups"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_between_import_groups",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PsalmNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_between_import_groups": "b4ea330aa37b6ea24e13ee522c06d3b514b96b4ed8106bd3c4a2fa6c54a70dc6"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: no_spaces_after_function_name"
+                    },
+                    "ruleId": "PHP-CS-Fixer.no_spaces_after_function_name",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PhpInsightsNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.no_spaces_after_function_name": "9b50bab7041489830394cc2335a0d30bc041ac46e5eb7d3d8f90fe94f9d15879"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PhpInsightsNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "9b50bab7041489830394cc2335a0d30bc041ac46e5eb7d3d8f90fe94f9d15879"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PhpInsightsNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "9b50bab7041489830394cc2335a0d30bc041ac46e5eb7d3d8f90fe94f9d15879"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_between_import_groups"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_between_import_groups",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PhpInsightsNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_between_import_groups": "9b50bab7041489830394cc2335a0d30bc041ac46e5eb7d3d8f90fe94f9d15879"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/TwigCsFixerNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "43ce1140137ecf7018064b729de22353d2ed3ec10ff972bf5129d4075cd86b7b"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: no_blank_lines_after_class_opening"
+                    },
+                    "ruleId": "PHP-CS-Fixer.no_blank_lines_after_class_opening",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/TwigCsFixerNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.no_blank_lines_after_class_opening": "43ce1140137ecf7018064b729de22353d2ed3ec10ff972bf5129d4075cd86b7b"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/TwigCsFixerNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "43ce1140137ecf7018064b729de22353d2ed3ec10ff972bf5129d4075cd86b7b"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_between_import_groups"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_between_import_groups",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/TwigCsFixerNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_between_import_groups": "43ce1140137ecf7018064b729de22353d2ed3ec10ff972bf5129d4075cd86b7b"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PhpCsNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "ea726fa45c06770371b280d802462afafc17988b199cc78c56b116ba76400bc3"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PhpCsNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "ea726fa45c06770371b280d802462afafc17988b199cc78c56b116ba76400bc3"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_between_import_groups"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_between_import_groups",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PhpCsNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_between_import_groups": "ea726fa45c06770371b280d802462afafc17988b199cc78c56b116ba76400bc3"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PhpCsFixerNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "a64c3524490014b08397508575118e92b018ab582f31f96b44d0a22bb2a397b1"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PhpCsFixerNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "a64c3524490014b08397508575118e92b018ab582f31f96b44d0a22bb2a397b1"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_between_import_groups"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_between_import_groups",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PhpCsFixerNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_between_import_groups": "a64c3524490014b08397508575118e92b018ab582f31f96b44d0a22bb2a397b1"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/EcsNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "8c27c36fdb8dd4d887cc0a0b1a9cb09791625af24fc18f540a877a186edf8561"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/EcsNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "8c27c36fdb8dd4d887cc0a0b1a9cb09791625af24fc18f540a877a186edf8561"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_between_import_groups"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_between_import_groups",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/EcsNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_between_import_groups": "8c27c36fdb8dd4d887cc0a0b1a9cb09791625af24fc18f540a877a186edf8561"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/CheckstyleNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "06021e3cdf1c1832f67585f5e0a4a2fa2d70525c69d41e232f47b992f7d6d7bd"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/CheckstyleNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "06021e3cdf1c1832f67585f5e0a4a2fa2d70525c69d41e232f47b992f7d6d7bd"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_between_import_groups"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_between_import_groups",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/CheckstyleNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_between_import_groups": "06021e3cdf1c1832f67585f5e0a4a2fa2d70525c69d41e232f47b992f7d6d7bd"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/SimpleXmlNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "8ce4e117960884be6ae759bef93c427081358b42143ea3c7f97922e02fcede6f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/SimpleXmlNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "8ce4e117960884be6ae759bef93c427081358b42143ea3c7f97922e02fcede6f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_between_import_groups"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_between_import_groups",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/SimpleXmlNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_between_import_groups": "8ce4e117960884be6ae759bef93c427081358b42143ea3c7f97922e02fcede6f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PhanNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "f342275fa130a9a85fb9db69ca97307228e364f090af8df28e3090ba3acae719"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PhanNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "f342275fa130a9a85fb9db69ca97307228e364f090af8df28e3090ba3acae719"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_between_import_groups"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_between_import_groups",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PhanNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_between_import_groups": "f342275fa130a9a85fb9db69ca97307228e364f090af8df28e3090ba3acae719"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PyLintNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "62248e402b76072de85e4e34039103cdbf5bd5e3ab067a6bf7d76c43ff24441c"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PyLintNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "62248e402b76072de85e4e34039103cdbf5bd5e3ab067a6bf7d76c43ff24441c"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_between_import_groups"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_between_import_groups",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Normalizer/PyLintNormalizer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_between_import_groups": "62248e402b76072de85e4e34039103cdbf5bd5e3ab067a6bf7d76c43ff24441c"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Reporter/AbstractReporter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "7662f07edecf2ac59d43d81bbe439fb7a1fac600b195ed12847bc09ee6cbd766"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Reporter/AbstractReporter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "7662f07edecf2ac59d43d81bbe439fb7a1fac600b195ed12847bc09ee6cbd766"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Reporter/PhpMdRenderer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "af7968c3a23944675622d646d4492d39be53ba34da0ef72990a398847d874461"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Reporter/PhpMdRenderer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "af7968c3a23944675622d646d4492d39be53ba34da0ef72990a398847d874461"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Reporter/PhpCsReport.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "f1208000b0c7a7b4fe82cba5a6886762266dce4c9552db0f05d4b8a38b4627ef"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Reporter/PhpCsReport.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "f1208000b0c7a7b4fe82cba5a6886762266dce4c9552db0f05d4b8a38b4627ef"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Reporter/PhpInsightsFormatter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "56371696e7de0815904dd28b7ecd6fff971fd1d794577c977f35e80c49424998"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Reporter/PhpInsightsFormatter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "56371696e7de0815904dd28b7ecd6fff971fd1d794577c977f35e80c49424998"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Reporter/PhpStanFormatter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "97ce587faf9a49f26c53a6cb4b61d237c092e238300c9bb616dda8b245eb7284"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Reporter/PhpStanFormatter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "97ce587faf9a49f26c53a6cb4b61d237c092e238300c9bb616dda8b245eb7284"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Reporter/TwigCsFixerReporter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "2240a1c8acb1ac0f95007e84115f4161790eaa9d785a9ed1f0b2404a22fa143b"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Reporter/TwigCsFixerReporter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "2240a1c8acb1ac0f95007e84115f4161790eaa9d785a9ed1f0b2404a22fa143b"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: no_blank_lines_after_class_opening"
+                    },
+                    "ruleId": "PHP-CS-Fixer.no_blank_lines_after_class_opening",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Reporter/PsalmRenderer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.no_blank_lines_after_class_opening": "a40b8e0dabd65fd93a73b2aaa7caf0a7ebf2433eda2efb391f8b21c128df269a"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Reporter/PsalmRenderer.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_namespace": "a40b8e0dabd65fd93a73b2aaa7caf0a7ebf2433eda2efb391f8b21c128df269a"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Reporter/PhpLintReport.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "b1c3039527cc598ccbd5863576eff4558169a3c1307a768655be0852c50f31f5"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Reporter/PhpLintReport.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "b1c3039527cc598ccbd5863576eff4558169a3c1307a768655be0852c50f31f5"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Source/PhpInsightsSource.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "f16bcadbeccf458244501ff4ed6d2f9f189d7e5d75d825c03cba4effc8fed809"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Source/PhpInsightsSource.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "f16bcadbeccf458244501ff4ed6d2f9f189d7e5d75d825c03cba4effc8fed809"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Source/TwigCsFixerSource.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "c67b5d5197ed4caacef3fb74d277c1759695b6a8855ec325f76a33eb3ad57a99"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Source/TwigCsFixerSource.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "c67b5d5197ed4caacef3fb74d277c1759695b6a8855ec325f76a33eb3ad57a99"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Source/PhpCsFixerSource.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "d159c210ffd3c7bd4fe417b6636aac5de56d943338c6bc200e9a09fe5017a960"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Source/PhpCsFixerSource.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "d159c210ffd3c7bd4fe417b6636aac5de56d943338c6bc200e9a09fe5017a960"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Source/AbstractSource.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "d296b6d0cfd45952e4a608785a74ac7699ceda7552686d857acd53f2169e5cd1"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Source/AbstractSource.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "d296b6d0cfd45952e4a608785a74ac7699ceda7552686d857acd53f2169e5cd1"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_between_import_groups"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_between_import_groups",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Source/AbstractSource.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_between_import_groups": "d296b6d0cfd45952e4a608785a74ac7699ceda7552686d857acd53f2169e5cd1"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Source/PhpLintSource.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "0440bc0aa847d5b02d1c7bfa6404da7908387563bcfa943baa347026ad27c5b4"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Source/PhpLintSource.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "0440bc0aa847d5b02d1c7bfa6404da7908387563bcfa943baa347026ad27c5b4"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Source/EcsSource.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "10704a51ee1c392ff76f1468c9f90269965f264ec0c5f4f4211d5d7802367678"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Source/EcsSource.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "10704a51ee1c392ff76f1468c9f90269965f264ec0c5f4f4211d5d7802367678"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_between_import_groups"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_between_import_groups",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Source/EcsSource.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_between_import_groups": "10704a51ee1c392ff76f1468c9f90269965f264ec0c5f4f4211d5d7802367678"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Source/PhpCsSource.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "6883be87eb8cb616cea43e80044297b93d4e6f200a34e8c5dc8b8f5939803ab4"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Source/PhpCsSource.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "6883be87eb8cb616cea43e80044297b93d4e6f200a34e8c5dc8b8f5939803ab4"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_between_import_groups"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_between_import_groups",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Source/PhpCsSource.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_between_import_groups": "6883be87eb8cb616cea43e80044297b93d4e6f200a34e8c5dc8b8f5939803ab4"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Source/PsalmSource.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "d2ff2e7ff8fa260b916ffea8b31abae9e9da2e858444aae892ea94213bd0f726"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Source/PsalmSource.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "d2ff2e7ff8fa260b916ffea8b31abae9e9da2e858444aae892ea94213bd0f726"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Source/PhpStanSource.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "a0bf3b4cfaafef50f0f406421666993b21271bc7500e05ddcc66ebb9a43bfd9d"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Source/PhpStanSource.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "a0bf3b4cfaafef50f0f406421666993b21271bc7500e05ddcc66ebb9a43bfd9d"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Source/PhpMdSource.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "51c1ce99ad26ba1a790b96324e9e804fb8619ad04fa98fe52f20d0cd334c041d"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Source/PhpMdSource.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "51c1ce99ad26ba1a790b96324e9e804fb8619ad04fa98fe52f20d0cd334c041d"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Source/PhpMndSource.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "9311f8c352ae318979abedc972c3dfb098a0a0b17ccc50582b1afc5f19533887"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Source/PhpMndSource.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "9311f8c352ae318979abedc972c3dfb098a0a0b17ccc50582b1afc5f19533887"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_between_import_groups"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_between_import_groups",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Source/PhpMndSource.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_between_import_groups": "9311f8c352ae318979abedc972c3dfb098a0a0b17ccc50582b1afc5f19533887"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Source/PhanSource.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "995ffcb8336e2f51f3c31c64ccff59f328080511ef40d53312a19f4615f981f7"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/Source/PhanSource.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "995ffcb8336e2f51f3c31c64ccff59f328080511ef40d53312a19f4615f981f7"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/PhpMndConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "5fa6ad0504e65d96ed46de5600be6c5095a1d6e38430779c827463f98e62469d"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/PhpMndConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "5fa6ad0504e65d96ed46de5600be6c5095a1d6e38430779c827463f98e62469d"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "5327db313584d89539c642c79002d33c60db8625d8d2128634dc5e18222b637b"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "5327db313584d89539c642c79002d33c60db8625d8d2128634dc5e18222b637b"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_between_import_groups"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_between_import_groups",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_between_import_groups": "5327db313584d89539c642c79002d33c60db8625d8d2128634dc5e18222b637b"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/PhpLintConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "5a1e68805e1f0d498ac0d2371fddba5356893e325db4d895c4133a0d634d9db3"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/PhpLintConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "5a1e68805e1f0d498ac0d2371fddba5356893e325db4d895c4133a0d634d9db3"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/EcsConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "5e3d1576924653f0a744238a61b93ee4ac9316a3449bbabcd156cc5fa3c5726d"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/EcsConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "5e3d1576924653f0a744238a61b93ee4ac9316a3449bbabcd156cc5fa3c5726d"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/PhpStanConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "a4639dd81f7957f6d7762c0dc5c2f37c917ab2ff5ea186b8036e1a91e90f9791"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/PhpStanConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "a4639dd81f7957f6d7762c0dc5c2f37c917ab2ff5ea186b8036e1a91e90f9791"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/PhpCsFixerConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "d3953600100fa7867c9e0826ed9134a907056145d48439fac28158124a484627"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/PhpCsFixerConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "d3953600100fa7867c9e0826ed9134a907056145d48439fac28158124a484627"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/TwigCsFixerConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "da7125a659c551049f8bdabef763b33c96079ae792ce92cc9d835c3257a30863"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/TwigCsFixerConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "da7125a659c551049f8bdabef763b33c96079ae792ce92cc9d835c3257a30863"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/PhpMdConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "301d9638297bacc9d63c551c95127a7408873d27ec01fbbc03d4dcbf2ea85a30"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/PhpMdConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "301d9638297bacc9d63c551c95127a7408873d27ec01fbbc03d4dcbf2ea85a30"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/PhpCsConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "9f3e071d135d39b2532f900d69f42661ca193910bd977ca248aa7b9ed0fc24c0"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/PhpCsConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "9f3e071d135d39b2532f900d69f42661ca193910bd977ca248aa7b9ed0fc24c0"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/PhpInsightsConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "e676982bbe3e2eb51de62c03379bbf7866b3720d1c8306f4d86ba2609ddbec61"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/PhpInsightsConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "e676982bbe3e2eb51de62c03379bbf7866b3720d1c8306f4d86ba2609ddbec61"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_line_after_opening_tag"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_line_after_opening_tag",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/PhanConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_line_after_opening_tag": "a9eaf527633d110994271212d25f3f3ca1b022e1b0d9789883012ddc38707e2e"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Found violation(s) of type: blank_lines_before_namespace"
+                    },
+                    "ruleId": "PHP-CS-Fixer.blank_lines_before_namespace",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Converter/PhanConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "PHP-CS-Fixer.blank_lines_before_namespace": "a9eaf527633d110994271212d25f3f3ca1b022e1b0d9789883012ddc38707e2e"
+                    }
+                }
+            ],
+            "automationDetails": {
+                "id": "Daily run 2024-07-22T12:23:08+00:00"
+            }
+        }
+    ]
+}

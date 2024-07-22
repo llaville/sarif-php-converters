@@ -33,6 +33,8 @@ final class ConverterFactory implements ConverterFactoryInterface
                 return $this->createPhan($options, $serializerFactory);
             case ConverterFactoryInterface::BUILTIN_CONVERTER_PHPCS:
                 return $this->createCodeSniffer($options, $serializerFactory);
+            case ConverterFactoryInterface::BUILTIN_CONVERTER_PHPCSFIXER:
+                return $this->createCsFixer($options, $serializerFactory);
             case ConverterFactoryInterface::BUILTIN_CONVERTER_PHPLINT:
                 return $this->createLinter($options, $serializerFactory);
             case ConverterFactoryInterface::BUILTIN_CONVERTER_PHPMD:
@@ -82,6 +84,18 @@ final class ConverterFactory implements ConverterFactoryInterface
     public function createCodeSniffer(array $options, ?SerializerFactory $serializerFactory = null): ConverterInterface
     {
         return new Converter\PhpCsConverter($options, $serializerFactory);
+    }
+
+    /**
+     * @param array{
+     *     format_output: bool,
+     *     include_code_snippets?: bool,
+     *     include_context_region?: bool
+     * } $options
+     */
+    public function createCsFixer(array $options, ?SerializerFactory $serializerFactory = null): ConverterInterface
+    {
+        return new Converter\PhpCsFixerConverter($options, $serializerFactory);
     }
 
     /**

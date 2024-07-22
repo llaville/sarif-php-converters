@@ -16,6 +16,7 @@ interface SourceFactoryInterface
     public const BUILTIN_SOURCE_ECS = 'ecs';
     public const BUILTIN_SOURCE_PHAN = 'phan';
     public const BUILTIN_SOURCE_PHPCS = 'phpcs';
+    public const BUILTIN_SOURCE_PHPCSFIXER = 'phpcs-fixer';
     public const BUILTIN_SOURCE_PHPLINT = 'phplint';
     public const BUILTIN_SOURCE_PHPMD = 'phpmd';
     public const BUILTIN_SOURCE_PHPSTAN = 'phpstan';

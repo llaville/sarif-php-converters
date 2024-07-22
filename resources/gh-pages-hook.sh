@@ -8,6 +8,7 @@ php $SCRIPT_DIR/build.php graph-composer $ASSETS_IMAGE_DIR
 php $SCRIPT_DIR/build.php converter-ecs $ASSETS_IMAGE_DIR
 php $SCRIPT_DIR/build.php converter-phan $ASSETS_IMAGE_DIR
 php $SCRIPT_DIR/build.php converter-phpcs $ASSETS_IMAGE_DIR
+php $SCRIPT_DIR/build.php converter-phpcs-fixer $ASSETS_IMAGE_DIR
 php $SCRIPT_DIR/build.php converter-phplint $ASSETS_IMAGE_DIR
 php $SCRIPT_DIR/build.php converter-phpmd $ASSETS_IMAGE_DIR
 php $SCRIPT_DIR/build.php converter-phpstan $ASSETS_IMAGE_DIR

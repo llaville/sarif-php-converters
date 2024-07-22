@@ -32,6 +32,8 @@ final class SourceFactory implements SourceFactoryInterface
                 return $this->createPhan($normalizers);
             case SourceFactoryInterface::BUILTIN_SOURCE_PHPCS:
                 return $this->createCodeSniffer($normalizers);
+            case SourceFactoryInterface::BUILTIN_SOURCE_PHPCSFIXER:
+                return $this->createCsFixer($normalizers);
             case SourceFactoryInterface::BUILTIN_SOURCE_PHPLINT:
                 return $this->createLinter($normalizers);
             case SourceFactoryInterface::BUILTIN_SOURCE_PHPMD:
@@ -75,6 +77,16 @@ final class SourceFactory implements SourceFactoryInterface
         $normalizers = (array) $normalizers;
         $normalizers[] = new Normalizer\PhpCsNormalizer();
         return new Source\PhpCsSource($normalizers);
+    }
+
+    /**
+     * @param iterable<NormalizerInterface> $normalizers
+     */
+    public function createCsFixer(iterable $normalizers): SourceInterface
+    {
+        $normalizers = (array) $normalizers;
+        $normalizers[] = new Normalizer\PhpCsFixerNormalizer();
+        return new Source\PhpCsFixerSource($normalizers);
     }
 
     /**
