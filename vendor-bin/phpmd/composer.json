@@ -1,5 +1,12 @@
 {
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/llaville/phpmd"
+        }
+    ],
+    "minimum-stability": "dev",
     "require-dev": {
-        "phpmd/phpmd": "^2.0"
+        "phpmd/phpmd": "dev-feature/3.x-custom-renderer as 3.x-dev"
     }
 }
