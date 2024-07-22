@@ -24,10 +24,10 @@
 * This SARIF converter requires at least PHPMD version 2.0, but version 3.0 is highly recommended.
 
 Version 3.x is still under development,
-but the `\Bartlett\Sarif\Converter\Reporter\PhpMdRenderer` class is ready to use new feature
+but the `Bartlett\Sarif\Converter\Reporter\PhpMdRenderer` class is ready to use new feature
 ([Simplify load of external custom renderer][phpmd-bootstrap]).
 
-Until this feature is GA into official PHPMD repository, you can use such `composer.json` requirements
+Until this feature is [GA][general-availability] into official PHPMD repository, you can use such `composer.json` requirements
 
 ```json
 {
@@ -74,6 +74,16 @@ php report-converter convert phpmd --input-format=checkstyle --input-file=exampl
 > * Without verbose option (`-v`) the Console Tool will print a compact SARIF version.
 > * `--output-file` option allows to write a copy of the report to a file. By default, the Console Tool will always print the specified report to the standard output.
 
+> [!NOTE]
+>
+> When PHPMD 3.0 will be [GA][general-availability], you can use this alternative
+
+**Step 1:** Build the sarif output report directly via the default `Bartlett\Sarif\Converter\Reporter\PhpMdRenderer`
+
+```shell
+vendor/bin/phpmd /path/to/source '\Bartlett\Sarif\Converter\Reporter\PhpMdRenderer' ruleset --bootstrap vendor/autoload.php --report-file=sarif.json
+```
+
 ## Learn more
 
 * See demo [`examples/phpmd/`][example-folder] directory into this repository.
@@ -96,3 +106,4 @@ For example:
 [phpmd]: https://github.com/phpmd/phpmd
 [sarif-web-component]: https://github.com/Microsoft/sarif-web-component
 [phpmd-bootstrap]: https://github.com/phpmd/phpmd/issues/1196
+[general-availability]: https://en.wikipedia.org/wiki/Software_release_life_cycle
