@@ -21,6 +21,28 @@
 ## Requirements
 
 * [PHP Mess Detector][phpmd] requires PHP version 5.3.9 or greater, with `xml` extensions loaded
+* This SARIF converter requires at least PHPMD version 2.0, but version 3.0 is highly recommended.
+
+Version 3.x is still under development,
+but the `\Bartlett\Sarif\Converter\Reporter\PhpMdRenderer` class is ready to use new feature
+([Simplify load of external custom renderer][phpmd-bootstrap]).
+
+Until this feature is GA into official PHPMD repository, you can use such `composer.json` requirements
+
+```json
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/llaville/phpmd"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require-dev": {
+        "phpmd/phpmd": "dev-feature/3.x-custom-renderer as 3.x-dev"
+    }
+}
+```
 
 ## Installation
 
@@ -73,3 +95,4 @@ For example:
 [example-folder]: https://github.com/llaville/sarif-php-sdk/blob/1.0/examples/phpmd/
 [phpmd]: https://github.com/phpmd/phpmd
 [sarif-web-component]: https://github.com/Microsoft/sarif-web-component
+[phpmd-bootstrap]: https://github.com/phpmd/phpmd/issues/1196
