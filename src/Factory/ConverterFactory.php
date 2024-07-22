@@ -49,8 +49,8 @@ final class ConverterFactory implements ConverterFactoryInterface
     /**
      * @param array{
      *     format_output: bool,
-     *     include_code_snippets: bool,
-     *     include_context_region: bool
+     *     include_code_snippets?: bool,
+     *     include_context_region?: bool
      * } $options
      */
     public function createEasyCodingStandard(array $options, ?SerializerFactory $serializerFactory = null): ConverterInterface
@@ -61,8 +61,8 @@ final class ConverterFactory implements ConverterFactoryInterface
     /**
      * @param array{
      *     format_output: bool,
-     *     include_code_snippets: bool,
-     *     include_context_region: bool
+     *     include_code_snippets?: bool,
+     *     include_context_region?: bool
      * } $options
      */
     public function createPhan(array $options, ?SerializerFactory $serializerFactory = null): ConverterInterface
@@ -73,8 +73,8 @@ final class ConverterFactory implements ConverterFactoryInterface
     /**
      * @param array{
      *     format_output: bool,
-     *     include_code_snippets: bool,
-     *     include_context_region: bool
+     *     include_code_snippets?: bool,
+     *     include_context_region?: bool
      * } $options
      */
     public function createCodeSniffer(array $options, ?SerializerFactory $serializerFactory = null): ConverterInterface
@@ -85,8 +85,8 @@ final class ConverterFactory implements ConverterFactoryInterface
     /**
      * @param array{
      *     format_output: bool,
-     *     include_code_snippets: bool,
-     *     include_context_region: bool
+     *     include_code_snippets?: bool,
+     *     include_context_region?: bool
      * } $options
      */
     public function createLinter(array $options, ?SerializerFactory $serializerFactory = null): ConverterInterface
@@ -97,8 +97,8 @@ final class ConverterFactory implements ConverterFactoryInterface
     /**
      * @param array{
      *     format_output: bool,
-     *     include_code_snippets: bool,
-     *     include_context_region: bool
+     *     include_code_snippets?: bool,
+     *     include_context_region?: bool
      * } $options
      */
     public function createMessDetector(array $options, ?SerializerFactory $serializerFactory = null): ConverterInterface
@@ -109,8 +109,8 @@ final class ConverterFactory implements ConverterFactoryInterface
     /**
      * @param array{
      *     format_output: bool,
-     *     include_code_snippets: bool,
-     *     include_context_region: bool
+     *     include_code_snippets?: bool,
+     *     include_context_region?: bool
      * } $options
      */
     public function createStan(array $options, ?SerializerFactory $serializerFactory = null): ConverterInterface
@@ -121,8 +121,8 @@ final class ConverterFactory implements ConverterFactoryInterface
     /**
      * @param array{
      *     format_output: bool,
-     *     include_code_snippets: bool,
-     *     include_context_region: bool
+     *     include_code_snippets?: bool,
+     *     include_context_region?: bool
      * } $options
      */
     public function createTwigCsFixer(array $options, ?SerializerFactory $serializerFactory = null): ConverterInterface
