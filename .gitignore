@@ -4,6 +4,7 @@
 
 docs/assets/images/
 site/
+resources/box-manifest
 
 ###### Composer dependencies ######
 vendor/
