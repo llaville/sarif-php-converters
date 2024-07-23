@@ -22,6 +22,9 @@ megalinter-reports/
 ###### PHP-CS-Fixer ######
 .php-cs-fixer.cache
 
+###### Twig-CS-Fixer ######
+.twig-cs-fixer.cache
+
 ######################################
 # GENERIC
 ######################################
