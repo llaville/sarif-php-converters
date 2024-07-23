@@ -28,8 +28,8 @@ interface ConverterFactoryInterface
     /**
      * @param array{
      *     format_output: bool,
-     *     include_code_snippets: bool,
-     *     include_context_region: bool
+     *     include_code_snippets?: bool,
+     *     include_context_region?: bool
      * } $options
      */
     public function create(
