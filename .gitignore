@@ -6,6 +6,11 @@ docs/assets/images/
 site/
 resources/box-manifest
 
+###### BOX-Manifest ######
+stub.php
+sbom.json
+console.txt
+
 ###### Composer dependencies ######
 vendor/
 ###### Composer bin plugin ######
