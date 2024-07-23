@@ -4,7 +4,19 @@
   "IgnoreDefaults": false,
   "SpacesAftertabs": false,
   "NoColor": false,
-  "Exclude": ["\\.idea", "\\.editorconfig", "\\.github", "LICENSE", "vendor", "vendor-bin", "mkdocs\\.yml", "\\.changes", "examples"],
+  "Exclude": [
+    "\\.idea",
+    "\\.editorconfig",
+    "\\.github",
+    "LICENSE",
+    "vendor",
+    "vendor-bin",
+    "mkdocs\\.yml",
+    "\\.changes",
+    "examples",
+    "resources/box-manifest",
+    "sbom\\.json"
+  ],
   "AllowedContentTypes": [],
   "PassedFiles": [],
   "Disable": {
