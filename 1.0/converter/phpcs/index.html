@@ -955,10 +955,10 @@
 <!-- markdownlint-disable MD013 -->
 <h1 id="php_codesniffer-converter">PHP_CodeSniffer Converter</h1>
 <p><a href="https://github.com/PHPCSStandards/PHP_CodeSniffer"><img alt="PHPCSStandards/PHP_CodeSniffer - GitHub" src="https://gh-card.dev/repos/PHPCSStandards/PHP_CodeSniffer.svg?fullname=" /></a></p>
-<blockquote>
-<p>[!NOTE]</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>Available since version 1.0.0</p>
-</blockquote>
+</div>
 <h2 id="table-of-contents">Table Of Contents</h2>
 <ol>
 <li><a href="#requirements">Requirements</a></li>
@@ -981,14 +981,14 @@
 <h2 id="usage">Usage</h2>
 <div class="highlight"><pre><span></span><code>vendor/bin/phpcs<span class="w"> </span>--report<span class="o">=</span><span class="s1">&#39;\Bartlett\Sarif\Converter\Reporter\PhpCsReport&#39;</span><span class="w"> </span>--standard<span class="o">=</span>examples/phpcs/.phpcs.xml.dist<span class="w"> </span>--report-file<span class="o">=</span>examples/phpcs/.sarif.json
 </code></pre></div>
-<blockquote>
-<p>[!WARNING]</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>If you have the following error</p>
 <div class="highlight"><pre><span></span><code>ERROR: Class file for report &quot;\Bartlett\Sarif\Converter\Reporter\PhpCsReport&quot; not found
 </code></pre></div>
 <p>That means you've not specified the correct autoloader.
 Refer to PHP_CodeSniffer config file <a href="https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Annotated-Ruleset">autoload directive</a>,</p>
-</blockquote>
+</div>
 <h2 id="how-to-customize-your-converter">How to customize your converter</h2>
 <p>There are many ways to customize render of your converter.</p>
 <h3 id="make-the-sarif-report-output-human-readable">Make the SARIF report output human-readable</h3>
@@ -1024,13 +1024,13 @@ does not use whitespace in returned data to format it.</p>
 <p><strong>Step 2:</strong> And finally, convert it to SARIF with the <strong>Console Tool</strong></p>
 <div class="highlight"><pre><span></span><code>report-converter<span class="w"> </span>convert<span class="w"> </span>phpcs<span class="w"> </span>--input-format<span class="o">=</span>checkstyle<span class="w"> </span>--input-file<span class="o">=</span>examples/phpcs/checkstyle.xml<span class="w"> </span>-v
 </code></pre></div>
-<blockquote>
-<p>[!TIP]</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <ul>
 <li>Without verbose option (<code>-v</code>) the Console Tool will print a compact SARIF version.</li>
 <li><code>--output-file</code> option allows to write a copy of the report to a file. By default, the Console Tool will always print the specified report to the standard output.</li>
 </ul>
-</blockquote>
+</div>
 <h2 id="learn-more">Learn more</h2>
 <ul>
 <li>See demo <a href="https://github.com/llaville/sarif-php-converters/blob/1.0/examples/phpcs/"><code>examples/phpcs/</code></a> directory into this repository.</li>

@@ -889,10 +889,10 @@
 <!-- markdownlint-disable MD013 -->
 <h1 id="easy-coding-standard-converter">Easy-Coding-Standard Converter</h1>
 <p><a href="https://github.com/easy-coding-standard/easy-coding-standard"><img alt="easy-coding-standard/easy-coding-standard - GitHub" src="https://gh-card.dev/repos/easy-coding-standard/easy-coding-standard.svg?fullname=" /></a></p>
-<blockquote>
-<p>[!NOTE]</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>Available since version 1.0.0</p>
-</blockquote>
+</div>
 <h2 id="table-of-contents">Table Of Contents</h2>
 <ol>
 <li><a href="#requirements">Requirements</a></li>
@@ -912,12 +912,12 @@
 <div class="highlight"><pre><span></span><code>composer<span class="w"> </span>require<span class="w"> </span>--dev<span class="w"> </span>symplify/easy-coding-standard<span class="w"> </span>bartlett/sarif-php-converters
 </code></pre></div>
 <h2 id="usage">Usage</h2>
-<blockquote>
-<p>[!WARNING]</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>As Easy-Coding-Standard is not able to load custom output format on fly without to modify the <code>LazyContainerFactory</code>
 (see e.g: <a href="https://github.com/easy-coding-standard/easy-coding-standard/pull/212">add junit output formatter</a>),
 we have no other alternative that using the <strong>Console Tool</strong> convert command.</p>
-</blockquote>
+</div>
 <p><strong>Step 1:</strong> Create a basic ECS config file</p>
 <p>For example :</p>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
@@ -955,25 +955,25 @@ we have no other alternative that using the <strong>Console Tool</strong> conver
 <p><strong>Step 2:</strong> Build the native checkstyle output report</p>
 <div class="highlight"><pre><span></span><code>vendor/bin/ecs<span class="w"> </span>check<span class="w"> </span>--output-format<span class="o">=</span>checkstyle<span class="w"> </span>&gt;<span class="w"> </span>examples/ecs/checkstyle.xml
 </code></pre></div>
-<blockquote>
-<p>[!WARNING]</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>Be sure to specify absolute path to source code to analyze, otherwise the Console Tool <code>convert</code> command
 will raise some warnings about file names.</p>
 <p>Add into your <code>ecs.php</code> config file, at least the following directive (available only since version 12.3.1) :</p>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">return</span> <span class="nx">ECSConfig</span><span class="o">::</span><span class="na">configure</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">withRealPathReporting</span><span class="p">(</span><span class="k">true</span><span class="p">);</span>
 </code></pre></div>
-</blockquote>
+</div>
 <p><strong>Step 3:</strong> And finally, convert it to SARIF with the <strong>Console Tool</strong></p>
 <div class="highlight"><pre><span></span><code>php<span class="w"> </span>report-converter<span class="w"> </span>convert<span class="w"> </span>ecs<span class="w"> </span>--input-format<span class="o">=</span>checkstyle<span class="w"> </span>--input-file<span class="o">=</span>examples/ecs/checkstyle.xml<span class="w"> </span>-v
 </code></pre></div>
-<blockquote>
-<p>[!TIP]</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <ul>
 <li>Without verbose option (<code>-v</code>) the Console Tool will print a compact SARIF version.</li>
 <li><code>--output-file</code> option allows to write a copy of the report to a file. By default, the Console Tool will always print the specified report to the standard output.</li>
 </ul>
-</blockquote>
+</div>
 <h2 id="learn-more">Learn more</h2>
 <ul>
 <li>See demo <a href="https://github.com/llaville/sarif-php-converters/blob/1.0/examples/ecs/"><code>examples/ecs/</code></a> directory into this repository.</li>

@@ -937,10 +937,10 @@
 <!-- markdownlint-disable MD013 -->
 <h1 id="phplint-converter">PHPLint Converter</h1>
 <p><a href="https://github.com/overtrue/phplint"><img alt="overtrue/phplint - GitHub" src="https://gh-card.dev/repos/overtrue/phplint.svg?fullname=" /></a></p>
-<blockquote>
-<p>[!NOTE]</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>Available since version 1.0.0</p>
-</blockquote>
+</div>
 <h2 id="table-of-contents">Table Of Contents</h2>
 <ol>
 <li><a href="#requirements">Requirements</a></li>
@@ -962,15 +962,15 @@
 <h2 id="usage">Usage</h2>
 <div class="highlight"><pre><span></span><code>vendor/bin/phplint<span class="w"> </span>--format<span class="o">=</span><span class="s1">&#39;\Overtrue\PHPLint\Output\SarifOutput&#39;</span><span class="w"> </span>/path/to/source/code
 </code></pre></div>
-<blockquote>
-<p>[!WARNING]</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>If you have the following error</p>
 <div class="highlight"><pre><span></span><code>Could not load sarif converter class: &quot;Bartlett\Sarif\Converter\PhpLintConverter&quot;
 </code></pre></div>
 <p>That means you've not specified the correct autoloader.
 Please use the <code>--bootstrap</code> run option of PHPLint like that:</p>
 <p><code>vendor/bin/phplint --format='\Overtrue\PHPLint\Output\SarifOutput' --bootstrap=vendor/autoload.php</code></p>
-</blockquote>
+</div>
 <h2 id="how-to-customize-your-converter">How to customize your converter</h2>
 <p>There are many ways to customize render of your converter.</p>
 <h3 id="make-the-sarif-report-output-human-readable">Make the SARIF report output human-readable</h3>
@@ -980,12 +980,12 @@ to return the SARIF JSON representation of your report.</p>
 does not use whitespace in returned data to format it.</p>
 <p>To make your report human-readable, you have to specify the <code>\JSON_PRETTY_PRINT</code> constant, as encoder option.</p>
 <p>Here is the way to do it !</p>
-<blockquote>
-<p>[!TIP]</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <ul>
 <li>Without verbose option (<code>-v</code>) the PHPLint <code>SarifOutput</code> will print a compact SARIF version.</li>
 </ul>
-</blockquote>
+</div>
 <p><strong>Step 1:</strong> Prints the SARIF report</p>
 <div class="highlight"><pre><span></span><code>vendor/bin/phplint<span class="w"> </span>--format<span class="o">=</span><span class="s1">&#39;\Overtrue\PHPLint\Output\SarifOutput&#39;</span><span class="w"> </span>--bootstrap<span class="w"> </span>vendor/autoload.php<span class="w"> </span>--output<span class="o">=</span>examples/phplint/.sarif.json<span class="w"> </span>-v<span class="w"> </span>/path/to/source/code
 </code></pre></div>
@@ -997,13 +997,13 @@ does not use whitespace in returned data to format it.</p>
 <p><strong>Step 2:</strong> And finally, convert it to SARIF with the <strong>Console Tool</strong></p>
 <div class="highlight"><pre><span></span><code>report-converter<span class="w"> </span>convert<span class="w"> </span>phplint<span class="w"> </span>--input-format<span class="o">=</span>checkstyle<span class="w"> </span>--input-file<span class="o">=</span>examples/phplint/checkstyle.xml<span class="w"> </span>-v
 </code></pre></div>
-<blockquote>
-<p>[!TIP]</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <ul>
 <li>Without verbose option (<code>-v</code>) the Console Tool will print a compact SARIF version.</li>
 <li><code>--output-file</code> option allows to write a copy of the report to a file. By default, the Console Tool will always print the specified report to the standard output.</li>
 </ul>
-</blockquote>
+</div>
 <h2 id="learn-more">Learn more</h2>
 <ul>
 <li>See demo <a href="https://github.com/llaville/sarif-php-converters/blob/1.0/examples/phplint/"><code>examples/phplint/</code></a> directory into this repository.</li>

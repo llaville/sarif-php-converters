@@ -889,10 +889,10 @@
 <!-- markdownlint-disable MD013 -->
 <h1 id="psalm-converter">Psalm Converter</h1>
 <p><a href="https://github.com/vimeo/psalm"><img alt="vimeo/psalm - GitHub" src="https://gh-card.dev/repos/vimeo/psalm.svg?fullname=" /></a></p>
-<blockquote>
-<p>[!NOTE]</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>Available since version 1.0.0</p>
-</blockquote>
+</div>
 <h2 id="table-of-contents">Table Of Contents</h2>
 <ol>
 <li><a href="#requirements">Requirements</a></li>
@@ -927,32 +927,32 @@ you can use such <code>composer.json</code> requirements :</p>
 <div class="highlight"><pre><span></span><code>composer<span class="w"> </span>require<span class="w"> </span>--dev<span class="w"> </span>vimeo/psalm<span class="w"> </span>bartlett/sarif-php-converters
 </code></pre></div>
 <h2 id="usage">Usage</h2>
-<blockquote>
-<p>[!WARNING]</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>As Psalm v5 is not able to specify/boot custom renderer easily,
 we have no other alternative that using the <strong>Console Tool</strong> convert command.</p>
-</blockquote>
+</div>
 <p><strong>Step 1:</strong> Initialize Psalm configuration file <code>psalm.xml</code></p>
 <div class="highlight"><pre><span></span><code>vendor/bin/psalm<span class="w"> </span>path/to/source<span class="w"> </span>--init
 </code></pre></div>
-<blockquote>
-<p>[!WARNING]</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>Be sure to specify absolute path reporting (<code>absolutePathReporting="true"</code>) into <code>psalm.xml</code> config file,
 otherwise the Console Tool <code>convert</code> command will raise some warnings about file names.</p>
-</blockquote>
+</div>
 <p><strong>Step 2:</strong> Build the checkstyle output report</p>
 <div class="highlight"><pre><span></span><code>vendor/bin/psalm<span class="w"> </span>--report<span class="o">=</span>psalm.checkstyle.xml
 </code></pre></div>
 <p><strong>Step 3:</strong> And finally, convert it to SARIF normalized with the <strong>Console Tool</strong></p>
 <div class="highlight"><pre><span></span><code>php<span class="w"> </span>report-converter<span class="w"> </span>convert<span class="w"> </span>psalm<span class="w"> </span>--input-format<span class="o">=</span>checkstyle<span class="w"> </span>--input-file<span class="o">=</span>examples/psalm/psalm.checkstyle.xml<span class="w"> </span>-v
 </code></pre></div>
-<blockquote>
-<p>[!TIP]</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <ul>
 <li>Without verbose option (<code>-v</code>) the Console Tool will print a compact SARIF version.</li>
 <li><code>--output-file</code> option allows to write a copy of the report to a file. By default, the Console Tool will always print the specified report to the standard output.</li>
 </ul>
-</blockquote>
+</div>
 <h2 id="learn-more">Learn more</h2>
 <ul>
 <li>See demo <a href="https://github.com/llaville/sarif-php-converters/blob/1.0/examples/psalm/"><code>examples/psalm/</code></a> directory into this repository.</li>
