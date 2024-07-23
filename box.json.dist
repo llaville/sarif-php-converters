@@ -1,0 +1,36 @@
+{
+    "main": "report-converter",
+    "output": "sarif-php-converters.phar",
+    "force-autodiscovery": true,
+    "exclude-dev-files": false,
+    "files": ["autoload.php", "report-converter.php"],
+    "finder": [
+        {
+            "name": "*.php",
+            "exclude": [
+                "examples",
+                "resources",
+                "test",
+                "tests"
+            ],
+            "in": [
+                "vendor-bin/phan",
+                "vendor-bin/phpcs",
+                "vendor-bin/phpcs-fixer",
+                "vendor-bin/phplint",
+                "vendor-bin/phpmd",
+                "vendor-bin/phpstan",
+                "vendor-bin/psalm",
+                "vendor-bin/twigcs-fixer"
+            ]
+        }
+    ],
+    "blacklist": ["vendor/bamarni/composer-bin-plugin/"],
+    "compression": "GZ",
+    "stub": "stub.php",
+    "files-bin": ["sbom.json", "console.txt"],
+    "map": [
+        { "console.txt": ".box.manifests/console.txt" },
+        { "sbom.json": ".box.manifests/sbom.json" }
+    ]
+}
