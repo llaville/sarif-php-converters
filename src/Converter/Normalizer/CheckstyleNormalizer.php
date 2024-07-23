@@ -43,7 +43,7 @@ final class CheckstyleNormalizer implements NormalizerInterface
 
     /**
      * @param ArrayObject<string, mixed>|null $data Data to normalize
-     * @return array<string, mixed>
+     * @return array{files: mixed, errors: mixed, rules: mixed}
      */
     private function fromSimpleXml(?ArrayObject $data): array
     {

@@ -32,7 +32,7 @@ interface NormalizerInterface
      * @param mixed $data Data to normalize
      * @param string $format Format that the normalizer should support
      * @param array<string, mixed> $context Options available to the normalizer
-     * @return ArrayObject<string, mixed>|null
+     * @return ArrayObject<string, array{files: mixed, errors: mixed, rules: mixed}>|null
      */
     public function normalize($data, string $format, array $context): ?ArrayObject;
 }

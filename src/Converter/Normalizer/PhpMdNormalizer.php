@@ -62,11 +62,7 @@ final class PhpMdNormalizer implements NormalizerInterface
 
     /**
      * @param ArrayObject<string, mixed>|null $data Data to normalize
-     * @return array{
-     *     files: string[],
-     *     errors: array<string, array<int, array<string, string>>>,
-     *     rules: array<string, mixed>
-     * }
+     * @return array{files: mixed, errors: mixed, rules: mixed}
      */
     private function fromCheckstyle(?ArrayObject $data): array
     {
@@ -138,7 +134,7 @@ final class PhpMdNormalizer implements NormalizerInterface
     }
 
     /**
-     * @return array<string, mixed>
+     * @return array{files: mixed, errors: mixed, rules: mixed}
      */
     private function fromInternal(Report $report): array
     {

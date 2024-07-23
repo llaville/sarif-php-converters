@@ -42,11 +42,7 @@ final class SarifNormalizer implements NormalizerInterface
     }
 
     /**
-     * @return array{
-     *     files: string[],
-     *     errors: array<string, array<int, array<string, string>>>,
-     *     rules: array<string, mixed>
-     * }
+     * @return array{files: mixed, errors: mixed, rules: mixed}
      */
     private function fromJson(string $data): array
     {

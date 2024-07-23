@@ -20,7 +20,6 @@ use function in_array;
  */
 final class TwigCsFixerNormalizer implements NormalizerInterface
 {
-
     public function getSupportedFormats(): array
     {
         return [
@@ -39,13 +38,9 @@ final class TwigCsFixerNormalizer implements NormalizerInterface
     }
 
     /**
-     * @param array<string, Violation> $data
+     * @param array<string, list<Violation>> $data
      * @param array<string, mixed> $context Options available to the normalizer
-     * @return array{
-     *     files: string[],
-     *     errors: array<string, array<int, array<string, bool|int|string|null>>>,
-     *     rules: array<string, mixed>
-     * }
+     * @return array{files: mixed, errors: mixed, rules: mixed}
      */
     private function fromInternal(array $data, array $context): array
     {

@@ -44,11 +44,7 @@ final class PhpStanNormalizer implements NormalizerInterface
 
     /**
      * @param array<string, mixed> $context Options available to the normalizer
-     * @return array{
-     *     files: string[],
-     *     errors: array<string, array<int, array<string, bool|int|string|null>>>,
-     *     rules: array<string, mixed>
-     * }
+     * @return array{files: mixed, errors: mixed, rules: mixed}
      */
     private function fromInternal(AnalysisResult $analysisResult, array $context): array
     {
