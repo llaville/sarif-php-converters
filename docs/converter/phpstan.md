@@ -110,6 +110,6 @@ The SARIF report file `[*].sarif.json` is automagically recognized and interpret
 
 ![PHPStorm integration](../assets/images/phpstorm-phpstan.png)
 
-[example-folder]: https://github.com/llaville/sarif-php-sdk/blob/1.0/examples/phpstan/
+[example-folder]: https://github.com/llaville/sarif-php-converters/blob/1.0/examples/phpstan/
 [json-encode]: https://www.php.net/manual/en/function.json-encode
 [phpstan]: https://github.com/phpstan/phpstan

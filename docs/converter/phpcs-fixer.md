@@ -76,6 +76,6 @@ For example:
 
 ![sarif-web-phpcs-fixer](../assets/images/sarif-web-phpcs-fixer.png)
 
-[example-folder]: https://github.com/llaville/sarif-php-converters/blob/1.0/examples/php-cs-fixer/
+[example-folder]: https://github.com/llaville/sarif-php-converters/blob/1.0/examples/phpcs-fixer/
 [phpcs-fixer]: https://github.com/PHP-CS-Fixer/PHP-CS-Fixer
 [sarif-web-component]: https://github.com/Microsoft/sarif-web-component

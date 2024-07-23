@@ -122,6 +122,6 @@ For example:
 
 ![sarif-web-ecs](../assets/images/sarif-web-ecs.png)
 
-[example-folder]: https://github.com/llaville/sarif-php-sdk/blob/1.0/examples/ecs/
+[example-folder]: https://github.com/llaville/sarif-php-converters/blob/1.0/examples/ecs/
 [ecs]: https://github.com/easy-coding-standard/easy-coding-standard
 [sarif-web-component]: https://github.com/Microsoft/sarif-web-component

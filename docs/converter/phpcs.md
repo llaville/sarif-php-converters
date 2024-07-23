@@ -127,7 +127,6 @@ For example:
 
 ![sarif-web-phpcs](../assets/images/sarif-web-phpcs.png)
 
-
 [example-folder]: https://github.com/llaville/sarif-php-converters/blob/1.0/examples/phpcs/
 [json-encode]: https://www.php.net/manual/en/function.json-encode
 [phpcs]: https://github.com/PHPCSStandards/PHP_CodeSniffer

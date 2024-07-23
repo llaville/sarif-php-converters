@@ -132,6 +132,7 @@ For example:
 ![sarif-web-twig-cs-fixer](../assets/images/sarif-web-twig-cs-fixer.png)
 
 [example-folder]: https://github.com/llaville/sarif-php-sdk/blob/1.0/examples/twigcs-fixer/
+[json-encode]: https://www.php.net/manual/en/function.json-encode
 [twigcs-fixer]: https://github.com/VincentLanglet/Twig-CS-Fixer
 [sarif-web-component]: https://github.com/Microsoft/sarif-web-component
 [twigcs-fixer-custom-reporters]: https://github.com/VincentLanglet/Twig-CS-Fixer/blob/main/docs/configuration.md#custom-reporters

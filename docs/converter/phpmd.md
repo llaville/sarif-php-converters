@@ -74,6 +74,8 @@ php report-converter convert phpmd --input-format=checkstyle --input-file=exampl
 > * Without verbose option (`-v`) the Console Tool will print a compact SARIF version.
 > * `--output-file` option allows to write a copy of the report to a file. By default, the Console Tool will always print the specified report to the standard output.
 
+Alternative usage
+
 > [!NOTE]
 >
 > When PHPMD 3.0 will be [GA][general-availability], you can use this alternative
@@ -102,7 +104,7 @@ For example:
 
 ![sarif-web-phpmd](../assets/images/sarif-web-phpmd.png)
 
-[example-folder]: https://github.com/llaville/sarif-php-sdk/blob/1.0/examples/phpmd/
+[example-folder]: https://github.com/llaville/sarif-php-converters/blob/1.0/examples/phpmd/
 [phpmd]: https://github.com/phpmd/phpmd
 [sarif-web-component]: https://github.com/Microsoft/sarif-web-component
 [phpmd-bootstrap]: https://github.com/phpmd/phpmd/issues/1196

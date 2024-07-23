@@ -105,6 +105,6 @@ The SARIF report file `[*].sarif.json` is automagically recognized and interpret
 
 ![PHPStorm integration](../assets/images/phpstorm-phplint.png)
 
-[example-folder]: https://github.com/llaville/sarif-php-sdk/blob/1.0/examples/phplint/
+[example-folder]: https://github.com/llaville/sarif-php-converters/blob/1.0/examples/phplint/
 [json-encode]: https://www.php.net/manual/en/function.json-encode
 [phplint]: https://github.com/overtrue/phplint

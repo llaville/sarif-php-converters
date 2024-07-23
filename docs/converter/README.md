@@ -18,7 +18,6 @@
 | Psalm [official website][psalm]                |        [psalm](psalm.md)        |   required   |     ❌     |
 | Twig-CS-Fixer [official website][twigcs-fixer] | [twigcs-fixer](twigcs-fixer.md) |   optional   |     ✅     |
 
-
 [ecs]: https://github.com/easy-coding-standard/easy-coding-standard
 [phan]: https://github.com/phan/phan
 [phpcs]: https://github.com/PHPCSStandards/PHP_CodeSniffer

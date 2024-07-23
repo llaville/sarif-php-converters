@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD013 -->
+<!-- markdownlint-disable MD013 MD033 -->
 # SARIF PHP Converters
 
 [![StandWithUkraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://github.com/vshymanskyy/StandWithUkraine/blob/main/docs/README.md)
@@ -63,11 +63,11 @@ This library may be considered as a producer on `sarif` report format, for these
 | [Psalm][psalm]                      |   5.x   |   ✅   |     ✅      |   ✅   |           ✅            |   ✅    | console,checkstyle,json,junit,github,codeclimate,pylint,sonarqube,sarif |
 | [Twig-CS-Fixer][twigcs-fixer]       |  3.0.x  |   ❌   |     ✅      |   ✅   |           ❌            |   ✅    |                    null,text,checkstyle,junit,github                    |
 
-**Legend**
+Legend :
 
-*  ✅  indicate that support to the format is available
+* ✅ indicate that support to the format is available
 * (✅) indicate that support to the format is optional
-* ❌   indicate that support to the format is not yet available
+* ❌ indicate that support to the format is not yet available
 
 ## Documentation
 
