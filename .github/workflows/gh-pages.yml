@@ -1,0 +1,20 @@
+---
+name: GitHub-Pages
+
+on:
+    push:
+        branches:
+            - master
+            - "1.0"
+        paths:
+            - docs/**
+    pull_request:
+    workflow_dispatch:
+
+jobs:
+    deploy:
+        uses: llaville/.github/.github/workflows/gh-pages.yml@master
+        with:
+            destination-dir: "1.0"
+            force-orphan: false
+            hook-script: "resources/gh-pages-hook.sh"
