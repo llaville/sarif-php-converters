@@ -31,15 +31,9 @@ Until this feature is [GA][general-availability] into official PHPMD repository,
 
 ```json
 {
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/llaville/phpmd"
-        }
-    ],
     "minimum-stability": "dev",
     "require-dev": {
-        "phpmd/phpmd": "dev-feature/3.x-custom-renderer as 3.x-dev"
+        "phpmd/phpmd": "3.x-dev"
     }
 }
 ```
