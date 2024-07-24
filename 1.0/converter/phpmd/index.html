@@ -913,15 +913,9 @@ but the <code>Bartlett\Sarif\Converter\Reporter\PhpMdRenderer</code> class is re
 (<a href="https://github.com/phpmd/phpmd/issues/1196">Simplify load of external custom renderer</a>).</p>
 <p>Until this feature is <a href="https://en.wikipedia.org/wiki/Software_release_life_cycle">GA</a> into official PHPMD repository, you can use such <code>composer.json</code> requirements</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;repositories&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vcs&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://github.com/llaville/phpmd&quot;</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">],</span>
 <span class="w">    </span><span class="nt">&quot;minimum-stability&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dev&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;require-dev&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;phpmd/phpmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dev-feature/3.x-custom-renderer as 3.x-dev&quot;</span>
+<span class="w">        </span><span class="nt">&quot;phpmd/phpmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3.x-dev&quot;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
