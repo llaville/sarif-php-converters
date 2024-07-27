@@ -10,11 +10,13 @@
         <meta name="author" content="Laurent Laville">
       
       
-        <link rel="canonical" href="https://llaville.github.io/sarif-php-converters/guides/installation/">
+        <link rel="canonical" href="https://llaville.github.io/sarif-php-converters/converter/rector/">
       
       
-        <link rel="prev" href="../../converter/twigcs-fixer/">
+        <link rel="prev" href="../psalm/">
       
+      
+        <link rel="next" href="../twigcs-fixer/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +24,7 @@
     
     
       
-        <title>Installation - Sarif PHP Converters</title>
+        <title>Rector - Sarif PHP Converters</title>
       
     
     
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installation-guide" class="md-skip">
+        <a href="#rector-converter" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Installation
+              Rector
             
           </span>
         </div>
@@ -230,11 +232,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../converter/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -250,13 +254,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../guides/installation/" class="md-tabs__link">
           
   
     
@@ -338,6 +340,8 @@
       
   
   
+    
+  
   
   
     
@@ -370,19 +374,22 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../converter/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -393,13 +400,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Converter
@@ -415,7 +422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../converter/ecs/" class="md-nav__link">
+      <a href="../ecs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -436,7 +443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../converter/phan/" class="md-nav__link">
+      <a href="../phan/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -457,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../converter/phpcs-fixer/" class="md-nav__link">
+      <a href="../phpcs-fixer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -478,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../converter/phpcs/" class="md-nav__link">
+      <a href="../phpcs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -499,7 +506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../converter/phplint/" class="md-nav__link">
+      <a href="../phplint/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -520,7 +527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../converter/phpmd/" class="md-nav__link">
+      <a href="../phpmd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -541,7 +548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../converter/phpstan/" class="md-nav__link">
+      <a href="../phpstan/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -562,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../converter/psalm/" class="md-nav__link">
+      <a href="../psalm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -580,10 +587,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../converter/rector/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Rector
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -592,6 +619,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table Of Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learn-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learn more
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ide-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      IDE Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-sarif-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web SARIF viewer
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -604,7 +714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../converter/twigcs-fixer/" class="md-nav__link">
+      <a href="../twigcs-fixer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -629,10 +739,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -641,20 +749,17 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -665,7 +770,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Guides
@@ -676,30 +781,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Installation
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../guides/installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -708,71 +793,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Requirements
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#phar" class="md-nav__link">
-    <span class="md-ellipsis">
-      PHAR
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#phive" class="md-nav__link">
-    <span class="md-ellipsis">
-      Phive
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#composer" class="md-nav__link">
-    <span class="md-ellipsis">
-      Composer
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#git" class="md-nav__link">
-    <span class="md-ellipsis">
-      Git
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -812,6 +832,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table Of Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#requirements" class="md-nav__link">
     <span class="md-ellipsis">
       Requirements
@@ -821,36 +850,45 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#phar" class="md-nav__link">
+  <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
-      PHAR
+      Installation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#phive" class="md-nav__link">
+  <a href="#usage" class="md-nav__link">
     <span class="md-ellipsis">
-      Phive
+      Usage
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#composer" class="md-nav__link">
+  <a href="#learn-more" class="md-nav__link">
     <span class="md-ellipsis">
-      Composer
+      Learn more
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#git" class="md-nav__link">
+  <a href="#ide-integration" class="md-nav__link">
     <span class="md-ellipsis">
-      Git
+      IDE Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-sarif-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web SARIF viewer
     </span>
   </a>
   
@@ -872,59 +910,69 @@
 
 
 <!-- markdownlint-disable MD013 -->
-<h1 id="installation-guide">Installation Guide</h1>
+<h1 id="rector-converter">Rector Converter</h1>
+<p><a href="https://github.com/rectorphp/rector"><img alt="rectorphp/rector - GitHub" src="https://gh-card.dev/repos/rectorphp/rector.svg?fullname=" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Available since version 1.0.0</p>
+</div>
+<h2 id="table-of-contents">Table Of Contents</h2>
 <ol>
 <li><a href="#requirements">Requirements</a></li>
-<li><a href="#phar">PHAR</a></li>
-<li><a href="#phive">Phive</a></li>
-<li><a href="#composer">Composer</a></li>
-<li><a href="#git">Git</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#learn-more">Learn more</a></li>
+<li><a href="#ide-integration">IDE Integration</a></li>
+<li><a href="#web-sarif-viewer">Web SARIF viewer</a></li>
 </ol>
+<p><img alt="rector converter" src="../../assets/images/converter-rector.graphviz.svg" /></p>
 <h2 id="requirements">Requirements</h2>
 <ul>
-<li>PHP 7.4 or greater</li>
-<li>ext-json</li>
-<li>ext-pcre</li>
-<li>ext-spl</li>
+<li><a href="https://github.com/rectorphp/rector">Rector</a> requires PHP version 7.2.0 or greater, with <code>phpstan</code> 1.11 or greater</li>
+<li>This SARIF converter requires at least Rector version 1.0</li>
 </ul>
-<h2 id="phar">PHAR</h2>
-<p>The preferred method of installation is to use the PHAR version which can be downloaded from the most recent
-<a href="https://github.com/llaville/sarif-php-converters/releases/">Github Release</a>. This method ensures you will not have any dependency conflict issue.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>When you want to use, load autoloader as follows :</p>
-<div class="highlight"><pre><span></span><code><span class="x">require_once &#39;phar://&#39; . &#39;/absolute/path/to&#39; . &#39;/sarif-php-converters.phar/vendor/autoload.php&#39;;</span>
+<h2 id="installation">Installation</h2>
+<div class="highlight"><pre><span></span><code>composer<span class="w"> </span>require<span class="w"> </span>--dev<span class="w"> </span>rector/rector<span class="w"> </span>bartlett/sarif-php-converters
 </code></pre></div>
+<h2 id="usage">Usage</h2>
+<p><strong>Step 1:</strong> Update your <code>rector.php</code> configuration file</p>
+<p>Register at least the <code>RectorFormatter</code> service to be able to specify <code>--output-format sarif</code> with rector command.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">use</span> <span class="nx">Bartlett\Sarif\Converter\Reporter\RectorFormatter</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Rector\ChangesReporting\Contract\Output\OutputFormatterInterface</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Rector\Config\RectorConfig</span><span class="p">;</span>
+
+<span class="k">return</span> <span class="nx">RectorConfig</span><span class="o">::</span><span class="na">configure</span><span class="p">()</span>
+    <span class="o">-&gt;</span><span class="na">withPaths</span><span class="p">([</span>
+        <span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/src&#39;</span><span class="p">,</span>
+    <span class="p">])</span>
+    <span class="o">-&gt;</span><span class="na">withPreparedSets</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">withRealPathReporting</span><span class="p">()</span>
+    <span class="o">-&gt;</span><span class="na">withBootstrapFiles</span><span class="p">([</span><span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/../../vendor/autoload.php&#39;</span><span class="p">])</span> <span class="c1">// loader for Sarif PHP Converters classes</span>
+    <span class="o">-&gt;</span><span class="na">registerService</span><span class="p">(</span><span class="nx">RectorFormatter</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="nx">OutputFormatterInterface</span><span class="o">::</span><span class="na">class</span><span class="p">)</span>
+<span class="p">;</span>
+</code></pre></div>
+<p><strong>Step 2:</strong> Then print the SARIF report</p>
+<div class="highlight"><pre><span></span><code>vendor/bin/rector<span class="w"> </span>process<span class="w"> </span>--dry-run<span class="w">  </span>--output-format<span class="w"> </span>sarif<span class="w"> </span>--config<span class="w"> </span>/path/to/rector.php<span class="w"> </span>&gt;<span class="w"> </span>.sarif.json
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Be sure to specify <code>withRealPathReporting</code>, otherwise the Console Tool <code>convert</code> command
+will raise some warnings about file names.
+Requires at least <a href="https://github.com/rectorphp/rector/issues/8757">feature</a> is implemented in a future Rector release.</p>
 </div>
-<h2 id="phive">Phive</h2>
-<p>You can install application globally with <a href="https://github.com/phar-io/phive">Phive</a></p>
-<div class="highlight"><pre><span></span><code>phive<span class="w"> </span>install<span class="w"> </span>llaville/sarif-php-converters<span class="w"> </span>--force-accept-unsigned
-</code></pre></div>
-<p>To upgrade global installation of the application use the following command:</p>
-<div class="highlight"><pre><span></span><code>phive<span class="w"> </span>update<span class="w"> </span>llaville/sarif-php-converters<span class="w"> </span>--force-accept-unsigned
-</code></pre></div>
-<p>You can also install application locally to your project with <a href="https://github.com/phar-io/phive">Phive</a> and configuration file <code>.phive/phars.xml</code></p>
-<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="nt">&lt;phive</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;https://phar.io/phive&quot;</span><span class="nt">&gt;</span>
-<span class="w">    </span><span class="nt">&lt;phar</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;llaville/sarif-php-converters&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;^1.0&quot;</span><span class="w"> </span><span class="na">copy=</span><span class="s">&quot;false&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="nt">&lt;/phive&gt;</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>phive<span class="w"> </span>install<span class="w"> </span>--force-accept-unsigned
-</code></pre></div>
-<h2 id="composer">Composer</h2>
-<p>The recommended way to install this library is <a href="https://getcomposer.org">through composer</a>.
-If you don't know yet what is composer, have a look <a href="http://getcomposer.org/doc/00-intro.md">on introduction</a>.</p>
-<div class="highlight"><pre><span></span><code>composer<span class="w"> </span>require<span class="w"> </span>bartlett/sarif-php-converters<span class="w"> </span>^1.0
-</code></pre></div>
-<p>If you cannot install it because of a dependency conflict, or you prefer to install it for your project, we recommend
-you to take a look at <a href="https://github.com/bamarni/composer-bin-plugin">bamarni/composer-bin-plugin</a>. Example:</p>
-<div class="highlight"><pre><span></span><code>composer<span class="w"> </span>require<span class="w"> </span>--dev<span class="w"> </span>bamarni/composer-bin-plugin
-composer<span class="w"> </span>bin<span class="w"> </span>sarif-converters<span class="w"> </span>require<span class="w"> </span>--dev<span class="w"> </span>bartlett/sarif-php-converters
-</code></pre></div>
-<h2 id="git">Git</h2>
-<p>The SARIF PHP Converters can be directly used from <a href="https://github.com/llaville/sarif-php-converters.git">GitHub</a> by cloning the repository into a directory of your choice.</p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>-b<span class="w"> </span><span class="m">1</span>.0<span class="w"> </span>https://github.com/llaville/sarif-php-converters.git
-</code></pre></div>
+<h2 id="learn-more">Learn more</h2>
+<ul>
+<li>See demo <a href="https://github.com/llaville/sarif-php-converters/blob/1.0/examples/rector/"><code>examples/rector/</code></a> directory into this repository.</li>
+</ul>
+<h2 id="ide-integration">IDE Integration</h2>
+<p>The SARIF report file <code>[*].sarif.json</code> is automagically recognized and interpreted by PhpStorm (2024).</p>
+<p><img alt="PHPStorm integration" src="../../assets/images/phpstorm-rector.png" /></p>
+<h2 id="web-sarif-viewer">Web SARIF viewer</h2>
+<p>With the <a href="https://github.com/Microsoft/sarif-web-component">React based component</a>, you are able to explore a sarif report file previously generated.</p>
+<p>For example:</p>
+<p><img alt="sarif-web-rector" src="../assets/images/sarif-web-rector.png" /></p>
 
 
 

@@ -122,8 +122,8 @@
 <!-- symfony/console -->
 <g id="node13" class="node">
 <title>symfony/console</title>
-<path fill="#eeeeee" stroke="black" d="M641.47,-166C641.47,-166 477.47,-166 477.47,-166 471.47,-166 465.47,-160 465.47,-154 465.47,-154 465.47,-142 465.47,-142 465.47,-136 471.47,-130 477.47,-130 477.47,-130 641.47,-130 641.47,-130 647.47,-130 653.47,-136 653.47,-142 653.47,-142 653.47,-154 653.47,-154 653.47,-160 647.47,-166 641.47,-166"/>
-<text text-anchor="middle" x="559.47" y="-144.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">symfony/console: v6.4.9</text>
+<path fill="#eeeeee" stroke="black" d="M645.97,-166C645.97,-166 472.97,-166 472.97,-166 466.97,-166 460.97,-160 460.97,-154 460.97,-154 460.97,-142 460.97,-142 460.97,-136 466.97,-130 472.97,-130 472.97,-130 645.97,-130 645.97,-130 651.97,-130 657.97,-136 657.97,-142 657.97,-142 657.97,-154 657.97,-154 657.97,-160 651.97,-166 645.97,-166"/>
+<text text-anchor="middle" x="559.47" y="-144.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">symfony/console: v6.4.10</text>
 </g>
 <!-- bartlett/sarif&#45;php&#45;converters&#45;&gt;symfony/console -->
 <g id="edge23" class="edge">
@@ -216,7 +216,7 @@
 <!-- symfony/console&#45;&gt;php -->
 <g id="edge18" class="edge">
 <title>symfony/console&#45;&gt;php</title>
-<path fill="none" stroke="#1a2833" d="M653.49,-155.92C712.65,-165.85 786.43,-188.14 831.97,-238 855.68,-263.95 824.42,-290.88 849.97,-315 881.67,-344.91 934,-348.08 969.09,-346.19"/>
+<path fill="none" stroke="#1a2833" d="M658.09,-156.71C716.43,-167.02 787.6,-189.42 831.97,-238 855.68,-263.95 824.42,-290.88 849.97,-315 881.67,-344.91 934,-348.08 969.09,-346.19"/>
 <polygon fill="#1a2833" stroke="#1a2833" points="969.66,-349.66 979.39,-345.46 969.17,-342.67 969.66,-349.66"/>
 <text text-anchor="middle" x="793.97" y="-241" font-family="Times,serif" font-size="10.00" fill="#767676">&gt;=8.1</text>
 </g>
@@ -242,8 +242,8 @@
 <!-- symfony/console&#45;&gt;symfony/polyfill&#45;mbstring -->
 <g id="edge20" class="edge">
 <title>symfony/console&#45;&gt;symfony/polyfill&#45;mbstring</title>
-<path fill="none" stroke="#1a2833" d="M653.49,-154.69C714.93,-159.11 796.57,-164.98 865.76,-169.95"/>
-<polygon fill="#1a2833" stroke="#1a2833" points="865.65,-173.45 875.88,-170.68 866.15,-166.47 865.65,-173.45"/>
+<path fill="none" stroke="#1a2833" d="M658.13,-155.02C718.97,-159.4 798.22,-165.1 865.66,-169.95"/>
+<polygon fill="#1a2833" stroke="#1a2833" points="865.72,-173.46 875.94,-170.69 866.22,-166.48 865.72,-173.46"/>
 <text text-anchor="middle" x="793.97" y="-170" font-family="Times,serif" font-size="10.00" fill="#767676">~1.0</text>
 </g>
 <!-- symfony/service&#45;contracts -->
@@ -255,21 +255,21 @@
 <!-- symfony/console&#45;&gt;symfony/service&#45;contracts -->
 <g id="edge21" class="edge">
 <title>symfony/console&#45;&gt;symfony/service&#45;contracts</title>
-<path fill="none" stroke="#1a2833" d="M653.94,-142.51C686.25,-140.67 722.7,-138.67 755.97,-137 792.19,-135.18 831.38,-133.38 867.72,-131.77"/>
+<path fill="none" stroke="#1a2833" d="M658.16,-142.27C689.41,-140.5 724.14,-138.6 755.97,-137 792.19,-135.18 831.38,-133.38 867.72,-131.77"/>
 <polygon fill="#1a2833" stroke="#1a2833" points="868.06,-135.26 877.89,-131.33 867.75,-128.27 868.06,-135.26"/>
 <text text-anchor="middle" x="793.97" y="-140" font-family="Times,serif" font-size="10.00" fill="#767676">^2.5|^3</text>
 </g>
 <!-- symfony/string -->
 <g id="node17" class="node">
 <title>symfony/string</title>
-<path fill="#eeeeee" stroke="black" d="M1082.97,-90C1082.97,-90 929.97,-90 929.97,-90 923.97,-90 917.97,-84 917.97,-78 917.97,-78 917.97,-66 917.97,-66 917.97,-60 923.97,-54 929.97,-54 929.97,-54 1082.97,-54 1082.97,-54 1088.97,-54 1094.97,-60 1094.97,-66 1094.97,-66 1094.97,-78 1094.97,-78 1094.97,-84 1088.97,-90 1082.97,-90"/>
-<text text-anchor="middle" x="1006.47" y="-68.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">symfony/string: v6.4.9</text>
+<path fill="#eeeeee" stroke="black" d="M1087.47,-90C1087.47,-90 925.47,-90 925.47,-90 919.47,-90 913.47,-84 913.47,-78 913.47,-78 913.47,-66 913.47,-66 913.47,-60 919.47,-54 925.47,-54 925.47,-54 1087.47,-54 1087.47,-54 1093.47,-54 1099.47,-60 1099.47,-66 1099.47,-66 1099.47,-78 1099.47,-78 1099.47,-84 1093.47,-90 1087.47,-90"/>
+<text text-anchor="middle" x="1006.47" y="-68.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">symfony/string: v6.4.10</text>
 </g>
 <!-- symfony/console&#45;&gt;symfony/string -->
 <g id="edge22" class="edge">
 <title>symfony/console&#45;&gt;symfony/string</title>
-<path fill="none" stroke="#1a2833" d="M653.49,-132.11C727.98,-119.39 832.18,-101.6 907.86,-88.67"/>
-<polygon fill="#1a2833" stroke="#1a2833" points="908.61,-92.09 917.88,-86.96 907.43,-85.19 908.61,-92.09"/>
+<path fill="none" stroke="#1a2833" d="M658.13,-131.32C730.7,-118.93 829.48,-102.06 903.14,-89.48"/>
+<polygon fill="#1a2833" stroke="#1a2833" points="904.1,-92.86 913.37,-87.73 902.92,-85.96 904.1,-92.86"/>
 <text text-anchor="middle" x="793.97" y="-118" font-family="Times,serif" font-size="10.00" fill="#767676">^5.4|^6.0|^7.0</text>
 </g>
 </g>
