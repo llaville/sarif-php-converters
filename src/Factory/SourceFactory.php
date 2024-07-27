@@ -42,6 +42,8 @@ final class SourceFactory implements SourceFactoryInterface
                 return $this->createStan($normalizers);
             case SourceFactoryInterface::BUILTIN_SOURCE_PSALM:
                 return $this->createPsalm($normalizers);
+            case SourceFactoryInterface::BUILTIN_SOURCE_RECTOR:
+                return $this->createRector($normalizers);
             case SourceFactoryInterface::BUILTIN_SOURCE_TWIG_CS_FIXER:
                 return $this->createTwigCsFixer($normalizers);
         }
@@ -136,6 +138,16 @@ final class SourceFactory implements SourceFactoryInterface
         $normalizers = (array) $normalizers;
         $normalizers[] = new Normalizer\PsalmNormalizer();
         return new Source\PsalmSource($normalizers);
+    }
+
+    /**
+     * @param iterable<NormalizerInterface> $normalizers
+     */
+    public function createRector(iterable $normalizers): SourceInterface
+    {
+        $normalizers = (array) $normalizers;
+        $normalizers[] = new Normalizer\RectorNormalizer();
+        return new Source\RectorSource($normalizers);
     }
 
     /**

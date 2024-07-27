@@ -16,6 +16,7 @@
 | PHP Mess Detector [official website][phpmd]    |        [phpmd](phpmd.md)        |   required   |     ❌     |
 | PHPStan [official website][phpstan]            |      [phpstan](phpstan.md)      |   optional   |     ✅     |
 | Psalm [official website][psalm]                |        [psalm](psalm.md)        |   required   |     ❌     |
+| Rector [official website][rector]              |       [rector](rector.md)       |   optional   |     ✅     |
 | Twig-CS-Fixer [official website][twigcs-fixer] | [twigcs-fixer](twigcs-fixer.md) |   optional   |     ✅     |
 
 [ecs]: https://github.com/easy-coding-standard/easy-coding-standard
@@ -26,4 +27,5 @@
 [phpmd]: https://github.com/phpmd/phpmd
 [phpstan]: https://github.com/phpstan/phpstan
 [psalm]: https://github.com/vimeo/psalm
+[rector]: https://github.com/rectorphp/rector
 [twigcs-fixer]: https://github.com/VincentLanglet/Twig-CS-Fixer

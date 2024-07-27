@@ -1,0 +1,10 @@
+{
+    "require-dev": {
+        "rector/rector": "^1.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "rector/extension-installer": false
+        }
+    }
+}
