@@ -29,7 +29,7 @@ use function trim;
  * @author Laurent Laville
  * @since Release 1.0.0
  */
-final class PhpMdNormalizer implements NormalizerInterface
+final class PhpMdNormalizer extends AbstractNormalizer
 {
     public function getSupportedFormats(): array
     {
@@ -57,7 +57,7 @@ final class PhpMdNormalizer implements NormalizerInterface
         }
 
         // internal format (legacy)
-        return new ArrayObject($this->fromInternal($data));
+        return new ArrayObject($this->fromInternal($data, $context));
     }
 
     /**
@@ -134,13 +134,15 @@ final class PhpMdNormalizer implements NormalizerInterface
     }
 
     /**
-     * @return array{files: mixed, errors: mixed, rules: mixed}
+     * @inheritDoc
      */
-    private function fromInternal(Report $report): array
+    protected function fromInternal($data, array $context, array $mapping = []): array
     {
         $files = [];
         $errors = [];
         $rules = [];
+
+        $report = $data;
 
         /** @var RuleViolation[] $violations */
         $violations = $report->getRuleViolations();

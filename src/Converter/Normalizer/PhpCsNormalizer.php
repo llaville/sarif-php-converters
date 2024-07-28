@@ -18,7 +18,7 @@ use function json_decode;
  * @author Laurent Laville
  * @since Release 1.0.0
  */
-final class PhpCsNormalizer implements NormalizerInterface
+final class PhpCsNormalizer extends AbstractNormalizer
 {
     public function getSupportedFormats(): array
     {
@@ -50,15 +50,13 @@ final class PhpCsNormalizer implements NormalizerInterface
         }
 
         // internal format (legacy)
-        return new ArrayObject($this->fromInternal($data, $mapping));
+        return new ArrayObject($this->fromInternal($data, $context, $mapping));
     }
 
     /**
-     * @param array<string, array<int, mixed>|string> $data
-     * @param array<string, string> $mapping
-     * @return array{totals: array<string, int>, files: mixed, errors: mixed, rules: mixed}
+     * @inheritDoc
      */
-    private function fromInternal(array $data, array $mapping): array
+    protected function fromInternal($data, array $context, array $mapping = []): array
     {
         $filename = $data['filename'];
         $errors = [];

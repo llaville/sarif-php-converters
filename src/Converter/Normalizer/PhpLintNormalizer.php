@@ -7,8 +7,6 @@
  */
 namespace Bartlett\Sarif\Converter\Normalizer;
 
-use Bartlett\Sarif\Contract\NormalizerInterface;
-
 use ArrayObject;
 use function array_keys;
 use function in_array;
@@ -17,15 +15,8 @@ use function in_array;
  * @author Laurent Laville
  * @since Release 1.0.0
  */
-final class PhpLintNormalizer implements NormalizerInterface
+final class PhpLintNormalizer extends AbstractNormalizer
 {
-    public function getSupportedFormats(): array
-    {
-        return [
-            NormalizerInterface::FORMAT_INTERNAL,
-        ];
-    }
-
     public function normalize($data, string $format, array $context): ?ArrayObject
     {
         if (!in_array($format, $this->getSupportedFormats())) {
@@ -39,16 +30,13 @@ final class PhpLintNormalizer implements NormalizerInterface
         ];
 
         // internal format (legacy)
-        return new ArrayObject($this->fromInternal($data, $mapping, $context));
+        return new ArrayObject($this->fromInternal($data, $context, $mapping));
     }
 
     /**
-     * @param array<string, mixed> $data
-     * @param array<string, string> $mapping
-     * @param array<string, mixed> $context Options available to the normalizer
-     * @return array{files: mixed, errors: mixed, rules: mixed}
+     * @inheritDoc
      */
-    private function fromInternal(array $data, array $mapping, array $context): array
+    protected function fromInternal($data, array $context, array $mapping = []): array
     {
         $ruleId = $context['rulePrefix'] . '101';
 

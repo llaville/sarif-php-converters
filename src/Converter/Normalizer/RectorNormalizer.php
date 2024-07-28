@@ -7,8 +7,6 @@
  */
 namespace Bartlett\Sarif\Converter\Normalizer;
 
-use Bartlett\Sarif\Contract\NormalizerInterface;
-
 use Rector\Contract\Rector\ConfigurableRectorInterface;
 use Rector\Contract\Rector\RectorInterface;
 use Rector\ValueObject\ProcessResult;
@@ -30,16 +28,9 @@ use function strtolower;
  * @author Laurent Laville
  * @since Release 1.0.0
  */
-final class RectorNormalizer implements NormalizerInterface
+final class RectorNormalizer extends AbstractNormalizer
 {
     public const URI_PATTERN = 'https://github.com/rectorphp/rector/blob/main/docs/rector_rules_overview.md#%s';
-
-    public function getSupportedFormats(): array
-    {
-        return [
-            NormalizerInterface::FORMAT_INTERNAL,
-        ];
-    }
 
     public function normalize($data, string $format, array $context): ?ArrayObject
     {
@@ -56,13 +47,15 @@ final class RectorNormalizer implements NormalizerInterface
     }
 
     /**
-     * @return array{files: mixed, errors: mixed, rules: mixed}
+     * @inheritDoc
      */
-    private function fromInternal(ProcessResult $processResult, array $context): array
+    protected function fromInternal($data, array $context, array $mapping = []): array
     {
         $files = [];
         $errors = [];
         $rules = [];
+
+        $processResult = $data;
 
         $fileDiffs = $processResult->getFileDiffs();
 
@@ -70,7 +63,7 @@ final class RectorNormalizer implements NormalizerInterface
             $filePath = $fileDiff->getAbsoluteFilePath();
             $files[] = $filePath;
 
-            foreach($fileDiff->getRectorClasses() as $rectorClass) {
+            foreach ($fileDiff->getRectorClasses() as $rectorClass) {
                 // e.g: Rector\DeadCode\Rector\ClassMethod\RemoveUnusedPrivateMethodParameterRector
                 $nameParts = explode('\\', $rectorClass);
 

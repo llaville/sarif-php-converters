@@ -7,54 +7,10 @@
  */
 namespace Bartlett\Sarif\Converter\Normalizer;
 
-use Bartlett\Sarif\Contract\NormalizerInterface;
-
-use ArrayObject;
-use function in_array;
-
 /**
  * @author Laurent Laville
  * @since Release 1.0.0
  */
-final class PhanNormalizer implements NormalizerInterface
+final class PhanNormalizer extends AbstractNormalizer
 {
-    public function getSupportedFormats(): array
-    {
-        return [
-            NormalizerInterface::FORMAT_CHECKSTYLE,
-            NormalizerInterface::FORMAT_INTERNAL,
-        ];
-    }
-
-    public function normalize($data, string $format, array $context): ?ArrayObject
-    {
-        if (!in_array($format, $this->getSupportedFormats())) {
-            return null;
-        }
-
-        $mapping = [
-
-        ];
-
-        // internal format (legacy)
-        return new ArrayObject($this->fromInternal($data, $mapping));
-    }
-
-    /**
-     * @param mixed $data
-     * @param array<string, string> $mapping
-     * @return array{files: mixed, errors: mixed, rules: mixed}
-     */
-    private function fromInternal($data, array $mapping): array
-    {
-        $files = [];
-        $errors = [];
-        $rules = [];
-
-        return [
-            'files' => $files,
-            'errors' => $errors,
-            'rules' => $rules,
-        ];
-    }
 }

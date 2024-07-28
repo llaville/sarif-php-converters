@@ -7,42 +7,18 @@
  */
 namespace Bartlett\Sarif\Converter\Normalizer;
 
-use Bartlett\Sarif\Contract\NormalizerInterface;
-
 use TwigCsFixer\Report\Violation;
-
-use ArrayObject;
-use function in_array;
 
 /**
  * @author Laurent Laville
  * @since Release 1.0.0
  */
-final class TwigCsFixerNormalizer implements NormalizerInterface
+final class TwigCsFixerNormalizer extends AbstractNormalizer
 {
-    public function getSupportedFormats(): array
-    {
-        return [
-            NormalizerInterface::FORMAT_INTERNAL,
-        ];
-    }
-
-    public function normalize($data, string $format, array $context): ?ArrayObject
-    {
-        if (!in_array($format, $this->getSupportedFormats())) {
-            return null;
-        }
-
-        // internal format (legacy)
-        return new ArrayObject($this->fromInternal($data, $context));
-    }
-
     /**
-     * @param array<string, list<Violation>> $data
-     * @param array<string, mixed> $context Options available to the normalizer
-     * @return array{files: mixed, errors: mixed, rules: mixed}
+     * @inheritDoc
      */
-    private function fromInternal(array $data, array $context): array
+    protected function fromInternal($data, array $context, array $mapping = []): array
     {
         $files = [];
         $errors = [];

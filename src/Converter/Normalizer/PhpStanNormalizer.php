@@ -7,8 +7,6 @@
  */
 namespace Bartlett\Sarif\Converter\Normalizer;
 
-use Bartlett\Sarif\Contract\NormalizerInterface;
-
 use PHPStan\Command\AnalysisResult;
 
 use ArrayObject;
@@ -19,15 +17,8 @@ use function in_array;
  * @author Laurent Laville
  * @since Release 1.0.0
  */
-final class PhpStanNormalizer implements NormalizerInterface
+final class PhpStanNormalizer extends AbstractNormalizer
 {
-    public function getSupportedFormats(): array
-    {
-        return [
-            NormalizerInterface::FORMAT_INTERNAL,
-        ];
-    }
-
     public function normalize($data, string $format, array $context): ?ArrayObject
     {
         if (!in_array($format, $this->getSupportedFormats())) {
@@ -43,13 +34,14 @@ final class PhpStanNormalizer implements NormalizerInterface
     }
 
     /**
-     * @param array<string, mixed> $context Options available to the normalizer
-     * @return array{files: mixed, errors: mixed, rules: mixed}
+     * @inheritDoc
      */
-    private function fromInternal(AnalysisResult $analysisResult, array $context): array
+    protected function fromInternal($data, array $context, array $mapping = []): array
     {
         $files = [];
         $errors = [];
+
+        $analysisResult = $data;
 
         $ruleId = $context['rulePrefix'] . '101';
 
