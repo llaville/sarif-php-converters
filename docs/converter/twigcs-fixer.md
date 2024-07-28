@@ -32,7 +32,7 @@ composer require --dev vincentlanglet/twig-cs-fixer bartlett/sarif-php-converter
 ## Usage
 
 ```shell
-vendor/bin/twigcs-fixer lint /path/to/source --report sarif --config .twig-cs-fixer.dist.php
+vendor/bin/twig-cs-fixer lint /path/to/source --report sarif --config .twig-cs-fixer.dist.php
 ```
 
 > [!TIP]
@@ -85,7 +85,7 @@ class MyTwigCsFixerReporter extends TwigCsFixerReporter
 **Step 2:** And finally, print the SARIF report
 
 ```shell
-vendor/bin/twigcs-fixer lint /path/to/source --report sarif --config .twig-cs-fixer.php
+vendor/bin/twig-cs-fixer lint /path/to/source --report sarif --config .twig-cs-fixer.php
 ```
 
 > [!TIP]
@@ -99,7 +99,7 @@ If you prefer to convert from a [format supported natively][[twigcs-fixer-custom
 **Step 1:** Build the checkstyle output report
 
 ```shell
-vendor/bin/twigcs-fixer lint /path/to/source --report checkstyle
+vendor/bin/twig-cs-fixer lint /path/to/source --report checkstyle
 ```
 
 **Step 2:** And finally, convert it to SARIF with the **Console Tool**

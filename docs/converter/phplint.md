@@ -87,7 +87,7 @@ vendor/bin/phplint --format=checkstyle --output=checkstyle.xml /path/to/source/c
 **Step 2:** And finally, convert it to SARIF with the **Console Tool**
 
 ```shell
-report-converter convert phplint --input-format=checkstyle --input-file=examples/phplint/checkstyle.xml -v
+php report-converter convert phplint --input-format=checkstyle --input-file=examples/phplint/checkstyle.xml -v
 ```
 
 > [!TIP]

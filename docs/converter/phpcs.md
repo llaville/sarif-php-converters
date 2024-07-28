@@ -75,9 +75,8 @@ class MyPhpCsReport extends PhpCsReport
 {
     public function __construct()
     {
-        // enable pretty print flag
-        parent::__construct(new PhpCsConverter(null, true));
-    }
+         parent::__construct(new PhpCsConverter(['format_output' => true]));
+   }
 }
 ```
 
