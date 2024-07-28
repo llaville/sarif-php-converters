@@ -1031,9 +1031,8 @@ does not use whitespace in returned data to format it.</p>
 <span class="x">{</span>
 <span class="x">    public function __construct()</span>
 <span class="x">    {</span>
-<span class="x">        // enable pretty print flag</span>
-<span class="x">        parent::__construct(new PhpCsConverter(null, true));</span>
-<span class="x">    }</span>
+<span class="x">         parent::__construct(new PhpCsConverter([&#39;format_output&#39; =&gt; true]));</span>
+<span class="x">   }</span>
 <span class="x">}</span>
 </code></pre></div>
 <p><strong>Step 2:</strong> And finally, print the SARIF report</p>

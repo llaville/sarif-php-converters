@@ -1001,7 +1001,7 @@
 <div class="highlight"><pre><span></span><code>composer<span class="w"> </span>require<span class="w"> </span>--dev<span class="w"> </span>vincentlanglet/twig-cs-fixer<span class="w"> </span>bartlett/sarif-php-converters
 </code></pre></div>
 <h2 id="usage">Usage</h2>
-<div class="highlight"><pre><span></span><code>vendor/bin/twigcs-fixer<span class="w"> </span>lint<span class="w"> </span>/path/to/source<span class="w"> </span>--report<span class="w"> </span>sarif<span class="w"> </span>--config<span class="w"> </span>.twig-cs-fixer.dist.php
+<div class="highlight"><pre><span></span><code>vendor/bin/twig-cs-fixer<span class="w"> </span>lint<span class="w"> </span>/path/to/source<span class="w"> </span>--report<span class="w"> </span>sarif<span class="w"> </span>--config<span class="w"> </span>.twig-cs-fixer.dist.php
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -1040,7 +1040,7 @@ does not use whitespace in returned data to format it.</p>
 <span class="p">}</span>
 </code></pre></div>
 <p><strong>Step 2:</strong> And finally, print the SARIF report</p>
-<div class="highlight"><pre><span></span><code>vendor/bin/twigcs-fixer<span class="w"> </span>lint<span class="w"> </span>/path/to/source<span class="w"> </span>--report<span class="w"> </span>sarif<span class="w"> </span>--config<span class="w"> </span>.twig-cs-fixer.php
+<div class="highlight"><pre><span></span><code>vendor/bin/twig-cs-fixer<span class="w"> </span>lint<span class="w"> </span>/path/to/source<span class="w"> </span>--report<span class="w"> </span>sarif<span class="w"> </span>--config<span class="w"> </span>.twig-cs-fixer.php
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -1049,7 +1049,7 @@ does not use whitespace in returned data to format it.</p>
 <h3 id="optional-use-the-console-tool-as-alternative">(optional) Use the Console Tool as alternative</h3>
 <p>If you prefer to convert from a [format supported natively][[twigcs-fixer-custom-reporters]] by Twig-CS-Fixer, then :</p>
 <p><strong>Step 1:</strong> Build the checkstyle output report</p>
-<div class="highlight"><pre><span></span><code>vendor/bin/twigcs-fixer<span class="w"> </span>lint<span class="w"> </span>/path/to/source<span class="w"> </span>--report<span class="w"> </span>checkstyle
+<div class="highlight"><pre><span></span><code>vendor/bin/twig-cs-fixer<span class="w"> </span>lint<span class="w"> </span>/path/to/source<span class="w"> </span>--report<span class="w"> </span>checkstyle
 </code></pre></div>
 <p><strong>Step 2:</strong> And finally, convert it to SARIF with the <strong>Console Tool</strong></p>
 <div class="highlight"><pre><span></span><code>php<span class="w"> </span>report-converter<span class="w"> </span>convert<span class="w"> </span>twigcs-fixer<span class="w"> </span>--input-format<span class="o">=</span>checkstyle<span class="w"> </span>--input-file<span class="o">=</span>examples/twigcs-fixer/checkstyle.xml<span class="w"> </span>-v

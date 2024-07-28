@@ -991,7 +991,7 @@ does not use whitespace in returned data to format it.</p>
 <span class="p">{</span>
     <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nx">bool</span> <span class="nv">$prettyPrint</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="p">(</span><span class="k">new</span> <span class="nx">PhpStanConverter</span><span class="p">(</span><span class="k">null</span> <span class="p">,</span> <span class="nv">$prettyPrint</span><span class="p">));</span>
+        <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="p">(</span><span class="k">new</span> <span class="nx">PhpStanConverter</span><span class="p">([</span><span class="s1">&#39;format_output&#39;</span> <span class="o">=&gt;</span> <span class="nv">$prettyPrint</span><span class="p">]));</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>

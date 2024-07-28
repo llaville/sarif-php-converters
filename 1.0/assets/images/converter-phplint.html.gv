@@ -140,6 +140,15 @@ digraph {
     "Bartlett\\Sarif\\Converter\\Normalizer\\PhpLintNormalizer" [shape="none" label=<
 <table cellspacing="0" border="0" cellborder="1">
     <tr><td bgcolor="#eeeeee"><b><br/>PhpLintNormalizer</b></td></tr>
+    <tr><td></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ normalize(data, format : string, context : array) : ?ArrayObject</td></tr>
+    <tr><td align="left"># fromInternal(data, context : array, mapping : array = []) : array</td></tr>
+</table></td></tr>
+</table>>]
+    "Bartlett\\Sarif\\Converter\\Normalizer\\AbstractNormalizer" [shape="none" label=<
+<table cellspacing="0" border="0" cellborder="1">
+    <tr><td bgcolor="#eeeeee"><b>«abstract»<br/>AbstractNormalizer</b></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
     <tr><td align="left">+ «static» FORMAT_SARIF : string = "sarif" {readOnly}</td></tr>
     <tr><td align="left">+ «static» FORMAT_JSON : string = "json" {readOnly}</td></tr>
@@ -151,7 +160,7 @@ digraph {
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
     <tr><td align="left">+ getSupportedFormats() : array</td></tr>
     <tr><td align="left">+ normalize(data, format : string, context : array) : ?ArrayObject</td></tr>
-    <tr><td align="left">– fromInternal(data : array, mapping : array, context : array) : array</td></tr>
+    <tr><td align="left"># fromInternal(data : mixed, context : array, mapping : array = []) : array</td></tr>
 </table></td></tr>
 </table>>]
   }
@@ -159,5 +168,6 @@ digraph {
   "Bartlett\\Sarif\\Converter\\PhpLintConverter" -> "Bartlett\\Sarif\\Converter\\AbstractConverter" [arrowhead="empty" style="filled"]
   "Bartlett\\Sarif\\Converter\\Source\\AbstractSource" -> "Bartlett\\Sarif\\Contract\\SourceInterface" [arrowhead="empty" style="dashed"]
   "Bartlett\\Sarif\\Converter\\Source\\PhpLintSource" -> "Bartlett\\Sarif\\Converter\\Source\\AbstractSource" [arrowhead="empty" style="filled"]
-  "Bartlett\\Sarif\\Converter\\Normalizer\\PhpLintNormalizer" -> "Bartlett\\Sarif\\Contract\\NormalizerInterface" [arrowhead="empty" style="dashed"]
+  "Bartlett\\Sarif\\Converter\\Normalizer\\AbstractNormalizer" -> "Bartlett\\Sarif\\Contract\\NormalizerInterface" [arrowhead="empty" style="dashed"]
+  "Bartlett\\Sarif\\Converter\\Normalizer\\PhpLintNormalizer" -> "Bartlett\\Sarif\\Converter\\Normalizer\\AbstractNormalizer" [arrowhead="empty" style="filled"]
 }

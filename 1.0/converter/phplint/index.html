@@ -1018,7 +1018,7 @@ does not use whitespace in returned data to format it.</p>
 <div class="highlight"><pre><span></span><code>vendor/bin/phplint<span class="w"> </span>--format<span class="o">=</span>checkstyle<span class="w"> </span>--output<span class="o">=</span>checkstyle.xml<span class="w"> </span>/path/to/source/code
 </code></pre></div>
 <p><strong>Step 2:</strong> And finally, convert it to SARIF with the <strong>Console Tool</strong></p>
-<div class="highlight"><pre><span></span><code>report-converter<span class="w"> </span>convert<span class="w"> </span>phplint<span class="w"> </span>--input-format<span class="o">=</span>checkstyle<span class="w"> </span>--input-file<span class="o">=</span>examples/phplint/checkstyle.xml<span class="w"> </span>-v
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>report-converter<span class="w"> </span>convert<span class="w"> </span>phplint<span class="w"> </span>--input-format<span class="o">=</span>checkstyle<span class="w"> </span>--input-file<span class="o">=</span>examples/phplint/checkstyle.xml<span class="w"> </span>-v
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>

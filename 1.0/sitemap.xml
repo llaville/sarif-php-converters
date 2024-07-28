@@ -2,67 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://llaville.github.io/sarif-php-converters/</loc>
-         <lastmod>2024-07-27</lastmod>
+         <lastmod>2024-07-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://llaville.github.io/sarif-php-converters/converter/</loc>
-         <lastmod>2024-07-27</lastmod>
+         <lastmod>2024-07-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://llaville.github.io/sarif-php-converters/converter/ecs/</loc>
-         <lastmod>2024-07-27</lastmod>
+         <lastmod>2024-07-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://llaville.github.io/sarif-php-converters/converter/phan/</loc>
-         <lastmod>2024-07-27</lastmod>
+         <lastmod>2024-07-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://llaville.github.io/sarif-php-converters/converter/phpcs-fixer/</loc>
-         <lastmod>2024-07-27</lastmod>
+         <lastmod>2024-07-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://llaville.github.io/sarif-php-converters/converter/phpcs/</loc>
-         <lastmod>2024-07-27</lastmod>
+         <lastmod>2024-07-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://llaville.github.io/sarif-php-converters/converter/phplint/</loc>
-         <lastmod>2024-07-27</lastmod>
+         <lastmod>2024-07-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://llaville.github.io/sarif-php-converters/converter/phpmd/</loc>
-         <lastmod>2024-07-27</lastmod>
+         <lastmod>2024-07-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://llaville.github.io/sarif-php-converters/converter/phpstan/</loc>
-         <lastmod>2024-07-27</lastmod>
+         <lastmod>2024-07-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://llaville.github.io/sarif-php-converters/converter/psalm/</loc>
-         <lastmod>2024-07-27</lastmod>
+         <lastmod>2024-07-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://llaville.github.io/sarif-php-converters/converter/rector/</loc>
-         <lastmod>2024-07-27</lastmod>
+         <lastmod>2024-07-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://llaville.github.io/sarif-php-converters/converter/twigcs-fixer/</loc>
-         <lastmod>2024-07-27</lastmod>
+         <lastmod>2024-07-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://llaville.github.io/sarif-php-converters/guides/installation/</loc>
-         <lastmod>2024-07-27</lastmod>
+         <lastmod>2024-07-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
