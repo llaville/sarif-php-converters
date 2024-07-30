@@ -1,5 +1,5 @@
 {
     "require-dev": {
-        "vincentlanglet/twig-cs-fixer": "dev-main"
+        "vincentlanglet/twig-cs-fixer": "^3.0"
     }
 }
