@@ -10,6 +10,7 @@ parameters:
         - ../../vendor-bin/phpmd/
         - ../../vendor-bin/phpstan/
         - ../../vendor-bin/psalm/
+        - ../../vendor-bin/rector/
         - ../../vendor-bin/twigcs-fixer/
 services:
     errorFormatter.sarif:
