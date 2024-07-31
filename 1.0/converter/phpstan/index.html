@@ -671,6 +671,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#web-sarif-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web SARIF viewer
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -924,6 +933,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#web-sarif-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web SARIF viewer
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -954,12 +972,13 @@
 <li><a href="#how-to-customize-your-converter">How to customize your converter</a></li>
 <li><a href="#learn-more">Learn more</a></li>
 <li><a href="#ide-integration">IDE Integration</a></li>
+<li><a href="#web-sarif-viewer">Web SARIF viewer</a></li>
 </ol>
 <p><img alt="phpstan converter" src="../../assets/images/converter-phpstan.graphviz.svg" /></p>
 <h2 id="requirements">Requirements</h2>
 <ul>
-<li><a href="https://github.com/phpstan/phpstan">PHPStan</a> requires PHP version 7.2.0 or greater</li>
-<li>This SARIF converter requires at least PHPStan version 1.9.0</li>
+<li><a href="https://github.com/phpstan/phpstan">PHPStan</a> requires PHP version 8.1.0 or greater</li>
+<li>This SARIF converter requires at least PHPStan version 1.11.0</li>
 </ul>
 <h2 id="installation">Installation</h2>
 <div class="highlight"><pre><span></span><code>composer<span class="w"> </span>require<span class="w"> </span>--dev<span class="w"> </span>phpstan/phpstan<span class="w"> </span>bartlett/sarif-php-converters
@@ -1017,6 +1036,10 @@ does not use whitespace in returned data to format it.</p>
 <h2 id="ide-integration">IDE Integration</h2>
 <p>The SARIF report file <code>[*].sarif.json</code> is automagically recognized and interpreted by PhpStorm (2024).</p>
 <p><img alt="PHPStorm integration" src="../../assets/images/phpstorm-phpstan.png" /></p>
+<h2 id="web-sarif-viewer">Web SARIF viewer</h2>
+<p>With the <a href="https://github.com/Microsoft/sarif-web-component">React based component</a>, you are able to explore a sarif report file previously generated.</p>
+<p>For example:</p>
+<p><img alt="sarif-web-phpstan" src="../../assets/images/sarif-web-phpstan.png" /></p>
 
 
 
