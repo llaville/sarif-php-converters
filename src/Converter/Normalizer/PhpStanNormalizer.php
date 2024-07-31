@@ -12,6 +12,7 @@ use PHPStan\Command\AnalysisResult;
 use ArrayObject;
 use function array_unique;
 use function in_array;
+use function sprintf;
 
 /**
  * @author Laurent Laville
@@ -19,6 +20,8 @@ use function in_array;
  */
 final class PhpStanNormalizer extends AbstractNormalizer
 {
+    public const URI_PATTERN = 'https://phpstan.org/error-identifiers/%s';
+
     public function normalize($data, string $format, array $context): ?ArrayObject
     {
         if (!in_array($format, $this->getSupportedFormats())) {
@@ -40,14 +43,22 @@ final class PhpStanNormalizer extends AbstractNormalizer
     {
         $files = [];
         $errors = [];
+        $rules = [];
 
         $analysisResult = $data;
-
-        $ruleId = $context['rulePrefix'] . '101';
 
         foreach ($analysisResult->getFileSpecificErrors() as $fileSpecificError) {
             $file = $fileSpecificError->getFile();
             $files[] = $file;
+
+            $ruleId = sprintf('%s/%s', $context['rulePrefix'], $fileSpecificError->getIdentifier());
+            $helpUri = sprintf(self::URI_PATTERN, $fileSpecificError->getIdentifier());
+
+            $rules[$ruleId] = [
+                'name' => $fileSpecificError->getIdentifier(),
+                'help' => 'https://phpstan.org/user-guide/ignoring-errors',
+                'helpUri' => $helpUri,
+            ];
 
             $attributes = [
                 'ReportingDescriptor.id' => $ruleId,
@@ -63,14 +74,7 @@ final class PhpStanNormalizer extends AbstractNormalizer
         return [
             'files' => array_unique($files),
             'errors' => $errors,
-            'rules' => [
-                $ruleId => [
-                    'shortDescription' => 'Analysis error',
-                    'fullDescription' => 'Errors detected during analysis of source files',
-                    'help' => 'https://phpstan.org/user-guide/command-line-usage',
-                    'helpUri' => 'https://phpstan.org/user-guide/getting-started',
-                ],
-            ],
+            'rules' => $rules,
         ];
     }
 }

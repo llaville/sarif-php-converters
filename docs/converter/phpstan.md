@@ -15,13 +15,14 @@
 4. [How to customize your converter](#how-to-customize-your-converter)
 5. [Learn more](#learn-more)
 6. [IDE Integration](#ide-integration)
+7. [Web SARIF viewer](#web-sarif-viewer)
 
 ![phpstan converter](../assets/images/converter-phpstan.graphviz.svg)
 
 ## Requirements
 
-* [PHPStan][phpstan] requires PHP version 7.2.0 or greater
-* This SARIF converter requires at least PHPStan version 1.9.0
+* [PHPStan][phpstan] requires PHP version 8.1.0 or greater
+* This SARIF converter requires at least PHPStan version 1.11.0
 
 ## Installation
 
@@ -110,6 +111,15 @@ The SARIF report file `[*].sarif.json` is automagically recognized and interpret
 
 ![PHPStorm integration](../assets/images/phpstorm-phpstan.png)
 
+## Web SARIF viewer
+
+With the [React based component][sarif-web-component], you are able to explore a sarif report file previously generated.
+
+For example:
+
+![sarif-web-phpstan](../assets/images/sarif-web-phpstan.png)
+
 [example-folder]: https://github.com/llaville/sarif-php-converters/blob/1.0/examples/phpstan/
 [json-encode]: https://www.php.net/manual/en/function.json-encode
 [phpstan]: https://github.com/phpstan/phpstan
+[sarif-web-component]: https://github.com/Microsoft/sarif-web-component
