@@ -2,7 +2,7 @@
 # SARIF PHP Converters
 
 [![StandWithUkraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://github.com/vshymanskyy/StandWithUkraine/blob/main/docs/README.md)
-[![GitHub Discussions](https://img.shields.io/github/discussions/llaville/umlwriter)](https://github.com/llaville/sarif-php-sdk/discussions)
+[![GitHub Discussions](https://img.shields.io/github/discussions/llaville/sarif-php-converters)](https://github.com/llaville/sarif-php-converters/discussions)
 
 | Releases      |                    Branch                     |                               PHP                               |                          Packagist                          |                     License                      |                           Documentation                            |
 |:--------------|:---------------------------------------------:|:---------------------------------------------------------------:|:-----------------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------------------------:|
