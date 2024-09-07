@@ -3,7 +3,10 @@
     "output": "sarif-php-converters.phar",
     "force-autodiscovery": true,
     "exclude-dev-files": false,
-    "files": ["autoload.php", "report-converter.php"],
+    "files": [
+        "autoload.php",
+        "report-converter.php"
+    ],
     "finder": [
         {
             "name": "*.php",
@@ -25,6 +28,8 @@
             ]
         }
     ],
-    "blacklist": ["vendor/bamarni/composer-bin-plugin/"],
+    "blacklist": [
+        "vendor/bamarni/composer-bin-plugin/"
+    ],
     "compression": "GZ"
 }
