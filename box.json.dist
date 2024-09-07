@@ -32,7 +32,6 @@
         "vendor/bamarni/composer-bin-plugin/"
     ],
     "compression": "GZ",
-    "dump-autoload": false,
     "files-bin": [
         "console-table.txt",
         "plain.txt",
