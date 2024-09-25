@@ -123,7 +123,7 @@
 <g id="node13" class="node">
 <title>symfony/console</title>
 <path fill="#eeeeee" stroke="black" d="M645.97,-166C645.97,-166 472.97,-166 472.97,-166 466.97,-166 460.97,-160 460.97,-154 460.97,-154 460.97,-142 460.97,-142 460.97,-136 466.97,-130 472.97,-130 472.97,-130 645.97,-130 645.97,-130 651.97,-130 657.97,-136 657.97,-142 657.97,-142 657.97,-154 657.97,-154 657.97,-160 651.97,-166 645.97,-166"/>
-<text text-anchor="middle" x="559.47" y="-144.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">symfony/console: v6.4.10</text>
+<text text-anchor="middle" x="559.47" y="-144.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">symfony/console: v6.4.12</text>
 </g>
 <!-- bartlett/sarif&#45;php&#45;converters&#45;&gt;symfony/console -->
 <g id="edge23" class="edge">
@@ -237,7 +237,7 @@
 <g id="node15" class="node">
 <title>symfony/polyfill&#45;mbstring</title>
 <path fill="#eeeeee" stroke="black" d="M1124.97,-198C1124.97,-198 887.97,-198 887.97,-198 881.97,-198 875.97,-192 875.97,-186 875.97,-186 875.97,-174 875.97,-174 875.97,-168 881.97,-162 887.97,-162 887.97,-162 1124.97,-162 1124.97,-162 1130.97,-162 1136.97,-168 1136.97,-174 1136.97,-174 1136.97,-186 1136.97,-186 1136.97,-192 1130.97,-198 1124.97,-198"/>
-<text text-anchor="middle" x="1006.47" y="-176.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">symfony/polyfill&#45;mbstring: v1.30.0</text>
+<text text-anchor="middle" x="1006.47" y="-176.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">symfony/polyfill&#45;mbstring: v1.31.0</text>
 </g>
 <!-- symfony/console&#45;&gt;symfony/polyfill&#45;mbstring -->
 <g id="edge20" class="edge">
@@ -263,7 +263,7 @@
 <g id="node17" class="node">
 <title>symfony/string</title>
 <path fill="#eeeeee" stroke="black" d="M1087.47,-90C1087.47,-90 925.47,-90 925.47,-90 919.47,-90 913.47,-84 913.47,-78 913.47,-78 913.47,-66 913.47,-66 913.47,-60 919.47,-54 925.47,-54 925.47,-54 1087.47,-54 1087.47,-54 1093.47,-54 1099.47,-60 1099.47,-66 1099.47,-66 1099.47,-78 1099.47,-78 1099.47,-84 1093.47,-90 1087.47,-90"/>
-<text text-anchor="middle" x="1006.47" y="-68.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">symfony/string: v6.4.10</text>
+<text text-anchor="middle" x="1006.47" y="-68.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">symfony/string: v6.4.12</text>
 </g>
 <!-- symfony/console&#45;&gt;symfony/string -->
 <g id="edge22" class="edge">
