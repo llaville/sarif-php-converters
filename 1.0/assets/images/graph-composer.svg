@@ -26,7 +26,7 @@
 <title>bartlett/sarif&#45;php&#45;converters&#45;&gt;php</title>
 <path fill="none" stroke="#1a2833" d="M177.36,-418.5C222.2,-396.07 305.08,-358.34 380.97,-344 600.98,-302.43 872.42,-326.63 969.15,-337.53"/>
 <polygon fill="#1a2833" stroke="#1a2833" points="968.94,-341.03 979.28,-338.7 969.74,-334.08 968.94,-341.03"/>
-<text text-anchor="middle" x="559.47" y="-347" font-family="Times,serif" font-size="10.00" fill="#767676">^7.4 || ^8.0</text>
+<text text-anchor="middle" x="559.47" y="-347" font-family="Times,serif" font-size="10.00" fill="#767676">^8.1</text>
 </g>
 <!-- ext&#45;json -->
 <g id="node3" class="node">
@@ -84,7 +84,7 @@
 <g id="node7" class="node">
 <title>bartlett/sarif&#45;php&#45;sdk</title>
 <path fill="#eeeeee" stroke="black" d="M653.97,-555C653.97,-555 464.97,-555 464.97,-555 458.97,-555 452.97,-549 452.97,-543 452.97,-543 452.97,-531 452.97,-531 452.97,-525 458.97,-519 464.97,-519 464.97,-519 653.97,-519 653.97,-519 659.97,-519 665.97,-525 665.97,-531 665.97,-531 665.97,-543 665.97,-543 665.97,-549 659.97,-555 653.97,-555"/>
-<text text-anchor="middle" x="559.47" y="-533.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">bartlett/sarif&#45;php&#45;sdk: 2.0.0</text>
+<text text-anchor="middle" x="559.47" y="-533.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">bartlett/sarif&#45;php&#45;sdk: 2.1.0</text>
 </g>
 <!-- bartlett/sarif&#45;php&#45;converters&#45;&gt;bartlett/sarif&#45;php&#45;sdk -->
 <g id="edge10" class="edge">
@@ -123,7 +123,7 @@
 <g id="node13" class="node">
 <title>symfony/console</title>
 <path fill="#eeeeee" stroke="black" d="M645.97,-166C645.97,-166 472.97,-166 472.97,-166 466.97,-166 460.97,-160 460.97,-154 460.97,-154 460.97,-142 460.97,-142 460.97,-136 466.97,-130 472.97,-130 472.97,-130 645.97,-130 645.97,-130 651.97,-130 657.97,-136 657.97,-142 657.97,-142 657.97,-154 657.97,-154 657.97,-160 651.97,-166 645.97,-166"/>
-<text text-anchor="middle" x="559.47" y="-144.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">symfony/console: v6.4.12</text>
+<text text-anchor="middle" x="559.47" y="-144.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">symfony/console: v6.4.15</text>
 </g>
 <!-- bartlett/sarif&#45;php&#45;converters&#45;&gt;symfony/console -->
 <g id="edge23" class="edge">
@@ -137,7 +137,7 @@
 <title>bartlett/sarif&#45;php&#45;sdk&#45;&gt;php</title>
 <path fill="none" stroke="#1a2833" d="M666.39,-528.95C690.89,-524.14 716.15,-516.64 737.97,-505 790.95,-476.76 796.39,-456.35 831.97,-408 841.88,-394.55 836.58,-384.98 849.97,-375 884.62,-349.19 935.05,-342.6 969,-341.39"/>
 <polygon fill="#1a2833" stroke="#1a2833" points="969.48,-344.88 979.4,-341.16 969.33,-337.88 969.48,-344.88"/>
-<text text-anchor="middle" x="793.97" y="-496" font-family="Times,serif" font-size="10.00" fill="#767676">^7.4 || ^8.0</text>
+<text text-anchor="middle" x="793.97" y="-496" font-family="Times,serif" font-size="10.00" fill="#767676">^8.1</text>
 </g>
 <!-- bartlett/sarif&#45;php&#45;sdk&#45;&gt;ext&#45;json -->
 <g id="edge6" class="edge">
@@ -224,7 +224,7 @@
 <g id="node14" class="node">
 <title>symfony/deprecation&#45;contracts</title>
 <path fill="#eeeeee" stroke="black" d="M1139.47,-36C1139.47,-36 873.47,-36 873.47,-36 867.47,-36 861.47,-30 861.47,-24 861.47,-24 861.47,-12 861.47,-12 861.47,-6 867.47,0 873.47,0 873.47,0 1139.47,0 1139.47,0 1145.47,0 1151.47,-6 1151.47,-12 1151.47,-12 1151.47,-24 1151.47,-24 1151.47,-30 1145.47,-36 1139.47,-36"/>
-<text text-anchor="middle" x="1006.47" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">symfony/deprecation&#45;contracts: v3.5.0</text>
+<text text-anchor="middle" x="1006.47" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">symfony/deprecation&#45;contracts: v3.5.1</text>
 </g>
 <!-- symfony/console&#45;&gt;symfony/deprecation&#45;contracts -->
 <g id="edge19" class="edge">
@@ -250,7 +250,7 @@
 <g id="node16" class="node">
 <title>symfony/service&#45;contracts</title>
 <path fill="#eeeeee" stroke="black" d="M1122.97,-144C1122.97,-144 889.97,-144 889.97,-144 883.97,-144 877.97,-138 877.97,-132 877.97,-132 877.97,-120 877.97,-120 877.97,-114 883.97,-108 889.97,-108 889.97,-108 1122.97,-108 1122.97,-108 1128.97,-108 1134.97,-114 1134.97,-120 1134.97,-120 1134.97,-132 1134.97,-132 1134.97,-138 1128.97,-144 1122.97,-144"/>
-<text text-anchor="middle" x="1006.47" y="-122.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">symfony/service&#45;contracts: v3.5.0</text>
+<text text-anchor="middle" x="1006.47" y="-122.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">symfony/service&#45;contracts: v3.5.1</text>
 </g>
 <!-- symfony/console&#45;&gt;symfony/service&#45;contracts -->
 <g id="edge21" class="edge">
@@ -263,7 +263,7 @@
 <g id="node17" class="node">
 <title>symfony/string</title>
 <path fill="#eeeeee" stroke="black" d="M1087.47,-90C1087.47,-90 925.47,-90 925.47,-90 919.47,-90 913.47,-84 913.47,-78 913.47,-78 913.47,-66 913.47,-66 913.47,-60 919.47,-54 925.47,-54 925.47,-54 1087.47,-54 1087.47,-54 1093.47,-54 1099.47,-60 1099.47,-66 1099.47,-66 1099.47,-78 1099.47,-78 1099.47,-84 1093.47,-90 1087.47,-90"/>
-<text text-anchor="middle" x="1006.47" y="-68.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">symfony/string: v6.4.12</text>
+<text text-anchor="middle" x="1006.47" y="-68.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">symfony/string: v6.4.15</text>
 </g>
 <!-- symfony/console&#45;&gt;symfony/string -->
 <g id="edge22" class="edge">
