@@ -21,7 +21,6 @@ interface SourceFactoryInterface
     public const BUILTIN_SOURCE_PHPMD = 'phpmd';
     public const BUILTIN_SOURCE_RECTOR = 'rector';
     public const BUILTIN_SOURCE_PHPSTAN = 'phpstan';
-    public const BUILTIN_SOURCE_PSALM = 'psalm';
     public const BUILTIN_SOURCE_TWIG_CS_FIXER = 'twigcs-fixer';
 
     /**

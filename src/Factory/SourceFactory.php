@@ -40,8 +40,6 @@ final class SourceFactory implements SourceFactoryInterface
                 return $this->createMessDetector($normalizers);
             case SourceFactoryInterface::BUILTIN_SOURCE_PHPSTAN:
                 return $this->createStan($normalizers);
-            case SourceFactoryInterface::BUILTIN_SOURCE_PSALM:
-                return $this->createPsalm($normalizers);
             case SourceFactoryInterface::BUILTIN_SOURCE_RECTOR:
                 return $this->createRector($normalizers);
             case SourceFactoryInterface::BUILTIN_SOURCE_TWIG_CS_FIXER:
@@ -128,16 +126,6 @@ final class SourceFactory implements SourceFactoryInterface
         $normalizers = (array) $normalizers;
         $normalizers[] = new Normalizer\PhpStanNormalizer();
         return new Source\PhpStanSource($normalizers);
-    }
-
-    /**
-     * @param iterable<NormalizerInterface> $normalizers
-     */
-    public function createPsalm(iterable $normalizers): SourceInterface
-    {
-        $normalizers = (array) $normalizers;
-        $normalizers[] = new Normalizer\PsalmNormalizer();
-        return new Source\PsalmSource($normalizers);
     }
 
     /**

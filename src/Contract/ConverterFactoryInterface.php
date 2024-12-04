@@ -22,7 +22,6 @@ interface ConverterFactoryInterface
     public const BUILTIN_CONVERTER_PHPLINT = 'phplint';
     public const BUILTIN_CONVERTER_PHPMD = 'phpmd';
     public const BUILTIN_CONVERTER_PHPSTAN = 'phpstan';
-    public const BUILTIN_CONVERTER_PSALM = 'psalm';
     public const BUILTIN_CONVERTER_RECTOR = 'rector';
     public const BUILTIN_CONVERTER_TWIG_CS_FIXER = 'twigcs-fixer';
 
