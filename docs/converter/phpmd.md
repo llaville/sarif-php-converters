@@ -51,13 +51,13 @@ composer require --dev phpmd/phpmd bartlett/sarif-php-converters
 > As PHMMD v2.15 is not able to specify/boot custom renderer easily,
 > we have no other alternative that using the **Console Tool** convert command.
 
-**Step 1:** Build the checkstyle output report
+### :material-numeric-1-box: Build the checkstyle output report
 
 ```shell
 vendor/bin/phpmd /path/to/source checkstyle ruleset --report-file=checkstyle.xml
 ```
 
-**Step 2:** And finally, convert it to SARIF with the **Console Tool**
+### :material-numeric-2-box: And finally, convert it to SARIF with the **Console Tool**
 
 ```shell
 php report-converter convert phpmd --input-format=checkstyle --input-file=examples/phpmd/checkstyle.xml -v
@@ -74,7 +74,7 @@ Alternative usage
 >
 > When PHPMD 3.0 will be [GA][general-availability], you can use this alternative
 
-**Step 1:** Build the sarif output report directly via the default `Bartlett\Sarif\Converter\Reporter\PhpMdRenderer`
+### :material-numeric-3-box: Build the sarif output report directly via the default `Bartlett\Sarif\Converter\Reporter\PhpMdRenderer`
 
 ```shell
 vendor/bin/phpmd /path/to/source '\Bartlett\Sarif\Converter\Reporter\PhpMdRenderer' ruleset --bootstrap vendor/autoload.php --report-file=sarif.json

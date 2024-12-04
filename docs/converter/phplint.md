@@ -68,7 +68,7 @@ Here is the way to do it !
 >
 > * Without verbose option (`-v`) the PHPLint `SarifOutput` will print a compact SARIF version.
 
-**Step 1:** Prints the SARIF report
+#### :material-numeric-1-box: Prints the SARIF report
 
 ```shell
 vendor/bin/phplint --format='\Overtrue\PHPLint\Output\SarifOutput' --bootstrap vendor/autoload.php --output=examples/phplint/.sarif.json -v /path/to/source/code
@@ -78,13 +78,13 @@ vendor/bin/phplint --format='\Overtrue\PHPLint\Output\SarifOutput' --bootstrap v
 
 If you prefer to convert from a format supported natively by PHPLint, then :
 
-**Step 1:** Build the native checkstyle output report
+#### :material-numeric-1-box: Build the native checkstyle output report
 
 ```shell
 vendor/bin/phplint --format=checkstyle --output=checkstyle.xml /path/to/source/code
 ```
 
-**Step 2:** And finally, convert it to SARIF with the **Console Tool**
+#### :material-numeric-2-box: And finally, convert it to SARIF with the **Console Tool**
 
 ```shell
 php report-converter convert phplint --input-format=checkstyle --input-file=examples/phplint/checkstyle.xml -v

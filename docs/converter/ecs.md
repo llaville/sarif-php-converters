@@ -37,7 +37,7 @@ composer require --dev symplify/easy-coding-standard bartlett/sarif-php-converte
 > (see e.g: [add junit output formatter](https://github.com/easy-coding-standard/easy-coding-standard/pull/212)),
 > we have no other alternative that using the **Console Tool** convert command.
 
-**Step 1:** Create a basic ECS config file
+### :material-numeric-1-box: Create a basic ECS config file
 
 For example :
 
@@ -75,7 +75,7 @@ return ECSConfig::configure()
 ;
 ```
 
-**Step 2:** Build the native checkstyle output report
+### :material-numeric-2-box: Build the native checkstyle output report
 
 ```shell
 vendor/bin/ecs check --output-format=checkstyle > examples/ecs/checkstyle.xml
@@ -93,7 +93,7 @@ vendor/bin/ecs check --output-format=checkstyle > examples/ecs/checkstyle.xml
 > return ECSConfig::configure()->withRealPathReporting(true);
 > ```
 
-**Step 3:** And finally, convert it to SARIF with the **Console Tool**
+### :material-numeric-3-box: And finally, convert it to SARIF with the **Console Tool**
 
 ```shell
 php report-converter convert ecs --input-format=checkstyle --input-file=examples/ecs/checkstyle.xml -v

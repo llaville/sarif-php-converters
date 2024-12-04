@@ -54,7 +54,7 @@ composer require --dev vimeo/psalm bartlett/sarif-php-converters
 > As Psalm v5 is not able to specify/boot custom renderer easily,
 > we have no other alternative that using the **Console Tool** convert command.
 
-**Step 1:** Initialize Psalm configuration file `psalm.xml`
+### :material-numeric-1-box: Initialize Psalm configuration file `psalm.xml`
 
 ```shell
 vendor/bin/psalm path/to/source --init
@@ -65,13 +65,13 @@ vendor/bin/psalm path/to/source --init
 > Be sure to specify absolute path reporting (`absolutePathReporting="true"`) into `psalm.xml` config file,
 > otherwise the Console Tool `convert` command will raise some warnings about file names.
 
-**Step 2:** Build the checkstyle output report
+### :material-numeric-2-box: Build the checkstyle output report
 
 ```shell
 vendor/bin/psalm --report=psalm.checkstyle.xml
 ```
 
-**Step 3:** And finally, convert it to SARIF normalized with the **Console Tool**
+### :material-numeric-3-box: And finally, convert it to SARIF normalized with the **Console Tool**
 
 ```shell
 php report-converter convert psalm --input-format=checkstyle --input-file=examples/psalm/psalm.checkstyle.xml -v

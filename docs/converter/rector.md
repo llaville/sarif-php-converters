@@ -31,7 +31,7 @@ composer require --dev rector/rector bartlett/sarif-php-converters
 
 ## Usage
 
-**Step 1:** Update your `rector.php` configuration file
+### :material-numeric-1-box: Update your `rector.php` configuration file
 
 Register at least the `RectorFormatter` service to be able to specify `--output-format sarif` with rector command.
 
@@ -53,7 +53,7 @@ return RectorConfig::configure()
 ;
 ```
 
-**Step 2:** Then print the SARIF report
+### :material-numeric-2-box: Then print the SARIF report
 
 ```shell
 vendor/bin/rector process --dry-run  --output-format sarif --config /path/to/rector.php > .sarif.json

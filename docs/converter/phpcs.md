@@ -63,7 +63,7 @@ To make your report human-readable, you have to specify the `\JSON_PRETTY_PRINT`
 
 Here is the way to do it !
 
-**Step 1:** Create your report specialized class :
+#### :material-numeric-1-box: Create your report specialized class
 
 ```php
 namespace MyStandard\CS;
@@ -80,7 +80,7 @@ class MyPhpCsReport extends PhpCsReport
 }
 ```
 
-**Step 2:** And finally, print the SARIF report
+#### :material-numeric-2-box: And finally, print the SARIF report
 
 ```shell
 vendor/bin/phpcs --report=MyPhpCsReport --standard=examples/phpcs/.phpcs.xml.dist
@@ -90,13 +90,13 @@ vendor/bin/phpcs --report=MyPhpCsReport --standard=examples/phpcs/.phpcs.xml.dis
 
 If you prefer to convert from a [format supported natively][phpcs-reporting] by PHPCS, then :
 
-**Step 1:** Build the native [checkstyle output][phpcs-checkstyle-output] report
+#### :material-numeric-1-box: Build the native [checkstyle output][phpcs-checkstyle-output] report
 
 ```shell
 vendor/bin/phpcs --report=checkstyle --report-file=checkstyle.xml /path/to/source/code
 ```
 
-**Step 2:** And finally, convert it to SARIF with the **Console Tool**
+#### :material-numeric-2-box: And finally, convert it to SARIF with the **Console Tool**
 
 ```shell
 report-converter convert phpcs --input-format=checkstyle --input-file=examples/phpcs/checkstyle.xml -v

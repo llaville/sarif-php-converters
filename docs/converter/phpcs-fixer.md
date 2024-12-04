@@ -36,7 +36,7 @@ composer require --dev php-cs-fixer/php-cs-fixer bartlett/sarif-php-converters
 > As PHP-CS-Fixer is not able to register custom reporter,
 > we have no other alternative that using the **Console Tool** convert command.
 
-**Step 1:** Build the native checkstyle output report
+### :material-numeric-1-box: Build the native checkstyle output report
 
 ```shell
 vendor/bin/php-cs-fixer fix --dry-run --format checkstyle /path/to/source/code > checkstyle.xml
@@ -47,7 +47,7 @@ vendor/bin/php-cs-fixer fix --dry-run --format checkstyle /path/to/source/code >
 > Be sure to specify absolute path to source code to analyze, otherwise the Console Tool `convert` command
 > will raise some warnings about file names.
 
-**Step 2:** And finally, convert it to SARIF with the **Console Tool**
+### :material-numeric-2-box: And finally, convert it to SARIF with the **Console Tool**
 
 ```shell
 php report-converter convert phpcs-fixer --input-format=checkstyle --input-file=examples/phpcs-fixer/checkstyle.xml -v

@@ -60,7 +60,7 @@ To make your report human-readable, you have to specify the `\JSON_PRETTY_PRINT`
 
 Here is the way to do it !
 
-**Step 1:** Create your report specialized class :
+#### :material-numeric-1-box: Create your report specialized class
 
 ```php
 <?php
@@ -82,7 +82,7 @@ class MyTwigCsFixerReporter extends TwigCsFixerReporter
 }
 ```
 
-**Step 2:** And finally, print the SARIF report
+#### :material-numeric-2-box: And finally, print the SARIF report
 
 ```shell
 vendor/bin/twig-cs-fixer lint /path/to/source --report sarif --config .twig-cs-fixer.php
@@ -96,13 +96,13 @@ vendor/bin/twig-cs-fixer lint /path/to/source --report sarif --config .twig-cs-f
 
 If you prefer to convert from a [format supported natively][[twigcs-fixer-custom-reporters]] by Twig-CS-Fixer, then :
 
-**Step 1:** Build the checkstyle output report
+#### :material-numeric-1-box: Build the checkstyle output report
 
 ```shell
 vendor/bin/twig-cs-fixer lint /path/to/source --report checkstyle
 ```
 
-**Step 2:** And finally, convert it to SARIF with the **Console Tool**
+#### :material-numeric-2-box: And finally, convert it to SARIF with the **Console Tool**
 
 ```shell
 php report-converter convert twigcs-fixer --input-format=checkstyle --input-file=examples/twigcs-fixer/checkstyle.xml -v

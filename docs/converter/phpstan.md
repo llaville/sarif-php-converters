@@ -60,7 +60,7 @@ To make your report human-readable, you have to specify the `\JSON_PRETTY_PRINT`
 
 Here is the way to do it !
 
-**Step 1:** Create your formatter specialized class :
+#### :material-numeric-1-box: Create your formatter specialized class
 
 ```php
 <?php
@@ -77,7 +77,7 @@ class MySarifFormatter extends PhpStanFormatter
 }
 ```
 
-**Step 2:** Create your own class loader to register custom serializer and converter (if any)
+#### :material-numeric-2-box: Create your own class loader to register custom serializer and converter (if any)
 
 ```php
 <?php
@@ -85,7 +85,7 @@ require_once dirname(__DIR__, 2) . '/vendor/autoload.php';
 require_once __DIR__ . '/MySarifFormatter.php';
 ```
 
-**Step 3:** Then update your `phpstan.neon` configuration file:
+#### :material-numeric-3-box: Then update your `phpstan.neon` configuration file
 
 ```yaml
 services:
@@ -95,7 +95,7 @@ services:
             prettyPrint: true
 ```
 
-**Step 4:** And finally, print the SARIF report
+### :material-numeric-4-box: And finally, print the SARIF report
 
 ```shell
 vendor/bin/phpstan analyse --error-format sarif --configuration phpstan.neon --autoload-file bootstrap.php

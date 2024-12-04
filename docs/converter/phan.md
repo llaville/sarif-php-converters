@@ -36,7 +36,7 @@ composer require --dev phan/phan bartlett/sarif-php-converters
 > As Phan v5 is not able to specify custom printer format,
 > we have no other alternative that using the **Console Tool** convert command.
 
-**Step 1:** Build the checkstyle output report
+### :material-numeric-1-box: Build the checkstyle output report
 
 ```shell
 vendor/bin/phpan --directory /absolute/path/to/source/code --absolute-path-issue-messages --output-mode=checkstyle --output=checkstyle.xml
@@ -47,7 +47,7 @@ vendor/bin/phpan --directory /absolute/path/to/source/code --absolute-path-issue
 > Be sure to specify `--absolute-path-issue-messages`, otherwise the Console Tool `convert` command
 > will raise some warnings about file names.
 
-**Step 2:** And finally, convert it to SARIF with the **Console Tool**
+### :material-numeric-2-box: And finally, convert it to SARIF with the **Console Tool**
 
 ```shell
 php report-converter convert phan --input-format=checkstyle --input-file=examples/phan/checkstyle.xml -v
