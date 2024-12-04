@@ -24,6 +24,23 @@ theme:
         - navigation.indexes # Section index pages -- https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages
         - navigation.top # Back-To-Top button -- https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#back-to-top-button
 markdown_extensions:
-    - github-callouts # https://github.com/oprypin/markdown-callouts/releases/tag/v0.4.0
-    - pymdownx.highlight # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#highlight
-    - pymdownx.superfences # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences
+    - attr_list
+    - md_in_html # https://squidfunk.github.io/mkdocs-material/reference/grids/
+    - tables # https://squidfunk.github.io/mkdocs-material/reference/data-tables/
+    - footnotes # https://squidfunk.github.io/mkdocs-material/reference/footnotes/
+    - pymdownx.highlight:  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#highlight
+          anchor_linenums: true
+          line_spans: __span
+          pygments_lang_class: true
+    - pymdownx.snippets
+    - pymdownx.tabbed: # https://squidfunk.github.io/mkdocs-material/reference/content-tabs/#content-tabs
+          alternate_style: true
+    - pymdownx.superfences: # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences
+          custom_fences:
+              - name: mermaid
+                class: mermaid
+                format: !!python/name:pymdownx.superfences.fence_code_format
+    - pymdownx.emoji: # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#emoji
+          emoji_index: !!python/name:material.extensions.emoji.twemoji
+          emoji_generator: !!python/name:material.extensions.emoji.to_svg
+    - github-callouts
