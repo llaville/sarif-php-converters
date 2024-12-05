@@ -3,6 +3,10 @@
     "output": "sarif-php-converters.phar",
     "force-autodiscovery": true,
     "exclude-dev-files": false,
+    "directories": [
+        "src",
+        "vendor"
+    ],
     "files": [
         "autoload.php",
         "report-converter.php"
@@ -17,12 +21,14 @@
                 "tests"
             ],
             "in": [
+                "vendor-bin/ecs",
                 "vendor-bin/phan",
                 "vendor-bin/phpcs",
                 "vendor-bin/phpcs-fixer",
                 "vendor-bin/phplint",
                 "vendor-bin/phpmd",
                 "vendor-bin/phpstan",
+                "vendor-bin/rector",
                 "vendor-bin/twigcs-fixer"
             ]
         }
@@ -30,5 +36,6 @@
     "blacklist": [
         "vendor/bamarni/composer-bin-plugin/"
     ],
-    "compression": "GZ"
+    "compression": "GZ",
+    "dump-autoload": false
 }
