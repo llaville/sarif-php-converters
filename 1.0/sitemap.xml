@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://llaville.github.io/sarif-php-converters/</loc>
-         <lastmod>2024-12-04</lastmod>
+         <loc>https://llaville.github.io/sarif-php-converters/1.0/</loc>
+         <lastmod>2024-12-05</lastmod>
     </url>
     <url>
-         <loc>https://llaville.github.io/sarif-php-converters/converter/</loc>
-         <lastmod>2024-12-04</lastmod>
+         <loc>https://llaville.github.io/sarif-php-converters/1.0/converter/</loc>
+         <lastmod>2024-12-05</lastmod>
     </url>
     <url>
-         <loc>https://llaville.github.io/sarif-php-converters/converter/ecs/</loc>
-         <lastmod>2024-12-04</lastmod>
+         <loc>https://llaville.github.io/sarif-php-converters/1.0/converter/ecs/</loc>
+         <lastmod>2024-12-05</lastmod>
     </url>
     <url>
-         <loc>https://llaville.github.io/sarif-php-converters/converter/phan/</loc>
-         <lastmod>2024-12-04</lastmod>
+         <loc>https://llaville.github.io/sarif-php-converters/1.0/converter/phan/</loc>
+         <lastmod>2024-12-05</lastmod>
     </url>
     <url>
-         <loc>https://llaville.github.io/sarif-php-converters/converter/phpcs-fixer/</loc>
-         <lastmod>2024-12-04</lastmod>
+         <loc>https://llaville.github.io/sarif-php-converters/1.0/converter/phpcs-fixer/</loc>
+         <lastmod>2024-12-05</lastmod>
     </url>
     <url>
-         <loc>https://llaville.github.io/sarif-php-converters/converter/phpcs/</loc>
-         <lastmod>2024-12-04</lastmod>
+         <loc>https://llaville.github.io/sarif-php-converters/1.0/converter/phpcs/</loc>
+         <lastmod>2024-12-05</lastmod>
     </url>
     <url>
-         <loc>https://llaville.github.io/sarif-php-converters/converter/phplint/</loc>
-         <lastmod>2024-12-04</lastmod>
+         <loc>https://llaville.github.io/sarif-php-converters/1.0/converter/phplint/</loc>
+         <lastmod>2024-12-05</lastmod>
     </url>
     <url>
-         <loc>https://llaville.github.io/sarif-php-converters/converter/phpmd/</loc>
-         <lastmod>2024-12-04</lastmod>
+         <loc>https://llaville.github.io/sarif-php-converters/1.0/converter/phpmd/</loc>
+         <lastmod>2024-12-05</lastmod>
     </url>
     <url>
-         <loc>https://llaville.github.io/sarif-php-converters/converter/phpstan/</loc>
-         <lastmod>2024-12-04</lastmod>
+         <loc>https://llaville.github.io/sarif-php-converters/1.0/converter/phpstan/</loc>
+         <lastmod>2024-12-05</lastmod>
     </url>
     <url>
-         <loc>https://llaville.github.io/sarif-php-converters/converter/rector/</loc>
-         <lastmod>2024-12-04</lastmod>
+         <loc>https://llaville.github.io/sarif-php-converters/1.0/converter/rector/</loc>
+         <lastmod>2024-12-05</lastmod>
     </url>
     <url>
-         <loc>https://llaville.github.io/sarif-php-converters/converter/twigcs-fixer/</loc>
-         <lastmod>2024-12-04</lastmod>
+         <loc>https://llaville.github.io/sarif-php-converters/1.0/converter/twigcs-fixer/</loc>
+         <lastmod>2024-12-05</lastmod>
     </url>
     <url>
-         <loc>https://llaville.github.io/sarif-php-converters/guides/installation/</loc>
-         <lastmod>2024-12-04</lastmod>
+         <loc>https://llaville.github.io/sarif-php-converters/1.0/guides/installation/</loc>
+         <lastmod>2024-12-05</lastmod>
     </url>
 </urlset>
