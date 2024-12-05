@@ -130,7 +130,7 @@ class ConvertCommand extends Command
                 );
             }
 
-            $converterAlias = $input->getArgument('converter') ? : $sourceAlias;
+            $converterAlias = $input->getArgument('converter') ?: $sourceAlias;
 
             $converterOptions = [
                 // Nicely formats output with indentation and extra space
@@ -184,7 +184,7 @@ class ConvertCommand extends Command
                 );
             }
 
-            return file_get_contents($inputFile) ? : null;
+            return file_get_contents($inputFile) ?: null;
         }
 
         $contents = $this->getStdIn();
@@ -209,9 +209,9 @@ class ConvertCommand extends Command
         if ($result === null) {
             $result = '';
 
-            $read        = [STDIN];
-            $write       = [];
-            $except      = [];
+            $read = [STDIN];
+            $write = [];
+            $except = [];
             $streamCount = stream_select($read, $write, $except, $timeout);
 
             if ($streamCount > 0) {
