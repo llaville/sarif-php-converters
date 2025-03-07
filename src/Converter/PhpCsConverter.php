@@ -11,7 +11,7 @@ use Bartlett\Sarif\Definition;
 
 use function sprintf;
 use function str_replace;
-use function strpos;
+use function str_starts_with;
 
 /**
  * @author Laurent Laville
@@ -43,7 +43,7 @@ class PhpCsConverter extends AbstractConverter
         $arguments = $GLOBALS['argv'];
         $responseFileOption = '--report-file=';
         foreach ($arguments as $argument) {
-            if (strpos($argument, $responseFileOption) === 0) {
+            if (str_starts_with($argument, $responseFileOption)) {
                 $desc = new Definition\Message();
                 $desc->setText('Writing a Report to a File');
                 // @link https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Reporting#writing-a-report-to-a-file

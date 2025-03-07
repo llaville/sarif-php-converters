@@ -7,6 +7,8 @@
  */
 namespace Bartlett\Sarif\Converter;
 
+use Throwable;
+
 /**
  * @author Laurent Laville
  * @since Release 1.0.0
@@ -25,7 +27,7 @@ class RectorConverter extends AbstractConverter
             // @see https://getcomposer.org/doc/04-schema.md#replace
             $this->toolComposerPackage = 'rector/rector';
             $this->toolSemanticVersion = $this->getToolVersion($this->toolComposerPackage);
-        } catch (\Throwable $exception) {
+        } catch (Throwable) {
             $this->toolComposerPackage = 'rector/rector-src';
         }
         parent::configure($options);

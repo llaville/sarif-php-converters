@@ -9,6 +9,7 @@ namespace Bartlett\Sarif\Converter;
 
 use Bartlett\Sarif\Definition;
 
+use Throwable;
 use function sprintf;
 
 /**
@@ -29,7 +30,7 @@ class PhpStanConverter extends AbstractConverter
             // @see https://getcomposer.org/doc/04-schema.md#replace
             $this->toolComposerPackage = 'phpstan/phpstan';
             $this->toolSemanticVersion = $this->getToolVersion($this->toolComposerPackage);
-        } catch (\Throwable $exception) {
+        } catch (Throwable) {
             $this->toolComposerPackage = 'phpstan/phpstan-src';
         }
         parent::configure($options);
