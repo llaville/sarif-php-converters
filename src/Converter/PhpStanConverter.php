@@ -33,6 +33,10 @@ class PhpStanConverter extends AbstractConverter
         } catch (Throwable) {
             $this->toolComposerPackage = 'phpstan/phpstan-src';
         }
+
+        // @see https://github.com/llaville/sarif-php-converters/issues/1
+        $options['default_result_level_if_empty'] ??= 'error';
+
         parent::configure($options);
     }
 
