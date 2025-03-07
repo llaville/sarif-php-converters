@@ -66,6 +66,7 @@ Here is the way to do it !
 #### :material-numeric-1-box: Create your report specialized class
 
 ```php
+<?php
 namespace MyStandard\CS;
 
 use Bartlett\Sarif\Converter\PhpCsConverter;
