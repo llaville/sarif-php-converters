@@ -1,0 +1,3 @@
+kind: Added
+body: Converter option "default_result_level_if_empty" to customize default SARIF Result Level field if not provided
+time: 2025-03-07T05:32:48.400656962Z

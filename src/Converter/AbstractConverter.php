@@ -89,12 +89,14 @@ abstract class AbstractConverter implements ConverterInterface
 
     protected bool $includeCodeSnippets;
     protected bool $includeContextRegion;
+    protected string $defaultResultLevelIfEmpty;
 
     /**
      * @param array{
      *     format_output?: bool,
      *     include_code_snippets?: bool,
-     *     include_context_region?: bool
+     *     include_context_region?: bool,
+     *     default_result_level_if_empty?: string
      * } $options
      */
     public function __construct(array $options = [], ?Factory\SerializerFactory $factory = null)
@@ -127,7 +129,8 @@ abstract class AbstractConverter implements ConverterInterface
      * @param array{
      *     format_output?: bool,
      *     include_code_snippets?: bool,
-     *     include_context_region?: bool
+     *     include_context_region?: bool,
+     *     default_result_level_if_empty?: string
      * } $options
      */
     public function configure(array $options): void
@@ -142,6 +145,9 @@ abstract class AbstractConverter implements ConverterInterface
 
         // set option to avoid additional suggestion SARIF2011
         $this->includeContextRegion = $options['include_context_region'] ?? true;
+
+        // set option to fill default value on result level field if empty
+        $this->defaultResultLevelIfEmpty = $options['default_result_level_if_empty'] ?? 'warning';
     }
 
     public function toolDriver(): Definition\ToolComponent
@@ -279,9 +285,7 @@ abstract class AbstractConverter implements ConverterInterface
                 $result->addPartialFingerprints([$fingerprintId => $fingerprint]);
                 $result->setRuleId($ruleId);
 
-                if (!empty($error['Result.level'])) {
-                    $result->setLevel($error['Result.level']);
-                }
+                $result->setLevel($error['Result.level'] ?? $this->defaultResultLevelIfEmpty);
 
                 $physicalLocation = new Definition\PhysicalLocation();
                 $physicalLocation->setArtifactLocation($artifactLocation);
