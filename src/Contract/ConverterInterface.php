@@ -35,7 +35,6 @@ interface ConverterInterface
 
     /**
      * @param iterable<string, array<int, mixed>> $normalized
-     * @return void
      */
     public function results(iterable $normalized): void;
 
@@ -49,7 +48,6 @@ interface ConverterInterface
     /**
      * @param iterable<Definition\Invocation> $invocations
      * @param iterable<string, array<string>> $rules
-     * @return Definition\Run
      */
     public function run(iterable $invocations, iterable $rules): Definition\Run;
 
