@@ -8,3 +8,4 @@ services:
         class: MySarifFormatter
         arguments:
             prettyPrint: true
+            defaultResultLevel: "warning"

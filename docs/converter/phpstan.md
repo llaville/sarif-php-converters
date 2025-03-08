@@ -101,6 +101,65 @@ services:
 vendor/bin/phpstan analyse --error-format sarif --configuration phpstan.neon --autoload-file bootstrap.php
 ```
 
+### Fill the result level field to default value when empty
+
+> [!NOTE]
+>
+> Accordingly, to [PhpStanConverter does not fill level field][feature-1] issue report,
+> the new version 1.1.0 added the `default_result_level_if_empty` option to configure any converter at runtime.
+
+Even if default behaviour fixed the result level field to `error` now (only for PHPStan SARIF converter),
+you still have ability to change it, and here is how to do now !
+
+#### :material-numeric-1-box: Create your formatter specialized class
+
+```php
+<?php
+
+use Bartlett\Sarif\Converter\PhpStanConverter;
+use Bartlett\Sarif\Converter\Reporter\PhpStanFormatter;
+
+class MySarifFormatter extends PhpStanFormatter
+{
+    public function __construct(bool $prettyPrint, string $defaultResultLevel)
+    {
+        parent::__construct(
+            new PhpStanConverter(
+                [
+                    'format_output' => $prettyPrint,
+                    'default_result_level_if_empty' => $defaultResultLevel,
+                ]
+            )
+        );
+    }
+}
+```
+
+#### :material-numeric-2-box: Create your own class loader to register custom serializer and converter (if any)
+
+```php
+<?php
+require_once dirname(__DIR__, 2) . '/vendor/autoload.php';
+require_once __DIR__ . '/MySarifFormatter.php';
+```
+
+#### :material-numeric-3-box: Then update your `phpstan.neon` configuration file
+
+```yaml
+services:
+    errorFormatter.sarif:
+        class: MySarifFormatter
+        arguments:
+            prettyPrint: true
+            defaultResultLevel: "warning"
+```
+
+### :material-numeric-4-box: And finally, print the SARIF report
+
+```shell
+vendor/bin/phpstan analyse --error-format sarif --configuration phpstan.neon --autoload-file bootstrap.php
+```
+
 ## Learn more
 
 * See demo [`examples/phpstan/`][example-folder] directory into repository.
@@ -123,3 +182,4 @@ For example:
 [json-encode]: https://www.php.net/manual/en/function.json-encode
 [phpstan]: https://github.com/phpstan/phpstan
 [sarif-web-component]: https://github.com/Microsoft/sarif-web-component
+[feature-1]: https://github.com/llaville/sarif-php-converters/issues/1

@@ -15,8 +15,15 @@ use Bartlett\Sarif\Converter\Reporter\PhpStanFormatter;
  */
 class MySarifFormatter extends PhpStanFormatter
 {
-    public function __construct(bool $prettyPrint)
+    public function __construct(bool $prettyPrint, string $defaultResultLevel)
     {
-        parent::__construct(new PhpStanConverter(['format_output' => $prettyPrint]));
+        parent::__construct(
+            new PhpStanConverter(
+                [
+                    'format_output' => $prettyPrint,
+                    'default_result_level_if_empty' => $defaultResultLevel,
+                ]
+            )
+        );
     }
 }
