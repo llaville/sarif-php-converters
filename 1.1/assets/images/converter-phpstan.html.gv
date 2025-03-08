@@ -33,6 +33,7 @@ digraph {
     <tr><td align="left"># endTime</td></tr>
     <tr><td align="left"># includeCodeSnippets</td></tr>
     <tr><td align="left"># includeContextRegion</td></tr>
+    <tr><td align="left"># defaultResultLevelIfEmpty</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
     <tr><td align="left">+ __construct(options : array = [], factory : Bartlett\\Sarif\\Factory\\SerializerFactory = «unknown»)</td></tr>
