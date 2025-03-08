@@ -30,6 +30,10 @@ class RectorConverter extends AbstractConverter
         } catch (Throwable) {
             $this->toolComposerPackage = 'rector/rector-src';
         }
+
+        // @see https://github.com/llaville/sarif-php-converters/issues/1
+        $options['default_result_level_if_empty'] ??= 'error';
+
         parent::configure($options);
     }
 }
