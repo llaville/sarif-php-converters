@@ -684,6 +684,72 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-to-customize-your-converter" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to customize your converter
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to customize your converter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#make-the-sarif-report-output-human-readable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Make the SARIF report output human-readable
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Make the SARIF report output human-readable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-your-formatter-specialized-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create your formatter specialized class
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-your-own-class-loader-to-register-custom-converter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create your own class loader to register custom converter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#then-update-your-rectorphp-configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Then update your rector.php configuration file
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#and-finally-print-the-sarif-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      And finally, print the SARIF report
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#learn-more" class="md-nav__link">
     <span class="md-ellipsis">
       Learn more
@@ -907,6 +973,72 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-to-customize-your-converter" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to customize your converter
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to customize your converter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#make-the-sarif-report-output-human-readable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Make the SARIF report output human-readable
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Make the SARIF report output human-readable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-your-formatter-specialized-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create your formatter specialized class
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-your-own-class-loader-to-register-custom-converter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create your own class loader to register custom converter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#then-update-your-rectorphp-configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Then update your rector.php configuration file
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#and-finally-print-the-sarif-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      And finally, print the SARIF report
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#learn-more" class="md-nav__link">
     <span class="md-ellipsis">
       Learn more
@@ -961,6 +1093,7 @@
 <li><a href="#requirements">Requirements</a></li>
 <li><a href="#installation">Installation</a></li>
 <li><a href="#usage">Usage</a></li>
+<li><a href="#how-to-customize-your-converter">How to customize your converter</a></li>
 <li><a href="#learn-more">Learn more</a></li>
 <li><a href="#ide-integration">IDE Integration</a></li>
 <li><a href="#web-sarif-viewer">Web SARIF viewer</a></li>
@@ -1002,6 +1135,60 @@
 will raise some warnings about file names.
 Requires at least <a href="https://github.com/rectorphp/rector/issues/8757">feature</a> is implemented in a future Rector release.</p>
 </div>
+<h2 id="how-to-customize-your-converter">How to customize your converter</h2>
+<p>There are many ways to customize render of your converter.</p>
+<h3 id="make-the-sarif-report-output-human-readable">Make the SARIF report output human-readable</h3>
+<p>By default, all converters use the default <code>\Bartlett\Sarif\Factory\PhpSerializerFactory</code>
+to return the SARIF JSON representation of your report.</p>
+<p>But this serializer factory component, as native PHP [<code>json_encode</code>][json-encode] function,
+does not use whitespace in returned data to format it.</p>
+<p>To make your report human-readable, you have to specify the <code>\JSON_PRETTY_PRINT</code> constant, as encoder option.</p>
+<p>Here is the way to do it !</p>
+<h4 id="create-your-formatter-specialized-class"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 17h-2V9h-2V7h4m5-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> Create your formatter specialized class</h4>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">&lt;?php</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">use</span> <span class="nx">Bartlett\Sarif\Converter\RectorConverter</span><span class="p">;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">use</span> <span class="nx">Bartlett\Sarif\Converter\Reporter\RectorFormatter</span><span class="p">;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="k">class</span> <span class="nc">MySarifFormatter</span> <span class="k">extends</span> <span class="nx">RectorFormatter</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">{</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">()</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="p">{</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="p">(</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>            <span class="k">new</span> <span class="nx">RectorConverter</span><span class="p">(</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>                <span class="p">[</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>                    <span class="s1">&#39;format_output&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>                <span class="p">]</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>            <span class="p">)</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>        <span class="p">);</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    <span class="p">}</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="p">}</span>
+</span></code></pre></div>
+<h4 id="create-your-own-class-loader-to-register-custom-converter"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 11a2 2 0 0 1-2 2h-2v2h4v2H9v-4a2 2 0 0 1 2-2h2V9H9V7h4a2 2 0 0 1 2 2m4-6H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> Create your own class loader to register custom converter</h4>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">&lt;?php</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">require_once</span> <span class="nb">dirname</span><span class="p">(</span><span class="no">__DIR__</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">.</span> <span class="s1">&#39;/vendor/autoload.php&#39;</span><span class="p">;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">require_once</span> <span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/MySarifFormatter.php&#39;</span><span class="p">;</span>
+</span></code></pre></div>
+<h4 id="then-update-your-rectorphp-configuration-file"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 10.5a1.5 1.5 0 0 1-1.5 1.5c.84 0 1.5.67 1.5 1.5V15c0 1.11-.89 2-2 2H9v-2h4v-2h-2v-2h2V9H9V7h4c1.11 0 2 .89 2 2m4-6H5c-1.09 0-2 .9-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> Then update your <code>rector.php</code> configuration file</h4>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="cp">&lt;?php</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">use</span> <span class="nx">Bartlett\Sarif\Converter\Reporter\RectorFormatter</span><span class="p">;</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">use</span> <span class="nx">Rector\ChangesReporting\Contract\Output\OutputFormatterInterface</span><span class="p">;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="k">use</span> <span class="nx">Rector\Config\RectorConfig</span><span class="p">;</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="k">return</span> <span class="nx">RectorConfig</span><span class="o">::</span><span class="na">configure</span><span class="p">()</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="o">-&gt;</span><span class="na">withPaths</span><span class="p">([</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>        <span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/src&#39;</span><span class="p">,</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    <span class="p">])</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    <span class="o">-&gt;</span><span class="na">withPreparedSets</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>    <span class="o">-&gt;</span><span class="na">withRealPathReporting</span><span class="p">()</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>    <span class="o">-&gt;</span><span class="na">withBootstrapFiles</span><span class="p">([</span><span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/../../vendor/autoload.php&#39;</span><span class="p">])</span> <span class="c1">// loader for Sarif PHP Converters classes</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>    <span class="o">-&gt;</span><span class="na">registerService</span><span class="p">(</span><span class="nx">MySarifFormatter</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="nx">OutputFormatterInterface</span><span class="o">::</span><span class="na">class</span><span class="p">)</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="p">;</span>
+</span></code></pre></div>
+<h3 id="and-finally-print-the-sarif-report"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 17h-2v-4H9V7h2v4h2V7h2m4-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> And finally, print the SARIF report</h3>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>vendor/bin/rector<span class="w"> </span>process<span class="w"> </span>--dry-run<span class="w">  </span>--output-format<span class="w"> </span>sarif<span class="w"> </span>--config<span class="w"> </span>/path/to/rector.php<span class="w"> </span>--autoload-file<span class="w"> </span>/path/to/bootstrap.php<span class="w"> </span>&gt;<span class="w"> </span>.sarif.json
+</span></code></pre></div>
 <h2 id="learn-more">Learn more</h2>
 <ul>
 <li>See demo <a href="https://github.com/llaville/sarif-php-converters/blob/1.0/examples/rector/"><code>examples/rector/</code></a> directory into this repository.</li>
