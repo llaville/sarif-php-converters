@@ -39,7 +39,7 @@ composer require --dev phan/phan bartlett/sarif-php-converters
 ### :material-numeric-1-box: Build the checkstyle output report
 
 ```shell
-vendor/bin/phpan --directory /absolute/path/to/source/code --absolute-path-issue-messages --output-mode=checkstyle --output=checkstyle.xml
+vendor/bin/phan --directory /absolute/path/to/source/code --absolute-path-issue-messages --output-mode=checkstyle --output=checkstyle.xml
 ```
 
 > [!WARNING]
