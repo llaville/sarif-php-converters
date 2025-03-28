@@ -13,9 +13,9 @@
 2. [Installation](#installation)
 3. [Usage](#usage)
 4. [How to customize your converter](#how-to-customize-your-converter)
-4. [Learn more](#learn-more)
-5. [IDE Integration](#ide-integration)
-6. [Web SARIF viewer](#web-sarif-viewer)
+5. [Learn more](#learn-more)
+6. [IDE Integration](#ide-integration)
+7. [Web SARIF viewer](#web-sarif-viewer)
 
 ![rector converter](../assets/images/converter-rector.graphviz.svg)
 
@@ -104,6 +104,7 @@ class MySarifFormatter extends RectorFormatter
     }
 }
 ```
+
 #### :material-numeric-2-box: Create your own class loader to register custom converter
 
 ```php

@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD013 -->
+<!-- markdownlint-disable MD013 MD024 -->
 # PHPStan Converter
 
 [![phpstan/phpstan - GitHub](https://gh-card.dev/repos/phpstan/phpstan.svg?fullname=)](https://github.com/phpstan/phpstan)
@@ -95,7 +95,7 @@ services:
             prettyPrint: true
 ```
 
-### :material-numeric-4-box: And finally, print the SARIF report
+#### :material-numeric-4-box: And finally, print the SARIF report
 
 ```shell
 vendor/bin/phpstan analyse --error-format sarif --configuration phpstan.neon --autoload-file bootstrap.php
@@ -154,7 +154,7 @@ services:
             defaultResultLevel: "warning"
 ```
 
-### :material-numeric-4-box: And finally, print the SARIF report
+#### :material-numeric-4-box: And finally, print the SARIF report
 
 ```shell
 vendor/bin/phpstan analyse --error-format sarif --configuration phpstan.neon --autoload-file bootstrap.php
