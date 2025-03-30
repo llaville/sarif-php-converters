@@ -346,7 +346,8 @@ abstract class AbstractConverter implements ConverterInterface
     {
         $log = new SarifLog($runs, $version);
 
-        return $this->serializer->serialize($log, 'json');
+        $serialized = $this->serializer->serialize($log, 'json');
+        return $serialized ? $serialized : null;
     }
 
     /**
