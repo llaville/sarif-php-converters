@@ -8,9 +8,9 @@
 namespace Bartlett\Sarif\Converter\Normalizer;
 
 use Rector\Contract\Rector\ConfigurableRectorInterface;
-use Rector\Contract\Rector\RectorInterface;
 use Rector\ValueObject\ProcessResult;
 
+use Symplify\RuleDocGenerator\Contract\DocumentedRuleInterface;
 use Symplify\RuleDocGenerator\ValueObject\RuleDefinition;
 
 use ArrayObject;
@@ -21,6 +21,7 @@ use function count;
 use function explode;
 use function in_array;
 use function is_a;
+use function method_exists;
 use function sprintf;
 use function strtolower;
 
@@ -130,7 +131,10 @@ final class RectorNormalizer extends AbstractNormalizer
             return null;
         }
 
-        if ($documentedRule instanceof RectorInterface) {
+        if (
+            $documentedRule instanceof DocumentedRuleInterface
+            || method_exists($documentedRule, 'getRuleDefinition')
+        ) {
             return $documentedRule->getRuleDefinition();
         }
 
