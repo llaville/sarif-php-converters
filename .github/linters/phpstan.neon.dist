@@ -11,6 +11,7 @@ parameters:
         - ../../vendor-bin/phpstan/
         - ../../vendor-bin/rector/
         - ../../vendor-bin/twigcs-fixer/
+    treatPhpDocTypesAsCertain: false
 services:
     errorFormatter.sarif:
         class: Bartlett\Sarif\Converter\Reporter\PhpStanFormatter

@@ -7,6 +7,7 @@
  */
 namespace Bartlett\Sarif\Converter\Source;
 
+use ArrayObject;
 use Bartlett\Sarif\Contract\NormalizerInterface;
 use Bartlett\Sarif\Contract\SourceInterface;
 
@@ -28,6 +29,10 @@ abstract class AbstractSource implements SourceInterface
      * @var NormalizerInterface[] $normalizers
      */
     private array $normalizers;
+
+    /**
+     * @phpstan-ignore missingType.generics
+     */
     private AppendIterator $normalized;
 
     /**
