@@ -21,8 +21,8 @@
 
 ## Requirements
 
-* [Rector][rector] requires PHP version 7.2.0 or greater, with `phpstan` 1.11 or greater
-* This SARIF converter requires at least Rector version 1.2.3
+* [Rector][rector] requires PHP version 7.4.0 or greater, with `phpstan` 2.0 or greater
+* This SARIF converter requires at least Rector version 2.0
 
 ## Installation
 
