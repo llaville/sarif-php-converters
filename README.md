@@ -71,7 +71,7 @@ This library may be considered as a producer on `sarif` report format, for these
 | [PHPInsights][phpinsights]          | 2.11.x  |   ❌   |     ✅      |   ❌   |           ✅            |   ✅    |       console,json,checkstyle,codeclimate,github-action        |
 | [PHPLint][phplint]                  |  9.4.x  |  (✅)  |     ✅      |   ✅   |           ❌            |   ❌    |             console,json,junit,checkstyle,(sarif)              |
 | [PHP Mess Detector][phpmd]          | 2.15.x  |   ✅   |     ✅      |   ❌   |           ✅            |   ✅    |       xml,text,html,json,github,gitlab,sarif,checkstyle        |
-| [PHPStan][phpstan]                  | 1.11.x  |  (✅)  |     ✅      |   ✅   |           ✅            |   ✅    | table,raw,checkstyle,json,junit,github,gitlab,teamcity,(sarif) |
+| [PHPStan][phpstan]                  |  2.0.x  |  (✅)  |     ✅      |   ✅   |           ✅            |   ✅    | table,raw,checkstyle,json,junit,github,gitlab,teamcity,(sarif) |
 | [Rector][rector]                    |  2.0.x  |   ❌   |     ❌      |   ✅   |           ✅            |   ✅    |                console,json,junit,gitlab,github                |
 | [Twig-CS-Fixer][twigcs-fixer]       |  3.0.x  |   ❌   |     ✅      |   ✅   |           ❌            |   ✅    |               null,text,checkstyle,junit,github                |
 
