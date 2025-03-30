@@ -10,6 +10,7 @@ namespace Bartlett\Sarif\Converter\Normalizer;
 use Bartlett\Sarif\Contract\NormalizerInterface;
 
 use ArrayObject;
+use function array_unique;
 use function in_array;
 use function is_string;
 use function json_decode;
@@ -68,9 +69,7 @@ final class SarifNormalizer implements NormalizerInterface
                 $physicalLocation = $result['locations'][0]['physicalLocation'];
                 $filename = $this->pathToArtifactLocation($physicalLocation['artifactLocation']['uri']);
 
-                if (!isset($files[$filename])) {
-                    $files[] = $filename;
-                }
+                $files[] = $filename;
 
                 $attributes = [
                     'ReportingDescriptor.id' => $result['ruleId'],
@@ -87,7 +86,7 @@ final class SarifNormalizer implements NormalizerInterface
         }
 
         return [
-            'files' => $files,
+            'files' => array_unique($files),
             'errors' => $errors,
             'rules' => $rules,
         ];
