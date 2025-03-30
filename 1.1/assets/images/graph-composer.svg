@@ -84,7 +84,7 @@
 <g id="node7" class="node">
 <title>bartlett/sarif&#45;php&#45;sdk</title>
 <path fill="#eeeeee" stroke="black" d="M653.97,-555C653.97,-555 464.97,-555 464.97,-555 458.97,-555 452.97,-549 452.97,-543 452.97,-543 452.97,-531 452.97,-531 452.97,-525 458.97,-519 464.97,-519 464.97,-519 653.97,-519 653.97,-519 659.97,-519 665.97,-525 665.97,-531 665.97,-531 665.97,-543 665.97,-543 665.97,-549 659.97,-555 653.97,-555"/>
-<text text-anchor="middle" x="559.47" y="-533.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">bartlett/sarif&#45;php&#45;sdk: 2.1.0</text>
+<text text-anchor="middle" x="559.47" y="-533.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">bartlett/sarif&#45;php&#45;sdk: 2.1.1</text>
 </g>
 <!-- bartlett/sarif&#45;php&#45;converters&#45;&gt;bartlett/sarif&#45;php&#45;sdk -->
 <g id="edge10" class="edge">
@@ -123,7 +123,7 @@
 <g id="node13" class="node">
 <title>symfony/console</title>
 <path fill="#eeeeee" stroke="black" d="M645.97,-166C645.97,-166 472.97,-166 472.97,-166 466.97,-166 460.97,-160 460.97,-154 460.97,-154 460.97,-142 460.97,-142 460.97,-136 466.97,-130 472.97,-130 472.97,-130 645.97,-130 645.97,-130 651.97,-130 657.97,-136 657.97,-142 657.97,-142 657.97,-154 657.97,-154 657.97,-160 651.97,-166 645.97,-166"/>
-<text text-anchor="middle" x="559.47" y="-144.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">symfony/console: v6.4.17</text>
+<text text-anchor="middle" x="559.47" y="-144.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">symfony/console: v6.4.20</text>
 </g>
 <!-- bartlett/sarif&#45;php&#45;converters&#45;&gt;symfony/console -->
 <g id="edge23" class="edge">
