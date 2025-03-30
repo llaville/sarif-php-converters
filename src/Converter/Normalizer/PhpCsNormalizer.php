@@ -10,12 +10,10 @@ namespace Bartlett\Sarif\Converter\Normalizer;
 use Bartlett\Sarif\Contract\NormalizerInterface;
 
 use ArrayObject;
-use mysql_xdevapi\Warning;
 use function array_keys;
 use function in_array;
 use function json_decode;
 
-// line:int, column:int, source: string
 /**
  * @extends AbstractNormalizer<string|array{
  *     filename: string,
