@@ -22,9 +22,9 @@
 
 [Branch_101x-img]: https://img.shields.io/badge/branch-1.1-orange
 [Branch_101x]: https://github.com/llaville/sarif-php-converters/tree/1.1
-[PHPVersion_101x-img]: https://img.shields.io/packagist/php-v/bartlett/sarif-php-converters/1.1.0
+[PHPVersion_101x-img]: https://img.shields.io/packagist/php-v/bartlett/sarif-php-converters/1.1.1
 [PHPVersion_101x]: https://www.php.net/supported-versions.php
-[Packagist_101x-img]: https://img.shields.io/badge/packagist-v1.1.0-blue
+[Packagist_101x-img]: https://img.shields.io/badge/packagist-v1.1.1-blue
 [Packagist_101x]: https://packagist.org/packages/bartlett/sarif-php-converters
 [License_101x-img]: https://img.shields.io/packagist/l/bartlett/sarif-php-converters
 [License_101x]: https://github.com/llaville/sarif-php-converters/blob/1.1/LICENSE
