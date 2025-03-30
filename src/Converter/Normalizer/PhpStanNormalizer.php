@@ -28,6 +28,9 @@ final class PhpStanNormalizer extends AbstractNormalizer
             return null;
         }
 
+        /**
+         * @phpstan-ignore phpstanApi.instanceofAssumption
+         */
         if (!$data instanceof AnalysisResult) {
             return null;
         }
