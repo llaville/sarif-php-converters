@@ -10,6 +10,7 @@ namespace Bartlett\Sarif\Converter\Normalizer;
 use TwigCsFixer\Report\Violation;
 
 /**
+ * @extends AbstractNormalizer<array{string, array<Violation>}>
  * @author Laurent Laville
  * @since Release 1.0.0
  */

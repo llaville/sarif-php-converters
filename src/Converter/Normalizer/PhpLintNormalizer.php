@@ -12,6 +12,7 @@ use function array_keys;
 use function in_array;
 
 /**
+ * @extends AbstractNormalizer<array{string, array<string, mixed>}>
  * @author Laurent Laville
  * @since Release 1.0.0
  */

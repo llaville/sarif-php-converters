@@ -21,10 +21,11 @@ use function strpos;
 use function substr;
 
 /**
+ * @extends AbstractNormalizer<string>
  * @author Laurent Laville
  * @since Release 1.0.0
  */
-final class SarifNormalizer implements NormalizerInterface
+final class SarifNormalizer extends AbstractNormalizer
 {
     public function getSupportedFormats(): array
     {

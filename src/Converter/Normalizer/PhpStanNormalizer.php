@@ -15,6 +15,7 @@ use function in_array;
 use function sprintf;
 
 /**
+ * @extends AbstractNormalizer<AnalysisResult>
  * @author Laurent Laville
  * @since Release 1.0.0
  */
@@ -25,13 +26,6 @@ final class PhpStanNormalizer extends AbstractNormalizer
     public function normalize($data, string $format, array $context): ?ArrayObject
     {
         if (!in_array($format, $this->getSupportedFormats())) {
-            return null;
-        }
-
-        /**
-         * @phpstan-ignore phpstanApi.instanceofAssumption
-         */
-        if (!$data instanceof AnalysisResult) {
             return null;
         }
 

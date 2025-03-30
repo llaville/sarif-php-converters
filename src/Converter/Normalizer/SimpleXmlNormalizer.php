@@ -19,10 +19,11 @@ use function json_encode;
 use const LIBXML_NOCDATA;
 
 /**
+ * @extends AbstractNormalizer<string>
  * @author Laurent Laville
  * @since Release 1.0.0
  */
-final class SimpleXmlNormalizer implements NormalizerInterface
+final class SimpleXmlNormalizer extends AbstractNormalizer
 {
     public function getSupportedFormats(): array
     {

@@ -26,6 +26,7 @@ use function strtolower;
 use function trim;
 
 /**
+ * @extends AbstractNormalizer<string|Report>
  * @author Laurent Laville
  * @since Release 1.0.0
  */
@@ -50,10 +51,6 @@ final class PhpMdNormalizer extends AbstractNormalizer
             $innerNormalizer = new SimpleXmlNormalizer();
             $collected = $innerNormalizer->normalize($data, $format, $context);
             return new ArrayObject($this->fromCheckstyle($collected));
-        }
-
-        if (!$data instanceof Report) {
-            return null;
         }
 
         // internal format (legacy)

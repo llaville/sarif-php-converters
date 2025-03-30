@@ -8,6 +8,7 @@
 namespace Bartlett\Sarif\Converter\Normalizer;
 
 /**
+ * @extends AbstractNormalizer<mixed>
  * @author Laurent Laville
  * @since Release 1.0.0
  */

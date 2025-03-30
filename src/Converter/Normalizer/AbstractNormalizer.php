@@ -13,6 +13,7 @@ use ArrayObject;
 use function in_array;
 
 /**
+ * @template TData
  * @author Laurent Laville
  * @since Release 1.0.0
  */
@@ -25,6 +26,9 @@ abstract class AbstractNormalizer implements NormalizerInterface
         ];
     }
 
+    /**
+     * @param TData $data
+     */
     public function normalize($data, string $format, array $context): ?ArrayObject
     {
         if (!in_array($format, $this->getSupportedFormats())) {
@@ -36,7 +40,7 @@ abstract class AbstractNormalizer implements NormalizerInterface
     }
 
     /**
-     * @param mixed $data
+     * @param TData $data
      * @param array<string, mixed> $context Options available to the normalizer
      * @param array{}|array<string, string> $mapping From-To convert's mapping
      * @return array{files: mixed, errors: mixed, rules: mixed}

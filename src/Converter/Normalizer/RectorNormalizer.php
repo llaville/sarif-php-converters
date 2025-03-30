@@ -26,6 +26,7 @@ use function sprintf;
 use function strtolower;
 
 /**
+ * @extends AbstractNormalizer<ProcessResult>
  * @author Laurent Laville
  * @since Release 1.0.0
  */
@@ -36,10 +37,6 @@ final class RectorNormalizer extends AbstractNormalizer
     public function normalize($data, string $format, array $context): ?ArrayObject
     {
         if (!in_array($format, $this->getSupportedFormats())) {
-            return null;
-        }
-
-        if (!$data instanceof ProcessResult) {
             return null;
         }
 
