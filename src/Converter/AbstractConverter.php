@@ -30,6 +30,7 @@ use function count;
 use function date;
 use function end;
 use function explode;
+use function file_exists;
 use function file_get_contents;
 use function get_class;
 use function getcwd;
@@ -257,6 +258,9 @@ abstract class AbstractConverter implements ConverterInterface
     final public function results(iterable $normalized): void
     {
         foreach ($normalized as $filename => $errors) {
+            if (!file_exists($filename)) {
+                continue;
+            }
             $artifactLocation = new Definition\ArtifactLocation();
             $artifactLocation->setUri($this->pathToArtifactLocation($filename));
             $artifactLocation->setUriBaseId('WORKINGDIR');
