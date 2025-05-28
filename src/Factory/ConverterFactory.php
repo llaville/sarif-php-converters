@@ -27,6 +27,8 @@ final class ConverterFactory implements ConverterFactoryInterface
         ?SerializerFactory $serializerFactory = null
     ): ConverterInterface {
         switch (strtolower($name)) {
+            case ConverterFactoryInterface::BUILTIN_CONVERTER_COMPOSER:
+                return $this->createComposer($options, $serializerFactory);
             case ConverterFactoryInterface::BUILTIN_CONVERTER_ECS:
                 return $this->createEasyCodingStandard($options, $serializerFactory);
             case ConverterFactoryInterface::BUILTIN_CONVERTER_PHAN:
@@ -48,6 +50,18 @@ final class ConverterFactory implements ConverterFactoryInterface
         }
 
         throw new OutOfBoundsException(sprintf('Converter "%s" not found.', $name));
+    }
+
+    /**
+     * @param array{
+     *     format_output: bool,
+     *     include_code_snippets?: bool,
+     *     include_context_region?: bool
+     * } $options
+     */
+    public function createComposer(array $options, ?SerializerFactory $serializerFactory = null): ConverterInterface
+    {
+        return new Converter\ComposerConverter($options, $serializerFactory);
     }
 
     /**

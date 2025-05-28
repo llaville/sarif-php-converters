@@ -1,0 +1,106 @@
+<?php declare(strict_types=1);
+/**
+ * This file is part of the Sarif-PHP-Converters package.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+namespace Bartlett\Sarif\Converter\Normalizer;
+
+use Bartlett\Sarif\Contract\NormalizerInterface;
+
+use ArrayObject;
+use function in_array;
+use function json_decode;
+use function sprintf;
+use function strtolower;
+
+/**
+ * @extends AbstractNormalizer<mixed>
+ * @author Laurent Laville
+ * @since Release 1.2.0
+ */
+final class ComposerNormalizer extends AbstractNormalizer
+{
+    public function getSupportedFormats(): array
+    {
+        return [
+            NormalizerInterface::FORMAT_JSON,
+        ];
+    }
+
+    public function normalize($data, string $format, array $context): ?ArrayObject
+    {
+        if (!in_array($format, $this->getSupportedFormats())) {
+            return null;
+        }
+
+        // default common mapping for all formats
+        $mapping = [
+            'title' => 'Result.message',
+            'cve' => 'ReportingDescriptor.id',
+            'severity' => 'Result.level',
+            'advisoryId' => 'Result.properties.advisoryId',
+            'affectedVersions' => 'Result.properties.affectedVersions',
+            'reportedAt' => 'Result.properties.reportedAt',
+        ];
+
+        return new ArrayObject($this->fromJson($data, $mapping));
+    }
+
+    private function fromJson(string $data, array $mapping): array
+    {
+        // $data is already JSON encoded
+        $collected = json_decode($data, true);
+
+        $errors = [];
+        $rules = [];
+
+        foreach ($collected['advisories'] ?? [] as $package => $advisories) {
+            foreach ($advisories as $advisory) {
+                $attributes = ['Result.properties.packageName' => $package];
+                foreach ($advisory as $attr => $value) {
+                    if ('sources' === $attr) {
+                        foreach ($value as $source) {
+                            if ('GitHub' === $source['name']) {
+                                $attributes['Result.properties.ghsa'] = [
+                                    'id' => $source['remoteId'],
+                                    'link' => sprintf('https://github.com/advisories/%s', $source['remoteId']),
+                                ];
+                                break;
+                            }
+                        }
+                    }
+                    $key = $mapping[$attr] ?? null;
+                    if (null === $key) {
+                        // skips unsolicited entry
+                        continue;
+                    }
+                    $newValue = $value;
+                    if ('Result.level' === $key) {
+                        // match severity value with standard SARIF level enum
+                        $newValue = match (strtolower($value)) {
+                            'medium' => 'note',
+                            'high' => 'warning',
+                            'critical' => 'error',
+                            default => 'none',
+                        };
+                    }
+                    if ('ReportingDescriptor.id' === $key) {
+                        if (!isset($rules[$value])) {
+                            $rules[$value] = ['properties' => ['frequency' => 0, 'link' => $advisory['link']]];
+                        }
+                        $rules[$value]['properties']['frequency'] += 1;
+                    }
+                    $attributes[$key] = $newValue;
+                }
+                $errors['composer.json'][] = $attributes;
+            }
+        }
+
+        return [
+            'errors' => $errors,
+            'rules' => $rules,
+        ];
+    }
+}

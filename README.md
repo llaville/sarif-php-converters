@@ -62,6 +62,7 @@ This library may be considered as a producer on `sarif` report format, for these
 ## Comparison by project on output formats
 
 [cda]: https://github.com/shipmonk-rnd/composer-dependency-analyser
+[composer]: https://github.com/composer/composer
 [ecs]: https://github.com/easy-coding-standard/easy-coding-standard
 [phan]: https://github.com/phan/phan
 [phpcs]: https://github.com/PHPCSStandards/PHP_CodeSniffer
@@ -76,6 +77,7 @@ This library may be considered as a producer on `sarif` report format, for these
 | Project                             | Version | SARIF | Checkstyle | JUnit | CodeClimate<br/>GitLab | GitHub |                     Output Format Support                      |
 |:------------------------------------|:-------:|:-----:|:----------:|:-----:|:----------------------:|:------:|:--------------------------------------------------------------:|
 | [Composer Dependency Analyser][cda] |  1.6.x  |   ❌   |     ❌      |   ✅   |           ❌            |   ❌    |                             junit                              |
+| [Composer][composer]                |  2.4.x  |   ❌   |     ❌      |   ❌   |           ❌            |   ❌    |                    table,plain,json,summary                    |
 | [Easy-Coding-Standard][ecs]         | 12.3.x  |   ❌   |     ✅      |   ✅   |           ✅            |   ❌    |              console,json,junit,checkstyle,gitlab              |
 | [Phan][phan]                        |  5.4.x  |   ❌   |     ✅      |   ❌   |           ✅            |   ❌    |        text,csv,json,checkstyle,codeclimate,pylint,html        |
 | [PHP CodeSniffer][phpcs]            | 3.10.x  |   ❌   |     ✅      |   ✅   |           ❌            |   ❌    |                     json,checkstyle,junit                      |

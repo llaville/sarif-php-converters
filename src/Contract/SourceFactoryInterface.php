@@ -13,6 +13,7 @@ namespace Bartlett\Sarif\Contract;
  */
 interface SourceFactoryInterface
 {
+    public const BUILTIN_SOURCE_COMPOSER = 'composer';
     public const BUILTIN_SOURCE_ECS = 'ecs';
     public const BUILTIN_SOURCE_PHAN = 'phan';
     public const BUILTIN_SOURCE_PHPCS = 'phpcs';
