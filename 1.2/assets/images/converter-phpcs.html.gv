@@ -1,0 +1,181 @@
+digraph {
+  graph [name="G" overlap="false" rankdir="TB" bgcolor="transparent"]
+  node [fontname="Verdana" fontsize=8 shape="none" margin=0 fillcolor="#FEFECE" style="filled"]
+  edge [fontname="Verdana" fontsize=8]
+  subgraph cluster_0 {
+    graph [bgcolor="BurlyWood"]
+    label = "Bartlett\\Sarif\\Converter"
+    "Bartlett\\Sarif\\Converter\\PhpCsConverter" [shape="none" label=<
+<table cellspacing="0" border="0" cellborder="1">
+    <tr><td bgcolor="#eeeeee"><b><br/>PhpCsConverter</b></td></tr>
+    <tr><td></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ configure(options : array = []) : void</td></tr>
+    <tr><td align="left">+ invocations(properties : Bartlett\\Sarif\\Definition\\PropertyBag = «unknown») : array</td></tr>
+</table></td></tr>
+</table>>]
+    "Bartlett\\Sarif\\Converter\\AbstractConverter" [shape="none" label=<
+<table cellspacing="0" border="0" cellborder="1">
+    <tr><td bgcolor="#eeeeee"><b>«abstract»<br/>AbstractConverter</b></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left"># toolName</td></tr>
+    <tr><td align="left"># toolFullName</td></tr>
+    <tr><td align="left"># toolShortDescription</td></tr>
+    <tr><td align="left"># toolFullDescription</td></tr>
+    <tr><td align="left"># toolInformationUri</td></tr>
+    <tr><td align="left"># toolComposerPackage</td></tr>
+    <tr><td align="left"># toolSemanticVersion</td></tr>
+    <tr><td align="left"># converterComposerPackage</td></tr>
+    <tr><td align="left"># results : mixed = []</td></tr>
+    <tr><td align="left"># errors : mixed = []</td></tr>
+    <tr><td align="left"># serializer</td></tr>
+    <tr><td align="left"># startTime</td></tr>
+    <tr><td align="left"># endTime</td></tr>
+    <tr><td align="left"># includeCodeSnippets</td></tr>
+    <tr><td align="left"># includeContextRegion</td></tr>
+    <tr><td align="left"># defaultResultLevelIfEmpty</td></tr>
+</table></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ __construct(options : array = [], factory : Bartlett\\Sarif\\Factory\\SerializerFactory = «unknown»)</td></tr>
+    <tr><td align="left">+ getName() : string</td></tr>
+    <tr><td align="left">+ configure(options : array) : void</td></tr>
+    <tr><td align="left">+ toolDriver() : Bartlett\\Sarif\\Definition\\ToolComponent</td></tr>
+    <tr><td align="left">+ toolExtensions() : array</td></tr>
+    <tr><td align="left">+ rules(defined : iterable) : array</td></tr>
+    <tr><td align="left">+ results(normalized : iterable) : void</td></tr>
+    <tr><td align="left">+ sarifLog(runs : array = [], version : string = '2\.1\.0') : ?string</td></tr>
+    <tr><td align="left">+ invocations(properties : Bartlett\\Sarif\\Definition\\PropertyBag = «unknown») : array</td></tr>
+    <tr><td align="left">+ automationDetails() : Bartlett\\Sarif\\Definition\\RunAutomationDetails</td></tr>
+    <tr><td align="left">+ run(invocations : iterable, rules : iterable) : Bartlett\\Sarif\\Definition\\Run</td></tr>
+    <tr><td align="left"># getToolVersion(package : string) : string</td></tr>
+    <tr><td align="left"># pathToArtifactLocation(path : string) : string</td></tr>
+    <tr><td align="left"># pathToUri(path : string) : string</td></tr>
+    <tr><td align="left"># getCodeSnippet(filePath : string, lineNumber : int, linesBefore : int, linesAfter : int) : ?string</td></tr>
+    <tr><td align="left"># getSnippetRegion(filePath : string, lineNumber : int, column : int = «unknown», linesBefore : int = 2, linesAfter : int = 2) : Bartlett\\Sarif\\Definition\\Region</td></tr>
+    <tr><td align="left"># getErrors() : Iterator</td></tr>
+</table></td></tr>
+</table>>]
+  }
+  subgraph cluster_1 {
+    graph [bgcolor="LightSkyBlue"]
+    label = "Bartlett\\Sarif\\Contract"
+    "Bartlett\\Sarif\\Contract\\ConverterInterface" [shape="none" label=<
+<table cellspacing="0" border="0" cellborder="1">
+    <tr><td bgcolor="#eeeeee"><b>«interface»<br/>ConverterInterface</b></td></tr>
+    <tr><td></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ «abstract» getName() : string</td></tr>
+    <tr><td align="left">+ «abstract» toolDriver() : Bartlett\\Sarif\\Definition\\ToolComponent</td></tr>
+    <tr><td align="left">+ «abstract» toolExtensions() : array</td></tr>
+    <tr><td align="left">+ «abstract» rules(defined : iterable) : array</td></tr>
+    <tr><td align="left">+ «abstract» results(normalized : iterable) : void</td></tr>
+    <tr><td align="left">+ «abstract» invocations(properties : Bartlett\\Sarif\\Definition\\PropertyBag = «unknown») : array</td></tr>
+    <tr><td align="left">+ «abstract» automationDetails() : Bartlett\\Sarif\\Definition\\RunAutomationDetails</td></tr>
+    <tr><td align="left">+ «abstract» run(invocations : iterable, rules : iterable) : Bartlett\\Sarif\\Definition\\Run</td></tr>
+    <tr><td align="left">+ «abstract» sarifLog(runs : array = [], version : string = '2\.1\.0') : ?string</td></tr>
+</table></td></tr>
+</table>>]
+    "Bartlett\\Sarif\\Contract\\SourceInterface" [shape="none" label=<
+<table cellspacing="0" border="0" cellborder="1">
+    <tr><td bgcolor="#eeeeee"><b>«interface»<br/>SourceInterface</b></td></tr>
+    <tr><td></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ «abstract» getName() : string</td></tr>
+    <tr><td align="left">+ «abstract» getFiles() : Iterator</td></tr>
+    <tr><td align="left">+ «abstract» getErrors() : Iterator</td></tr>
+    <tr><td align="left">+ «abstract» getRules() : Iterator</td></tr>
+    <tr><td align="left">+ «abstract» getAttribute(name : string) : Iterator</td></tr>
+    <tr><td align="left">+ «abstract» normalize(data : mixed, format : string, context : array) : bool</td></tr>
+</table></td></tr>
+</table>>]
+    "Bartlett\\Sarif\\Contract\\NormalizerInterface" [shape="none" label=<
+<table cellspacing="0" border="0" cellborder="1">
+    <tr><td bgcolor="#eeeeee"><b>«interface»<br/>NormalizerInterface</b></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ «static» FORMAT_SARIF : string = "sarif" {readOnly}</td></tr>
+    <tr><td align="left">+ «static» FORMAT_JSON : string = "json" {readOnly}</td></tr>
+    <tr><td align="left">+ «static» FORMAT_XML : string = "xml" {readOnly}</td></tr>
+    <tr><td align="left">+ «static» FORMAT_CHECKSTYLE : string = "checkstyle" {readOnly}</td></tr>
+    <tr><td align="left">+ «static» FORMAT_INTERNAL : string = "internal" {readOnly}</td></tr>
+</table></td></tr>
+    <tr><td></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ «abstract» getSupportedFormats() : array</td></tr>
+    <tr><td align="left">+ «abstract» normalize(data : mixed, format : string, context : array) : ?ArrayObject</td></tr>
+</table></td></tr>
+</table>>]
+  }
+  subgraph cluster_2 {
+    graph [bgcolor="Bisque"]
+    label = "Bartlett\\Sarif\\Converter\\Source"
+    "Bartlett\\Sarif\\Converter\\Source\\PhpCsSource" [shape="none" label=<
+<table cellspacing="0" border="0" cellborder="1">
+    <tr><td bgcolor="#eeeeee"><b><br/>PhpCsSource</b></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ «static» URI_PATTERN : string = "https\:\/\/github\.com\/PHPCSStandards\/PHP_CodeSniffer\/wiki\/Customisable\-Sniff\-Properties\#\%s" {readOnly}</td></tr>
+</table></td></tr>
+    <tr><td></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ __construct(normalizers : iterable = [])</td></tr>
+    <tr><td align="left">+ getRules() : Iterator</td></tr>
+    <tr><td align="left">+ «static» fromFile(filename : string, format : string) : self</td></tr>
+</table></td></tr>
+</table>>]
+    "Bartlett\\Sarif\\Converter\\Source\\AbstractSource" [shape="none" label=<
+<table cellspacing="0" border="0" cellborder="1">
+    <tr><td bgcolor="#eeeeee"><b>«abstract»<br/>AbstractSource</b></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">– normalizers : mixed</td></tr>
+    <tr><td align="left">– normalized</td></tr>
+</table></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ __construct(normalizers : iterable = [])</td></tr>
+    <tr><td align="left">+ getName() : string</td></tr>
+    <tr><td align="left">+ getFiles() : Iterator</td></tr>
+    <tr><td align="left">+ getErrors() : Iterator</td></tr>
+    <tr><td align="left">+ getRules() : Iterator</td></tr>
+    <tr><td align="left">+ getAttribute(name : string) : Iterator</td></tr>
+    <tr><td align="left">+ normalize(data, format : string, context : array) : bool</td></tr>
+    <tr><td align="left"># getNormalizer(format : string) : ?Bartlett\\Sarif\\Contract\\NormalizerInterface</td></tr>
+</table></td></tr>
+</table>>]
+  }
+  subgraph cluster_3 {
+    graph [bgcolor="Bisque"]
+    label = "Bartlett\\Sarif\\Converter\\Normalizer"
+    "Bartlett\\Sarif\\Converter\\Normalizer\\PhpCsNormalizer" [shape="none" label=<
+<table cellspacing="0" border="0" cellborder="1">
+    <tr><td bgcolor="#eeeeee"><b><br/>PhpCsNormalizer</b></td></tr>
+    <tr><td></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ getSupportedFormats() : array</td></tr>
+    <tr><td align="left">+ normalize(data, format : string, context : array) : ?ArrayObject</td></tr>
+    <tr><td align="left"># fromInternal(data, context : array, mapping : array = []) : array</td></tr>
+    <tr><td align="left">– fromJson(data : string, mapping : array) : array</td></tr>
+</table></td></tr>
+</table>>]
+    "Bartlett\\Sarif\\Converter\\Normalizer\\AbstractNormalizer" [shape="none" label=<
+<table cellspacing="0" border="0" cellborder="1">
+    <tr><td bgcolor="#eeeeee"><b>«abstract»<br/>AbstractNormalizer</b></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ «static» FORMAT_SARIF : string = "sarif" {readOnly}</td></tr>
+    <tr><td align="left">+ «static» FORMAT_JSON : string = "json" {readOnly}</td></tr>
+    <tr><td align="left">+ «static» FORMAT_XML : string = "xml" {readOnly}</td></tr>
+    <tr><td align="left">+ «static» FORMAT_CHECKSTYLE : string = "checkstyle" {readOnly}</td></tr>
+    <tr><td align="left">+ «static» FORMAT_INTERNAL : string = "internal" {readOnly}</td></tr>
+</table></td></tr>
+    <tr><td></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ getSupportedFormats() : array</td></tr>
+    <tr><td align="left">+ normalize(data, format : string, context : array) : ?ArrayObject</td></tr>
+    <tr><td align="left"># fromInternal(data : TData, context : array, mapping : array = []) : array</td></tr>
+</table></td></tr>
+</table>>]
+  }
+  "Bartlett\\Sarif\\Converter\\AbstractConverter" -> "Bartlett\\Sarif\\Contract\\ConverterInterface" [arrowhead="empty" style="dashed"]
+  "Bartlett\\Sarif\\Converter\\PhpCsConverter" -> "Bartlett\\Sarif\\Converter\\AbstractConverter" [arrowhead="empty" style="filled"]
+  "Bartlett\\Sarif\\Converter\\Source\\AbstractSource" -> "Bartlett\\Sarif\\Contract\\SourceInterface" [arrowhead="empty" style="dashed"]
+  "Bartlett\\Sarif\\Converter\\Source\\PhpCsSource" -> "Bartlett\\Sarif\\Converter\\Source\\AbstractSource" [arrowhead="empty" style="filled"]
+  "Bartlett\\Sarif\\Converter\\Normalizer\\AbstractNormalizer" -> "Bartlett\\Sarif\\Contract\\NormalizerInterface" [arrowhead="empty" style="dashed"]
+  "Bartlett\\Sarif\\Converter\\Normalizer\\PhpCsNormalizer" -> "Bartlett\\Sarif\\Converter\\Normalizer\\AbstractNormalizer" [arrowhead="empty" style="filled"]
+}
