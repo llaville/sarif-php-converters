@@ -21,3 +21,4 @@ jobs:
             destination-dir: "1.2"
             force-orphan: false
             hook-script: "resources/gh-pages-hook.sh"
+            php-version: "8.2"
