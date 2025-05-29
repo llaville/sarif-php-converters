@@ -95,7 +95,7 @@ final class ComposerNormalizer extends AbstractNormalizer
                     if ('ReportingDescriptor.id' === $key) {
                         if (!isset($rules[$value])) {
                             $rules[$value] = [
-                                'messageStrings' => ['default' => "Found '{0}' vulnerability in '{1}'"],
+                                'messageStrings' => ['default' => "Found '{0}' vulnerability in '{1}'."],
                                 'fullDescription' => $advisory['title'],
                                 'helpUri' => 'https://www.cve.org/CVERecord?id=' . $value,
                                 'properties' => [
