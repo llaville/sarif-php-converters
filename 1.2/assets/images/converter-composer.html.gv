@@ -145,6 +145,7 @@ digraph {
     <tr><td align="left">+ getSupportedFormats() : array</td></tr>
     <tr><td align="left">+ normalize(data, format : string, context : array) : ?ArrayObject</td></tr>
     <tr><td align="left">– fromJson(data : string, mapping : array) : array</td></tr>
+    <tr><td align="left">– severityMap(severity : string) : string</td></tr>
 </table></td></tr>
 </table>>]
     "Bartlett\\Sarif\\Converter\\Normalizer\\AbstractNormalizer" [shape="none" label=<
