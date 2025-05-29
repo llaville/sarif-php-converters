@@ -64,6 +64,7 @@ final class ComposerNormalizer extends AbstractNormalizer
                     if ('advisoryId' === $attr) {
                         $attributes['Result.properties.AdvisoryId']['PKSA'] = [
                             'id' => $value,
+                            'link' => sprintf('https://packagist.org/security-advisories/%s', $value),
                         ];
                     }
                     if ('sources' === $attr) {
@@ -107,6 +108,7 @@ final class ComposerNormalizer extends AbstractNormalizer
                             ];
                             $attributes['Result.properties.AdvisoryId']['CVE'] = [
                                 'id' => $value,
+                                'link' => 'https://www.cve.org/CVERecord?id=' . $value,
                             ];
                         }
                         $rules[$value]['properties']['frequency'] += 1;
