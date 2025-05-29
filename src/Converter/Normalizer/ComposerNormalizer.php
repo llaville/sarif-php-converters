@@ -79,7 +79,7 @@ final class ComposerNormalizer extends AbstractNormalizer
                         }
                     }
                     if ('title' === $attr) {
-                        $attributes['Result.message'] = "Found '{0}' vulnerability in '{1}'";
+                        $attributes['Result.message.id'] = 'default';
                         $attributes['Result.message.arguments'] = [$advisory['cve'], $package];
                     }
                     $key = $mapping[$attr] ?? null;
@@ -95,6 +95,7 @@ final class ComposerNormalizer extends AbstractNormalizer
                     if ('ReportingDescriptor.id' === $key) {
                         if (!isset($rules[$value])) {
                             $rules[$value] = [
+                                'messageStrings' => ['default' => "Found '{0}' vulnerability in '{1}'"],
                                 'fullDescription' => $advisory['title'],
                                 'helpUri' => 'https://www.cve.org/CVERecord?id=' . $value,
                                 'properties' => [
