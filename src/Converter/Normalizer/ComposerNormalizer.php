@@ -37,7 +37,6 @@ final class ComposerNormalizer extends AbstractNormalizer
 
         // default common mapping for all formats
         $mapping = [
-            'title' => 'Result.message',
             'cve' => 'ReportingDescriptor.id',
             'severity' => 'Result.level',
             'affectedVersions' => 'Result.properties.affectedVersions',
@@ -78,6 +77,10 @@ final class ComposerNormalizer extends AbstractNormalizer
                             }
                         }
                     }
+                    if ('title' === $attr) {
+                        $attributes['Result.message'] = "Found '{0}' vulnerability in '{1}'";
+                        $attributes['Result.message.arguments'] = [$advisory['cve'], $package];
+                    }
                     $key = $mapping[$attr] ?? null;
                     if (null === $key) {
                         // skips unsolicited entry
@@ -96,13 +99,14 @@ final class ComposerNormalizer extends AbstractNormalizer
                     if ('ReportingDescriptor.id' === $key) {
                         if (!isset($rules[$value])) {
                             $rules[$value] = [
+                                'fullDescription' => $advisory['title'],
+                                'helpUri' => 'https://www.cve.org/CVERecord?id=' . $value,
                                 'properties' => [
                                     'frequency' => 0,
                                 ]
                             ];
                             $attributes['Result.properties.AdvisoryId']['CVE'] = [
                                 'id' => $value,
-                                'link' => 'https://www.cve.org/CVERecord?id=' . $value
                             ];
                         }
                         $rules[$value]['properties']['frequency'] += 1;
