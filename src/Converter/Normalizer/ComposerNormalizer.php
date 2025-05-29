@@ -40,7 +40,6 @@ final class ComposerNormalizer extends AbstractNormalizer
             'title' => 'Result.message',
             'cve' => 'ReportingDescriptor.id',
             'severity' => 'Result.level',
-            'advisoryId' => 'Result.properties.advisoryId',
             'affectedVersions' => 'Result.properties.affectedVersions',
             'reportedAt' => 'Result.properties.reportedAt',
         ];
@@ -58,12 +57,20 @@ final class ComposerNormalizer extends AbstractNormalizer
 
         foreach ($collected['advisories'] ?? [] as $package => $advisories) {
             foreach ($advisories as $advisory) {
-                $attributes = ['Result.properties.packageName' => $package];
+                $attributes = [
+                    'Result.properties.packageName' => $package,
+                    'Result.properties.AdvisoryId' => [],
+                ];
                 foreach ($advisory as $attr => $value) {
+                    if ('advisoryId' === $attr) {
+                        $attributes['Result.properties.AdvisoryId']['PKSA'] = [
+                            'id' => $value,
+                        ];
+                    }
                     if ('sources' === $attr) {
                         foreach ($value as $source) {
                             if ('GitHub' === $source['name']) {
-                                $attributes['Result.properties.ghsa'] = [
+                                $attributes['Result.properties.AdvisoryId']['GHSA'] = [
                                     'id' => $source['remoteId'],
                                     'link' => sprintf('https://github.com/advisories/%s', $source['remoteId']),
                                 ];
