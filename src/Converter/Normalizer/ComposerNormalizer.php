@@ -95,7 +95,12 @@ final class ComposerNormalizer extends AbstractNormalizer
                     }
                     if ('ReportingDescriptor.id' === $key) {
                         if (!isset($rules[$value])) {
-                            $rules[$value] = ['properties' => ['frequency' => 0, 'link' => $advisory['link']]];
+                            $rules[$value] = [
+                                'properties' => [
+                                    'frequency' => 0,
+                                    'link' => 'https://www.cve.org/CVERecord?id=' . $value
+                                ]
+                            ];
                         }
                         $rules[$value]['properties']['frequency'] += 1;
                     }
