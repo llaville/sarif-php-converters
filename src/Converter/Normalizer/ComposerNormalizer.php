@@ -98,8 +98,11 @@ final class ComposerNormalizer extends AbstractNormalizer
                             $rules[$value] = [
                                 'properties' => [
                                     'frequency' => 0,
-                                    'link' => 'https://www.cve.org/CVERecord?id=' . $value
                                 ]
+                            ];
+                            $attributes['Result.properties.AdvisoryId']['CVE'] = [
+                                'id' => $value,
+                                'link' => 'https://www.cve.org/CVERecord?id=' . $value
                             ];
                         }
                         $rules[$value]['properties']['frequency'] += 1;
