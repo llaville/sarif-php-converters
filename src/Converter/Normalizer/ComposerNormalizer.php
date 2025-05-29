@@ -90,12 +90,7 @@ final class ComposerNormalizer extends AbstractNormalizer
                     $newValue = $value;
                     if ('Result.level' === $key) {
                         // match severity value with standard SARIF level enum
-                        $newValue = match (strtolower($value)) {
-                            'medium' => 'note',
-                            'high' => 'warning',
-                            'critical' => 'error',
-                            default => 'none',
-                        };
+                        $newValue = $this->severityMap($value);
                     }
                     if ('ReportingDescriptor.id' === $key) {
                         if (!isset($rules[$value])) {
@@ -112,6 +107,8 @@ final class ComposerNormalizer extends AbstractNormalizer
                             ];
                         }
                         $rules[$value]['properties']['frequency'] += 1;
+                        $rules[$value]['defaultConfiguration']['enabled'] = !isset($advisory['ignoreReason']);
+                        $rules[$value]['defaultConfiguration']['level'] = $this->severityMap($advisory['severity']);
                     }
                     $attributes[$key] = $newValue;
                 }
@@ -123,5 +120,15 @@ final class ComposerNormalizer extends AbstractNormalizer
             'errors' => $errors,
             'rules' => $rules,
         ];
+    }
+
+    private function severityMap(string $severity): string
+    {
+        return match (strtolower($severity)) {
+            'medium' => 'note',
+            'high' => 'warning',
+            'critical' => 'error',
+            default => 'none',
+        };
     }
 }
