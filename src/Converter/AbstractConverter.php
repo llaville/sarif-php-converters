@@ -248,6 +248,13 @@ abstract class AbstractConverter implements ConverterInterface
                 $properties->addProperties($ruleDef['properties']);
                 $rule->setProperties($properties);
             }
+            if (!empty($ruleDef['defaultConfiguration'])) {
+                $defaultConfiguration = new Definition\ReportingConfiguration();
+                $defaultConfiguration->setEnabled($ruleDef['defaultConfiguration']['enabled'] ?? true);
+                $defaultConfiguration->setLevel($ruleDef['defaultConfiguration']['level'] ?? 'warning');
+                $defaultConfiguration->setRank($ruleDef['defaultConfiguration']['rank'] ?? -1);
+                $rule->setDefaultConfiguration($defaultConfiguration);
+            }
 
             $rules[] = $rule;
         }
