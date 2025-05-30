@@ -10,10 +10,13 @@ namespace Bartlett\Sarif\Converter\Normalizer;
 use Bartlett\Sarif\Contract\NormalizerInterface;
 
 use ArrayObject;
+use function count;
 use function in_array;
 use function json_decode;
 use function sprintf;
+use function str_pad;
 use function strtolower;
+use const STR_PAD_LEFT;
 
 /**
  * @extends AbstractNormalizer<mixed>
@@ -53,6 +56,7 @@ final class ComposerNormalizer extends AbstractNormalizer
 
         $errors = [];
         $rules = [];
+        $ruleIdentifiers = [];
 
         foreach ($collected['advisories'] ?? [] as $package => $advisories) {
             foreach ($advisories as $advisory) {
@@ -79,6 +83,7 @@ final class ComposerNormalizer extends AbstractNormalizer
                         }
                     }
                     if ('title' === $attr) {
+                        $attributes['Result.message'] = 'Found security advisory';
                         $attributes['Result.message.id'] = 'default';
                         $attributes['Result.message.arguments'] = [$advisory['cve'], $package];
                     }
@@ -93,10 +98,15 @@ final class ComposerNormalizer extends AbstractNormalizer
                         $newValue = $this->severityMap($value);
                     }
                     if ('ReportingDescriptor.id' === $key) {
-                        if (!isset($rules[$value])) {
-                            $rules[$value] = [
+                        $ruleIdentifiers[] = $value;
+                        $caId = str_pad((string) count($ruleIdentifiers), 4, '0', STR_PAD_LEFT);
+                        $newValue = $ruleId = 'CA' . $caId;
+                        if (!isset($rules[$ruleId])) {
+                            $rules[$ruleId] = [
                                 'messageStrings' => ['default' => "Found '{0}' vulnerability in '{1}'."],
+                                'shortDescription' => $advisory['title'],
                                 'fullDescription' => $advisory['title'],
+                                'help' => 'Learn more about CVE Record Information by following help link',
                                 'helpUri' => 'https://www.cve.org/CVERecord?id=' . $value,
                                 'properties' => [
                                     'frequency' => 0,
@@ -107,12 +117,14 @@ final class ComposerNormalizer extends AbstractNormalizer
                                 'link' => 'https://www.cve.org/CVERecord?id=' . $value,
                             ];
                         }
-                        $rules[$value]['properties']['frequency'] += 1;
-                        $rules[$value]['defaultConfiguration']['enabled'] = !isset($advisory['ignoreReason']);
-                        $rules[$value]['defaultConfiguration']['level'] = $this->severityMap($advisory['severity']);
+                        $rules[$ruleId]['name'] = 'ComposerAudit'. $caId;
+                        $rules[$ruleId]['properties']['frequency'] += 1;
+                        $rules[$ruleId]['defaultConfiguration']['enabled'] = !isset($advisory['ignoreReason']);
+                        $rules[$ruleId]['defaultConfiguration']['level'] = $this->severityMap($advisory['severity']);
                     }
                     $attributes[$key] = $newValue;
                 }
+                $attributes['Region.startLine'] = 1;
                 $errors['composer.json'][] = $attributes;
             }
         }
