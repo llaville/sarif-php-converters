@@ -49,6 +49,10 @@ final class ComposerNormalizer extends AbstractNormalizer
         return new ArrayObject($this->fromJson($data, $mapping));
     }
 
+    /**
+     * @param array{cve: string, severity: string, affectedVersions: string, reportedAt: string} $mapping
+     * @return array<string, mixed>
+     */
     private function fromJson(string $data, array $mapping): array
     {
         // $data is already JSON encoded
