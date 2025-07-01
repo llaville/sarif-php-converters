@@ -1021,11 +1021,7 @@
 <li>This SARIF converter requires at least Composer version 2.4.0</li>
 </ul>
 <h2 id="installation">Installation</h2>
-<p>Without Composer greater or equal to 2.4.0</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>composer<span class="w"> </span>require<span class="w"> </span>--dev<span class="w"> </span>composer/composer<span class="w"> </span>bartlett/sarif-php-converters
-</span></code></pre></div>
-<p>With Composer greater or equal to 2.4.0</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>composer<span class="w"> </span>require<span class="w"> </span>--dev<span class="w"> </span>bartlett/sarif-php-converters
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>composer<span class="w"> </span>require<span class="w"> </span>--dev<span class="w"> </span>bartlett/sarif-php-converters
 </span></code></pre></div>
 <h2 id="usage">Usage</h2>
 <div class="admonition warning">
@@ -1034,10 +1030,10 @@
 we have no other alternative that using the <strong>Console Tool</strong> convert command.</p>
 </div>
 <h3 id="build-the-native-json-output-report"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 17h-2V9h-2V7h4m5-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> Build the native json output report</h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>vendor/bin/composer<span class="w"> </span>audit<span class="w"> </span>--format<span class="o">=</span>json<span class="w"> </span>&gt;<span class="w"> </span>examples/composer/audit.json
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>vendor/bin/composer<span class="w"> </span>audit<span class="w"> </span>--format<span class="o">=</span>json<span class="w"> </span>&gt;<span class="w"> </span>examples/composer/audit.json
 </span></code></pre></div>
 <h3 id="and-finally-convert-it-to-sarif-with-the-console-tool"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 11a2 2 0 0 1-2 2h-2v2h4v2H9v-4a2 2 0 0 1 2-2h2V9H9V7h4a2 2 0 0 1 2 2m4-6H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> And finally, convert it to SARIF with the <strong>Console Tool</strong></h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>php<span class="w"> </span>report-converter<span class="w"> </span>convert<span class="w"> </span>composer<span class="w"> </span>--input-format<span class="o">=</span>json<span class="w"> </span>--input-file<span class="o">=</span>examples/composer/audit.json<span class="w"> </span>-v
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>php<span class="w"> </span>report-converter<span class="w"> </span>convert<span class="w"> </span>composer<span class="w"> </span>--input-format<span class="o">=</span>json<span class="w"> </span>--input-file<span class="o">=</span>examples/composer/audit.json<span class="w"> </span>-v
 </span></code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -1052,11 +1048,10 @@ we have no other alternative that using the <strong>Console Tool</strong> conver
 </ul>
 <h2 id="ide-integration">IDE Integration</h2>
 <p>The SARIF report file <code>[*].sarif.json</code> is automagically recognized and interpreted by PhpStorm (2024).</p>
-<p><img alt="PHPStorm integration" src="../assets/images/phpstorm-composer.png" /></p>
 <h2 id="web-sarif-viewer">Web SARIF viewer</h2>
 <p>With the <a href="https://github.com/Microsoft/sarif-web-component">React based component</a>, you are able to explore a sarif report file previously generated.</p>
 <p>For example:</p>
-<p><img alt="sarif-web-composer" src="../assets/images/sarif-web-composer.png" /></p>
+<p><img alt="sarif-web-composer" src="../../assets/images/sarif-web-composer.png" /></p>
 
 
 
