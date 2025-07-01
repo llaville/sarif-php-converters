@@ -5,6 +5,7 @@ Here are the links to the documentation for versions that are still supported :
 
 - [SARIF PHP Converters 1.0](https://llaville.github.io/sarif-php-converters/1.0/)
 - [SARIF PHP Converters 1.1](https://llaville.github.io/sarif-php-converters/1.1/)
+- [SARIF PHP Converters 1.2](https://llaville.github.io/sarif-php-converters/1.2/)
 
 Full documentation may be found in `docs` folder into this repository, and may be read online without to do anything else.
 
