@@ -9,7 +9,7 @@
 
 ## Requirements
 
-* PHP 8.1 or greater
+* PHP 8.2 or greater
 * ext-json
 * ext-pcre
 * ext-spl

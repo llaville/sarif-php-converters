@@ -18,6 +18,13 @@
 | Rector [official website][rector]              |       [rector](rector.md)       |   optional   |     ✅     |
 | Twig-CS-Fixer [official website][twigcs-fixer] | [twigcs-fixer](twigcs-fixer.md) |   optional   |     ✅     |
 
+## Available since v1.2.0
+
+| Converter                             |       User Guide        | Console Tool | Reporting |
+|:--------------------------------------|:-----------------------:|:------------:|:---------:|
+| Composer [official website][composer] | [composer](composer.md) |   required   |     ❌     |
+
+[composer]: https://github.com/composer/composer
 [ecs]: https://github.com/easy-coding-standard/easy-coding-standard
 [phan]: https://github.com/phan/phan
 [phpcs]: https://github.com/PHPCSStandards/PHP_CodeSniffer

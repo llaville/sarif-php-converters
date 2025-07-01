@@ -25,14 +25,6 @@
 
 ## Installation
 
-Without Composer greater or equal to 2.4.0
-
-```shell
-composer require --dev composer/composer bartlett/sarif-php-converters
-```
-
-With Composer greater or equal to 2.4.0
-
 ```shell
 composer require --dev bartlett/sarif-php-converters
 ```
@@ -68,8 +60,6 @@ php report-converter convert composer --input-format=json --input-file=examples/
 ## IDE Integration
 
 The SARIF report file `[*].sarif.json` is automagically recognized and interpreted by PhpStorm (2024).
-
-![PHPStorm integration](../assets/images/phpstorm-composer.png)
 
 ## Web SARIF viewer
 

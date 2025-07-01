@@ -1,0 +1,133 @@
+{
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "Composer",
+                    "shortDescription": {
+                        "text": "Dependency Manager for PHP."
+                    },
+                    "fullDescription": {
+                        "text": "Security audits in Composer 2.4 or greater."
+                    },
+                    "fullName": "ComposerAudit",
+                    "semanticVersion": "2.8.9.0",
+                    "informationUri": "https://github.com/composer/composer",
+                    "rules": [
+                        {
+                            "id": "CA0001",
+                            "name": "ComposerAudit0001",
+                            "shortDescription": {
+                                "text": "CVE-2024-51736: Command execution hijack on Windows with Process class"
+                            },
+                            "fullDescription": {
+                                "text": "CVE-2024-51736: Command execution hijack on Windows with Process class"
+                            },
+                            "messageStrings": {
+                                "default": {
+                                    "text": "Found '{0}' vulnerability in '{1}'."
+                                }
+                            },
+                            "defaultConfiguration": {
+                                "enabled": false,
+                                "level": "note",
+                                "rank": -1.0
+                            },
+                            "helpUri": "https://www.cve.org/CVERecord?id=CVE-2024-51736",
+                            "help": {
+                                "text": "Learn more about CVE Record Information by following help link"
+                            },
+                            "properties": {
+                                "frequency": 1
+                            }
+                        }
+                    ]
+                },
+                "extensions": [
+                    {
+                        "name": "bartlett/sarif-php-converters",
+                        "shortDescription": {
+                            "text": "Composer SARIF Converter"
+                        },
+                        "version": "1.2.9999999.9999999-dev"
+                    }
+                ]
+            },
+            "invocations": [
+                {
+                    "executionSuccessful": true,
+                    "commandLine": "report-converter",
+                    "arguments": [
+                        "convert",
+                        "composer",
+                        "--input-format=json",
+                        "--input-file=examples/composer/audit.json",
+                        "-v"
+                    ],
+                    "workingDirectory": {
+                        "uri": "file:///shared/backups/bartlett/sarif-php-converters/"
+                    }
+                }
+            ],
+            "originalUriBaseIds": {
+                "WORKINGDIR": {
+                    "uri": "file:///shared/backups/bartlett/sarif-php-converters/"
+                }
+            },
+            "results": [
+                {
+                    "message": {
+                        "text": "Found security advisory",
+                        "id": "default",
+                        "arguments": [
+                            "CVE-2024-51736",
+                            "symfony/process"
+                        ]
+                    },
+                    "ruleId": "CA0001",
+                    "level": "note",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../composer.json",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 1
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "CA0001": "fe90ce1c7229c5b3959f9bf61d77868eb3790c6dfefa9cd2830bf03a3a918659"
+                    },
+                    "properties": {
+                        "packageName": "symfony/process",
+                        "AdvisoryId": {
+                            "PKSA": {
+                                "id": "PKSA-wws7-mr54-jsny",
+                                "link": "https://packagist.org/security-advisories/PKSA-wws7-mr54-jsny"
+                            },
+                            "CVE": {
+                                "id": "CVE-2024-51736",
+                                "link": "https://www.cve.org/CVERecord?id=CVE-2024-51736"
+                            },
+                            "GHSA": {
+                                "id": "GHSA-qq5c-677p-737q",
+                                "link": "https://github.com/advisories/GHSA-qq5c-677p-737q"
+                            }
+                        },
+                        "affectedVersions": ">=2.0.0,<3.0.0|>=3.0.0,<4.0.0|>=4.0.0,<5.0.0|>=5.0.0,<5.1.0|>=5.1.0,<5.2.0|>=5.2.0,<5.3.0|>=5.3.0,<5.4.0|>=5.4.0,<5.4.46|>=6.0.0,<6.1.0|>=6.1.0,<6.2.0|>=6.2.0,<6.3.0|>=6.3.0,<6.4.0|>=6.4.0,<6.4.14|>=7.0.0,<7.1.0|>=7.1.0,<7.1.7",
+                        "reportedAt": "2024-11-05T08:00:00+00:00"
+                    }
+                }
+            ],
+            "automationDetails": {
+                "id": "Daily run 2025-07-01T03:05:02+00:00"
+            }
+        }
+    ]
+}
