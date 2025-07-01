@@ -121,7 +121,7 @@ final class ComposerNormalizer extends AbstractNormalizer
                                 'link' => 'https://www.cve.org/CVERecord?id=' . $value,
                             ];
                         }
-                        $rules[$ruleId]['name'] = 'ComposerAudit'. $caId;
+                        $rules[$ruleId]['name'] = 'ComposerAudit' . $caId;
                         $rules[$ruleId]['properties']['frequency'] += 1;
                         $rules[$ruleId]['defaultConfiguration']['enabled'] = !isset($advisory['ignoreReason']);
                         $rules[$ruleId]['defaultConfiguration']['level'] = $this->severityMap($advisory['severity']);
