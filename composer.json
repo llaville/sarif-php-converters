@@ -14,7 +14,7 @@
         "ext-pcre": "*",
         "ext-spl": "*",
         "composer-runtime-api": "^2.0",
-        "bartlett/sarif-php-sdk": "^2.0"
+        "bartlett/sarif-php-sdk": "^2.2"
     },
     "require-dev": {
         "bamarni/composer-bin-plugin": "^1.8",
