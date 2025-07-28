@@ -46,12 +46,12 @@ jobs:
                 name: Install Composer dependencies
                 uses: ramsey/composer-install@v2
                 with:
-                    composer-options: "--prefer-dist"
+                    composer-options: "--prefer-dist --no-scripts"
 
             -   # https://github.com/llaville/box-manifest
                 name: Download BOX Manifest Artifact
                 env:
-                    BOX_MANIFEST_VERSION: ${{ vars.BOX_MANIFEST_VERSION || '4.1.4' }}
+                    BOX_MANIFEST_VERSION: ${{ vars.BOX_MANIFEST_VERSION || '4.2.0' }}
                 run: |
                     curl -Ls "https://github.com/llaville/box-manifest/releases/download/$BOX_MANIFEST_VERSION/box-manifest.phar" -o /usr/local/bin/box-manifest
                     chmod +x /usr/local/bin/box-manifest
