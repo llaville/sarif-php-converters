@@ -38,6 +38,7 @@ use function gmdate;
 use function implode;
 use function is_array;
 use function parse_url;
+use function realpath;
 use function rtrim;
 use function sprintf;
 use function str_replace;
@@ -270,7 +271,7 @@ abstract class AbstractConverter implements ConverterInterface
             }
             $artifactLocation = new Definition\ArtifactLocation();
             $artifactLocation->setUri($this->pathToArtifactLocation($filename));
-            $artifactLocation->setUriBaseId('WORKINGDIR');
+            $artifactLocation->setUriBaseId('SOURCE_ROOT');
 
             $fingerprint = hash_file('sha256', $filename);
             $surroundingLines = 2;
@@ -416,15 +417,33 @@ abstract class AbstractConverter implements ConverterInterface
         $run->addInvocations((array) $invocations);
         $run->addResults($this->results);
         $run->setAutomationDetails($this->automationDetails());
-
-        $workingDir = new Definition\ArtifactLocation();
-        $workingDir->setUri($this->pathToUri(getcwd() . '/'));
-        $originalUriBaseIds = [
-            'WORKINGDIR' => $workingDir,
-        ];
-        $run->addAdditionalProperties($originalUriBaseIds);
+        $run->addAdditionalProperties($this->originalUriBaseIdentifiers());
 
         return $run;
+    }
+
+    protected function originalUriBaseIdentifiers(): array
+    {
+        $projectRoot = new Definition\ArtifactLocation();
+        $projectRoot->setUri($this->pathToUri(realpath(getcwd() . '/..') . '/'));
+        $description = new Definition\Message();
+        $description->setText('The root directory for all project files');
+        $projectRoot->setDescription($description);
+
+        $cwd = explode('/', getcwd());
+
+        $sourceRoot = new Definition\ArtifactLocation();
+        $sourceRoot->setUriBaseId('PROJECT_ROOT');
+        // The trailing slash is required to minimize the likelihood of an error when concatenating URI segments together
+        $sourceRoot->setUri(end($cwd) . '/');
+        $description = new Definition\Message();
+        $description->setText('The root directory for this project files');
+        $sourceRoot->setDescription($description);
+
+        return [
+            'PROJECT_ROOT' => $projectRoot,
+            'SOURCE_ROOT' => $sourceRoot,
+        ];
     }
 
     protected function getToolVersion(string $package): string
@@ -502,7 +521,7 @@ abstract class AbstractConverter implements ConverterInterface
 
         try {
             $highlighter = new Highlighter(new ConsoleColor());
-            $fileContent = file_get_contents(\realpath($filePath));
+            $fileContent = file_get_contents(realpath($filePath));
             $snippet = $highlighter->getCodeSnippet($fileContent, $lineNumber, $linesBefore, $linesAfter);
         } catch (Throwable $exception) {
             $snippet = null;
