@@ -29,6 +29,7 @@ use function array_unshift;
 use function count;
 use function date;
 use function end;
+use function exec;
 use function explode;
 use function file_exists;
 use function file_get_contents;
@@ -394,6 +395,45 @@ abstract class AbstractConverter implements ConverterInterface
         return [$invocation];
     }
 
+    /**
+     * @return array|Definition\VersionControlDetails[]
+     */
+    public function versionControlDetails(): array
+    {
+        $versionControlDetails = [];
+
+        $output = null;
+        $remoteUri = @exec('git remote get-url origin', $output, $status);
+        if ($status !== 0) {
+            return $versionControlDetails;
+        }
+
+        $revisionId = @exec('git rev-list HEAD ^origin -n 1');
+        $revisionTag = @exec('git describe --tags');
+        $branch = @exec('git rev-parse --abbrev-ref HEAD');
+        $gitVersion = @exec('git --version');
+
+        $properties = new Definition\PropertyBag();
+        $properties->addProperties([
+            'versionControl.system' => 'git',
+            'versionControl.version' => str_replace('git version ', '', $gitVersion)
+        ]);
+
+        $artifactLocation = new Definition\ArtifactLocation();
+        $artifactLocation->setUriBaseId('SOURCE_ROOT');
+
+        $vcd = new Definition\VersionControlDetails();
+        $vcd->setRepositoryUri($remoteUri);
+        $vcd->setRevisionId($revisionId);
+        $vcd->setBranch($branch);
+        $vcd->setRevisionTag($revisionTag);
+        $vcd->setMappedTo($artifactLocation);
+        $vcd->setProperties($properties);
+        $versionControlDetails[] = $vcd;
+
+        return $versionControlDetails;
+    }
+
     public function automationDetails(): Definition\RunAutomationDetails
     {
         $automationDetails = new Definition\RunAutomationDetails();
@@ -415,6 +455,7 @@ abstract class AbstractConverter implements ConverterInterface
         $run->setTool($tool);
 
         $run->addInvocations((array) $invocations);
+        $run->addVersionControlDetails($this->versionControlDetails());
         $run->addResults($this->results);
         $run->setAutomationDetails($this->automationDetails());
         $run->addAdditionalProperties($this->originalUriBaseIdentifiers());
@@ -422,6 +463,9 @@ abstract class AbstractConverter implements ConverterInterface
         return $run;
     }
 
+    /**
+     * @return array<string, Definition\ArtifactLocation>
+     */
     protected function originalUriBaseIdentifiers(): array
     {
         $projectRoot = new Definition\ArtifactLocation();

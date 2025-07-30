@@ -43,6 +43,11 @@ interface ConverterInterface
      */
     public function invocations(?Definition\PropertyBag $properties = null): array;
 
+    /**
+     * @return Definition\VersionControlDetails[]
+     */
+    public function versionControlDetails(): array;
+
     public function automationDetails(): Definition\RunAutomationDetails;
 
     /**
