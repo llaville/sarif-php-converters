@@ -47,5 +47,5 @@ interface SourceInterface
      * @param string $format Format that the normalizer should support
      * @param array<string, mixed> $context Options available to the normalizer
      */
-    public function normalize($data, string $format, array $context): bool;
+    public function normalize(mixed $data, string $format, array $context): bool;
 }

@@ -104,7 +104,7 @@ abstract class AbstractSource implements SourceInterface
     /**
      * @inheritDoc
      */
-    public function normalize($data, string $format, array $context): bool
+    public function normalize(mixed $data, string $format, array $context): bool
     {
         // If a normalizer supports the given format, use it
         $normalizer = $this->getNormalizer($format);
