@@ -27,11 +27,13 @@ use function fgets;
 use function file_exists;
 use function file_get_contents;
 use function fopen;
+use function is_dir;
 use function realpath;
 use function sprintf;
 use function stream_select;
 use function strtoupper;
 use function trim;
+use const DIRECTORY_SEPARATOR;
 use const STDIN;
 
 /**
@@ -82,6 +84,12 @@ class ConvertCommand extends Command
                 null,
                 InputOption::VALUE_OPTIONAL,
                 'File path with the result report format. If not set or empty, then the STDOUT is used.',
+            )
+            ->addOption(
+                'project-dir',
+                null,
+                InputOption::VALUE_REQUIRED,
+                'If specified, use the given directory as project directory of your source files.'
             )
         ;
     }
@@ -136,6 +144,10 @@ class ConvertCommand extends Command
                 // Nicely formats output with indentation and extra space
                 'format_output' => $output->isVerbose(),
             ];
+
+            if (!empty($options['project-dir'])) {
+                $converterOptions['project_dir'] = $options['project-dir'];
+            }
 
             if (class_exists($converterAlias)) {
                 // give a chance to use custom converter

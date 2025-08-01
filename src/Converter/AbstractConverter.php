@@ -38,6 +38,7 @@ use function getcwd;
 use function gmdate;
 use function implode;
 use function is_array;
+use function is_dir;
 use function parse_url;
 use function realpath;
 use function rtrim;
@@ -93,13 +94,15 @@ abstract class AbstractConverter implements ConverterInterface
     protected bool $includeCodeSnippets;
     protected bool $includeContextRegion;
     protected string $defaultResultLevelIfEmpty;
+    protected ?string $projectDirectory = null;
 
     /**
      * @param array{
      *     format_output?: bool,
      *     include_code_snippets?: bool,
      *     include_context_region?: bool,
-     *     default_result_level_if_empty?: string
+     *     default_result_level_if_empty?: string,
+     *     project_dir?: string
      * } $options
      */
     public function __construct(array $options = [], ?Factory\SerializerFactory $factory = null)
@@ -133,7 +136,8 @@ abstract class AbstractConverter implements ConverterInterface
      *     format_output?: bool,
      *     include_code_snippets?: bool,
      *     include_context_region?: bool,
-     *     default_result_level_if_empty?: string
+     *     default_result_level_if_empty?: string,
+     *     project_dir?: string
      * } $options
      */
     public function configure(array $options): void
@@ -151,6 +155,17 @@ abstract class AbstractConverter implements ConverterInterface
 
         // set option to fill default value on result level field if empty
         $this->defaultResultLevelIfEmpty = $options['default_result_level_if_empty'] ?? 'warning';
+
+        // if we should include a valid GIT folder (local repository) to identify source code origin
+        $projectDir = $options['project_dir'] ?? '.';
+
+        if (!empty($projectDir) && is_dir($projectDir)) {
+            $projectDir = realpath($projectDir);
+            if (!$projectDir || !is_dir($projectDir . DIRECTORY_SEPARATOR . '.git')) {
+                $projectDir = null;
+            }
+        }
+        $this->projectDirectory = $projectDir;
     }
 
     public function toolDriver(): Definition\ToolComponent
@@ -396,21 +411,23 @@ abstract class AbstractConverter implements ConverterInterface
     }
 
     /**
-     * @return array|Definition\VersionControlDetails[]
+     * @inheritDoc
      */
     public function versionControlDetails(): array
     {
         $versionControlDetails = [];
 
+        $commandChdir = 'cd ' . realpath($this->projectDirectory) . ' && ';
+
         $output = null;
-        $remoteUri = @exec('git remote get-url origin', $output, $status);
+        $remoteUri = @exec($commandChdir . 'git remote get-url origin', $output, $status);
         if ($status !== 0) {
             return $versionControlDetails;
         }
 
-        $revisionId = @exec('git rev-list HEAD ^origin -n 1');
-        $revisionTag = @exec('git describe --tags');
-        $branch = @exec('git rev-parse --abbrev-ref HEAD');
+        $revisionId = @exec($commandChdir . 'git rev-list HEAD ^origin -n 1');
+        $revisionTag = @exec($commandChdir . 'git describe --tags');
+        $branch = @exec($commandChdir . 'git rev-parse --abbrev-ref HEAD');
         $gitVersion = @exec('git --version');
 
         $properties = new Definition\PropertyBag();
@@ -469,12 +486,12 @@ abstract class AbstractConverter implements ConverterInterface
     protected function originalUriBaseIdentifiers(): array
     {
         $projectRoot = new Definition\ArtifactLocation();
-        $projectRoot->setUri($this->pathToUri(realpath(getcwd() . '/..') . '/'));
+        $projectRoot->setUri($this->pathToUri(realpath($this->projectDirectory . '/..') . '/'));
         $description = new Definition\Message();
         $description->setText('The root directory for all project files');
         $projectRoot->setDescription($description);
 
-        $cwd = explode('/', getcwd());
+        $cwd = explode('/', $this->projectDirectory);
 
         $sourceRoot = new Definition\ArtifactLocation();
         $sourceRoot->setUriBaseId('PROJECT_ROOT');

@@ -44,7 +44,7 @@ interface ConverterInterface
     public function invocations(?Definition\PropertyBag $properties = null): array;
 
     /**
-     * @return Definition\VersionControlDetails[]
+     * @return array|Definition\VersionControlDetails[]
      */
     public function versionControlDetails(): array;
 
