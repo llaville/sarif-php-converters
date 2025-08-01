@@ -11,6 +11,8 @@
 
     <file>../fixtures</file>
 
+    <arg name="report" value="\Bartlett\Sarif\Converter\Reporter\PhpCsReport"/>
+
     <rule ref="PSR12">
         <exclude name="PSR12.Files.FileHeader" />
         <exclude name="PSR12.Files.OpenTag" />

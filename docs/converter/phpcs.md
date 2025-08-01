@@ -33,7 +33,7 @@ composer require --dev squizlabs/php_codesniffer bartlett/sarif-php-converters
 ## Usage
 
 ```shell
-vendor/bin/phpcs --report='\Bartlett\Sarif\Converter\Reporter\PhpCsReport' --standard=examples/phpcs/.phpcs.xml.dist --report-file=examples/phpcs/.sarif.json
+vendor/bin/phpcs --standard=examples/phpcs/.phpcs.xml.dist --report-file=examples/phpcs/.sarif.json
 ```
 
 > [!WARNING]
