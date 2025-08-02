@@ -24,6 +24,66 @@
 |:--------------------------------------|:-----------------------:|:------------:|:---------:|
 | Composer [official website][composer] | [composer](composer.md) |   required   |     ❌     |
 
+## Available since v1.3.0
+
+All bundled converters support now to include the SARIF [versionControlProvenance property][versionControlProvenance].
+
+You have just to specify an existing directory (local git repository) containing files to scan
+with the `--project-dir` option of `convert` ConsoleTool command, if it's not the current working directory.
+
+> [!IMPORTANT]
+>
+> If `--project-dir` did not provide a valid GIT folder (local repository), then this option is purely ignored
+> and no message (error/warning) is displayed
+
+For example:
+
+```json
+{
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+        {
+
+            "invocations": [
+                {
+                    "executionSuccessful": true,
+                    "commandLine": "./report-converter",
+                    "arguments": [
+                        "convert",
+                        "phpcs-fixer",
+                        "--input-format=checkstyle",
+                        "--input-file=examples/phpcs-fixer/checkstyle.xml",
+                        "--output-file=.sarif.json",
+                        "--project-dir=.",
+                        "-v"
+                    ],
+                    "workingDirectory": {
+                        "uri": "file:///shared/backups/bartlett/sarif-php-converters/"
+                    }
+                }
+            ],
+            "versionControlProvenance": [
+                {
+                    "repositoryUri": "https://github.com/llaville/sarif-php-converters.git",
+                    "revisionId": "0a395a180d1d836702f50de1b32bac60c663aee2",
+                    "branch": "1.3",
+                    "revisionTag": "1.2.0-14-g0a395a1",
+                    "mappedTo": {
+                        "uriBaseId": "SOURCE_ROOT"
+                    },
+                    "properties": {
+                        "versionControl.system": "git",
+                        "versionControl.version": "2.39.5"
+                    }
+                }
+            ]
+
+        }
+    ]
+}
+```
+
 [composer]: https://github.com/composer/composer
 [ecs]: https://github.com/easy-coding-standard/easy-coding-standard
 [phan]: https://github.com/phan/phan
@@ -34,3 +94,4 @@
 [phpstan]: https://github.com/phpstan/phpstan
 [rector]: https://github.com/rectorphp/rector
 [twigcs-fixer]: https://github.com/VincentLanglet/Twig-CS-Fixer
+[versionControlProvenance]: https://docs.oasis-open.org/sarif/sarif/v2.1.0/errata01/os/sarif-v2.1.0-errata01-os-complete.html#_Toc141790747
