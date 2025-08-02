@@ -10,28 +10,28 @@
         <meta name="author" content="Laurent Laville">
       
       
-        <link rel="canonical" href="https://llaville.github.io/sarif-php-converters/1.3/converter/ecs/">
+        <link rel="canonical" href="https://llaville.github.io/sarif-php-converters/1.3/converter/twigcs-fixer.html">
       
       
-        <link rel="prev" href="../composer/">
+        <link rel="prev" href="rector.html">
       
       
-        <link rel="next" href="../phan/">
+        <link rel="next" href="../guides/installation.html">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>Ecs - Sarif PHP Converters</title>
+        <title>Twigcs fixer - Sarif PHP Converters</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#easy-coding-standard-converter" class="md-skip">
+        <a href="#twig-cs-fixer-converter" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Sarif PHP Converters" class="md-header__button md-logo" aria-label="Sarif PHP Converters" data-md-component="logo">
+    <a href="../index.html" title="Sarif PHP Converters" class="md-header__button md-logo" aria-label="Sarif PHP Converters" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ecs
+              Twigcs fixer
             
           </span>
         </div>
@@ -221,7 +221,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../index.html" class="md-tabs__link">
         
   
   
@@ -244,7 +244,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+        <a href="index.html" class="md-tabs__link">
           
   
   
@@ -266,7 +266,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../guides/installation/" class="md-tabs__link">
+        <a href="../guides/installation.html" class="md-tabs__link">
           
   
   
@@ -302,7 +302,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Sarif PHP Converters" class="md-nav__button md-logo" aria-label="Sarif PHP Converters" data-md-component="logo">
+    <a href="../index.html" title="Sarif PHP Converters" class="md-nav__button md-logo" aria-label="Sarif PHP Converters" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -332,7 +332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   
@@ -400,7 +400,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="index.html" class="md-nav__link ">
               
   
   
@@ -435,12 +435,196 @@
   
   
     <li class="md-nav__item">
-      <a href="../composer/" class="md-nav__link">
+      <a href="composer.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Composer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ecs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="phan.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Phan
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="phpcs-fixer.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Phpcs fixer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="phpcs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Phpcs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="phplint.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Phplint
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="phpmd.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Phpmd
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="phpstan.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Phpstan
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rector.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rector
     
   </span>
   
@@ -472,7 +656,7 @@
   
   
   <span class="md-ellipsis">
-    Ecs
+    Twigcs fixer
     
   </span>
   
@@ -480,12 +664,12 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
+      <a href="twigcs-fixer.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Ecs
+    Twigcs fixer
     
   </span>
   
@@ -541,22 +725,65 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Usage">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-customize-your-converter" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to customize your converter
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to customize your converter">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#create-a-basic-ecs-config-file" class="md-nav__link">
+  <a href="#make-the-sarif-report-output-human-readable" class="md-nav__link">
     <span class="md-ellipsis">
-      Create a basic ECS config file
+      Make the SARIF report output human-readable
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Make the SARIF report output human-readable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-your-report-specialized-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create your report specialized class
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#build-the-native-checkstyle-output-report" class="md-nav__link">
+  <a href="#and-finally-print-the-sarif-report" class="md-nav__link">
     <span class="md-ellipsis">
-      Build the native checkstyle output report
+      And finally, print the SARIF report
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-use-the-console-tool-as-alternative" class="md-nav__link">
+    <span class="md-ellipsis">
+      (optional) Use the Console Tool as alternative
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="(optional) Use the Console Tool as alternative">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-the-checkstyle-output-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build the checkstyle output report
     </span>
   </a>
   
@@ -568,6 +795,11 @@
       And finally, convert it to SARIF with the Console Tool
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -607,190 +839,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../phan/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Phan
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../phpcs-fixer/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Phpcs fixer
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../phpcs/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Phpcs
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../phplint/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Phplint
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../phpmd/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Phpmd
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../phpstan/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Phpstan
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../rector/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Rector
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../twigcs-fixer/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Twigcs fixer
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -855,7 +903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/installation/" class="md-nav__link">
+      <a href="../guides/installation.html" class="md-nav__link">
         
   
   
@@ -938,22 +986,65 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Usage">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-customize-your-converter" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to customize your converter
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to customize your converter">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#create-a-basic-ecs-config-file" class="md-nav__link">
+  <a href="#make-the-sarif-report-output-human-readable" class="md-nav__link">
     <span class="md-ellipsis">
-      Create a basic ECS config file
+      Make the SARIF report output human-readable
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Make the SARIF report output human-readable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-your-report-specialized-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create your report specialized class
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#build-the-native-checkstyle-output-report" class="md-nav__link">
+  <a href="#and-finally-print-the-sarif-report" class="md-nav__link">
     <span class="md-ellipsis">
-      Build the native checkstyle output report
+      And finally, print the SARIF report
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-use-the-console-tool-as-alternative" class="md-nav__link">
+    <span class="md-ellipsis">
+      (optional) Use the Console Tool as alternative
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="(optional) Use the Console Tool as alternative">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-the-checkstyle-output-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build the checkstyle output report
     </span>
   </a>
   
@@ -965,6 +1056,11 @@
       And finally, convert it to SARIF with the Console Tool
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1017,8 +1113,8 @@
 
 
 <!-- markdownlint-disable MD013 -->
-<h1 id="easy-coding-standard-converter">Easy-Coding-Standard Converter</h1>
-<p><a href="https://github.com/easy-coding-standard/easy-coding-standard"><img alt="easy-coding-standard/easy-coding-standard - GitHub" src="https://gh-card.dev/repos/easy-coding-standard/easy-coding-standard.svg?fullname=" /></a></p>
+<h1 id="twig-cs-fixer-converter">Twig-CS-Fixer Converter</h1>
+<p><a href="https://github.com/VincentLanglet/Twig-CS-Fixer"><img alt="VincentLanglet/Twig-CS-Fixer - GitHub" src="https://gh-card.dev/repos/VincentLanglet/Twig-CS-Fixer.svg?fullname=" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Available since version 1.0.0</p>
@@ -1032,70 +1128,68 @@
 <li><a href="#ide-integration">IDE Integration</a></li>
 <li><a href="#web-sarif-viewer">Web SARIF viewer</a></li>
 </ol>
-<p><img alt="ecs converter" src="../../assets/images/converter-ecs.graphviz.svg" /></p>
+<p><img alt="twig_cs_fixer converter" src="../assets/images/converter-twigcs-fixer.graphviz.svg" /></p>
 <h2 id="requirements">Requirements</h2>
 <ul>
-<li><a href="https://github.com/easy-coding-standard/easy-coding-standard">Easy-Coding-Standard</a> requires PHP version 7.2.0 or greater,</li>
-<li>This SARIF converter requires at least Easy-Coding-Standard version 12.3.1</li>
+<li><a href="https://github.com/VincentLanglet/Twig-CS-Fixer">Twig-CS-Fixer</a> requires PHP version 8.0 or greater, with <code>ctype</code> and <code>json</code> extensions loaded</li>
+<li>This SARIF converter requires at least Twig-CS-Fixer version 3.0.0</li>
 </ul>
 <h2 id="installation">Installation</h2>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>composer<span class="w"> </span>require<span class="w"> </span>--dev<span class="w"> </span>symplify/easy-coding-standard<span class="w"> </span>bartlett/sarif-php-converters
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>composer<span class="w"> </span>require<span class="w"> </span>--dev<span class="w"> </span>vincentlanglet/twig-cs-fixer<span class="w"> </span>bartlett/sarif-php-converters
 </span></code></pre></div>
 <h2 id="usage">Usage</h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>As Easy-Coding-Standard is not able to load custom output format on fly without to modify the <code>LazyContainerFactory</code>
-(see e.g: <a href="https://github.com/easy-coding-standard/easy-coding-standard/pull/212">add junit output formatter</a>),
-we have no other alternative that using the <strong>Console Tool</strong> convert command.</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>vendor/bin/twig-cs-fixer<span class="w"> </span>lint<span class="w"> </span>/path/to/source<span class="w"> </span>--report<span class="w"> </span>sarif<span class="w"> </span>--config<span class="w"> </span>.twig-cs-fixer.dist.php
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The <code>.twig-cs-fixer.dist.php</code> config file should at least identify the default Custom Reporter class <code>TwigCsFixerReporter</code></p>
+<p><div class="language-php highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="x">$config = new TwigCsFixer\Config\Config();</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="x">$config-&gt;addCustomReporter(new Bartlett\Sarif\Converter\Reporter\TwigCsFixerReporter());</span>
+</span></code></pre></div>
+</p>
 </div>
-<h3 id="create-a-basic-ecs-config-file"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 17h-2V9h-2V7h4m5-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> Create a basic ECS config file</h3>
-<p>For example :</p>
-<div class="language-php highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">&lt;?php</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">use</span> <span class="nx">PhpCsFixer\Fixer\Import\NoUnusedImportsFixer</span><span class="p">;</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">use</span> <span class="nx">Symplify\EasyCodingStandard\Config\ECSConfig</span><span class="p">;</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="k">return</span> <span class="nx">ECSConfig</span><span class="o">::</span><span class="na">configure</span><span class="p">()</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="o">-&gt;</span><span class="na">withPaths</span><span class="p">([</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        <span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/examples&#39;</span><span class="p">,</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        <span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/src&#39;</span><span class="p">,</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        <span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/tests&#39;</span><span class="p">,</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="p">])</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    <span class="c1">// Report absolute path on filenames</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    <span class="o">-&gt;</span><span class="na">withRealPathReporting</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>    <span class="c1">// add a single rule</span>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>    <span class="o">-&gt;</span><span class="na">withRules</span><span class="p">([</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>        <span class="nx">NoUnusedImportsFixer</span><span class="o">::</span><span class="na">class</span><span class="p">,</span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    <span class="p">])</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>    <span class="c1">// add sets - group of rules</span>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>    <span class="o">-&gt;</span><span class="na">withPreparedSets</span><span class="p">(</span>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>         <span class="nx">arrays</span><span class="o">:</span> <span class="k">true</span><span class="p">,</span>
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>         <span class="nx">namespaces</span><span class="o">:</span> <span class="k">true</span><span class="p">,</span>
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>         <span class="nx">spaces</span><span class="o">:</span> <span class="k">true</span><span class="p">,</span>
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>         <span class="nx">docblocks</span><span class="o">:</span> <span class="k">true</span><span class="p">,</span>
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>         <span class="nx">comments</span><span class="o">:</span> <span class="k">true</span><span class="p">,</span>
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>    <span class="p">)</span>
-</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="p">;</span>
-</span></code></pre></div>
-<h3 id="build-the-native-checkstyle-output-report"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 11a2 2 0 0 1-2 2h-2v2h4v2H9v-4a2 2 0 0 1 2-2h2V9H9V7h4a2 2 0 0 1 2 2m4-6H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> Build the native checkstyle output report</h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>vendor/bin/ecs<span class="w"> </span>check<span class="w"> </span>--output-format<span class="o">=</span>checkstyle<span class="w"> </span>&gt;<span class="w"> </span>examples/ecs/checkstyle.xml
-</span></code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Be sure to specify absolute path to source code to analyze, otherwise the Console Tool <code>convert</code> command
-will raise some warnings about file names.</p>
-<p>Add into your <code>ecs.php</code> config file, at least the following directive (available only since version 12.3.1) :</p>
+<h2 id="how-to-customize-your-converter">How to customize your converter</h2>
+<p>There are many ways to customize render of your converter.</p>
+<h3 id="make-the-sarif-report-output-human-readable">Make the SARIF report output human-readable</h3>
+<p>By default, all converters use the default <code>\Bartlett\Sarif\Factory\PhpSerializerFactory</code>
+to return the SARIF JSON representation of your report.</p>
+<p>But this serializer factory component, as native PHP <a href="https://www.php.net/manual/en/function.json-encode"><code>json_encode</code></a> function,
+does not use whitespace in returned data to format it.</p>
+<p>To make your report human-readable, you have to specify the <code>\JSON_PRETTY_PRINT</code> constant, as encoder option.</p>
+<p>Here is the way to do it !</p>
+<h4 id="create-your-report-specialized-class"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 17h-2V9h-2V7h4m5-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> Create your report specialized class</h4>
 <div class="language-php highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">&lt;?php</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">return</span> <span class="nx">ECSConfig</span><span class="o">::</span><span class="na">configure</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">withRealPathReporting</span><span class="p">(</span><span class="k">true</span><span class="p">);</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">use</span> <span class="nx">Bartlett\Sarif\Converter\Reporter\TwigCsFixerReporter</span><span class="p">;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">use</span> <span class="nx">Bartlett\Sarif\Converter\TwigCsFixerConverter</span><span class="p">;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="k">class</span> <span class="nc">MyTwigCsFixerReporter</span> <span class="k">extends</span> <span class="nx">TwigCsFixerReporter</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">{</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">()</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="p">{</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        <span class="c1">// enable pretty print feature</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="p">(</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>            <span class="k">new</span> <span class="nx">TwigCsFixerConverter</span><span class="p">([</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>                <span class="s1">&#39;format_output&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>            <span class="p">])</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>        <span class="p">);</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    <span class="p">}</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="p">}</span>
 </span></code></pre></div>
+<h4 id="and-finally-print-the-sarif-report"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 11a2 2 0 0 1-2 2h-2v2h4v2H9v-4a2 2 0 0 1 2-2h2V9H9V7h4a2 2 0 0 1 2 2m4-6H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> And finally, print the SARIF report</h4>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>vendor/bin/twig-cs-fixer<span class="w"> </span>lint<span class="w"> </span>/path/to/source<span class="w"> </span>--report<span class="w"> </span>sarif<span class="w"> </span>--config<span class="w"> </span>.twig-cs-fixer.php
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The <code>MyTwigCsFixerReporter</code> class is identified by the <code>.twig-cs-fixer.php</code> config file.</p>
 </div>
-<h3 id="and-finally-convert-it-to-sarif-with-the-console-tool"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 10.5a1.5 1.5 0 0 1-1.5 1.5c.84 0 1.5.67 1.5 1.5V15c0 1.11-.89 2-2 2H9v-2h4v-2h-2v-2h2V9H9V7h4c1.11 0 2 .89 2 2m4-6H5c-1.09 0-2 .9-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> And finally, convert it to SARIF with the <strong>Console Tool</strong></h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>php<span class="w"> </span>report-converter<span class="w"> </span>convert<span class="w"> </span>ecs<span class="w"> </span>--input-format<span class="o">=</span>checkstyle<span class="w"> </span>--input-file<span class="o">=</span>examples/ecs/checkstyle.xml<span class="w"> </span>-v
+<h3 id="optional-use-the-console-tool-as-alternative">(optional) Use the Console Tool as alternative</h3>
+<p>If you prefer to convert from a [format supported natively][[twigcs-fixer-custom-reporters]] by Twig-CS-Fixer, then :</p>
+<h4 id="build-the-checkstyle-output-report"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 17h-2V9h-2V7h4m5-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> Build the checkstyle output report</h4>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>vendor/bin/twig-cs-fixer<span class="w"> </span>lint<span class="w"> </span>/path/to/source<span class="w"> </span>--report<span class="w"> </span>checkstyle
+</span></code></pre></div>
+<h4 id="and-finally-convert-it-to-sarif-with-the-console-tool"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 11a2 2 0 0 1-2 2h-2v2h4v2H9v-4a2 2 0 0 1 2-2h2V9H9V7h4a2 2 0 0 1 2 2m4-6H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> And finally, convert it to SARIF with the <strong>Console Tool</strong></h4>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>php<span class="w"> </span>report-converter<span class="w"> </span>convert<span class="w"> </span>twigcs-fixer<span class="w"> </span>--input-format<span class="o">=</span>checkstyle<span class="w"> </span>--input-file<span class="o">=</span>examples/twigcs-fixer/checkstyle.xml<span class="w"> </span>-v
 </span></code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -1106,15 +1200,15 @@ will raise some warnings about file names.</p>
 </div>
 <h2 id="learn-more">Learn more</h2>
 <ul>
-<li>See demo <a href="https://github.com/llaville/sarif-php-converters/blob/1.0/examples/ecs/"><code>examples/ecs/</code></a> directory into this repository.</li>
+<li>See demo <a href="https://github.com/llaville/sarif-php-sdk/blob/1.0/examples/twigcs-fixer/"><code>examples/twigcs-fixer/</code></a> directory into this repository.</li>
 </ul>
 <h2 id="ide-integration">IDE Integration</h2>
 <p>The SARIF report file <code>[*].sarif.json</code> is automagically recognized and interpreted by PhpStorm (2024).</p>
-<p><img alt="PHPStorm integration" src="../../assets/images/phpstorm-ecs.png" /></p>
+<p><img alt="PHPStorm integration" src="../assets/images/phpstorm-twig-cs-fixer.png" /></p>
 <h2 id="web-sarif-viewer">Web SARIF viewer</h2>
 <p>With the <a href="https://github.com/Microsoft/sarif-web-component">React based component</a>, you are able to explore a sarif report file previously generated.</p>
 <p>For example:</p>
-<p><img alt="sarif-web-ecs" src="../../assets/images/sarif-web-ecs.png" /></p>
+<p><img alt="sarif-web-twig-cs-fixer" src="../assets/images/sarif-web-twig-cs-fixer.png" /></p>
 
 
 
@@ -1150,7 +1244,7 @@ will raise some warnings about file names.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../composer/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Composer">
+          <a href="rector.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Rector">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1160,20 +1254,20 @@ will raise some warnings about file names.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Composer
+                Rector
               </div>
             </div>
           </a>
         
         
           
-          <a href="../phan/" class="md-footer__link md-footer__link--next" aria-label="Next: Phan">
+          <a href="../guides/installation.html" class="md-footer__link md-footer__link--next" aria-label="Next: Installation">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Phan
+                Installation
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1209,10 +1303,10 @@ will raise some warnings about file names.</p>
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.footer", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.footer", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../assets/javascripts/bundle.50899def.min.js"></script>
       
     
   </body>
