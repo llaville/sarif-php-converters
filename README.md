@@ -9,6 +9,7 @@
 | Stable v1.0.x | [![Branch 1.0][Branch_100x-img]][Branch_100x] | [![Minimum PHP Version)][PHPVersion_100x-img]][PHPVersion_100x] | [![Stable Version 1.0][Packagist_100x-img]][Packagist_100x] | [![License 1.0][License_100x-img]][License_100x] | [![Documentation 1.0][Documentation_100x-img]][Documentation_100x] |
 | Stable v1.1.x | [![Branch 1.1][Branch_101x-img]][Branch_101x] | [![Minimum PHP Version)][PHPVersion_101x-img]][PHPVersion_101x] | [![Stable Version 1.1][Packagist_101x-img]][Packagist_101x] | [![License 1.1][License_101x-img]][License_101x] | [![Documentation 1.1][Documentation_101x-img]][Documentation_101x] |
 | Stable v1.2.x | [![Branch 1.2][Branch_102x-img]][Branch_102x] | [![Minimum PHP Version)][PHPVersion_102x-img]][PHPVersion_102x] | [![Stable Version 1.2][Packagist_102x-img]][Packagist_102x] | [![License 1.2][License_102x-img]][License_102x] | [![Documentation 1.2][Documentation_102x-img]][Documentation_102x] |
+| Stable v1.3.x | [![Branch 1.3][Branch_103x-img]][Branch_103x] | [![Minimum PHP Version)][PHPVersion_103x-img]][PHPVersion_103x] | [![Stable Version 1.3][Packagist_103x-img]][Packagist_103x] | [![License 1.3][License_103x-img]][License_103x] | [![Documentation 1.3][Documentation_103x-img]][Documentation_103x] |
 
 [Branch_100x-img]: https://img.shields.io/badge/branch-1.0-orange
 [Branch_100x]: https://github.com/llaville/sarif-php-converters/tree/1.0
@@ -42,6 +43,17 @@
 [License_102x]: https://github.com/llaville/sarif-php-converters/blob/1.2/LICENSE
 [Documentation_102x-img]: https://img.shields.io/badge/documentation-v1.2-green
 [Documentation_102x]: https://github.com/llaville/sarif-php-converters/tree/1.2/docs
+
+[Branch_103x-img]: https://img.shields.io/badge/branch-1.3-orange
+[Branch_103x]: https://github.com/llaville/sarif-php-converters/tree/1.3
+[PHPVersion_103x-img]: https://img.shields.io/packagist/php-v/bartlett/sarif-php-converters/1.3.0
+[PHPVersion_103x]: https://www.php.net/supported-versions.php
+[Packagist_103x-img]: https://img.shields.io/badge/packagist-v1.3.0-blue
+[Packagist_103x]: https://packagist.org/packages/bartlett/sarif-php-converters
+[License_103x-img]: https://img.shields.io/packagist/l/bartlett/sarif-php-converters
+[License_103x]: https://github.com/llaville/sarif-php-converters/blob/1.3/LICENSE
+[Documentation_103x-img]: https://img.shields.io/badge/documentation-v1.3-green
+[Documentation_103x]: https://github.com/llaville/sarif-php-converters/tree/1.3/docs
 
 ## Introduction
 
@@ -97,8 +109,8 @@ Legend :
 
 ## Documentation
 
-All the documentation is available on [website](https://llaville.github.io/sarif-php-converters/1.2),
-generated from the [docs](https://github.com/llaville/sarif-php-converters/tree/1.2/docs) folder.
+All the documentation is available on [website](https://llaville.github.io/sarif-php-converters/1.3),
+generated from the [docs](https://github.com/llaville/sarif-php-converters/tree/1.3/docs) folder.
 
 [sca]: https://owasp.org/www-community/controls/Static_Code_Analysis
 [sarif-specs]: https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html
