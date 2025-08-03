@@ -49,9 +49,7 @@ permissions:
     contents: write
 
 jobs:
-    deploy:
-        name: Deploy to GH Pages
-
+    deploy_to_pages:
         runs-on: ${{ matrix.os }}
 
         strategy:
@@ -71,6 +69,8 @@ jobs:
                 with:
                     # Make sure the value of GITHUB_TOKEN will not be persisted in repo's config
                     persist-credentials: false
+                    # uncomment if you want to retrieve all history for all branches and tags
+                    #  fetch-depth: 0
 
             -   # Setup Libraries
                 name: Setup Libraries

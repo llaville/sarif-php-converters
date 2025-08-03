@@ -29,8 +29,6 @@ concurrency:
 
 jobs:
     lint_files:
-        name: Lint Code Base
-
         runs-on: ${{ matrix.os }}
 
         strategy:

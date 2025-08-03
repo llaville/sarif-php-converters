@@ -58,7 +58,8 @@ jobs:
             operating-system: ${{ inputs.operating-system }}
             composer-options: ${{ inputs.composer-options }}
 
-    build_phar:
+    create_release:
+        if: inputs.tag-name != ''
         needs:
             - lint_files
             - unit_tests
@@ -112,23 +113,6 @@ jobs:
                     box-manifest make build stub configure ${{ inputs.box-manifest-options }} --output-stub stub.php --output-conf box.json.dist -vvv --ansi
                     box compile -c box.json.dist -vvv --ansi
 
-
-    create_release:
-        if: inputs.tag-name != ''
-        needs:
-            - build_phar
-
-        runs-on: ${{ matrix.os }}
-
-        strategy:
-            fail-fast: false
-            matrix:
-                os:
-                    - ${{ inputs.operating-system }}
-                php:
-                    - ${{ inputs.php-version }}
-
-        steps:
             - # https://github.com/softprops/action-gh-release
                 name: Create Release from current tag
                 uses: softprops/action-gh-release@v2.3.2
