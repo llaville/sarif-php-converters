@@ -10,28 +10,28 @@
         <meta name="author" content="Laurent Laville">
       
       
-        <link rel="canonical" href="https://llaville.github.io/sarif-php-converters/1.3/converter/composer.html">
+        <link rel="canonical" href="https://llaville.github.io/sarif-php-converters/1.3/converter/phpcs-fixer/">
       
       
-        <link rel="prev" href="index.html">
+        <link rel="prev" href="../phan/">
       
       
-        <link rel="next" href="ecs.html">
+        <link rel="next" href="../phpcs/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>Composer - Sarif PHP Converters</title>
+        <title>Phpcs fixer - Sarif PHP Converters</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#composer-audit-converter" class="md-skip">
+        <a href="#php-cs-fixer-converter" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="Sarif PHP Converters" class="md-header__button md-logo" aria-label="Sarif PHP Converters" data-md-component="logo">
+    <a href="../.." title="Sarif PHP Converters" class="md-header__button md-logo" aria-label="Sarif PHP Converters" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Composer
+              Phpcs fixer
             
           </span>
         </div>
@@ -221,7 +221,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../index.html" class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -244,7 +244,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="index.html" class="md-tabs__link">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -266,7 +266,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../guides/installation.html" class="md-tabs__link">
+        <a href="../../guides/installation/" class="md-tabs__link">
           
   
   
@@ -302,7 +302,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="Sarif PHP Converters" class="md-nav__button md-logo" aria-label="Sarif PHP Converters" data-md-component="logo">
+    <a href="../.." title="Sarif PHP Converters" class="md-nav__button md-logo" aria-label="Sarif PHP Converters" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -332,7 +332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -400,7 +400,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="index.html" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -432,6 +432,75 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../composer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Composer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ecs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ecs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Phan
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -449,7 +518,7 @@
   
   
   <span class="md-ellipsis">
-    Composer
+    Phpcs fixer
     
   </span>
   
@@ -457,12 +526,12 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="composer.html" class="md-nav__link md-nav__link--active">
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Composer
+    Phpcs fixer
     
   </span>
   
@@ -522,9 +591,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#build-the-native-json-output-report" class="md-nav__link">
+  <a href="#build-the-native-checkstyle-output-report" class="md-nav__link">
     <span class="md-ellipsis">
-      Build the native json output report
+      Build the native checkstyle output report
     </span>
   </a>
   
@@ -587,76 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ecs.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Ecs
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="phan.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Phan
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="phpcs-fixer.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Phpcs fixer
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="phpcs.html" class="md-nav__link">
+      <a href="../phpcs/" class="md-nav__link">
         
   
   
@@ -679,7 +679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="phplint.html" class="md-nav__link">
+      <a href="../phplint/" class="md-nav__link">
         
   
   
@@ -702,7 +702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="phpmd.html" class="md-nav__link">
+      <a href="../phpmd/" class="md-nav__link">
         
   
   
@@ -725,7 +725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="phpstan.html" class="md-nav__link">
+      <a href="../phpstan/" class="md-nav__link">
         
   
   
@@ -748,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="rector.html" class="md-nav__link">
+      <a href="../rector/" class="md-nav__link">
         
   
   
@@ -771,7 +771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="twigcs-fixer.html" class="md-nav__link">
+      <a href="../twigcs-fixer/" class="md-nav__link">
         
   
   
@@ -846,7 +846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../guides/installation.html" class="md-nav__link">
+      <a href="../../guides/installation/" class="md-nav__link">
         
   
   
@@ -933,9 +933,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#build-the-native-json-output-report" class="md-nav__link">
+  <a href="#build-the-native-checkstyle-output-report" class="md-nav__link">
     <span class="md-ellipsis">
-      Build the native json output report
+      Build the native checkstyle output report
     </span>
   </a>
   
@@ -999,11 +999,11 @@
 
 
 <!-- markdownlint-disable MD013 -->
-<h1 id="composer-audit-converter">Composer Audit Converter</h1>
-<p><a href="https://github.com/composer/composer"><img alt="composer/composer - GitHub" src="https://gh-card.dev/repos/composer/composer.svg?fullname=" /></a></p>
+<h1 id="php-cs-fixer-converter">PHP-CS-Fixer Converter</h1>
+<p><a href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer"><img alt="PHP-CS-Fixer/PHP-CS-Fixer - GitHub" src="https://gh-card.dev/repos/PHP-CS-Fixer/PHP-CS-Fixer.svg?fullname=" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Available since version 1.2.0</p>
+<p>Available since version 1.0.0</p>
 </div>
 <h2 id="table-of-contents">Table Of Contents</h2>
 <ol>
@@ -1014,26 +1014,31 @@
 <li><a href="#ide-integration">IDE Integration</a></li>
 <li><a href="#web-sarif-viewer">Web SARIF viewer</a></li>
 </ol>
-<p><img alt="composer converter" src="../assets/images/converter-composer.graphviz.svg" /></p>
+<p><img alt="phpcs-fixer converter" src="../../assets/images/converter-phpcs-fixer.graphviz.svg" /></p>
 <h2 id="requirements">Requirements</h2>
 <ul>
-<li><a href="https://github.com/composer/composer">Composer</a> requires PHP version 7.2.5 or greater,</li>
-<li>This SARIF converter requires at least Composer version 2.4.0</li>
+<li><a href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer">PHP-CS-Fixer</a> requires PHP version 7.4.0 or greater, with <code>filter</code>, <code>json</code> and <code>tokenizer</code> extensions loaded</li>
+<li>This SARIF converter requires at least PHP-CS-Fixer version 3.5.0</li>
 </ul>
 <h2 id="installation">Installation</h2>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>composer<span class="w"> </span>require<span class="w"> </span>--dev<span class="w"> </span>bartlett/sarif-php-converters
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>composer<span class="w"> </span>require<span class="w"> </span>--dev<span class="w"> </span>php-cs-fixer/php-cs-fixer<span class="w"> </span>bartlett/sarif-php-converters
 </span></code></pre></div>
 <h2 id="usage">Usage</h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>As Composer is not able to load custom output format on fly without to modify the <code>Composer\Advisory\Auditor</code> class,
+<p>As PHP-CS-Fixer is not able to register custom reporter,
 we have no other alternative that using the <strong>Console Tool</strong> convert command.</p>
 </div>
-<h3 id="build-the-native-json-output-report"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 17h-2V9h-2V7h4m5-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> Build the native json output report</h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>vendor/bin/composer<span class="w"> </span>audit<span class="w"> </span>--format<span class="o">=</span>json<span class="w"> </span>&gt;<span class="w"> </span>examples/composer/audit.json
+<h3 id="build-the-native-checkstyle-output-report"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 17h-2V9h-2V7h4m5-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> Build the native checkstyle output report</h3>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>vendor/bin/php-cs-fixer<span class="w"> </span>fix<span class="w"> </span>--dry-run<span class="w"> </span>--format<span class="w"> </span>checkstyle<span class="w"> </span>/path/to/source/code<span class="w"> </span>&gt;<span class="w"> </span>checkstyle.xml
 </span></code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Be sure to specify absolute path to source code to analyze, otherwise the Console Tool <code>convert</code> command
+will raise some warnings about file names.</p>
+</div>
 <h3 id="and-finally-convert-it-to-sarif-with-the-console-tool"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 11a2 2 0 0 1-2 2h-2v2h4v2H9v-4a2 2 0 0 1 2-2h2V9H9V7h4a2 2 0 0 1 2 2m4-6H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> And finally, convert it to SARIF with the <strong>Console Tool</strong></h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>php<span class="w"> </span>report-converter<span class="w"> </span>convert<span class="w"> </span>composer<span class="w"> </span>--input-format<span class="o">=</span>json<span class="w"> </span>--input-file<span class="o">=</span>examples/composer/audit.json<span class="w"> </span>-v
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>php<span class="w"> </span>report-converter<span class="w"> </span>convert<span class="w"> </span>phpcs-fixer<span class="w"> </span>--input-format<span class="o">=</span>checkstyle<span class="w"> </span>--input-file<span class="o">=</span>examples/phpcs-fixer/checkstyle.xml<span class="w"> </span>-v
 </span></code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -1044,14 +1049,15 @@ we have no other alternative that using the <strong>Console Tool</strong> conver
 </div>
 <h2 id="learn-more">Learn more</h2>
 <ul>
-<li>See demo <a href="https://github.com/llaville/sarif-php-converters/blob/1.2/examples/composer/"><code>examples/composer/</code></a> directory into this repository.</li>
+<li>See demo <a href="https://github.com/llaville/sarif-php-converters/blob/1.0/examples/phpcs-fixer/"><code>examples/php-cs-fixer/</code></a> directory into this repository.</li>
 </ul>
 <h2 id="ide-integration">IDE Integration</h2>
 <p>The SARIF report file <code>[*].sarif.json</code> is automagically recognized and interpreted by PhpStorm (2024).</p>
+<p><img alt="PHPStorm integration" src="../../assets/images/phpstorm-phpcs-fixer.png" /></p>
 <h2 id="web-sarif-viewer">Web SARIF viewer</h2>
 <p>With the <a href="https://github.com/Microsoft/sarif-web-component">React based component</a>, you are able to explore a sarif report file previously generated.</p>
 <p>For example:</p>
-<p><img alt="sarif-web-composer" src="../assets/images/sarif-web-composer.png" /></p>
+<p><img alt="sarif-web-phpcs-fixer" src="../../assets/images/sarif-web-phpcs-fixer.png" /></p>
 
 
 
@@ -1087,7 +1093,7 @@ we have no other alternative that using the <strong>Console Tool</strong> conver
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Index">
+          <a href="../phan/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Phan">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1097,20 +1103,20 @@ we have no other alternative that using the <strong>Console Tool</strong> conver
                 Previous
               </span>
               <div class="md-ellipsis">
-                Index
+                Phan
               </div>
             </div>
           </a>
         
         
           
-          <a href="ecs.html" class="md-footer__link md-footer__link--next" aria-label="Next: Ecs">
+          <a href="../phpcs/" class="md-footer__link md-footer__link--next" aria-label="Next: Phpcs">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Ecs
+                Phpcs
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1146,10 +1152,10 @@ we have no other alternative that using the <strong>Console Tool</strong> conver
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.footer", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.footer", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
       
     
   </body>

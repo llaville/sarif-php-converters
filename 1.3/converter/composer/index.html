@@ -10,28 +10,28 @@
         <meta name="author" content="Laurent Laville">
       
       
-        <link rel="canonical" href="https://llaville.github.io/sarif-php-converters/1.3/converter/phpmd.html">
+        <link rel="canonical" href="https://llaville.github.io/sarif-php-converters/1.3/converter/composer/">
       
       
-        <link rel="prev" href="phplint.html">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="phpstan.html">
+        <link rel="next" href="../ecs/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>Phpmd - Sarif PHP Converters</title>
+        <title>Composer - Sarif PHP Converters</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#phpmd-converter" class="md-skip">
+        <a href="#composer-audit-converter" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="Sarif PHP Converters" class="md-header__button md-logo" aria-label="Sarif PHP Converters" data-md-component="logo">
+    <a href="../.." title="Sarif PHP Converters" class="md-header__button md-logo" aria-label="Sarif PHP Converters" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Phpmd
+              Composer
             
           </span>
         </div>
@@ -221,7 +221,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../index.html" class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -244,7 +244,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="index.html" class="md-tabs__link">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -266,7 +266,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../guides/installation.html" class="md-tabs__link">
+        <a href="../../guides/installation/" class="md-tabs__link">
           
   
   
@@ -302,7 +302,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="Sarif PHP Converters" class="md-nav__button md-logo" aria-label="Sarif PHP Converters" data-md-component="logo">
+    <a href="../.." title="Sarif PHP Converters" class="md-nav__button md-logo" aria-label="Sarif PHP Converters" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -332,7 +332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -400,7 +400,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="index.html" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -432,144 +432,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="composer.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Composer
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ecs.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Ecs
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="phan.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Phan
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="phpcs-fixer.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Phpcs fixer
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="phpcs.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Phpcs
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="phplint.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Phplint
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -587,7 +449,7 @@
   
   
   <span class="md-ellipsis">
-    Phpmd
+    Composer
     
   </span>
   
@@ -595,12 +457,12 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="phpmd.html" class="md-nav__link md-nav__link--active">
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Phpmd
+    Composer
     
   </span>
   
@@ -660,9 +522,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#build-the-checkstyle-output-report" class="md-nav__link">
+  <a href="#build-the-native-json-output-report" class="md-nav__link">
     <span class="md-ellipsis">
-      Build the checkstyle output report
+      Build the native json output report
     </span>
   </a>
   
@@ -672,15 +534,6 @@
   <a href="#and-finally-convert-it-to-sarif-with-the-console-tool" class="md-nav__link">
     <span class="md-ellipsis">
       And finally, convert it to SARIF with the Console Tool
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#build-the-sarif-output-report-directly-via-the-default-bartlettsarifconverterreporterphpmdrenderer" class="md-nav__link">
-    <span class="md-ellipsis">
-      Build the sarif output report directly via the default Bartlett\Sarif\Converter\Reporter\PhpMdRenderer
     </span>
   </a>
   
@@ -734,7 +587,145 @@
   
   
     <li class="md-nav__item">
-      <a href="phpstan.html" class="md-nav__link">
+      <a href="../ecs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ecs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Phan
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phpcs-fixer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Phpcs fixer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phpcs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Phpcs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phplint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Phplint
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phpmd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Phpmd
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phpstan/" class="md-nav__link">
         
   
   
@@ -757,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="rector.html" class="md-nav__link">
+      <a href="../rector/" class="md-nav__link">
         
   
   
@@ -780,7 +771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="twigcs-fixer.html" class="md-nav__link">
+      <a href="../twigcs-fixer/" class="md-nav__link">
         
   
   
@@ -855,7 +846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../guides/installation.html" class="md-nav__link">
+      <a href="../../guides/installation/" class="md-nav__link">
         
   
   
@@ -942,9 +933,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#build-the-checkstyle-output-report" class="md-nav__link">
+  <a href="#build-the-native-json-output-report" class="md-nav__link">
     <span class="md-ellipsis">
-      Build the checkstyle output report
+      Build the native json output report
     </span>
   </a>
   
@@ -954,15 +945,6 @@
   <a href="#and-finally-convert-it-to-sarif-with-the-console-tool" class="md-nav__link">
     <span class="md-ellipsis">
       And finally, convert it to SARIF with the Console Tool
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#build-the-sarif-output-report-directly-via-the-default-bartlettsarifconverterreporterphpmdrenderer" class="md-nav__link">
-    <span class="md-ellipsis">
-      Build the sarif output report directly via the default Bartlett\Sarif\Converter\Reporter\PhpMdRenderer
     </span>
   </a>
   
@@ -1017,11 +999,11 @@
 
 
 <!-- markdownlint-disable MD013 -->
-<h1 id="phpmd-converter">PHPMD Converter</h1>
-<p><a href="https://github.com/phpmd/phpmd"><img alt="phpmd/phpmd - GitHub" src="https://gh-card.dev/repos/phpmd/phpmd.svg?fullname=" /></a></p>
+<h1 id="composer-audit-converter">Composer Audit Converter</h1>
+<p><a href="https://github.com/composer/composer"><img alt="composer/composer - GitHub" src="https://gh-card.dev/repos/composer/composer.svg?fullname=" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Available since version 1.0.0</p>
+<p>Available since version 1.2.0</p>
 </div>
 <h2 id="table-of-contents">Table Of Contents</h2>
 <ol>
@@ -1032,37 +1014,26 @@
 <li><a href="#ide-integration">IDE Integration</a></li>
 <li><a href="#web-sarif-viewer">Web SARIF viewer</a></li>
 </ol>
-<p><img alt="phpmd converter" src="../assets/images/converter-phpmd.graphviz.svg" /></p>
+<p><img alt="composer converter" src="../../assets/images/converter-composer.graphviz.svg" /></p>
 <h2 id="requirements">Requirements</h2>
 <ul>
-<li><a href="https://github.com/phpmd/phpmd">PHP Mess Detector</a> requires PHP version 5.3.9 or greater, with <code>xml</code> extensions loaded</li>
-<li>This SARIF converter requires at least PHPMD version 2.0, but version 3.0 is highly recommended.</li>
+<li><a href="https://github.com/composer/composer">Composer</a> requires PHP version 7.2.5 or greater,</li>
+<li>This SARIF converter requires at least Composer version 2.4.0</li>
 </ul>
-<p>Version 3.x is still under development,
-but the <code>Bartlett\Sarif\Converter\Reporter\PhpMdRenderer</code> class is ready to use new feature
-(<a href="https://github.com/phpmd/phpmd/issues/1196">Simplify load of external custom renderer</a>).</p>
-<p>Until this feature is <a href="https://en.wikipedia.org/wiki/Software_release_life_cycle">GA</a> into official PHPMD repository, you can use such <code>composer.json</code> requirements</p>
-<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;minimum-stability&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dev&quot;</span><span class="p">,</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;require-dev&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="nt">&quot;phpmd/phpmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3.x-dev&quot;</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
-</span></code></pre></div>
 <h2 id="installation">Installation</h2>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>composer<span class="w"> </span>require<span class="w"> </span>--dev<span class="w"> </span>phpmd/phpmd<span class="w"> </span>bartlett/sarif-php-converters
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>composer<span class="w"> </span>require<span class="w"> </span>--dev<span class="w"> </span>bartlett/sarif-php-converters
 </span></code></pre></div>
 <h2 id="usage">Usage</h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>As PHMMD v2.15 is not able to specify/boot custom renderer easily,
+<p>As Composer is not able to load custom output format on fly without to modify the <code>Composer\Advisory\Auditor</code> class,
 we have no other alternative that using the <strong>Console Tool</strong> convert command.</p>
 </div>
-<h3 id="build-the-checkstyle-output-report"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 17h-2V9h-2V7h4m5-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> Build the checkstyle output report</h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>vendor/bin/phpmd<span class="w"> </span>/path/to/source<span class="w"> </span>checkstyle<span class="w"> </span>ruleset<span class="w"> </span>--report-file<span class="o">=</span>checkstyle.xml
+<h3 id="build-the-native-json-output-report"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 17h-2V9h-2V7h4m5-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> Build the native json output report</h3>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>vendor/bin/composer<span class="w"> </span>audit<span class="w"> </span>--format<span class="o">=</span>json<span class="w"> </span>&gt;<span class="w"> </span>examples/composer/audit.json
 </span></code></pre></div>
 <h3 id="and-finally-convert-it-to-sarif-with-the-console-tool"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 11a2 2 0 0 1-2 2h-2v2h4v2H9v-4a2 2 0 0 1 2-2h2V9H9V7h4a2 2 0 0 1 2 2m4-6H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> And finally, convert it to SARIF with the <strong>Console Tool</strong></h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>php<span class="w"> </span>report-converter<span class="w"> </span>convert<span class="w"> </span>phpmd<span class="w"> </span>--input-format<span class="o">=</span>checkstyle<span class="w"> </span>--input-file<span class="o">=</span>examples/phpmd/checkstyle.xml<span class="w"> </span>-v
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>php<span class="w"> </span>report-converter<span class="w"> </span>convert<span class="w"> </span>composer<span class="w"> </span>--input-format<span class="o">=</span>json<span class="w"> </span>--input-file<span class="o">=</span>examples/composer/audit.json<span class="w"> </span>-v
 </span></code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -1071,25 +1042,16 @@ we have no other alternative that using the <strong>Console Tool</strong> conver
 <li><code>--output-file</code> option allows to write a copy of the report to a file. By default, the Console Tool will always print the specified report to the standard output.</li>
 </ul>
 </div>
-<p>Alternative usage</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>When PHPMD 3.0 will be <a href="https://en.wikipedia.org/wiki/Software_release_life_cycle">GA</a>, you can use this alternative</p>
-</div>
-<h3 id="build-the-sarif-output-report-directly-via-the-default-bartlettsarifconverterreporterphpmdrenderer"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 10.5a1.5 1.5 0 0 1-1.5 1.5c.84 0 1.5.67 1.5 1.5V15c0 1.11-.89 2-2 2H9v-2h4v-2h-2v-2h2V9H9V7h4c1.11 0 2 .89 2 2m4-6H5c-1.09 0-2 .9-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> Build the sarif output report directly via the default <code>Bartlett\Sarif\Converter\Reporter\PhpMdRenderer</code></h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>vendor/bin/phpmd<span class="w"> </span>/path/to/source<span class="w"> </span><span class="s1">&#39;\Bartlett\Sarif\Converter\Reporter\PhpMdRenderer&#39;</span><span class="w"> </span>ruleset<span class="w"> </span>--bootstrap<span class="w"> </span>vendor/autoload.php<span class="w"> </span>--report-file<span class="o">=</span>sarif.json
-</span></code></pre></div>
 <h2 id="learn-more">Learn more</h2>
 <ul>
-<li>See demo <a href="https://github.com/llaville/sarif-php-converters/blob/1.0/examples/phpmd/"><code>examples/phpmd/</code></a> directory into this repository.</li>
+<li>See demo <a href="https://github.com/llaville/sarif-php-converters/blob/1.2/examples/composer/"><code>examples/composer/</code></a> directory into this repository.</li>
 </ul>
 <h2 id="ide-integration">IDE Integration</h2>
 <p>The SARIF report file <code>[*].sarif.json</code> is automagically recognized and interpreted by PhpStorm (2024).</p>
-<p><img alt="PHPStorm integration" src="../assets/images/phpstorm-phpmd.png" /></p>
 <h2 id="web-sarif-viewer">Web SARIF viewer</h2>
 <p>With the <a href="https://github.com/Microsoft/sarif-web-component">React based component</a>, you are able to explore a sarif report file previously generated.</p>
 <p>For example:</p>
-<p><img alt="sarif-web-phpmd" src="../assets/images/sarif-web-phpmd.png" /></p>
+<p><img alt="sarif-web-composer" src="../../assets/images/sarif-web-composer.png" /></p>
 
 
 
@@ -1125,7 +1087,7 @@ we have no other alternative that using the <strong>Console Tool</strong> conver
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="phplint.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Phplint">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Index">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1135,20 +1097,20 @@ we have no other alternative that using the <strong>Console Tool</strong> conver
                 Previous
               </span>
               <div class="md-ellipsis">
-                Phplint
+                Index
               </div>
             </div>
           </a>
         
         
           
-          <a href="phpstan.html" class="md-footer__link md-footer__link--next" aria-label="Next: Phpstan">
+          <a href="../ecs/" class="md-footer__link md-footer__link--next" aria-label="Next: Ecs">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Phpstan
+                Ecs
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1184,10 +1146,10 @@ we have no other alternative that using the <strong>Console Tool</strong> conver
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.footer", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.footer", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
       
     
   </body>
