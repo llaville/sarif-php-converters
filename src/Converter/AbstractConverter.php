@@ -165,7 +165,7 @@ abstract class AbstractConverter implements ConverterInterface
                 $projectDir = null;
             }
         }
-        $this->projectDirectory = $projectDir;
+        $this->projectDirectory = empty($projectDir) ? null : realpath($projectDir);
     }
 
     public function toolDriver(): Definition\ToolComponent
@@ -417,7 +417,11 @@ abstract class AbstractConverter implements ConverterInterface
     {
         $versionControlDetails = [];
 
-        $commandChdir = 'cd ' . realpath($this->projectDirectory) . ' && ';
+        if (empty($this->projectDirectory)) {
+            return $versionControlDetails;
+        }
+
+        $commandChdir = 'cd ' . $this->projectDirectory . ' && ';
 
         $output = null;
         $remoteUri = @exec($commandChdir . 'git remote get-url origin', $output, $status);
@@ -485,13 +489,15 @@ abstract class AbstractConverter implements ConverterInterface
      */
     protected function originalUriBaseIdentifiers(): array
     {
+        $cwd = empty($this->projectDirectory) ? getcwd() : $this->projectDirectory;
+
         $projectRoot = new Definition\ArtifactLocation();
-        $projectRoot->setUri($this->pathToUri(realpath($this->projectDirectory . '/..') . '/'));
+        $projectRoot->setUri($this->pathToUri(realpath($cwd . '/..') . '/'));
         $description = new Definition\Message();
         $description->setText('The root directory for all project files');
         $projectRoot->setDescription($description);
 
-        $cwd = explode('/', $this->projectDirectory);
+        $cwd = explode('/', $cwd);
 
         $sourceRoot = new Definition\ArtifactLocation();
         $sourceRoot->setUriBaseId('PROJECT_ROOT');
