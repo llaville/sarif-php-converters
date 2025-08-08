@@ -91,7 +91,7 @@ This library may be considered as a producer on `sarif` report format, for these
 | [Composer Dependency Analyser][cda] |  1.6.x  |   ❌   |     ❌      |   ✅   |           ❌            |   ❌    |                             junit                              |
 | [Composer][composer]                |  2.4.x  |   ❌   |     ❌      |   ❌   |           ❌            |   ❌    |                    table,plain,json,summary                    |
 | [Easy-Coding-Standard][ecs]         | 12.3.x  |   ❌   |     ✅      |   ✅   |           ✅            |   ❌    |              console,json,junit,checkstyle,gitlab              |
-| [Phan][phan]                        |  5.4.x  |   ❌   |     ✅      |   ❌   |           ✅            |   ❌    |        text,csv,json,checkstyle,codeclimate,pylint,html        |
+| [Phan][phan]                        |  5.5.1  |   ❌   |     ✅      |   ❌   |           ✅            |   ✅    |    text,csv,json,checkstyle,codeclimate,pylint,html,github     |
 | [PHP CodeSniffer][phpcs]            | 3.10.x  |   ❌   |     ✅      |   ✅   |           ❌            |   ❌    |                     json,checkstyle,junit                      |
 | [PHP-CS-Fixer][phpcs-fixer]         | 3.59.x  |   ❌   |     ✅      |   ✅   |           ✅            |   ❌    |                  checkstyle,gitlab,json,junit                  |
 | [PHPInsights][phpinsights]          | 2.11.x  |   ❌   |     ✅      |   ❌   |           ✅            |   ✅    |       console,json,checkstyle,codeclimate,github-action        |
