@@ -11,15 +11,17 @@
 
 use Symplify\EasyCodingStandard\Config\ECSConfig;
 
+$baseDir = dirname(__DIR__, 2);
+
 return ECSConfig::configure()
     ->withPaths([
-        __DIR__ . '/examples',
-        __DIR__ . '/src',
-        __DIR__ . '/tests',
+        $baseDir . '/examples',
+        $baseDir . '/src',
+        $baseDir . '/tests',
     ])
 
     ->withSkip([
-        __DIR__ . '/examples/fixtures',
+        $baseDir . '/examples/fixtures',
         \PHP_CodeSniffer\Standards\PSR12\Sniffs\Files\FileHeaderSniff::class,
         \PHP_CodeSniffer\Standards\PSR12\Sniffs\Files\OpenTagSniff::class,
         \PHP_CodeSniffer\Standards\Squiz\Sniffs\Classes\ValidClassNameSniff::class,
