@@ -12,9 +12,6 @@
             ".config/captainhook/pre-commit.phplint.json",
             ".config/captainhook/pre-commit.phpcs.json",
             ".config/captainhook/pre-commit.phpcs-fixer.json"
-        ],
-        "custom": {
-            "vendor-bin-dir": "vendor/bin/"
-        }
+        ]
     }
 }
