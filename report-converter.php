@@ -17,5 +17,5 @@ use Bartlett\Sarif\Console\Command\ConvertCommand;
  */
 
 $application = new Application();
-$application->add(new ConvertCommand());
+$application->addCommand(new ConvertCommand());
 $application->run();
