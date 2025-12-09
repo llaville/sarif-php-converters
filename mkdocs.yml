@@ -1,6 +1,6 @@
 ---
 site_name: Sarif PHP Converters
-site_url: https://llaville.github.io/sarif-php-converters/1.3
+site_url: https://llaville.github.io/sarif-php-converters/1.4
 repo_url: https://github.com/llaville/sarif-php-converters # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#repository
 site_author: Laurent Laville
 edit_uri: "" # hide edit button -- https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#edit-button
