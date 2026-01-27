@@ -13,6 +13,7 @@ use Bartlett\Sarif\Factory;
 use Bartlett\Sarif\SarifLog;
 use Bartlett\Sarif\Serializer;
 
+use Composer\Autoload\ClassLoader;
 use Composer\InstalledVersions;
 
 use PHP_Parallel_Lint\PhpConsoleColor\ConsoleColor;
@@ -39,6 +40,7 @@ use function gmdate;
 use function implode;
 use function is_array;
 use function is_dir;
+use function is_file;
 use function parse_url;
 use function realpath;
 use function rtrim;
@@ -515,7 +517,21 @@ abstract class AbstractConverter implements ConverterInterface
 
     protected function getToolVersion(string $package): string
     {
-        $toolVersion = InstalledVersions::getVersion($package);
+        $toolVersion = null;
+
+        foreach (ClassLoader::getRegisteredLoaders() as $vendorDir => $loader) {
+            $installedFile = $vendorDir . '/composer/installed.php';
+
+            if (is_file($installedFile)) {
+                $installed = require $installedFile;
+                InstalledVersions::reload($installed);
+
+                if (InstalledVersions::isInstalled($package)) {
+                    $toolVersion = InstalledVersions::getVersion($package);
+                    break;
+                }
+            }
+        }
 
         if (null === $toolVersion) {
             throw new RuntimeException(
