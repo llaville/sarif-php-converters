@@ -1,12 +1,22 @@
 {
     "name": "bartlett/sarif-php-converters",
     "description": "Allows PHP projects to print a static code analysis report in SARIF format",
-    "keywords": ["sarif", "converter"],
-    "type": "library",
     "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "sarif",
+        "converter"
+    ],
+    "authors": [
+        {
+            "name": "Laurent Laville",
+            "homepage": "https://github.com/llaville",
+            "role": "Lead"
+        }
+    ],
     "support": {
-        "source": "https://github.com/llaville/sarif-php-converters",
-        "issues": "https://github.com/llaville/sarif-php-converters/issues"
+        "issues": "https://github.com/llaville/sarif-php-converters/issues",
+        "source": "https://github.com/llaville/sarif-php-converters"
     },
     "require": {
         "php": "^8.2",
@@ -23,16 +33,11 @@
         "symfony/console": "^7.0"
     },
     "suggest": {
-        "ext-simplexml": "If you use the Console Tool and checkstyle input format",
-        "ext-libxml": "If you use the Console Tool and checkstyle input format"
+        "ext-libxml": "If you use the Console Tool and checkstyle input format",
+        "ext-simplexml": "If you use the Console Tool and checkstyle input format"
     },
-    "authors": [
-        {
-            "name": "Laurent Laville",
-            "homepage": "https://github.com/llaville",
-            "role": "Lead"
-        }
-    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "Bartlett\\Sarif\\": "src/"
@@ -43,27 +48,25 @@
             "Bartlett\\Sarif\\Tests\\": "tests/"
         }
     },
-    "minimum-stability": "stable",
-    "prefer-stable": true,
     "config": {
-        "sort-packages": true,
-        "optimize-autoloader": true,
         "allow-plugins": {
             "bamarni/composer-bin-plugin": true
-        }
+        },
+        "optimize-autoloader": true,
+        "sort-packages": true
     },
     "extra": {
         "bamarni-bin": {
             "bin-links": true,
-            "target-directory": "vendor-bin",
-            "forward-command": false
+            "forward-command": false,
+            "target-directory": "vendor-bin"
         }
     },
     "scripts": {
-        "bin": "echo 'bin not installed'",
         "post-autoload-dump": [
             "@composer bin captainhook update",
             "vendor/bin/captainhook install --configuration=captainhook.json --only-enabled"
-        ]
+        ],
+        "bin": "echo 'bin not installed'"
     }
 }
