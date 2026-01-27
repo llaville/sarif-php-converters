@@ -27,13 +27,11 @@ use function fgets;
 use function file_exists;
 use function file_get_contents;
 use function fopen;
-use function is_dir;
 use function realpath;
 use function sprintf;
 use function stream_select;
 use function strtoupper;
 use function trim;
-use const DIRECTORY_SEPARATOR;
 use const STDIN;
 
 /**

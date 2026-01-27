@@ -7,7 +7,6 @@
  */
 namespace Bartlett\Sarif\Factory;
 
-use Bartlett\Sarif\Contract\HelpUriCaseConverterInterface;
 use Bartlett\Sarif\Contract\NormalizerInterface;
 use Bartlett\Sarif\Contract\SourceFactoryInterface;
 use Bartlett\Sarif\Contract\SourceInterface;
