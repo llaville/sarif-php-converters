@@ -13,24 +13,4 @@
 gc_disable(); // performance boost
 
 require_once __DIR__ . '/autoload.php';
-
-if ($argc > 2 && 'convert' === $argv[1] && strpos($argv[2], '-h') === false) {
-    $source = strtolower($argv[2]);
-
-    $loaders = [
-        implode(DIRECTORY_SEPARATOR, [__DIR__, 'vendor-bin', $source, 'vendor', 'autoload.php'])
-    ];
-
-    if ('ecs' === $source) {
-        $loaders[] = implode(DIRECTORY_SEPARATOR, [__DIR__, 'vendor-bin', 'phpcs', 'vendor', 'autoload.php']);
-        $loaders[] = implode(DIRECTORY_SEPARATOR, [__DIR__, 'vendor-bin', 'phpcs-fixer', 'vendor', 'autoload.php']);
-    }
-
-    foreach ($loaders as $loader) {
-        if (file_exists($loader)) {
-            require_once $loader;
-        }
-    }
-}
-
 require_once __DIR__ . '/report-converter.php';

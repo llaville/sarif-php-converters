@@ -10,61 +10,66 @@
  */
 namespace Bartlett\Sarif;
 
+use Composer\Autoload\ClassLoader;
+
 use RuntimeException;
-use function basename;
+
 use function dirname;
 use function file_exists;
 use function implode;
 use function spl_autoload_register;
 use function sprintf;
-use const DIRECTORY_SEPARATOR;
+use function strpos;
+use function strtolower;
 
 if (class_exists(__NAMESPACE__ . '\Autoload', false) === false) {
     class Autoload
     {
-        /**
-         * The composer autoloader.
-         *
-         * @var \Composer\Autoload\ClassLoader
-         */
-        private static $composerAutoloader = null;
-
         public static function load(string $class): void
         {
-            if (self::$composerAutoloader === null) {
-                self::$composerAutoloader = require self::getAutoloadFile();
+            static $possibleAutoloadPaths = [];
+
+            $autoloader = '/vendor/autoload.php';
+
+            if (empty($possibleAutoloadPaths)) {
+                if (isset($GLOBALS['_composer_autoload_path'])) {
+                    $possibleAutoloadPaths[] = $GLOBALS['_composer_autoload_path'];
+                } else {
+                    foreach ([__DIR__, dirname(__DIR__, 3)] as $path) {
+                        $autoloadPath = $path . $autoloader;
+                        if (file_exists($autoloadPath)) {
+                            $possibleAutoloadPaths[] = $autoloadPath;
+                        }
+                    }
+                }
             }
 
-            self::$composerAutoloader->loadClass($class);
-        }
+            $argc ??= $_SERVER['argc'];
+            $argv ??= $_SERVER['argv'];
 
-        private static function getAutoloadFile(): string
-        {
-            if (isset($GLOBALS['_composer_autoload_path'])) {
-                $possibleAutoloadPaths = [
-                    dirname($GLOBALS['_composer_autoload_path'])
-                ];
-                $autoloader = basename($GLOBALS['_composer_autoload_path']);
-            } else {
-                $possibleAutoloadPaths = [
-                    // local dev repository
-                    __DIR__,
-                    // dependency
-                    dirname(__DIR__, 3),
-                ];
-                $autoloader = 'vendor/autoload.php';
+            if ($argc > 2 && 'convert' === $argv[1] && strpos($argv[2], '-h') === false) {
+                $source = strtolower($argv[2]);
+                $possibleAutoloadPaths[] = __DIR__ . '/vendor-bin/' . $source . $autoloader;
             }
 
             foreach ($possibleAutoloadPaths as $possibleAutoloadPath) {
-                if (file_exists($possibleAutoloadPath . DIRECTORY_SEPARATOR . $autoloader)) {
-                    return $possibleAutoloadPath . DIRECTORY_SEPARATOR . $autoloader;
+                if (file_exists($possibleAutoloadPath)) {
+                    require $possibleAutoloadPath;
+                }
+            }
+
+            foreach (ClassLoader::getRegisteredLoaders() as $vendorDir => $loader) {
+                $classLoaded = $loader->loadClass($class);
+
+                if ($classLoaded === true) {
+                    return;
                 }
             }
 
             throw new RuntimeException(
                 sprintf(
-                    'Unable to find "%s" in "%s" paths.',
-                    $autoloader,
+                    'Unable to load class "%s" from any autoloader found into "%s" paths.',
+                    $class,
                     implode('", "', $possibleAutoloadPaths)
                 )
             );

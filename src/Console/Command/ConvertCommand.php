@@ -149,7 +149,7 @@ class ConvertCommand extends Command
                 $converterOptions['project_dir'] = $options['project-dir'];
             }
 
-            if (class_exists($converterAlias)) {
+            if (class_exists($converterAlias, false)) {
                 // give a chance to use custom converter
                 $converter = new $converterAlias($converterOptions);
             } else {
