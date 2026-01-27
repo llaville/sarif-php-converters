@@ -7,12 +7,15 @@
  */
 namespace Bartlett\Sarif\Factory;
 
+use Bartlett\Sarif\Contract\HelpUriCaseConverterInterface;
 use Bartlett\Sarif\Contract\NormalizerInterface;
 use Bartlett\Sarif\Contract\SourceFactoryInterface;
 use Bartlett\Sarif\Contract\SourceInterface;
+use Bartlett\Sarif\Converter\Case;
 use Bartlett\Sarif\Converter\Normalizer;
 use Bartlett\Sarif\Converter\Source;
 
+use Jawira\CaseConverter\CaseConverterInterface;
 use OutOfBoundsException;
 use function sprintf;
 use function strtolower;
@@ -64,11 +67,12 @@ final class SourceFactory implements SourceFactoryInterface
     /**
      * @param iterable<NormalizerInterface> $normalizers
      */
-    public function createEasyCodingStandard(iterable $normalizers): SourceInterface
+    public function createEasyCodingStandard(iterable $normalizers, ?CaseConverterInterface $caseConverter = null): SourceInterface
     {
         $normalizers = (array) $normalizers;
         $normalizers[] = new Normalizer\EcsNormalizer();
-        return new Source\EcsSource($normalizers);
+        $caseConverter = new Case\EcsHelpUriCaseConverter($caseConverter);
+        return new Source\EcsSource($normalizers, $caseConverter);
     }
 
     /**
