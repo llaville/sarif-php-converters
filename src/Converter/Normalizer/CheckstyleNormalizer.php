@@ -38,7 +38,7 @@ final class CheckstyleNormalizer implements NormalizerInterface
         $innerNormalizer = new SimpleXmlNormalizer();
         $collected = $innerNormalizer->normalize($data, $format, $context);
 
-        return new ArrayObject(($this->fromSimpleXml($collected)));
+        return new ArrayObject($this->fromSimpleXml($collected));
     }
 
     /**
