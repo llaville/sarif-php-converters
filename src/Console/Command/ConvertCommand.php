@@ -29,6 +29,7 @@ use function file_get_contents;
 use function fopen;
 use function realpath;
 use function sprintf;
+use function strcasecmp;
 use function stream_select;
 use function strtoupper;
 use function trim;
@@ -69,7 +70,7 @@ class ConvertCommand extends Command
                 'input-format',
                 null,
                 InputOption::VALUE_REQUIRED,
-                'Source format.',
+                'Source format (case-insensitive).',
             )
             ->addOption(
                 'input-file',
@@ -109,12 +110,8 @@ class ConvertCommand extends Command
 
             $normalizers = [];
 
-            switch ($format) {
-                case NormalizerInterface::FORMAT_CHECKSTYLE:
-                    $normalizers[] = new Normalizer\CheckstyleNormalizer();
-                    break;
-                default:
-                    // no extra normalizer detected
+            if (strcasecmp($format, NormalizerInterface::FORMAT_CHECKSTYLE) === 0) {
+                $normalizers[] = new Normalizer\CheckstyleNormalizer();
             }
 
             $sourceAlias = $input->getArgument('source');
