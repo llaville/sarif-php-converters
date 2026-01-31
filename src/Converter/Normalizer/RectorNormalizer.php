@@ -19,7 +19,6 @@ use ReflectionException;
 use function array_unique;
 use function count;
 use function explode;
-use function in_array;
 use function is_a;
 use function method_exists;
 use function sprintf;
@@ -36,7 +35,7 @@ final class RectorNormalizer extends AbstractNormalizer
 
     public function normalize($data, string $format, array $context): ?ArrayObject
     {
-        if (!in_array($format, $this->getSupportedFormats())) {
+        if (!$this->isSupportedFormat($format)) {
             return null;
         }
 

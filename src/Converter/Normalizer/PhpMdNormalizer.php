@@ -18,7 +18,6 @@ use function array_map;
 use function array_unique;
 use function count;
 use function implode;
-use function in_array;
 use function preg_match;
 use function sprintf;
 use function str_replace;
@@ -42,7 +41,7 @@ final class PhpMdNormalizer extends AbstractNormalizer
 
     public function normalize($data, string $format, array $context): ?ArrayObject
     {
-        if (!in_array($format, $this->getSupportedFormats())) {
+        if (!$this->isSupportedFormat($format)) {
             return null;
         }
 

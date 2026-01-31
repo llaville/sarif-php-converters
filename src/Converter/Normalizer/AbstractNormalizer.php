@@ -10,7 +10,7 @@ namespace Bartlett\Sarif\Converter\Normalizer;
 use Bartlett\Sarif\Contract\NormalizerInterface;
 
 use ArrayObject;
-use function in_array;
+use function strtolower;
 
 /**
  * @template TData
@@ -26,12 +26,25 @@ abstract class AbstractNormalizer implements NormalizerInterface
         ];
     }
 
+    public function isSupportedFormat(string $format): bool
+    {
+        $data = $this->getSupportedFormats();
+        $predicate = static fn($f) => strtolower($format) === $f;
+
+        foreach ($data as $datum) {
+            if ($predicate($datum)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     /**
      * @param TData $data
      */
     public function normalize($data, string $format, array $context): ?ArrayObject
     {
-        if (!in_array($format, $this->getSupportedFormats())) {
+        if (!$this->isSupportedFormat($format)) {
             return null;
         }
 

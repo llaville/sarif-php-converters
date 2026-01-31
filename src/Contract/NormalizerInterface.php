@@ -27,6 +27,11 @@ interface NormalizerInterface
     public function getSupportedFormats(): array;
 
     /**
+     * Checks if the format is supported by the current normalizer
+     */
+    public function isSupportedFormat(string $format): bool;
+
+    /**
      * Normalizes the data source.
      *
      * @param mixed $data Data to normalize

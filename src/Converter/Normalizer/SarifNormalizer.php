@@ -11,7 +11,6 @@ use Bartlett\Sarif\Contract\NormalizerInterface;
 
 use ArrayObject;
 use function array_unique;
-use function in_array;
 use function is_string;
 use function json_decode;
 use function preg_match_all;
@@ -36,7 +35,7 @@ final class SarifNormalizer extends AbstractNormalizer
 
     public function normalize($data, string $format, array $context): ?ArrayObject
     {
-        if (!in_array($format, $this->getSupportedFormats()) || !is_string($data)) {
+        if (!$this->isSupportedFormat($format) || !is_string($data)) {
             return null;
         }
 

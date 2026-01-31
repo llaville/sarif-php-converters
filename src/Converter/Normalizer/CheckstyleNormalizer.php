@@ -12,15 +12,15 @@ use Bartlett\Sarif\Contract\NormalizerInterface;
 use ArrayObject;
 use function array_unique;
 use function count;
-use function in_array;
 use function is_string;
 use function strtolower;
 
 /**
+ * @extends AbstractNormalizer<mixed>
  * @author Laurent Laville
  * @since Release 1.0.0
  */
-final class CheckstyleNormalizer implements NormalizerInterface
+final class CheckstyleNormalizer extends AbstractNormalizer
 {
     public function getSupportedFormats(): array
     {
@@ -31,7 +31,7 @@ final class CheckstyleNormalizer implements NormalizerInterface
 
     public function normalize($data, string $format, array $context): ?ArrayObject
     {
-        if (!in_array($format, $this->getSupportedFormats()) || !is_string($data)) {
+        if (!$this->isSupportedFormat($format) || !is_string($data)) {
             return null;
         }
 

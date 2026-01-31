@@ -9,7 +9,6 @@ namespace Bartlett\Sarif\Converter\Normalizer;
 
 use ArrayObject;
 use function array_keys;
-use function in_array;
 
 /**
  * @extends AbstractNormalizer<array{string, array<string, mixed>}>
@@ -20,7 +19,7 @@ final class PhpLintNormalizer extends AbstractNormalizer
 {
     public function normalize($data, string $format, array $context): ?ArrayObject
     {
-        if (!in_array($format, $this->getSupportedFormats())) {
+        if (!$this->isSupportedFormat($format)) {
             return null;
         }
 

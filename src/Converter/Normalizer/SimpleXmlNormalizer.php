@@ -12,7 +12,6 @@ use Bartlett\Sarif\Contract\NormalizerInterface;
 use ArrayObject;
 use SimpleXMLElement;
 use function extension_loaded;
-use function in_array;
 use function is_string;
 use function json_decode;
 use function json_encode;
@@ -35,7 +34,7 @@ final class SimpleXmlNormalizer extends AbstractNormalizer
 
     public function normalize($data, string $format, array $context): ?ArrayObject
     {
-        if (!in_array($format, $this->getSupportedFormats()) || !is_string($data)) {
+        if (!$this->isSupportedFormat($format) || !is_string($data)) {
             return null;
         }
 

@@ -11,7 +11,6 @@ use Bartlett\Sarif\Contract\NormalizerInterface;
 
 use ArrayObject;
 use function count;
-use function in_array;
 use function json_decode;
 use function sprintf;
 use function str_pad;
@@ -34,7 +33,7 @@ final class ComposerNormalizer extends AbstractNormalizer
 
     public function normalize($data, string $format, array $context): ?ArrayObject
     {
-        if (!in_array($format, $this->getSupportedFormats())) {
+        if (!$this->isSupportedFormat($format)) {
             return null;
         }
 

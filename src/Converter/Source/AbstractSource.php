@@ -15,7 +15,6 @@ use Iterator;
 use function end;
 use function explode;
 use function get_class;
-use function in_array;
 use function rtrim;
 
 /**
@@ -126,7 +125,7 @@ abstract class AbstractSource implements SourceInterface
                 continue;
             }
 
-            if (in_array($format, $normalizer->getSupportedFormats())) {
+            if ($normalizer->isSupportedFormat($format)) {
                 return $normalizer;
             }
         }

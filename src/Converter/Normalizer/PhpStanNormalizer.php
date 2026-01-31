@@ -11,7 +11,6 @@ use PHPStan\Command\AnalysisResult;
 
 use ArrayObject;
 use function array_unique;
-use function in_array;
 use function sprintf;
 
 /**
@@ -25,7 +24,7 @@ final class PhpStanNormalizer extends AbstractNormalizer
 
     public function normalize($data, string $format, array $context): ?ArrayObject
     {
-        if (!in_array($format, $this->getSupportedFormats())) {
+        if (!$this->isSupportedFormat($format)) {
             return null;
         }
 
