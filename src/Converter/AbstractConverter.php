@@ -45,9 +45,9 @@ use function parse_url;
 use function realpath;
 use function rtrim;
 use function sprintf;
+use function str_contains;
 use function str_replace;
 use function strlen;
-use function strpos;
 use function substr;
 use function trim;
 use const DATE_ATOM;
@@ -354,7 +354,7 @@ abstract class AbstractConverter implements ConverterInterface
 
                 $properties = [];
                 foreach ($error as $key => $value) {
-                    if (strpos($key, 'Result.properties.') !== false) {
+                    if (str_contains($key, 'Result.properties.')) {
                         $properties[str_replace('Result.properties.', '', $key)] = $value;
                     }
                 }

@@ -14,9 +14,9 @@ use function array_unique;
 use function is_string;
 use function json_decode;
 use function preg_match_all;
+use function str_contains;
 use function str_replace;
 use function strlen;
-use function strpos;
 use function substr;
 
 /**
@@ -94,7 +94,7 @@ final class SarifNormalizer extends AbstractNormalizer
 
     private function pathToArtifactLocation(string $path): string
     {
-        if (strpos($path, 'file://') !== false) {
+        if (str_contains($path, 'file://')) {
             $path = substr($path, strlen('file://'));
         }
         return $path;
