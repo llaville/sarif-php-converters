@@ -33,11 +33,11 @@ final class TwigCsFixerNormalizer extends AbstractNormalizer
                 $rules[$ruleName] = [];
 
                 $level = strtolower(Violation::getLevelAsString($violation->getLevel()));
-                if ('notice' == $level) {
+                if ('notice' === $level) {
                     // @link (sarif-php-sdk) src/Property/Level.php
                     $level = 'note';
                 }
-                if ('fatal' == $level) {
+                if ('fatal' === $level) {
                     // @link (sarif-php-sdk) src/Property/Level.php
                     $level = 'error';
                 }
