@@ -133,7 +133,7 @@ class ConvertCommand extends Command
                 );
             }
 
-            $converterAlias = $input->getArgument('converter') ?: $sourceAlias;
+            $converterAlias = $input->getArgument('converter') ?? $sourceAlias;
 
             $converterOptions = [
                 // Nicely formats output with indentation and extra space
@@ -191,7 +191,8 @@ class ConvertCommand extends Command
                 );
             }
 
-            return file_get_contents($inputFile) ?: null;
+            $contents = file_get_contents($inputFile);
+            return $contents !== false ? $contents : null;
         }
 
         $contents = $this->getStdIn();
