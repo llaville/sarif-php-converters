@@ -60,7 +60,7 @@ abstract class AbstractSource implements SourceInterface
             foreach ($files as $file) {
                 yield $file;
             }
-        };
+        }
     }
 
     /**

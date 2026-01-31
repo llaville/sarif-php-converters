@@ -88,7 +88,7 @@ final class RectorNormalizer extends AbstractNormalizer
                     'Result.message' => sprintf('Applied rule %s', $rectorShortClass),
                 ];
                 $errors[$filePath][] = $attributes;
-            };
+            }
         }
 
         $systemErrors = $processResult->getSystemErrors();
