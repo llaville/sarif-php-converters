@@ -11,6 +11,7 @@
 | Stable v1.2.x | [![Branch 1.2][Branch_102x-img]][Branch_102x] | [![Minimum PHP Version)][PHPVersion_102x-img]][PHPVersion_102x] | [![Stable Version 1.2][Packagist_102x-img]][Packagist_102x] | [![License 1.2][License_102x-img]][License_102x] | [![Documentation 1.2][Documentation_102x-img]][Documentation_102x] |
 | Stable v1.3.x | [![Branch 1.3][Branch_103x-img]][Branch_103x] | [![Minimum PHP Version)][PHPVersion_103x-img]][PHPVersion_103x] | [![Stable Version 1.3][Packagist_103x-img]][Packagist_103x] | [![License 1.3][License_103x-img]][License_103x] | [![Documentation 1.3][Documentation_103x-img]][Documentation_103x] |
 | Stable v1.4.x | [![Branch 1.4][Branch_104x-img]][Branch_104x] | [![Minimum PHP Version)][PHPVersion_104x-img]][PHPVersion_104x] | [![Stable Version 1.4][Packagist_104x-img]][Packagist_104x] | [![License 1.4][License_104x-img]][License_104x] | [![Documentation 1.4][Documentation_104x-img]][Documentation_104x] |
+| Stable v1.5.x | [![Branch 1.5][Branch_105x-img]][Branch_105x] | [![Minimum PHP Version)][PHPVersion_105x-img]][PHPVersion_105x] | [![Stable Version 1.5][Packagist_105x-img]][Packagist_105x] | [![License 1.5][License_105x-img]][License_105x] | [![Documentation 1.5][Documentation_105x-img]][Documentation_105x] |
 
 [Branch_100x-img]: https://img.shields.io/badge/branch-1.0-orange
 [Branch_100x]: https://github.com/llaville/sarif-php-converters/tree/1.0
@@ -67,6 +68,17 @@
 [Documentation_104x-img]: https://img.shields.io/badge/documentation-v1.4-green
 [Documentation_104x]: https://github.com/llaville/sarif-php-converters/tree/1.4/docs
 
+[Branch_105x-img]: https://img.shields.io/badge/branch-1.5-orange
+[Branch_105x]: https://github.com/llaville/sarif-php-converters/tree/1.5
+[PHPVersion_105x-img]: https://img.shields.io/packagist/php-v/bartlett/sarif-php-converters/1.5.0
+[PHPVersion_105x]: https://www.php.net/supported-versions.php
+[Packagist_105x-img]: https://img.shields.io/badge/packagist-v1.5.0-blue
+[Packagist_105x]: https://packagist.org/packages/bartlett/sarif-php-converters
+[License_105x-img]: https://img.shields.io/packagist/l/bartlett/sarif-php-converters
+[License_105x]: https://github.com/llaville/sarif-php-converters/blob/1.5/LICENSE
+[Documentation_105x-img]: https://img.shields.io/badge/documentation-v1.5-green
+[Documentation_105x]: https://github.com/llaville/sarif-php-converters/tree/1.5/docs
+
 ## Introduction
 
 SARIF, the [Static Analysis Results Interchange Format][sarif-specs], defines a standard format for the output of static analysis tools.
@@ -121,8 +133,8 @@ Legend :
 
 ## Documentation
 
-All the documentation is available on [website](https://llaville.github.io/sarif-php-converters/1.4),
-generated from the [docs](https://github.com/llaville/sarif-php-converters/tree/1.4/docs) folder.
+All the documentation is available on [website](https://llaville.github.io/sarif-php-converters/1.5),
+generated from the [docs](https://github.com/llaville/sarif-php-converters/tree/1.5/docs) folder.
 
 [sca]: https://owasp.org/www-community/controls/Static_Code_Analysis
 [sarif-specs]: https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html
