@@ -1,0 +1,13 @@
+{
+    "pre-commit": {
+        "enabled": true,
+        "actions": [
+            {
+                "action": "FORCE_COLOR=1 {$ENV|value-of:VENDOR_BIN_DIR|default:vendor/bin/}mago lint --baseline lint-baseline.toml {$STAGED_FILES|of-type:php|separated-by: }",
+                "config": {
+                    "label": "Lint Files (with Mago)"
+                }
+            }
+        ]
+    }
+}
