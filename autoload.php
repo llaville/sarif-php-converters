@@ -22,6 +22,10 @@ use function sprintf;
 use function strpos;
 use function strtolower;
 
+foreach (glob(__DIR__ . '/vendor-bin/*/vendor/autoload.php') as $autoloadFile) {
+    require $autoloadFile;
+}
+
 if (class_exists(__NAMESPACE__ . '\Autoload', false) === false) {
     class Autoload
     {
