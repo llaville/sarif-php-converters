@@ -15,7 +15,7 @@ use-tabs = false
 
 [linter]
 integrations = ["symfony"]
-baseline = "linter-baseline.toml"
+baseline = ".github/linters/lint-baseline.toml"
 
 [linter.rules]
 ambiguous-function-call = { enabled = false }

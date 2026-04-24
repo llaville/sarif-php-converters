@@ -1,0 +1,27 @@
+{
+    "pre-push": {
+        "enabled": true,
+        "actions": [
+            {
+                "action": [
+                    "MAGO_LOG={$ENV|value-of:MAGO_LOG|default:debug}",
+                    "{$ENV|value-of:XDG_BIN_HOME}mago",
+                    "--config {$ENV|value-of:\\Bartlett\\CaptainHookBinPlugin\\BinPlugin.config-file|cache:false}",
+                    "{$ENV|value-of:\\Bartlett\\CaptainHookBinPlugin\\BinPlugin.colors-flag|cache:false}",
+                    "lint"
+                ],
+                "config": {
+                    "label": "Static Analysis (with Mago)"
+                },
+                "options": {
+                    "colors": "always",
+                    "config-file": "{$ENV|value-of:XDG_CONFIG_HOME}/mago.dist.toml",
+                    "package-require": [
+                        "carthage-software/mago",
+                        "^1"
+                    ]
+                }
+            }
+        ]
+    }
+}

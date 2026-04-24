@@ -9,6 +9,12 @@
  * @since Release 1.0.0
  */
 
+use PHP_CodeSniffer\Standards\PSR12\Sniffs\Files\FileHeaderSniff;
+use PHP_CodeSniffer\Standards\PSR12\Sniffs\Files\OpenTagSniff;
+use PHP_CodeSniffer\Standards\Squiz\Sniffs\Classes\ValidClassNameSniff;
+use PhpCsFixer\Fixer\Import\NoUnusedImportsFixer;
+use PhpCsFixer\Fixer\Import\OrderedImportsFixer;
+use PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer;
 use Symplify\EasyCodingStandard\Config\ECSConfig;
 
 $baseDir = dirname(__DIR__, 2);
@@ -22,11 +28,11 @@ return ECSConfig::configure()
 
     ->withSkip([
         $baseDir . '/examples/fixtures',
-        \PHP_CodeSniffer\Standards\PSR12\Sniffs\Files\FileHeaderSniff::class,
-        \PHP_CodeSniffer\Standards\PSR12\Sniffs\Files\OpenTagSniff::class,
-        \PHP_CodeSniffer\Standards\Squiz\Sniffs\Classes\ValidClassNameSniff::class,
-        \PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer::class,
-        \PhpCsFixer\Fixer\Import\OrderedImportsFixer::class,
+        FileHeaderSniff::class,
+        OpenTagSniff::class,
+        ValidClassNameSniff::class,
+        BlankLineAfterOpeningTagFixer::class,
+        OrderedImportsFixer::class,
     ])
 
     // Report absolute path on filenames
@@ -34,11 +40,6 @@ return ECSConfig::configure()
 
     // add a single rule
     ->withRules([
-        \PhpCsFixer\Fixer\Import\NoUnusedImportsFixer::class,
+        NoUnusedImportsFixer::class,
     ])
-
-    // add sets - group of rules
-    ->withPreparedSets(
-        psr12: true,
-    )
 ;
