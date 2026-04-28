@@ -12,7 +12,7 @@
                     "fullDescription": {
                         "text": "Use Coding Standard with 0-knowledge of PHP-CS-Fixer and PHP_CodeSniffer."
                     },
-                    "semanticVersion": "12.3.1.0",
+                    "semanticVersion": "13.0.4.0",
                     "informationUri": "https://github.com/easy-coding-standard/easy-coding-standard",
                     "rules": [
                         {
@@ -53,7 +53,7 @@
                         },
                         {
                             "id": "EasyCodingStandard.Symplify\\CodingStandard\\Fixer\\ArrayNotation\\ArrayOpenerAndCloserNewlineFixer",
-                            "helpUri": "https://github.com/symplify/coding-standard/blob/main/docs/rules_overview.md#arrayopenerandclosernewlinefixer"
+                            "helpUri": "https://github.com/symplify/coding-standard#array opener and closer newline fixer"
                         },
                         {
                             "id": "EasyCodingStandard.PhpCsFixer\\Fixer\\ClassNotation\\ClassAttributesSeparationFixer",
@@ -79,7 +79,7 @@
                         "shortDescription": {
                             "text": "Easy-Coding-Standard SARIF Converter"
                         },
-                        "version": "1.0.9999999.9999999-dev"
+                        "version": "1.6.9999999.9999999-dev"
                     }
                 ]
             },
@@ -93,17 +93,41 @@
                         "--input-format=checkstyle",
                         "--input-file=examples/ecs/checkstyle.xml",
                         "-v",
-                        "--output-file",
-                        "examples/ecs/.sarif.json"
+                        "--output-file=examples/ecs/.sarif.json"
                     ],
                     "workingDirectory": {
                         "uri": "file:///shared/backups/bartlett/sarif-php-converters/"
                     }
                 }
             ],
+            "versionControlProvenance": [
+                {
+                    "repositoryUri": "https://github.com/llaville/sarif-php-converters.git",
+                    "revisionId": "e99609c69504842370bf1f3ef5c09db571cbe069",
+                    "branch": "1.6",
+                    "revisionTag": "1.5.0-12-ge99609c",
+                    "mappedTo": {
+                        "uriBaseId": "SOURCE_ROOT"
+                    },
+                    "properties": {
+                        "versionControl.system": "git",
+                        "versionControl.version": "2.47.3"
+                    }
+                }
+            ],
             "originalUriBaseIds": {
-                "WORKINGDIR": {
-                    "uri": "file:///shared/backups/bartlett/sarif-php-converters/"
+                "PROJECT_ROOT": {
+                    "uri": "file:///shared/backups/bartlett/",
+                    "description": {
+                        "text": "The root directory for all project files"
+                    }
+                },
+                "SOURCE_ROOT": {
+                    "uri": "sarif-php-converters/",
+                    "uriBaseId": "PROJECT_ROOT",
+                    "description": {
+                        "text": "The root directory for this project files"
+                    }
                 }
             },
             "results": [
@@ -118,13 +142,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Console/Command/ConvertCommand.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\ControlStructure\\TrailingCommaInMultilineFixer": "d510238bd83c83c1019e1e7b60cbec4aff317fca2007e75f41a278398ac21357"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\ControlStructure\\TrailingCommaInMultilineFixer": "371659ea44bab5b9432ad5a2b886fc4784f304b2d2abd59f49a60656888e9df8"
                     }
                 },
                 {
@@ -138,13 +162,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Console/Command/ConvertCommand.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "d510238bd83c83c1019e1e7b60cbec4aff317fca2007e75f41a278398ac21357"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "371659ea44bab5b9432ad5a2b886fc4784f304b2d2abd59f49a60656888e9df8"
                     }
                 },
                 {
@@ -158,13 +182,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Console/Command/ConvertCommand.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "d510238bd83c83c1019e1e7b60cbec4aff317fca2007e75f41a278398ac21357"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "371659ea44bab5b9432ad5a2b886fc4784f304b2d2abd59f49a60656888e9df8"
                     }
                 },
                 {
@@ -178,13 +202,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Console/Command/ConvertCommand.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\BinaryOperatorSpacesFixer": "d510238bd83c83c1019e1e7b60cbec4aff317fca2007e75f41a278398ac21357"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\BinaryOperatorSpacesFixer": "371659ea44bab5b9432ad5a2b886fc4784f304b2d2abd59f49a60656888e9df8"
                     }
                 },
                 {
@@ -198,13 +222,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Console/Command/ConvertCommand.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "d510238bd83c83c1019e1e7b60cbec4aff317fca2007e75f41a278398ac21357"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "371659ea44bab5b9432ad5a2b886fc4784f304b2d2abd59f49a60656888e9df8"
                     }
                 },
                 {
@@ -218,13 +242,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Console/Command/ConvertCommand.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\TernaryOperatorSpacesFixer": "d510238bd83c83c1019e1e7b60cbec4aff317fca2007e75f41a278398ac21357"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\TernaryOperatorSpacesFixer": "371659ea44bab5b9432ad5a2b886fc4784f304b2d2abd59f49a60656888e9df8"
                     }
                 },
                 {
@@ -238,13 +262,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Console/Command/ConvertCommand.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "d510238bd83c83c1019e1e7b60cbec4aff317fca2007e75f41a278398ac21357"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "371659ea44bab5b9432ad5a2b886fc4784f304b2d2abd59f49a60656888e9df8"
                     }
                 },
                 {
@@ -258,13 +282,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Console/Command/ConvertCommand.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\ArrayIndentationFixer": "d510238bd83c83c1019e1e7b60cbec4aff317fca2007e75f41a278398ac21357"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\ArrayIndentationFixer": "371659ea44bab5b9432ad5a2b886fc4784f304b2d2abd59f49a60656888e9df8"
                     }
                 },
                 {
@@ -278,13 +302,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Console/Command/ConvertCommand.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "d510238bd83c83c1019e1e7b60cbec4aff317fca2007e75f41a278398ac21357"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "371659ea44bab5b9432ad5a2b886fc4784f304b2d2abd59f49a60656888e9df8"
                     }
                 },
                 {
@@ -298,13 +322,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Console/Command/ConvertCommand.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.Symplify\\CodingStandard\\Fixer\\ArrayNotation\\ArrayOpenerAndCloserNewlineFixer": "d510238bd83c83c1019e1e7b60cbec4aff317fca2007e75f41a278398ac21357"
+                        "EasyCodingStandard.Symplify\\CodingStandard\\Fixer\\ArrayNotation\\ArrayOpenerAndCloserNewlineFixer": "371659ea44bab5b9432ad5a2b886fc4784f304b2d2abd59f49a60656888e9df8"
                     }
                 },
                 {
@@ -318,13 +342,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Contract/ConverterFactoryInterface.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\ClassNotation\\ClassAttributesSeparationFixer": "a7f9e8911f6f029938b873419784a13a84fe3a0dfc5dc17f815d1427784d3430"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\ClassNotation\\ClassAttributesSeparationFixer": "c71f1072d13103682ed2c5a4c47ad4ff3dca1698a304cc042a906612f57eda30"
                     }
                 },
                 {
@@ -338,13 +362,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Contract/ConverterFactoryInterface.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "a7f9e8911f6f029938b873419784a13a84fe3a0dfc5dc17f815d1427784d3430"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "c71f1072d13103682ed2c5a4c47ad4ff3dca1698a304cc042a906612f57eda30"
                     }
                 },
                 {
@@ -358,13 +382,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Contract/ConverterFactoryInterface.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "a7f9e8911f6f029938b873419784a13a84fe3a0dfc5dc17f815d1427784d3430"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "c71f1072d13103682ed2c5a4c47ad4ff3dca1698a304cc042a906612f57eda30"
                     }
                 },
                 {
@@ -378,13 +402,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Contract/ConverterInterface.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "3326e444522cdd8facde887fa1960a74bd5dc7503a5fc3a1317116774ef6af3c"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "395a881c88da3c1b1ca7f8deb10a60edfd036cfbc0bceaf9bf82d02becab46c8"
                     }
                 },
                 {
@@ -398,13 +422,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Contract/ConverterInterface.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "3326e444522cdd8facde887fa1960a74bd5dc7503a5fc3a1317116774ef6af3c"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "395a881c88da3c1b1ca7f8deb10a60edfd036cfbc0bceaf9bf82d02becab46c8"
                     }
                 },
                 {
@@ -418,13 +442,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Contract/ConverterInterface.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Phpdoc\\NoSuperfluousPhpdocTagsFixer": "3326e444522cdd8facde887fa1960a74bd5dc7503a5fc3a1317116774ef6af3c"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Phpdoc\\NoSuperfluousPhpdocTagsFixer": "395a881c88da3c1b1ca7f8deb10a60edfd036cfbc0bceaf9bf82d02becab46c8"
                     }
                 },
                 {
@@ -438,13 +462,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Contract/NormalizerInterface.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\ClassNotation\\ClassAttributesSeparationFixer": "ee466cde91731c5d14419df2d97eb564c4967606d162a30475ca732a2c88928d"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\ClassNotation\\ClassAttributesSeparationFixer": "0d239451732fea42a016ec0457281fbbe124a2ec72ab4c07e390339527049c34"
                     }
                 },
                 {
@@ -458,13 +482,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Contract/NormalizerInterface.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "ee466cde91731c5d14419df2d97eb564c4967606d162a30475ca732a2c88928d"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "0d239451732fea42a016ec0457281fbbe124a2ec72ab4c07e390339527049c34"
                     }
                 },
                 {
@@ -478,13 +502,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Contract/NormalizerInterface.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "ee466cde91731c5d14419df2d97eb564c4967606d162a30475ca732a2c88928d"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "0d239451732fea42a016ec0457281fbbe124a2ec72ab4c07e390339527049c34"
                     }
                 },
                 {
@@ -498,13 +522,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Contract/SourceFactoryInterface.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\ClassNotation\\ClassAttributesSeparationFixer": "efaf7164197e7c05ceb0f8a29b01edc08da763323bb5220fd2eea0c9ebf48ffa"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\ClassNotation\\ClassAttributesSeparationFixer": "9a2f342e3b58822f980f73283da94ae2621020c81bfee6a9315103a451c07b3e"
                     }
                 },
                 {
@@ -518,13 +542,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Contract/SourceFactoryInterface.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "efaf7164197e7c05ceb0f8a29b01edc08da763323bb5220fd2eea0c9ebf48ffa"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "9a2f342e3b58822f980f73283da94ae2621020c81bfee6a9315103a451c07b3e"
                     }
                 },
                 {
@@ -538,13 +562,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Contract/SourceFactoryInterface.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "efaf7164197e7c05ceb0f8a29b01edc08da763323bb5220fd2eea0c9ebf48ffa"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "9a2f342e3b58822f980f73283da94ae2621020c81bfee6a9315103a451c07b3e"
                     }
                 },
                 {
@@ -558,13 +582,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Contract/SourceInterface.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "2c444cff3f4f21b10ab2c83307286049ea415b13d25f9e6b4e8d364872b178ef"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "f2c741b7db7aecbc20f326682a309497c5646344458212b8b6aecb853905c7d8"
                     }
                 },
                 {
@@ -578,13 +602,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Contract/SourceInterface.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "2c444cff3f4f21b10ab2c83307286049ea415b13d25f9e6b4e8d364872b178ef"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "f2c741b7db7aecbc20f326682a309497c5646344458212b8b6aecb853905c7d8"
                     }
                 },
                 {
@@ -598,13 +622,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/AbstractConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\ClassNotation\\ClassAttributesSeparationFixer": "f651b4cea336a9e35c0f2751acedb06df8dab6aaf71122df0d86248a9b240d6f"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\ClassNotation\\ClassAttributesSeparationFixer": "00de6e0b660200d389de60af63e4c11aecc43516bcb63815a433a3e6bedc959d"
                     }
                 },
                 {
@@ -618,13 +642,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/AbstractConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\ControlStructure\\TrailingCommaInMultilineFixer": "f651b4cea336a9e35c0f2751acedb06df8dab6aaf71122df0d86248a9b240d6f"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\ControlStructure\\TrailingCommaInMultilineFixer": "00de6e0b660200d389de60af63e4c11aecc43516bcb63815a433a3e6bedc959d"
                     }
                 },
                 {
@@ -638,13 +662,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/AbstractConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "f651b4cea336a9e35c0f2751acedb06df8dab6aaf71122df0d86248a9b240d6f"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "00de6e0b660200d389de60af63e4c11aecc43516bcb63815a433a3e6bedc959d"
                     }
                 },
                 {
@@ -658,13 +682,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/AbstractConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "f651b4cea336a9e35c0f2751acedb06df8dab6aaf71122df0d86248a9b240d6f"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "00de6e0b660200d389de60af63e4c11aecc43516bcb63815a433a3e6bedc959d"
                     }
                 },
                 {
@@ -678,13 +702,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/AbstractConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "f651b4cea336a9e35c0f2751acedb06df8dab6aaf71122df0d86248a9b240d6f"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "00de6e0b660200d389de60af63e4c11aecc43516bcb63815a433a3e6bedc959d"
                     }
                 },
                 {
@@ -698,13 +722,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/AbstractConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "f651b4cea336a9e35c0f2751acedb06df8dab6aaf71122df0d86248a9b240d6f"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "00de6e0b660200d389de60af63e4c11aecc43516bcb63815a433a3e6bedc959d"
                     }
                 },
                 {
@@ -718,13 +742,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/AbstractConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Phpdoc\\NoEmptyPhpdocFixer": "f651b4cea336a9e35c0f2751acedb06df8dab6aaf71122df0d86248a9b240d6f"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Phpdoc\\NoEmptyPhpdocFixer": "00de6e0b660200d389de60af63e4c11aecc43516bcb63815a433a3e6bedc959d"
                     }
                 },
                 {
@@ -738,13 +762,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/AbstractConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Phpdoc\\NoSuperfluousPhpdocTagsFixer": "f651b4cea336a9e35c0f2751acedb06df8dab6aaf71122df0d86248a9b240d6f"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Phpdoc\\NoSuperfluousPhpdocTagsFixer": "00de6e0b660200d389de60af63e4c11aecc43516bcb63815a433a3e6bedc959d"
                     }
                 },
                 {
@@ -758,13 +782,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/AbstractConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Phpdoc\\PhpdocVarWithoutNameFixer": "f651b4cea336a9e35c0f2751acedb06df8dab6aaf71122df0d86248a9b240d6f"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Phpdoc\\PhpdocVarWithoutNameFixer": "00de6e0b660200d389de60af63e4c11aecc43516bcb63815a433a3e6bedc959d"
                     }
                 },
                 {
@@ -778,13 +802,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/AbstractConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\ArrayIndentationFixer": "f651b4cea336a9e35c0f2751acedb06df8dab6aaf71122df0d86248a9b240d6f"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\ArrayIndentationFixer": "00de6e0b660200d389de60af63e4c11aecc43516bcb63815a433a3e6bedc959d"
                     }
                 },
                 {
@@ -798,13 +822,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/AbstractConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "f651b4cea336a9e35c0f2751acedb06df8dab6aaf71122df0d86248a9b240d6f"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "00de6e0b660200d389de60af63e4c11aecc43516bcb63815a433a3e6bedc959d"
                     }
                 },
                 {
@@ -818,13 +842,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/AbstractConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.Symplify\\CodingStandard\\Fixer\\ArrayNotation\\ArrayOpenerAndCloserNewlineFixer": "f651b4cea336a9e35c0f2751acedb06df8dab6aaf71122df0d86248a9b240d6f"
+                        "EasyCodingStandard.Symplify\\CodingStandard\\Fixer\\ArrayNotation\\ArrayOpenerAndCloserNewlineFixer": "00de6e0b660200d389de60af63e4c11aecc43516bcb63815a433a3e6bedc959d"
                     }
                 },
                 {
@@ -838,13 +862,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/EcsConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "935f4f01b0412310362e966205f5608063ccb189a63ec3d22b3273e29c574209"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "5e3d1576924653f0a744238a61b93ee4ac9316a3449bbabcd156cc5fa3c5726d"
                     }
                 },
                 {
@@ -858,13 +882,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/EcsConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "935f4f01b0412310362e966205f5608063ccb189a63ec3d22b3273e29c574209"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "5e3d1576924653f0a744238a61b93ee4ac9316a3449bbabcd156cc5fa3c5726d"
                     }
                 },
                 {
@@ -878,13 +902,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/CheckstyleNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "70e6529411279b7f65c3b327d721fb4e12d56c5f1b31f8507efcd9e8bb233a26"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "d009fa8182ab13b9ae86f9cb60394f7e601486be835d1f0576875447b99d434f"
                     }
                 },
                 {
@@ -898,13 +922,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/CheckstyleNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "70e6529411279b7f65c3b327d721fb4e12d56c5f1b31f8507efcd9e8bb233a26"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "d009fa8182ab13b9ae86f9cb60394f7e601486be835d1f0576875447b99d434f"
                     }
                 },
                 {
@@ -918,13 +942,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/CheckstyleNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "70e6529411279b7f65c3b327d721fb4e12d56c5f1b31f8507efcd9e8bb233a26"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "d009fa8182ab13b9ae86f9cb60394f7e601486be835d1f0576875447b99d434f"
                     }
                 },
                 {
@@ -938,13 +962,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/CheckstyleNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "70e6529411279b7f65c3b327d721fb4e12d56c5f1b31f8507efcd9e8bb233a26"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "d009fa8182ab13b9ae86f9cb60394f7e601486be835d1f0576875447b99d434f"
                     }
                 },
                 {
@@ -958,13 +982,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/CheckstyleNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "70e6529411279b7f65c3b327d721fb4e12d56c5f1b31f8507efcd9e8bb233a26"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "d009fa8182ab13b9ae86f9cb60394f7e601486be835d1f0576875447b99d434f"
                     }
                 },
                 {
@@ -978,13 +1002,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/EcsNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "81a5031446ca6ac0e734f44cb957b643d4eadbbbd50ed08be287b685f4819d73"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "d475f297e8939ba0cc3297976e2a90b46daa9e3f23220f9b53f69a8aa83558db"
                     }
                 },
                 {
@@ -998,13 +1022,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/EcsNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "81a5031446ca6ac0e734f44cb957b643d4eadbbbd50ed08be287b685f4819d73"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "d475f297e8939ba0cc3297976e2a90b46daa9e3f23220f9b53f69a8aa83558db"
                     }
                 },
                 {
@@ -1018,13 +1042,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/EcsNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "81a5031446ca6ac0e734f44cb957b643d4eadbbbd50ed08be287b685f4819d73"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "d475f297e8939ba0cc3297976e2a90b46daa9e3f23220f9b53f69a8aa83558db"
                     }
                 },
                 {
@@ -1038,13 +1062,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/EcsNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "81a5031446ca6ac0e734f44cb957b643d4eadbbbd50ed08be287b685f4819d73"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "d475f297e8939ba0cc3297976e2a90b46daa9e3f23220f9b53f69a8aa83558db"
                     }
                 },
                 {
@@ -1058,13 +1082,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/EcsNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "81a5031446ca6ac0e734f44cb957b643d4eadbbbd50ed08be287b685f4819d73"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "d475f297e8939ba0cc3297976e2a90b46daa9e3f23220f9b53f69a8aa83558db"
                     }
                 },
                 {
@@ -1078,13 +1102,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhanNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "e509df02599bb346f87f8c2fbcf5bc4909732dbbdaad6832bd60e1fdb4a93056"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "eb287eae5634fec321736d08098d0621b8db9a56a126003be13c4ae2b987284e"
                     }
                 },
                 {
@@ -1098,13 +1122,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhanNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "e509df02599bb346f87f8c2fbcf5bc4909732dbbdaad6832bd60e1fdb4a93056"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "eb287eae5634fec321736d08098d0621b8db9a56a126003be13c4ae2b987284e"
                     }
                 },
                 {
@@ -1118,13 +1142,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhanNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "e509df02599bb346f87f8c2fbcf5bc4909732dbbdaad6832bd60e1fdb4a93056"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "eb287eae5634fec321736d08098d0621b8db9a56a126003be13c4ae2b987284e"
                     }
                 },
                 {
@@ -1138,13 +1162,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhanNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "e509df02599bb346f87f8c2fbcf5bc4909732dbbdaad6832bd60e1fdb4a93056"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "eb287eae5634fec321736d08098d0621b8db9a56a126003be13c4ae2b987284e"
                     }
                 },
                 {
@@ -1158,13 +1182,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhanNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "e509df02599bb346f87f8c2fbcf5bc4909732dbbdaad6832bd60e1fdb4a93056"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "eb287eae5634fec321736d08098d0621b8db9a56a126003be13c4ae2b987284e"
                     }
                 },
                 {
@@ -1178,13 +1202,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpCsFixerNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "cb211fbd7d0f03ff42d6cf2d365c7029592229b3a4e752b217dd93b3126fe9ea"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "5df98122f35bdf53510f1a3ccdf138c20da1ad8d74e49bff2641f4e930a86c66"
                     }
                 },
                 {
@@ -1198,13 +1222,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpCsFixerNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "cb211fbd7d0f03ff42d6cf2d365c7029592229b3a4e752b217dd93b3126fe9ea"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "5df98122f35bdf53510f1a3ccdf138c20da1ad8d74e49bff2641f4e930a86c66"
                     }
                 },
                 {
@@ -1218,13 +1242,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpCsFixerNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "cb211fbd7d0f03ff42d6cf2d365c7029592229b3a4e752b217dd93b3126fe9ea"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "5df98122f35bdf53510f1a3ccdf138c20da1ad8d74e49bff2641f4e930a86c66"
                     }
                 },
                 {
@@ -1238,13 +1262,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpCsFixerNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "cb211fbd7d0f03ff42d6cf2d365c7029592229b3a4e752b217dd93b3126fe9ea"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "5df98122f35bdf53510f1a3ccdf138c20da1ad8d74e49bff2641f4e930a86c66"
                     }
                 },
                 {
@@ -1258,13 +1282,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpCsFixerNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "cb211fbd7d0f03ff42d6cf2d365c7029592229b3a4e752b217dd93b3126fe9ea"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "5df98122f35bdf53510f1a3ccdf138c20da1ad8d74e49bff2641f4e930a86c66"
                     }
                 },
                 {
@@ -1278,13 +1302,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpCsNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\ControlStructure\\TrailingCommaInMultilineFixer": "1b2135a0ba38991db6121567aa3c3890935fdca2b5dcf637471d526e915fd540"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\ControlStructure\\TrailingCommaInMultilineFixer": "fbb94aa8e87ea0bcee4bd0ce4661bbe336e6b5e399ef6e6a7741ffd6eabe2903"
                     }
                 },
                 {
@@ -1298,13 +1322,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpCsNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "1b2135a0ba38991db6121567aa3c3890935fdca2b5dcf637471d526e915fd540"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "fbb94aa8e87ea0bcee4bd0ce4661bbe336e6b5e399ef6e6a7741ffd6eabe2903"
                     }
                 },
                 {
@@ -1318,13 +1342,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpCsNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "1b2135a0ba38991db6121567aa3c3890935fdca2b5dcf637471d526e915fd540"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "fbb94aa8e87ea0bcee4bd0ce4661bbe336e6b5e399ef6e6a7741ffd6eabe2903"
                     }
                 },
                 {
@@ -1338,13 +1362,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpCsNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "1b2135a0ba38991db6121567aa3c3890935fdca2b5dcf637471d526e915fd540"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "fbb94aa8e87ea0bcee4bd0ce4661bbe336e6b5e399ef6e6a7741ffd6eabe2903"
                     }
                 },
                 {
@@ -1358,13 +1382,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpCsNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "1b2135a0ba38991db6121567aa3c3890935fdca2b5dcf637471d526e915fd540"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "fbb94aa8e87ea0bcee4bd0ce4661bbe336e6b5e399ef6e6a7741ffd6eabe2903"
                     }
                 },
                 {
@@ -1378,13 +1402,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpCsNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\ArrayIndentationFixer": "1b2135a0ba38991db6121567aa3c3890935fdca2b5dcf637471d526e915fd540"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\ArrayIndentationFixer": "fbb94aa8e87ea0bcee4bd0ce4661bbe336e6b5e399ef6e6a7741ffd6eabe2903"
                     }
                 },
                 {
@@ -1398,13 +1422,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpCsNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "1b2135a0ba38991db6121567aa3c3890935fdca2b5dcf637471d526e915fd540"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "fbb94aa8e87ea0bcee4bd0ce4661bbe336e6b5e399ef6e6a7741ffd6eabe2903"
                     }
                 },
                 {
@@ -1418,113 +1442,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpCsNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.Symplify\\CodingStandard\\Fixer\\ArrayNotation\\ArrayOpenerAndCloserNewlineFixer": "1b2135a0ba38991db6121567aa3c3890935fdca2b5dcf637471d526e915fd540"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Normalizer/PhpInsightsNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "efd0ed22c1b3a5f7df24a57f372c2b1b9f249b2aaea2d05cdaf8815f12e32e7d"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Normalizer/PhpInsightsNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "efd0ed22c1b3a5f7df24a57f372c2b1b9f249b2aaea2d05cdaf8815f12e32e7d"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Normalizer/PhpInsightsNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "efd0ed22c1b3a5f7df24a57f372c2b1b9f249b2aaea2d05cdaf8815f12e32e7d"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Normalizer/PhpInsightsNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "efd0ed22c1b3a5f7df24a57f372c2b1b9f249b2aaea2d05cdaf8815f12e32e7d"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Normalizer/PhpInsightsNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "efd0ed22c1b3a5f7df24a57f372c2b1b9f249b2aaea2d05cdaf8815f12e32e7d"
+                        "EasyCodingStandard.Symplify\\CodingStandard\\Fixer\\ArrayNotation\\ArrayOpenerAndCloserNewlineFixer": "fbb94aa8e87ea0bcee4bd0ce4661bbe336e6b5e399ef6e6a7741ffd6eabe2903"
                     }
                 },
                 {
@@ -1538,13 +1462,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpLintNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "45a7e0f41063ec5a6f72ca8e0f6c8bfe6c1834e40455a75d2b0cbfe3f896566c"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "031eaca395802f48668621216635f1d00ddb7b30ec64fe94111d6f966546f65e"
                     }
                 },
                 {
@@ -1558,13 +1482,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpLintNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "45a7e0f41063ec5a6f72ca8e0f6c8bfe6c1834e40455a75d2b0cbfe3f896566c"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "031eaca395802f48668621216635f1d00ddb7b30ec64fe94111d6f966546f65e"
                     }
                 },
                 {
@@ -1578,13 +1502,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpLintNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "45a7e0f41063ec5a6f72ca8e0f6c8bfe6c1834e40455a75d2b0cbfe3f896566c"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "031eaca395802f48668621216635f1d00ddb7b30ec64fe94111d6f966546f65e"
                     }
                 },
                 {
@@ -1598,13 +1522,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpLintNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "45a7e0f41063ec5a6f72ca8e0f6c8bfe6c1834e40455a75d2b0cbfe3f896566c"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "031eaca395802f48668621216635f1d00ddb7b30ec64fe94111d6f966546f65e"
                     }
                 },
                 {
@@ -1618,13 +1542,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpLintNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "45a7e0f41063ec5a6f72ca8e0f6c8bfe6c1834e40455a75d2b0cbfe3f896566c"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "031eaca395802f48668621216635f1d00ddb7b30ec64fe94111d6f966546f65e"
                     }
                 },
                 {
@@ -1638,13 +1562,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpMdNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\ControlStructure\\TrailingCommaInMultilineFixer": "8c17876ccfb8b39993400b121b46b0e4cfb411821c9ae0fba8d8f30687a898d8"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\ControlStructure\\TrailingCommaInMultilineFixer": "9169d9c34803917974524e9ed5bcf57e66f98d3d1c7685a4e3b7beca79cd52b3"
                     }
                 },
                 {
@@ -1658,13 +1582,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpMdNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "8c17876ccfb8b39993400b121b46b0e4cfb411821c9ae0fba8d8f30687a898d8"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "9169d9c34803917974524e9ed5bcf57e66f98d3d1c7685a4e3b7beca79cd52b3"
                     }
                 },
                 {
@@ -1678,13 +1602,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpMdNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "8c17876ccfb8b39993400b121b46b0e4cfb411821c9ae0fba8d8f30687a898d8"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "9169d9c34803917974524e9ed5bcf57e66f98d3d1c7685a4e3b7beca79cd52b3"
                     }
                 },
                 {
@@ -1698,13 +1622,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpMdNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "8c17876ccfb8b39993400b121b46b0e4cfb411821c9ae0fba8d8f30687a898d8"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "9169d9c34803917974524e9ed5bcf57e66f98d3d1c7685a4e3b7beca79cd52b3"
                     }
                 },
                 {
@@ -1718,13 +1642,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpMdNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "8c17876ccfb8b39993400b121b46b0e4cfb411821c9ae0fba8d8f30687a898d8"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "9169d9c34803917974524e9ed5bcf57e66f98d3d1c7685a4e3b7beca79cd52b3"
                     }
                 },
                 {
@@ -1738,13 +1662,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpMdNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\ArrayIndentationFixer": "8c17876ccfb8b39993400b121b46b0e4cfb411821c9ae0fba8d8f30687a898d8"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\ArrayIndentationFixer": "9169d9c34803917974524e9ed5bcf57e66f98d3d1c7685a4e3b7beca79cd52b3"
                     }
                 },
                 {
@@ -1758,13 +1682,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpMdNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "8c17876ccfb8b39993400b121b46b0e4cfb411821c9ae0fba8d8f30687a898d8"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "9169d9c34803917974524e9ed5bcf57e66f98d3d1c7685a4e3b7beca79cd52b3"
                     }
                 },
                 {
@@ -1778,113 +1702,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpMdNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.Symplify\\CodingStandard\\Fixer\\ArrayNotation\\ArrayOpenerAndCloserNewlineFixer": "8c17876ccfb8b39993400b121b46b0e4cfb411821c9ae0fba8d8f30687a898d8"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Normalizer/PhpMndNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "9184773ef785248ee6351d07e44041ed82c5a44384cfe397f1f206e305c89cc2"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Normalizer/PhpMndNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "9184773ef785248ee6351d07e44041ed82c5a44384cfe397f1f206e305c89cc2"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Normalizer/PhpMndNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "9184773ef785248ee6351d07e44041ed82c5a44384cfe397f1f206e305c89cc2"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Normalizer/PhpMndNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "9184773ef785248ee6351d07e44041ed82c5a44384cfe397f1f206e305c89cc2"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Normalizer/PhpMndNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "9184773ef785248ee6351d07e44041ed82c5a44384cfe397f1f206e305c89cc2"
+                        "EasyCodingStandard.Symplify\\CodingStandard\\Fixer\\ArrayNotation\\ArrayOpenerAndCloserNewlineFixer": "9169d9c34803917974524e9ed5bcf57e66f98d3d1c7685a4e3b7beca79cd52b3"
                     }
                 },
                 {
@@ -1898,13 +1722,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpStanNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "5e06405aea826324065abf2c158dd3b7ce0372695be4abbcc253389892d7d6ee"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "4d1205c70026bd23ce1d94e40cb0bdd4d02c5744ae247902182e7583c50083e8"
                     }
                 },
                 {
@@ -1918,13 +1742,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpStanNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "5e06405aea826324065abf2c158dd3b7ce0372695be4abbcc253389892d7d6ee"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "4d1205c70026bd23ce1d94e40cb0bdd4d02c5744ae247902182e7583c50083e8"
                     }
                 },
                 {
@@ -1938,13 +1762,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpStanNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "5e06405aea826324065abf2c158dd3b7ce0372695be4abbcc253389892d7d6ee"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "4d1205c70026bd23ce1d94e40cb0bdd4d02c5744ae247902182e7583c50083e8"
                     }
                 },
                 {
@@ -1958,13 +1782,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpStanNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "5e06405aea826324065abf2c158dd3b7ce0372695be4abbcc253389892d7d6ee"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "4d1205c70026bd23ce1d94e40cb0bdd4d02c5744ae247902182e7583c50083e8"
                     }
                 },
                 {
@@ -1978,213 +1802,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/PhpStanNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "5e06405aea826324065abf2c158dd3b7ce0372695be4abbcc253389892d7d6ee"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Normalizer/PsalmNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "e41888b8292bd1a27c3b1832f3e2375573853c4442d8f4587c662e791cd1104a"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Normalizer/PsalmNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "e41888b8292bd1a27c3b1832f3e2375573853c4442d8f4587c662e791cd1104a"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Normalizer/PsalmNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "e41888b8292bd1a27c3b1832f3e2375573853c4442d8f4587c662e791cd1104a"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Normalizer/PsalmNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "e41888b8292bd1a27c3b1832f3e2375573853c4442d8f4587c662e791cd1104a"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Normalizer/PsalmNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "e41888b8292bd1a27c3b1832f3e2375573853c4442d8f4587c662e791cd1104a"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Normalizer/PyLintNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "d617a9ae63dec4d8fd641af091263685f88d508e5ad7c4165f858e34a9231e14"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Normalizer/PyLintNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "d617a9ae63dec4d8fd641af091263685f88d508e5ad7c4165f858e34a9231e14"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Normalizer/PyLintNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "d617a9ae63dec4d8fd641af091263685f88d508e5ad7c4165f858e34a9231e14"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Normalizer/PyLintNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "d617a9ae63dec4d8fd641af091263685f88d508e5ad7c4165f858e34a9231e14"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Normalizer/PyLintNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "d617a9ae63dec4d8fd641af091263685f88d508e5ad7c4165f858e34a9231e14"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "4d1205c70026bd23ce1d94e40cb0bdd4d02c5744ae247902182e7583c50083e8"
                     }
                 },
                 {
@@ -2198,13 +1822,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/SimpleXmlNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "8ce4e117960884be6ae759bef93c427081358b42143ea3c7f97922e02fcede6f"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "13c787e407733bb12fa2fd586056b3b7b9ff1272939801a1d028536433a4e0b7"
                     }
                 },
                 {
@@ -2218,13 +1842,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/SimpleXmlNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "8ce4e117960884be6ae759bef93c427081358b42143ea3c7f97922e02fcede6f"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "13c787e407733bb12fa2fd586056b3b7b9ff1272939801a1d028536433a4e0b7"
                     }
                 },
                 {
@@ -2238,13 +1862,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/SimpleXmlNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "8ce4e117960884be6ae759bef93c427081358b42143ea3c7f97922e02fcede6f"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "13c787e407733bb12fa2fd586056b3b7b9ff1272939801a1d028536433a4e0b7"
                     }
                 },
                 {
@@ -2258,13 +1882,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/SimpleXmlNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "8ce4e117960884be6ae759bef93c427081358b42143ea3c7f97922e02fcede6f"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "13c787e407733bb12fa2fd586056b3b7b9ff1272939801a1d028536433a4e0b7"
                     }
                 },
                 {
@@ -2278,13 +1902,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Normalizer/SimpleXmlNormalizer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "8ce4e117960884be6ae759bef93c427081358b42143ea3c7f97922e02fcede6f"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "13c787e407733bb12fa2fd586056b3b7b9ff1272939801a1d028536433a4e0b7"
                     }
                 },
                 {
@@ -2298,13 +1922,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/PhanConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "e31aae0cc7a446c7ea664e234b034087b77d4a0af046ae51df04b78cb95028b5"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "a9eaf527633d110994271212d25f3f3ca1b022e1b0d9789883012ddc38707e2e"
                     }
                 },
                 {
@@ -2318,13 +1942,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/PhanConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "e31aae0cc7a446c7ea664e234b034087b77d4a0af046ae51df04b78cb95028b5"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "a9eaf527633d110994271212d25f3f3ca1b022e1b0d9789883012ddc38707e2e"
                     }
                 },
                 {
@@ -2338,13 +1962,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/PhpCsConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "b43509a4dd9811a48e180be47de03bf5d277868d922e3704dd46384706319a16"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "55f11cdc371c5cf9463a25e2873638840dbf0aa3569728c47a29bd2ea8a0deb6"
                     }
                 },
                 {
@@ -2358,13 +1982,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/PhpCsConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "b43509a4dd9811a48e180be47de03bf5d277868d922e3704dd46384706319a16"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "55f11cdc371c5cf9463a25e2873638840dbf0aa3569728c47a29bd2ea8a0deb6"
                     }
                 },
                 {
@@ -2378,13 +2002,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/PhpCsConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "b43509a4dd9811a48e180be47de03bf5d277868d922e3704dd46384706319a16"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "55f11cdc371c5cf9463a25e2873638840dbf0aa3569728c47a29bd2ea8a0deb6"
                     }
                 },
                 {
@@ -2398,13 +2022,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/PhpCsFixerConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "bd0752af63c43679eb5cc10b503d20872a9537fafe7702af60b5ebc5d3fa021c"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "d3953600100fa7867c9e0826ed9134a907056145d48439fac28158124a484627"
                     }
                 },
                 {
@@ -2418,53 +2042,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/PhpCsFixerConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "bd0752af63c43679eb5cc10b503d20872a9537fafe7702af60b5ebc5d3fa021c"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/PhpInsightsConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "01f2031b5a977dee5b3f94eb7f97faa36f0d3c6ec2c4d3868cb21e95a12884d8"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/PhpInsightsConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "01f2031b5a977dee5b3f94eb7f97faa36f0d3c6ec2c4d3868cb21e95a12884d8"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "d3953600100fa7867c9e0826ed9134a907056145d48439fac28158124a484627"
                     }
                 },
                 {
@@ -2478,13 +2062,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/PhpLintConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "7d06b87e85db65c1afc53a38fc99735c1e06541a5d623c51309e8d7b9a493ab8"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "24d2edf46a392ac79dc4a8485724aebf13324e347e5a8bc414970f5ee6f0fb22"
                     }
                 },
                 {
@@ -2498,13 +2082,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/PhpLintConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "7d06b87e85db65c1afc53a38fc99735c1e06541a5d623c51309e8d7b9a493ab8"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "24d2edf46a392ac79dc4a8485724aebf13324e347e5a8bc414970f5ee6f0fb22"
                     }
                 },
                 {
@@ -2518,13 +2102,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/PhpLintConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "7d06b87e85db65c1afc53a38fc99735c1e06541a5d623c51309e8d7b9a493ab8"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "24d2edf46a392ac79dc4a8485724aebf13324e347e5a8bc414970f5ee6f0fb22"
                     }
                 },
                 {
@@ -2538,13 +2122,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/PhpMdConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "e8e268a023dd8d42f885a920a3db7fc902061f5c87b8df0a4f2f27d04a0bbb4a"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "301d9638297bacc9d63c551c95127a7408873d27ec01fbbc03d4dcbf2ea85a30"
                     }
                 },
                 {
@@ -2558,53 +2142,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/PhpMdConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "e8e268a023dd8d42f885a920a3db7fc902061f5c87b8df0a4f2f27d04a0bbb4a"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/PhpMndConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "8117305dba244b84c0debfa051eae004cd8d76b64e2892cb6962e6f9322743de"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/PhpMndConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "8117305dba244b84c0debfa051eae004cd8d76b64e2892cb6962e6f9322743de"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "301d9638297bacc9d63c551c95127a7408873d27ec01fbbc03d4dcbf2ea85a30"
                     }
                 },
                 {
@@ -2618,13 +2162,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/PhpStanConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "8c2cc9b6af5a7b358cbb95005caffda537ab1c426220a016baaeb2421fee2541"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "00df57c99e89a6809ef4ff3fb21d70dc9187739b30803c26cad29fd3c9ad2f5c"
                     }
                 },
                 {
@@ -2638,13 +2182,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/PhpStanConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "8c2cc9b6af5a7b358cbb95005caffda537ab1c426220a016baaeb2421fee2541"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "00df57c99e89a6809ef4ff3fb21d70dc9187739b30803c26cad29fd3c9ad2f5c"
                     }
                 },
                 {
@@ -2658,73 +2202,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/PhpStanConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "8c2cc9b6af5a7b358cbb95005caffda537ab1c426220a016baaeb2421fee2541"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\ClassNotation\\ClassAttributesSeparationFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\ClassNotation\\ClassAttributesSeparationFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/PsalmConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\ClassNotation\\ClassAttributesSeparationFixer": "344976ae173eac260a06be9eb213768b069e3f3a4b6a3ca99d3ef89df0429333"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/PsalmConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "344976ae173eac260a06be9eb213768b069e3f3a4b6a3ca99d3ef89df0429333"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/PsalmConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "344976ae173eac260a06be9eb213768b069e3f3a4b6a3ca99d3ef89df0429333"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "00df57c99e89a6809ef4ff3fb21d70dc9187739b30803c26cad29fd3c9ad2f5c"
                     }
                 },
                 {
@@ -2738,7 +2222,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Reporter/AbstractReporter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -2758,7 +2242,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Reporter/AbstractReporter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -2778,7 +2262,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Reporter/AbstractReporter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -2798,7 +2282,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Reporter/PhpCsReport.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -2818,7 +2302,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Reporter/PhpCsReport.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -2838,7 +2322,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Reporter/PhpCsReport.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -2858,7 +2342,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Reporter/PhpCsReport.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -2878,153 +2362,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Reporter/PhpCsReport.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
                         "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "f1208000b0c7a7b4fe82cba5a6886762266dce4c9552db0f05d4b8a38b4627ef"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\ClassNotation\\ClassAttributesSeparationFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\ClassNotation\\ClassAttributesSeparationFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Reporter/PhpInsightsFormatter.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\ClassNotation\\ClassAttributesSeparationFixer": "56371696e7de0815904dd28b7ecd6fff971fd1d794577c977f35e80c49424998"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\ControlStructure\\TrailingCommaInMultilineFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\ControlStructure\\TrailingCommaInMultilineFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Reporter/PhpInsightsFormatter.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\ControlStructure\\TrailingCommaInMultilineFixer": "56371696e7de0815904dd28b7ecd6fff971fd1d794577c977f35e80c49424998"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Reporter/PhpInsightsFormatter.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "56371696e7de0815904dd28b7ecd6fff971fd1d794577c977f35e80c49424998"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Reporter/PhpInsightsFormatter.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "56371696e7de0815904dd28b7ecd6fff971fd1d794577c977f35e80c49424998"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\Whitespace\\ArrayIndentationFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\ArrayIndentationFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Reporter/PhpInsightsFormatter.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\ArrayIndentationFixer": "56371696e7de0815904dd28b7ecd6fff971fd1d794577c977f35e80c49424998"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Reporter/PhpInsightsFormatter.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "56371696e7de0815904dd28b7ecd6fff971fd1d794577c977f35e80c49424998"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: Symplify\\CodingStandard\\Fixer\\ArrayNotation\\ArrayOpenerAndCloserNewlineFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.Symplify\\CodingStandard\\Fixer\\ArrayNotation\\ArrayOpenerAndCloserNewlineFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Reporter/PhpInsightsFormatter.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.Symplify\\CodingStandard\\Fixer\\ArrayNotation\\ArrayOpenerAndCloserNewlineFixer": "56371696e7de0815904dd28b7ecd6fff971fd1d794577c977f35e80c49424998"
                     }
                 },
                 {
@@ -3038,7 +2382,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Reporter/PhpLintReport.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -3058,7 +2402,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Reporter/PhpLintReport.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -3078,7 +2422,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Reporter/PhpLintReport.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -3098,7 +2442,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Reporter/PhpLintReport.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -3118,7 +2462,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Reporter/PhpLintReport.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -3138,7 +2482,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Reporter/PhpLintReport.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -3158,13 +2502,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Reporter/PhpMdRenderer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\ClassNotation\\ClassAttributesSeparationFixer": "101c206070781d5fab6cebc48ac98679e6c293152dfbe133443dc7380edfe972"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\ClassNotation\\ClassAttributesSeparationFixer": "af7968c3a23944675622d646d4492d39be53ba34da0ef72990a398847d874461"
                     }
                 },
                 {
@@ -3178,13 +2522,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Reporter/PhpMdRenderer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "101c206070781d5fab6cebc48ac98679e6c293152dfbe133443dc7380edfe972"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "af7968c3a23944675622d646d4492d39be53ba34da0ef72990a398847d874461"
                     }
                 },
                 {
@@ -3198,13 +2542,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Reporter/PhpMdRenderer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "101c206070781d5fab6cebc48ac98679e6c293152dfbe133443dc7380edfe972"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "af7968c3a23944675622d646d4492d39be53ba34da0ef72990a398847d874461"
                     }
                 },
                 {
@@ -3218,13 +2562,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Reporter/PhpMdRenderer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Phpdoc\\NoEmptyPhpdocFixer": "101c206070781d5fab6cebc48ac98679e6c293152dfbe133443dc7380edfe972"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Phpdoc\\NoEmptyPhpdocFixer": "af7968c3a23944675622d646d4492d39be53ba34da0ef72990a398847d874461"
                     }
                 },
                 {
@@ -3238,13 +2582,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Reporter/PhpMdRenderer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Phpdoc\\NoSuperfluousPhpdocTagsFixer": "101c206070781d5fab6cebc48ac98679e6c293152dfbe133443dc7380edfe972"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Phpdoc\\NoSuperfluousPhpdocTagsFixer": "af7968c3a23944675622d646d4492d39be53ba34da0ef72990a398847d874461"
                     }
                 },
                 {
@@ -3258,13 +2602,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Reporter/PhpMdRenderer.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "101c206070781d5fab6cebc48ac98679e6c293152dfbe133443dc7380edfe972"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "af7968c3a23944675622d646d4492d39be53ba34da0ef72990a398847d874461"
                     }
                 },
                 {
@@ -3278,7 +2622,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Reporter/PhpStanFormatter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -3298,7 +2642,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Reporter/PhpStanFormatter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -3318,7 +2662,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Reporter/PhpStanFormatter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -3338,7 +2682,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Reporter/PhpStanFormatter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -3358,7 +2702,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Reporter/PhpStanFormatter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -3378,7 +2722,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Reporter/PhpStanFormatter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -3398,13 +2742,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Source/AbstractSource.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\ClassNotation\\ClassAttributesSeparationFixer": "884e32520c8016f825e9069ab7bb4da9619c8a7680cc53a44318d2b0dfd7fb6c"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\ClassNotation\\ClassAttributesSeparationFixer": "f0372f02651738e6c1088989f2be433bac791caf37ff27c8682f6cd69644726c"
                     }
                 },
                 {
@@ -3418,13 +2762,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Source/AbstractSource.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "884e32520c8016f825e9069ab7bb4da9619c8a7680cc53a44318d2b0dfd7fb6c"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "f0372f02651738e6c1088989f2be433bac791caf37ff27c8682f6cd69644726c"
                     }
                 },
                 {
@@ -3438,13 +2782,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Source/AbstractSource.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "884e32520c8016f825e9069ab7bb4da9619c8a7680cc53a44318d2b0dfd7fb6c"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "f0372f02651738e6c1088989f2be433bac791caf37ff27c8682f6cd69644726c"
                     }
                 },
                 {
@@ -3458,13 +2802,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Source/AbstractSource.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "884e32520c8016f825e9069ab7bb4da9619c8a7680cc53a44318d2b0dfd7fb6c"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "f0372f02651738e6c1088989f2be433bac791caf37ff27c8682f6cd69644726c"
                     }
                 },
                 {
@@ -3478,13 +2822,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Source/AbstractSource.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "884e32520c8016f825e9069ab7bb4da9619c8a7680cc53a44318d2b0dfd7fb6c"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "f0372f02651738e6c1088989f2be433bac791caf37ff27c8682f6cd69644726c"
                     }
                 },
                 {
@@ -3498,13 +2842,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Source/AbstractSource.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Phpdoc\\NoEmptyPhpdocFixer": "884e32520c8016f825e9069ab7bb4da9619c8a7680cc53a44318d2b0dfd7fb6c"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Phpdoc\\NoEmptyPhpdocFixer": "f0372f02651738e6c1088989f2be433bac791caf37ff27c8682f6cd69644726c"
                     }
                 },
                 {
@@ -3518,13 +2862,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Source/AbstractSource.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Phpdoc\\NoSuperfluousPhpdocTagsFixer": "884e32520c8016f825e9069ab7bb4da9619c8a7680cc53a44318d2b0dfd7fb6c"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Phpdoc\\NoSuperfluousPhpdocTagsFixer": "f0372f02651738e6c1088989f2be433bac791caf37ff27c8682f6cd69644726c"
                     }
                 },
                 {
@@ -3538,13 +2882,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Source/AbstractSource.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Phpdoc\\PhpdocVarWithoutNameFixer": "884e32520c8016f825e9069ab7bb4da9619c8a7680cc53a44318d2b0dfd7fb6c"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Phpdoc\\PhpdocVarWithoutNameFixer": "f0372f02651738e6c1088989f2be433bac791caf37ff27c8682f6cd69644726c"
                     }
                 },
                 {
@@ -3558,13 +2902,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Source/AbstractSource.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "884e32520c8016f825e9069ab7bb4da9619c8a7680cc53a44318d2b0dfd7fb6c"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "f0372f02651738e6c1088989f2be433bac791caf37ff27c8682f6cd69644726c"
                     }
                 },
                 {
@@ -3578,13 +2922,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Source/EcsSource.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "f7aa6485e9bf6253f9ecae0947e7cb919126ed59e37064374741a43a79ac9469"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "15eecef58dcdbc68c15e77b1810bd3300eb77d94a86433272e5910c3494fbe6c"
                     }
                 },
                 {
@@ -3598,13 +2942,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Source/EcsSource.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "f7aa6485e9bf6253f9ecae0947e7cb919126ed59e37064374741a43a79ac9469"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "15eecef58dcdbc68c15e77b1810bd3300eb77d94a86433272e5910c3494fbe6c"
                     }
                 },
                 {
@@ -3618,7 +2962,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Source/PhanSource.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -3638,7 +2982,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Source/PhanSource.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -3658,7 +3002,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Source/PhpCsFixerSource.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -3678,7 +3022,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Source/PhpCsFixerSource.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -3698,7 +3042,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Source/PhpCsSource.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -3718,7 +3062,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Source/PhpCsSource.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -3738,7 +3082,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Source/PhpCsSource.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -3758,7 +3102,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Source/PhpCsSource.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -3778,7 +3122,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Source/PhpCsSource.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -3797,48 +3141,8 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "src/Converter/Source/PhpInsightsSource.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "f16bcadbeccf458244501ff4ed6d2f9f189d7e5d75d825c03cba4effc8fed809"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Source/PhpInsightsSource.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "f16bcadbeccf458244501ff4ed6d2f9f189d7e5d75d825c03cba4effc8fed809"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
                                     "uri": "src/Converter/Source/PhpLintSource.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -3858,7 +3162,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Source/PhpLintSource.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -3878,7 +3182,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Source/PhpMdSource.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -3898,113 +3202,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Source/PhpMdSource.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
                         "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "51c1ce99ad26ba1a790b96324e9e804fb8619ad04fa98fe52f20d0cd334c041d"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Source/PhpMndSource.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "9311f8c352ae318979abedc972c3dfb098a0a0b17ccc50582b1afc5f19533887"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Source/PhpMndSource.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "9311f8c352ae318979abedc972c3dfb098a0a0b17ccc50582b1afc5f19533887"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Source/PhpMndSource.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Operator\\NotOperatorWithSuccessorSpaceFixer": "9311f8c352ae318979abedc972c3dfb098a0a0b17ccc50582b1afc5f19533887"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Source/PhpMndSource.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "9311f8c352ae318979abedc972c3dfb098a0a0b17ccc50582b1afc5f19533887"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Source/PhpMndSource.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "9311f8c352ae318979abedc972c3dfb098a0a0b17ccc50582b1afc5f19533887"
                     }
                 },
                 {
@@ -4018,7 +3222,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Source/PhpStanSource.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -4038,7 +3242,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Converter/Source/PhpStanSource.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -4057,54 +3261,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "src/Converter/Source/PsalmSource.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "d2ff2e7ff8fa260b916ffea8b31abae9e9da2e858444aae892ea94213bd0f726"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "src/Converter/Source/PsalmSource.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "d2ff2e7ff8fa260b916ffea8b31abae9e9da2e858444aae892ea94213bd0f726"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
                                     "uri": "src/Factory/ConverterFactory.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "2e6374c4ccbc97704a767bdf958bf90b1c041662b4376b3e28eab439e5151e18"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "810e0e635bec67861e05f6bcad155a286580ed3b43b041c207b34b30b459bccb"
                     }
                 },
                 {
@@ -4118,13 +3282,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Factory/ConverterFactory.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "2e6374c4ccbc97704a767bdf958bf90b1c041662b4376b3e28eab439e5151e18"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "810e0e635bec67861e05f6bcad155a286580ed3b43b041c207b34b30b459bccb"
                     }
                 },
                 {
@@ -4138,13 +3302,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Factory/ConverterFactory.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "2e6374c4ccbc97704a767bdf958bf90b1c041662b4376b3e28eab439e5151e18"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "810e0e635bec67861e05f6bcad155a286580ed3b43b041c207b34b30b459bccb"
                     }
                 },
                 {
@@ -4158,13 +3322,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Factory/SourceFactory.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "47c367f05297dfb849d904b6c09271df8475a631cc3011f62f0a72de76a8b0a3"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "5e993e2d75a554872ad1b2a96847e954c740c16d10da9314b0c70b1293d68b2f"
                     }
                 },
                 {
@@ -4178,13 +3342,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Factory/SourceFactory.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "47c367f05297dfb849d904b6c09271df8475a631cc3011f62f0a72de76a8b0a3"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "5e993e2d75a554872ad1b2a96847e954c740c16d10da9314b0c70b1293d68b2f"
                     }
                 },
                 {
@@ -4198,13 +3362,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "src/Factory/SourceFactory.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "47c367f05297dfb849d904b6c09271df8475a631cc3011f62f0a72de76a8b0a3"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "5e993e2d75a554872ad1b2a96847e954c740c16d10da9314b0c70b1293d68b2f"
                     }
                 },
                 {
@@ -4218,13 +3382,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "examples/phpcs/MyPhpCsReport.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "85aab34de49103be62e1cac434abdfc79d2e34d4a4ac238654346ab9482df6c5"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "7e5bbc3604a9e8172d820e91026c213195bbb7987a2a1a7706e3d44f30dc49c5"
                     }
                 },
                 {
@@ -4238,13 +3402,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "examples/phpcs/MyPhpCsReport.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "85aab34de49103be62e1cac434abdfc79d2e34d4a4ac238654346ab9482df6c5"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "7e5bbc3604a9e8172d820e91026c213195bbb7987a2a1a7706e3d44f30dc49c5"
                     }
                 },
                 {
@@ -4258,13 +3422,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "examples/phpcs/MyReportConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "0acf85eec8b087938e60c1deb8f142ea53c0e0837f090ca8b949f3208fee83f7"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\NamespaceNotation\\SingleBlankLineBeforeNamespaceFixer": "9e7ef83f7659d58b62383d234de4381a9e7f22092ac2603d01e277a74f0a20bb"
                     }
                 },
                 {
@@ -4278,173 +3442,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "examples/phpcs/MyReportConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "0acf85eec8b087938e60c1deb8f142ea53c0e0837f090ca8b949f3208fee83f7"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "examples/phpinsights/MyInsightsFormatter.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "79831f890560e4d70c5af42a3ec0447711426f30dad4f9dfbee2ff7be31af654"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "examples/phpinsights/MyInsightsFormatter.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "79831f890560e4d70c5af42a3ec0447711426f30dad4f9dfbee2ff7be31af654"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\ClassNotation\\ClassAttributesSeparationFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\ClassNotation\\ClassAttributesSeparationFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "examples/phpmnd/MyPhpMndPrinter.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\ClassNotation\\ClassAttributesSeparationFixer": "0d2c885d0bc7743882428d17c2da5db34fae6e1ed55a4ece177ac2ccd13cd6bf"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "examples/phpmnd/MyPhpMndPrinter.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Import\\OrderedImportsFixer": "0d2c885d0bc7743882428d17c2da5db34fae6e1ed55a4ece177ac2ccd13cd6bf"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "examples/phpmnd/MyPhpMndPrinter.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "0d2c885d0bc7743882428d17c2da5db34fae6e1ed55a4ece177ac2ccd13cd6bf"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "examples/phpmnd/MyPhpMndPrinter.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "0d2c885d0bc7743882428d17c2da5db34fae6e1ed55a4ece177ac2ccd13cd6bf"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "examples/phpmnd/MyReportConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "cf8e7078177aec43bf13e62409b07946fcc6de5d9f1fe07d97cae5007b1cb7b0"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Found violation(s) of type: PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer"
-                    },
-                    "ruleId": "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "examples/phpmnd/MyReportConverter.php",
-                                    "uriBaseId": "WORKINGDIR"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\Whitespace\\NoExtraBlankLinesFixer": "cf8e7078177aec43bf13e62409b07946fcc6de5d9f1fe07d97cae5007b1cb7b0"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "9e7ef83f7659d58b62383d234de4381a9e7f22092ac2603d01e277a74f0a20bb"
                     }
                 },
                 {
@@ -4458,13 +3462,13 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "examples/phpstan/MySarifFormatter.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "c8b51a549aba3802b346346d1d5a9c1ddafe7089b0d14247ffbdb423ee499bd4"
+                        "EasyCodingStandard.PhpCsFixer\\Fixer\\PhpTag\\BlankLineAfterOpeningTagFixer": "55a17daffcea39e095554a5190de572d109526a17e1f6efc4871a15719e93b64"
                     }
                 },
                 {
@@ -4478,7 +3482,7 @@
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "examples/phpstan/bootstrap.php",
-                                    "uriBaseId": "WORKINGDIR"
+                                    "uriBaseId": "SOURCE_ROOT"
                                 }
                             }
                         }
@@ -4489,7 +3493,7 @@
                 }
             ],
             "automationDetails": {
-                "id": "Daily run 2024-07-09T15:12:14+00:00"
+                "id": "Daily run 2026-04-28T06:32:25+00:00"
             }
         }
     ]

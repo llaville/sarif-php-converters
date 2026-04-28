@@ -27,7 +27,7 @@ final class EcsHelpUriCaseConverter implements HelpUriCaseConverterInterface
 {
     public const URI_PATTERN_PHPCS = 'https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Customisable-Sniff-Properties#%s';
     public const URI_PATTERN_PHPCS_FIXER = 'https://cs.symfony.com/doc/rules/%s/%s.html';
-    public const URI_PATTERN_SYMPLIFY = 'https://github.com/symplify/coding-standard/blob/main/docs/rules_overview.md#%s';
+    public const URI_PATTERN_SYMPLIFY = 'https://github.com/symplify/coding-standard#%s';
     public const URI_PATTERN_SLEVOMAT = 'https://github.com/slevomat/coding-standard/blob/master/doc/%s.md#%s-';
 
     private CaseConverterInterface $caseConverter;
