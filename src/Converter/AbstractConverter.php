@@ -228,35 +228,20 @@ abstract class AbstractConverter implements ConverterInterface
                 $rule->setName($ruleDef['name']);
             }
             if (!empty($ruleDef['shortDescription'])) {
-                $description = new Definition\MultiformatMessageString();
-                $description->setText($ruleDef['shortDescription']);
+                $description = $this->multiformatMessageString($ruleDef['shortDescription']);
                 $rule->setShortDescription($description);
             }
             if (!empty($ruleDef['fullDescription'])) {
-                $description = new Definition\MultiformatMessageString();
-                $description->setText($ruleDef['fullDescription']);
+                $description = $this->multiformatMessageString($ruleDef['fullDescription']);
                 $rule->setFullDescription($description);
             }
             if (!empty($ruleDef['messageStrings'])) {
                 foreach ($ruleDef['messageStrings'] as $key => $value) {
-                    $messageString = new Definition\MultiformatMessageString();
-                    $messageString->setText($value);
-                    $rule->addMessageStrings([$key => $messageString]);
+                    $rule->addMessageStrings([$key => $this->multiformatMessageString($value)]);
                 }
             }
             if (!empty($ruleDef['help'])) {
-                $markdown = '';
-                if (is_array($ruleDef['help'])) {
-                    $text = $ruleDef['help']['text'];
-                    $markdown = $ruleDef['help']['markdown'] ?? $markdown;
-                } else {
-                    $text = $ruleDef['help'];
-                }
-                $help = new Definition\MultiformatMessageString();
-                $help->setText($text);
-                if (!empty($markdown)) {
-                    $help->setMarkdown($markdown);
-                }
+                $help = $this->multiformatMessageString($ruleDef['help']);
                 $rule->setHelp($help);
             }
             if (!empty($ruleDef['helpUri'])) {
@@ -300,8 +285,9 @@ abstract class AbstractConverter implements ConverterInterface
                 $fingerprintId = $error['Result.fingerprint'] ?? $ruleId;
 
                 $text = $error['Result.message'] ?? '';
-                $message = new Definition\Message();
-                $message->setText($text);
+                $markdown = $error['Result.message.markdown'] ?? '';
+
+                $message = $this->message(['text' => (string) $text, 'markdown' => (string) $markdown]);
                 if (!empty($error['Result.message.id'])) {
                     $message->setId($error['Result.message.id']);
                 }
@@ -644,5 +630,46 @@ abstract class AbstractConverter implements ConverterInterface
         foreach ($this->errors as $filename => $errors) {
             yield $filename => $errors;
         }
+    }
+
+    /**
+     * @param string|array{text?:string, markdown?:string} $def
+     * @since Release 1.6.0
+     */
+    protected function multiformatMessageString(string|array $def): Definition\MultiformatMessageString
+    {
+        $message = new Definition\MultiformatMessageString();
+        return $this->multiformatMessage($def, $message);
+    }
+
+    /**
+     * @param string|array{text?:string, markdown?:string} $def
+     * @since Release 1.6.0
+     */
+    protected function message(string|array $def): Definition\Message
+    {
+        $message = new Definition\Message();
+        return $this->multiformatMessage($def, $message);
+    }
+
+    /**
+     * @param string|array{text?:string, markdown?:string} $def
+     * @since Release 1.6.0
+     */
+    private function multiformatMessage(
+        string|array $def,
+        Definition\MultiformatMessageString|Definition\Message $message
+    ): object {
+        if (is_array($def)) {
+            $text = $def['text'] ?? '';
+            $markdown = $def['markdown'] ?? '';
+            if (!empty($markdown)) {
+                $message->setMarkdown($markdown);
+            }
+        } else {
+            $text = $def;
+        }
+        $message->setText($text);
+        return $message;
     }
 }
