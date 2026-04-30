@@ -257,6 +257,11 @@ abstract class AbstractConverter implements ConverterInterface
                 $defaultConfiguration->setEnabled($ruleDef['defaultConfiguration']['enabled'] ?? true);
                 $defaultConfiguration->setLevel($ruleDef['defaultConfiguration']['level'] ?? 'warning');
                 $defaultConfiguration->setRank($ruleDef['defaultConfiguration']['rank'] ?? -1);
+
+                $parameters = new Definition\PropertyBag();
+                $parameters->addProperties($ruleDef['defaultConfiguration']['parameters'] ?? []);
+                $defaultConfiguration->setParameters($parameters);
+
                 $rule->setDefaultConfiguration($defaultConfiguration);
             }
 
