@@ -68,6 +68,7 @@ abstract class AbstractConverter implements ConverterInterface
     protected string $toolFullDescription;
     protected string $toolInformationUri;
     protected string $toolComposerPackage;
+    protected ?string $toolVersion = null;
     protected string $toolSemanticVersion;
     protected string $converterComposerPackage;
 
@@ -148,6 +149,9 @@ abstract class AbstractConverter implements ConverterInterface
         if (!empty($this->toolComposerPackage)) {
             $this->toolSemanticVersion = $this->getToolVersion($this->toolComposerPackage);
         }
+        if (empty($this->toolVersion)) {
+            $this->toolVersion = $this->toolSemanticVersion;
+        }
 
         // set option to avoid additional suggestion SARIF2010
         $this->includeCodeSnippets = $options['include_code_snippets'] ?? true;
@@ -178,6 +182,7 @@ abstract class AbstractConverter implements ConverterInterface
         if (!empty($this->toolSemanticVersion)) {
             $driver->setSemanticVersion($this->toolSemanticVersion);
         }
+        $driver->setVersion($this->toolVersion);
 
         if (!empty($this->toolFullName)) {
             $driver->setFullName($this->toolFullName);
