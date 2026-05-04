@@ -55,13 +55,20 @@ final class SarifNormalizer extends AbstractNormalizer
         $rules = [];
 
         foreach ($collected['runs'] as $run) {
-            foreach ($run['tool']['driver']['rules'] as $rule) {
+            foreach ($run['tool']['driver']['rules'] ?? [] as $rule) {
                 $ruleId = $rule['id'];
                 unset($rule['id']);
                 $rule['shortDescription'] = $rule['shortDescription']['text'];
                 foreach ($rule['messageStrings'] as $key => $values) {
                     $rule['messageStrings'][$key] = $this->sarif2015($values['text']);
                 }
+
+                if (str_starts_with($rule['helpUri'], '#')) {
+                    // some tools like PHPMD 3.x may produced invalid URI (with only hashtag),
+                    // so we remove helpUri entry
+                    unset($rule['helpUri']);
+                }
+
                 $rules[$ruleId] = $rule;
             }
 
@@ -75,11 +82,15 @@ final class SarifNormalizer extends AbstractNormalizer
                     'ReportingDescriptor.id' => $result['ruleId'],
 
                     'Result.message' => $result['message']['text'],
-                    'Result.message.id' => $result['message']['id'],
-                    'Result.message.arguments' => $result['message']['arguments'],
+                    'Result.message.markdown' => $result['message']['markdown'] ?? null,
+                    'Result.message.id' => $result['message']['id'] ?? null,
+                    'Result.message.arguments' => $result['message']['arguments'] ?? null,
 
-                    'Region.startLine' => $physicalLocation['region']['startLine'],
-                    'Region.endLine' => $physicalLocation['region']['endLine'],
+                    'Region.startLine' => $physicalLocation['region']['startLine'] ?? null,
+                    'Region.endLine' => $physicalLocation['region']['endLine'] ?? null,
+
+                    'Region.startColumn' => $physicalLocation['region']['startColumn'] ?? null,
+                    'Region.endColumn' => $physicalLocation['region']['endColumn'] ?? null,
                 ];
                 $errors[$filename][] = $attributes;
             }
