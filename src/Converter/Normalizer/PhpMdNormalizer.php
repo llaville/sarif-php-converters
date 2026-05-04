@@ -157,12 +157,15 @@ final class PhpMdNormalizer extends AbstractNormalizer
                 'help' => [
                     'text' => $helpText,
                 ],
-                'helpUri' => $rule->getExternalInfoUrl(),
                 'properties' => [
                     'ruleSet' => $rule->getRuleSetName(),
                     'priority' => $rule->getPriority(),
                 ]
             ];
+
+            if ($rule->getExternalInfoUrl() !== '#') {
+                $rules[$ruleRef]['helpUri'] = $rule->getExternalInfoUrl();
+            }
 
             $examples = $rule->getExamples();
             if (!empty($examples)) {
