@@ -15,7 +15,7 @@ use Iterator;
 use function end;
 use function explode;
 use function get_class;
-use function rtrim;
+use function str_replace;
 
 /**
  * @author Laurent Laville
@@ -48,7 +48,7 @@ abstract class AbstractSource implements SourceInterface
     public function getName(): string
     {
         $names = explode("\\", get_class($this));
-        return rtrim(end($names), 'Source');
+        return str_replace('Source', '', end($names));
     }
 
     /**
