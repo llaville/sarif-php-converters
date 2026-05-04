@@ -77,7 +77,7 @@ Alternative usage
 ### :material-numeric-3-box: Build the sarif output report directly via the default `Bartlett\Sarif\Converter\Reporter\PhpMdRenderer`
 
 ```shell
-vendor/bin/phpmd /path/to/source '\Bartlett\Sarif\Converter\Reporter\PhpMdRenderer' ruleset --bootstrap vendor/autoload.php --report-file=sarif.json
+vendor/bin/phpmd analyze /path/to/source --format='\Bartlett\Sarif\Converter\Reporter\PhpMdRenderer' --bootstrap=autoload.php > sarif.json
 ```
 
 ## Learn more
