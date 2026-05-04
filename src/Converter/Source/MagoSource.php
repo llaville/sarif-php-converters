@@ -37,6 +37,7 @@ final class MagoSource extends AbstractSource
 
     public function getRules(): Iterator
     {
+        // @phpstan-ignore method.notFound
         $rules = $this->helpUriCaseConverter->getRules();
 
         foreach (parent::getRules() as $ruleId => $ruleDef) {

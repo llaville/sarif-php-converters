@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD013 -->
+<!-- markdownlint-disable MD013 MD060 -->
 # Converter Reference
 
 * column `Console Tool` indicates when the PHP linter does not support natively reporting, if the `convert` command is required

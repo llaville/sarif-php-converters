@@ -91,4 +91,3 @@ For example:
 [example-folder]: https://github.com/llaville/sarif-php-converters/blob/1.6/examples/mago/
 [mago]: https://github.com/carthage-software/mago
 [sarif-web-component]: https://github.com/Microsoft/sarif-web-component
-[general-availability]: https://en.wikipedia.org/wiki/Software_release_life_cycle

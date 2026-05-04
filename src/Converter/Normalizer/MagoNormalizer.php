@@ -43,7 +43,10 @@ final class MagoNormalizer extends AbstractNormalizer
     }
 
     /**
-     * @inheritDoc
+     * @param string $data
+     * @param array<string, mixed> $context Options available to the normalizer
+     * @param array{}|array<string, string> $mapping From-To convert's mapping
+     * @return array{files: mixed, errors: mixed, rules: mixed}
      */
     protected function fromGitLab($data, array $context, array $mapping = []): array
     {
@@ -60,7 +63,13 @@ final class MagoNormalizer extends AbstractNormalizer
         $rules = [];
 
         foreach ($collected as $file) {
-            $attributes = [];
+            $attributes = [
+                'Region.startLine' => $file['location']['positions']['begin']['line'] ?? null,
+                'Region.endLine' => $file['location']['positions']['end']['line'] ?? null,
+
+                'Region.startColumn' => $file['location']['positions']['begin']['column'] ?? null,
+                'Region.endColumn' => $file['location']['positions']['end']['column'] ?? null,
+            ];
 
             $filename = $file['location']['path'];
             $files[] = $filename;
@@ -89,9 +98,7 @@ final class MagoNormalizer extends AbstractNormalizer
             // provide same information that the 'lint --reporting-format code-count' command
             $rules[$ruleId]['properties']['frequency'] += 1;
 
-            if (!empty($attributes)) {
-                $errors[$filename][] = $attributes;
-            }
+            $errors[$filename][] = $attributes;
         }
 
         return [

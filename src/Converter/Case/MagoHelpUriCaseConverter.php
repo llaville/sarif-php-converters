@@ -33,6 +33,9 @@ final class MagoHelpUriCaseConverter implements HelpUriCaseConverterInterface
         return sprintf(self::URI_PATTERN, strtolower($checkerClass));
     }
 
+    /**
+     * @return array{}|array<string, array<string, mixed>>
+     */
     public function getRules(): array
     {
         $output = null;

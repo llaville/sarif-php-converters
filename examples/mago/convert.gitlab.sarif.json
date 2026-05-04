@@ -508,9 +508,9 @@
             "versionControlProvenance": [
                 {
                     "repositoryUri": "https://github.com/llaville/sarif-php-converters.git",
-                    "revisionId": "4490723f892e387d825ba380656268a8caae9a38",
+                    "revisionId": "f2512937cbecc10d73e0bd4a6a4adf952fab46c0",
                     "branch": "1.6",
-                    "revisionTag": "1.5.0-21-g4490723",
+                    "revisionTag": "1.5.0-22-gf251293",
                     "mappedTo": {
                         "uriBaseId": "SOURCE_ROOT"
                     },
@@ -546,8 +546,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Source/EcsSource.php",
+                                    "uri": "src/Converter/Source/EcsSource.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 27,
+                                    "startColumn": 13,
+                                    "endLine": 27,
+                                    "endColumn": 32
                                 }
                             }
                         }
@@ -566,8 +572,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Source/EcsSource.php",
+                                    "uri": "src/Converter/Source/EcsSource.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 40,
+                                    "startColumn": 17,
+                                    "endLine": 40,
+                                    "endColumn": 43
                                 }
                             }
                         }
@@ -586,14 +598,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Case/MagoHelpUriCaseConverter.php",
+                                    "uri": "src/Converter/Case/MagoHelpUriCaseConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 29,
+                                    "startColumn": 13,
+                                    "endLine": 29,
+                                    "endColumn": 33
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "b19123d226481ce6156b7b4c849ef7df5545d243ff5e3351360773af3df8bc71"
+                        "no-empty": "d91e9271a56e4d0bdf2f9a087518b3c24d44c04e0fd0b57e79db2b8056230948"
                     }
                 },
                 {
@@ -606,8 +624,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/PhpCsConverter.php",
+                                    "uri": "src/Converter/PhpCsConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 43,
+                                    "startColumn": 22,
+                                    "endLine": 43,
+                                    "endColumn": 30
                                 }
                             }
                         }
@@ -626,8 +650,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/PhpCsConverter.php",
+                                    "uri": "src/Converter/PhpCsConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 46,
+                                    "startColumn": 13,
+                                    "endLine": 54,
+                                    "endColumn": 14
                                 }
                             }
                         }
@@ -646,8 +676,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Source/PhpCsFixerSource.php",
+                                    "uri": "src/Converter/Source/PhpCsFixerSource.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 20,
+                                    "startColumn": 13,
+                                    "endLine": 20,
+                                    "endColumn": 32
                                 }
                             }
                         }
@@ -666,8 +702,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/PhpCsNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/PhpCsNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 27,
+                                    "startColumn": 7,
+                                    "endLine": 27,
+                                    "endColumn": 28
                                 }
                             }
                         }
@@ -686,8 +728,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/PhpCsNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/PhpCsNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 93,
+                                    "startColumn": 26,
+                                    "endLine": 93,
+                                    "endColumn": 57
                                 }
                             }
                         }
@@ -706,8 +754,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/PhpCsNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/PhpCsNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 133,
+                                    "startColumn": 22,
+                                    "endLine": 133,
+                                    "endColumn": 55
                                 }
                             }
                         }
@@ -726,8 +780,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Source/PhpLintSource.php",
+                                    "uri": "src/Converter/Source/PhpLintSource.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 20,
+                                    "startColumn": 13,
+                                    "endLine": 20,
+                                    "endColumn": 32
                                 }
                             }
                         }
@@ -746,8 +806,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Source/RectorSource.php",
+                                    "uri": "src/Converter/Source/RectorSource.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 20,
+                                    "startColumn": 13,
+                                    "endLine": 20,
+                                    "endColumn": 32
                                 }
                             }
                         }
@@ -766,8 +832,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Reporter/PhpCsReport.php",
+                                    "uri": "src/Converter/Reporter/PhpCsReport.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 84,
+                                    "startColumn": 29,
+                                    "endLine": 94,
+                                    "endColumn": 6
                                 }
                             }
                         }
@@ -786,8 +858,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/SarifNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/SarifNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 27,
+                                    "startColumn": 7,
+                                    "endLine": 27,
+                                    "endColumn": 28
                                 }
                             }
                         }
@@ -806,8 +884,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/SarifNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/SarifNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 133,
+                                    "startColumn": 27,
+                                    "endLine": 133,
+                                    "endColumn": 37
                                 }
                             }
                         }
@@ -826,14 +910,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 63,
+                                    "startColumn": 10,
+                                    "endLine": 63,
+                                    "endColumn": 33
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "cyclomatic-complexity": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "cyclomatic-complexity": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -846,14 +936,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 63,
+                                    "startColumn": 10,
+                                    "endLine": 63,
+                                    "endColumn": 33
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "kan-defect": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "kan-defect": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -866,14 +962,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 63,
+                                    "startColumn": 10,
+                                    "endLine": 63,
+                                    "endColumn": 33
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "too-many-methods": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "too-many-methods": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -886,14 +988,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 63,
+                                    "startColumn": 10,
+                                    "endLine": 63,
+                                    "endColumn": 33
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "too-many-properties": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "too-many-properties": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -906,14 +1014,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 119,
+                                    "startColumn": 11,
+                                    "endLine": 122,
+                                    "endColumn": 10
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-else-clause": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-else-clause": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -926,14 +1040,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 149,
+                                    "startColumn": 14,
+                                    "endLine": 149,
+                                    "endColumn": 47
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -946,14 +1066,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 152,
+                                    "startColumn": 13,
+                                    "endLine": 152,
+                                    "endColumn": 38
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -966,14 +1092,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 168,
+                                    "startColumn": 14,
+                                    "endLine": 168,
+                                    "endColumn": 32
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -986,14 +1118,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 174,
+                                    "startColumn": 35,
+                                    "endLine": 174,
+                                    "endColumn": 53
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1006,14 +1144,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 177,
+                                    "startColumn": 5,
+                                    "endLine": 202,
+                                    "endColumn": 6
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "halstead": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "halstead": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1026,14 +1170,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 182,
+                                    "startColumn": 14,
+                                    "endLine": 182,
+                                    "endColumn": 47
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1046,14 +1196,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 187,
+                                    "startColumn": 14,
+                                    "endLine": 187,
+                                    "endColumn": 40
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1066,14 +1222,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 190,
+                                    "startColumn": 14,
+                                    "endLine": 190,
+                                    "endColumn": 48
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1086,14 +1248,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 195,
+                                    "startColumn": 14,
+                                    "endLine": 195,
+                                    "endColumn": 47
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1106,14 +1274,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 232,
+                                    "startColumn": 18,
+                                    "endLine": 232,
+                                    "endColumn": 41
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1126,14 +1300,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 235,
+                                    "startColumn": 18,
+                                    "endLine": 235,
+                                    "endColumn": 53
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1146,14 +1326,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 239,
+                                    "startColumn": 18,
+                                    "endLine": 239,
+                                    "endColumn": 52
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1166,14 +1352,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 243,
+                                    "startColumn": 18,
+                                    "endLine": 243,
+                                    "endColumn": 51
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1186,14 +1378,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 248,
+                                    "startColumn": 18,
+                                    "endLine": 248,
+                                    "endColumn": 41
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1206,14 +1404,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 252,
+                                    "startColumn": 18,
+                                    "endLine": 252,
+                                    "endColumn": 44
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1226,14 +1430,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 255,
+                                    "startColumn": 18,
+                                    "endLine": 255,
+                                    "endColumn": 47
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1246,14 +1456,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 260,
+                                    "startColumn": 18,
+                                    "endLine": 260,
+                                    "endColumn": 57
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1266,14 +1482,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 279,
+                                    "startColumn": 5,
+                                    "endLine": 366,
+                                    "endColumn": 6
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "halstead": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "halstead": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1286,14 +1508,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 301,
+                                    "startColumn": 22,
+                                    "endLine": 301,
+                                    "endColumn": 56
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1306,14 +1534,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 305,
+                                    "startColumn": 22,
+                                    "endLine": 305,
+                                    "endColumn": 63
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1326,14 +1560,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 319,
+                                    "startColumn": 22,
+                                    "endLine": 319,
+                                    "endColumn": 55
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1346,14 +1586,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 323,
+                                    "startColumn": 26,
+                                    "endLine": 323,
+                                    "endColumn": 40
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1366,14 +1612,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 327,
+                                    "startColumn": 26,
+                                    "endLine": 327,
+                                    "endColumn": 41
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1386,14 +1638,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 353,
+                                    "startColumn": 21,
+                                    "endLine": 355,
+                                    "endColumn": 22
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "prefer-early-continue": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "prefer-early-continue": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1406,14 +1664,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 357,
+                                    "startColumn": 22,
+                                    "endLine": 357,
+                                    "endColumn": 40
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1426,14 +1690,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 391,
+                                    "startColumn": 22,
+                                    "endLine": 391,
+                                    "endColumn": 30
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-global": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-global": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1446,14 +1716,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 418,
+                                    "startColumn": 13,
+                                    "endLine": 418,
+                                    "endColumn": 43
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1466,14 +1742,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 425,
+                                    "startColumn": 22,
+                                    "endLine": 425,
+                                    "endColumn": 23
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-error-control-operator": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-error-control-operator": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1486,14 +1768,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 430,
+                                    "startColumn": 23,
+                                    "endLine": 430,
+                                    "endColumn": 24
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-error-control-operator": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-error-control-operator": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1506,14 +1794,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 431,
+                                    "startColumn": 24,
+                                    "endLine": 431,
+                                    "endColumn": 25
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-error-control-operator": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-error-control-operator": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1526,14 +1820,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 432,
+                                    "startColumn": 19,
+                                    "endLine": 432,
+                                    "endColumn": 20
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-error-control-operator": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-error-control-operator": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1546,14 +1846,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 433,
+                                    "startColumn": 23,
+                                    "endLine": 433,
+                                    "endColumn": 24
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-error-control-operator": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-error-control-operator": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1566,14 +1872,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 490,
+                                    "startColumn": 16,
+                                    "endLine": 490,
+                                    "endColumn": 46
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1586,14 +1898,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 679,
+                                    "startColumn": 11,
+                                    "endLine": 681,
+                                    "endColumn": 10
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-else-clause": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-else-clause": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1606,14 +1924,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uri": "src/Converter/AbstractConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 676,
+                                    "startColumn": 18,
+                                    "endLine": 676,
+                                    "endColumn": 34
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
                     }
                 },
                 {
@@ -1626,8 +1950,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/ComposerNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/ComposerNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 25,
+                                    "startColumn": 7,
+                                    "endLine": 25,
+                                    "endColumn": 31
                                 }
                             }
                         }
@@ -1646,8 +1976,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/ComposerNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/ComposerNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 55,
+                                    "startColumn": 5,
+                                    "endLine": 139,
+                                    "endColumn": 6
                                 }
                             }
                         }
@@ -1666,8 +2002,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/ComposerNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/ComposerNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 79,
+                                    "startColumn": 29,
+                                    "endLine": 85,
+                                    "endColumn": 30
                                 }
                             }
                         }
@@ -1686,8 +2028,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/ComposerNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/ComposerNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 106,
+                                    "startColumn": 25,
+                                    "endLine": 106,
+                                    "endColumn": 59
                                 }
                             }
                         }
@@ -1706,8 +2054,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/ComposerNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/ComposerNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 107,
+                                    "startColumn": 30,
+                                    "endLine": 107,
+                                    "endColumn": 52
                                 }
                             }
                         }
@@ -1726,8 +2080,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/ComposerNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/ComposerNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 125,
+                                    "startColumn": 79,
+                                    "endLine": 125,
+                                    "endColumn": 111
                                 }
                             }
                         }
@@ -1746,8 +2106,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/PhpLintConverter.php",
+                                    "uri": "src/Converter/PhpLintConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 46,
+                                    "startColumn": 22,
+                                    "endLine": 46,
+                                    "endColumn": 30
                                 }
                             }
                         }
@@ -1766,8 +2132,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/PhpLintConverter.php",
+                                    "uri": "src/Converter/PhpLintConverter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 49,
+                                    "startColumn": 13,
+                                    "endLine": 56,
+                                    "endColumn": 14
                                 }
                             }
                         }
@@ -1786,8 +2158,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Source/PhpCsSource.php",
+                                    "uri": "src/Converter/Source/PhpCsSource.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 30,
+                                    "startColumn": 13,
+                                    "endLine": 30,
+                                    "endColumn": 32
                                 }
                             }
                         }
@@ -1806,8 +2184,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Source/PhpCsSource.php",
+                                    "uri": "src/Converter/Source/PhpCsSource.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 42,
+                                    "startColumn": 17,
+                                    "endLine": 42,
+                                    "endColumn": 43
                                 }
                             }
                         }
@@ -1826,14 +2210,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Source/MagoSource.php",
+                                    "uri": "src/Converter/Source/MagoSource.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 31,
+                                    "startColumn": 13,
+                                    "endLine": 31,
+                                    "endColumn": 32
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "74baa2d855b04e5ac1b44c21f3bc015138b234a595ac287a1295b6d61e3bdb99"
+                        "no-empty": "a5e18d831b59ff02f53fcd8161f7ffa04b8a09d2302158019a62e5a2477d78ce"
                     }
                 },
                 {
@@ -1846,14 +2236,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Source/MagoSource.php",
+                                    "uri": "src/Converter/Source/MagoSource.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 46,
+                                    "startColumn": 17,
+                                    "endLine": 46,
+                                    "endColumn": 43
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-isset": "74baa2d855b04e5ac1b44c21f3bc015138b234a595ac287a1295b6d61e3bdb99"
+                        "no-isset": "a5e18d831b59ff02f53fcd8161f7ffa04b8a09d2302158019a62e5a2477d78ce"
                     }
                 },
                 {
@@ -1866,14 +2262,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Source/MagoSource.php",
+                                    "uri": "src/Converter/Source/MagoSource.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 56,
+                                    "startColumn": 18,
+                                    "endLine": 56,
+                                    "endColumn": 34
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "74baa2d855b04e5ac1b44c21f3bc015138b234a595ac287a1295b6d61e3bdb99"
+                        "no-empty": "a5e18d831b59ff02f53fcd8161f7ffa04b8a09d2302158019a62e5a2477d78ce"
                     }
                 },
                 {
@@ -1886,14 +2288,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Source/MagoSource.php",
+                                    "uri": "src/Converter/Source/MagoSource.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 73,
+                                    "startColumn": 32,
+                                    "endLine": 73,
+                                    "endColumn": 40
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "strict-behavior": "74baa2d855b04e5ac1b44c21f3bc015138b234a595ac287a1295b6d61e3bdb99"
+                        "strict-behavior": "a5e18d831b59ff02f53fcd8161f7ffa04b8a09d2302158019a62e5a2477d78ce"
                     }
                 },
                 {
@@ -1906,8 +2314,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Source/PhanSource.php",
+                                    "uri": "src/Converter/Source/PhanSource.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 20,
+                                    "startColumn": 13,
+                                    "endLine": 20,
+                                    "endColumn": 32
                                 }
                             }
                         }
@@ -1926,8 +2340,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/CheckstyleNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/CheckstyleNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 81,
+                                    "startColumn": 23,
+                                    "endLine": 83,
+                                    "endColumn": 22
                                 }
                             }
                         }
@@ -1946,8 +2366,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/CheckstyleNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/CheckstyleNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 87,
+                                    "startColumn": 22,
+                                    "endLine": 87,
+                                    "endColumn": 36
                                 }
                             }
                         }
@@ -1966,8 +2392,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/CheckstyleNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/CheckstyleNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 91,
+                                    "startColumn": 22,
+                                    "endLine": 91,
+                                    "endColumn": 40
                                 }
                             }
                         }
@@ -1986,8 +2418,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Reporter/TwigCsFixerReporter.php",
+                                    "uri": "src/Converter/Reporter/TwigCsFixerReporter.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 42,
+                                    "startColumn": 14,
+                                    "endLine": 42,
+                                    "endColumn": 20
                                 }
                             }
                         }
@@ -2006,8 +2444,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Console/Application.php",
+                                    "uri": "src/Console/Application.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 43,
+                                    "startColumn": 18,
+                                    "endLine": 43,
+                                    "endColumn": 67
                                 }
                             }
                         }
@@ -2026,14 +2470,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/MagoNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/MagoNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 19,
+                                    "startColumn": 14,
+                                    "endLine": 19,
+                                    "endColumn": 24
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-redundant-use": "75c3adbf46c16fb3df9b51cd3777d5f33e28aa0c9a8697aa296959541df34d04"
+                        "no-redundant-use": "abc20b59c7fd08b357a3b1cf4c13482629317b24166b7c99f07bd2dbc5e03864"
                     }
                 },
                 {
@@ -2046,14 +2496,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/MagoNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/MagoNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 15,
+                                    "startColumn": 14,
+                                    "endLine": 15,
+                                    "endColumn": 23
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-redundant-use": "75c3adbf46c16fb3df9b51cd3777d5f33e28aa0c9a8697aa296959541df34d04"
+                        "no-redundant-use": "abc20b59c7fd08b357a3b1cf4c13482629317b24166b7c99f07bd2dbc5e03864"
                     }
                 },
                 {
@@ -2066,14 +2522,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/MagoNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/MagoNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 21,
+                                    "startColumn": 14,
+                                    "endLine": 21,
+                                    "endColumn": 25
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-redundant-use": "75c3adbf46c16fb3df9b51cd3777d5f33e28aa0c9a8697aa296959541df34d04"
+                        "no-redundant-use": "abc20b59c7fd08b357a3b1cf4c13482629317b24166b7c99f07bd2dbc5e03864"
                     }
                 },
                 {
@@ -2086,14 +2548,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/MagoNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/MagoNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 18,
+                                    "startColumn": 14,
+                                    "endLine": 18,
+                                    "endColumn": 21
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-redundant-use": "75c3adbf46c16fb3df9b51cd3777d5f33e28aa0c9a8697aa296959541df34d04"
+                        "no-redundant-use": "abc20b59c7fd08b357a3b1cf4c13482629317b24166b7c99f07bd2dbc5e03864"
                     }
                 },
                 {
@@ -2106,14 +2574,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/MagoNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/MagoNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 20,
+                                    "startColumn": 14,
+                                    "endLine": 20,
+                                    "endColumn": 21
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-redundant-use": "75c3adbf46c16fb3df9b51cd3777d5f33e28aa0c9a8697aa296959541df34d04"
+                        "no-redundant-use": "abc20b59c7fd08b357a3b1cf4c13482629317b24166b7c99f07bd2dbc5e03864"
                     }
                 },
                 {
@@ -2126,14 +2600,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/MagoNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/MagoNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 22,
+                                    "startColumn": 14,
+                                    "endLine": 22,
+                                    "endColumn": 24
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-redundant-use": "75c3adbf46c16fb3df9b51cd3777d5f33e28aa0c9a8697aa296959541df34d04"
+                        "no-redundant-use": "abc20b59c7fd08b357a3b1cf4c13482629317b24166b7c99f07bd2dbc5e03864"
                     }
                 },
                 {
@@ -2146,14 +2626,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/MagoNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/MagoNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 23,
+                                    "startColumn": 14,
+                                    "endLine": 23,
+                                    "endColumn": 18
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-redundant-use": "75c3adbf46c16fb3df9b51cd3777d5f33e28aa0c9a8697aa296959541df34d04"
+                        "no-redundant-use": "abc20b59c7fd08b357a3b1cf4c13482629317b24166b7c99f07bd2dbc5e03864"
                     }
                 },
                 {
@@ -2166,14 +2652,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/MagoNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/MagoNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 17,
+                                    "startColumn": 14,
+                                    "endLine": 17,
+                                    "endColumn": 19
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-redundant-use": "75c3adbf46c16fb3df9b51cd3777d5f33e28aa0c9a8697aa296959541df34d04"
+                        "no-redundant-use": "abc20b59c7fd08b357a3b1cf4c13482629317b24166b7c99f07bd2dbc5e03864"
                     }
                 },
                 {
@@ -2186,14 +2678,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/MagoNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/MagoNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 30,
+                                    "startColumn": 7,
+                                    "endLine": 30,
+                                    "endColumn": 27
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "cyclomatic-complexity": "75c3adbf46c16fb3df9b51cd3777d5f33e28aa0c9a8697aa296959541df34d04"
+                        "cyclomatic-complexity": "abc20b59c7fd08b357a3b1cf4c13482629317b24166b7c99f07bd2dbc5e03864"
                     }
                 },
                 {
@@ -2206,14 +2704,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/MagoNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/MagoNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 30,
+                                    "startColumn": 7,
+                                    "endLine": 30,
+                                    "endColumn": 27
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "kan-defect": "75c3adbf46c16fb3df9b51cd3777d5f33e28aa0c9a8697aa296959541df34d04"
+                        "kan-defect": "abc20b59c7fd08b357a3b1cf4c13482629317b24166b7c99f07bd2dbc5e03864"
                     }
                 },
                 {
@@ -2226,14 +2730,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/MagoNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/MagoNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 128,
+                                    "startColumn": 18,
+                                    "endLine": 128,
+                                    "endColumn": 32
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "75c3adbf46c16fb3df9b51cd3777d5f33e28aa0c9a8697aa296959541df34d04"
+                        "no-empty": "abc20b59c7fd08b357a3b1cf4c13482629317b24166b7c99f07bd2dbc5e03864"
                     }
                 },
                 {
@@ -2246,14 +2756,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/MagoNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/MagoNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 132,
+                                    "startColumn": 18,
+                                    "endLine": 132,
+                                    "endColumn": 40
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-isset": "75c3adbf46c16fb3df9b51cd3777d5f33e28aa0c9a8697aa296959541df34d04"
+                        "no-isset": "abc20b59c7fd08b357a3b1cf4c13482629317b24166b7c99f07bd2dbc5e03864"
                     }
                 },
                 {
@@ -2266,14 +2782,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/MagoNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/MagoNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 139,
+                                    "startColumn": 18,
+                                    "endLine": 139,
+                                    "endColumn": 36
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "75c3adbf46c16fb3df9b51cd3777d5f33e28aa0c9a8697aa296959541df34d04"
+                        "no-empty": "abc20b59c7fd08b357a3b1cf4c13482629317b24166b7c99f07bd2dbc5e03864"
                     }
                 },
                 {
@@ -2286,14 +2808,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/MagoNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/MagoNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 177,
+                                    "startColumn": 29,
+                                    "endLine": 177,
+                                    "endColumn": 31
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "identity-comparison": "75c3adbf46c16fb3df9b51cd3777d5f33e28aa0c9a8697aa296959541df34d04"
+                        "identity-comparison": "abc20b59c7fd08b357a3b1cf4c13482629317b24166b7c99f07bd2dbc5e03864"
                     }
                 },
                 {
@@ -2306,8 +2834,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Source/ComposerSource.php",
+                                    "uri": "src/Converter/Source/ComposerSource.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 20,
+                                    "startColumn": 13,
+                                    "endLine": 20,
+                                    "endColumn": 32
                                 }
                             }
                         }
@@ -2326,8 +2860,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Source/PhpMdSource.php",
+                                    "uri": "src/Converter/Source/PhpMdSource.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 20,
+                                    "startColumn": 13,
+                                    "endLine": 20,
+                                    "endColumn": 32
                                 }
                             }
                         }
@@ -2346,8 +2886,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Source/PhpStanSource.php",
+                                    "uri": "src/Converter/Source/PhpStanSource.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 20,
+                                    "startColumn": 13,
+                                    "endLine": 20,
+                                    "endColumn": 32
                                 }
                             }
                         }
@@ -2366,8 +2912,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Source/AbstractSource.php",
+                                    "uri": "src/Converter/Source/AbstractSource.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 24,
+                                    "startColumn": 10,
+                                    "endLine": 24,
+                                    "endColumn": 30
                                 }
                             }
                         }
@@ -2386,8 +2938,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Source/AbstractSource.php",
+                                    "uri": "src/Converter/Source/AbstractSource.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 96,
+                                    "startColumn": 13,
+                                    "endLine": 98,
+                                    "endColumn": 14
                                 }
                             }
                         }
@@ -2406,8 +2964,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Factory/SourceFactory.php",
+                                    "uri": "src/Factory/SourceFactory.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 26,
+                                    "startColumn": 7,
+                                    "endLine": 26,
+                                    "endColumn": 26
                                 }
                             }
                         }
@@ -2426,8 +2990,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/PhpMdNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/PhpMdNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 32,
+                                    "startColumn": 7,
+                                    "endLine": 32,
+                                    "endColumn": 28
                                 }
                             }
                         }
@@ -2446,8 +3016,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/PhpMdNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/PhpMdNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 32,
+                                    "startColumn": 7,
+                                    "endLine": 32,
+                                    "endColumn": 28
                                 }
                             }
                         }
@@ -2466,8 +3042,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/PhpMdNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/PhpMdNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 92,
+                                    "startColumn": 23,
+                                    "endLine": 94,
+                                    "endColumn": 22
                                 }
                             }
                         }
@@ -2486,8 +3068,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/PhpMdNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/PhpMdNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 102,
+                                    "startColumn": 19,
+                                    "endLine": 112,
+                                    "endColumn": 18
                                 }
                             }
                         }
@@ -2506,8 +3094,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/PhpMdNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/PhpMdNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 114,
+                                    "startColumn": 22,
+                                    "endLine": 114,
+                                    "endColumn": 36
                                 }
                             }
                         }
@@ -2526,8 +3120,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/PhpMdNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/PhpMdNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 119,
+                                    "startColumn": 22,
+                                    "endLine": 119,
+                                    "endColumn": 40
                                 }
                             }
                         }
@@ -2546,8 +3146,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/PhpMdNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/PhpMdNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 171,
+                                    "startColumn": 18,
+                                    "endLine": 171,
+                                    "endColumn": 34
                                 }
                             }
                         }
@@ -2566,8 +3172,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Normalizer/PhpMdNormalizer.php",
+                                    "uri": "src/Converter/Normalizer/PhpMdNormalizer.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 180,
+                                    "startColumn": 18,
+                                    "endLine": 180,
+                                    "endColumn": 31
                                 }
                             }
                         }
@@ -2586,8 +3198,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Converter/Source/TwigCsFixerSource.php",
+                                    "uri": "src/Converter/Source/TwigCsFixerSource.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 20,
+                                    "startColumn": 13,
+                                    "endLine": 20,
+                                    "endColumn": 32
                                 }
                             }
                         }
@@ -2606,14 +3224,20 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Factory/ConverterFactory.php",
+                                    "uri": "src/Factory/ConverterFactory.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 22,
+                                    "startColumn": 7,
+                                    "endLine": 22,
+                                    "endColumn": 29
                                 }
                             }
                         }
                     ],
                     "partialFingerprints": {
-                        "too-many-methods": "810e0e635bec67861e05f6bcad155a286580ed3b43b041c207b34b30b459bccb"
+                        "too-many-methods": "96c4ba58f8208ed9f3b7195b5f8527b2c42e22d97beef72106a90626fa346e51"
                     }
                 },
                 {
@@ -2626,8 +3250,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Console/Command/ConvertCommand.php",
+                                    "uri": "src/Console/Command/ConvertCommand.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 46,
+                                    "startColumn": 1251,
+                                    "endLine": 46,
+                                    "endColumn": 21
                                 }
                             }
                         }
@@ -2646,8 +3276,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Console/Command/ConvertCommand.php",
+                                    "uri": "src/Console/Command/ConvertCommand.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 106,
+                                    "startColumn": 17,
+                                    "endLine": 106,
+                                    "endColumn": 48
                                 }
                             }
                         }
@@ -2666,48 +3302,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Console/Command/ConvertCommand.php",
+                                    "uri": "src/Console/Command/ConvertCommand.php",
                                     "uriBaseId": "SOURCE_ROOT"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "no-empty": "371659ea44bab5b9432ad5a2b886fc4784f304b2d2abd59f49a60656888e9df8"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Avoid `else` clauses.\n>This `else` clause can often be eliminated\n\nCode is often clearer when the main logic is not nested inside an `if` statement.\n\nHelp: Consider refactoring to use an early return (a guard clause) to simplify the control flow."
-                    },
-                    "ruleId": "no-else-clause",
-                    "level": "warning",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "../../../../src/Console/Command/ConvertCommand.php",
-                                    "uriBaseId": "SOURCE_ROOT"
-                                }
-                            }
-                        }
-                    ],
-                    "partialFingerprints": {
-                        "no-else-clause": "371659ea44bab5b9432ad5a2b886fc4784f304b2d2abd59f49a60656888e9df8"
-                    }
-                },
-                {
-                    "message": {
-                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
-                    },
-                    "ruleId": "no-empty",
-                    "level": "error",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "../../../../src/Console/Command/ConvertCommand.php",
-                                    "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 143,
+                                    "startColumn": 18,
+                                    "endLine": 143,
+                                    "endColumn": 48
                                 }
                             }
                         }
@@ -2726,8 +3328,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Console/Command/ConvertCommand.php",
+                                    "uri": "src/Console/Command/ConvertCommand.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 150,
+                                    "startColumn": 15,
+                                    "endLine": 154,
+                                    "endColumn": 14
                                 }
                             }
                         }
@@ -2746,8 +3354,66 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Console/Command/ConvertCommand.php",
+                                    "uri": "src/Console/Command/ConvertCommand.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 160,
+                                    "startColumn": 18,
+                                    "endLine": 160,
+                                    "endColumn": 36
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "371659ea44bab5b9432ad5a2b886fc4784f304b2d2abd59f49a60656888e9df8"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Avoid `else` clauses.\n>This `else` clause can often be eliminated\n\nCode is often clearer when the main logic is not nested inside an `if` statement.\n\nHelp: Consider refactoring to use an early return (a guard clause) to simplify the control flow."
+                    },
+                    "ruleId": "no-else-clause",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Console/Command/ConvertCommand.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 163,
+                                    "startColumn": 19,
+                                    "endLine": 171,
+                                    "endColumn": 18
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-else-clause": "371659ea44bab5b9432ad5a2b886fc4784f304b2d2abd59f49a60656888e9df8"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src/Console/Command/ConvertCommand.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 161,
+                                    "startColumn": 21,
+                                    "endLine": 161,
+                                    "endColumn": 51
                                 }
                             }
                         }
@@ -2766,8 +3432,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Console/Command/ConvertCommand.php",
+                                    "uri": "src/Console/Command/ConvertCommand.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 186,
+                                    "startColumn": 14,
+                                    "endLine": 186,
+                                    "endColumn": 31
                                 }
                             }
                         }
@@ -2786,8 +3458,14 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "../../../../src/Console/Command/ConvertCommand.php",
+                                    "uri": "src/Console/Command/ConvertCommand.php",
                                     "uriBaseId": "SOURCE_ROOT"
+                                },
+                                "region": {
+                                    "startLine": 226,
+                                    "startColumn": 24,
+                                    "endLine": 226,
+                                    "endColumn": 50
                                 }
                             }
                         }
@@ -2798,7 +3476,7 @@
                 }
             ],
             "automationDetails": {
-                "id": "Daily run 2026-05-04T03:39:29+00:00"
+                "id": "Daily run 2026-05-04T06:26:51+00:00"
             }
         }
     ]
