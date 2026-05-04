@@ -47,6 +47,7 @@ use function rtrim;
 use function sprintf;
 use function str_contains;
 use function str_replace;
+use function str_starts_with;
 use function strlen;
 use function substr;
 use function trim;
@@ -283,7 +284,7 @@ abstract class AbstractConverter implements ConverterInterface
                 continue;
             }
             $artifactLocation = new Definition\ArtifactLocation();
-            $artifactLocation->setUri($this->pathToArtifactLocation($filename));
+            $artifactLocation->setUri($this->pathToArtifactLocation(realpath($filename)));
             $artifactLocation->setUriBaseId('SOURCE_ROOT');
 
             $fingerprint = hash_file('sha256', $filename);
@@ -320,12 +321,16 @@ abstract class AbstractConverter implements ConverterInterface
                     $line = (int) $error['Region.startLine'];
                     $endLine = $error['Region.endLine'] ?? null;
                     $column = $error['Region.startColumn'] ?? null;
+                    $endColumn = $error['Region.endColumn'] ?? null;
                     if (!empty($column)) {
                         $column = (int) $column;
                     }
                     $region = $this->getSnippetRegion($filename, $line, $column, 0, 0);
                     if (!empty($endLine)) {
                         $region->setEndLine((int) $endLine);
+                    }
+                    if (!empty($endColumn)) {
+                        $region->setEndColumn((int) $endColumn);
                     }
                     $physicalLocation->setRegion($region);
 
@@ -547,7 +552,7 @@ abstract class AbstractConverter implements ConverterInterface
         if ($workingDir === false) {
             $workingDir = '.';
         }
-        if (substr($path, 0, strlen($workingDir)) === $workingDir) {
+        if (str_starts_with($path, $workingDir)) {
             // have common path
             return substr($path, strlen($workingDir) + 1);
         }
@@ -579,7 +584,7 @@ abstract class AbstractConverter implements ConverterInterface
         $path = str_replace(DIRECTORY_SEPARATOR, '/', $path);
 
         // file:///C:/... on Windows systems
-        if (substr($path, 0, 1) !== '/') {
+        if (!str_starts_with($path, '/')) {
             $path = '/' . $path;
         }
 
