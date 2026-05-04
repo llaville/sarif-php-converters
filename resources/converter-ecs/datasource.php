@@ -14,6 +14,7 @@ return function (): Generator {
         \Bartlett\Sarif\Converter\EcsConverter::class,
         \Bartlett\Sarif\Converter\Source\EcsSource::class,
         \Bartlett\Sarif\Converter\Normalizer\EcsNormalizer::class,
+        \Bartlett\Sarif\Converter\Case\EcsHelpUriCaseConverter::class,
     ];
     foreach ($classes as $class) {
         yield $class;
