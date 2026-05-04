@@ -111,7 +111,6 @@ final class SarifNormalizer extends AbstractNormalizer
         return $path;
     }
 
-
     /**
      * SARIF2015:
      * Place dynamic content in single quotes to set it off from the static text and to make it easier to spot.

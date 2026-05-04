@@ -32,6 +32,8 @@ final class SourceFactory implements SourceFactoryInterface
                 return $this->createComposer($normalizers);
             case SourceFactoryInterface::BUILTIN_SOURCE_ECS:
                 return $this->createEasyCodingStandard($normalizers);
+            case SourceFactoryInterface::BUILTIN_SOURCE_MAGO:
+                return $this->createMago($normalizers);
             case SourceFactoryInterface::BUILTIN_SOURCE_PHAN:
                 return $this->createPhan($normalizers);
             case SourceFactoryInterface::BUILTIN_SOURCE_PHPCS:
@@ -72,6 +74,16 @@ final class SourceFactory implements SourceFactoryInterface
         $normalizers[] = new Normalizer\EcsNormalizer();
         $caseConverter = new Case\EcsHelpUriCaseConverter($caseConverter);
         return new Source\EcsSource($normalizers, $caseConverter);
+    }
+
+    /**
+     * @param iterable<NormalizerInterface> $normalizers
+     */
+    public function createMago(iterable $normalizers): SourceInterface
+    {
+        $normalizers = (array) $normalizers;
+        $normalizers[] = new Normalizer\MagoNormalizer();
+        return new Source\MagoSource($normalizers);
     }
 
     /**

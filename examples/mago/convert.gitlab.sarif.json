@@ -1,0 +1,2805 @@
+{
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "Mago",
+                    "shortDescription": {
+                        "text": "PHP toolchain that analyzes your entire codebase in seconds, not minutes."
+                    },
+                    "fullDescription": {
+                        "text": "Mago is a toolchain for PHP that aims to provide a set of tools to help developers write better code"
+                    },
+                    "version": "1.25.2.0",
+                    "semanticVersion": "1.25.2.0",
+                    "informationUri": "https://github.com/carthage-software/mago",
+                    "rules": [
+                        {
+                            "id": "no-empty",
+                            "name": "No Empty",
+                            "shortDescription": {
+                                "text": "Detects the use of the `empty()` construct."
+                            },
+                            "fullDescription": {
+                                "text": "Detects the use of the `empty()` construct.\n\nThe `empty()` language construct can lead to ambiguous and potentially buggy code due to\nloose and counterintuitive definition of emptiness. It fails to clearly convey\ndeveloper's intent or expectation, making it preferable to use explicit checks.\n"
+                            },
+                            "defaultConfiguration": {
+                                "enabled": true,
+                                "level": "error",
+                                "rank": -1.0,
+                                "parameters": {
+                                    "php-versions": [],
+                                    "integrations": []
+                                }
+                            },
+                            "helpUri": "https://mago.carthage.software/tools/linter/rules/clarity#no-empty",
+                            "properties": {
+                                "frequency": 51,
+                                "category": "Clarity"
+                            }
+                        },
+                        {
+                            "id": "no-isset",
+                            "name": "No Isset",
+                            "shortDescription": {
+                                "text": "Detects the use of the `isset()` construct."
+                            },
+                            "fullDescription": {
+                                "text": "Detects the use of the `isset()` construct.\n\nThe `isset()` language construct checks whether a variable is set and is not null.\nHowever, it can lead to ambiguous code because it conflates two distinct checks:\nvariable existence and null comparison. Using explicit null checks or the null\ncoalescing operator (`??`) is often clearer and more maintainable.\n"
+                            },
+                            "defaultConfiguration": {
+                                "enabled": true,
+                                "level": "warning",
+                                "rank": -1.0,
+                                "parameters": {
+                                    "php-versions": [],
+                                    "integrations": []
+                                }
+                            },
+                            "helpUri": "https://mago.carthage.software/tools/linter/rules/clarity#no-isset",
+                            "properties": {
+                                "frequency": 9,
+                                "category": "Clarity"
+                            }
+                        },
+                        {
+                            "id": "no-global",
+                            "name": "No Global",
+                            "shortDescription": {
+                                "text": "Detects the use of the `global` keyword and the `$GLOBALS` variable."
+                            },
+                            "fullDescription": {
+                                "text": "Detects the use of the `global` keyword and the `$GLOBALS` variable.\n\nThe `global` keyword introduces global state into your function, making it harder to reason about and test.\n"
+                            },
+                            "defaultConfiguration": {
+                                "enabled": true,
+                                "level": "error",
+                                "rank": -1.0,
+                                "parameters": {
+                                    "php-versions": [],
+                                    "integrations": []
+                                }
+                            },
+                            "helpUri": "https://mago.carthage.software/tools/linter/rules/safety#no-global",
+                            "properties": {
+                                "frequency": 3,
+                                "category": "Safety"
+                            }
+                        },
+                        {
+                            "id": "prefer-early-continue",
+                            "name": "Prefer Early Continue",
+                            "shortDescription": {
+                                "text": "Suggests using early continue pattern when a loop body contains only a single if statement."
+                            },
+                            "fullDescription": {
+                                "text": "Suggests using early continue pattern when a loop body contains only a single if statement.\n\nThis improves code readability by reducing nesting and making the control flow more explicit.\n"
+                            },
+                            "defaultConfiguration": {
+                                "enabled": true,
+                                "level": "none",
+                                "rank": -1.0,
+                                "parameters": {
+                                    "php-versions": [],
+                                    "integrations": []
+                                }
+                            },
+                            "helpUri": "https://mago.carthage.software/tools/linter/rules/bestpractices#prefer-early-continue",
+                            "properties": {
+                                "frequency": 5,
+                                "category": "BestPractices"
+                            }
+                        },
+                        {
+                            "id": "kan-defect",
+                            "name": "Kan Defect",
+                            "shortDescription": {
+                                "text": "Detects classes, traits, interfaces, functions, and closures with high kan defect."
+                            },
+                            "fullDescription": {
+                                "text": "Detects classes, traits, interfaces, functions, and closures with high kan defect.\n\nThe \"Kan Defect\" metric is a heuristic for estimating defect proneness in a class or similar structure.\nIt counts control-flow statements (`while`, `do`, `foreach`, `if`, and `switch`) and sums them using a\nformula loosely based on the work of Stephen H. Kan.\n\nReferences:\n  - https://github.com/phpmetrics/PhpMetrics/blob/c43217cd7783bbd54d0b8c1dd43f697bc36ef79d/src/Hal/Metric/Class_/Complexity/KanDefectVisitor.php\n  - https://phpmetrics.org/\n"
+                            },
+                            "defaultConfiguration": {
+                                "enabled": true,
+                                "level": "error",
+                                "rank": -1.0,
+                                "parameters": {
+                                    "php-versions": [],
+                                    "integrations": []
+                                }
+                            },
+                            "helpUri": "https://mago.carthage.software/tools/linter/rules/maintainability#kan-defect",
+                            "properties": {
+                                "frequency": 6,
+                                "category": "Maintainability"
+                            }
+                        },
+                        {
+                            "id": "excessive-parameter-list",
+                            "name": "Excessive Parameter List",
+                            "shortDescription": {
+                                "text": "Detects functions, closures, and methods with too many parameters."
+                            },
+                            "fullDescription": {
+                                "text": "Detects functions, closures, and methods with too many parameters.\n\nIf the number of parameters exceeds a configurable threshold, an issue is reported.\n"
+                            },
+                            "defaultConfiguration": {
+                                "enabled": true,
+                                "level": "error",
+                                "rank": -1.0,
+                                "parameters": {
+                                    "php-versions": [],
+                                    "integrations": []
+                                }
+                            },
+                            "helpUri": "https://mago.carthage.software/tools/linter/rules/maintainability#excessive-parameter-list",
+                            "properties": {
+                                "frequency": 1,
+                                "category": "Maintainability"
+                            }
+                        },
+                        {
+                            "id": "cyclomatic-complexity",
+                            "name": "Cyclomatic Complexity",
+                            "shortDescription": {
+                                "text": "Checks the cyclomatic complexity of classes, traits, enums, interfaces, functions, and closures."
+                            },
+                            "fullDescription": {
+                                "text": "Checks the cyclomatic complexity of classes, traits, enums, interfaces, functions, and closures.\n\nCyclomatic complexity is a measure of the number of linearly independent paths through a program's source code.\n"
+                            },
+                            "defaultConfiguration": {
+                                "enabled": true,
+                                "level": "error",
+                                "rank": -1.0,
+                                "parameters": {
+                                    "php-versions": [],
+                                    "integrations": []
+                                }
+                            },
+                            "helpUri": "https://mago.carthage.software/tools/linter/rules/maintainability#cyclomatic-complexity",
+                            "properties": {
+                                "frequency": 5,
+                                "category": "Maintainability"
+                            }
+                        },
+                        {
+                            "id": "braced-string-interpolation",
+                            "name": "Braced String Interpolation",
+                            "shortDescription": {
+                                "text": "Enforces the use of curly braces around variables within string interpolation."
+                            },
+                            "fullDescription": {
+                                "text": "Enforces the use of curly braces around variables within string interpolation.\n\nUsing curly braces (`{$variable}`) within interpolated strings ensures clarity and avoids potential ambiguity,\nespecially when variables are followed by alphanumeric characters. This rule promotes consistent and predictable code.\n"
+                            },
+                            "defaultConfiguration": {
+                                "enabled": true,
+                                "level": "note",
+                                "rank": -1.0,
+                                "parameters": {
+                                    "php-versions": [],
+                                    "integrations": []
+                                }
+                            },
+                            "helpUri": "https://mago.carthage.software/tools/linter/rules/consistency#braced-string-interpolation",
+                            "properties": {
+                                "frequency": 1,
+                                "category": "Consistency"
+                            }
+                        },
+                        {
+                            "id": "too-many-methods",
+                            "name": "Too Many Methods",
+                            "shortDescription": {
+                                "text": "Detects class-like structures with too many methods."
+                            },
+                            "fullDescription": {
+                                "text": "Detects class-like structures with too many methods.\n\nThis rule checks the number of methods in classes, traits, enums, and interfaces.\nIf the number of methods exceeds a configurable threshold, an issue is reported.\n"
+                            },
+                            "defaultConfiguration": {
+                                "enabled": true,
+                                "level": "error",
+                                "rank": -1.0,
+                                "parameters": {
+                                    "php-versions": [],
+                                    "integrations": []
+                                }
+                            },
+                            "helpUri": "https://mago.carthage.software/tools/linter/rules/maintainability#too-many-methods",
+                            "properties": {
+                                "frequency": 3,
+                                "category": "Maintainability"
+                            }
+                        },
+                        {
+                            "id": "too-many-properties",
+                            "name": "Too Many Properties",
+                            "shortDescription": {
+                                "text": "Detects class-like structures with too many properties."
+                            },
+                            "fullDescription": {
+                                "text": "Detects class-like structures with too many properties.\n\nThis rule checks the number of properties in classes, traits, and interfaces.\nIf the number of properties exceeds a configurable threshold, an issue is reported.\n"
+                            },
+                            "defaultConfiguration": {
+                                "enabled": true,
+                                "level": "error",
+                                "rank": -1.0,
+                                "parameters": {
+                                    "php-versions": [],
+                                    "integrations": []
+                                }
+                            },
+                            "helpUri": "https://mago.carthage.software/tools/linter/rules/maintainability#too-many-properties",
+                            "properties": {
+                                "frequency": 1,
+                                "category": "Maintainability"
+                            }
+                        },
+                        {
+                            "id": "no-else-clause",
+                            "name": "No Else Clause",
+                            "shortDescription": {
+                                "text": "Flags `if` statements that include an `else` or `elseif` branch."
+                            },
+                            "fullDescription": {
+                                "text": "Flags `if` statements that include an `else` or `elseif` branch.\n\nUsing `else` or `elseif` can lead to deeply nested code and complex control flow.\nThis can often be simplified by using early returns (guard clauses), which makes\nthe code easier to read and maintain by reducing its cyclomatic complexity.\n"
+                            },
+                            "defaultConfiguration": {
+                                "enabled": true,
+                                "level": "none",
+                                "rank": -1.0,
+                                "parameters": {
+                                    "php-versions": [],
+                                    "integrations": []
+                                }
+                            },
+                            "helpUri": "https://mago.carthage.software/tools/linter/rules/maintainability#no-else-clause",
+                            "properties": {
+                                "frequency": 7,
+                                "category": "Maintainability"
+                            }
+                        },
+                        {
+                            "id": "halstead",
+                            "shortDescription": {
+                                "text": "Computes Halstead metrics (volume, difficulty, effort) and reports if they exceed configured thresholds."
+                            },
+                            "fullDescription": {
+                                "text": "Computes Halstead metrics (volume, difficulty, effort) and reports if they exceed configured thresholds.\n\nHalstead metrics are calculated by counting operators and operands in the analyzed code.\nFor more info: https://en.wikipedia.org/wiki/Halstead_complexity_measures\n"
+                            },
+                            "defaultConfiguration": {
+                                "enabled": true,
+                                "level": "warning",
+                                "rank": -1.0,
+                                "parameters": {
+                                    "php-versions": [],
+                                    "integrations": []
+                                }
+                            },
+                            "helpUri": "https://mago.carthage.software/tools/linter/rules/maintainability#halstead",
+                            "properties": {
+                                "frequency": 3,
+                                "category": "Maintainability"
+                            }
+                        },
+                        {
+                            "id": "no-error-control-operator",
+                            "name": "No Error Control Operator",
+                            "shortDescription": {
+                                "text": "Detects the use of the error control operator `@`."
+                            },
+                            "fullDescription": {
+                                "text": "Detects the use of the error control operator `@`.\n\nThe error control operator suppresses errors and makes debugging more difficult.\n"
+                            },
+                            "defaultConfiguration": {
+                                "enabled": true,
+                                "level": "error",
+                                "rank": -1.0,
+                                "parameters": {
+                                    "php-versions": [],
+                                    "integrations": []
+                                }
+                            },
+                            "helpUri": "https://mago.carthage.software/tools/linter/rules/safety#no-error-control-operator",
+                            "properties": {
+                                "frequency": 5,
+                                "category": "Safety"
+                            }
+                        },
+                        {
+                            "id": "no-multi-assignments",
+                            "name": "No Multi Assignments",
+                            "shortDescription": {
+                                "text": "Flags any instances of multiple assignments in a single statement. This can lead to"
+                            },
+                            "fullDescription": {
+                                "text": "Flags any instances of multiple assignments in a single statement. This can lead to\nconfusion and unexpected behavior, and is generally considered poor practice.\n"
+                            },
+                            "defaultConfiguration": {
+                                "enabled": true,
+                                "level": "warning",
+                                "rank": -1.0,
+                                "parameters": {
+                                    "php-versions": [],
+                                    "integrations": []
+                                }
+                            },
+                            "helpUri": "https://mago.carthage.software/tools/linter/rules/clarity#no-multi-assignments",
+                            "properties": {
+                                "frequency": 1,
+                                "category": "Clarity"
+                            }
+                        },
+                        {
+                            "id": "strict-behavior",
+                            "name": "Strict Behavior",
+                            "shortDescription": {
+                                "text": "Detects functions relying on loose comparison unless the `$strict` parameter is specified."
+                            },
+                            "fullDescription": {
+                                "text": "Detects functions relying on loose comparison unless the `$strict` parameter is specified.\nThe use of loose comparison for these functions may lead to hard-to-debug, unexpected behaviors.\n"
+                            },
+                            "defaultConfiguration": {
+                                "enabled": true,
+                                "level": "warning",
+                                "rank": -1.0,
+                                "parameters": {
+                                    "php-versions": [
+                                        {
+                                            "min": "7.0.0",
+                                            "max": null
+                                        }
+                                    ],
+                                    "integrations": []
+                                }
+                            },
+                            "helpUri": "https://mago.carthage.software/tools/linter/rules/correctness#strict-behavior",
+                            "properties": {
+                                "frequency": 1,
+                                "category": "Correctness"
+                            }
+                        },
+                        {
+                            "id": "no-boolean-flag-parameter",
+                            "name": "No Boolean Flag Parameter",
+                            "shortDescription": {
+                                "text": "Flags function-like parameters that use a boolean type."
+                            },
+                            "fullDescription": {
+                                "text": "Flags function-like parameters that use a boolean type.\n\nBoolean flag parameters can indicate a violation of the Single Responsibility Principle (SRP).\nRefactor by extracting the flag logic into its own class or method.\n"
+                            },
+                            "defaultConfiguration": {
+                                "enabled": true,
+                                "level": "none",
+                                "rank": -1.0,
+                                "parameters": {
+                                    "php-versions": [],
+                                    "integrations": []
+                                }
+                            },
+                            "helpUri": "https://mago.carthage.software/tools/linter/rules/maintainability#no-boolean-flag-parameter",
+                            "properties": {
+                                "frequency": 1,
+                                "category": "Maintainability"
+                            }
+                        },
+                        {
+                            "id": "no-redundant-use",
+                            "name": "No Redundant Use",
+                            "shortDescription": {
+                                "text": "Detects `use` statements that import items that are never used or are redundant"
+                            },
+                            "fullDescription": {
+                                "text": "Detects `use` statements that import items that are never used or are redundant\nbecause they import from the same namespace.\n"
+                            },
+                            "defaultConfiguration": {
+                                "enabled": true,
+                                "level": "warning",
+                                "rank": -1.0,
+                                "parameters": {
+                                    "php-versions": [],
+                                    "integrations": []
+                                }
+                            },
+                            "helpUri": "https://mago.carthage.software/tools/linter/rules/redundancy#no-redundant-use",
+                            "properties": {
+                                "frequency": 8,
+                                "category": "Redundancy"
+                            }
+                        },
+                        {
+                            "id": "identity-comparison",
+                            "name": "Identity Comparison",
+                            "shortDescription": {
+                                "text": "Detects equality and inequality comparisons that should use identity comparison operators."
+                            },
+                            "fullDescription": {
+                                "text": "Detects equality and inequality comparisons that should use identity comparison operators.\n"
+                            },
+                            "defaultConfiguration": {
+                                "enabled": true,
+                                "level": "warning",
+                                "rank": -1.0,
+                                "parameters": {
+                                    "php-versions": [],
+                                    "integrations": []
+                                }
+                            },
+                            "helpUri": "https://mago.carthage.software/tools/linter/rules/correctness#identity-comparison",
+                            "properties": {
+                                "frequency": 1,
+                                "category": "Correctness"
+                            }
+                        },
+                        {
+                            "id": "no-assign-in-condition",
+                            "name": "No Assign In Condition",
+                            "shortDescription": {
+                                "text": "Detects assignments in conditions which can lead to unexpected behavior and make the code harder"
+                            },
+                            "fullDescription": {
+                                "text": "Detects assignments in conditions which can lead to unexpected behavior and make the code harder\nto read and understand.\n"
+                            },
+                            "defaultConfiguration": {
+                                "enabled": true,
+                                "level": "warning",
+                                "rank": -1.0,
+                                "parameters": {
+                                    "php-versions": [],
+                                    "integrations": []
+                                }
+                            },
+                            "helpUri": "https://mago.carthage.software/tools/linter/rules/correctness#no-assign-in-condition",
+                            "properties": {
+                                "frequency": 1,
+                                "category": "Correctness"
+                            }
+                        }
+                    ]
+                },
+                "extensions": [
+                    {
+                        "name": "bartlett/sarif-php-converters",
+                        "shortDescription": {
+                            "text": "Mago SARIF Converter"
+                        },
+                        "version": "1.6.9999999.9999999-dev"
+                    }
+                ]
+            },
+            "invocations": [
+                {
+                    "executionSuccessful": true,
+                    "commandLine": "report-converter",
+                    "arguments": [
+                        "convert",
+                        "mago",
+                        "--input-format=gitlab",
+                        "--input-file=examples/mago/native.gitlab.json",
+                        "-v",
+                        "--output-file=examples/mago/convert.gitlab.sarif.json"
+                    ],
+                    "workingDirectory": {
+                        "uri": "file:///shared/backups/bartlett/sarif-php-converters/"
+                    }
+                }
+            ],
+            "versionControlProvenance": [
+                {
+                    "repositoryUri": "https://github.com/llaville/sarif-php-converters.git",
+                    "revisionId": "4490723f892e387d825ba380656268a8caae9a38",
+                    "branch": "1.6",
+                    "revisionTag": "1.5.0-21-g4490723",
+                    "mappedTo": {
+                        "uriBaseId": "SOURCE_ROOT"
+                    },
+                    "properties": {
+                        "versionControl.system": "git",
+                        "versionControl.version": "2.47.3"
+                    }
+                }
+            ],
+            "originalUriBaseIds": {
+                "PROJECT_ROOT": {
+                    "uri": "file:///shared/backups/bartlett/",
+                    "description": {
+                        "text": "The root directory for all project files"
+                    }
+                },
+                "SOURCE_ROOT": {
+                    "uri": "sarif-php-converters/",
+                    "uriBaseId": "PROJECT_ROOT",
+                    "description": {
+                        "text": "The root directory for this project files"
+                    }
+                }
+            },
+            "results": [
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Source/EcsSource.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "15eecef58dcdbc68c15e77b1810bd3300eb77d94a86433272e5910c3494fbe6c"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `isset` construct.\n>Ambiguous check due to `isset()` conflating existence and null comparison\n\n`isset()` returns false for both unset variables and null values.\nIt is unclear whether you're checking for variable existence or non-null value.\n\nHelp: Use explicit null comparison (`!== null`) or the null coalescing operator (`??`)."
+                    },
+                    "ruleId": "no-isset",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Source/EcsSource.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-isset": "15eecef58dcdbc68c15e77b1810bd3300eb77d94a86433272e5910c3494fbe6c"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Case/MagoHelpUriCaseConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "b19123d226481ce6156b7b4c849ef7df5545d243ff5e3351360773af3df8bc71"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Unsafe use of `$GLOBALS` variable.\n>The `$GLOBALS` variable is used here\n\nAccessing the `$GLOBALS` array directly can lead to similar issues as using the `global` keyword.\nIt can make your code harder to understand, test, and maintain due to the implicit global state.\nConsider using dependency injection or other techniques to manage state and avoid relying on global variables.\n\nHelp: Refactor your code to avoid using the `$GLOBALS` variable directly."
+                    },
+                    "ruleId": "no-global",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/PhpCsConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-global": "55f11cdc371c5cf9463a25e2873638840dbf0aa3569728c47a29bd2ea8a0deb6"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Consider using early continue pattern to reduce nesting.\n>This if statement wraps the entire loop body\n>The loop can benefit from early continue to improve readability\n\nThis pattern improves readability by reducing nesting levels.\n\nHelp: Invert the condition and use `continue` to exit early, then place the main logic outside the if block."
+                    },
+                    "ruleId": "prefer-early-continue",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/PhpCsConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "prefer-early-continue": "55f11cdc371c5cf9463a25e2873638840dbf0aa3569728c47a29bd2ea8a0deb6"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Source/PhpCsFixerSource.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "d159c210ffd3c7bd4fe417b6636aac5de56d943338c6bc200e9a09fe5017a960"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Class has a high kan defect score.\n>Class has a kan defect score of 2.04, which exceeds the threshold of 1.6.\n\nKan defect is a heuristic used by phpmetrics to estimate defect-proneness based on control-flow statements.\n\nHelp: You can also consider splitting large units of code into smaller, more focused units."
+                    },
+                    "ruleId": "kan-defect",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/PhpCsNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "kan-defect": "fbb94aa8e87ea0bcee4bd0ce4661bbe336e6b5e399ef6e6a7741ffd6eabe2903"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `isset` construct.\n>Ambiguous check due to `isset()` conflating existence and null comparison\n\n`isset()` returns false for both unset variables and null values.\nIt is unclear whether you're checking for variable existence or non-null value.\n\nHelp: Use explicit null comparison (`!== null`) or the null coalescing operator (`??`)."
+                    },
+                    "ruleId": "no-isset",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/PhpCsNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-isset": "fbb94aa8e87ea0bcee4bd0ce4661bbe336e6b5e399ef6e6a7741ffd6eabe2903"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `isset` construct.\n>Ambiguous check due to `isset()` conflating existence and null comparison\n\n`isset()` returns false for both unset variables and null values.\nIt is unclear whether you're checking for variable existence or non-null value.\n\nHelp: Use explicit null comparison (`!== null`) or the null coalescing operator (`??`)."
+                    },
+                    "ruleId": "no-isset",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/PhpCsNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-isset": "fbb94aa8e87ea0bcee4bd0ce4661bbe336e6b5e399ef6e6a7741ffd6eabe2903"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Source/PhpLintSource.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "0440bc0aa847d5b02d1c7bfa6404da7908387563bcfa943baa347026ad27c5b4"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Source/RectorSource.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "c3c4201fc12381a72f83d9077e9831122ae87504cf2e2b42929cb14a83d86d04"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Parameter list is too long.\n>This list has 9 parameters, which exceeds the threshold of 5.\n\nHaving a large number of parameters can make functions harder to understand and maintain.\n\nHelp: Try reducing the number of parameters, or consider passing an object or a shape instead."
+                    },
+                    "ruleId": "excessive-parameter-list",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Reporter/PhpCsReport.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "excessive-parameter-list": "f1208000b0c7a7b4fe82cba5a6886762266dce4c9552db0f05d4b8a38b4627ef"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Class has high complexity.\n>Class has a cyclomatic complexity of 18, which exceeds the threshold of 15."
+                    },
+                    "ruleId": "cyclomatic-complexity",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/SarifNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "cyclomatic-complexity": "d6149b3f2a4f0995a15c76dcacf0e7ef6272ec314a0e3cc94aa5ce73f6deacfe"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Unbraced variable in string interpolation.\n>String interpolation contains unbraced variables\n>Variable should be enclosed in curly braces\n\nUsing curly braces around variables in interpolated strings improves readability and prevents potential parsing issues.\n\nHelp: Wrap the variable in curly braces, e.g., `{$variable}`."
+                    },
+                    "ruleId": "braced-string-interpolation",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/SarifNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "braced-string-interpolation": "d6149b3f2a4f0995a15c76dcacf0e7ef6272ec314a0e3cc94aa5ce73f6deacfe"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Class has high complexity.\n>Class has a cyclomatic complexity of 76, which exceeds the threshold of 15."
+                    },
+                    "ruleId": "cyclomatic-complexity",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "cyclomatic-complexity": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Class has a high kan defect score.\n>Class has a kan defect score of 5.07, which exceeds the threshold of 1.6.\n\nKan defect is a heuristic used by phpmetrics to estimate defect-proneness based on control-flow statements.\n\nHelp: You can also consider splitting large units of code into smaller, more focused units."
+                    },
+                    "ruleId": "kan-defect",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "kan-defect": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Class has too many methods.\n>Class has 22 methods, which exceeds the threshold of 10.\n\nHaving a large number of methods can make structures harder to understand and maintain.\n\nHelp: Try reducing the number of methods, or consider splitting the structure into smaller, more focused structures."
+                    },
+                    "ruleId": "too-many-methods",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "too-many-methods": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Class has too many properties.\n>Class has 18 properties, which exceeds the threshold of 10.\n\nHaving a large number of properties can make classes harder to understand and maintain.\n\nHelp: Try reducing the number of properties, or consider grouping related properties into a single object."
+                    },
+                    "ruleId": "too-many-properties",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "too-many-properties": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Avoid `else` clauses.\n>This `else` clause can often be eliminated\n\nCode is often clearer when the main logic is not nested inside an `if` statement.\n\nHelp: Consider refactoring to use an early return (a guard clause) to simplify the control flow."
+                    },
+                    "ruleId": "no-else-clause",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-else-clause": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Method has a high halstead difficulty\n>Method exceeds halstead difficulty threshold(s)\n\nHalstead difficulty is 13 (threshold 12). Difficulty reflects how hard the code is to write or understand.\n\nHelp: Consider breaking this into smaller, more focused functions."
+                    },
+                    "ruleId": "halstead",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "halstead": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Method has a high halstead volume\n>Method exceeds halstead volume threshold(s)\n\nHalstead volume is 1015.36 (threshold 1000). Volume estimates the code's overall size/complexity.\n\nHelp: Consider breaking this into smaller, more focused functions."
+                    },
+                    "ruleId": "halstead",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "halstead": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Consider using early continue pattern to reduce nesting.\n>This if statement wraps the entire loop body\n>The loop can benefit from early continue to improve readability\n\nThis pattern improves readability by reducing nesting levels.\n\nHelp: Invert the condition and use `continue` to exit early, then place the main logic outside the if block."
+                    },
+                    "ruleId": "prefer-early-continue",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "prefer-early-continue": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Unsafe use of `$GLOBALS` variable.\n>The `$GLOBALS` variable is used here\n\nAccessing the `$GLOBALS` array directly can lead to similar issues as using the `global` keyword.\nIt can make your code harder to understand, test, and maintain due to the implicit global state.\nConsider using dependency injection or other techniques to manage state and avoid relying on global variables.\n\nHelp: Refactor your code to avoid using the `$GLOBALS` variable directly."
+                    },
+                    "ruleId": "no-global",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-global": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Unsafe use of error control operator `@`.\n>This operator suppresses errors\n>This expression is being suppressed\n\nError control operator hide potential errors and make debugging more difficult.\n\nHelp: Remove the `@` and use `set_error_handler` to handle errors instead."
+                    },
+                    "ruleId": "no-error-control-operator",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-error-control-operator": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Unsafe use of error control operator `@`.\n>This operator suppresses errors\n>This expression is being suppressed\n\nError control operator hide potential errors and make debugging more difficult.\n\nHelp: Remove the `@` and use `set_error_handler` to handle errors instead."
+                    },
+                    "ruleId": "no-error-control-operator",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-error-control-operator": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Unsafe use of error control operator `@`.\n>This operator suppresses errors\n>This expression is being suppressed\n\nError control operator hide potential errors and make debugging more difficult.\n\nHelp: Remove the `@` and use `set_error_handler` to handle errors instead."
+                    },
+                    "ruleId": "no-error-control-operator",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-error-control-operator": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Unsafe use of error control operator `@`.\n>This operator suppresses errors\n>This expression is being suppressed\n\nError control operator hide potential errors and make debugging more difficult.\n\nHelp: Remove the `@` and use `set_error_handler` to handle errors instead."
+                    },
+                    "ruleId": "no-error-control-operator",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-error-control-operator": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Unsafe use of error control operator `@`.\n>This operator suppresses errors\n>This expression is being suppressed\n\nError control operator hide potential errors and make debugging more difficult.\n\nHelp: Remove the `@` and use `set_error_handler` to handle errors instead."
+                    },
+                    "ruleId": "no-error-control-operator",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-error-control-operator": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Avoid `else` clauses.\n>This `else` clause can often be eliminated\n\nCode is often clearer when the main logic is not nested inside an `if` statement.\n\nHelp: Consider refactoring to use an early return (a guard clause) to simplify the control flow."
+                    },
+                    "ruleId": "no-else-clause",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-else-clause": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/AbstractConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "f75dd90a74a1f018ebb8bc49fd9e2fcd015e788078d331cfd99673804e66f295"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Class has a high kan defect score.\n>Class has a kan defect score of 1.9200000000000002, which exceeds the threshold of 1.6.\n\nKan defect is a heuristic used by phpmetrics to estimate defect-proneness based on control-flow statements.\n\nHelp: You can also consider splitting large units of code into smaller, more focused units."
+                    },
+                    "ruleId": "kan-defect",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/ComposerNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "kan-defect": "dd77ccbd4ad06faf8a5466d8e59ac0503c1bc21d6bb6d6ad4027e6488bbb22ac"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Method has a high halstead volume\n>Method exceeds halstead volume threshold(s)\n\nHalstead volume is 1215.48 (threshold 1000). Volume estimates the code's overall size/complexity.\n\nHelp: Consider breaking this into smaller, more focused functions."
+                    },
+                    "ruleId": "halstead",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/ComposerNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "halstead": "dd77ccbd4ad06faf8a5466d8e59ac0503c1bc21d6bb6d6ad4027e6488bbb22ac"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Consider using early continue pattern to reduce nesting.\n>This if statement wraps the entire loop body\n>The loop can benefit from early continue to improve readability\n\nThis pattern improves readability by reducing nesting levels.\n\nHelp: Invert the condition and use `continue` to exit early, then place the main logic outside the if block."
+                    },
+                    "ruleId": "prefer-early-continue",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/ComposerNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "prefer-early-continue": "dd77ccbd4ad06faf8a5466d8e59ac0503c1bc21d6bb6d6ad4027e6488bbb22ac"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Avoid multiple assignments in a single statement.\n>This chained assignment can be confusing\n\nMultiple assignments can obscure the author's intent and may be confused with a comparison.\n\nHelp: Did you mean `$newValue = ($ruleId == 'CA' . $caId)`? If not, split this into separate assignment statements for clarity."
+                    },
+                    "ruleId": "no-multi-assignments",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/ComposerNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-multi-assignments": "dd77ccbd4ad06faf8a5466d8e59ac0503c1bc21d6bb6d6ad4027e6488bbb22ac"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `isset` construct.\n>Ambiguous check due to `isset()` conflating existence and null comparison\n\n`isset()` returns false for both unset variables and null values.\nIt is unclear whether you're checking for variable existence or non-null value.\n\nHelp: Use explicit null comparison (`!== null`) or the null coalescing operator (`??`)."
+                    },
+                    "ruleId": "no-isset",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/ComposerNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-isset": "dd77ccbd4ad06faf8a5466d8e59ac0503c1bc21d6bb6d6ad4027e6488bbb22ac"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `isset` construct.\n>Ambiguous check due to `isset()` conflating existence and null comparison\n\n`isset()` returns false for both unset variables and null values.\nIt is unclear whether you're checking for variable existence or non-null value.\n\nHelp: Use explicit null comparison (`!== null`) or the null coalescing operator (`??`)."
+                    },
+                    "ruleId": "no-isset",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/ComposerNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-isset": "dd77ccbd4ad06faf8a5466d8e59ac0503c1bc21d6bb6d6ad4027e6488bbb22ac"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Unsafe use of `$GLOBALS` variable.\n>The `$GLOBALS` variable is used here\n\nAccessing the `$GLOBALS` array directly can lead to similar issues as using the `global` keyword.\nIt can make your code harder to understand, test, and maintain due to the implicit global state.\nConsider using dependency injection or other techniques to manage state and avoid relying on global variables.\n\nHelp: Refactor your code to avoid using the `$GLOBALS` variable directly."
+                    },
+                    "ruleId": "no-global",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/PhpLintConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-global": "24d2edf46a392ac79dc4a8485724aebf13324e347e5a8bc414970f5ee6f0fb22"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Consider using early continue pattern to reduce nesting.\n>This if statement wraps the entire loop body\n>The loop can benefit from early continue to improve readability\n\nThis pattern improves readability by reducing nesting levels.\n\nHelp: Invert the condition and use `continue` to exit early, then place the main logic outside the if block."
+                    },
+                    "ruleId": "prefer-early-continue",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/PhpLintConverter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "prefer-early-continue": "24d2edf46a392ac79dc4a8485724aebf13324e347e5a8bc414970f5ee6f0fb22"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Source/PhpCsSource.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "6883be87eb8cb616cea43e80044297b93d4e6f200a34e8c5dc8b8f5939803ab4"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `isset` construct.\n>Ambiguous check due to `isset()` conflating existence and null comparison\n\n`isset()` returns false for both unset variables and null values.\nIt is unclear whether you're checking for variable existence or non-null value.\n\nHelp: Use explicit null comparison (`!== null`) or the null coalescing operator (`??`)."
+                    },
+                    "ruleId": "no-isset",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Source/PhpCsSource.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-isset": "6883be87eb8cb616cea43e80044297b93d4e6f200a34e8c5dc8b8f5939803ab4"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Source/MagoSource.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "74baa2d855b04e5ac1b44c21f3bc015138b234a595ac287a1295b6d61e3bdb99"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `isset` construct.\n>Ambiguous check due to `isset()` conflating existence and null comparison\n\n`isset()` returns false for both unset variables and null values.\nIt is unclear whether you're checking for variable existence or non-null value.\n\nHelp: Use explicit null comparison (`!== null`) or the null coalescing operator (`??`)."
+                    },
+                    "ruleId": "no-isset",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Source/MagoSource.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-isset": "74baa2d855b04e5ac1b44c21f3bc015138b234a595ac287a1295b6d61e3bdb99"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Source/MagoSource.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "74baa2d855b04e5ac1b44c21f3bc015138b234a595ac287a1295b6d61e3bdb99"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Call to `in_array` must enforce strict comparison.\n>Function `in_array` relies on loose comparison which can lead to unexpected behavior\n\nHelp: Call the function `in_array` with the `$strict` parameter set to `true`."
+                    },
+                    "ruleId": "strict-behavior",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Source/MagoSource.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "strict-behavior": "74baa2d855b04e5ac1b44c21f3bc015138b234a595ac287a1295b6d61e3bdb99"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Source/PhanSource.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "995ffcb8336e2f51f3c31c64ccff59f328080511ef40d53312a19f4615f981f7"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Avoid `else` clauses.\n>This `else` clause can often be eliminated\n\nCode is often clearer when the main logic is not nested inside an `if` statement.\n\nHelp: Consider refactoring to use an early return (a guard clause) to simplify the control flow."
+                    },
+                    "ruleId": "no-else-clause",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/CheckstyleNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-else-clause": "d009fa8182ab13b9ae86f9cb60394f7e601486be835d1f0576875447b99d434f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/CheckstyleNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "d009fa8182ab13b9ae86f9cb60394f7e601486be835d1f0576875447b99d434f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/CheckstyleNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "d009fa8182ab13b9ae86f9cb60394f7e601486be835d1f0576875447b99d434f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Avoid boolean flag parameters.\n>This parameter acts as a boolean flag\n>Boolean type declared here\n\nBoolean flags often indicate a function has more than one responsibility, making it harder to understand and test.\n\nHelp: Refactor by splitting the function into two separate methods, each with a clear, descriptive name."
+                    },
+                    "ruleId": "no-boolean-flag-parameter",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Reporter/TwigCsFixerReporter.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-boolean-flag-parameter": "2240a1c8acb1ac0f95007e84115f4161790eaa9d785a9ed1f0b2404a22fa143b"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `isset` construct.\n>Ambiguous check due to `isset()` conflating existence and null comparison\n\n`isset()` returns false for both unset variables and null values.\nIt is unclear whether you're checking for variable existence or non-null value.\n\nHelp: Use explicit null comparison (`!== null`) or the null coalescing operator (`??`)."
+                    },
+                    "ruleId": "no-isset",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Console/Application.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-isset": "7d0f979c6000263cd68a503f922d2dc091ccda4f69e13df2ad98c4b604ebe78f"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Unused import: `preg_match`.\n>`preg_match` is imported but never used.\n>Unused `use` statement.\n\nHelp: Remove the entire `use` statement."
+                    },
+                    "ruleId": "no-redundant-use",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/MagoNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-redundant-use": "75c3adbf46c16fb3df9b51cd3777d5f33e28aa0c9a8697aa296959541df34d04"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Unused import: `array_map`.\n>`array_map` is imported but never used.\n>Unused `use` statement.\n\nHelp: Remove the entire `use` statement."
+                    },
+                    "ruleId": "no-redundant-use",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/MagoNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-redundant-use": "75c3adbf46c16fb3df9b51cd3777d5f33e28aa0c9a8697aa296959541df34d04"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Unused import: `str_replace`.\n>`str_replace` is imported but never used.\n>Unused `use` statement.\n\nHelp: Remove the entire `use` statement."
+                    },
+                    "ruleId": "no-redundant-use",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/MagoNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-redundant-use": "75c3adbf46c16fb3df9b51cd3777d5f33e28aa0c9a8697aa296959541df34d04"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Unused import: `implode`.\n>`implode` is imported but never used.\n>Unused `use` statement.\n\nHelp: Remove the entire `use` statement."
+                    },
+                    "ruleId": "no-redundant-use",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/MagoNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-redundant-use": "75c3adbf46c16fb3df9b51cd3777d5f33e28aa0c9a8697aa296959541df34d04"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Unused import: `sprintf`.\n>`sprintf` is imported but never used.\n>Unused `use` statement.\n\nHelp: Remove the entire `use` statement."
+                    },
+                    "ruleId": "no-redundant-use",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/MagoNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-redundant-use": "75c3adbf46c16fb3df9b51cd3777d5f33e28aa0c9a8697aa296959541df34d04"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Unused import: `strtolower`.\n>`strtolower` is imported but never used.\n>Unused `use` statement.\n\nHelp: Remove the entire `use` statement."
+                    },
+                    "ruleId": "no-redundant-use",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/MagoNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-redundant-use": "75c3adbf46c16fb3df9b51cd3777d5f33e28aa0c9a8697aa296959541df34d04"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Unused import: `trim`.\n>`trim` is imported but never used.\n>Unused `use` statement.\n\nHelp: Remove the entire `use` statement."
+                    },
+                    "ruleId": "no-redundant-use",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/MagoNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-redundant-use": "75c3adbf46c16fb3df9b51cd3777d5f33e28aa0c9a8697aa296959541df34d04"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Unused import: `count`.\n>`count` is imported but never used.\n>Unused `use` statement.\n\nHelp: Remove the entire `use` statement."
+                    },
+                    "ruleId": "no-redundant-use",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/MagoNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-redundant-use": "75c3adbf46c16fb3df9b51cd3777d5f33e28aa0c9a8697aa296959541df34d04"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Class has high complexity.\n>Class has a cyclomatic complexity of 20, which exceeds the threshold of 15."
+                    },
+                    "ruleId": "cyclomatic-complexity",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/MagoNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "cyclomatic-complexity": "75c3adbf46c16fb3df9b51cd3777d5f33e28aa0c9a8697aa296959541df34d04"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Class has a high kan defect score.\n>Class has a kan defect score of 1.61, which exceeds the threshold of 1.6.\n\nKan defect is a heuristic used by phpmetrics to estimate defect-proneness based on control-flow statements.\n\nHelp: You can also consider splitting large units of code into smaller, more focused units."
+                    },
+                    "ruleId": "kan-defect",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/MagoNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "kan-defect": "75c3adbf46c16fb3df9b51cd3777d5f33e28aa0c9a8697aa296959541df34d04"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/MagoNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "75c3adbf46c16fb3df9b51cd3777d5f33e28aa0c9a8697aa296959541df34d04"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `isset` construct.\n>Ambiguous check due to `isset()` conflating existence and null comparison\n\n`isset()` returns false for both unset variables and null values.\nIt is unclear whether you're checking for variable existence or non-null value.\n\nHelp: Use explicit null comparison (`!== null`) or the null coalescing operator (`??`)."
+                    },
+                    "ruleId": "no-isset",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/MagoNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-isset": "75c3adbf46c16fb3df9b51cd3777d5f33e28aa0c9a8697aa296959541df34d04"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/MagoNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "75c3adbf46c16fb3df9b51cd3777d5f33e28aa0c9a8697aa296959541df34d04"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use identity comparison `===` instead of equality comparison `==`.\n>Equality operator is used here\n\nIdentity comparison `===` checks for both value and type equality, while equality comparison `==` performs type coercion, which can lead to unexpected results.\n\nHelp: Use `===` to ensure both value and type are equal."
+                    },
+                    "ruleId": "identity-comparison",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/MagoNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "identity-comparison": "75c3adbf46c16fb3df9b51cd3777d5f33e28aa0c9a8697aa296959541df34d04"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Source/ComposerSource.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "9e2ab60840d92fbee6cc06b05b1a2e15ad85f390861c2c550c94432f0bfc2383"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Source/PhpMdSource.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "51c1ce99ad26ba1a790b96324e9e804fb8619ad04fa98fe52f20d0cd334c041d"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Source/PhpStanSource.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "a0bf3b4cfaafef50f0f406421666993b21271bc7500e05ddcc66ebb9a43bfd9d"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Class has a high kan defect score.\n>Class has a kan defect score of 2.27, which exceeds the threshold of 1.6.\n\nKan defect is a heuristic used by phpmetrics to estimate defect-proneness based on control-flow statements.\n\nHelp: You can also consider splitting large units of code into smaller, more focused units."
+                    },
+                    "ruleId": "kan-defect",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Source/AbstractSource.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "kan-defect": "2ff6007167f3630a479ae2dd965e55062f57f451fbcfb2005b736ce5270bb9cb"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Consider using early continue pattern to reduce nesting.\n>This if statement wraps the entire loop body\n>The loop can benefit from early continue to improve readability\n\nThis pattern improves readability by reducing nesting levels.\n\nHelp: Invert the condition and use `continue` to exit early, then place the main logic outside the if block."
+                    },
+                    "ruleId": "prefer-early-continue",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Source/AbstractSource.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "prefer-early-continue": "2ff6007167f3630a479ae2dd965e55062f57f451fbcfb2005b736ce5270bb9cb"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Class has too many methods.\n>Class has 12 methods, which exceeds the threshold of 10.\n\nHaving a large number of methods can make structures harder to understand and maintain.\n\nHelp: Try reducing the number of methods, or consider splitting the structure into smaller, more focused structures."
+                    },
+                    "ruleId": "too-many-methods",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Factory/SourceFactory.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "too-many-methods": "1bd70e14ad2b2c872813c1cd1c3e0ffdba83f8654a8b0404c6d667d8c1367bc6"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Class has high complexity.\n>Class has a cyclomatic complexity of 17, which exceeds the threshold of 15."
+                    },
+                    "ruleId": "cyclomatic-complexity",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/PhpMdNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "cyclomatic-complexity": "79e91ec6bbf717d5beddaf0939c6bc9745d387cfb2eda00bd8db7cb8e9d1cc56"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Class has a high kan defect score.\n>Class has a kan defect score of 2, which exceeds the threshold of 1.6.\n\nKan defect is a heuristic used by phpmetrics to estimate defect-proneness based on control-flow statements.\n\nHelp: You can also consider splitting large units of code into smaller, more focused units."
+                    },
+                    "ruleId": "kan-defect",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/PhpMdNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "kan-defect": "79e91ec6bbf717d5beddaf0939c6bc9745d387cfb2eda00bd8db7cb8e9d1cc56"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Avoid `else` clauses.\n>This `else` clause can often be eliminated\n\nCode is often clearer when the main logic is not nested inside an `if` statement.\n\nHelp: Consider refactoring to use an early return (a guard clause) to simplify the control flow."
+                    },
+                    "ruleId": "no-else-clause",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/PhpMdNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-else-clause": "79e91ec6bbf717d5beddaf0939c6bc9745d387cfb2eda00bd8db7cb8e9d1cc56"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Avoid `else` clauses.\n>This `else` clause can often be eliminated\n\nCode is often clearer when the main logic is not nested inside an `if` statement.\n\nHelp: Consider refactoring to use an early return (a guard clause) to simplify the control flow."
+                    },
+                    "ruleId": "no-else-clause",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/PhpMdNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-else-clause": "79e91ec6bbf717d5beddaf0939c6bc9745d387cfb2eda00bd8db7cb8e9d1cc56"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/PhpMdNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "79e91ec6bbf717d5beddaf0939c6bc9745d387cfb2eda00bd8db7cb8e9d1cc56"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/PhpMdNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "79e91ec6bbf717d5beddaf0939c6bc9745d387cfb2eda00bd8db7cb8e9d1cc56"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/PhpMdNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "79e91ec6bbf717d5beddaf0939c6bc9745d387cfb2eda00bd8db7cb8e9d1cc56"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Normalizer/PhpMdNormalizer.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "79e91ec6bbf717d5beddaf0939c6bc9745d387cfb2eda00bd8db7cb8e9d1cc56"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Converter/Source/TwigCsFixerSource.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "c67b5d5197ed4caacef3fb74d277c1759695b6a8855ec325f76a33eb3ad57a99"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Class has too many methods.\n>Class has 12 methods, which exceeds the threshold of 10.\n\nHaving a large number of methods can make structures harder to understand and maintain.\n\nHelp: Try reducing the number of methods, or consider splitting the structure into smaller, more focused structures."
+                    },
+                    "ruleId": "too-many-methods",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Factory/ConverterFactory.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "too-many-methods": "810e0e635bec67861e05f6bcad155a286580ed3b43b041c207b34b30b459bccb"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Class has high complexity.\n>Class has a cyclomatic complexity of 22, which exceeds the threshold of 15."
+                    },
+                    "ruleId": "cyclomatic-complexity",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Console/Command/ConvertCommand.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "cyclomatic-complexity": "371659ea44bab5b9432ad5a2b886fc4784f304b2d2abd59f49a60656888e9df8"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Console/Command/ConvertCommand.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "371659ea44bab5b9432ad5a2b886fc4784f304b2d2abd59f49a60656888e9df8"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Console/Command/ConvertCommand.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "371659ea44bab5b9432ad5a2b886fc4784f304b2d2abd59f49a60656888e9df8"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Avoid `else` clauses.\n>This `else` clause can often be eliminated\n\nCode is often clearer when the main logic is not nested inside an `if` statement.\n\nHelp: Consider refactoring to use an early return (a guard clause) to simplify the control flow."
+                    },
+                    "ruleId": "no-else-clause",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Console/Command/ConvertCommand.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-else-clause": "371659ea44bab5b9432ad5a2b886fc4784f304b2d2abd59f49a60656888e9df8"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Console/Command/ConvertCommand.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "371659ea44bab5b9432ad5a2b886fc4784f304b2d2abd59f49a60656888e9df8"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Avoid `else` clauses.\n>This `else` clause can often be eliminated\n\nCode is often clearer when the main logic is not nested inside an `if` statement.\n\nHelp: Consider refactoring to use an early return (a guard clause) to simplify the control flow."
+                    },
+                    "ruleId": "no-else-clause",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Console/Command/ConvertCommand.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-else-clause": "371659ea44bab5b9432ad5a2b886fc4784f304b2d2abd59f49a60656888e9df8"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Console/Command/ConvertCommand.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "371659ea44bab5b9432ad5a2b886fc4784f304b2d2abd59f49a60656888e9df8"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent."
+                    },
+                    "ruleId": "no-empty",
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Console/Command/ConvertCommand.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-empty": "371659ea44bab5b9432ad5a2b886fc4784f304b2d2abd59f49a60656888e9df8"
+                    }
+                },
+                {
+                    "message": {
+                        "text": "Avoid assignments in conditions.\n>This is an assignment\n>This is the condition\n\nAssigning a value within a condition can lead to unexpected behavior and make the code harder to read and understand.\nIt's easy to confuse assignment (`=`) with comparison (`==`) in this context. Ensure you're using the correct operator."
+                    },
+                    "ruleId": "no-assign-in-condition",
+                    "level": "warning",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "../../../../src/Console/Command/ConvertCommand.php",
+                                    "uriBaseId": "SOURCE_ROOT"
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "no-assign-in-condition": "371659ea44bab5b9432ad5a2b886fc4784f304b2d2abd59f49a60656888e9df8"
+                    }
+                }
+            ],
+            "automationDetails": {
+                "id": "Daily run 2026-05-04T03:39:29+00:00"
+            }
+        }
+    ]
+}

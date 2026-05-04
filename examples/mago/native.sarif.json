@@ -1,0 +1,2872 @@
+{
+  "runs": [
+    {
+      "results": [
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/EcsSource.php"
+                },
+                "region": {
+                  "endColumn": 32,
+                  "endLine": 27,
+                  "startColumn": 13,
+                  "startLine": 27
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `isset()` conflating existence and null comparison"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/EcsSource.php"
+                },
+                "region": {
+                  "endColumn": 43,
+                  "endLine": 40,
+                  "startColumn": 17,
+                  "startLine": 40
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `isset` construct.\n\n**Notes:**\n- `isset()` returns false for both unset variables and null values.\n- It is unclear whether you're checking for variable existence or non-null value.\n\n**Help:** Use explicit null comparison (`!== null`) or the null coalescing operator (`??`).",
+            "text": "Use of the `isset` construct."
+          },
+          "ruleId": "no-isset"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Case/MagoHelpUriCaseConverter.php"
+                },
+                "region": {
+                  "endColumn": 33,
+                  "endLine": 29,
+                  "startColumn": 13,
+                  "startLine": 29
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "The `$GLOBALS` variable is used here"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/PhpCsConverter.php"
+                },
+                "region": {
+                  "endColumn": 30,
+                  "endLine": 43,
+                  "startColumn": 22,
+                  "startLine": 43
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Unsafe use of `$GLOBALS` variable.\n\n**Notes:**\n- Accessing the `$GLOBALS` array directly can lead to similar issues as using the `global` keyword.\n- It can make your code harder to understand, test, and maintain due to the implicit global state.\n- Consider using dependency injection or other techniques to manage state and avoid relying on global variables.\n\n**Help:** Refactor your code to avoid using the `$GLOBALS` variable directly.",
+            "text": "Unsafe use of `$GLOBALS` variable."
+          },
+          "ruleId": "no-global"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "message": {
+                "text": "This if statement wraps the entire loop body"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/PhpCsConverter.php"
+                },
+                "region": {
+                  "endColumn": 14,
+                  "endLine": 54,
+                  "startColumn": 13,
+                  "startLine": 46
+                }
+              }
+            },
+            {
+              "message": {
+                "text": "The loop can benefit from early continue to improve readability"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/PhpCsConverter.php"
+                },
+                "region": {
+                  "endColumn": 10,
+                  "endLine": 55,
+                  "startColumn": 9,
+                  "startLine": 45
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Consider using early continue pattern to reduce nesting.\n\n**Notes:**\n- This pattern improves readability by reducing nesting levels.\n\n**Help:** Invert the condition and use `continue` to exit early, then place the main logic outside the if block.",
+            "text": "Consider using early continue pattern to reduce nesting."
+          },
+          "ruleId": "prefer-early-continue"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/PhpCsFixerSource.php"
+                },
+                "region": {
+                  "endColumn": 32,
+                  "endLine": 20,
+                  "startColumn": 13,
+                  "startLine": 20
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Class has a kan defect score of 2.04, which exceeds the threshold of 1.6."
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpCsNormalizer.php"
+                },
+                "region": {
+                  "endColumn": 28,
+                  "endLine": 27,
+                  "startColumn": 7,
+                  "startLine": 27
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Class has a high kan defect score.\n\n**Notes:**\n- Kan defect is a heuristic used by phpmetrics to estimate defect-proneness based on control-flow statements.\n\n**Help:** You can also consider splitting large units of code into smaller, more focused units.",
+            "text": "Class has a high kan defect score."
+          },
+          "ruleId": "kan-defect"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `isset()` conflating existence and null comparison"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpCsNormalizer.php"
+                },
+                "region": {
+                  "endColumn": 57,
+                  "endLine": 93,
+                  "startColumn": 26,
+                  "startLine": 93
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `isset` construct.\n\n**Notes:**\n- `isset()` returns false for both unset variables and null values.\n- It is unclear whether you're checking for variable existence or non-null value.\n\n**Help:** Use explicit null comparison (`!== null`) or the null coalescing operator (`??`).",
+            "text": "Use of the `isset` construct."
+          },
+          "ruleId": "no-isset"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `isset()` conflating existence and null comparison"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpCsNormalizer.php"
+                },
+                "region": {
+                  "endColumn": 55,
+                  "endLine": 133,
+                  "startColumn": 22,
+                  "startLine": 133
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `isset` construct.\n\n**Notes:**\n- `isset()` returns false for both unset variables and null values.\n- It is unclear whether you're checking for variable existence or non-null value.\n\n**Help:** Use explicit null comparison (`!== null`) or the null coalescing operator (`??`).",
+            "text": "Use of the `isset` construct."
+          },
+          "ruleId": "no-isset"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/PhpLintSource.php"
+                },
+                "region": {
+                  "endColumn": 32,
+                  "endLine": 20,
+                  "startColumn": 13,
+                  "startLine": 20
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/RectorSource.php"
+                },
+                "region": {
+                  "endColumn": 32,
+                  "endLine": 20,
+                  "startColumn": 13,
+                  "startLine": 20
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "This list has 9 parameters, which exceeds the threshold of 5."
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Reporter/PhpCsReport.php"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 94,
+                  "startColumn": 29,
+                  "startLine": 84
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Parameter list is too long.\n\n**Notes:**\n- Having a large number of parameters can make functions harder to understand and maintain.\n\n**Help:** Try reducing the number of parameters, or consider passing an object or a shape instead.",
+            "text": "Parameter list is too long."
+          },
+          "ruleId": "excessive-parameter-list"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Class has a cyclomatic complexity of 18, which exceeds the threshold of 15."
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/SarifNormalizer.php"
+                },
+                "region": {
+                  "endColumn": 28,
+                  "endLine": 27,
+                  "startColumn": 7,
+                  "startLine": 27
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Class has high complexity."
+          },
+          "ruleId": "cyclomatic-complexity"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "message": {
+                "text": "String interpolation contains unbraced variables"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/SarifNormalizer.php"
+                },
+                "region": {
+                  "endColumn": 37,
+                  "endLine": 133,
+                  "startColumn": 27,
+                  "startLine": 133
+                }
+              }
+            },
+            {
+              "message": {
+                "text": "Variable should be enclosed in curly braces"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/SarifNormalizer.php"
+                },
+                "region": {
+                  "endColumn": 35,
+                  "endLine": 133,
+                  "startColumn": 29,
+                  "startLine": 133
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Unbraced variable in string interpolation.\n\n**Notes:**\n- Using curly braces around variables in interpolated strings improves readability and prevents potential parsing issues.\n\n**Help:** Wrap the variable in curly braces, e.g., `{$variable}`.",
+            "text": "Unbraced variable in string interpolation."
+          },
+          "ruleId": "braced-string-interpolation"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Class has a cyclomatic complexity of 76, which exceeds the threshold of 15."
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 33,
+                  "endLine": 63,
+                  "startColumn": 10,
+                  "startLine": 63
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Class has high complexity."
+          },
+          "ruleId": "cyclomatic-complexity"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Class has a kan defect score of 5.07, which exceeds the threshold of 1.6."
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 33,
+                  "endLine": 63,
+                  "startColumn": 10,
+                  "startLine": 63
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Class has a high kan defect score.\n\n**Notes:**\n- Kan defect is a heuristic used by phpmetrics to estimate defect-proneness based on control-flow statements.\n\n**Help:** You can also consider splitting large units of code into smaller, more focused units.",
+            "text": "Class has a high kan defect score."
+          },
+          "ruleId": "kan-defect"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Class has 22 methods, which exceeds the threshold of 10."
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 33,
+                  "endLine": 63,
+                  "startColumn": 10,
+                  "startLine": 63
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Class has too many methods.\n\n**Notes:**\n- Having a large number of methods can make structures harder to understand and maintain.\n\n**Help:** Try reducing the number of methods, or consider splitting the structure into smaller, more focused structures.",
+            "text": "Class has too many methods."
+          },
+          "ruleId": "too-many-methods"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Class has 18 properties, which exceeds the threshold of 10."
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 33,
+                  "endLine": 63,
+                  "startColumn": 10,
+                  "startLine": 63
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Class has too many properties.\n\n**Notes:**\n- Having a large number of properties can make classes harder to understand and maintain.\n\n**Help:** Try reducing the number of properties, or consider grouping related properties into a single object.",
+            "text": "Class has too many properties."
+          },
+          "ruleId": "too-many-properties"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "message": {
+                "text": "This `else` clause can often be eliminated"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 10,
+                  "endLine": 122,
+                  "startColumn": 11,
+                  "startLine": 119
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Avoid `else` clauses.\n\n**Notes:**\n- Code is often clearer when the main logic is not nested inside an `if` statement.\n\n**Help:** Consider refactoring to use an early return (a guard clause) to simplify the control flow.",
+            "text": "Avoid `else` clauses."
+          },
+          "ruleId": "no-else-clause"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 47,
+                  "endLine": 149,
+                  "startColumn": 14,
+                  "startLine": 149
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 38,
+                  "endLine": 152,
+                  "startColumn": 13,
+                  "startLine": 152
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 32,
+                  "endLine": 168,
+                  "startColumn": 14,
+                  "startLine": 168
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 53,
+                  "endLine": 174,
+                  "startColumn": 35,
+                  "startLine": 174
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "message": {
+                "text": "Method exceeds halstead difficulty threshold(s)"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 202,
+                  "startColumn": 5,
+                  "startLine": 177
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Method has a high halstead difficulty\n\n**Notes:**\n- Halstead difficulty is 13 (threshold 12). Difficulty reflects how hard the code is to write or understand.\n\n**Help:** Consider breaking this into smaller, more focused functions.",
+            "text": "Method has a high halstead difficulty"
+          },
+          "ruleId": "halstead"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 47,
+                  "endLine": 182,
+                  "startColumn": 14,
+                  "startLine": 182
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 40,
+                  "endLine": 187,
+                  "startColumn": 14,
+                  "startLine": 187
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 48,
+                  "endLine": 190,
+                  "startColumn": 14,
+                  "startLine": 190
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 47,
+                  "endLine": 195,
+                  "startColumn": 14,
+                  "startLine": 195
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 41,
+                  "endLine": 232,
+                  "startColumn": 18,
+                  "startLine": 232
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 53,
+                  "endLine": 235,
+                  "startColumn": 18,
+                  "startLine": 235
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 52,
+                  "endLine": 239,
+                  "startColumn": 18,
+                  "startLine": 239
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 51,
+                  "endLine": 243,
+                  "startColumn": 18,
+                  "startLine": 243
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 41,
+                  "endLine": 248,
+                  "startColumn": 18,
+                  "startLine": 248
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 44,
+                  "endLine": 252,
+                  "startColumn": 18,
+                  "startLine": 252
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 47,
+                  "endLine": 255,
+                  "startColumn": 18,
+                  "startLine": 255
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 57,
+                  "endLine": 260,
+                  "startColumn": 18,
+                  "startLine": 260
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "message": {
+                "text": "Method exceeds halstead volume threshold(s)"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 366,
+                  "startColumn": 5,
+                  "startLine": 279
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Method has a high halstead volume\n\n**Notes:**\n- Halstead volume is 1015.36 (threshold 1000). Volume estimates the code's overall size/complexity.\n\n**Help:** Consider breaking this into smaller, more focused functions.",
+            "text": "Method has a high halstead volume"
+          },
+          "ruleId": "halstead"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 56,
+                  "endLine": 301,
+                  "startColumn": 22,
+                  "startLine": 301
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 63,
+                  "endLine": 305,
+                  "startColumn": 22,
+                  "startLine": 305
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 55,
+                  "endLine": 319,
+                  "startColumn": 22,
+                  "startLine": 319
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 40,
+                  "endLine": 323,
+                  "startColumn": 26,
+                  "startLine": 323
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 41,
+                  "endLine": 327,
+                  "startColumn": 26,
+                  "startLine": 327
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "message": {
+                "text": "This if statement wraps the entire loop body"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 22,
+                  "endLine": 355,
+                  "startColumn": 21,
+                  "startLine": 353
+                }
+              }
+            },
+            {
+              "message": {
+                "text": "The loop can benefit from early continue to improve readability"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 18,
+                  "endLine": 356,
+                  "startColumn": 17,
+                  "startLine": 352
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Consider using early continue pattern to reduce nesting.\n\n**Notes:**\n- This pattern improves readability by reducing nesting levels.\n\n**Help:** Invert the condition and use `continue` to exit early, then place the main logic outside the if block.",
+            "text": "Consider using early continue pattern to reduce nesting."
+          },
+          "ruleId": "prefer-early-continue"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 40,
+                  "endLine": 357,
+                  "startColumn": 22,
+                  "startLine": 357
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "The `$GLOBALS` variable is used here"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 30,
+                  "endLine": 391,
+                  "startColumn": 22,
+                  "startLine": 391
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Unsafe use of `$GLOBALS` variable.\n\n**Notes:**\n- Accessing the `$GLOBALS` array directly can lead to similar issues as using the `global` keyword.\n- It can make your code harder to understand, test, and maintain due to the implicit global state.\n- Consider using dependency injection or other techniques to manage state and avoid relying on global variables.\n\n**Help:** Refactor your code to avoid using the `$GLOBALS` variable directly.",
+            "text": "Unsafe use of `$GLOBALS` variable."
+          },
+          "ruleId": "no-global"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 43,
+                  "endLine": 418,
+                  "startColumn": 13,
+                  "startLine": 418
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "This operator suppresses errors"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 23,
+                  "endLine": 425,
+                  "startColumn": 22,
+                  "startLine": 425
+                }
+              }
+            },
+            {
+              "message": {
+                "text": "This expression is being suppressed"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 90,
+                  "endLine": 425,
+                  "startColumn": 23,
+                  "startLine": 425
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Unsafe use of error control operator `@`.\n\n**Notes:**\n- Error control operator hide potential errors and make debugging more difficult.\n\n**Help:** Remove the `@` and use `set_error_handler` to handle errors instead.",
+            "text": "Unsafe use of error control operator `@`."
+          },
+          "ruleId": "no-error-control-operator"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "This operator suppresses errors"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 24,
+                  "endLine": 430,
+                  "startColumn": 23,
+                  "startLine": 430
+                }
+              }
+            },
+            {
+              "message": {
+                "text": "This expression is being suppressed"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 78,
+                  "endLine": 430,
+                  "startColumn": 24,
+                  "startLine": 430
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Unsafe use of error control operator `@`.\n\n**Notes:**\n- Error control operator hide potential errors and make debugging more difficult.\n\n**Help:** Remove the `@` and use `set_error_handler` to handle errors instead.",
+            "text": "Unsafe use of error control operator `@`."
+          },
+          "ruleId": "no-error-control-operator"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "This operator suppresses errors"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 25,
+                  "endLine": 431,
+                  "startColumn": 24,
+                  "startLine": 431
+                }
+              }
+            },
+            {
+              "message": {
+                "text": "This expression is being suppressed"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 68,
+                  "endLine": 431,
+                  "startColumn": 25,
+                  "startLine": 431
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Unsafe use of error control operator `@`.\n\n**Notes:**\n- Error control operator hide potential errors and make debugging more difficult.\n\n**Help:** Remove the `@` and use `set_error_handler` to handle errors instead.",
+            "text": "Unsafe use of error control operator `@`."
+          },
+          "ruleId": "no-error-control-operator"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "This operator suppresses errors"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 20,
+                  "endLine": 432,
+                  "startColumn": 19,
+                  "startLine": 432
+                }
+              }
+            },
+            {
+              "message": {
+                "text": "This expression is being suppressed"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 75,
+                  "endLine": 432,
+                  "startColumn": 20,
+                  "startLine": 432
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Unsafe use of error control operator `@`.\n\n**Notes:**\n- Error control operator hide potential errors and make debugging more difficult.\n\n**Help:** Remove the `@` and use `set_error_handler` to handle errors instead.",
+            "text": "Unsafe use of error control operator `@`."
+          },
+          "ruleId": "no-error-control-operator"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "This operator suppresses errors"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 24,
+                  "endLine": 433,
+                  "startColumn": 23,
+                  "startLine": 433
+                }
+              }
+            },
+            {
+              "message": {
+                "text": "This expression is being suppressed"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 45,
+                  "endLine": 433,
+                  "startColumn": 24,
+                  "startLine": 433
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Unsafe use of error control operator `@`.\n\n**Notes:**\n- Error control operator hide potential errors and make debugging more difficult.\n\n**Help:** Remove the `@` and use `set_error_handler` to handle errors instead.",
+            "text": "Unsafe use of error control operator `@`."
+          },
+          "ruleId": "no-error-control-operator"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 46,
+                  "endLine": 490,
+                  "startColumn": 16,
+                  "startLine": 490
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "message": {
+                "text": "This `else` clause can often be eliminated"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 10,
+                  "endLine": 681,
+                  "startColumn": 11,
+                  "startLine": 679
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Avoid `else` clauses.\n\n**Notes:**\n- Code is often clearer when the main logic is not nested inside an `if` statement.\n\n**Help:** Consider refactoring to use an early return (a guard clause) to simplify the control flow.",
+            "text": "Avoid `else` clauses."
+          },
+          "ruleId": "no-else-clause"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/AbstractConverter.php"
+                },
+                "region": {
+                  "endColumn": 34,
+                  "endLine": 676,
+                  "startColumn": 18,
+                  "startLine": 676
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Class has a kan defect score of 1.9200000000000002, which exceeds the threshold of 1.6."
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/ComposerNormalizer.php"
+                },
+                "region": {
+                  "endColumn": 31,
+                  "endLine": 25,
+                  "startColumn": 7,
+                  "startLine": 25
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Class has a high kan defect score.\n\n**Notes:**\n- Kan defect is a heuristic used by phpmetrics to estimate defect-proneness based on control-flow statements.\n\n**Help:** You can also consider splitting large units of code into smaller, more focused units.",
+            "text": "Class has a high kan defect score."
+          },
+          "ruleId": "kan-defect"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "message": {
+                "text": "Method exceeds halstead volume threshold(s)"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/ComposerNormalizer.php"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 139,
+                  "startColumn": 5,
+                  "startLine": 55
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Method has a high halstead volume\n\n**Notes:**\n- Halstead volume is 1215.48 (threshold 1000). Volume estimates the code's overall size/complexity.\n\n**Help:** Consider breaking this into smaller, more focused functions.",
+            "text": "Method has a high halstead volume"
+          },
+          "ruleId": "halstead"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "message": {
+                "text": "This if statement wraps the entire loop body"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/ComposerNormalizer.php"
+                },
+                "region": {
+                  "endColumn": 30,
+                  "endLine": 85,
+                  "startColumn": 29,
+                  "startLine": 79
+                }
+              }
+            },
+            {
+              "message": {
+                "text": "The loop can benefit from early continue to improve readability"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/ComposerNormalizer.php"
+                },
+                "region": {
+                  "endColumn": 26,
+                  "endLine": 86,
+                  "startColumn": 25,
+                  "startLine": 78
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Consider using early continue pattern to reduce nesting.\n\n**Notes:**\n- This pattern improves readability by reducing nesting levels.\n\n**Help:** Invert the condition and use `continue` to exit early, then place the main logic outside the if block.",
+            "text": "Consider using early continue pattern to reduce nesting."
+          },
+          "ruleId": "prefer-early-continue"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "message": {
+                "text": "This chained assignment can be confusing"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/ComposerNormalizer.php"
+                },
+                "region": {
+                  "endColumn": 59,
+                  "endLine": 106,
+                  "startColumn": 25,
+                  "startLine": 106
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Avoid multiple assignments in a single statement.\n\n**Notes:**\n- Multiple assignments can obscure the author's intent and may be confused with a comparison.\n\n**Help:** Did you mean `$newValue = ($ruleId == 'CA' . $caId)`? If not, split this into separate assignment statements for clarity.",
+            "text": "Avoid multiple assignments in a single statement."
+          },
+          "ruleId": "no-multi-assignments"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `isset()` conflating existence and null comparison"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/ComposerNormalizer.php"
+                },
+                "region": {
+                  "endColumn": 52,
+                  "endLine": 107,
+                  "startColumn": 30,
+                  "startLine": 107
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `isset` construct.\n\n**Notes:**\n- `isset()` returns false for both unset variables and null values.\n- It is unclear whether you're checking for variable existence or non-null value.\n\n**Help:** Use explicit null comparison (`!== null`) or the null coalescing operator (`??`).",
+            "text": "Use of the `isset` construct."
+          },
+          "ruleId": "no-isset"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `isset()` conflating existence and null comparison"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/ComposerNormalizer.php"
+                },
+                "region": {
+                  "endColumn": 111,
+                  "endLine": 125,
+                  "startColumn": 79,
+                  "startLine": 125
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `isset` construct.\n\n**Notes:**\n- `isset()` returns false for both unset variables and null values.\n- It is unclear whether you're checking for variable existence or non-null value.\n\n**Help:** Use explicit null comparison (`!== null`) or the null coalescing operator (`??`).",
+            "text": "Use of the `isset` construct."
+          },
+          "ruleId": "no-isset"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "The `$GLOBALS` variable is used here"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/PhpLintConverter.php"
+                },
+                "region": {
+                  "endColumn": 30,
+                  "endLine": 46,
+                  "startColumn": 22,
+                  "startLine": 46
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Unsafe use of `$GLOBALS` variable.\n\n**Notes:**\n- Accessing the `$GLOBALS` array directly can lead to similar issues as using the `global` keyword.\n- It can make your code harder to understand, test, and maintain due to the implicit global state.\n- Consider using dependency injection or other techniques to manage state and avoid relying on global variables.\n\n**Help:** Refactor your code to avoid using the `$GLOBALS` variable directly.",
+            "text": "Unsafe use of `$GLOBALS` variable."
+          },
+          "ruleId": "no-global"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "message": {
+                "text": "This if statement wraps the entire loop body"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/PhpLintConverter.php"
+                },
+                "region": {
+                  "endColumn": 14,
+                  "endLine": 56,
+                  "startColumn": 13,
+                  "startLine": 49
+                }
+              }
+            },
+            {
+              "message": {
+                "text": "The loop can benefit from early continue to improve readability"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/PhpLintConverter.php"
+                },
+                "region": {
+                  "endColumn": 10,
+                  "endLine": 57,
+                  "startColumn": 9,
+                  "startLine": 48
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Consider using early continue pattern to reduce nesting.\n\n**Notes:**\n- This pattern improves readability by reducing nesting levels.\n\n**Help:** Invert the condition and use `continue` to exit early, then place the main logic outside the if block.",
+            "text": "Consider using early continue pattern to reduce nesting."
+          },
+          "ruleId": "prefer-early-continue"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/PhpCsSource.php"
+                },
+                "region": {
+                  "endColumn": 32,
+                  "endLine": 30,
+                  "startColumn": 13,
+                  "startLine": 30
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `isset()` conflating existence and null comparison"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/PhpCsSource.php"
+                },
+                "region": {
+                  "endColumn": 43,
+                  "endLine": 42,
+                  "startColumn": 17,
+                  "startLine": 42
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `isset` construct.\n\n**Notes:**\n- `isset()` returns false for both unset variables and null values.\n- It is unclear whether you're checking for variable existence or non-null value.\n\n**Help:** Use explicit null comparison (`!== null`) or the null coalescing operator (`??`).",
+            "text": "Use of the `isset` construct."
+          },
+          "ruleId": "no-isset"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/MagoSource.php"
+                },
+                "region": {
+                  "endColumn": 32,
+                  "endLine": 31,
+                  "startColumn": 13,
+                  "startLine": 31
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `isset()` conflating existence and null comparison"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/MagoSource.php"
+                },
+                "region": {
+                  "endColumn": 43,
+                  "endLine": 46,
+                  "startColumn": 17,
+                  "startLine": 46
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `isset` construct.\n\n**Notes:**\n- `isset()` returns false for both unset variables and null values.\n- It is unclear whether you're checking for variable existence or non-null value.\n\n**Help:** Use explicit null comparison (`!== null`) or the null coalescing operator (`??`).",
+            "text": "Use of the `isset` construct."
+          },
+          "ruleId": "no-isset"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/MagoSource.php"
+                },
+                "region": {
+                  "endColumn": 34,
+                  "endLine": 56,
+                  "startColumn": 18,
+                  "startLine": 56
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "message": {
+                "text": "Function `in_array` relies on loose comparison which can lead to unexpected behavior"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/MagoSource.php"
+                },
+                "region": {
+                  "endColumn": 40,
+                  "endLine": 73,
+                  "startColumn": 32,
+                  "startLine": 73
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Call to `in_array` must enforce strict comparison.\n**Help:** Call the function `in_array` with the `$strict` parameter set to `true`.",
+            "text": "Call to `in_array` must enforce strict comparison."
+          },
+          "ruleId": "strict-behavior"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/PhanSource.php"
+                },
+                "region": {
+                  "endColumn": 32,
+                  "endLine": 20,
+                  "startColumn": 13,
+                  "startLine": 20
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "message": {
+                "text": "This `else` clause can often be eliminated"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/CheckstyleNormalizer.php"
+                },
+                "region": {
+                  "endColumn": 22,
+                  "endLine": 83,
+                  "startColumn": 23,
+                  "startLine": 81
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Avoid `else` clauses.\n\n**Notes:**\n- Code is often clearer when the main logic is not nested inside an `if` statement.\n\n**Help:** Consider refactoring to use an early return (a guard clause) to simplify the control flow.",
+            "text": "Avoid `else` clauses."
+          },
+          "ruleId": "no-else-clause"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/CheckstyleNormalizer.php"
+                },
+                "region": {
+                  "endColumn": 36,
+                  "endLine": 87,
+                  "startColumn": 22,
+                  "startLine": 87
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/CheckstyleNormalizer.php"
+                },
+                "region": {
+                  "endColumn": 40,
+                  "endLine": 91,
+                  "startColumn": 22,
+                  "startLine": 91
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "message": {
+                "text": "This parameter acts as a boolean flag"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Reporter/TwigCsFixerReporter.php"
+                },
+                "region": {
+                  "endColumn": 20,
+                  "endLine": 42,
+                  "startColumn": 14,
+                  "startLine": 42
+                }
+              }
+            },
+            {
+              "message": {
+                "text": "Boolean type declared here"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Reporter/TwigCsFixerReporter.php"
+                },
+                "region": {
+                  "endColumn": 13,
+                  "endLine": 42,
+                  "startColumn": 9,
+                  "startLine": 42
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Avoid boolean flag parameters.\n\n**Notes:**\n- Boolean flags often indicate a function has more than one responsibility, making it harder to understand and test.\n\n**Help:** Refactor by splitting the function into two separate methods, each with a clear, descriptive name.",
+            "text": "Avoid boolean flag parameters."
+          },
+          "ruleId": "no-boolean-flag-parameter"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `isset()` conflating existence and null comparison"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Console/Application.php"
+                },
+                "region": {
+                  "endColumn": 67,
+                  "endLine": 43,
+                  "startColumn": 18,
+                  "startLine": 43
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `isset` construct.\n\n**Notes:**\n- `isset()` returns false for both unset variables and null values.\n- It is unclear whether you're checking for variable existence or non-null value.\n\n**Help:** Use explicit null comparison (`!== null`) or the null coalescing operator (`??`).",
+            "text": "Use of the `isset` construct."
+          },
+          "ruleId": "no-isset"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/MagoNormalizer.php"
+                },
+                "region": {
+                  "endColumn": 32,
+                  "endLine": 81,
+                  "startColumn": 18,
+                  "startLine": 81
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `isset()` conflating existence and null comparison"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/MagoNormalizer.php"
+                },
+                "region": {
+                  "endColumn": 40,
+                  "endLine": 85,
+                  "startColumn": 18,
+                  "startLine": 85
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `isset` construct.\n\n**Notes:**\n- `isset()` returns false for both unset variables and null values.\n- It is unclear whether you're checking for variable existence or non-null value.\n\n**Help:** Use explicit null comparison (`!== null`) or the null coalescing operator (`??`).",
+            "text": "Use of the `isset` construct."
+          },
+          "ruleId": "no-isset"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/MagoNormalizer.php"
+                },
+                "region": {
+                  "endColumn": 36,
+                  "endLine": 92,
+                  "startColumn": 18,
+                  "startLine": 92
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/ComposerSource.php"
+                },
+                "region": {
+                  "endColumn": 32,
+                  "endLine": 20,
+                  "startColumn": 13,
+                  "startLine": 20
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/PhpMdSource.php"
+                },
+                "region": {
+                  "endColumn": 32,
+                  "endLine": 20,
+                  "startColumn": 13,
+                  "startLine": 20
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/PhpStanSource.php"
+                },
+                "region": {
+                  "endColumn": 32,
+                  "endLine": 20,
+                  "startColumn": 13,
+                  "startLine": 20
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Class has a kan defect score of 2.27, which exceeds the threshold of 1.6."
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/AbstractSource.php"
+                },
+                "region": {
+                  "endColumn": 30,
+                  "endLine": 24,
+                  "startColumn": 10,
+                  "startLine": 24
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Class has a high kan defect score.\n\n**Notes:**\n- Kan defect is a heuristic used by phpmetrics to estimate defect-proneness based on control-flow statements.\n\n**Help:** You can also consider splitting large units of code into smaller, more focused units.",
+            "text": "Class has a high kan defect score."
+          },
+          "ruleId": "kan-defect"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "message": {
+                "text": "This if statement wraps the entire loop body"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/AbstractSource.php"
+                },
+                "region": {
+                  "endColumn": 14,
+                  "endLine": 98,
+                  "startColumn": 13,
+                  "startLine": 96
+                }
+              }
+            },
+            {
+              "message": {
+                "text": "The loop can benefit from early continue to improve readability"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/AbstractSource.php"
+                },
+                "region": {
+                  "endColumn": 10,
+                  "endLine": 99,
+                  "startColumn": 9,
+                  "startLine": 95
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Consider using early continue pattern to reduce nesting.\n\n**Notes:**\n- This pattern improves readability by reducing nesting levels.\n\n**Help:** Invert the condition and use `continue` to exit early, then place the main logic outside the if block.",
+            "text": "Consider using early continue pattern to reduce nesting."
+          },
+          "ruleId": "prefer-early-continue"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Class has 12 methods, which exceeds the threshold of 10."
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Factory/SourceFactory.php"
+                },
+                "region": {
+                  "endColumn": 26,
+                  "endLine": 26,
+                  "startColumn": 7,
+                  "startLine": 26
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Class has too many methods.\n\n**Notes:**\n- Having a large number of methods can make structures harder to understand and maintain.\n\n**Help:** Try reducing the number of methods, or consider splitting the structure into smaller, more focused structures.",
+            "text": "Class has too many methods."
+          },
+          "ruleId": "too-many-methods"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Class has a cyclomatic complexity of 17, which exceeds the threshold of 15."
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpMdNormalizer.php"
+                },
+                "region": {
+                  "endColumn": 28,
+                  "endLine": 32,
+                  "startColumn": 7,
+                  "startLine": 32
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Class has high complexity."
+          },
+          "ruleId": "cyclomatic-complexity"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Class has a kan defect score of 2, which exceeds the threshold of 1.6."
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpMdNormalizer.php"
+                },
+                "region": {
+                  "endColumn": 28,
+                  "endLine": 32,
+                  "startColumn": 7,
+                  "startLine": 32
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Class has a high kan defect score.\n\n**Notes:**\n- Kan defect is a heuristic used by phpmetrics to estimate defect-proneness based on control-flow statements.\n\n**Help:** You can also consider splitting large units of code into smaller, more focused units.",
+            "text": "Class has a high kan defect score."
+          },
+          "ruleId": "kan-defect"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "message": {
+                "text": "This `else` clause can often be eliminated"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpMdNormalizer.php"
+                },
+                "region": {
+                  "endColumn": 22,
+                  "endLine": 94,
+                  "startColumn": 23,
+                  "startLine": 92
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Avoid `else` clauses.\n\n**Notes:**\n- Code is often clearer when the main logic is not nested inside an `if` statement.\n\n**Help:** Consider refactoring to use an early return (a guard clause) to simplify the control flow.",
+            "text": "Avoid `else` clauses."
+          },
+          "ruleId": "no-else-clause"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "message": {
+                "text": "This `else` clause can often be eliminated"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpMdNormalizer.php"
+                },
+                "region": {
+                  "endColumn": 18,
+                  "endLine": 112,
+                  "startColumn": 19,
+                  "startLine": 102
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Avoid `else` clauses.\n\n**Notes:**\n- Code is often clearer when the main logic is not nested inside an `if` statement.\n\n**Help:** Consider refactoring to use an early return (a guard clause) to simplify the control flow.",
+            "text": "Avoid `else` clauses."
+          },
+          "ruleId": "no-else-clause"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpMdNormalizer.php"
+                },
+                "region": {
+                  "endColumn": 36,
+                  "endLine": 114,
+                  "startColumn": 22,
+                  "startLine": 114
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpMdNormalizer.php"
+                },
+                "region": {
+                  "endColumn": 40,
+                  "endLine": 119,
+                  "startColumn": 22,
+                  "startLine": 119
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpMdNormalizer.php"
+                },
+                "region": {
+                  "endColumn": 34,
+                  "endLine": 171,
+                  "startColumn": 18,
+                  "startLine": 171
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Normalizer/PhpMdNormalizer.php"
+                },
+                "region": {
+                  "endColumn": 31,
+                  "endLine": 180,
+                  "startColumn": 18,
+                  "startLine": 180
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Converter/Source/TwigCsFixerSource.php"
+                },
+                "region": {
+                  "endColumn": 32,
+                  "endLine": 20,
+                  "startColumn": 13,
+                  "startLine": 20
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Class has 12 methods, which exceeds the threshold of 10."
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Factory/ConverterFactory.php"
+                },
+                "region": {
+                  "endColumn": 29,
+                  "endLine": 22,
+                  "startColumn": 7,
+                  "startLine": 22
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Class has too many methods.\n\n**Notes:**\n- Having a large number of methods can make structures harder to understand and maintain.\n\n**Help:** Try reducing the number of methods, or consider splitting the structure into smaller, more focused structures.",
+            "text": "Class has too many methods."
+          },
+          "ruleId": "too-many-methods"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Class has a cyclomatic complexity of 22, which exceeds the threshold of 15."
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Console/Command/ConvertCommand.php"
+                },
+                "region": {
+                  "endColumn": 21,
+                  "endLine": 46,
+                  "startColumn": 1251,
+                  "startLine": 46
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Class has high complexity."
+          },
+          "ruleId": "cyclomatic-complexity"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Console/Command/ConvertCommand.php"
+                },
+                "region": {
+                  "endColumn": 48,
+                  "endLine": 106,
+                  "startColumn": 17,
+                  "startLine": 106
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Console/Command/ConvertCommand.php"
+                },
+                "region": {
+                  "endColumn": 48,
+                  "endLine": 143,
+                  "startColumn": 18,
+                  "startLine": 143
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "message": {
+                "text": "This `else` clause can often be eliminated"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Console/Command/ConvertCommand.php"
+                },
+                "region": {
+                  "endColumn": 14,
+                  "endLine": 154,
+                  "startColumn": 15,
+                  "startLine": 150
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Avoid `else` clauses.\n\n**Notes:**\n- Code is often clearer when the main logic is not nested inside an `if` statement.\n\n**Help:** Consider refactoring to use an early return (a guard clause) to simplify the control flow.",
+            "text": "Avoid `else` clauses."
+          },
+          "ruleId": "no-else-clause"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Console/Command/ConvertCommand.php"
+                },
+                "region": {
+                  "endColumn": 36,
+                  "endLine": 160,
+                  "startColumn": 18,
+                  "startLine": 160
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "message": {
+                "text": "This `else` clause can often be eliminated"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Console/Command/ConvertCommand.php"
+                },
+                "region": {
+                  "endColumn": 18,
+                  "endLine": 171,
+                  "startColumn": 19,
+                  "startLine": 163
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Avoid `else` clauses.\n\n**Notes:**\n- Code is often clearer when the main logic is not nested inside an `if` statement.\n\n**Help:** Consider refactoring to use an early return (a guard clause) to simplify the control flow.",
+            "text": "Avoid `else` clauses."
+          },
+          "ruleId": "no-else-clause"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Console/Command/ConvertCommand.php"
+                },
+                "region": {
+                  "endColumn": 51,
+                  "endLine": 161,
+                  "startColumn": 21,
+                  "startLine": 161
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "message": {
+                "text": "Ambiguous check due to `empty()` loose semantic"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Console/Command/ConvertCommand.php"
+                },
+                "region": {
+                  "endColumn": 31,
+                  "endLine": 186,
+                  "startColumn": 14,
+                  "startLine": 186
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Use of the `empty` construct.\n\n**Notes:**\n- `empty()` exhibits unexpected behavior on specific value.\n- It is unclear what condition is being treated with `empty()`.\n\n**Help:** Use strict comparison or specific predicate function to clearly convey your intent.",
+            "text": "Use of the `empty` construct."
+          },
+          "ruleId": "no-empty"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "message": {
+                "text": "This is an assignment"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Console/Command/ConvertCommand.php"
+                },
+                "region": {
+                  "endColumn": 50,
+                  "endLine": 226,
+                  "startColumn": 24,
+                  "startLine": 226
+                }
+              }
+            },
+            {
+              "message": {
+                "text": "This is the condition"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/shared/backups/bartlett/sarif-php-converters/src/Console/Command/ConvertCommand.php"
+                },
+                "region": {
+                  "endColumn": 50,
+                  "endLine": 226,
+                  "startColumn": 24,
+                  "startLine": 226
+                }
+              }
+            }
+          ],
+          "message": {
+            "markdown": "Avoid assignments in conditions.\n\n**Notes:**\n- Assigning a value within a condition can lead to unexpected behavior and make the code harder to read and understand.\n- It's easy to confuse assignment (`=`) with comparison (`==`) in this context. Ensure you're using the correct operator.\n",
+            "text": "Avoid assignments in conditions."
+          },
+          "ruleId": "no-assign-in-condition"
+        }
+      ],
+      "tool": {
+        "driver": {
+          "informationUri": "https://github.com/carthage-software/mago",
+          "name": "mago",
+          "version": "1.25.2"
+        }
+      }
+    }
+  ],
+  "version": "2.1.0"
+}

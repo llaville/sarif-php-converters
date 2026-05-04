@@ -31,6 +31,8 @@ final class ConverterFactory implements ConverterFactoryInterface
                 return $this->createComposer($options, $serializerFactory);
             case ConverterFactoryInterface::BUILTIN_CONVERTER_ECS:
                 return $this->createEasyCodingStandard($options, $serializerFactory);
+            case ConverterFactoryInterface::BUILTIN_CONVERTER_MAGO:
+                return $this->createMago($options, $serializerFactory);
             case ConverterFactoryInterface::BUILTIN_CONVERTER_PHAN:
                 return $this->createPhan($options, $serializerFactory);
             case ConverterFactoryInterface::BUILTIN_CONVERTER_PHPCS:
@@ -74,6 +76,18 @@ final class ConverterFactory implements ConverterFactoryInterface
     public function createEasyCodingStandard(array $options, ?SerializerFactory $serializerFactory = null): ConverterInterface
     {
         return new Converter\EcsConverter($options, $serializerFactory);
+    }
+
+    /**
+     * @param array{
+     *     format_output: bool,
+     *     include_code_snippets?: bool,
+     *     include_context_region?: bool
+     * } $options
+     */
+    public function createMago(array $options, ?SerializerFactory $serializerFactory = null): ConverterInterface
+    {
+        return new Converter\MagoConverter($options, $serializerFactory);
     }
 
     /**

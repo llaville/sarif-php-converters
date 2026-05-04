@@ -1,0 +1,2149 @@
+[
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "6e8d5cc682a5b4d2c9b70a5c006ad73a",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Source/EcsSource.php",
+      "positions": {
+        "begin": {
+          "line": 27,
+          "column": 13
+        },
+        "end": {
+          "line": 27,
+          "column": 32
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `isset` construct.\n>Ambiguous check due to `isset()` conflating existence and null comparison\n\n`isset()` returns false for both unset variables and null values.\nIt is unclear whether you're checking for variable existence or non-null value.\n\nHelp: Use explicit null comparison (`!== null`) or the null coalescing operator (`??`).",
+    "check_name": "no-isset",
+    "fingerprint": "17eca241a631dc6082867f8cff460fb6",
+    "severity": "minor",
+    "location": {
+      "path": "src/Converter/Source/EcsSource.php",
+      "positions": {
+        "begin": {
+          "line": 40,
+          "column": 17
+        },
+        "end": {
+          "line": 40,
+          "column": 43
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "d3cbe51dbca2475c81c1162d1230d620",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Case/MagoHelpUriCaseConverter.php",
+      "positions": {
+        "begin": {
+          "line": 29,
+          "column": 13
+        },
+        "end": {
+          "line": 29,
+          "column": 33
+        }
+      }
+    }
+  },
+  {
+    "description": "Unsafe use of `$GLOBALS` variable.\n>The `$GLOBALS` variable is used here\n\nAccessing the `$GLOBALS` array directly can lead to similar issues as using the `global` keyword.\nIt can make your code harder to understand, test, and maintain due to the implicit global state.\nConsider using dependency injection or other techniques to manage state and avoid relying on global variables.\n\nHelp: Refactor your code to avoid using the `$GLOBALS` variable directly.",
+    "check_name": "no-global",
+    "fingerprint": "6626ae16d6c7b377794712f80c2268c7",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/PhpCsConverter.php",
+      "positions": {
+        "begin": {
+          "line": 43,
+          "column": 22
+        },
+        "end": {
+          "line": 43,
+          "column": 30
+        }
+      }
+    }
+  },
+  {
+    "description": "Consider using early continue pattern to reduce nesting.\n>This if statement wraps the entire loop body\n>The loop can benefit from early continue to improve readability\n\nThis pattern improves readability by reducing nesting levels.\n\nHelp: Invert the condition and use `continue` to exit early, then place the main logic outside the if block.",
+    "check_name": "prefer-early-continue",
+    "fingerprint": "8dc253dd1232ed85efbf1b49a236d681",
+    "severity": "info",
+    "location": {
+      "path": "src/Converter/PhpCsConverter.php",
+      "positions": {
+        "begin": {
+          "line": 46,
+          "column": 13
+        },
+        "end": {
+          "line": 54,
+          "column": 14
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "383ec524a8b3b73ca4113e5a4e4c76ec",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Source/PhpCsFixerSource.php",
+      "positions": {
+        "begin": {
+          "line": 20,
+          "column": 13
+        },
+        "end": {
+          "line": 20,
+          "column": 32
+        }
+      }
+    }
+  },
+  {
+    "description": "Class has a high kan defect score.\n>Class has a kan defect score of 2.04, which exceeds the threshold of 1.6.\n\nKan defect is a heuristic used by phpmetrics to estimate defect-proneness based on control-flow statements.\n\nHelp: You can also consider splitting large units of code into smaller, more focused units.",
+    "check_name": "kan-defect",
+    "fingerprint": "245161ac713b07099b0b338feedfa1fe",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Normalizer/PhpCsNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 27,
+          "column": 7
+        },
+        "end": {
+          "line": 27,
+          "column": 28
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `isset` construct.\n>Ambiguous check due to `isset()` conflating existence and null comparison\n\n`isset()` returns false for both unset variables and null values.\nIt is unclear whether you're checking for variable existence or non-null value.\n\nHelp: Use explicit null comparison (`!== null`) or the null coalescing operator (`??`).",
+    "check_name": "no-isset",
+    "fingerprint": "31172dc39a98c5521307f39ee5c410c6",
+    "severity": "minor",
+    "location": {
+      "path": "src/Converter/Normalizer/PhpCsNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 93,
+          "column": 26
+        },
+        "end": {
+          "line": 93,
+          "column": 57
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `isset` construct.\n>Ambiguous check due to `isset()` conflating existence and null comparison\n\n`isset()` returns false for both unset variables and null values.\nIt is unclear whether you're checking for variable existence or non-null value.\n\nHelp: Use explicit null comparison (`!== null`) or the null coalescing operator (`??`).",
+    "check_name": "no-isset",
+    "fingerprint": "33cfe0d60a768a27cdecdaddcb7c98ee",
+    "severity": "minor",
+    "location": {
+      "path": "src/Converter/Normalizer/PhpCsNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 133,
+          "column": 22
+        },
+        "end": {
+          "line": 133,
+          "column": 55
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "c8a0a2d72c501e492c5b606634f79aaa",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Source/PhpLintSource.php",
+      "positions": {
+        "begin": {
+          "line": 20,
+          "column": 13
+        },
+        "end": {
+          "line": 20,
+          "column": 32
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "b02205684fbb3deed305afe855ae7986",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Source/RectorSource.php",
+      "positions": {
+        "begin": {
+          "line": 20,
+          "column": 13
+        },
+        "end": {
+          "line": 20,
+          "column": 32
+        }
+      }
+    }
+  },
+  {
+    "description": "Parameter list is too long.\n>This list has 9 parameters, which exceeds the threshold of 5.\n\nHaving a large number of parameters can make functions harder to understand and maintain.\n\nHelp: Try reducing the number of parameters, or consider passing an object or a shape instead.",
+    "check_name": "excessive-parameter-list",
+    "fingerprint": "a2d769ee1c941f02572f9734adff1dfc",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Reporter/PhpCsReport.php",
+      "positions": {
+        "begin": {
+          "line": 84,
+          "column": 29
+        },
+        "end": {
+          "line": 94,
+          "column": 6
+        }
+      }
+    }
+  },
+  {
+    "description": "Class has high complexity.\n>Class has a cyclomatic complexity of 18, which exceeds the threshold of 15.",
+    "check_name": "cyclomatic-complexity",
+    "fingerprint": "06b04228b3e3acad9465cce1b952d8a5",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Normalizer/SarifNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 27,
+          "column": 7
+        },
+        "end": {
+          "line": 27,
+          "column": 28
+        }
+      }
+    }
+  },
+  {
+    "description": "Unbraced variable in string interpolation.\n>String interpolation contains unbraced variables\n>Variable should be enclosed in curly braces\n\nUsing curly braces around variables in interpolated strings improves readability and prevents potential parsing issues.\n\nHelp: Wrap the variable in curly braces, e.g., `{$variable}`.",
+    "check_name": "braced-string-interpolation",
+    "fingerprint": "a57b70d46cdc7df909f94e7ae8c312f5",
+    "severity": "info",
+    "location": {
+      "path": "src/Converter/Normalizer/SarifNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 133,
+          "column": 27
+        },
+        "end": {
+          "line": 133,
+          "column": 37
+        }
+      }
+    }
+  },
+  {
+    "description": "Class has high complexity.\n>Class has a cyclomatic complexity of 76, which exceeds the threshold of 15.",
+    "check_name": "cyclomatic-complexity",
+    "fingerprint": "57b6aa90401c585d0f78396950de4d88",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 63,
+          "column": 10
+        },
+        "end": {
+          "line": 63,
+          "column": 33
+        }
+      }
+    }
+  },
+  {
+    "description": "Class has a high kan defect score.\n>Class has a kan defect score of 5.07, which exceeds the threshold of 1.6.\n\nKan defect is a heuristic used by phpmetrics to estimate defect-proneness based on control-flow statements.\n\nHelp: You can also consider splitting large units of code into smaller, more focused units.",
+    "check_name": "kan-defect",
+    "fingerprint": "c3c6e7ebaad09e69963a5da43d94373f",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 63,
+          "column": 10
+        },
+        "end": {
+          "line": 63,
+          "column": 33
+        }
+      }
+    }
+  },
+  {
+    "description": "Class has too many methods.\n>Class has 22 methods, which exceeds the threshold of 10.\n\nHaving a large number of methods can make structures harder to understand and maintain.\n\nHelp: Try reducing the number of methods, or consider splitting the structure into smaller, more focused structures.",
+    "check_name": "too-many-methods",
+    "fingerprint": "2f3416a5398e8090a477af93716a8282",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 63,
+          "column": 10
+        },
+        "end": {
+          "line": 63,
+          "column": 33
+        }
+      }
+    }
+  },
+  {
+    "description": "Class has too many properties.\n>Class has 18 properties, which exceeds the threshold of 10.\n\nHaving a large number of properties can make classes harder to understand and maintain.\n\nHelp: Try reducing the number of properties, or consider grouping related properties into a single object.",
+    "check_name": "too-many-properties",
+    "fingerprint": "0d540d4690793b01708af6b921b5e42c",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 63,
+          "column": 10
+        },
+        "end": {
+          "line": 63,
+          "column": 33
+        }
+      }
+    }
+  },
+  {
+    "description": "Avoid `else` clauses.\n>This `else` clause can often be eliminated\n\nCode is often clearer when the main logic is not nested inside an `if` statement.\n\nHelp: Consider refactoring to use an early return (a guard clause) to simplify the control flow.",
+    "check_name": "no-else-clause",
+    "fingerprint": "77b679005e1c810d59bd3586c269b860",
+    "severity": "info",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 119,
+          "column": 11
+        },
+        "end": {
+          "line": 122,
+          "column": 10
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "77c5d0dbbb5e7c95567286be5ead886d",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 149,
+          "column": 14
+        },
+        "end": {
+          "line": 149,
+          "column": 47
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "ab855a49670d1522c3f9d349ac90746b",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 152,
+          "column": 13
+        },
+        "end": {
+          "line": 152,
+          "column": 38
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "2381a887fde47bfb6c18ee434a2a2bdf",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 168,
+          "column": 14
+        },
+        "end": {
+          "line": 168,
+          "column": 32
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "dbe252654bf6752dc31e00e0bc5465c0",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 174,
+          "column": 35
+        },
+        "end": {
+          "line": 174,
+          "column": 53
+        }
+      }
+    }
+  },
+  {
+    "description": "Method has a high halstead difficulty\n>Method exceeds halstead difficulty threshold(s)\n\nHalstead difficulty is 13 (threshold 12). Difficulty reflects how hard the code is to write or understand.\n\nHelp: Consider breaking this into smaller, more focused functions.",
+    "check_name": "halstead",
+    "fingerprint": "3570ce52c047354012b38413e0664b7e",
+    "severity": "minor",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 177,
+          "column": 5
+        },
+        "end": {
+          "line": 202,
+          "column": 6
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "4943ee541d0ba6fffaff5585fd6cb035",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 182,
+          "column": 14
+        },
+        "end": {
+          "line": 182,
+          "column": 47
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "3c8bcbcf3a67e14f679842e35dc94a10",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 187,
+          "column": 14
+        },
+        "end": {
+          "line": 187,
+          "column": 40
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "7e1857376984d1f3ada8c1f66f908184",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 190,
+          "column": 14
+        },
+        "end": {
+          "line": 190,
+          "column": 48
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "878c401d59a4e357f69cf1e3477c6c8f",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 195,
+          "column": 14
+        },
+        "end": {
+          "line": 195,
+          "column": 47
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "15e5d572936389164987ee0b96b4e328",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 232,
+          "column": 18
+        },
+        "end": {
+          "line": 232,
+          "column": 41
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "a68fa06ab3b702836a1227a66f59bd2d",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 235,
+          "column": 18
+        },
+        "end": {
+          "line": 235,
+          "column": 53
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "c78677fd87c0c0bf63325e8068211ff0",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 239,
+          "column": 18
+        },
+        "end": {
+          "line": 239,
+          "column": 52
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "6a729fe39cff74192590f6f3bc8a1064",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 243,
+          "column": 18
+        },
+        "end": {
+          "line": 243,
+          "column": 51
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "d685a0f4c3bb29c25bcdf7b6f52495c2",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 248,
+          "column": 18
+        },
+        "end": {
+          "line": 248,
+          "column": 41
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "e67157190b6275e83a58e2f5e38e7a12",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 252,
+          "column": 18
+        },
+        "end": {
+          "line": 252,
+          "column": 44
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "908c96e34feabe3682194a20535d1bb0",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 255,
+          "column": 18
+        },
+        "end": {
+          "line": 255,
+          "column": 47
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "e8dda923bb715bfae211c4c2748f8e98",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 260,
+          "column": 18
+        },
+        "end": {
+          "line": 260,
+          "column": 57
+        }
+      }
+    }
+  },
+  {
+    "description": "Method has a high halstead volume\n>Method exceeds halstead volume threshold(s)\n\nHalstead volume is 1015.36 (threshold 1000). Volume estimates the code's overall size/complexity.\n\nHelp: Consider breaking this into smaller, more focused functions.",
+    "check_name": "halstead",
+    "fingerprint": "4e353bf6568fc8643e16d18e48ced973",
+    "severity": "minor",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 279,
+          "column": 5
+        },
+        "end": {
+          "line": 366,
+          "column": 6
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "7d2196ab9b5a19066d384141184079ba",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 301,
+          "column": 22
+        },
+        "end": {
+          "line": 301,
+          "column": 56
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "b5391374dc37f8b00aa72d6cbe2ef306",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 305,
+          "column": 22
+        },
+        "end": {
+          "line": 305,
+          "column": 63
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "e04cb8e488fa0ff0730df03b22dacc63",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 319,
+          "column": 22
+        },
+        "end": {
+          "line": 319,
+          "column": 55
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "246011a9162bdacad5ff989bc1b298bc",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 323,
+          "column": 26
+        },
+        "end": {
+          "line": 323,
+          "column": 40
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "863e43ef4a85810b65f9347a57e5effc",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 327,
+          "column": 26
+        },
+        "end": {
+          "line": 327,
+          "column": 41
+        }
+      }
+    }
+  },
+  {
+    "description": "Consider using early continue pattern to reduce nesting.\n>This if statement wraps the entire loop body\n>The loop can benefit from early continue to improve readability\n\nThis pattern improves readability by reducing nesting levels.\n\nHelp: Invert the condition and use `continue` to exit early, then place the main logic outside the if block.",
+    "check_name": "prefer-early-continue",
+    "fingerprint": "7a6e077f208d87bbfdfdbc952f730688",
+    "severity": "info",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 353,
+          "column": 21
+        },
+        "end": {
+          "line": 355,
+          "column": 22
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "15ee1cff8da0666312e0456695a710d1",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 357,
+          "column": 22
+        },
+        "end": {
+          "line": 357,
+          "column": 40
+        }
+      }
+    }
+  },
+  {
+    "description": "Unsafe use of `$GLOBALS` variable.\n>The `$GLOBALS` variable is used here\n\nAccessing the `$GLOBALS` array directly can lead to similar issues as using the `global` keyword.\nIt can make your code harder to understand, test, and maintain due to the implicit global state.\nConsider using dependency injection or other techniques to manage state and avoid relying on global variables.\n\nHelp: Refactor your code to avoid using the `$GLOBALS` variable directly.",
+    "check_name": "no-global",
+    "fingerprint": "40c0715b7a680c6024869398f49f72e4",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 391,
+          "column": 22
+        },
+        "end": {
+          "line": 391,
+          "column": 30
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "bdb7b2dad697bb635769b008c0228c81",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 418,
+          "column": 13
+        },
+        "end": {
+          "line": 418,
+          "column": 43
+        }
+      }
+    }
+  },
+  {
+    "description": "Unsafe use of error control operator `@`.\n>This operator suppresses errors\n>This expression is being suppressed\n\nError control operator hide potential errors and make debugging more difficult.\n\nHelp: Remove the `@` and use `set_error_handler` to handle errors instead.",
+    "check_name": "no-error-control-operator",
+    "fingerprint": "010befef9699a6bf7b0b74943616105e",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 425,
+          "column": 22
+        },
+        "end": {
+          "line": 425,
+          "column": 23
+        }
+      }
+    }
+  },
+  {
+    "description": "Unsafe use of error control operator `@`.\n>This operator suppresses errors\n>This expression is being suppressed\n\nError control operator hide potential errors and make debugging more difficult.\n\nHelp: Remove the `@` and use `set_error_handler` to handle errors instead.",
+    "check_name": "no-error-control-operator",
+    "fingerprint": "e27fb3c339269b5badc46c72ddd5c6aa",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 430,
+          "column": 23
+        },
+        "end": {
+          "line": 430,
+          "column": 24
+        }
+      }
+    }
+  },
+  {
+    "description": "Unsafe use of error control operator `@`.\n>This operator suppresses errors\n>This expression is being suppressed\n\nError control operator hide potential errors and make debugging more difficult.\n\nHelp: Remove the `@` and use `set_error_handler` to handle errors instead.",
+    "check_name": "no-error-control-operator",
+    "fingerprint": "7ba80c8e7a466a7541bbf4e07f6be576",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 431,
+          "column": 24
+        },
+        "end": {
+          "line": 431,
+          "column": 25
+        }
+      }
+    }
+  },
+  {
+    "description": "Unsafe use of error control operator `@`.\n>This operator suppresses errors\n>This expression is being suppressed\n\nError control operator hide potential errors and make debugging more difficult.\n\nHelp: Remove the `@` and use `set_error_handler` to handle errors instead.",
+    "check_name": "no-error-control-operator",
+    "fingerprint": "bbf0326f736a0b1153042683f9e54cb6",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 432,
+          "column": 19
+        },
+        "end": {
+          "line": 432,
+          "column": 20
+        }
+      }
+    }
+  },
+  {
+    "description": "Unsafe use of error control operator `@`.\n>This operator suppresses errors\n>This expression is being suppressed\n\nError control operator hide potential errors and make debugging more difficult.\n\nHelp: Remove the `@` and use `set_error_handler` to handle errors instead.",
+    "check_name": "no-error-control-operator",
+    "fingerprint": "d53a728a32f23806a6fd88935110e72d",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 433,
+          "column": 23
+        },
+        "end": {
+          "line": 433,
+          "column": 24
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "0272df64a12a8b904f8110ee837e7502",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 490,
+          "column": 16
+        },
+        "end": {
+          "line": 490,
+          "column": 46
+        }
+      }
+    }
+  },
+  {
+    "description": "Avoid `else` clauses.\n>This `else` clause can often be eliminated\n\nCode is often clearer when the main logic is not nested inside an `if` statement.\n\nHelp: Consider refactoring to use an early return (a guard clause) to simplify the control flow.",
+    "check_name": "no-else-clause",
+    "fingerprint": "08fda74e0914f34522a4d8e251b0f82b",
+    "severity": "info",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 679,
+          "column": 11
+        },
+        "end": {
+          "line": 681,
+          "column": 10
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "fda1216c95400607d4248dd2c3466e88",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/AbstractConverter.php",
+      "positions": {
+        "begin": {
+          "line": 676,
+          "column": 18
+        },
+        "end": {
+          "line": 676,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "description": "Class has a high kan defect score.\n>Class has a kan defect score of 1.9200000000000002, which exceeds the threshold of 1.6.\n\nKan defect is a heuristic used by phpmetrics to estimate defect-proneness based on control-flow statements.\n\nHelp: You can also consider splitting large units of code into smaller, more focused units.",
+    "check_name": "kan-defect",
+    "fingerprint": "f28855654fac809f0d2b0f7b682b6ef3",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Normalizer/ComposerNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 25,
+          "column": 7
+        },
+        "end": {
+          "line": 25,
+          "column": 31
+        }
+      }
+    }
+  },
+  {
+    "description": "Method has a high halstead volume\n>Method exceeds halstead volume threshold(s)\n\nHalstead volume is 1215.48 (threshold 1000). Volume estimates the code's overall size/complexity.\n\nHelp: Consider breaking this into smaller, more focused functions.",
+    "check_name": "halstead",
+    "fingerprint": "9abadaad9dea2014fe47f6f501475f37",
+    "severity": "minor",
+    "location": {
+      "path": "src/Converter/Normalizer/ComposerNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 55,
+          "column": 5
+        },
+        "end": {
+          "line": 139,
+          "column": 6
+        }
+      }
+    }
+  },
+  {
+    "description": "Consider using early continue pattern to reduce nesting.\n>This if statement wraps the entire loop body\n>The loop can benefit from early continue to improve readability\n\nThis pattern improves readability by reducing nesting levels.\n\nHelp: Invert the condition and use `continue` to exit early, then place the main logic outside the if block.",
+    "check_name": "prefer-early-continue",
+    "fingerprint": "fe6630dfdfab13b44cbd8fc60a88ad64",
+    "severity": "info",
+    "location": {
+      "path": "src/Converter/Normalizer/ComposerNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 79,
+          "column": 29
+        },
+        "end": {
+          "line": 85,
+          "column": 30
+        }
+      }
+    }
+  },
+  {
+    "description": "Avoid multiple assignments in a single statement.\n>This chained assignment can be confusing\n\nMultiple assignments can obscure the author's intent and may be confused with a comparison.\n\nHelp: Did you mean `$newValue = ($ruleId == 'CA' . $caId)`? If not, split this into separate assignment statements for clarity.",
+    "check_name": "no-multi-assignments",
+    "fingerprint": "3221b3055c558fd10619ba38dd12fb01",
+    "severity": "minor",
+    "location": {
+      "path": "src/Converter/Normalizer/ComposerNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 106,
+          "column": 25
+        },
+        "end": {
+          "line": 106,
+          "column": 59
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `isset` construct.\n>Ambiguous check due to `isset()` conflating existence and null comparison\n\n`isset()` returns false for both unset variables and null values.\nIt is unclear whether you're checking for variable existence or non-null value.\n\nHelp: Use explicit null comparison (`!== null`) or the null coalescing operator (`??`).",
+    "check_name": "no-isset",
+    "fingerprint": "e7a7c63479e102af6ef8b79c2665c0e6",
+    "severity": "minor",
+    "location": {
+      "path": "src/Converter/Normalizer/ComposerNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 107,
+          "column": 30
+        },
+        "end": {
+          "line": 107,
+          "column": 52
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `isset` construct.\n>Ambiguous check due to `isset()` conflating existence and null comparison\n\n`isset()` returns false for both unset variables and null values.\nIt is unclear whether you're checking for variable existence or non-null value.\n\nHelp: Use explicit null comparison (`!== null`) or the null coalescing operator (`??`).",
+    "check_name": "no-isset",
+    "fingerprint": "1c80e727b20d639c4a5fe3784872e359",
+    "severity": "minor",
+    "location": {
+      "path": "src/Converter/Normalizer/ComposerNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 125,
+          "column": 79
+        },
+        "end": {
+          "line": 125,
+          "column": 111
+        }
+      }
+    }
+  },
+  {
+    "description": "Unsafe use of `$GLOBALS` variable.\n>The `$GLOBALS` variable is used here\n\nAccessing the `$GLOBALS` array directly can lead to similar issues as using the `global` keyword.\nIt can make your code harder to understand, test, and maintain due to the implicit global state.\nConsider using dependency injection or other techniques to manage state and avoid relying on global variables.\n\nHelp: Refactor your code to avoid using the `$GLOBALS` variable directly.",
+    "check_name": "no-global",
+    "fingerprint": "80e4550ee8f02cd4dc1d2646412369b6",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/PhpLintConverter.php",
+      "positions": {
+        "begin": {
+          "line": 46,
+          "column": 22
+        },
+        "end": {
+          "line": 46,
+          "column": 30
+        }
+      }
+    }
+  },
+  {
+    "description": "Consider using early continue pattern to reduce nesting.\n>This if statement wraps the entire loop body\n>The loop can benefit from early continue to improve readability\n\nThis pattern improves readability by reducing nesting levels.\n\nHelp: Invert the condition and use `continue` to exit early, then place the main logic outside the if block.",
+    "check_name": "prefer-early-continue",
+    "fingerprint": "9eb0f3910ac787de8332d3435627f439",
+    "severity": "info",
+    "location": {
+      "path": "src/Converter/PhpLintConverter.php",
+      "positions": {
+        "begin": {
+          "line": 49,
+          "column": 13
+        },
+        "end": {
+          "line": 56,
+          "column": 14
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "e596d6cca2fb9ec4b3b92b2a08932d44",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Source/PhpCsSource.php",
+      "positions": {
+        "begin": {
+          "line": 30,
+          "column": 13
+        },
+        "end": {
+          "line": 30,
+          "column": 32
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `isset` construct.\n>Ambiguous check due to `isset()` conflating existence and null comparison\n\n`isset()` returns false for both unset variables and null values.\nIt is unclear whether you're checking for variable existence or non-null value.\n\nHelp: Use explicit null comparison (`!== null`) or the null coalescing operator (`??`).",
+    "check_name": "no-isset",
+    "fingerprint": "af40912aef884b4fd716a0e4934279cd",
+    "severity": "minor",
+    "location": {
+      "path": "src/Converter/Source/PhpCsSource.php",
+      "positions": {
+        "begin": {
+          "line": 42,
+          "column": 17
+        },
+        "end": {
+          "line": 42,
+          "column": 43
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "67e02f531a4ad45f3b1b1aead218f11b",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Source/MagoSource.php",
+      "positions": {
+        "begin": {
+          "line": 31,
+          "column": 13
+        },
+        "end": {
+          "line": 31,
+          "column": 32
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `isset` construct.\n>Ambiguous check due to `isset()` conflating existence and null comparison\n\n`isset()` returns false for both unset variables and null values.\nIt is unclear whether you're checking for variable existence or non-null value.\n\nHelp: Use explicit null comparison (`!== null`) or the null coalescing operator (`??`).",
+    "check_name": "no-isset",
+    "fingerprint": "4bd5c52db19e077c6468e4f8add46ee2",
+    "severity": "minor",
+    "location": {
+      "path": "src/Converter/Source/MagoSource.php",
+      "positions": {
+        "begin": {
+          "line": 46,
+          "column": 17
+        },
+        "end": {
+          "line": 46,
+          "column": 43
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "96ee38cec16e63e6939ef75ae4db4d4c",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Source/MagoSource.php",
+      "positions": {
+        "begin": {
+          "line": 56,
+          "column": 18
+        },
+        "end": {
+          "line": 56,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "description": "Call to `in_array` must enforce strict comparison.\n>Function `in_array` relies on loose comparison which can lead to unexpected behavior\n\nHelp: Call the function `in_array` with the `$strict` parameter set to `true`.",
+    "check_name": "strict-behavior",
+    "fingerprint": "25ad6c08e2ea1dc87ddcf8600a7a0b5e",
+    "severity": "minor",
+    "location": {
+      "path": "src/Converter/Source/MagoSource.php",
+      "positions": {
+        "begin": {
+          "line": 73,
+          "column": 32
+        },
+        "end": {
+          "line": 73,
+          "column": 40
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "2cc4f64be078403b7f8d5b113d80fa5e",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Source/PhanSource.php",
+      "positions": {
+        "begin": {
+          "line": 20,
+          "column": 13
+        },
+        "end": {
+          "line": 20,
+          "column": 32
+        }
+      }
+    }
+  },
+  {
+    "description": "Avoid `else` clauses.\n>This `else` clause can often be eliminated\n\nCode is often clearer when the main logic is not nested inside an `if` statement.\n\nHelp: Consider refactoring to use an early return (a guard clause) to simplify the control flow.",
+    "check_name": "no-else-clause",
+    "fingerprint": "5f8684d80ee07f24e3effc6fcf61513c",
+    "severity": "info",
+    "location": {
+      "path": "src/Converter/Normalizer/CheckstyleNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 81,
+          "column": 23
+        },
+        "end": {
+          "line": 83,
+          "column": 22
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "70b4bb8d8d3b04ecbc51c9b62dc95016",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Normalizer/CheckstyleNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 87,
+          "column": 22
+        },
+        "end": {
+          "line": 87,
+          "column": 36
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "1dd0df1401a0b7ce2d3228ed47374995",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Normalizer/CheckstyleNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 91,
+          "column": 22
+        },
+        "end": {
+          "line": 91,
+          "column": 40
+        }
+      }
+    }
+  },
+  {
+    "description": "Avoid boolean flag parameters.\n>This parameter acts as a boolean flag\n>Boolean type declared here\n\nBoolean flags often indicate a function has more than one responsibility, making it harder to understand and test.\n\nHelp: Refactor by splitting the function into two separate methods, each with a clear, descriptive name.",
+    "check_name": "no-boolean-flag-parameter",
+    "fingerprint": "687f14f7dbf1b9e452380fa81149322b",
+    "severity": "info",
+    "location": {
+      "path": "src/Converter/Reporter/TwigCsFixerReporter.php",
+      "positions": {
+        "begin": {
+          "line": 42,
+          "column": 14
+        },
+        "end": {
+          "line": 42,
+          "column": 20
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `isset` construct.\n>Ambiguous check due to `isset()` conflating existence and null comparison\n\n`isset()` returns false for both unset variables and null values.\nIt is unclear whether you're checking for variable existence or non-null value.\n\nHelp: Use explicit null comparison (`!== null`) or the null coalescing operator (`??`).",
+    "check_name": "no-isset",
+    "fingerprint": "f6f640ce28027ab3768ff5e1069a6a45",
+    "severity": "minor",
+    "location": {
+      "path": "src/Console/Application.php",
+      "positions": {
+        "begin": {
+          "line": 43,
+          "column": 18
+        },
+        "end": {
+          "line": 43,
+          "column": 67
+        }
+      }
+    }
+  },
+  {
+    "description": "Unused import: `preg_match`.\n>`preg_match` is imported but never used.\n>Unused `use` statement.\n\nHelp: Remove the entire `use` statement.",
+    "check_name": "no-redundant-use",
+    "fingerprint": "e8fbb01c4050ff96fffe055526199c56",
+    "severity": "minor",
+    "location": {
+      "path": "src/Converter/Normalizer/MagoNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 19,
+          "column": 14
+        },
+        "end": {
+          "line": 19,
+          "column": 24
+        }
+      }
+    }
+  },
+  {
+    "description": "Unused import: `array_map`.\n>`array_map` is imported but never used.\n>Unused `use` statement.\n\nHelp: Remove the entire `use` statement.",
+    "check_name": "no-redundant-use",
+    "fingerprint": "84c7714a9c169f10b690c9de4f9c7c74",
+    "severity": "minor",
+    "location": {
+      "path": "src/Converter/Normalizer/MagoNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 15,
+          "column": 14
+        },
+        "end": {
+          "line": 15,
+          "column": 23
+        }
+      }
+    }
+  },
+  {
+    "description": "Unused import: `str_replace`.\n>`str_replace` is imported but never used.\n>Unused `use` statement.\n\nHelp: Remove the entire `use` statement.",
+    "check_name": "no-redundant-use",
+    "fingerprint": "76bca3d8dcd91040c9ca0d45e8053d63",
+    "severity": "minor",
+    "location": {
+      "path": "src/Converter/Normalizer/MagoNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 21,
+          "column": 14
+        },
+        "end": {
+          "line": 21,
+          "column": 25
+        }
+      }
+    }
+  },
+  {
+    "description": "Unused import: `implode`.\n>`implode` is imported but never used.\n>Unused `use` statement.\n\nHelp: Remove the entire `use` statement.",
+    "check_name": "no-redundant-use",
+    "fingerprint": "fed8f0991e5d54b696574913269e4768",
+    "severity": "minor",
+    "location": {
+      "path": "src/Converter/Normalizer/MagoNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 18,
+          "column": 14
+        },
+        "end": {
+          "line": 18,
+          "column": 21
+        }
+      }
+    }
+  },
+  {
+    "description": "Unused import: `sprintf`.\n>`sprintf` is imported but never used.\n>Unused `use` statement.\n\nHelp: Remove the entire `use` statement.",
+    "check_name": "no-redundant-use",
+    "fingerprint": "835394a71dd5131c04c7a7db2fe671ae",
+    "severity": "minor",
+    "location": {
+      "path": "src/Converter/Normalizer/MagoNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 20,
+          "column": 14
+        },
+        "end": {
+          "line": 20,
+          "column": 21
+        }
+      }
+    }
+  },
+  {
+    "description": "Unused import: `strtolower`.\n>`strtolower` is imported but never used.\n>Unused `use` statement.\n\nHelp: Remove the entire `use` statement.",
+    "check_name": "no-redundant-use",
+    "fingerprint": "424c9f0d0f871bcec84143ce81cd010a",
+    "severity": "minor",
+    "location": {
+      "path": "src/Converter/Normalizer/MagoNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 22,
+          "column": 14
+        },
+        "end": {
+          "line": 22,
+          "column": 24
+        }
+      }
+    }
+  },
+  {
+    "description": "Unused import: `trim`.\n>`trim` is imported but never used.\n>Unused `use` statement.\n\nHelp: Remove the entire `use` statement.",
+    "check_name": "no-redundant-use",
+    "fingerprint": "31141acbd48372c5f52cbef4c4d1c463",
+    "severity": "minor",
+    "location": {
+      "path": "src/Converter/Normalizer/MagoNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 23,
+          "column": 14
+        },
+        "end": {
+          "line": 23,
+          "column": 18
+        }
+      }
+    }
+  },
+  {
+    "description": "Unused import: `count`.\n>`count` is imported but never used.\n>Unused `use` statement.\n\nHelp: Remove the entire `use` statement.",
+    "check_name": "no-redundant-use",
+    "fingerprint": "293aa46df3228d27e3ea1c6631941a88",
+    "severity": "minor",
+    "location": {
+      "path": "src/Converter/Normalizer/MagoNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 17,
+          "column": 14
+        },
+        "end": {
+          "line": 17,
+          "column": 19
+        }
+      }
+    }
+  },
+  {
+    "description": "Class has high complexity.\n>Class has a cyclomatic complexity of 20, which exceeds the threshold of 15.",
+    "check_name": "cyclomatic-complexity",
+    "fingerprint": "07ac94df0205a1bc883d244cfa01917a",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Normalizer/MagoNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 30,
+          "column": 7
+        },
+        "end": {
+          "line": 30,
+          "column": 27
+        }
+      }
+    }
+  },
+  {
+    "description": "Class has a high kan defect score.\n>Class has a kan defect score of 1.61, which exceeds the threshold of 1.6.\n\nKan defect is a heuristic used by phpmetrics to estimate defect-proneness based on control-flow statements.\n\nHelp: You can also consider splitting large units of code into smaller, more focused units.",
+    "check_name": "kan-defect",
+    "fingerprint": "b6e905be93dba400486b9e98ddece251",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Normalizer/MagoNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 30,
+          "column": 7
+        },
+        "end": {
+          "line": 30,
+          "column": 27
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "c5b015ed8d2d614672d1dc6a91f59fa1",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Normalizer/MagoNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 128,
+          "column": 18
+        },
+        "end": {
+          "line": 128,
+          "column": 32
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `isset` construct.\n>Ambiguous check due to `isset()` conflating existence and null comparison\n\n`isset()` returns false for both unset variables and null values.\nIt is unclear whether you're checking for variable existence or non-null value.\n\nHelp: Use explicit null comparison (`!== null`) or the null coalescing operator (`??`).",
+    "check_name": "no-isset",
+    "fingerprint": "4a2e636a9ecaf8f80aaad828dcd4552e",
+    "severity": "minor",
+    "location": {
+      "path": "src/Converter/Normalizer/MagoNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 132,
+          "column": 18
+        },
+        "end": {
+          "line": 132,
+          "column": 40
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "6da23a48fe9a08669cadb11935f7dca9",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Normalizer/MagoNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 139,
+          "column": 18
+        },
+        "end": {
+          "line": 139,
+          "column": 36
+        }
+      }
+    }
+  },
+  {
+    "description": "Use identity comparison `===` instead of equality comparison `==`.\n>Equality operator is used here\n\nIdentity comparison `===` checks for both value and type equality, while equality comparison `==` performs type coercion, which can lead to unexpected results.\n\nHelp: Use `===` to ensure both value and type are equal.",
+    "check_name": "identity-comparison",
+    "fingerprint": "8b2e99467250ccfb705b308367fba7e5",
+    "severity": "minor",
+    "location": {
+      "path": "src/Converter/Normalizer/MagoNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 177,
+          "column": 29
+        },
+        "end": {
+          "line": 177,
+          "column": 31
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "21e01b9384cbf1352e0b5617b6c9a86e",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Source/ComposerSource.php",
+      "positions": {
+        "begin": {
+          "line": 20,
+          "column": 13
+        },
+        "end": {
+          "line": 20,
+          "column": 32
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "a6fdf21fb45060100b5c0a448065fec7",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Source/PhpMdSource.php",
+      "positions": {
+        "begin": {
+          "line": 20,
+          "column": 13
+        },
+        "end": {
+          "line": 20,
+          "column": 32
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "fac166f836cadb2304ae64fd51bf4969",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Source/PhpStanSource.php",
+      "positions": {
+        "begin": {
+          "line": 20,
+          "column": 13
+        },
+        "end": {
+          "line": 20,
+          "column": 32
+        }
+      }
+    }
+  },
+  {
+    "description": "Class has a high kan defect score.\n>Class has a kan defect score of 2.27, which exceeds the threshold of 1.6.\n\nKan defect is a heuristic used by phpmetrics to estimate defect-proneness based on control-flow statements.\n\nHelp: You can also consider splitting large units of code into smaller, more focused units.",
+    "check_name": "kan-defect",
+    "fingerprint": "a6b8ac71a66a15fd3f1c67ff05908f3f",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Source/AbstractSource.php",
+      "positions": {
+        "begin": {
+          "line": 24,
+          "column": 10
+        },
+        "end": {
+          "line": 24,
+          "column": 30
+        }
+      }
+    }
+  },
+  {
+    "description": "Consider using early continue pattern to reduce nesting.\n>This if statement wraps the entire loop body\n>The loop can benefit from early continue to improve readability\n\nThis pattern improves readability by reducing nesting levels.\n\nHelp: Invert the condition and use `continue` to exit early, then place the main logic outside the if block.",
+    "check_name": "prefer-early-continue",
+    "fingerprint": "f4fefda47cf50e88c7f3486f53b3e448",
+    "severity": "info",
+    "location": {
+      "path": "src/Converter/Source/AbstractSource.php",
+      "positions": {
+        "begin": {
+          "line": 96,
+          "column": 13
+        },
+        "end": {
+          "line": 98,
+          "column": 14
+        }
+      }
+    }
+  },
+  {
+    "description": "Class has too many methods.\n>Class has 12 methods, which exceeds the threshold of 10.\n\nHaving a large number of methods can make structures harder to understand and maintain.\n\nHelp: Try reducing the number of methods, or consider splitting the structure into smaller, more focused structures.",
+    "check_name": "too-many-methods",
+    "fingerprint": "73e09cf9ba7fcf94c48803f7755b71d0",
+    "severity": "major",
+    "location": {
+      "path": "src/Factory/SourceFactory.php",
+      "positions": {
+        "begin": {
+          "line": 26,
+          "column": 7
+        },
+        "end": {
+          "line": 26,
+          "column": 26
+        }
+      }
+    }
+  },
+  {
+    "description": "Class has high complexity.\n>Class has a cyclomatic complexity of 17, which exceeds the threshold of 15.",
+    "check_name": "cyclomatic-complexity",
+    "fingerprint": "36f53285c816bcd004a272dc6fe5b749",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Normalizer/PhpMdNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 32,
+          "column": 7
+        },
+        "end": {
+          "line": 32,
+          "column": 28
+        }
+      }
+    }
+  },
+  {
+    "description": "Class has a high kan defect score.\n>Class has a kan defect score of 2, which exceeds the threshold of 1.6.\n\nKan defect is a heuristic used by phpmetrics to estimate defect-proneness based on control-flow statements.\n\nHelp: You can also consider splitting large units of code into smaller, more focused units.",
+    "check_name": "kan-defect",
+    "fingerprint": "ba9bb7ce95af9e5a4788f0de5a0db47d",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Normalizer/PhpMdNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 32,
+          "column": 7
+        },
+        "end": {
+          "line": 32,
+          "column": 28
+        }
+      }
+    }
+  },
+  {
+    "description": "Avoid `else` clauses.\n>This `else` clause can often be eliminated\n\nCode is often clearer when the main logic is not nested inside an `if` statement.\n\nHelp: Consider refactoring to use an early return (a guard clause) to simplify the control flow.",
+    "check_name": "no-else-clause",
+    "fingerprint": "b3300647bc4f55a6f737b630ab54d5b0",
+    "severity": "info",
+    "location": {
+      "path": "src/Converter/Normalizer/PhpMdNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 92,
+          "column": 23
+        },
+        "end": {
+          "line": 94,
+          "column": 22
+        }
+      }
+    }
+  },
+  {
+    "description": "Avoid `else` clauses.\n>This `else` clause can often be eliminated\n\nCode is often clearer when the main logic is not nested inside an `if` statement.\n\nHelp: Consider refactoring to use an early return (a guard clause) to simplify the control flow.",
+    "check_name": "no-else-clause",
+    "fingerprint": "e27beb5b802c810006a7e16594d362a0",
+    "severity": "info",
+    "location": {
+      "path": "src/Converter/Normalizer/PhpMdNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 102,
+          "column": 19
+        },
+        "end": {
+          "line": 112,
+          "column": 18
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "b9b978e24fcac26afa000a2fbe53e725",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Normalizer/PhpMdNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 114,
+          "column": 22
+        },
+        "end": {
+          "line": 114,
+          "column": 36
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "b67b7282a91788a731643fa6fb25e828",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Normalizer/PhpMdNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 119,
+          "column": 22
+        },
+        "end": {
+          "line": 119,
+          "column": 40
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "526c14d7c323bf42fc9b7e41d1a849a8",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Normalizer/PhpMdNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 171,
+          "column": 18
+        },
+        "end": {
+          "line": 171,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "bb0318dc928b5f52099a9616f381aee1",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Normalizer/PhpMdNormalizer.php",
+      "positions": {
+        "begin": {
+          "line": 180,
+          "column": 18
+        },
+        "end": {
+          "line": 180,
+          "column": 31
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "17e3112f1a5c7ee0f18ed92d8bbcfcf5",
+    "severity": "major",
+    "location": {
+      "path": "src/Converter/Source/TwigCsFixerSource.php",
+      "positions": {
+        "begin": {
+          "line": 20,
+          "column": 13
+        },
+        "end": {
+          "line": 20,
+          "column": 32
+        }
+      }
+    }
+  },
+  {
+    "description": "Class has too many methods.\n>Class has 12 methods, which exceeds the threshold of 10.\n\nHaving a large number of methods can make structures harder to understand and maintain.\n\nHelp: Try reducing the number of methods, or consider splitting the structure into smaller, more focused structures.",
+    "check_name": "too-many-methods",
+    "fingerprint": "1444c6007dcfa08056b9ad8a3c14f034",
+    "severity": "major",
+    "location": {
+      "path": "src/Factory/ConverterFactory.php",
+      "positions": {
+        "begin": {
+          "line": 22,
+          "column": 7
+        },
+        "end": {
+          "line": 22,
+          "column": 29
+        }
+      }
+    }
+  },
+  {
+    "description": "Class has high complexity.\n>Class has a cyclomatic complexity of 22, which exceeds the threshold of 15.",
+    "check_name": "cyclomatic-complexity",
+    "fingerprint": "052d2285dbcc5ccb8418c5377e33795e",
+    "severity": "major",
+    "location": {
+      "path": "src/Console/Command/ConvertCommand.php",
+      "positions": {
+        "begin": {
+          "line": 46,
+          "column": 1251
+        },
+        "end": {
+          "line": 46,
+          "column": 21
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "ce6d7a01386dc6198282d8aa9bdd4c0f",
+    "severity": "major",
+    "location": {
+      "path": "src/Console/Command/ConvertCommand.php",
+      "positions": {
+        "begin": {
+          "line": 106,
+          "column": 17
+        },
+        "end": {
+          "line": 106,
+          "column": 48
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "f245eff8d832259b0f77d458450b03bd",
+    "severity": "major",
+    "location": {
+      "path": "src/Console/Command/ConvertCommand.php",
+      "positions": {
+        "begin": {
+          "line": 143,
+          "column": 18
+        },
+        "end": {
+          "line": 143,
+          "column": 48
+        }
+      }
+    }
+  },
+  {
+    "description": "Avoid `else` clauses.\n>This `else` clause can often be eliminated\n\nCode is often clearer when the main logic is not nested inside an `if` statement.\n\nHelp: Consider refactoring to use an early return (a guard clause) to simplify the control flow.",
+    "check_name": "no-else-clause",
+    "fingerprint": "c557730f433037ba0e74deb1c86fabee",
+    "severity": "info",
+    "location": {
+      "path": "src/Console/Command/ConvertCommand.php",
+      "positions": {
+        "begin": {
+          "line": 150,
+          "column": 15
+        },
+        "end": {
+          "line": 154,
+          "column": 14
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "e089a353d0fbe6c026d0bea4ba636c98",
+    "severity": "major",
+    "location": {
+      "path": "src/Console/Command/ConvertCommand.php",
+      "positions": {
+        "begin": {
+          "line": 160,
+          "column": 18
+        },
+        "end": {
+          "line": 160,
+          "column": 36
+        }
+      }
+    }
+  },
+  {
+    "description": "Avoid `else` clauses.\n>This `else` clause can often be eliminated\n\nCode is often clearer when the main logic is not nested inside an `if` statement.\n\nHelp: Consider refactoring to use an early return (a guard clause) to simplify the control flow.",
+    "check_name": "no-else-clause",
+    "fingerprint": "6a20c61f5fe83bb0df901f2957cf96c2",
+    "severity": "info",
+    "location": {
+      "path": "src/Console/Command/ConvertCommand.php",
+      "positions": {
+        "begin": {
+          "line": 163,
+          "column": 19
+        },
+        "end": {
+          "line": 171,
+          "column": 18
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "4137681b9a63e6e39a34bb82f422afcd",
+    "severity": "major",
+    "location": {
+      "path": "src/Console/Command/ConvertCommand.php",
+      "positions": {
+        "begin": {
+          "line": 161,
+          "column": 21
+        },
+        "end": {
+          "line": 161,
+          "column": 51
+        }
+      }
+    }
+  },
+  {
+    "description": "Use of the `empty` construct.\n>Ambiguous check due to `empty()` loose semantic\n\n`empty()` exhibits unexpected behavior on specific value.\nIt is unclear what condition is being treated with `empty()`.\n\nHelp: Use strict comparison or specific predicate function to clearly convey your intent.",
+    "check_name": "no-empty",
+    "fingerprint": "cbb3656a592d473bd0541fd6d8bc8739",
+    "severity": "major",
+    "location": {
+      "path": "src/Console/Command/ConvertCommand.php",
+      "positions": {
+        "begin": {
+          "line": 186,
+          "column": 14
+        },
+        "end": {
+          "line": 186,
+          "column": 31
+        }
+      }
+    }
+  },
+  {
+    "description": "Avoid assignments in conditions.\n>This is an assignment\n>This is the condition\n\nAssigning a value within a condition can lead to unexpected behavior and make the code harder to read and understand.\nIt's easy to confuse assignment (`=`) with comparison (`==`) in this context. Ensure you're using the correct operator.",
+    "check_name": "no-assign-in-condition",
+    "fingerprint": "e9ec57f15f7b9bc0e20ee3750c7176eb",
+    "severity": "minor",
+    "location": {
+      "path": "src/Console/Command/ConvertCommand.php",
+      "positions": {
+        "begin": {
+          "line": 226,
+          "column": 24
+        },
+        "end": {
+          "line": 226,
+          "column": 50
+        }
+      }
+    }
+  }
+]

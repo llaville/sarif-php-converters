@@ -22,6 +22,7 @@
             ],
             "in": [
                 "vendor-bin/ecs",
+                "vendor-bin/mago",
                 "vendor-bin/phan",
                 "vendor-bin/phpcs",
                 "vendor-bin/phpcs-fixer",

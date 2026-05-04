@@ -17,6 +17,7 @@ interface ConverterFactoryInterface
 {
     public const BUILTIN_CONVERTER_COMPOSER = 'composer';
     public const BUILTIN_CONVERTER_ECS = 'ecs';
+    public const BUILTIN_CONVERTER_MAGO = 'mago';
     public const BUILTIN_CONVERTER_PHAN = 'phan';
     public const BUILTIN_CONVERTER_PHPCS = 'phpcs';
     public const BUILTIN_CONVERTER_PHPCSFIXER = 'phpcs-fixer';
