@@ -41,7 +41,7 @@ interface ConverterInterface
     /**
      * @return Definition\Invocation[]
      */
-    public function invocations(?Definition\PropertyBag $properties = null): array;
+    public function invocations(?Definition\PropertyBag $properties = null, ?string $responseFileOption = null): array;
 
     /**
      * @return array|Definition\VersionControlDetails[]

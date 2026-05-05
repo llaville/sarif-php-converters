@@ -10,8 +10,6 @@ namespace Bartlett\Sarif\Converter;
 use Bartlett\Sarif\Definition;
 
 use function sprintf;
-use function str_replace;
-use function str_starts_with;
 
 /**
  * @author Laurent Laville
@@ -39,23 +37,8 @@ class PhpLintConverter extends AbstractConverter
         );
     }
 
-    public function invocations(?Definition\PropertyBag $properties = null): array
+    public function invocations(?Definition\PropertyBag $properties = null, ?string $responseFileOption = null): array
     {
-        $invocations = parent::invocations($properties);
-
-        $arguments = $GLOBALS['argv'];
-        $responseFileOption = '--output=';
-        foreach ($arguments as $argument) {
-            if (str_starts_with($argument, $responseFileOption)) {
-                $desc = new Definition\Message();
-                $desc->setText('Writing a Report to a File');
-                $responseFile = new Definition\ArtifactLocation();
-                $responseFile->setDescription($desc);
-                $responseFile->setUri($this->pathToUri(str_replace($responseFileOption, '', $argument)));
-                $invocations[0]->addResponseFiles([$responseFile]);
-            }
-        }
-
-        return $invocations;
+        return parent::invocations($properties, $responseFileOption ?? '--output=');
     }
 }

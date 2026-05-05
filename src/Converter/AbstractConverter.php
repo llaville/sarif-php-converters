@@ -384,7 +384,7 @@ abstract class AbstractConverter implements ConverterInterface
     /**
      * @inheritDoc
      */
-    public function invocations(?Definition\PropertyBag $properties = null): array
+    public function invocations(?Definition\PropertyBag $properties = null, ?string $responseFileOption = null): array
     {
         $workingDir = new Definition\ArtifactLocation();
         $workingDir->setUri($this->pathToUri(getcwd() . '/'));
@@ -408,6 +408,21 @@ abstract class AbstractConverter implements ConverterInterface
 
         if ($properties !== null) {
             $invocation->setProperties($properties);
+        }
+
+        if (null !== $responseFileOption) {
+            $arguments = $GLOBALS['argv'];
+            foreach ($arguments as $argument) {
+                if (!str_starts_with($argument, $responseFileOption)) {
+                    continue;
+                }
+                $desc = new Definition\Message();
+                $desc->setText('Writing a Report to a File');
+                $responseFile = new Definition\ArtifactLocation();
+                $responseFile->setDescription($desc);
+                $responseFile->setUri($this->pathToUri(str_replace($responseFileOption, '', $argument)));
+                $invocation->addResponseFiles([$responseFile]);
+            }
         }
 
         return [$invocation];
