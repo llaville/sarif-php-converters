@@ -130,7 +130,7 @@ final class SarifNormalizer extends AbstractNormalizer
 
         $replaces = [];
         foreach ($matches[0] as $match) {
-            $replaces[] = "'$match'";
+            $replaces[] = "'{$match}'";
         }
         return str_replace($matches[0], $replaces, $text);
     }
