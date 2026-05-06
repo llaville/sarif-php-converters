@@ -7,6 +7,9 @@
  */
 namespace Bartlett\Sarif\Converter;
 
+use function explode;
+use function implode;
+
 /**
  * @author Laurent Laville
  * @since Release 1.6.0
@@ -25,5 +28,8 @@ class MagoConverter extends AbstractConverter
         $options['include_context_region'] = false;
 
         parent::configure($options);
+
+        $versionParts = explode('.', $this->toolSemanticVersion);
+        self::$toolVersion = implode('.', [$versionParts[0], $versionParts[1], $versionParts[2]]);
     }
 }

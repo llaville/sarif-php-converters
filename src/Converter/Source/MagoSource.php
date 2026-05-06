@@ -75,7 +75,7 @@ final class MagoSource extends AbstractSource
                     'parameters' => $rules[$ruleId]['requirements']
                 ];
                 $ruleDef['properties']['category'] = $category;
-                $ruleDef['helpUri'] = $this->helpUriCaseConverter->convert($category) . $ruleId;
+                $ruleDef['helpUri'] = $this->helpUriCaseConverter->convert($ruleId);
             }
 
             yield $ruleId => $ruleDef;
