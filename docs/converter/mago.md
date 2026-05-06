@@ -25,7 +25,7 @@
 ```json
 {
     "require-dev": {
-        "carthage-software/mago": "^1.0"
+        "carthage-software/mago": "^1.25.2"
     }
 }
 ```
