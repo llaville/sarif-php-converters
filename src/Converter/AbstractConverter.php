@@ -155,7 +155,7 @@ abstract class AbstractConverter implements ConverterInterface
         if (!empty($this->toolComposerPackage)) {
             $this->toolSemanticVersion = $this->getToolVersion($this->toolComposerPackage);
         }
-        if (empty($this->toolVersion)) {
+        if (empty(self::$toolVersion)) {
             self::$toolVersion = $this->toolSemanticVersion;
         }
 
