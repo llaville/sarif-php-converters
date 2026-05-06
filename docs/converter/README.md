@@ -84,8 +84,15 @@ For example:
 }
 ```
 
+## Available since v1.6.0
+
+| Converter                     |   User Guide    | Console Tool | Reporting |
+|:------------------------------|:---------------:|:------------:|:---------:|
+| Mago [official website][mago] | [mago](mago.md) |   required   |     ❌     |
+
 [composer]: https://github.com/composer/composer
 [ecs]: https://github.com/easy-coding-standard/easy-coding-standard
+[mago]: https://github.com/carthage-software/mago
 [phan]: https://github.com/phan/phan
 [phpcs]: https://github.com/PHPCSStandards/PHP_CodeSniffer
 [phpcs-fixer]: https://github.com/PHP-CS-Fixer/PHP-CS-Fixer

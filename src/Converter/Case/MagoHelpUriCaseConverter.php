@@ -82,6 +82,9 @@ final class MagoHelpUriCaseConverter implements HelpUriCaseConverterInterface
         return $categories;
     }
 
+    /**
+     * @return string[]
+     */
     private function findAllPlaceholders(string $uri): array
     {
         $placeholders = [];

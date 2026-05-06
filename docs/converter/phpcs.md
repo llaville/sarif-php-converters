@@ -100,7 +100,7 @@ vendor/bin/phpcs --report=checkstyle --report-file=checkstyle.xml /path/to/sourc
 #### :material-numeric-2-box: And finally, convert it to SARIF with the **Console Tool**
 
 ```shell
-report-converter convert phpcs --input-format=checkstyle --input-file=examples/phpcs/checkstyle.xml -v
+php report-converter convert phpcs --input-format=checkstyle --input-file=examples/phpcs/checkstyle.xml -v
 ```
 
 > [!TIP]

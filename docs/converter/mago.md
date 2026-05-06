@@ -13,8 +13,7 @@
 2. [Installation](#installation)
 3. [Usage](#usage)
 4. [Learn more](#learn-more)
-5. [IDE Integration](#ide-integration)
-6. [Web SARIF viewer](#web-sarif-viewer)
+5. [Web SARIF viewer](#web-sarif-viewer)
 
 ![mago converter](../assets/images/converter-mago.graphviz.svg)
 
@@ -74,19 +73,13 @@ php report-converter convert mago --input-format=sarif --input-file=examples/mag
 
 * See demo [`examples/mago/`][example-folder] directory into this repository.
 
-## IDE Integration
-
-The SARIF report file `[*].sarif.json` is automagically recognized and interpreted by PhpStorm (2024).
-
-![PHPStorm integration](../assets/images/phpstorm-mago.png)
-
 ## Web SARIF viewer
 
 With the [React based component][sarif-web-component], you are able to explore a sarif report file previously generated.
 
 For example:
 
-![sarif-web-phpmd](../assets/images/sarif-web-mago.png)
+![sarif-web-mago](../assets/images/sarif-web-mago.png)
 
 [example-folder]: https://github.com/llaville/sarif-php-converters/blob/1.6/examples/mago/
 [mago]: https://github.com/carthage-software/mago
