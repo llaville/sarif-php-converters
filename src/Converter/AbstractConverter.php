@@ -69,7 +69,7 @@ abstract class AbstractConverter implements ConverterInterface
     protected string $toolFullDescription;
     protected string $toolInformationUri;
     protected string $toolComposerPackage;
-    protected ?string $toolVersion = null;
+    protected static ?string $toolVersion = null;
     protected string $toolSemanticVersion;
     protected string $converterComposerPackage;
 
@@ -135,6 +135,11 @@ abstract class AbstractConverter implements ConverterInterface
         return rtrim(end($names), 'Converter');
     }
 
+    public static function getVersion(): string
+    {
+        return static::$toolVersion ?? '';
+    }
+
     /**
      * @param array{
      *     format_output?: bool,
@@ -151,7 +156,7 @@ abstract class AbstractConverter implements ConverterInterface
             $this->toolSemanticVersion = $this->getToolVersion($this->toolComposerPackage);
         }
         if (empty($this->toolVersion)) {
-            $this->toolVersion = $this->toolSemanticVersion;
+            self::$toolVersion = $this->toolSemanticVersion;
         }
 
         // set option to avoid additional suggestion SARIF2010
@@ -183,7 +188,7 @@ abstract class AbstractConverter implements ConverterInterface
         if (!empty($this->toolSemanticVersion)) {
             $driver->setSemanticVersion($this->toolSemanticVersion);
         }
-        $driver->setVersion($this->toolVersion);
+        $driver->setVersion(static::$toolVersion);
 
         if (!empty($this->toolFullName)) {
             $driver->setFullName($this->toolFullName);
