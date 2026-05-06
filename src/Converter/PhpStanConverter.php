@@ -45,7 +45,7 @@ class PhpStanConverter extends AbstractConverter
         $this->toolFullName ??= sprintf(
             '%s %s',
             $this->toolFullDescription,
-            $this->toolSemanticVersion
+            $this->toolVersion
         );
         return parent::toolDriver();
     }
