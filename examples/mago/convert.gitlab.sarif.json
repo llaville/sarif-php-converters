@@ -12,7 +12,7 @@
                     "fullDescription": {
                         "text": "Mago is a toolchain for PHP that aims to provide a set of tools to help developers write better code"
                     },
-                    "version": "1.25.2.0",
+                    "version": "1.25.2",
                     "semanticVersion": "1.25.2.0",
                     "informationUri": "https://github.com/carthage-software/mago",
                     "rules": [
@@ -34,7 +34,7 @@
                                     "integrations": []
                                 }
                             },
-                            "helpUri": "https://mago.carthage.software/tools/linter/rules/clarity#no-empty",
+                            "helpUri": "https://mago.carthage.software/1.25.2/en/tools/linter/rules/#no-empty",
                             "properties": {
                                 "frequency": 51,
                                 "category": "Clarity"
@@ -58,7 +58,7 @@
                                     "integrations": []
                                 }
                             },
-                            "helpUri": "https://mago.carthage.software/tools/linter/rules/clarity#no-isset",
+                            "helpUri": "https://mago.carthage.software/1.25.2/en/tools/linter/rules/#no-isset",
                             "properties": {
                                 "frequency": 9,
                                 "category": "Clarity"
@@ -82,7 +82,7 @@
                                     "integrations": []
                                 }
                             },
-                            "helpUri": "https://mago.carthage.software/tools/linter/rules/safety#no-global",
+                            "helpUri": "https://mago.carthage.software/1.25.2/en/tools/linter/rules/#no-global",
                             "properties": {
                                 "frequency": 3,
                                 "category": "Safety"
@@ -106,7 +106,7 @@
                                     "integrations": []
                                 }
                             },
-                            "helpUri": "https://mago.carthage.software/tools/linter/rules/bestpractices#prefer-early-continue",
+                            "helpUri": "https://mago.carthage.software/1.25.2/en/tools/linter/rules/#prefer-early-continue",
                             "properties": {
                                 "frequency": 5,
                                 "category": "BestPractices"
@@ -130,7 +130,7 @@
                                     "integrations": []
                                 }
                             },
-                            "helpUri": "https://mago.carthage.software/tools/linter/rules/maintainability#kan-defect",
+                            "helpUri": "https://mago.carthage.software/1.25.2/en/tools/linter/rules/#kan-defect",
                             "properties": {
                                 "frequency": 6,
                                 "category": "Maintainability"
@@ -154,7 +154,7 @@
                                     "integrations": []
                                 }
                             },
-                            "helpUri": "https://mago.carthage.software/tools/linter/rules/maintainability#excessive-parameter-list",
+                            "helpUri": "https://mago.carthage.software/1.25.2/en/tools/linter/rules/#excessive-parameter-list",
                             "properties": {
                                 "frequency": 1,
                                 "category": "Maintainability"
@@ -178,7 +178,7 @@
                                     "integrations": []
                                 }
                             },
-                            "helpUri": "https://mago.carthage.software/tools/linter/rules/maintainability#cyclomatic-complexity",
+                            "helpUri": "https://mago.carthage.software/1.25.2/en/tools/linter/rules/#cyclomatic-complexity",
                             "properties": {
                                 "frequency": 5,
                                 "category": "Maintainability"
@@ -202,7 +202,7 @@
                                     "integrations": []
                                 }
                             },
-                            "helpUri": "https://mago.carthage.software/tools/linter/rules/consistency#braced-string-interpolation",
+                            "helpUri": "https://mago.carthage.software/1.25.2/en/tools/linter/rules/#braced-string-interpolation",
                             "properties": {
                                 "frequency": 1,
                                 "category": "Consistency"
@@ -226,7 +226,7 @@
                                     "integrations": []
                                 }
                             },
-                            "helpUri": "https://mago.carthage.software/tools/linter/rules/maintainability#too-many-methods",
+                            "helpUri": "https://mago.carthage.software/1.25.2/en/tools/linter/rules/#too-many-methods",
                             "properties": {
                                 "frequency": 3,
                                 "category": "Maintainability"
@@ -250,7 +250,7 @@
                                     "integrations": []
                                 }
                             },
-                            "helpUri": "https://mago.carthage.software/tools/linter/rules/maintainability#too-many-properties",
+                            "helpUri": "https://mago.carthage.software/1.25.2/en/tools/linter/rules/#too-many-properties",
                             "properties": {
                                 "frequency": 1,
                                 "category": "Maintainability"
@@ -274,7 +274,7 @@
                                     "integrations": []
                                 }
                             },
-                            "helpUri": "https://mago.carthage.software/tools/linter/rules/maintainability#no-else-clause",
+                            "helpUri": "https://mago.carthage.software/1.25.2/en/tools/linter/rules/#no-else-clause",
                             "properties": {
                                 "frequency": 7,
                                 "category": "Maintainability"
@@ -297,7 +297,7 @@
                                     "integrations": []
                                 }
                             },
-                            "helpUri": "https://mago.carthage.software/tools/linter/rules/maintainability#halstead",
+                            "helpUri": "https://mago.carthage.software/1.25.2/en/tools/linter/rules/#halstead",
                             "properties": {
                                 "frequency": 3,
                                 "category": "Maintainability"
@@ -321,7 +321,7 @@
                                     "integrations": []
                                 }
                             },
-                            "helpUri": "https://mago.carthage.software/tools/linter/rules/safety#no-error-control-operator",
+                            "helpUri": "https://mago.carthage.software/1.25.2/en/tools/linter/rules/#no-error-control-operator",
                             "properties": {
                                 "frequency": 5,
                                 "category": "Safety"
@@ -345,7 +345,7 @@
                                     "integrations": []
                                 }
                             },
-                            "helpUri": "https://mago.carthage.software/tools/linter/rules/clarity#no-multi-assignments",
+                            "helpUri": "https://mago.carthage.software/1.25.2/en/tools/linter/rules/#no-multi-assignments",
                             "properties": {
                                 "frequency": 1,
                                 "category": "Clarity"
@@ -374,7 +374,7 @@
                                     "integrations": []
                                 }
                             },
-                            "helpUri": "https://mago.carthage.software/tools/linter/rules/correctness#strict-behavior",
+                            "helpUri": "https://mago.carthage.software/1.25.2/en/tools/linter/rules/#strict-behavior",
                             "properties": {
                                 "frequency": 1,
                                 "category": "Correctness"
@@ -398,7 +398,7 @@
                                     "integrations": []
                                 }
                             },
-                            "helpUri": "https://mago.carthage.software/tools/linter/rules/maintainability#no-boolean-flag-parameter",
+                            "helpUri": "https://mago.carthage.software/1.25.2/en/tools/linter/rules/#no-boolean-flag-parameter",
                             "properties": {
                                 "frequency": 1,
                                 "category": "Maintainability"
@@ -422,7 +422,7 @@
                                     "integrations": []
                                 }
                             },
-                            "helpUri": "https://mago.carthage.software/tools/linter/rules/redundancy#no-redundant-use",
+                            "helpUri": "https://mago.carthage.software/1.25.2/en/tools/linter/rules/#no-redundant-use",
                             "properties": {
                                 "frequency": 8,
                                 "category": "Redundancy"
@@ -446,7 +446,7 @@
                                     "integrations": []
                                 }
                             },
-                            "helpUri": "https://mago.carthage.software/tools/linter/rules/correctness#identity-comparison",
+                            "helpUri": "https://mago.carthage.software/1.25.2/en/tools/linter/rules/#identity-comparison",
                             "properties": {
                                 "frequency": 1,
                                 "category": "Correctness"
@@ -470,7 +470,7 @@
                                     "integrations": []
                                 }
                             },
-                            "helpUri": "https://mago.carthage.software/tools/linter/rules/correctness#no-assign-in-condition",
+                            "helpUri": "https://mago.carthage.software/1.25.2/en/tools/linter/rules/#no-assign-in-condition",
                             "properties": {
                                 "frequency": 1,
                                 "category": "Correctness"
@@ -508,9 +508,9 @@
             "versionControlProvenance": [
                 {
                     "repositoryUri": "https://github.com/llaville/sarif-php-converters.git",
-                    "revisionId": "f2512937cbecc10d73e0bd4a6a4adf952fab46c0",
+                    "revisionId": "7d4c368be647cb89dd91f2942e966221576018a7",
                     "branch": "1.6",
-                    "revisionTag": "1.5.0-22-gf251293",
+                    "revisionTag": "1.5.0-26-g7d4c368",
                     "mappedTo": {
                         "uriBaseId": "SOURCE_ROOT"
                     },
@@ -611,7 +611,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "d91e9271a56e4d0bdf2f9a087518b3c24d44c04e0fd0b57e79db2b8056230948"
+                        "no-empty": "49ba54f70e8ff256f5e9c4c330a7fe76457a3ff811792f1fa05a13db8588fca8"
                     }
                 },
                 {
@@ -637,7 +637,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-global": "55f11cdc371c5cf9463a25e2873638840dbf0aa3569728c47a29bd2ea8a0deb6"
+                        "no-global": "11c98e7e03a257ae5a1d8054b7284dff44497f780ceeb7126c82a98b2a88e30e"
                     }
                 },
                 {
@@ -663,7 +663,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "prefer-early-continue": "55f11cdc371c5cf9463a25e2873638840dbf0aa3569728c47a29bd2ea8a0deb6"
+                        "prefer-early-continue": "11c98e7e03a257ae5a1d8054b7284dff44497f780ceeb7126c82a98b2a88e30e"
                     }
                 },
                 {
@@ -871,7 +871,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "cyclomatic-complexity": "d6149b3f2a4f0995a15c76dcacf0e7ef6272ec314a0e3cc94aa5ce73f6deacfe"
+                        "cyclomatic-complexity": "bb7574d4d4c1e5d89a237de7748c829b375b9033637e3c20ee225c3c24dfc1a6"
                     }
                 },
                 {
@@ -897,7 +897,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "braced-string-interpolation": "d6149b3f2a4f0995a15c76dcacf0e7ef6272ec314a0e3cc94aa5ce73f6deacfe"
+                        "braced-string-interpolation": "bb7574d4d4c1e5d89a237de7748c829b375b9033637e3c20ee225c3c24dfc1a6"
                     }
                 },
                 {
@@ -923,7 +923,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "cyclomatic-complexity": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "cyclomatic-complexity": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -949,7 +949,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "kan-defect": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "kan-defect": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -975,7 +975,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "too-many-methods": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "too-many-methods": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1001,7 +1001,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "too-many-properties": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "too-many-properties": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1027,7 +1027,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-else-clause": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-else-clause": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1053,7 +1053,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-empty": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1079,7 +1079,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-empty": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1105,7 +1105,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-empty": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1131,7 +1131,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-empty": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1157,7 +1157,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "halstead": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "halstead": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1183,7 +1183,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-empty": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1209,7 +1209,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-empty": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1235,7 +1235,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-empty": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1261,7 +1261,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-empty": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1287,7 +1287,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-empty": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1313,7 +1313,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-empty": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1339,7 +1339,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-empty": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1365,7 +1365,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-empty": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1391,7 +1391,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-empty": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1417,7 +1417,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-empty": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1443,7 +1443,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-empty": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1469,7 +1469,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-empty": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1495,7 +1495,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "halstead": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "halstead": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1521,7 +1521,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-empty": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1547,7 +1547,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-empty": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1573,7 +1573,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-empty": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1599,7 +1599,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-empty": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1625,7 +1625,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-empty": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1651,7 +1651,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "prefer-early-continue": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "prefer-early-continue": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1677,7 +1677,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-empty": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1703,7 +1703,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-global": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-global": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1729,7 +1729,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-empty": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1755,7 +1755,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-error-control-operator": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-error-control-operator": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1781,7 +1781,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-error-control-operator": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-error-control-operator": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1807,7 +1807,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-error-control-operator": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-error-control-operator": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1833,7 +1833,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-error-control-operator": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-error-control-operator": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1859,7 +1859,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-error-control-operator": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-error-control-operator": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1885,7 +1885,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-empty": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1911,7 +1911,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-else-clause": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-else-clause": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -1937,7 +1937,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "405858642a6c33a6d53cdc7ef8a17a1200383bab179226d219d30da17086cf30"
+                        "no-empty": "7347d60bdb7dbe2d8b0343d48fd04a3f58c485f73756253da5c8a3233c9e5159"
                     }
                 },
                 {
@@ -2119,7 +2119,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-global": "24d2edf46a392ac79dc4a8485724aebf13324e347e5a8bc414970f5ee6f0fb22"
+                        "no-global": "8077673bb786d410384e702cec18c0f4aaac2e19a0df9bf69693176f2e0729b9"
                     }
                 },
                 {
@@ -2145,7 +2145,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "prefer-early-continue": "24d2edf46a392ac79dc4a8485724aebf13324e347e5a8bc414970f5ee6f0fb22"
+                        "prefer-early-continue": "8077673bb786d410384e702cec18c0f4aaac2e19a0df9bf69693176f2e0729b9"
                     }
                 },
                 {
@@ -2223,7 +2223,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "a5e18d831b59ff02f53fcd8161f7ffa04b8a09d2302158019a62e5a2477d78ce"
+                        "no-empty": "de939058637e95fa6411b2f7bca04b0a25ce39b8e6a7236a9ae8aa3f4561a76e"
                     }
                 },
                 {
@@ -2249,7 +2249,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-isset": "a5e18d831b59ff02f53fcd8161f7ffa04b8a09d2302158019a62e5a2477d78ce"
+                        "no-isset": "de939058637e95fa6411b2f7bca04b0a25ce39b8e6a7236a9ae8aa3f4561a76e"
                     }
                 },
                 {
@@ -2275,7 +2275,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "no-empty": "a5e18d831b59ff02f53fcd8161f7ffa04b8a09d2302158019a62e5a2477d78ce"
+                        "no-empty": "de939058637e95fa6411b2f7bca04b0a25ce39b8e6a7236a9ae8aa3f4561a76e"
                     }
                 },
                 {
@@ -2301,7 +2301,7 @@
                         }
                     ],
                     "partialFingerprints": {
-                        "strict-behavior": "a5e18d831b59ff02f53fcd8161f7ffa04b8a09d2302158019a62e5a2477d78ce"
+                        "strict-behavior": "de939058637e95fa6411b2f7bca04b0a25ce39b8e6a7236a9ae8aa3f4561a76e"
                     }
                 },
                 {
@@ -3255,7 +3255,7 @@
                                 },
                                 "region": {
                                     "startLine": 46,
-                                    "startColumn": 1251,
+                                    "startColumn": 1,
                                     "endLine": 46,
                                     "endColumn": 21
                                 }
@@ -3476,7 +3476,7 @@
                 }
             ],
             "automationDetails": {
-                "id": "Daily run 2026-05-04T06:26:51+00:00"
+                "id": "Daily run 2026-05-06T03:45:18+00:00"
             }
         }
     ]
