@@ -46,6 +46,7 @@ use function realpath;
 use function rtrim;
 use function sprintf;
 use function str_contains;
+use function str_ends_with;
 use function str_replace;
 use function str_starts_with;
 use function strlen;
@@ -450,6 +451,10 @@ abstract class AbstractConverter implements ConverterInterface
         $remoteUri = @exec($commandChdir . 'git remote get-url origin', $output, $status);
         if ($status !== 0) {
             return $versionControlDetails;
+        }
+
+        if (str_ends_with($remoteUri, '.git')) {
+            $remoteUri = substr($remoteUri, 0, -4);
         }
 
         $revisionId = @exec($commandChdir . 'git rev-list HEAD ^origin -n 1');
