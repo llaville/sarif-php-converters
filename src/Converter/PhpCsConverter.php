@@ -30,7 +30,7 @@ class PhpCsConverter extends AbstractConverter
         $this->toolFullName ??= sprintf(
             '%s version %s by Squiz and PHPCSStandards',
             $this->toolName,
-            $this->toolSemanticVersion
+            self::$toolVersion
         );
     }
 

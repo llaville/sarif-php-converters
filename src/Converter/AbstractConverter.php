@@ -157,7 +157,12 @@ abstract class AbstractConverter implements ConverterInterface
             $this->toolSemanticVersion = $this->getToolVersion($this->toolComposerPackage);
         }
         if (empty(self::$toolVersion)) {
-            self::$toolVersion = $this->toolSemanticVersion;
+            $versionParts = explode('.', $this->toolSemanticVersion);
+            if (count($versionParts) > 2) {
+                self::$toolVersion = implode('.', [$versionParts[0], $versionParts[1], $versionParts[2]]);
+            } else {
+                self::$toolVersion = $this->toolSemanticVersion;
+            }
         }
 
         // set option to avoid additional suggestion SARIF2010
