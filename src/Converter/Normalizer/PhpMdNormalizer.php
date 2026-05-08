@@ -9,9 +9,7 @@ namespace Bartlett\Sarif\Converter\Normalizer;
 
 use Bartlett\Sarif\Contract\NormalizerInterface;
 
-use PHPMD\ProcessingError;
 use PHPMD\Report;
-use PHPMD\RuleViolation;
 
 use ArrayObject;
 use function array_map;
@@ -138,9 +136,12 @@ final class PhpMdNormalizer extends AbstractNormalizer
         $errors = [];
         $rules = [];
 
+        if (!$data instanceof Report) {
+            return parent::fromInternal($data, $context, $mapping);
+        }
+
         $report = $data;
 
-        /** @var RuleViolation[] $violations */
         $violations = $report->getRuleViolations();
 
         foreach ($violations as $violation) {
@@ -192,7 +193,6 @@ final class PhpMdNormalizer extends AbstractNormalizer
             $errors[$filename][] = $attributes;
         }
 
-        /** @var ProcessingError[] $processingErrors */
         $processingErrors = $report->getErrors();
 
         foreach ($processingErrors as $error) {
