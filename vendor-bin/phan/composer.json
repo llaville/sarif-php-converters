@@ -1,5 +1,5 @@
 {
     "require-dev": {
-        "phan/phan": "^5.0"
+        "phan/phan": "^5.0 || ^6.0"
     }
 }
