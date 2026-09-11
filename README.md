@@ -143,7 +143,7 @@ This library may be considered as a producer on `sarif` report format, for these
 | [Phan][phan]                        |  6.0.x  |   ❌   |     ✅      |   ❌   |           ✅            |   ✅    |    text,csv,json,checkstyle,codeclimate,pylint,html,github     |
 | [PHP CodeSniffer][phpcs]            | 3.13.x  |   ❌   |     ✅      |   ✅   |           ❌            |   ❌    |                     json,checkstyle,junit                      |
 | [PHP-CS-Fixer][phpcs-fixer]         | 3.95.x  |   ❌   |     ✅      |   ✅   |           ✅            |   ❌    |                  checkstyle,gitlab,json,junit                  |
-| [PHPLint][phplint]                  |  9.7.2  |  (✅)  |     ✅      |   ✅   |           ❌            |   ❌    |             console,json,junit,checkstyle,(sarif)              |
+| [PHPLint][phplint]                  |  9.x    |  (✅)  |     ✅      |   ✅   |           ❌            |   ❌    |             console,json,junit,checkstyle,(sarif)              |
 | [PHP Mess Detector][phpmd]          | 3.x-dev |   ✅   |     ✅      |   ❌   |           ✅            |   ✅    |       xml,text,html,json,github,gitlab,sarif,checkstyle        |
 | [PHPStan][phpstan]                  |  2.2.x  |  (✅)  |     ✅      |   ✅   |           ✅            |   ✅    | table,raw,checkstyle,json,junit,github,gitlab,teamcity,(sarif) |
 | [Rector][rector]                    |  2.5.9  |   ❌   |     ❌      |   ✅   |           ✅            |   ✅    |                console,json,junit,gitlab,github                |
