@@ -12,7 +12,8 @@ use Bartlett\Sarif\Contract\SourceInterface;
 use Bartlett\Sarif\Converter\PhpLintConverter;
 use Bartlett\Sarif\Converter\Source\PhpLintSource;
 
-use Overtrue\PHPLint\Output\LinterOutput;
+use function is_object;
+use function method_exists;
 
 /**
  * @author Laurent Laville
@@ -30,9 +31,15 @@ final class PhpLintReport extends AbstractReporter
         $this->rulePrefix = 'PHPLINT';
     }
 
-    public function format(LinterOutput $results): void
+    public function format(mixed $results): void
     {
-        $this->source->normalize($results->getFailures(), 'internal', ['rulePrefix' => $this->rulePrefix]);
+        if (is_object($results) && method_exists($results, 'getFailures')) {
+            $failures = $results->getFailures();
+        } else {
+            $failures = [];
+        }
+
+        $this->source->normalize($failures, 'internal', ['rulePrefix' => $this->rulePrefix]);
 
         $this->converter->results($this->source->getErrors());
 

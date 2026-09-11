@@ -10,8 +10,6 @@ namespace Bartlett\Sarif\Converter;
 use Bartlett\Sarif\Definition;
 
 use Throwable;
-use function explode;
-use function implode;
 use function sprintf;
 
 /**
@@ -40,9 +38,6 @@ class PhpStanConverter extends AbstractConverter
         $options['default_result_level_if_empty'] ??= 'error';
 
         parent::configure($options);
-
-        $versionParts = explode('.', $this->toolSemanticVersion);
-        self::$toolVersion = implode('.', [$versionParts[0], $versionParts[1], $versionParts[2]]);
     }
 
     public function toolDriver(): Definition\ToolComponent

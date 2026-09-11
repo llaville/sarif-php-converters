@@ -33,7 +33,7 @@ class PhpLintConverter extends AbstractConverter
         $this->toolFullName ??= sprintf(
             '%s version %s by overtrue and contributors',
             $this->toolName,
-            $this->toolSemanticVersion ?? '@dev'
+            self::$toolVersion
         );
     }
 

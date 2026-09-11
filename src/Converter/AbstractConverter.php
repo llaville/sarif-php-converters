@@ -46,6 +46,7 @@ use function realpath;
 use function rtrim;
 use function sprintf;
 use function str_contains;
+use function str_ends_with;
 use function str_replace;
 use function str_starts_with;
 use function strlen;
@@ -156,7 +157,12 @@ abstract class AbstractConverter implements ConverterInterface
             $this->toolSemanticVersion = $this->getToolVersion($this->toolComposerPackage);
         }
         if (empty(self::$toolVersion)) {
-            self::$toolVersion = $this->toolSemanticVersion;
+            $versionParts = explode('.', $this->toolSemanticVersion);
+            if (count($versionParts) > 2) {
+                self::$toolVersion = implode('.', [$versionParts[0], $versionParts[1], $versionParts[2]]);
+            } else {
+                self::$toolVersion = $this->toolSemanticVersion;
+            }
         }
 
         // set option to avoid additional suggestion SARIF2010
@@ -450,6 +456,10 @@ abstract class AbstractConverter implements ConverterInterface
         $remoteUri = @exec($commandChdir . 'git remote get-url origin', $output, $status);
         if ($status !== 0) {
             return $versionControlDetails;
+        }
+
+        if (str_ends_with($remoteUri, '.git')) {
+            $remoteUri = substr($remoteUri, 0, -4);
         }
 
         $revisionId = @exec($commandChdir . 'git rev-list HEAD ^origin -n 1');

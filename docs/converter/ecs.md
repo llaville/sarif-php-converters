@@ -23,6 +23,10 @@
 * [Easy-Coding-Standard][ecs] requires PHP version 7.2.0 or greater,
 * This SARIF converter requires at least Easy-Coding-Standard version 12.3.1
 
+> [!CAUTION]
+> Since release 1.7.0 of `bartlett/sarif-php-converters`, to avoid BC breaks,
+> ECS versions supported is limited to 13.2.19
+
 ## Installation
 
 ```shell
