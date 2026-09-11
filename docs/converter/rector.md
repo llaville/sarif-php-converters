@@ -24,6 +24,10 @@
 * [Rector][rector] requires PHP version 7.4.0 or greater, with `phpstan` 2.0 or greater
 * This SARIF converter requires at least Rector version 2.0
 
+> [!CAUTION]
+> Since release 1.7.0 of `bartlett/sarif-php-converters`, to avoid BC breaks,
+> Rector versions supported is limited to 2.5.9
+
 ## Installation
 
 ```shell

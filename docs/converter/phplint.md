@@ -23,6 +23,10 @@
 * [PHPLint][phplint] requires PHP version 8.1.0 or greater
 * This SARIF converter requires at least PHPLint version 9.4.0
 
+> [!CAUTION]
+> Since release 1.7.0 of `bartlett/sarif-php-converters`, to prevent API changes in upcoming version 9.8.0,
+> PHPLint versions supported is limited to 9.7.2
+
 ## Installation
 
 ```shell

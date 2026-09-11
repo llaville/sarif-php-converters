@@ -13,6 +13,7 @@
 | Stable v1.4.x | [![Branch 1.4][Branch_104x-img]][Branch_104x] | [![Minimum PHP Version)][PHPVersion_104x-img]][PHPVersion_104x] | [![Stable Version 1.4][Packagist_104x-img]][Packagist_104x] | [![License 1.4][License_104x-img]][License_104x] | [![Documentation 1.4][Documentation_104x-img]][Documentation_104x] |
 | Stable v1.5.x | [![Branch 1.5][Branch_105x-img]][Branch_105x] | [![Minimum PHP Version)][PHPVersion_105x-img]][PHPVersion_105x] | [![Stable Version 1.5][Packagist_105x-img]][Packagist_105x] | [![License 1.5][License_105x-img]][License_105x] | [![Documentation 1.5][Documentation_105x-img]][Documentation_105x] |
 | Stable v1.6.x | [![Branch 1.6][Branch_106x-img]][Branch_106x] | [![Minimum PHP Version)][PHPVersion_106x-img]][PHPVersion_106x] | [![Stable Version 1.6][Packagist_106x-img]][Packagist_106x] | [![License 1.6][License_106x-img]][License_106x] | [![Documentation 1.6][Documentation_106x-img]][Documentation_106x] |
+| Stable v1.7.x | [![Branch 1.7][Branch_107x-img]][Branch_107x] | [![Minimum PHP Version)][PHPVersion_107x-img]][PHPVersion_107x] | [![Stable Version 1.7][Packagist_107x-img]][Packagist_107x] | [![License 1.7][License_107x-img]][License_107x] | [![Documentation 1.7][Documentation_107x-img]][Documentation_107x] |
 
 [Branch_100x-img]: https://img.shields.io/badge/branch-1.0-orange
 [Branch_100x]: https://github.com/llaville/sarif-php-converters/tree/1.0
@@ -91,6 +92,17 @@
 [Documentation_106x-img]: https://img.shields.io/badge/documentation-v1.6-green
 [Documentation_106x]: https://github.com/llaville/sarif-php-converters/tree/1.6/docs
 
+[Branch_107x-img]: https://img.shields.io/badge/branch-1.7-orange
+[Branch_107x]: https://github.com/llaville/sarif-php-converters/tree/1.7
+[PHPVersion_107x-img]: https://img.shields.io/packagist/php-v/bartlett/sarif-php-converters/1.7.0
+[PHPVersion_107x]: https://www.php.net/supported-versions.php
+[Packagist_107x-img]: https://img.shields.io/badge/packagist-v1.7.0-blue
+[Packagist_107x]: https://packagist.org/packages/bartlett/sarif-php-converters
+[License_107x-img]: https://img.shields.io/packagist/l/bartlett/sarif-php-converters
+[License_107x]: https://github.com/llaville/sarif-php-converters/blob/1.7/LICENSE
+[Documentation_107x-img]: https://img.shields.io/badge/documentation-v1.7-green
+[Documentation_107x]: https://github.com/llaville/sarif-php-converters/tree/1.7/docs
+
 ## Introduction
 
 SARIF, the [Static Analysis Results Interchange Format][sarif-specs], defines a standard format for the output of static analysis tools.
@@ -116,7 +128,6 @@ This library may be considered as a producer on `sarif` report format, for these
 [phan]: https://github.com/phan/phan
 [phpcs]: https://github.com/PHPCSStandards/PHP_CodeSniffer
 [phpcs-fixer]: https://github.com/PHP-CS-Fixer/PHP-CS-Fixer
-[phpinsights]: https://github.com/nunomaduro/phpinsights
 [phplint]: https://github.com/overtrue/phplint
 [phpmd]: https://github.com/phpmd/phpmd
 [phpstan]: https://github.com/phpstan/phpstan
@@ -126,18 +137,17 @@ This library may be considered as a producer on `sarif` report format, for these
 | Project                             | Version | SARIF | Checkstyle | JUnit | CodeClimate<br/>GitLab | GitHub |                     Output Format Support                      |
 |:------------------------------------|:-------:|:-----:|:----------:|:-----:|:----------------------:|:------:|:--------------------------------------------------------------:|
 | [Composer Dependency Analyser][cda] |  1.6.x  |   ❌   |     ❌      |   ✅   |           ❌            |   ❌    |                             junit                              |
-| [Composer][composer]                |  2.4.x  |   ❌   |     ❌      |   ❌   |           ❌            |   ❌    |                    table,plain,json,summary                    |
-| [Easy-Coding-Standard][ecs]         | 12.3.x  |   ❌   |     ✅      |   ✅   |           ✅            |   ❌    |              console,json,junit,checkstyle,gitlab              |
+| [Composer][composer]                |  2.10.x |   ❌   |     ❌      |   ❌   |           ❌            |   ❌    |                    table,plain,json,summary                    |
+| [Easy-Coding-Standard][ecs]         | 13.2.19 |   ❌   |     ✅      |   ✅   |           ✅            |   ❌    |              console,json,junit,checkstyle,gitlab              |
 | [Mago][mago]                        |   1.x   |   ✅   |     ✅      |   ❌   |           ✅            |   ✅    |         github,gitlab,json,checkstyle,emacs,sarif, ...         |
-| [Phan][phan]                        |  5.5.1  |   ❌   |     ✅      |   ❌   |           ✅            |   ✅    |    text,csv,json,checkstyle,codeclimate,pylint,html,github     |
-| [PHP CodeSniffer][phpcs]            | 3.10.x  |   ❌   |     ✅      |   ✅   |           ❌            |   ❌    |                     json,checkstyle,junit                      |
-| [PHP-CS-Fixer][phpcs-fixer]         | 3.59.x  |   ❌   |     ✅      |   ✅   |           ✅            |   ❌    |                  checkstyle,gitlab,json,junit                  |
-| [PHPInsights][phpinsights]          | 2.11.x  |   ❌   |     ✅      |   ❌   |           ✅            |   ✅    |       console,json,checkstyle,codeclimate,github-action        |
-| [PHPLint][phplint]                  |  9.4.x  |  (✅)  |     ✅      |   ✅   |           ❌            |   ❌    |             console,json,junit,checkstyle,(sarif)              |
-| [PHP Mess Detector][phpmd]          | 2.15.x  |   ✅   |     ✅      |   ❌   |           ✅            |   ✅    |       xml,text,html,json,github,gitlab,sarif,checkstyle        |
-| [PHPStan][phpstan]                  |  2.0.x  |  (✅)  |     ✅      |   ✅   |           ✅            |   ✅    | table,raw,checkstyle,json,junit,github,gitlab,teamcity,(sarif) |
-| [Rector][rector]                    |  2.0.x  |   ❌   |     ❌      |   ✅   |           ✅            |   ✅    |                console,json,junit,gitlab,github                |
-| [Twig-CS-Fixer][twigcs-fixer]       |  3.0.x  |   ❌   |     ✅      |   ✅   |           ❌            |   ✅    |               null,text,checkstyle,junit,github                |
+| [Phan][phan]                        |  6.0.x  |   ❌   |     ✅      |   ❌   |           ✅            |   ✅    |    text,csv,json,checkstyle,codeclimate,pylint,html,github     |
+| [PHP CodeSniffer][phpcs]            | 3.13.x  |   ❌   |     ✅      |   ✅   |           ❌            |   ❌    |                     json,checkstyle,junit                      |
+| [PHP-CS-Fixer][phpcs-fixer]         | 3.95.x  |   ❌   |     ✅      |   ✅   |           ✅            |   ❌    |                  checkstyle,gitlab,json,junit                  |
+| [PHPLint][phplint]                  |  9.7.2  |  (✅)  |     ✅      |   ✅   |           ❌            |   ❌    |             console,json,junit,checkstyle,(sarif)              |
+| [PHP Mess Detector][phpmd]          | 3.x-dev |   ✅   |     ✅      |   ❌   |           ✅            |   ✅    |       xml,text,html,json,github,gitlab,sarif,checkstyle        |
+| [PHPStan][phpstan]                  |  2.2.x  |  (✅)  |     ✅      |   ✅   |           ✅            |   ✅    | table,raw,checkstyle,json,junit,github,gitlab,teamcity,(sarif) |
+| [Rector][rector]                    |  2.5.9  |   ❌   |     ❌      |   ✅   |           ✅            |   ✅    |                console,json,junit,gitlab,github                |
+| [Twig-CS-Fixer][twigcs-fixer]       |  4.4.x  |   ❌   |     ✅      |   ✅   |           ❌            |   ✅    |               null,text,checkstyle,junit,github                |
 
 Legend :
 
