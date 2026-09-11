@@ -157,8 +157,8 @@ Legend :
 
 ## Documentation
 
-All the documentation is available on [website](https://llaville.github.io/sarif-php-converters/1.6),
-generated from the [docs](https://github.com/llaville/sarif-php-converters/tree/1.6/docs) folder.
+All the documentation is available on [website](https://llaville.github.io/sarif-php-converters/1.7),
+generated from the [docs](https://github.com/llaville/sarif-php-converters/tree/1.7/docs) folder.
 
 [sca]: https://owasp.org/www-community/controls/Static_Code_Analysis
 [sarif-specs]: https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html
