@@ -31,6 +31,9 @@ composer require --dev overtrue/phplint bartlett/sarif-php-converters
 
 ## Usage
 
+> [!CAUTION]
+> PHPlint 9.8 has renamed `--format` flag to `--output-format`, and `--output` flag to `--output-file`
+
 ```shell
 vendor/bin/phplint --format='\Overtrue\PHPLint\Output\SarifOutput' /path/to/source/code
 ```
