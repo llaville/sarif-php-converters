@@ -1266,6 +1266,10 @@
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>composer<span class="w"> </span>require<span class="w"> </span>--dev<span class="w"> </span>overtrue/phplint<span class="w"> </span>bartlett/sarif-php-converters
 </span></code></pre></div>
 <h2 id="usage">Usage</h2>
+<div class="admonition danger">
+<p class="admonition-title">Caution</p>
+<p>PHPlint 9.8 has renamed <code>--format</code> flag to <code>--output-format</code>, and <code>--output</code> flag to <code>--output-file</code></p>
+</div>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>vendor/bin/phplint<span class="w"> </span>--format<span class="o">=</span><span class="s1">'\Overtrue\PHPLint\Output\SarifOutput'</span><span class="w"> </span>/path/to/source/code
 </span></code></pre></div>
 <div class="admonition warning">
