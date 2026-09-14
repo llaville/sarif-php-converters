@@ -7,9 +7,12 @@ site/
 resources/box-manifest
 
 ###### BOX-Manifest ######
+.box.manifests.bin
 stub.php
 sbom.json
-console.txt
+plain.txt
+console-table.txt
+pkg.composer.txt
 
 ###### Composer dependencies ######
 vendor/
