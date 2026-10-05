@@ -20,23 +20,11 @@
 
 ## Requirements
 
-* [PHP Mess Detector][phpmd] requires PHP version 5.3.9 or greater, with `xml` extensions loaded
-* This SARIF converter requires at least PHPMD version 2.0, but version 3.0 is highly recommended.
+* [PHP Mess Detector][phpmd] version 2.0 requires PHP version 5.3.9 or greater, with `xml` extensions loaded
+* [PHP Mess Detector][phpmd] version 3.0 requires PHP version 8.1 or greater, with `xml` extensions loaded
 
-Version 3.x is still under development,
-but the `Bartlett\Sarif\Converter\Reporter\PhpMdRenderer` class is ready to use new feature
-([Simplify load of external custom renderer][phpmd-bootstrap]).
-
-Until this feature is [GA][general-availability] into official PHPMD repository, you can use such `composer.json` requirements
-
-```json
-{
-    "minimum-stability": "dev",
-    "require-dev": {
-        "phpmd/phpmd": "3.x-dev"
-    }
-}
-```
+The `Bartlett\Sarif\Converter\Reporter\PhpMdRenderer` class is ready to use the new feature :
+[Simplify load of external custom renderer][phpmd-bootstrap] available into PHPMD version 3.0
 
 ## Installation
 
@@ -48,8 +36,11 @@ composer require --dev phpmd/phpmd bartlett/sarif-php-converters
 
 > [!WARNING]
 >
-> As PHMMD v2.15 is not able to specify/boot custom renderer easily,
-> we have no other alternative that using the **Console Tool** convert command.
+> - As PHMMD v2.15 is not able to specify/boot custom renderer easily,
+>   we have no other alternative that using the **Console Tool** convert command.
+>
+> - With PHPMD v3.0 is easier. Use the alternative solution at step 3.
+
 
 ### :material-numeric-1-box: Build the checkstyle output report
 
@@ -70,15 +61,15 @@ php report-converter convert phpmd --input-format=checkstyle --input-file=exampl
 
 Alternative usage
 
-> [!NOTE]
->
-> When PHPMD 3.0 will be [GA][general-availability], you can use this alternative
-
 ### :material-numeric-3-box: Build the sarif output report directly via the default `Bartlett\Sarif\Converter\Reporter\PhpMdRenderer`
 
 ```shell
 vendor/bin/phpmd analyze /path/to/source --format='\Bartlett\Sarif\Converter\Reporter\PhpMdRenderer' --bootstrap=autoload.php > sarif.json
 ```
+
+> [!TIP]
+>
+> * Without verbose option (`-v`) the Renderer will print a compact SARIF version.
 
 ## Learn more
 
@@ -102,4 +93,3 @@ For example:
 [phpmd]: https://github.com/phpmd/phpmd
 [sarif-web-component]: https://github.com/Microsoft/sarif-web-component
 [phpmd-bootstrap]: https://github.com/phpmd/phpmd/issues/1196
-[general-availability]: https://en.wikipedia.org/wiki/Software_release_life_cycle
