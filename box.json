@@ -5,7 +5,18 @@
     "exclude-dev-files": false,
     "directories": [
         "src",
-        "vendor"
+        "vendor",
+        "vendor-bin/composer/",
+        "vendor-bin/ecs/",
+        "vendor-bin/mago/",
+        "vendor-bin/phan/",
+        "vendor-bin/phpcs/",
+        "vendor-bin/phpcs-fixer/",
+        "vendor-bin/phplint/",
+        "vendor-bin/phpmd/",
+        "vendor-bin/phpstan/",
+        "vendor-bin/rector/",
+        "vendor-bin/twigcs-fixer/"
     ],
     "files": [
         "autoload.php",
