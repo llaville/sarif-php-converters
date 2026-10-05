@@ -1,4 +1,7 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
+
 /**
  * This file is part of the Sarif-PHP-Converters package.
  *
@@ -8,13 +11,13 @@
  * @author Laurent Laville
  * @since Release 1.0.0
  */
+
 namespace Bartlett\Sarif;
 
-use Composer\Autoload\ClassLoader;
-
+use DirectoryIterator;
+use Phar;
 use RuntimeException;
 
-use function basename;
 use function class_exists;
 use function dirname;
 use function file_exists;
@@ -22,58 +25,65 @@ use function implode;
 use function spl_autoload_register;
 use function sprintf;
 
-foreach (glob(__DIR__ . '/vendor-bin/*/vendor/autoload.php') as $autoloadFile) {
-    require $autoloadFile;
-}
-
-
 if (class_exists(__NAMESPACE__ . '\Autoload', false) === false) {
     class Autoload
     {
         /**
-         * The composer autoloader.
-         *
-         * @var ClassLoader
+         * The composer autoloader(s).
          */
-        private static $composerAutoloader = null;
+        private static ?\Composer\Autoload\ClassLoader $composerAutoloader = null;
 
         public static function load(string $class): void
         {
             if (self::$composerAutoloader === null) {
-                self::$composerAutoloader = require self::getAutoloadFile();
+                $autoloader = '/vendor/autoload.php';
+                $possibleAutoloaderPaths = [
+                    // local dev repository
+                    __DIR__ . $autoloader,
+                    // dependency
+                    dirname(__DIR__, 3) . $autoloader,
+                ];
+
+                if (isset($GLOBALS['_composer_autoload_path'])) {
+                    // @link https://getcomposer.org/doc/articles/vendor-binaries.md#finding-the-composer-autoloader-from-a-binary
+                    $possibleAutoloaderPaths[] = $GLOBALS['_composer_autoload_path'];
+                }
+
+                // [!CAUTION]
+                // https://www.php.net/manual/en/phar.using.stream.php#104320
+                $baseDir = Phar::running() ? : __DIR__;
+
+                // checks to register optional autoloader
+                if (file_exists($baseDir . '/vendor-bin')) {
+                    foreach (new DirectoryIterator($baseDir . '/vendor-bin') as $directory) {
+                        if ($directory->isDot()) {
+                            continue;
+                        }
+                        $autoloadFile = $directory->getPathname() . $autoloader;
+                        if (file_exists($autoloadFile)) {
+                            require $autoloadFile;
+                        }
+                    }
+                }
+
+                self::$composerAutoloader = require self::getAutoloadFile($possibleAutoloaderPaths);
             }
 
             self::$composerAutoloader->loadClass($class);
         }
 
-        private static function getAutoloadFile(): string
+        private static function getAutoloadFile(array $possibleAutoloaderPaths): string
         {
-            if (isset($GLOBALS['_composer_autoload_path'])) {
-                $possibleAutoloadPaths = [
-                    dirname($GLOBALS['_composer_autoload_path'])
-                ];
-                $autoloader = basename($GLOBALS['_composer_autoload_path']);
-            } else {
-                $possibleAutoloadPaths = [
-                    // local dev repository
-                    __DIR__,
-                    // dependency
-                    dirname(__DIR__, 3),
-                ];
-                $autoloader = 'vendor/autoload.php';
-            }
-
-            foreach ($possibleAutoloadPaths as $possibleAutoloadPath) {
-                if (file_exists($possibleAutoloadPath . DIRECTORY_SEPARATOR . $autoloader)) {
-                    return $possibleAutoloadPath . DIRECTORY_SEPARATOR . $autoloader;
+            foreach ($possibleAutoloaderPaths as $possibleAutoloaderPath) {
+                if (file_exists($possibleAutoloaderPath)) {
+                    return $possibleAutoloaderPath;
                 }
             }
 
             throw new RuntimeException(
                 sprintf(
-                    'Unable to find "%s" in "%s" paths.',
-                    $autoloader,
-                    implode('", "', $possibleAutoloadPaths)
+                    'Unable to find an autoloader in "%s" paths.',
+                    implode('", "', $possibleAutoloaderPaths)
                 )
             );
         }
