@@ -1,6 +1,5 @@
 {
-    "minimum-stability": "dev",
     "require-dev": {
-        "phpmd/phpmd": "3.x-dev"
+        "phpmd/phpmd": "^2.0 || ^3.0"
     }
 }
