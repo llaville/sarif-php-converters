@@ -13,7 +13,10 @@ use Bartlett\Sarif\Converter\PhpMdConverter;
 use Bartlett\Sarif\Converter\Source\PhpMdSource;
 
 use PHPMD\AbstractRenderer;
+use PHPMD\Renderer\Option\Verbose;
 use PHPMD\Report;
+
+use Symfony\Component\Console\Output\OutputInterface;
 
 /**
  * Class created to boot external resource following implementation :
@@ -22,15 +25,23 @@ use PHPMD\Report;
  * @author Laurent Laville
  * @since Release 1.0.0
  */
-class PhpMdRenderer extends AbstractRenderer
+class PhpMdRenderer extends AbstractRenderer implements Verbose
 {
     protected ConverterInterface $converter;
     protected SourceInterface $source;
+    protected int $verbosityLevel;
 
-    public function __construct(?ConverterInterface $converter = null, ?SourceInterface $source = null)
+    public function __construct(?SourceInterface $source = null)
     {
-        $this->converter = $converter ?? new PhpMdConverter();
         $this->source = $source ?? new PhpMdSource();
+    }
+
+    public function setVerbosityLevel(int $level): void
+    {
+        $this->verbosityLevel = $level;
+
+        $prettyPrint = $level > OutputInterface::VERBOSITY_NORMAL;
+        $this->converter = new PhpMdConverter(['format_output' => $prettyPrint]);
     }
 
     /**
