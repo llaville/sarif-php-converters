@@ -15,7 +15,7 @@
                 },
                 "options": {
                     "colors": "always",
-                    "config-file": "phpunit.xml.dist",
+                    "config-file": "{$ENV|value-of:XDG_CONFIG_HOME}/phpunit.xml.dist",
                     "package-require": [
                         "phpunit/phpunit",
                         "^11.5 || ^12.5 || ^13.0"

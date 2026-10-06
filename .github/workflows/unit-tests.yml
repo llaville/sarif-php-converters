@@ -62,4 +62,4 @@ jobs:
 
             -   # https://github.com/sebastianbergmann/phpunit
                 name: Unit tests with PHPUnit
-                run: phpunit --do-not-cache-result --no-progress
+                run: phpunit --do-not-cache-result --no-progress --configuration .github/linters/phpunit.xml.dist
