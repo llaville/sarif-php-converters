@@ -9,22 +9,22 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 965)">
 <g id="clust1" class="cluster">
 <title>cluster_0</title>
-<polygon fill="BurlyWood" stroke="black" points="8,-219 8,-937 664,-937 664,-219 8,-219"/>
+<polygon fill="transparent" stroke="black" points="8,-219 8,-937 664,-937 664,-219 8,-219"/>
 <text text-anchor="middle" x="336" y="-921.8" font-family="Times,serif" font-size="14.00">Bartlett\Sarif\Converter</text>
 </g>
 <g id="clust2" class="cluster">
 <title>cluster_1</title>
-<polygon fill="LightSkyBlue" stroke="black" points="229,-8 229,-211 1521,-211 1521,-8 229,-8"/>
+<polygon fill="transparent" stroke="black" points="229,-8 229,-211 1521,-211 1521,-8 229,-8"/>
 <text text-anchor="middle" x="875" y="-195.8" font-family="Times,serif" font-size="14.00">Bartlett\Sarif\Contract</text>
 </g>
 <g id="clust3" class="cluster">
 <title>cluster_2</title>
-<polygon fill="Bisque" stroke="black" points="672,-420.5 672,-953 1308,-953 1308,-420.5 672,-420.5"/>
+<polygon fill="transparent" stroke="black" points="672,-420.5 672,-953 1308,-953 1308,-420.5 672,-420.5"/>
 <text text-anchor="middle" x="990" y="-937.8" font-family="Times,serif" font-size="14.00">Bartlett\Sarif\Converter\Source</text>
 </g>
 <g id="clust4" class="cluster">
 <title>cluster_3</title>
-<polygon fill="Bisque" stroke="black" points="1316,-417.5 1316,-950 1638,-950 1638,-417.5 1316,-417.5"/>
+<polygon fill="transparent" stroke="black" points="1316,-417.5 1316,-950 1638,-950 1638,-417.5 1316,-417.5"/>
 <text text-anchor="middle" x="1477" y="-934.8" font-family="Times,serif" font-size="14.00">Bartlett\Sarif\Converter\Normalizer</text>
 </g>
 <!-- Bartlett\\Sarif\\Converter\\PhpCsConverter -->
