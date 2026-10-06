@@ -46,7 +46,8 @@
         }
     ],
     "blacklist": [
-        "vendor/bamarni/composer-bin-plugin/"
+        "vendor/bamarni/composer-bin-plugin/",
+        "docs/"
     ],
     "compression": "GZ",
     "dump-autoload": false
