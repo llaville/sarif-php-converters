@@ -36,11 +36,10 @@ composer require --dev phpmd/phpmd bartlett/sarif-php-converters
 
 > [!WARNING]
 >
-> - As PHMMD v2.15 is not able to specify/boot custom renderer easily,
+> * As PHMMD v2.15 is not able to specify/boot custom renderer easily,
 >   we have no other alternative that using the **Console Tool** convert command.
 >
-> - With PHPMD v3.0 is easier. Use the alternative solution at step 3.
-
+> * With PHPMD v3.0 is easier. Use the alternative solution at step 3.
 
 ### :material-numeric-1-box: Build the checkstyle output report
 
