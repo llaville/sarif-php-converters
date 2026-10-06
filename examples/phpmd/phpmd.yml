@@ -1,0 +1,8 @@
+# PHPMD configuration, see https://phpmd.org/documentation/creating-a-ruleset.html
+name: sarif-php-converters
+paths:
+    - ../../src
+exclude-pattern:
+    - vendor
+rules:
+    - ref: rulesets/cleancode.xml
