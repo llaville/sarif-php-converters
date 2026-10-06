@@ -1,20 +1,26 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
+
 /**
  * This file is part of the Sarif-PHP-Converters package.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+
 namespace Bartlett\Sarif\Converter\Normalizer;
 
 use Bartlett\Sarif\Contract\NormalizerInterface;
 
 use ArrayObject;
 use SimpleXMLElement;
+
 use function extension_loaded;
 use function is_string;
 use function json_decode;
 use function json_encode;
+
 use const LIBXML_NOCDATA;
 
 /**

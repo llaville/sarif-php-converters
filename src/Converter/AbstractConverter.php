@@ -1,10 +1,14 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
+
 /**
  * This file is part of the Sarif-PHP-Converters package.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+
 namespace Bartlett\Sarif\Converter;
 
 use Bartlett\Sarif\Contract\ConverterInterface;
@@ -22,6 +26,7 @@ use PHP_Parallel_Lint\PhpConsoleHighlighter\Highlighter;
 use Iterator;
 use RuntimeException;
 use Throwable;
+
 use function array_intersect;
 use function array_map;
 use function array_shift;
@@ -52,6 +57,7 @@ use function str_starts_with;
 use function strlen;
 use function substr;
 use function trim;
+
 use const DATE_ATOM;
 use const DIRECTORY_SEPARATOR;
 use const JSON_PRETTY_PRINT;

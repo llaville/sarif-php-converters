@@ -1,10 +1,14 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
+
 /**
  * This file is part of the Sarif-PHP-Converters package.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+
 namespace Bartlett\Sarif\Converter\Source;
 
 use Bartlett\Sarif\Contract\HelpUriCaseConverterInterface;
@@ -12,6 +16,7 @@ use Bartlett\Sarif\Converter\Case\MagoHelpUriCaseConverter;
 use Bartlett\Sarif\Converter\Normalizer\MagoNormalizer;
 
 use Iterator;
+
 use function array_shift;
 use function explode;
 use function in_array;

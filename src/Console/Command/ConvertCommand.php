@@ -1,10 +1,14 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
+
 /**
  * This file is part of the Sarif-PHP-Converters package.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+
 namespace Bartlett\Sarif\Console\Command;
 
 use Bartlett\Sarif\Contract\NormalizerInterface;
@@ -21,6 +25,7 @@ use Symfony\Component\Console\Output\StreamOutput;
 
 use RuntimeException;
 use Throwable;
+
 use function class_exists;
 use function fclose;
 use function fgets;
@@ -33,6 +38,7 @@ use function strcasecmp;
 use function stream_select;
 use function strtoupper;
 use function trim;
+
 use const STDIN;
 
 /**
