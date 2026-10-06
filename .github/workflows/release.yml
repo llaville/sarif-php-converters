@@ -93,6 +93,12 @@ jobs:
                     coverage: "none"
                     tools: ${{ matrix.tools }}
 
+            -   # https://getcomposer.org/doc/06-config.md#platform
+                # https://github.com/bamarni/composer-bin-plugin?tab=readme-ov-file#forward-command-forward-command
+                name: Setup Composer Platform
+                run: |
+                    composer config --json extra.bamarni-bin.forward-command true
+
             -   # https://github.com/ramsey/composer-install
                 name: Install Composer dependencies
                 uses: ramsey/composer-install@4.0.0
