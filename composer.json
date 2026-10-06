@@ -48,6 +48,9 @@
             "Bartlett\\Sarif\\Tests\\": "tests/"
         }
     },
+    "bin": [
+        "report-converter"
+    ],
     "config": {
         "allow-plugins": {
             "bamarni/composer-bin-plugin": true
