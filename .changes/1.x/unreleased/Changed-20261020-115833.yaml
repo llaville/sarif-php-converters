@@ -1,0 +1,3 @@
+kind: Changed
+body: 'convert command warns on stderr about results it drops because their file does not exist in the working directory'
+time: 2026-10-20T11:58:33.000000000Z
