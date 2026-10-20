@@ -12,6 +12,7 @@ declare(strict_types=1);
 namespace Bartlett\Sarif\Console\Command;
 
 use Bartlett\Sarif\Contract\NormalizerInterface;
+use Bartlett\Sarif\Converter\AbstractConverter;
 use Bartlett\Sarif\Converter\Normalizer;
 use Bartlett\Sarif\Factory\ConverterFactory;
 use Bartlett\Sarif\Factory\SourceFactory;
@@ -20,6 +21,7 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
+use Symfony\Component\Console\Output\ConsoleOutputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Output\StreamOutput;
 
@@ -32,6 +34,7 @@ use function fgets;
 use function file_exists;
 use function file_get_contents;
 use function fopen;
+use function getcwd;
 use function realpath;
 use function sprintf;
 use function strcasecmp;
@@ -160,6 +163,9 @@ class ConvertCommand extends Command
             }
 
             $converter->results($source->getErrors());
+            if ($converter instanceof AbstractConverter) {
+                $this->warnAboutSkippedResults($converter->skippedResults(), $output);
+            }
             $run = $converter->run($converter->invocations($properties), $source->getRules());
             $jsonString = $converter->sarifLog([$run]);
 
@@ -185,6 +191,23 @@ class ConvertCommand extends Command
         }
 
         return Command::SUCCESS;
+    }
+
+    /**
+     * @param array<string, int> $skippedResults
+     */
+    private function warnAboutSkippedResults(array $skippedResults, OutputInterface $output): void
+    {
+        $errorOutput = $output instanceof ConsoleOutputInterface ? $output->getErrorOutput() : $output;
+
+        foreach ($skippedResults as $filename => $count) {
+            $errorOutput->writeln(sprintf(
+                '<comment>Skipped %d result(s) for "%s": file not found in working directory "%s"</comment>',
+                $count,
+                $filename,
+                getcwd()
+            ));
+        }
     }
 
     protected function getSourceData(?string $inputFile): ?string
