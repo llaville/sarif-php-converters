@@ -20,6 +20,12 @@ count = 1
 
 [[issues]]
 file = "src/Console/Command/ConvertCommand.php"
+code = "kan-defect"
+message = "Class has a high kan defect score."
+count = 1
+
+[[issues]]
+file = "src/Console/Command/ConvertCommand.php"
 code = "no-assign-in-condition"
 message = "Avoid assignments in conditions."
 count = 1
