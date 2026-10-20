@@ -129,7 +129,7 @@ final class ComposerNormalizer extends AbstractNormalizer
                         $rules[$ruleId]['name'] = 'ComposerAudit' . $caId;
                         $rules[$ruleId]['properties']['frequency'] += 1;
                         $rules[$ruleId]['defaultConfiguration']['enabled'] = !isset($advisory['ignoreReason']);
-                        $rules[$ruleId]['defaultConfiguration']['level'] = $this->severityMap($advisory['severity']);
+                        $rules[$ruleId]['defaultConfiguration']['level'] = $this->severityMap($advisory['severity'] ?? null);
                     }
                     $attributes[$key] = $newValue;
                 }
@@ -144,8 +144,16 @@ final class ComposerNormalizer extends AbstractNormalizer
         ];
     }
 
-    private function severityMap(string $severity): string
+    /**
+     * Composer reports no severity for some advisory sources (e.g. Drupal security advisories).
+     * Such advisories get "warning", the level SARIF assumes for a result that has none.
+     */
+    private function severityMap(?string $severity): string
     {
+        if (null === $severity) {
+            return 'warning';
+        }
+
         return match (strtolower($severity)) {
             'medium' => 'note',
             'high' => 'warning',
