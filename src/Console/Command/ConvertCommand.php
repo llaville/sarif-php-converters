@@ -181,7 +181,9 @@ class ConvertCommand extends Command
             if ($output->isDebug()) {
                 $output->writeln($exception->getTraceAsString());
             }
-            return $exception->getCode();
+            // most exceptions, including every PHP error, carry code 0, which would report success
+            $exitCode = (int) $exception->getCode();
+            return $exitCode > 0 ? $exitCode : Command::FAILURE;
         }
 
         return Command::SUCCESS;
