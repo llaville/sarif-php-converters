@@ -16,6 +16,9 @@ use Bartlett\Sarif\Contract\NormalizerInterface;
 use ArrayObject;
 
 use function array_unique;
+use function json_decode;
+
+use const JSON_THROW_ON_ERROR;
 
 /**
  * @extends AbstractNormalizer<string>
@@ -61,7 +64,7 @@ final class MagoNormalizer extends AbstractNormalizer
         ];
 
         // $data is already JSON encoded
-        $collected = json_decode($data, true);
+        $collected = json_decode($data, true, 512, JSON_THROW_ON_ERROR);
 
         $files = [];
         $errors = [];
