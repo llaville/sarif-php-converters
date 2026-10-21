@@ -130,7 +130,9 @@ final class ComposerNormalizer extends AbstractNormalizer
                         $rules[$ruleId]['name'] = 'ComposerAudit' . $caId;
                         $rules[$ruleId]['properties']['frequency'] += 1;
                         $rules[$ruleId]['defaultConfiguration']['enabled'] = !isset($advisory['ignoreReason']);
-                        $rules[$ruleId]['defaultConfiguration']['level'] = $this->severityMap($advisory['severity']);
+                        if (isset($advisory['severity'])) {
+                            $rules[$ruleId]['defaultConfiguration']['level'] = $this->severityMap($advisory['severity']);
+                        }
                     }
                     $attributes[$key] = $newValue;
                 }
