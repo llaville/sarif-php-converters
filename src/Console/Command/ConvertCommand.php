@@ -11,6 +11,7 @@ declare(strict_types=1);
 
 namespace Bartlett\Sarif\Console\Command;
 
+use Bartlett\Sarif\Contract\ConverterInterface;
 use Bartlett\Sarif\Contract\NormalizerInterface;
 use Bartlett\Sarif\Converter\Normalizer;
 use Bartlett\Sarif\Factory\ConverterFactory;
@@ -156,6 +157,11 @@ class ConvertCommand extends Command
             if (class_exists($converterAlias, false)) {
                 // give a chance to use custom converter
                 $converter = new $converterAlias($converterOptions);
+                if (!$converter instanceof ConverterInterface) {
+                    throw new RuntimeException(
+                        'Unable to convert data with converter "' . $converterAlias . '"'
+                    );
+                }
             } else {
                 // use default built-in converters
                 $converterFactory = new ConverterFactory();
