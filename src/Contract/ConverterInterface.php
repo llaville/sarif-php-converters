@@ -42,6 +42,8 @@ interface ConverterInterface
      */
     public function results(iterable $normalized): void;
 
+    public function skippedFiles(): array;
+
     /**
      * @return Definition\Invocation[]
      */

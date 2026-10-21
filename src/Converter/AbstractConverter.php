@@ -108,6 +108,13 @@ abstract class AbstractConverter implements ConverterInterface
     protected ?string $projectDirectory = null;
 
     /**
+     * Number of results dropped per file, because the file does not exist relative to the working directory.
+     *
+     * @var array<string, int>
+     */
+    private array $skippedResults = [];
+
+    /**
      * @param array{
      *     format_output?: bool,
      *     include_code_snippets?: bool,
@@ -298,6 +305,7 @@ abstract class AbstractConverter implements ConverterInterface
     {
         foreach ($normalized as $filename => $errors) {
             if (!file_exists($filename)) {
+                $this->skippedResults[$filename] = ($this->skippedResults[$filename] ?? 0) + count($errors);
                 continue;
             }
             $artifactLocation = new Definition\ArtifactLocation();
@@ -385,6 +393,11 @@ abstract class AbstractConverter implements ConverterInterface
                 $this->results[] = $result;
             }
         }
+    }
+
+    final public function skippedFiles(): array
+    {
+        return $this->skippedResults;
     }
 
     /**

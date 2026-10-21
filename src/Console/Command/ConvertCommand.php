@@ -168,7 +168,9 @@ class ConvertCommand extends Command
                 $converter = $converterFactory->create($converterAlias, $converterOptions);
             }
 
+            /** @var ConverterInterface $converter */
             $converter->results($source->getErrors());
+            $converter->skippedFiles();  // @FIXME for PR #7
             $run = $converter->run($converter->invocations($properties), $source->getRules());
             $jsonString = $converter->sarifLog([$run]);
 
