@@ -18,6 +18,8 @@ use ArrayObject;
 use function array_keys;
 use function json_decode;
 
+use const JSON_THROW_ON_ERROR;
+
 /**
  * @extends AbstractNormalizer<string|array{
  *     filename: string,
@@ -121,7 +123,7 @@ final class PhpCsNormalizer extends AbstractNormalizer
     private function fromJson(string $data, array $mapping): array
     {
         // $data is already JSON encoded
-        $collected = json_decode($data, true);
+        $collected = json_decode($data, true, 512, JSON_THROW_ON_ERROR);
 
         $errors = [];
         $rules = [];
