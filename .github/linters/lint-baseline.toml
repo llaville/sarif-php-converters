@@ -20,6 +20,12 @@ count = 1
 
 [[issues]]
 file = "src/Console/Command/ConvertCommand.php"
+code = "kan-defect"
+message = "Class has a high kan defect score."
+count = 1
+
+[[issues]]
+file = "src/Console/Command/ConvertCommand.php"
 code = "no-assign-in-condition"
 message = "Avoid assignments in conditions."
 count = 1
@@ -35,6 +41,12 @@ file = "src/Console/Command/ConvertCommand.php"
 code = "no-empty"
 message = "Use of the `empty` construct."
 count = 5
+
+[[issues]]
+file = "src/Contract/ConverterInterface.php"
+code = "too-many-methods"
+message = "Interface has too many methods."
+count = 1
 
 [[issues]]
 file = "src/Converter/AbstractConverter.php"
