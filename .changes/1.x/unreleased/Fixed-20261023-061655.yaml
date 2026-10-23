@@ -1,0 +1,3 @@
+kind: Fixed
+body: 'Composer converter no longer crashes on advisories without severity (e.g. Drupal security advisories); their results get the level of the default_result_level_if_empty option'
+time: 2026-10-23T06:16:55.000000000Z
