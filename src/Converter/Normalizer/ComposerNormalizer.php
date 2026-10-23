@@ -21,6 +21,7 @@ use function sprintf;
 use function str_pad;
 use function strtolower;
 
+use const JSON_THROW_ON_ERROR;
 use const STR_PAD_LEFT;
 
 /**
@@ -61,7 +62,7 @@ final class ComposerNormalizer extends AbstractNormalizer
     private function fromJson(string $data, array $mapping): array
     {
         // $data is already JSON encoded
-        $collected = json_decode($data, true);
+        $collected = json_decode($data, true, 512, JSON_THROW_ON_ERROR);
 
         $errors = [];
         $rules = [];
@@ -129,7 +130,9 @@ final class ComposerNormalizer extends AbstractNormalizer
                         $rules[$ruleId]['name'] = 'ComposerAudit' . $caId;
                         $rules[$ruleId]['properties']['frequency'] += 1;
                         $rules[$ruleId]['defaultConfiguration']['enabled'] = !isset($advisory['ignoreReason']);
-                        $rules[$ruleId]['defaultConfiguration']['level'] = $this->severityMap($advisory['severity']);
+                        if (isset($advisory['severity'])) {
+                            $rules[$ruleId]['defaultConfiguration']['level'] = $this->severityMap($advisory['severity']);
+                        }
                     }
                     $attributes[$key] = $newValue;
                 }

@@ -43,6 +43,13 @@ interface ConverterInterface
     public function results(iterable $normalized): void;
 
     /**
+     * Number of results dropped per file, because the file does not exist relative to the working directory.
+     *
+     * @return array<string, int>
+     */
+    public function skippedFiles(): array;
+
+    /**
      * @return Definition\Invocation[]
      */
     public function invocations(?Definition\PropertyBag $properties = null, ?string $responseFileOption = null): array;

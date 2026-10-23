@@ -24,6 +24,8 @@ use function str_replace;
 use function strlen;
 use function substr;
 
+use const JSON_THROW_ON_ERROR;
+
 /**
  * @extends AbstractNormalizer<string>
  * @author Laurent Laville
@@ -53,7 +55,7 @@ final class SarifNormalizer extends AbstractNormalizer
     private function fromJson(string $data): array
     {
         // $data is already JSON encoded
-        $collected = json_decode($data, true);
+        $collected = json_decode($data, true, 512, JSON_THROW_ON_ERROR);
 
         $files = [];
         $errors = [];

@@ -395,10 +395,7 @@ abstract class AbstractConverter implements ConverterInterface
         }
     }
 
-    /**
-     * @return array<string, int>
-     */
-    final public function skippedResults(): array
+    final public function skippedFiles(): array
     {
         return $this->skippedResults;
     }

@@ -11,8 +11,8 @@ declare(strict_types=1);
 
 namespace Bartlett\Sarif\Console\Command;
 
+use Bartlett\Sarif\Contract\ConverterInterface;
 use Bartlett\Sarif\Contract\NormalizerInterface;
-use Bartlett\Sarif\Converter\AbstractConverter;
 use Bartlett\Sarif\Converter\Normalizer;
 use Bartlett\Sarif\Factory\ConverterFactory;
 use Bartlett\Sarif\Factory\SourceFactory;
@@ -24,6 +24,7 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\ConsoleOutputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Output\StreamOutput;
+use Symfony\Component\Console\Style\SymfonyStyle;
 
 use RuntimeException;
 use Throwable;
@@ -111,6 +112,8 @@ class ConvertCommand extends Command
             require_once $bootstrap;
         }
 
+        $exitCode = Command::SUCCESS;
+
         try {
             if (empty($options['input-format'])) {
                 throw new RuntimeException('Input format is required');
@@ -156,16 +159,20 @@ class ConvertCommand extends Command
             if (class_exists($converterAlias, false)) {
                 // give a chance to use custom converter
                 $converter = new $converterAlias($converterOptions);
+                if (!$converter instanceof ConverterInterface) {
+                    throw new RuntimeException(
+                        'Unable to convert data with converter "' . $converterAlias . '"'
+                    );
+                }
             } else {
                 // use default built-in converters
                 $converterFactory = new ConverterFactory();
                 $converter = $converterFactory->create($converterAlias, $converterOptions);
             }
 
+            /** @var ConverterInterface $converter */
             $converter->results($source->getErrors());
-            if ($converter instanceof AbstractConverter) {
-                $this->warnAboutSkippedResults($converter->skippedResults(), $output);
-            }
+            $this->warnAboutSkippedResults($converter->skippedFiles(), $output);
             $run = $converter->run($converter->invocations($properties), $source->getRules());
             $jsonString = $converter->sarifLog([$run]);
 
@@ -183,14 +190,16 @@ class ConvertCommand extends Command
                 }
             }
         } catch (Throwable $exception) {
-            $output->writeln('<error>' . $exception->getMessage() . '</error>');
+            $io = new SymfonyStyle($input, $output);
+            $io->error($exception->getMessage());
             if ($output->isDebug()) {
                 $output->writeln($exception->getTraceAsString());
             }
-            return $exception->getCode();
+            // most exceptions, including every PHP error, carry code 0, which would report success
+            $exitCode = (int) $exception->getCode();
+            $exitCode = $exitCode > 0 ? $exitCode : Command::FAILURE;
         }
-
-        return Command::SUCCESS;
+        return $exitCode;
     }
 
     /**
