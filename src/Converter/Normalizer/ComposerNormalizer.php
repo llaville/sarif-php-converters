@@ -104,6 +104,10 @@ final class ComposerNormalizer extends AbstractNormalizer
                     }
                     $newValue = $value;
                     if ('Result.level' === $key) {
+                        if (null === $value) {
+                            // leaves the level to the 'default_result_level_if_empty' converter option
+                            continue;
+                        }
                         // match severity value with standard SARIF level enum
                         $newValue = $this->severityMap($value);
                     }
