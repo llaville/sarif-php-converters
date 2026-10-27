@@ -129,7 +129,7 @@ count = 1
 [[issues]]
 file = "src/Converter/Normalizer/ComposerNormalizer.php"
 code = "halstead"
-message = "Method has a high halstead volume"
+message = "Method has a high halstead volume and effort"
 count = 1
 
 [[issues]]
