@@ -109,7 +109,7 @@
 <g id="node10" class="node">
 <title>jawira/case&#45;converter</title>
 <path fill="#eeeeee" stroke="black" d="M659.47,-390C659.47,-390 459.47,-390 459.47,-390 453.47,-390 447.47,-384 447.47,-378 447.47,-378 447.47,-366 447.47,-366 447.47,-360 453.47,-354 459.47,-354 459.47,-354 659.47,-354 659.47,-354 665.47,-354 671.47,-360 671.47,-366 671.47,-366 671.47,-378 671.47,-378 671.47,-384 665.47,-390 659.47,-390"/>
-<text text-anchor="middle" x="559.47" y="-368.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">jawira/case&#45;converter: v3.6.0</text>
+<text text-anchor="middle" x="559.47" y="-368.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">jawira/case&#45;converter: v3.7.0</text>
 </g>
 <!-- bartlett/sarif&#45;php&#45;converters&#45;&gt;jawira/case&#45;converter -->
 <g id="edge16" class="edge">
@@ -135,7 +135,7 @@
 <g id="node15" class="node">
 <title>symfony/console</title>
 <path fill="#eeeeee" stroke="black" d="M645.97,-171C645.97,-171 472.97,-171 472.97,-171 466.97,-171 460.97,-165 460.97,-159 460.97,-159 460.97,-147 460.97,-147 460.97,-141 466.97,-135 472.97,-135 472.97,-135 645.97,-135 645.97,-135 651.97,-135 657.97,-141 657.97,-147 657.97,-147 657.97,-159 657.97,-159 657.97,-165 651.97,-171 645.97,-171"/>
-<text text-anchor="middle" x="559.47" y="-149.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">symfony/console: v7.4.20</text>
+<text text-anchor="middle" x="559.47" y="-149.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">symfony/console: v7.4.21</text>
 </g>
 <!-- bartlett/sarif&#45;php&#45;converters&#45;&gt;symfony/console -->
 <g id="edge26" class="edge">
@@ -197,7 +197,7 @@
 <title>jawira/case&#45;converter&#45;&gt;php</title>
 <path fill="none" stroke="#1a2833" d="M671.6,-382.93C766.73,-392.3 898.02,-405.21 960.95,-411.41"/>
 <polygon fill="#1a2833" stroke="#1a2833" points="960.88,-414.92 971.17,-412.41 961.56,-407.95 960.88,-414.92"/>
-<text text-anchor="middle" x="789.97" y="-400" font-family="Times,serif" font-size="10.00" fill="#767676">&gt;=7.4</text>
+<text text-anchor="middle" x="789.97" y="-400" font-family="Times,serif" font-size="10.00" fill="#767676">^8.2</text>
 </g>
 <!-- ext&#45;mbstring -->
 <g id="node11" class="node">
@@ -269,7 +269,7 @@
 <g id="node17" class="node">
 <title>symfony/polyfill&#45;mbstring</title>
 <path fill="#eeeeee" stroke="black" d="M1116.97,-36C1116.97,-36 879.97,-36 879.97,-36 873.97,-36 867.97,-30 867.97,-24 867.97,-24 867.97,-12 867.97,-12 867.97,-6 873.97,0 879.97,0 879.97,0 1116.97,0 1116.97,0 1122.97,0 1128.97,-6 1128.97,-12 1128.97,-12 1128.97,-24 1128.97,-24 1128.97,-30 1122.97,-36 1116.97,-36"/>
-<text text-anchor="middle" x="998.47" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">symfony/polyfill&#45;mbstring: v1.43.0</text>
+<text text-anchor="middle" x="998.47" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">symfony/polyfill&#45;mbstring: v1.43.3</text>
 </g>
 <!-- symfony/console&#45;&gt;symfony/polyfill&#45;mbstring -->
 <g id="edge23" class="edge">
@@ -295,7 +295,7 @@
 <g id="node19" class="node">
 <title>symfony/string</title>
 <path fill="#eeeeee" stroke="black" d="M1079.47,-144C1079.47,-144 917.47,-144 917.47,-144 911.47,-144 905.47,-138 905.47,-132 905.47,-132 905.47,-120 905.47,-120 905.47,-114 911.47,-108 917.47,-108 917.47,-108 1079.47,-108 1079.47,-108 1085.47,-108 1091.47,-114 1091.47,-120 1091.47,-120 1091.47,-132 1091.47,-132 1091.47,-138 1085.47,-144 1079.47,-144"/>
-<text text-anchor="middle" x="998.47" y="-122.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">symfony/string: v7.4.19</text>
+<text text-anchor="middle" x="998.47" y="-122.3" font-family="Times,serif" font-size="14.00" fill="#314b5f">symfony/string: v7.4.21</text>
 </g>
 <!-- symfony/console&#45;&gt;symfony/string -->
 <g id="edge25" class="edge">
