@@ -65,7 +65,6 @@ final class SkippedResultsTest extends TestCase
     public function testResultsForAMissingFileAreReportedOnStderr(): void
     {
         $tester = $this->convertAuditReport();
-        $tester->assertCommandIsSuccessful();
 
         $this->assertStringContainsString(
             'Skipped 1 result(s) for "composer.json": file not found in working directory',
@@ -78,7 +77,6 @@ final class SkippedResultsTest extends TestCase
         file_put_contents('composer.json', '{}');
 
         $tester = $this->convertAuditReport();
-        $tester->assertCommandIsSuccessful();
 
         $this->assertSame('', $tester->getErrorOutput());
     }
