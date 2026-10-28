@@ -16,6 +16,8 @@ For the full copyright and license information, please view the LICENSE
 file that was distributed with this source code.
 EOF;
 
+$projectDir = dirname(__DIR__, 2);
+
 return (new PhpCsFixer\Config())
     // allow to run on unsupported PHP Versions
     // {@link https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/README.md#supported-php-versions}
@@ -48,6 +50,6 @@ return (new PhpCsFixer\Config())
     // default source code to scan
     ->setFinder(
         PhpCsFixer\Finder::create()
-            ->in([dirname(__DIR__, 2) . '/src/'])
+            ->in([$projectDir . '/src/', $projectDir . '/tests/'])
     )
 ;
