@@ -19,6 +19,8 @@ use PHPUnit\Framework\TestCase;
 
 use Symfony\Component\Console\Tester\CommandTester;
 
+use JsonException;
+
 use function chdir;
 use function file_put_contents;
 use function getcwd;
@@ -62,6 +64,7 @@ final class SkippedResultsTest extends TestCase
     public function testResultsForAMissingFileAreReportedOnStderr(): void
     {
         $tester = $this->convertAuditReport();
+        $tester->assertCommandIsSuccessful();
 
         $this->assertStringContainsString(
             'Skipped 1 result(s) for "composer.json": file not found in working directory',
@@ -74,6 +77,7 @@ final class SkippedResultsTest extends TestCase
         file_put_contents('composer.json', '{}');
 
         $tester = $this->convertAuditReport();
+        $tester->assertCommandIsSuccessful();
 
         $this->assertSame('', $tester->getErrorOutput());
     }
@@ -88,12 +92,15 @@ final class SkippedResultsTest extends TestCase
                 '--input-file' => 'audit.json',
                 '--output-file' => 'audit.sarif',
             ],
-            ['capture_stderr_separately' => true]
+            ['capture_stderr_separately' => true, 'decorated' => true]
         );
 
         return $tester;
     }
 
+    /**
+     * @throws JsonException
+     */
     private function auditReport(): string
     {
         return json_encode([
