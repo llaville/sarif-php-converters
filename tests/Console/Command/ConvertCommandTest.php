@@ -44,6 +44,6 @@ final class ConvertCommandTest extends TestCase
             '--input-file' => __DIR__ . '/does-not-exist.json',
         ]);
 
-        $this->assertSame(2, $exitCode);
+        $this->assertSame(Command::INVALID, $exitCode);
     }
 }
