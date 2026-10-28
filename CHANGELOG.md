@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD013 MD024 -->
+<!-- markdownlint-disable MD007 MD013 MD024 -->
 # Changes SARIF PHP Converters 1.x
 
 All notable changes of the SARIF PHP Converters 1.x release series will be documented in this file.
