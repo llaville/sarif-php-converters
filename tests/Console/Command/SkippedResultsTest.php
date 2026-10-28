@@ -17,6 +17,7 @@ use Bartlett\Sarif\Converter\AbstractConverter;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 
+use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Tester\CommandTester;
 
 use JsonException;
@@ -92,7 +93,11 @@ final class SkippedResultsTest extends TestCase
                 '--input-file' => 'audit.json',
                 '--output-file' => 'audit.sarif',
             ],
-            ['capture_stderr_separately' => true, 'decorated' => true]
+            [
+                'capture_stderr_separately' => true,
+                'decorated' => true,
+                'verbosity' => OutputInterface::VERBOSITY_DEBUG
+            ]
         );
 
         return $tester;
