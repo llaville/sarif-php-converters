@@ -1,3 +1,0 @@
-kind: Fixed
-body: 'convert command exits with a non-zero status on every error, including errors raised without an exception code'
-time: 2026-10-20T11:56:47.000000000Z

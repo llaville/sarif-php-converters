@@ -1,3 +1,0 @@
-kind: Fixed
-body: 'Composer, Mago, PHP_CodeSniffer and SARIF converters fail on input that is not valid JSON instead of writing an empty report'
-time: 2026-10-20T11:56:00.000000000Z
