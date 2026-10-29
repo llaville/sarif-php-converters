@@ -3,6 +3,7 @@ digraph {
   node [fontname="Verdana" fontsize=8 shape="none" margin=0 fillcolor="#FEFECE" style="filled"]
   edge [fontname="Verdana" fontsize=8]
   subgraph cluster_0 {
+    graph [bgcolor="BurlyWood"]
     label = "Bartlett\\Sarif\\Converter"
     "Bartlett\\Sarif\\Converter\\PhpLintConverter" [shape="none" label=<
 <table cellspacing="0" border="0" cellborder="1">
@@ -35,6 +36,7 @@ digraph {
     <tr><td align="left"># includeContextRegion</td></tr>
     <tr><td align="left"># defaultResultLevelIfEmpty</td></tr>
     <tr><td align="left"># projectDirectory</td></tr>
+    <tr><td align="left">– skippedResults : mixed = []</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
     <tr><td align="left">+ __construct(options : array = [], factory : Bartlett\\Sarif\\Factory\\SerializerFactory = «unknown»)</td></tr>
@@ -45,6 +47,7 @@ digraph {
     <tr><td align="left">+ toolExtensions() : array</td></tr>
     <tr><td align="left">+ rules(defined : iterable) : array</td></tr>
     <tr><td align="left">+ results(normalized : iterable) : void</td></tr>
+    <tr><td align="left">+ skippedFiles() : array</td></tr>
     <tr><td align="left">+ sarifLog(runs : array = [], version : string = '2\.1\.0') : ?string</td></tr>
     <tr><td align="left">+ invocations(properties : Bartlett\\Sarif\\Definition\\PropertyBag = «unknown», responseFileOption : string = «unknown») : array</td></tr>
     <tr><td align="left">+ versionControlDetails() : array</td></tr>
@@ -64,6 +67,7 @@ digraph {
 </table>>]
   }
   subgraph cluster_1 {
+    graph [bgcolor="LightSkyBlue"]
     label = "Bartlett\\Sarif\\Contract"
     "Bartlett\\Sarif\\Contract\\ConverterInterface" [shape="none" label=<
 <table cellspacing="0" border="0" cellborder="1">
@@ -75,6 +79,7 @@ digraph {
     <tr><td align="left">+ «abstract» toolExtensions() : array</td></tr>
     <tr><td align="left">+ «abstract» rules(defined : iterable) : array</td></tr>
     <tr><td align="left">+ «abstract» results(normalized : iterable) : void</td></tr>
+    <tr><td align="left">+ «abstract» skippedFiles() : array</td></tr>
     <tr><td align="left">+ «abstract» invocations(properties : Bartlett\\Sarif\\Definition\\PropertyBag = «unknown», responseFileOption : string = «unknown») : array</td></tr>
     <tr><td align="left">+ «abstract» versionControlDetails() : array</td></tr>
     <tr><td align="left">+ «abstract» automationDetails() : Bartlett\\Sarif\\Definition\\RunAutomationDetails</td></tr>
@@ -115,6 +120,7 @@ digraph {
 </table>>]
   }
   subgraph cluster_2 {
+    graph [bgcolor="Bisque"]
     label = "Bartlett\\Sarif\\Converter\\Source"
     "Bartlett\\Sarif\\Converter\\Source\\PhpLintSource" [shape="none" label=<
 <table cellspacing="0" border="0" cellborder="1">
@@ -144,6 +150,7 @@ digraph {
 </table>>]
   }
   subgraph cluster_3 {
+    graph [bgcolor="Bisque"]
     label = "Bartlett\\Sarif\\Converter\\Normalizer"
     "Bartlett\\Sarif\\Converter\\Normalizer\\PhpLintNormalizer" [shape="none" label=<
 <table cellspacing="0" border="0" cellborder="1">
