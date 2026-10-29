@@ -15,6 +15,11 @@ on:
                 required: false
                 default: "--prefer-dist --no-scripts"
                 type: string
+            phpunit-configuration:
+                description: "PHPUnit configuration file"
+                required: false
+                default: "phpunit.xml.dist"
+                type: "string"
 
 permissions:
     contents: read
@@ -62,4 +67,4 @@ jobs:
 
             -   # https://github.com/sebastianbergmann/phpunit
                 name: Unit tests with PHPUnit
-                run: phpunit --do-not-cache-result --no-progress --configuration .github/linters/phpunit.xml.dist
+                run: phpunit --do-not-cache-result --no-progress --configuration .github/linters/${{ inputs.phpunit-configuration }}
