@@ -1,0 +1,3 @@
+kind: Fixed
+body: 'Rules without parameters no longer get an empty defaultConfiguration.parameters, which was serialized as a JSON array and made the SARIF report invalid'
+time: 2026-10-29T11:42:29.000000000Z
