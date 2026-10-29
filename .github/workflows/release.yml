@@ -41,6 +41,11 @@ on:
                 required: false
                 default: ""
                 type: string
+            phpunit-configuration:
+                description: "PHPUnit configuration file"
+                required: false
+                default: "phpunit.xml.dist"
+                type: "string"
 
 permissions:
     contents: write
@@ -58,6 +63,7 @@ jobs:
         with:
             operating-system: ${{ inputs.operating-system }}
             composer-options: ${{ inputs.composer-options }}
+            phpunit-configuration: ${{ inputs.phpunit-configuration }}
 
     create_release:
         if: inputs.tag-name != ''
