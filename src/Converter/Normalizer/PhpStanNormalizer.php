@@ -57,7 +57,7 @@ final class PhpStanNormalizer extends AbstractNormalizer
 
             $rules[$ruleId] = [
                 'name' => $fileSpecificError->getIdentifier(),
-                'help' => 'https://phpstan.org/user-guide/ignoring-errors',
+                'help' => $fileSpecificError->getTip(),
                 'helpUri' => $helpUri,
             ];
 
