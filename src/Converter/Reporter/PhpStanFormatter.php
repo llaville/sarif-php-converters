@@ -26,9 +26,18 @@ class PhpStanFormatter extends AbstractReporter implements Command\ErrorFormatte
 {
     protected string $rulePrefix;
 
-    public function __construct(?ConverterInterface $converter = null, ?SourceInterface $source = null)
-    {
-        $this->converter = $converter ?? new PhpStanConverter();
+    public function __construct(
+        ?ConverterInterface $converter = null,
+        ?SourceInterface $source = null,
+        bool $prettyPrint = false,
+        ?string $defaultResultLevel = null
+    ) {
+        $this->converter = $converter ?? new PhpStanConverter(
+            [
+                'format_output' => $prettyPrint,
+                'default_result_level_if_empty' => $defaultResultLevel,
+            ]
+        );
         $this->source = $source ?? new PhpStanSource();
         $this->rulePrefix = 'PHPSTAN';
     }

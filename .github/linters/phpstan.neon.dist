@@ -15,3 +15,7 @@ parameters:
 services:
     errorFormatter.sarif:
         class: Bartlett\Sarif\Converter\Reporter\PhpStanFormatter
+        # customisation is allowed since release 1.9.0
+        #arguments:
+        #    prettyPrint: false
+        #    defaultResultLevel: "warning"
