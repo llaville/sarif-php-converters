@@ -1,10 +1,14 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
+
 /**
  * This file is part of the Sarif-PHP-Converters package.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+
 namespace MyStandard\CS;
 
 use Bartlett\Sarif\Converter\PhpCsConverter;
@@ -19,7 +23,10 @@ class MyPhpCsReport extends PhpCsReport
     public function __construct()
     {
         // enable pretty print feature
-        parent::__construct(new PhpCsConverter(['format_output' => true]));
+        // new signature allowed since release 1.9.0
+        parent::__construct(prettyPrint: true);
+        // old signature allowed for release 1.8 or less
+        //parent::__construct(new PhpCsConverter(['format_output' => true]));
     }
 
     protected function getRules(): iterable

@@ -34,9 +34,16 @@ class PhpCsReport extends AbstractReporter implements Report
      */
     private array $cacheData;
 
-    public function __construct(?ConverterInterface $converter = null, ?SourceInterface $source = null)
-    {
-        $this->converter = $converter ?? new PhpCsConverter();
+    public function __construct(
+        ?ConverterInterface $converter = null,
+        ?SourceInterface $source = null,
+        bool $prettyPrint = false,
+    ) {
+        $this->converter = $converter ?? new PhpCsConverter(
+            [
+                'format_output' => $prettyPrint,
+            ]
+        );
         $this->source = $source ?? new PhpCsSource();
         $this->cacheData = [
             'totals' => [
