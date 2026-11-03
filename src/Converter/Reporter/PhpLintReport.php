@@ -27,9 +27,16 @@ final class PhpLintReport extends AbstractReporter
 {
     private string $rulePrefix;
 
-    public function __construct(?ConverterInterface $converter = null, ?SourceInterface $source = null)
-    {
-        $this->converter = $converter ?? new PhpLintConverter();
+    public function __construct(
+        ?ConverterInterface $converter = null,
+        ?SourceInterface $source = null,
+        bool $prettyPrint = false,
+    ) {
+        $this->converter = $converter ?? new PhpLintConverter(
+            [
+                'format_output' => $prettyPrint,
+            ]
+        );
         $this->source = $source ?? new PhpLintSource();
 
         $this->rulePrefix = 'PHPLINT';
