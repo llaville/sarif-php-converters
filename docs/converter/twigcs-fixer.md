@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD013 -->
 # Twig-CS-Fixer Converter
 
-[![VincentLanglet/Twig-CS-Fixer - GitHub](https://gh-card.dev/repos/VincentLanglet/Twig-CS-Fixer.svg?fullname=)](https://github.com/VincentLanglet/Twig-CS-Fixer)
+[![VincentLanglet/Twig-CS-Fixer - GitHub](https://github-stats-extended.vercel.app/api/pin/?username=VincentLanglet&repo=Twig-CS-Fixer&show_owner=true)](https://github.com/VincentLanglet/Twig-CS-Fixer)
 
 > [!NOTE]
 >

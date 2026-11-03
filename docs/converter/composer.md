@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD013 -->
 # Composer Audit Converter
 
-[![composer/composer - GitHub](https://gh-card.dev/repos/composer/composer.svg?fullname=)](https://github.com/composer/composer)
+[![composer/composer - GitHub](https://github-stats-extended.vercel.app/api/pin/?username=composer&repo=composer&show_owner=true)](https://github.com/composer/composer)
 
 > [!NOTE]
 >

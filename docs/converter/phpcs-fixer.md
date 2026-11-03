@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD013 -->
 # PHP-CS-Fixer Converter
 
-[![PHP-CS-Fixer/PHP-CS-Fixer - GitHub](https://gh-card.dev/repos/PHP-CS-Fixer/PHP-CS-Fixer.svg?fullname=)](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer)
+[![PHP-CS-Fixer/PHP-CS-Fixer - GitHub](https://github-stats-extended.vercel.app/api/pin/?username=PHP-CS-Fixer&repo=PHP-CS-Fixer&show_owner=true)](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer)
 
 > [!NOTE]
 >

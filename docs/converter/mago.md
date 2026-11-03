@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD013 -->
 # Mago Converter
 
-[![carthage-software/mago - GitHub](https://gh-card.dev/repos/carthage-software/mago.svg?fullname=)](https://github.com/carthage-software/mago)
+[![carthage-software/mago - GitHub](https://github-stats-extended.vercel.app/api/pin/?username=carthage-software&repo=mago&show_owner=true)](https://github.com/carthage-software/mago)
 
 > [!NOTE]
 >

@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD013 -->
 # PHPMD Converter
 
-[![phpmd/phpmd - GitHub](https://gh-card.dev/repos/phpmd/phpmd.svg?fullname=)](https://github.com/phpmd/phpmd)
+[![phpmd/phpmd - GitHub](https://github-stats-extended.vercel.app/api/pin/?username=phpmd&repo=phpmd&show_owner=true)](https://github.com/phpmd/phpmd)
 
 > [!NOTE]
 >

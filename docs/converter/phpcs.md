@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD013 -->
 # PHP_CodeSniffer Converter
 
-[![PHPCSStandards/PHP_CodeSniffer - GitHub](https://gh-card.dev/repos/PHPCSStandards/PHP_CodeSniffer.svg?fullname=)](https://github.com/PHPCSStandards/PHP_CodeSniffer)
+[![PHPCSStandards/PHP_CodeSniffer - GitHub](https://github-stats-extended.vercel.app/api/pin/?username=PHPCSStandards&repo=PHP_CodeSniffer&show_owner=true)](https://github.com/PHPCSStandards/PHP_CodeSniffer)
 
 > [!NOTE]
 >

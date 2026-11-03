@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD013 -->
 # Easy-Coding-Standard Converter
 
-[![easy-coding-standard/easy-coding-standard - GitHub](https://gh-card.dev/repos/easy-coding-standard/easy-coding-standard.svg?fullname=)](https://github.com/easy-coding-standard/easy-coding-standard)
+[![easy-coding-standard/easy-coding-standard - GitHub](https://github-stats-extended.vercel.app/api/pin/?username=ecsphp&repo=ecs&show_owner=true)](https://github.com/ecsphp/ecs)
 
 > [!NOTE]
 >
@@ -127,5 +127,5 @@ For example:
 ![sarif-web-ecs](../assets/images/sarif-web-ecs.png)
 
 [example-folder]: https://github.com/llaville/sarif-php-converters/blob/1.0/examples/ecs/
-[ecs]: https://github.com/easy-coding-standard/easy-coding-standard
+[ecs]: https://github.com/ecsphp/ecs
 [sarif-web-component]: https://github.com/Microsoft/sarif-web-component

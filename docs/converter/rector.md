@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD013 -->
 # Rector Converter
 
-[![rectorphp/rector - GitHub](https://gh-card.dev/repos/rectorphp/rector.svg?fullname=)](https://github.com/rectorphp/rector)
+[![rectorphp/rector - GitHub](https://github-stats-extended.vercel.app/api/pin/?username=rectorphp&repo=rector&show_owner=true)](https://github.com/rectorphp/rector)
 
 > [!NOTE]
 >

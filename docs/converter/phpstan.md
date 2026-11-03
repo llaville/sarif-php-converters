@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD013 MD024 -->
 # PHPStan Converter
 
-[![phpstan/phpstan - GitHub](https://gh-card.dev/repos/phpstan/phpstan.svg?fullname=)](https://github.com/phpstan/phpstan)
+[![phpstan/phpstan - GitHub](https://github-stats-extended.vercel.app/api/pin/?username=phpstan&repo=phpstan&show_owner=true)](https://github.com/phpstan/phpstan)
 
 > [!NOTE]
 >

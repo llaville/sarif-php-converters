@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD013 -->
 # Phan Converter
 
-[![phan/phan - GitHub](https://gh-card.dev/repos/phan/phan.svg?fullname=)](https://github.com/phan/phan)
+[![phan/phan - GitHub](https://github-stats-extended.vercel.app/api/pin/?username=phan&repo=phan&show_owner=true)](https://github.com/phan/phan)
 
 > [!NOTE]
 >

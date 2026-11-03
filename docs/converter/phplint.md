@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD013 -->
 # PHPLint Converter
 
-[![overtrue/phplint - GitHub](https://gh-card.dev/repos/overtrue/phplint.svg?fullname=)](https://github.com/overtrue/phplint)
+[![overtrue/phplint - GitHub](https://github-stats-extended.vercel.app/api/pin/?username=overtrue&repo=phplint&show_owner=true)](https://github.com/overtrue/phplint)
 
 > [!NOTE]
 >
