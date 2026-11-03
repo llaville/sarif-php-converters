@@ -31,9 +31,16 @@ class RectorFormatter extends AbstractReporter implements OutputFormatterInterfa
 {
     protected string $rulePrefix;
 
-    public function __construct(?ConverterInterface $converter = null, ?SourceInterface $source = null)
-    {
-        $this->converter = $converter ?? new RectorConverter();
+    public function __construct(
+        ?ConverterInterface $converter = null,
+        ?SourceInterface $source = null,
+        bool $prettyPrint = false,
+    ) {
+        $this->converter = $converter ?? new RectorConverter(
+            [
+                'format_output' => $prettyPrint,
+            ]
+        );
         $this->source = $source ?? new RectorSource();
         $this->rulePrefix = 'RECTOR';
     }
